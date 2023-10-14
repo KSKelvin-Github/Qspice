@@ -4,7 +4,7 @@ QSpice Download: [https://www.qorvo.com/design-hub/design-tools/interactive/qspi
 
 QSpice Forum : [https://forum.qorvo.com/c/qspice/](https://forum.qorvo.com/c/qspice/)
 
-## Qspice Forum
+## Sub-directory : Forum
 files support forum disucssion, directory name is discussion post ID
 
 ##

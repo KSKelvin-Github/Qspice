@@ -5,8 +5,6 @@ QSpice Download: [https://www.qorvo.com/design-hub/design-tools/interactive/qspi
 QSpice Forum : [https://forum.qorvo.com/c/qspice/](https://forum.qorvo.com/c/qspice/)
 
 ## Qspice Forum
-files related to forum disucssion
-
-directory name is topic ID
+files support forum disucssion, directory name is discussion post ID
 
 ##

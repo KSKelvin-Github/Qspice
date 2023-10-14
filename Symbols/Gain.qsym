@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol Gain
+  «type: X»
+  «description: GAIN»
+  «library file: |.subckt Gain in out \nB1 out 0 V=Av*V(in)\n.ends Gain»
+  «shorted pins: false»
+  «line (-100,-300) (-100,300) 0 0 0x1000000 -1 -1»
+  «line (-100,300) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (-100,-300) 0 0 0x1000000 -1 -1»
+  «text (100,-300) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (50,50) 0.583 0 0 0x1000000 -1 -1 "GAIN"»
+  «text (50,-50) 0.583 0 0 0x1000000 -1 -1 "Av=1"»
+  «pin (-100,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol Signal_Limiter
+  «type: X»
+  «description: Limit Output Signal LL and UL»
+  «library file: |.subckt Signal_Limiter In outLimit \nB2 outLimit 0 V=limit(LL,V(In),UL)\nR1 In 0 10Meg\n.ends Signal_Limiter»
+  «shorted pins: false»
+  «rect (-300,300) (400,-300) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-50,300) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (100,-400) 1 0 0 0x1000000 -1 -1 "Signal_Limiter"»
+  «text (-250,-100) 0.794 7 0 0x0 -1 -1 "LL=-1"»
+  «text (-247,-210) 0.794 7 0 0x0 -1 -1 "UL=1"»
+  «pin (-300,100) (10,0) 1 7 0 0x0 -1 "In"»
+  «pin (400,100) (-10,0) 1 11 0 0x0 -1 "outLim"»
+»

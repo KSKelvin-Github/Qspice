@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol Comptr_Ideal_Supply
+  «type: X»
+  «description: Ideal Comparator with 0/1 Output»
+  «library file: |.SUBCKT Comptr_Ideal_Supply pos neg out Vdd Vss\nB1 out 0 V=if(V(pos)>V(neg),V(Vdd),V(Vss))\n.ends»
+  «shorted pins: false»
+  «line (0,-400) (0,400) 0 0 0x1000000 -1 -1»
+  «line (0,400) (600,0) 0 0 0x1000000 -1 -1»
+  «line (600,0) (0,-400) 0 0 0x1000000 -1 -1»
+  «line (50,200) (150,200) 0 0 0x1000000 -1 -1»
+  «line (100,250) (100,150) 0 0 0x1000000 -1 -1»
+  «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
+  «text (450,-400) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (700,-550) 1 0 0 0x1000000 -1 -1 "COMPTR_IDEAL_Supply"»
+  «pin (0,200) (20,0) 1 15 0 0x0 -1 "pos"»
+  «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "neg"»
+  «pin (600,0) (0,10) 1 15 0 0x0 -1 "out"»
+  «pin (300,200) (0,0) 1 0 0 0x0 -1 "Vdd"»
+  «pin (300,-200) (0,0) 1 0 0 0x0 -1 "Vss"»
+»

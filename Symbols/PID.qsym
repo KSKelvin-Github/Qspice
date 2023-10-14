@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol PID
+  «type: X»
+  «description: PID Controller»
+  «library file: |.subckt pid err out \nB1 out 0 V=Kp*V(err)+Ki*idt(V(err),0)+Kd*ddt(V(err))\n.ends pid»
+  «shorted pins: false»
+  «rect (-400,400) (600,-300) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-100,400) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (100,300) 1 0 0 0x1000000 -1 -1 "PID"»
+  «text (-346,50) 0.735 7 0 0x0 -1 -1 "Kp=1"»
+  «text (-346,-80) 0.735 7 0 0x0 -1 -1 "Ki=1"»
+  «text (-346,-210) 0.735 7 0 0x0 -1 -1 "Kd=1"»
+  «pin (-400,200) (30,0) 1 7 0 0x0 -1 "err"»
+  «pin (600,200) (-30,0) 1 11 0 0x0 -1 "out"»
+»

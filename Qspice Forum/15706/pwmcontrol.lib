@@ -1,0 +1,16 @@
+* Subcircuit for PWM Control
+.SUBCKT PWM 7  5  10 11 PARAMS: fout = 60Hz p = 4
+*           |  |  |  |
+*           |  |  |  output 2
+*           |  |  output 1
+*           |  modulation index : 0-1V input voltage for pulse width modulation
+*           sawtooth at output frequency (reference)
+* input params : fout is the output frequency
+*                p is the number of pulses per half cycle
+Vref 7 0 PULSE (1 0 0 {1/(2*{2*{p}*{fout}})} {1/(2*{2*{p}*{fout}})-1ns} 1ns {1/{2*{p}*{fout}}}) ; sawtooth at output frequency
+Vx 8 0 PULSE (0 1 0 1ns 1ns {1/(2*{fout})- 2ns} {1/{fout}}) ; pulse at the output frequency
+E_ABM21 6 0 VALUE {IF(V(5)-V(7) > 0, 1, 0)}
+E_ABM12 9 0 VALUE {1-V(8)} ; Inverter
+E_MULT1 10 0 VALUE {V(8)*V(6)} ; Multiplier 1
+E_MULT2 11 0 VALUE {V(9)*V(6)} ; Multiplier 2
+.ENDS PWM ; Ends subcircuit definition

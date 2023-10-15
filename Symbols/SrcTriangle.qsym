@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol SrcTriangle
   «type: X»
   «description: Source - Triangle»
-  «library file: |.subckt SrcTriangle + -\nV1 + - pulse Vlow Vhigh Td duty/fsw {(1-duty)/fsw} 0 1/fsw\n.ends SrcTriangle»
+  «library file: |.subckt SrcTriangle + -\nV1 + - pulse Vlow Vhigh Td duty/fsw (1-duty)/fsw 0 1/fsw\n.ends SrcTriangle»
   «shorted pins: false»
   «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,150) 0 0 0x1000000 -1 -1»

@@ -39,7 +39,7 @@ if strcmp(qraw.flags,'real')
     else
         legend(qraw.expr{idxy});
     end
-    title([qraw.pathname],'interpreter','none')
+    title([filename],'interpreter','none')
 end
 
 % plot flags=complex data ; Magnitude and Phase Plot
@@ -50,7 +50,7 @@ if strcmp(qraw.flags,'complex')
     semilogx(qraw.data(:,idxx),20*log10(abs(qraw.data(:,idxy))));
     xlabel(qraw.expr{idxx});
     ylabel(['|',qraw.expr{idxy},'| (dB)'])
-    title([qraw.pathname],'interpreter','none')
+    title([filename],'interpreter','none')
     subplot(2,1,2);
     semilogx(qraw.data(:,idxx),phase(qraw.data(:,idxy))*180/pi);
     xlabel(qraw.expr{idxx});

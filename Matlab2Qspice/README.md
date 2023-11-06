@@ -7,7 +7,7 @@ This project uses Matlab to automate Qspice
 
 ## Example Files
 * Qspice_example_demo.m - example to simulate and plot results from circuit in test circuit folder
-* Qspice_example_impedance.m - example to simulate and plot impedance, gamma (SmithChart) for "impedance(.ac).qsch" in test circuit folder
+* Qspice_example_impedance.m - example to simulate and plot impedance, gamma (SmithChart)
 * [folder] test circuit - circuit demo (.qsch) for example .m to run
 
 ## Hints

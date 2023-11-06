@@ -1,6 +1,5 @@
 # Matlab2Qspice
-This project uses Matlab to automate Qspice
-Created with Matlab R2023a
+Matlab interface for Qspice, created with Matlab R2023a
 
 ## Files
 * qsch2qraw.m - convert Qspice schematic (.qsch) to output data (.qraw)

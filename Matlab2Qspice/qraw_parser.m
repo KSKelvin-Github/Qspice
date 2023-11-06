@@ -6,16 +6,16 @@ function [qraw]=qraw_parser(Qpathname)
 %           qraw.pathname : .qraw path and filename
 %           qraw.info : headerlines in .qraw
 %           qraw.format : binary or ascii
-%           qraw.flags : data format is real or complex (R+jX)
+%           qraw.flags : data format is real or complex (r+jx)
 %           qraw.value64 : raw data
 %           qraw.id : expression id
 %           qraw.expr : expression name
 %           qraw.measure : expression measure
 %           qraw.data : expression value in qraw.data(:,id)
 %               if flags is real, qraw.data is directly extract
-%               if flags is complex, qraw.data is extract as R+jX
+%               if flags is complex, qraw.data is extract as r+jx
 %Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 6-Nov-2023 12:14pm
+%last update : 6-Nov-2023 10:22pm
 
 % read info and value from .qraw binary format
 fid = fopen(Qpathname);
@@ -63,7 +63,7 @@ for idx = 1: length(n)
     qraw.measure(idx) = C{3};      % store expression unit
 end
 
-% reshape value64 : qraw.value(:,id)
+% reshape qraw.value64 : qraw.value(:,id)
 if strcmp(qraw.flags,'real')
     % process for data type : real (.dc|.tran)
     datacolumn = length(qraw.id);
@@ -78,4 +78,5 @@ elseif strcmp(qraw.flags,'complex')
         qraw.data(:,idx) = temp.data(:,(idx-1)*2) + j*temp.data(:,(idx-1)*2+1);
     end
 else
+
 end

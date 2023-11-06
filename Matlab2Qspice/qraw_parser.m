@@ -12,6 +12,8 @@ function [qraw]=qraw_parser(Qpathname)
 %           qraw.expr : expression name
 %           qraw.measure : expression measure
 %           qraw.data : expression value in qraw.data(:,id)
+%               if flags is real, qraw.data is directly extract
+%               if flags is complex, qraw.data is extract as R+jX
 %Github : https://github.com/KSKelvin-Github/Qspice
 %last update : 6-Nov-2023 12:14pm
 

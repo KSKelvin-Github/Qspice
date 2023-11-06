@@ -10,5 +10,8 @@ files support forum disucssion, directory name is discussion post ID
 ## Guideline
 quick start tutorial, indepth study of usage and device model guideline
 
+## Matlab2Qspice
+Use Matlab to create netlist and output data files for Qspice, simulate and plot results
+
 ## Symbols
 KSKelvin symbols .qsym for Qspice

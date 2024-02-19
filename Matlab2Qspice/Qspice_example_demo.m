@@ -11,6 +11,7 @@ switch Qfiletype
         %convert qsch to qraw, and load qraw
         [filename filepath] = uigetfile('*.qsch');
         Qpath = qsch2qraw([filepath,filename]);
+        cir2out(Qpath.cir);
         delete(Qpath.cir);      % delete .cir
         qraw = qraw_parser([Qpath.qraw]);
     case '.qraw'
@@ -46,6 +47,8 @@ end
 if strcmp(qraw.flags,'complex')
     [idxx,~] = listdlg('PromptString','Select x-axis expression','SelectionMode','single','ListString',qraw.expr);
     [idxy,~] = listdlg('PromptString','Select y-axis expression','SelectionMode','single','ListString',qraw.expr,'InitialValue',2);
+    % magnitude and phase plot
+    figure;
     subplot(2,1,1);
     semilogx(qraw.data(:,idxx),20*log10(abs(qraw.data(:,idxy))));
     xlabel(qraw.expr{idxx});
@@ -55,4 +58,7 @@ if strcmp(qraw.flags,'complex')
     semilogx(qraw.data(:,idxx),phase(qraw.data(:,idxy))*180/pi);
     xlabel(qraw.expr{idxx});
     ylabel(['',qraw.expr{idxy},' (degree)'])
+    % % nyquist plot
+    % figure;
+    % polarplot(phase(qraw.data(:,idxy)),abs(qraw.data(:,idxy)));
 end

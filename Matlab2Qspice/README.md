@@ -3,6 +3,7 @@ Matlab interface for Qspice, created with Matlab R2023a
 
 ## Files
 * qsch2qraw.m - convert Qspice schematic (.qsch) to output data (.qraw)
+* cir2out.m - QPOST post processing .cir and .qraw to .out (for .meas and .func)
 * qraw_parser.m - parser of Qspice output data file (.qraw) in binary format
 
 ## Example Files

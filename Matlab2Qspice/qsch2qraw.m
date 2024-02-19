@@ -11,7 +11,7 @@ function [Qpath]=qsch2qraw(Qpathname,Qformat,Qsimulator)
 %   Search variable QspicePath and change to your Qspice install path
 %
 %Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 6-Nov-2023 10:17pm
+%last update : 20-Feb-2024 12:30pm
 
 % Input arguments assignment
 switch nargin
@@ -49,21 +49,26 @@ end
 
 % system command : QUX -Netlist : Generate .cir from .qsch
 cmd_str = [
-    'path ',QspicePath,...
-    cmdsep,...
-    'QUX -Netlist "',Qpath.qsch,'"'
+    'path ',QspicePath,...              % path C:\Program Files\QSPICE\
+    cmdsep,...                          % command seqparator '&&'
+    'QUX -Netlist "',Qpath.qsch,'"'     % e.g. QUX -Netlist "C:\....\*.qsch"
     ];
-[status,Qpath.cir] = system(cmd_str);
+display('qsch2qraw() : Qspice is generating netlist from schematic')
+display(['  system command : ',char(cmd_str)])
+[status,Qpath.cir] = system(cmd_str);   % execute operating system command
 
 % system command : QSPICE64 or QSPICE80 : Generate .qraw from .cir
 cmd_str = [
-    'path ',QspicePath,...
-    cmdsep,...
-    Qsimulator,' -',Qformat,' "',Qpath.cir,'"'
+    'path ',QspicePath,...                      % path C:\Program Files\QSPICE\
+    cmdsep,...                                  % command seqparator '&&'
+    Qsimulator,' -',Qformat,' "',Qpath.cir,'"'  % e.g. Qspice64 -binary "C:\....\*.cir"
     ];
 display('qsch2qraw() : Qspice Simulator is Running...')
-[status,cmdout] = system(cmd_str);
-display(cmdout);
+display(['  system command : ',char(cmd_str)])
+[status,cmdout] = system(cmd_str);              % execute operating system command
+display(' ');
+display('## Qspice Console Output')
+display(char(cmdout));                          % print console output in command window
 Qpath.qraw = [Qpath.cir(1:end-3),'qraw'];
 
 end

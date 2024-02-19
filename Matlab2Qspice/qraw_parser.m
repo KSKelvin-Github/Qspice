@@ -15,7 +15,7 @@ function [qraw]=qraw_parser(Qpathname)
 %               if flags is real, qraw.data is directly extract
 %               if flags is complex, qraw.data is extract as r+jx
 %Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 6-Nov-2023 10:22pm
+%last update : 20-Feb-2024 12:30pm
 
 % read info and value from .qraw binary format
 fid = fopen(Qpathname);

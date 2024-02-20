@@ -1,17 +1,24 @@
-function [Qpath]=qsch2qraw(Qpathname,Qformat,Qsimulator)
+function [Qpath,step,Console]=qsch2qraw(Qpathname,Qformat,Qsimulator)
 %qsch2qraw    Qspice from schematic (.qsch) to output data (.qraw)
-%   [Qpath]=qsch2qraw(Qpathname,Qformat,Qsimulator)
+%   [Qpath,Console]=qsch2qraw(Qpathname,Qformat,Qsimulator)
 %       Qpathname : full path and filename of .qsch
 %       Qformat : binary (default) | ascii
 %       Qsimulator : QSPICE64 (default) | QSPICE80
 %       [Qpath] : return path of .qsch, .cir, .qraw
+%       [step] : return step information from console
+%           step.status : .step is available of not : true / false
+%           step.TotalStep : total step number
+%           step.param : param name
+%           step.data : param data
+%           step.textstr : .step string
+%       [Console] : return console text
 %
 %**Important Note
 %   If Qspice is not installed into C:\Program Files\QSPICE\
 %   Search variable QspicePath and change to your Qspice install path
 %
 %Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 20-Feb-2024 12:30pm
+%last update : 20-Feb-2024
 
 % Input arguments assignment
 switch nargin
@@ -70,5 +77,53 @@ display(' ');
 display('## Qspice Console Output')
 display(char(cmdout));                          % print console output in command window
 Qpath.qraw = [Qpath.cir(1:end-3),'qraw'];
+Console = textscan(cmdout, '%s', 'delimiter', {'/n'});
+Console = Console{1};
+
+% extract .step information from Console output into [step]
+step.status = false;
+step.TotalStep = 0;   % assume no step information
+for n = 1: length(Console)                              % processing console output
+    if ~isempty(strfind(Console{n},'steps:  .step'))	% .step is found
+        step.status = true;
+        % if first time find a .step, identify number of param and prepare
+        % format of textscan based on number of param
+        if ~step.TotalStep
+            str = [];
+            paramNo = length(find(Console{1}=='='));    % identify number of param by number of '='
+            for m = 1: paramNo
+                str = [str '%s%f'];                     % for textscan based on number of param
+            end
+        end
+
+        % get text str only
+        C=textscan(Console{n},'%fof%fsteps:  .step%s','delimiter','');
+        step.textstr{n} = char(C{3});
+
+        % processing each .step statement
+        % e.g. '1 of 54 steps:  .step ra=1000 rb=1000 rc=1000'
+        C=textscan(Console{n},['%fof%fsteps:  .step',str],'delimiter','=');
+        % C{1} : step ID
+        % C{2} : Total number of step
+        % C{3},C{5},C{7},... : param name
+        % C{4},C{6},C{8},... : param value
+
+        % if first time find a .step
+        if ~step.TotalStep
+            step.TotalStep = C{2};                     % Total number of step
+            for m = 1: paramNo
+                step.param{m} = char(C{(m-1)*2+3});    % param name
+            end
+        end
+        for m = 1: paramNo
+            step.data{m}(C{1}) = C{(m-1)*2+4};         % param data
+        end
+
+        % if last .step
+        if step.TotalStep == C{1}
+            step.textstr = step.textstr';               % rotate for display purpose only
+        end
+    end
+end
 
 end

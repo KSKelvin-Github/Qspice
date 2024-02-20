@@ -8,7 +8,7 @@ function [Qpath]=cir2out(Qpathname)
 %   Search variable QspicePath and change to your Qspice install path
 %
 %Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 20-Feb-2024 12:30pm
+%last update : 20-Feb-2024
 
 % Input arguments assignment
 Qpath.cir = Qpathname;

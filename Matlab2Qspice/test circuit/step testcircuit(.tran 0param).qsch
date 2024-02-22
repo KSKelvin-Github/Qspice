@@ -1,0 +1,31 @@
+ÿØÿÛ«schematic
+  «component (-500,300) 0 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (100,150) 1 7 0 0x1000000 -1 -1 "V1"»
+      «text (100,-150) 1 7 0 0x1000000 -1 -1 "sin OFFSET AMP FRQ"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «net (-500,0) 1 13 0 "GND"»
+  «net (-500,600) 1 14 0 "sin"»
+  «wire (-500,500) (-500,600) "sin"»
+  «wire (-500,0) (-500,100) "GND"»
+  «text (-600,-250) 1 7 1 0x1000000 -1 -1 "ï»¿.step param AMP list 1 2 3 4"»
+  «text (-600,-450) 1 7 1 0x1000000 -1 -1 "ï»¿.step param FRQ list 1 2"»
+  «text (-600,-950) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 1"»
+  «text (-600,-1200) 1 7 0 0x1000000 -1 -1 "ï»¿.plot V(sin)"»
+  «text (-600,-650) 1 7 1 0x1000000 -1 -1 "ï»¿.step param OFFSET list 0 1"»
+  «text (1700,-450) 1 7 0 0x1000000 -1 -1 "ï»¿.param AMP=1\n.param FRQ=1\n.param OFFSET=1"»
+  «text (-600,-1800) 1 7 0 0x1000000 -1 -1 "ï»¿.meas Vpeak max V(sin)\n.meas Vrms rms V(sin)\n.meas Vavg avg V(sin)\n.meas V@0.5s find V(sin) at time=0.5"»
+»
+

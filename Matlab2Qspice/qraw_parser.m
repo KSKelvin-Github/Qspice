@@ -18,16 +18,24 @@ function [qraw]=qraw_parser(Qpathname)
 %               qraw.step.status : .step is available of not : true / false
 %               qraw.step.idxParam : index in qraw.expr/.measure/.data
 %               qraw.step.TotalStep : total step number
-%               qraw.step.param : param name
+%               qraw.step.name : param name
 %               qraw.step.textstr : .step string
-%               qraw.step.Rng : Range for each .step in qraw.data
+%               qraw.step.rng : Range for each .step in qraw.data
 %               qraw.step.data : param data
+%
 %Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 20-Feb-2024
+%last update : 23-Feb-2024
+
+% Check Qpath format : assign Qpathname to Qpath.qraw
+if ~isstruct(Qpathname)
+    Qpath.qraw = Qpathname;
+else
+    Qpath = Qpathname;
+end
 
 % read info and value from .qraw binary format
-fid = fopen(Qpathname);
-qraw.pathname = Qpathname;
+qraw.pathname = Qpath.qraw;
+fid = fopen(qraw.pathname);
 idx = 1;
 while true  % loop to read before headerlines in .qraw into qraw.info
     C = textscan(fid, '%s', 1 ,'delimiter','');
@@ -92,23 +100,28 @@ end
 if ~isempty(find(strcmp(qraw.measure,'parameter')))    % if with .step parameter
     qraw.step.status = true;
     qraw.step.idxParam = find(strcmp(qraw.measure,'parameter'));        % find index of parameter
-    qraw.step.param = qraw.expr(qraw.step.idxParam);                    % .step param name
+    qraw.step.name = qraw.expr(qraw.step.idxParam);                     % .step param name
     [C,IA,~] = unique(qraw.data(:,qraw.step.idxParam),'row','stable');  % unique of corresponding param data
     qraw.step.TotalStep = length(C);                                    % total .step number = no. of unique param data
     % construct .step text string and qraw.data index range
     for n = 1: qraw.step.TotalStep
         qraw.step.textstr{n} = [];
-        for m = 1: length(qraw.step.param)
+        for m = 1: length(qraw.step.name)
             if m == 1
-                qraw.step.textstr{n} = char([char(qraw.step.textstr{n}),char(qraw.step.param(m)),'=',num2str(C(n,m))]);
+                qraw.step.textstr{n} = char([char(qraw.step.textstr{n}),char(qraw.step.name(m)),'=',num2str(C(n,m))]);
             else
-                qraw.step.textstr{n} = char([char(qraw.step.textstr{n}),' ',char(qraw.step.param(m)),'=',num2str(C(n,m))]);
+                qraw.step.textstr{n} = char([char(qraw.step.textstr{n}),' ',char(qraw.step.name(m)),'=',num2str(C(n,m))]);
             end
         end
-        qraw.step.Rng{n}=[IA(n):IA(n)+length(qraw.data)/qraw.step.TotalStep-1];
+        % Range for each .step in qraw.data : IA is from unique index
+        if n ~= qraw.step.TotalStep
+            qraw.step.rng{n} = [IA(n):IA(n+1)-1];
+        else
+            qraw.step.rng{n} = [IA(n):length(qraw.data)];
+        end
     end
     % extract .step data
-    for m = 1: length(qraw.step.param)
+    for m = 1: length(qraw.step.name)
         qraw.step.data{m} = C(:,m)';
     end
 else

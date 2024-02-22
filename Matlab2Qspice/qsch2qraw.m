@@ -2,23 +2,21 @@ function [Qpath,step,Console]=qsch2qraw(Qpathname,Qformat,Qsimulator)
 %qsch2qraw    Qspice from schematic (.qsch) to output data (.qraw)
 %   [Qpath,Console]=qsch2qraw(Qpathname,Qformat,Qsimulator)
 %       Qpathname : full path and filename of .qsch
+%           format #1 : Qpathname = [filepath filename]
+%           format #2 : Qpathname.qsch = [filepath filename]
 %       Qformat : binary (default) | ascii
 %       Qsimulator : QSPICE64 (default) | QSPICE80
 %       [Qpath] : return path of .qsch, .cir, .qraw
 %       [step] : return step information from console
 %           step.status : .step is available of not : true / false
 %           step.TotalStep : total step number
-%           step.param : param name
+%           step.name : param name
 %           step.data : param data
 %           step.textstr : .step string
 %       [Console] : return console text
 %
-%**Important Note
-%   If Qspice is not installed into C:\Program Files\QSPICE\
-%   Search variable QspicePath and change to your Qspice install path
-%
 %Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 20-Feb-2024
+%last update : 23-Feb-2024
 
 % Input arguments assignment
 switch nargin
@@ -29,7 +27,13 @@ switch nargin
         Qformat = 'binary';         % default binary file format
     otherwise
 end
-Qpath.qsch = Qpathname;
+
+% Check Qpath format : assign Qpathname to Qpath.qsch
+if ~isstruct(Qpathname)
+    Qpath.qsch = Qpathname;
+else
+    Qpath = Qpathname;
+end
 
 % verify input arguments
 if ~strcmpi(Qsimulator,'qspice64') & ~strcmpi(Qsimulator,'qspice80')
@@ -46,7 +50,7 @@ QspicePath = 'C:\Program Files\QSPICE\';    % Depends on Installation Path
 % verify Qspice path contains QUX.exe, QSPICE64.exe and QSPICE80.exe
 if ~isfile([QspicePath,'QUX.exe']) | ~isfile([QspicePath,'QSPICE64.exe']) | ~isfile([QspicePath,'QSPICE80.exe'])
     display(['qsch2qraw() error : QUX.exe or QSPICE64.exe or QSPICE80.exe does not exist in ',QspicePath]);
-    display(['  Location variable QspicePath in qsch2qraw() to confirm Qspice Installation Path'])
+    display(['  Serach variable QspicePath in qsch2qraw() and change to your Qspice install path'])
     return;
 end
 % Windows command separator
@@ -112,7 +116,7 @@ for n = 1: length(Console)                              % processing console out
         if ~step.TotalStep
             step.TotalStep = C{2};                     % Total number of step
             for m = 1: paramNo
-                step.param{m} = char(C{(m-1)*2+3});    % param name
+                step.name{m} = char(C{(m-1)*2+3});    % param name
             end
         end
         for m = 1: paramNo

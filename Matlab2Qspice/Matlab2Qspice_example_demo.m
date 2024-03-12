@@ -32,6 +32,7 @@ if strcmp(qraw.flags,'real') & ~qraw.step.status
         legend(qraw.expr{idxy});
     end
     title([filename],'interpreter','none')
+    ylim("padded");
 end
 
 % plot flags=real data with .step
@@ -45,6 +46,7 @@ if strcmp(qraw.flags,'real') & qraw.step.status
     ylabel(qraw.expr{idxy});
     legend(qraw.step.textstr);
     title([filename],'interpreter','none')
+    ylim("padded");
 end
 
 % plot flags=complex data ; Magnitude and Phase Plot without .step
@@ -56,12 +58,14 @@ if strcmp(qraw.flags,'complex') & ~qraw.step.status
     subplot(2,1,1);
     semilogx(qraw.data(:,idxx),20*log10(abs(qraw.data(:,idxy))));
     xlabel(qraw.expr{idxx});
-    ylabel(['|',qraw.expr{idxy},'| (dB)'])
+    ylabel(['|',qraw.expr{idxy},'| (dB)']);
+    ylim("padded");
     title([filename],'interpreter','none')
     subplot(2,1,2);
     semilogx(qraw.data(:,idxx),angle(qraw.data(:,idxy))*180/pi);
     xlabel(qraw.expr{idxx});
-    ylabel(['',qraw.expr{idxy},' (degree)'])
+    ylabel(['',qraw.expr{idxy},' (degree)']);
+    ylim("padded");
     % % nyquist plot
     % figure;
     % polarplot(phase(qraw.data(:,idxy)),abs(qraw.data(:,idxy)));
@@ -78,7 +82,8 @@ if strcmp(qraw.flags,'complex') & qraw.step.status
         semilogx(qraw.data(qraw.step.rng{n},idxx),20*log10(abs(qraw.data(qraw.step.rng{n},idxy)))); hold on;
     end
     xlabel(qraw.expr{idxx});
-    ylabel(['|',qraw.expr{idxy},'| (dB)'])
+    ylabel(['|',qraw.expr{idxy},'| (dB)']);
+    ylim("padded");
     legend(qraw.step.textstr);
     title([filename],'interpreter','none')
     subplot(2,1,2);
@@ -86,7 +91,8 @@ if strcmp(qraw.flags,'complex') & qraw.step.status
         semilogx(qraw.data(qraw.step.rng{n},idxx),angle(qraw.data(qraw.step.rng{n},idxy))*180/pi); hold on;
     end
     xlabel(qraw.expr{idxx});
-    ylabel(['',qraw.expr{idxy},' (degree)'])
+    ylabel(['',qraw.expr{idxy},' (degree)']);
+    ylim("padded");
     % % nyquist plot
     % figure;
     % polarplot(phase(qraw.data(:,idxy)),abs(qraw.data(:,idxy)));
@@ -103,15 +109,13 @@ if out.status && step.status       % only run 3-D plot if .meas and .step are bo
     [idxy,~] = listdlg('PromptString','Select y-axis:','SelectionMode','single','ListString',out.name,'InitialValue',2);
     [idxz,~] = listdlg('PromptString','Select z-axis:','SelectionMode','multiple','ListString',out.name,'InitialValue',3);
 
-    for n = 1: length(idxz)
-        figure;
-        xx = linspace(min(out.data{idxx}),max(out.data{idxx}),20);
-        yy = linspace(min(out.data{idxy}),max(out.data{idxy}),20);
-        [X,Y] = meshgrid(xx,yy);
-        [Z] = griddata(out.data{idxx},out.data{idxy},out.data{idxz(n)},X,Y);
-        contourf(X,Y,Z); colorbar; colormap jet;
-        xlabel(out.name{idxx});
-        ylabel(out.name{idxy});
-        title({out.name{idxz(n)},out.meas{idxz(n)}},'interpreter','none');
-    end
+    figure;
+    xx = linspace(min(out.data{idxx}),max(out.data{idxx}),20);
+    yy = linspace(min(out.data{idxy}),max(out.data{idxy}),20);
+    [X,Y] = meshgrid(xx,yy);
+    [Z] = griddata(out.data{idxx},out.data{idxy},out.data{idxz},X,Y);
+    contourf(X,Y,Z); colorbar; colormap jet;
+    xlabel(out.name{idxx});
+    ylabel(out.name{idxy});
+    title({out.name{idxz},out.meas{idxz}},'interpreter','none');
 end

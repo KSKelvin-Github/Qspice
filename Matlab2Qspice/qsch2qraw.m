@@ -87,8 +87,10 @@ Console = Console{1};
 % extract .step information from Console output into [step]
 step.status = false;
 step.TotalStep = 0;   % assume no step information
+idx = 1;
 for n = 1: length(Console)                              % processing console output
     if ~isempty(strfind(Console{n},'steps:  .step'))	% .step is found
+        Console{n}
         step.status = true;
         % if first time find a .step, identify number of param and prepare
         % format of textscan based on number of param
@@ -102,7 +104,8 @@ for n = 1: length(Console)                              % processing console out
 
         % get text str only
         C=textscan(Console{n},'%fof%fsteps:  .step%s','delimiter','');
-        step.textstr{n} = char(C{3});
+        step.textstr{idx} = char(C{3});
+        idx=idx+1;
 
         % processing each .step statement
         % e.g. '1 of 54 steps:  .step ra=1000 rb=1000 rc=1000'

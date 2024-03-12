@@ -8,8 +8,9 @@ Matlab interface for Qspice, created with Matlab R2023a
 * out_parser.m - parser of Qpsice Qpost console output file (.out) in text format
 
 ## Example Files
-* Qspice_example_demo.m - example to simulate and plot results from circuit in test circuit folder
-* Qspice_example_impedance.m - example to simulate and plot impedance, gamma (SmithChart) for "impedance(.ac).qsch" in test circuit folder
+* Matlab2Qspice_example_demo.m - example to simulate and plot results from circuit in test circuit folder
+* Matlab2Qspice_example_impedance.m - example to simulate and plot impedance, gamma (SmithChart) for "impedance(.ac).qsch" in test circuit folder
+* Matlab2Qspice_FFT_Qraw.m - example to load .fft.qraw and plot FFT : magnitude vs frequency (linear and dB plot)
 * [folder] test circuit - circuit demo (.qsch) for example .m to run
 
 ## Hints

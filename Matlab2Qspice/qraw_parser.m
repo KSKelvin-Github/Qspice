@@ -14,6 +14,8 @@ function [qraw]=qraw_parser(Qpathname)
 %           qraw.data : expression value in qraw.data(:,id)
 %               if flags is real, qraw.data is directly extract
 %               if flags is complex, qraw.data is extract as r+jx
+%               e.g. qraw.data(:,index) : index is index of an expression
+%               e.g. qraw.data(qraw.step.rng{n},index) : dataset of step n
 %           qraw.step : step related info (struct)
 %               qraw.step.status : .step is available of not : true / false
 %               qraw.step.idxParam : index in qraw.expr/.measure/.data

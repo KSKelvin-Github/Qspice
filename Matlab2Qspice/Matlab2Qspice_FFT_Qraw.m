@@ -13,7 +13,7 @@ clear all;
 % fft data in complex format : qraw.data(:,n), where n is n-th parameter
 
 h=figure;
-set(h,'position',[488,142,680 600]);
+set(h,'position',[488,142,700 550]);
 for n = 2 : qraw.id(end)
     ax(1)=subplot(2,1,1);
     semilogx(qraw.data(:,1),abs(qraw.data(:,n))); hold on;
@@ -24,6 +24,7 @@ for n = 2 : qraw.id(end)
 end
 subplot(2,1,1);
 legend(qraw.expr{2:end},'location','bestoutside');
+title(['Filename : ',filename],'interpreter','none');
 subplot(2,1,2);
 legend(qraw.expr{2:end},'location','bestoutside');
 linkaxes(ax,'x');

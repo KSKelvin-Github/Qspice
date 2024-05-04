@@ -15,13 +15,22 @@ else
     Qpath = Qpathname;
 end
 
-% Qspice Path and Windows Command Separator
-QspicePath = 'C:\Program Files\QSPICE\';    % Depends on Installation Path
+% find Qspice path
+QspicePath = []; % Depends on Installation Path
+if isfolder('C:\Program Files\QSPICE\')
+    QspicePath = 'C:\Program Files\QSPICE\';
+end
+if isempty(QspicePath) && isfolder([getenv('USERPROFILE'),'\QSPICE\'])
+    QspicePath = [getenv('USERPROFILE'),'\QSPICE\'];
+end
+if isempty(QspicePath)
+    error('qsch2qraw() error : Qspice path is not found. Check Qspice install path in qsch2qraw()')
+end
+
 % verify Qspice path contains QUX.exe, QSPICE64.exe and QSPICE80.exe
 if ~isfile([QspicePath,'QUX.exe']) | ~isfile([QspicePath,'QSPICE64.exe']) | ~isfile([QspicePath,'QSPICE80.exe'])
-    display(['qsch2qraw() error : QUX.exe or QSPICE64.exe or QSPICE80.exe does not exist in ',QspicePath]);
-    display(['  Serach variable QspicePath in cir2out() and change to your Qspice install path'])
-    return;
+    error(['qsch2qraw() error : QUX.exe or QSPICE64.exe or QSPICE80.exe does not exist in ',QspicePath, ...
+        'Search variable QspicePath in qsch2qraw() and change to your Qspice install path']);
 end
 % Windows command separator
 if ~exist('cmdsep')     % before Matlab 2023b

@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol T-Lossless Tline 1
+ÿØÿÛ«symbol T-Lossless Tline (F NL) 1
   «type: T»
   «description: Lossless Transmission Line»
   «shorted pins: false»
@@ -17,8 +17,9 @@
   «ellipse (-300,150) (-250,50) 0 0 0 0x1000000 0x1000000 -1 -1»
   «ellipse (250,150) (300,50) 0 0 0 0x1000000 0x1000000 -1 -1»
   «text (0,250) 1 14 0 0x1000000 -1 -1 "T1"»
-  «text (0,-100) 1 13 0 0x1000000 -1 -1 "Td=<val>"»
-  «text (0,-300) 1 13 0 0x1000000 -1 -1 "Z0=<val>"»
+  «text (0,-100) 1 13 0 0x1000000 -1 -1 "Z0=<val>"»
+  «text (0,-250) 1 13 0 0x1000000 -1 -1 "F=<val>"»
+  «text (0,-400) 1 13 0 0x1000000 -1 -1 "NL=<val>"»
   «pin (-400,100) (0,0) 1 0 0 0x0 -1 "L1"»
   «pin (-400,-100) (0,0) 1 0 0 0x0 -1 "L2"»
   «pin (400,100) (0,0) 1 0 0 0x0 -1 "R1"»

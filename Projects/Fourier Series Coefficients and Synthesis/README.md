@@ -9,3 +9,4 @@
 
 ## Screen Capture
 ![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/Fourier%20Series%20Coefficients%20and%20Synthesis/screen%20capture/example.Fourier(screen%20capture).png)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/Fourier%20Series%20Coefficients%20and%20Synthesis/screen%20capture/example.Fourier(screen%20capture)2.png)

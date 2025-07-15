@@ -8,4 +8,4 @@
 * Qspice Project - Qspice Project - Fourier Analysis and Fourier Synthesis by KSKelvin.pdf : Reference document
 
 ## Screen Capture
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/FRA%20Frequency%20Response%20Analyzer/screen%20capture/FRA%20(screen%20capture%232).png)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/Fourier%20Series%20Coefficients%20and%20Synthesis/screen%20capture/example.Fourier(screen%20capture).png)

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Fault-Protection-4InOut
   «type: X»
   «description: Overcurrent and Fault Protection with Restart Delay Time (4 In Out)»
-  «library file: |.subckt Fault-Protection-4InOut Ilim Fault IN[1] IN[2] IN[3] IN[4] OUT[1] OUT[2] OUT[3] OUT[4] ENo\n¥1 v1p 0 Ifault ¥ Ilim N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV1 v1p 0 1\nV2 N01 0 OverCurrent\n¥2 v1p 0 Q ¥ Ifault Fault ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=1µ Rout=1m\nD1 Q Qdelay Dx\nR5 Qdelay 0 100K\nC1 Qdelay 0 C\nV3 N02 0 exp(-1)\nB1 OUT[1] 0 V=if(V(NoGate),0,V(IN[1]))\n¥3 v1p 0 NoGate ENo Qdelay N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1\nR[1] IN[1] 0 1Meg\nR[2] IN[2] 0 1Meg\nR[3] IN[3] 0 1Meg\nR[4] IN[4] 0 1Meg\nB2 OUT[2] 0 V=if(V(NoGate),0,V(IN[2]))\nB3 OUT[3] 0 V=if(V(NoGate),0,V(IN[3]))\nB4 OUT[4] 0 V=if(V(NoGate),0,V(IN[4]))\n.model Dx D Ron=1m Roff=10Meg Vfwd=0\n.param C=RestartDelay/100K\n.ends Fault-Protection-4InOut»
+  «library file: |.subckt Fault-Protection-4InOut Ilim Fault IN[1] IN[2] IN[3] IN[4] OUT[1] OUT[2] OUT[3] OUT[4] ENo\n¥1 v1p 0 Ifault ¥ Ilim N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV1 v1p 0 1\nV2 N01 0 OverCurrent\n¥2 v1p 0 Q ¥ Ifault Fault ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=1µ Rout=1m\nD1 Q Qdelay Dx\nR5 Qdelay 0 100K\nC1 Qdelay 0 C\nV3 N02 0 exp(-1)\nB1 OUT[1] 0 V=if(V(NoGate),0,V(IN[1]))\n¥3 v1p 0 NoGate ENo Qdelay N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nR[1] IN[1] 0 1Meg\nR[2] IN[2] 0 1Meg\nR[3] IN[3] 0 1Meg\nR[4] IN[4] 0 1Meg\nB2 OUT[2] 0 V=if(V(NoGate),0,V(IN[2]))\nB3 OUT[3] 0 V=if(V(NoGate),0,V(IN[3]))\nB4 OUT[4] 0 V=if(V(NoGate),0,V(IN[4]))\n.model Dx D Ron=1m Roff=10Meg Vfwd=0\n.param C=RestartDelay/100K\n.ends Fault-Protection-4InOut»
   «shorted pins: false»
   «line (300,400) (0,400) 0 0 0x1000000 -1 -1»
   «line (300,200) (200,200) 0 0 0x1000000 -1 -1»

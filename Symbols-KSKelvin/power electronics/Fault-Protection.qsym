@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Fault-Protection
   «type: X»
   «description: Overcurrent and Fault Protection with Restart Delay Time»
-  «library file: |.subckt Fault-Protection Ilim Fault IN OUT ENo\n¥1 v1p 0 Ifault ¥ Ilim N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV1 v1p 0 1\nV2 N01 0 OverCurrent\n¥2 v1p 0 Q ¥ Ifault Fault ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\nD1 Q Qdelay Dx\nR1 Qdelay 0 100K\nC1 Qdelay 0 C\n¥3 v1p 0 NoGate ENo Qdelay N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV3 N02 0 exp(-1)\nB1 OUT 0 V=if(V(NoGate),0,V(IN))\n.model Dx D Ron=1m Roff=10Meg Vfwd=0\n.param C=RestartDelay/100K\n.ends Fault-Protection»
+  «library file: |.subckt Fault-Protection Ilim Fault IN OUT ENo\n¥1 v1p 0 Ifault ¥ Ilim N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV1 v1p 0 1\nV2 N01 0 OverCurrent\n¥2 v1p 0 Q ¥ Ifault Fault ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=1µ Rout=1m\nD1 Q Qdelay Dx\nR1 Qdelay 0 100K\nC1 Qdelay 0 C\n¥3 v1p 0 NoGate ENo Qdelay N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV3 N02 0 exp(-1)\nB1 OUT 0 V=if(V(NoGate),0,V(IN))\n.model Dx D Ron=1m Roff=10Meg Vfwd=0\n.param C=RestartDelay/100K\n.ends Fault-Protection»
   «shorted pins: false»
   «line (300,400) (0,400) 0 0 0x1000000 -1 -1»
   «line (300,200) (200,200) 0 0 0x1000000 -1 -1»

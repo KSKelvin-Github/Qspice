@@ -1,0 +1,26 @@
+ÿØÿÛ«symbol Output-SrcSink
+  «type: X»
+  «description: Boolean Input with Output Sink / Source Resistors»
+  «library file: |.subckt Output-SrcSink Vss Vdd BoolIN OUT\nS1 Vdd OUT BoolIN 0 SWsource\nS2 OUT Vss BoolIN 0 SWsink\n.model SWsource SW Ron=Rsrc Roff=10Meg Vt=0.5 Vh=0\n.model SWsink SW Ron=10Meg Roff=Rsink Vt=0.5 Vh=0\n.ends Output-SrcSink»
+  «shorted pins: false»
+  «line (0,250) (0,300) 0 0 0x1000000 -1 -1»
+  «line (0,-300) (0,-250) 0 0 0x1000000 -1 -1»
+  «line (0,100) (0,50) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (0,-50) 0 0 0x1000000 -1 -1»
+  «line (30,0) (100,0) 0 0 0x1000000 -1 -1»
+  «line (30,0) (-40,-50) 0 0 0x1000000 -1 -1»
+  «rect (-100,300) (100,-300) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (-20,-30) (20,-70) 0 0 0 0x1000000 0xff0000 -1 -1»
+  «ellipse (-20,70) (20,30) 0 0 0 0x1000000 0xff0000 -1 -1»
+  «triangle (-100,50) (-100,-50) (-50,0) 0 0 0x1000000 0xff0000 -1 -1»
+  «zigzag (-50,100) (50,250) 0 0 0 0x1000000 -1 -1»
+  «zigzag (-50,-100) (50,-250) 0 0 0 0x1000000 -1 -1»
+  «text (150,210) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (149,350) 1 7 2 0x1000000 -1 -1 "OUTPUT-SRCSINK"»
+  «text (140,-150) 0.681 7 0 0x0 -1 -1 "Rsrc=<10>"»
+  «text (140,-250) 0.681 7 0 0x0 -1 -1 "Rsink=<10>"»
+  «pin (0,-300) (0,0) 1 15 0 0x0 -1 "Vss"»
+  «pin (0,300) (20,0) 1 15 0 0x0 -1 "Vdd"»
+  «pin (-100,0) (0,0) 1 15 0 0x0 -1 "BoolIN"»
+  «pin (100,0) (-20,0) 1 15 0 0x0 -1 "OUT"»
+»

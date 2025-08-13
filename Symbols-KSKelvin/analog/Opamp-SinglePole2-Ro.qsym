@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Opamp-SinglePole2
+ÿØÿÛ«symbol Opamp-SinglePole2-Ro
   «type: X»
   «description: Opamp - Single Pole»
   «library file: |.subckt Opamp-SinglePole 1 2 3\nG1 0 3 2 1 Aol/Ro\nR3 3 0 Ro\nC3 3 0 Aol/GBW/2/pi/Ro\n.ends Opamp-SinglePole»
@@ -11,9 +11,9 @@
   «line (300,0) (-300,-450) 0 0 0x1000000 -1 -1»
   «text (110,250) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-150,400) 1 7 2 0x1000000 -1 -1 "Opamp-SinglePole"»
-  «text (100,-200) 0.857 7 0 0x1000000 -1 -1 "Aol=<100K>"»
-  «text (100,-350) 0.857 7 0 0x0 -1 -1 "GBW=<10Meg>"»
-  «text (100,-500) 0.857 7 0 0x0 -1 -1 "Ro=<1>"»
+  «text (100,-200) 1 7 0 0x1000000 -1 -1 "Aol=<100K>"»
+  «text (100,-350) 1 7 0 0x0 -1 -1 "GBW=<10Meg>"»
+  «text (100,-500) 1 7 0 0x0 -1 -1 "Ro=<1>"»
   «pin (-300,200) (20,0) 1 15 0 0x0 -1 "1"»
   «pin (-300,-200) (-20,0) 1 15 0 0x0 -1 "2"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "3"»

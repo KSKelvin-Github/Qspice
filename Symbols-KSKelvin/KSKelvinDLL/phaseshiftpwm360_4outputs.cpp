@@ -1,8 +1,8 @@
-// Automatically generated C++ file on Tue Jul 29 11:10:55 2025
+// Automatically generated C++ file on Fri Aug 15 01:50:05 2025
 //
 // To build with Digital Mars C++ Compiler:
 //
-//    dmc -mn -WD phaseshiftpwm4outputs.cpp kernel32.lib
+//    dmc -mn -WD phaseshiftpwm360_4outputs.cpp kernel32.lib
 
 #include <malloc.h>
 
@@ -19,8 +19,10 @@ extern "C" __declspec(dllexport) const void *GUI_HWND                           
 extern "C" __declspec(dllexport) const double *CKTtime                          = 0;
 extern "C" __declspec(dllexport) const double *CKTdelta                         = 0;
 extern "C" __declspec(dllexport) const int *IntegrationOrder                    = 0;
-extern "C" __declspec(dllexport) const int *CKTnoncon                           = 0;
-extern "C" __declspec(dllexport) const char *(*BinaryFormat)(unsigned int data) = 0; // BinaryFormat(0x1C) returns "0b00011100"
+extern "C" __declspec(dllexport) const char *InstallDirectory                   = 0;
+extern "C" __declspec(dllexport) const char *(*BinaryFormat)(unsigned int data)                          = 0; // BinaryFormat(0x1C) returns "0b00011100"
+extern "C" __declspec(dllexport) const char *(*EngFormat   )(double x, const char *units, int numDgts)   = 0; // EngFormat(1e-6, "s", 6) returns "1µs"
+extern "C" __declspec(dllexport) int (*DFFT)(struct sComplex *u, bool inv, unsigned int N, double scale) = 0; // Discrete Fast Fourier Transform
 extern "C" __declspec(dllexport) void (*bzero)(void *ptr, unsigned int count)   = 0;
 
 union uData
@@ -62,8 +64,9 @@ int __stdcall DllMain(void *module, unsigned int reason, void *reserved) { retur
 #undef CLKc
 #undef CLKd
 
-struct sPHASESHIFTPWM4OUTPUTS
+struct sPHASESHIFTPWM360_4OUTPUTS
 {
+  // declare the structure here
   // declare the structure here
   bool init;             // Initialization flag (true after first setup)
   double lastT;          // Timestamp of the previous processing cycle
@@ -99,40 +102,39 @@ struct sPHASESHIFTPWM4OUTPUTS
   bool lastCLKd;         // Previous state of CLKd signal
 };
 
-extern "C" __declspec(dllexport) void phaseshiftpwm4outputs(struct sPHASESHIFTPWM4OUTPUTS **opaque, double t, union uData *data)
+extern "C" __declspec(dllexport) void phaseshiftpwm360_4outputs(struct sPHASESHIFTPWM360_4OUTPUTS **opaque, double t, union uData *data)
 {
-   bool   CLKext      = data[ 0].b; // input
-   double PhaseStpB   = data[ 1].d; // input
-   double PhaseStpC   = data[ 2].d; // input
-   double PhaseStpD   = data[ 3].d; // input
-   double deadtime    = data[ 4].d; // input parameter
-   bool   intCLK      = data[ 5].b; // input parameter
-   double fsw         = data[ 6].d; // input parameter
-   double PhaseAtVmin = data[ 7].d; // input parameter
-   double PhaseAtVmax = data[ 8].d; // input parameter
-   double v2degree    = data[ 9].d; // input parameter
-   bool  &A           = data[10].b; // output
-   bool  &_A          = data[11].b; // output
-   bool  &B           = data[12].b; // output
-   bool  &_B          = data[13].b; // output
-   bool  &C           = data[14].b; // output
-   bool  &_C          = data[15].b; // output
-   bool  &D           = data[16].b; // output
-   bool  &_D          = data[17].b; // output
-   bool  &CLKa        = data[18].b; // output
-   bool  &CLKb        = data[19].b; // output
-   bool  &CLKc        = data[20].b; // output
-   bool  &CLKd        = data[21].b; // output
+   bool   CLKext        = data[ 0].b; // input
+   double PhaseStpB     = data[ 1].d; // input
+   double PhaseStpC     = data[ 2].d; // input
+   double PhaseStpD     = data[ 3].d; // input
+   double deadtime      = data[ 4].d; // input parameter
+   bool   intCLK        = data[ 5].b; // input parameter
+   double fsw           = data[ 6].d; // input parameter
+   double PhaseOffset   = data[ 7].d; // input parameter
+   double PhaseAtMaxStp = data[ 8].d; // input parameter
+   double v2degree      = data[ 9].d; // input parameter
+   bool  &A             = data[10].b; // output
+   bool  &_A            = data[11].b; // output
+   bool  &B             = data[12].b; // output
+   bool  &_B            = data[13].b; // output
+   bool  &C             = data[14].b; // output
+   bool  &_C            = data[15].b; // output
+   bool  &D             = data[16].b; // output
+   bool  &_D            = data[17].b; // output
+   bool  &CLKa          = data[18].b; // output
+   bool  &CLKb          = data[19].b; // output
+   bool  &CLKc          = data[20].b; // output
+   bool  &CLKd          = data[21].b; // output
 
    if(!*opaque)
    {
-      *opaque = (struct sPHASESHIFTPWM4OUTPUTS *) malloc(sizeof(struct sPHASESHIFTPWM4OUTPUTS));
-      bzero(*opaque, sizeof(struct sPHASESHIFTPWM4OUTPUTS));
+      *opaque = (struct sPHASESHIFTPWM360_4OUTPUTS *) malloc(sizeof(struct sPHASESHIFTPWM360_4OUTPUTS));
+      bzero(*opaque, sizeof(struct sPHASESHIFTPWM360_4OUTPUTS));
    }
-   struct sPHASESHIFTPWM4OUTPUTS *inst = *opaque;
+   struct sPHASESHIFTPWM360_4OUTPUTS *inst = *opaque;
 
 // Implement module evaluation code here:
-
    // Initialization
    if(*ForKeeps & !inst->init)  // Check if initialization is not done yet
    {
@@ -174,43 +176,43 @@ extern "C" __declspec(dllexport) void phaseshiftpwm4outputs(struct sPHASESHIFTPW
    {
       inst->CLKperiod = t - inst->lastT_CLKa;   // Calculate clock period
 
-      // Determine sign of slope (v2degree) based on PhaseAtVmax and PhaseAtVmin
-      if(PhaseAtVmax > PhaseAtVmin & v2degree < 0) v2degree = -v2degree;
-      if(PhaseAtVmax < PhaseAtVmin & v2degree > 0) v2degree = -v2degree;
-      if(PhaseAtVmin > 359) PhaseAtVmin=359;
-      if(PhaseAtVmax > 359) PhaseAtVmax=359;
+      // Determine sign of slope (v2degree) based on PhaseAtMaxStp and PhaseOffset
+      if(PhaseAtMaxStp > PhaseOffset & v2degree < 0) v2degree = -v2degree;
+      if(PhaseAtMaxStp < PhaseOffset & v2degree > 0) v2degree = -v2degree;
+      if(PhaseOffset > 359) PhaseOffset=359;
+      if(PhaseAtMaxStp > 359) PhaseAtMaxStp=359;
 
       // Calculate inst->PhaseStpB_CLKin
-      inst->PhaseStpB_CLKin = PhaseStpB*v2degree+PhaseAtVmin;  // Phase setpoint B at clock edge
+      inst->PhaseStpB_CLKin = PhaseStpB*v2degree+PhaseOffset;  // Phase setpoint B at clock edge
       if (v2degree >= 0){
-         if(inst->PhaseStpB_CLKin < PhaseAtVmin) inst->PhaseStpB_CLKin = PhaseAtVmin;
-         if(inst->PhaseStpB_CLKin > PhaseAtVmax) inst->PhaseStpB_CLKin = PhaseAtVmax;
+         if(inst->PhaseStpB_CLKin < PhaseOffset) inst->PhaseStpB_CLKin = PhaseOffset;
+         if(inst->PhaseStpB_CLKin > PhaseAtMaxStp) inst->PhaseStpB_CLKin = PhaseAtMaxStp;
       }
       else{
-         if(inst->PhaseStpB_CLKin < PhaseAtVmax) inst->PhaseStpB_CLKin = PhaseAtVmax;
-         if(inst->PhaseStpB_CLKin > PhaseAtVmin) inst->PhaseStpB_CLKin = PhaseAtVmin;
+         if(inst->PhaseStpB_CLKin < PhaseAtMaxStp) inst->PhaseStpB_CLKin = PhaseAtMaxStp;
+         if(inst->PhaseStpB_CLKin > PhaseOffset) inst->PhaseStpB_CLKin = PhaseOffset;
       }
 
       // Calculate inst->PhaseStpC_CLKin
-      inst->PhaseStpC_CLKin = PhaseStpC*v2degree+PhaseAtVmin;  // Phase setpoint C at clock edge
+      inst->PhaseStpC_CLKin = PhaseStpC*v2degree+PhaseOffset;  // Phase setpoint C at clock edge
       if (v2degree >= 0){
-         if(inst->PhaseStpC_CLKin < PhaseAtVmin) inst->PhaseStpC_CLKin = PhaseAtVmin;
-         if(inst->PhaseStpC_CLKin > PhaseAtVmax) inst->PhaseStpC_CLKin = PhaseAtVmax;
+         if(inst->PhaseStpC_CLKin < PhaseOffset) inst->PhaseStpC_CLKin = PhaseOffset;
+         if(inst->PhaseStpC_CLKin > PhaseAtMaxStp) inst->PhaseStpC_CLKin = PhaseAtMaxStp;
       }
       else{
-         if(inst->PhaseStpC_CLKin < PhaseAtVmax) inst->PhaseStpC_CLKin = PhaseAtVmax;
-         if(inst->PhaseStpC_CLKin > PhaseAtVmin) inst->PhaseStpC_CLKin = PhaseAtVmin;
+         if(inst->PhaseStpC_CLKin < PhaseAtMaxStp) inst->PhaseStpC_CLKin = PhaseAtMaxStp;
+         if(inst->PhaseStpC_CLKin > PhaseOffset) inst->PhaseStpC_CLKin = PhaseOffset;
       }
 
       // Calculate inst->PhaseStpD_CLKin
-      inst->PhaseStpD_CLKin = PhaseStpD*v2degree+PhaseAtVmin;  // Phase setpoint D at clock edge
+      inst->PhaseStpD_CLKin = PhaseStpD*v2degree+PhaseOffset;  // Phase setpoint D at clock edge
       if (v2degree >= 0){
-         if(inst->PhaseStpD_CLKin < PhaseAtVmin) inst->PhaseStpD_CLKin = PhaseAtVmin;
-         if(inst->PhaseStpD_CLKin > PhaseAtVmax) inst->PhaseStpD_CLKin = PhaseAtVmax;
+         if(inst->PhaseStpD_CLKin < PhaseOffset) inst->PhaseStpD_CLKin = PhaseOffset;
+         if(inst->PhaseStpD_CLKin > PhaseAtMaxStp) inst->PhaseStpD_CLKin = PhaseAtMaxStp;
       }
       else{
-         if(inst->PhaseStpD_CLKin < PhaseAtVmax) inst->PhaseStpD_CLKin = PhaseAtVmax;
-         if(inst->PhaseStpD_CLKin > PhaseAtVmin) inst->PhaseStpD_CLKin = PhaseAtVmin;
+         if(inst->PhaseStpD_CLKin < PhaseAtMaxStp) inst->PhaseStpD_CLKin = PhaseAtMaxStp;
+         if(inst->PhaseStpD_CLKin > PhaseOffset) inst->PhaseStpD_CLKin = PhaseOffset;
       }
 
       CLKa = 1;               // Set CLKa
@@ -316,18 +318,18 @@ extern "C" __declspec(dllexport) void phaseshiftpwm4outputs(struct sPHASESHIFTPW
    inst->lastCLKd = CLKd;
 }
 
-extern "C" __declspec(dllexport) double MaxExtStepSize(struct sPHASESHIFTPWM4OUTPUTS *inst, double t)
+extern "C" __declspec(dllexport) double MaxExtStepSize(struct sPHASESHIFTPWM360_4OUTPUTS *inst, double t)
 {
-   return 1e308; // implement a good choice of max timestep size that depends on struct sPHASESHIFTPWM4OUTPUTS
+   return 1e308; // implement a good choice of max timestep size that depends on struct sPHASESHIFTPWM360_4OUTPUTS
 }
 
-extern "C" __declspec(dllexport) void Trunc(struct sPHASESHIFTPWM4OUTPUTS *inst, double t, union uData *data, double *timestep)
-{ // limit the timestep to a tolerance if the circuit causes a change in struct sPHASESHIFTPWM4OUTPUTS
+extern "C" __declspec(dllexport) void Trunc(struct sPHASESHIFTPWM360_4OUTPUTS *inst, double t, union uData *data, double *timestep)
+{ // limit the timestep to a tolerance if the circuit causes a change in struct sPHASESHIFTPWM360_4OUTPUTS
    const double ttol = 1e-9; // 1ns default tolerance
    if(*timestep > ttol)
    {
-      struct sPHASESHIFTPWM4OUTPUTS tmp = *inst;
-      phaseshiftpwm4outputs(&(&tmp), t, data);
+      struct sPHASESHIFTPWM360_4OUTPUTS tmp = *inst;
+      phaseshiftpwm360_4outputs(&(&tmp), t, data);
 
       if((tmp.lastA != inst->lastA)|(tmp.last_A != inst->last_A)|
          (tmp.lastB != inst->lastB)|(tmp.last_B != inst->last_B)|
@@ -339,7 +341,7 @@ extern "C" __declspec(dllexport) void Trunc(struct sPHASESHIFTPWM4OUTPUTS *inst,
    }
 }
 
-extern "C" __declspec(dllexport) void Destroy(struct sPHASESHIFTPWM4OUTPUTS *inst)
+extern "C" __declspec(dllexport) void Destroy(struct sPHASESHIFTPWM360_4OUTPUTS *inst)
 {
    free(inst);
 }

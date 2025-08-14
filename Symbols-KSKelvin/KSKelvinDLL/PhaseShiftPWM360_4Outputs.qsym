@@ -1,17 +1,17 @@
-ÿØÿÛ«symbol PhaseShiftPWM4Outputs
+ÿØÿÛ«symbol PhaseShiftPWM360_4Outputs
   «type: Ø(.DLL)»
-  «description: Phase Shift PWM Module with Phase Setpoint Input»
+  «description: Phase Shift PWM Module with Phase Setpoint Input (0o to 360o) - 4 Outputs»
   «shorted pins: false»
   «line (-800,700) (-700,600) 0 0 0x1000000 -1 -1»
   «line (-700,600) (-800,500) 0 0 0x1000000 -1 -1»
   «rect (-800,800) (900,-2700) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
   «text (-800,1050) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-800,900) 1 7 0 0x1000000 -1 -1 "PhaseShiftPWM4Outputs"»
+  «text (-800,900) 1 7 0 0x1000000 -1 -1 "PhaseShiftPWM360_4Outputs"»
   «text (-800,-2800) 1 7 0 0x1000000 -1 -1 "float deadtime=<1µ>"»
   «text (-800,-2950) 1 7 0 0x1000000 -1 -1 "bool intCLK=<int[0:1](1)>"»
   «text (-800,-3100) 1 7 0 0x1000000 -1 -1 "float fsw=<100K>"»
-  «text (-800,-3250) 1 7 0 0x1000000 -1 -1 "float PhaseAtVmin=<float[0:360](0)>"»
-  «text (-800,-3400) 1 7 0 0x1000000 -1 -1 "float PhaseAtVmax=<float[0:360](360)>"»
+  «text (-800,-3250) 1 7 0 0x1000000 -1 -1 "float PhaseOffset=<float[0:360](0)>"»
+  «text (-800,-3400) 1 7 0 0x1000000 -1 -1 "float PhaseAtMaxStp=<float[0:360](360)>"»
   «text (-800,-3550) 1 7 0 0x1000000 -1 -1 "float v2degree=<360>"»
   «text (-766,-150) 1 7 1 0x1000000 -1 -1 "1V to v2degree°"»
   «pin (-800,600) (100,0) 1 7 17 0x0 -1 "CLKext"»

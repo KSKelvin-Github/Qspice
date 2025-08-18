@@ -1,0 +1,31 @@
+ÿØÿÛ«symbol Switch-SPDT
+  «type: X»
+  «description: Switch - Single Pole Dual Throw (SPDT)»
+  «library file: |.subckt Switch-SPDT P T1 T2 CTRL\nS1 T1 P CTRL 0 SW1 TTOL=TTOL\nS2 P T2 CTRL 0 SW2 TTOL=TTOL\n.model SW1 SW Ron=Roff Roff=Ron Vt=0.5 Vh=0\n.model SW2 SW Ron=Ron Roff=Roff Vt=0.5 Vh=0\n.param Ron=1m\n.param Roff=10Meg\n.param TTOL=1n\n.ends Switch-SPDT»
+  «shorted pins: false»
+  «line (-100,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «line (200,100) (100,100) 0 0 0x1000000 -1 -1»
+  «line (-40,0) (100,80) 0 0 0x1000000 -1 -1»
+  «line (200,-100) (100,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-30) 0 1 0x1000000 -1 -1»
+  «line (150,-80) (150,-30) 0 0 0x1000000 -1 -1»
+  «line (130,-50) (150,-30) 0 0 0x1000000 -1 -1»
+  «line (-40,-180) (-40,-130) 0 0 0x1000000 -1 -1»
+  «line (-60,-150) (-40,-130) 0 0 0x1000000 -1 -1»
+  «line (-80,-130) (-90,-180) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (-100,30) (-40,-30) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (40,130) (100,70) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (40,-70) (100,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (130,170) (160,120) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-140,-130) (-110,-180) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-111,300) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (-200,450) 1 7 2 0x1000000 -1 -1 "SWITCH-SPDT"»
+  «text (93,-300) 1 7 2 0x1000000 -1 -1 "Ron=<1m>"»
+  «text (93,-450) 1 7 2 0x1000000 -1 -1 "Roff=<10Meg>"»
+  «text (93,-600) 1 7 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "P"»
+  «pin (200,100) (20,0) 1 15 0 0x0 -1 "T1"»
+  «pin (200,-100) (0,0) 1 15 0 0x0 -1 "T2"»
+  «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "CTRL"»
+»

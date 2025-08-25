@@ -3,7 +3,7 @@
 ## Procedure to assign Port and Data Type of DLL-device from Text Editor
 Step 1: Use text editor[^1] to open .qsch or .qsym with Ø-Device
 
-Step 2: Pin is described as «pin (-2300,1000) (0,0) 0.926 7 `17` 0x0 -1 "InputBoolean"»
+Step 2: Pin is described as **«pin (-2300,1000) (0,0) 0.926 7 `17` 0x0 -1 "InputBoolean"»**
 
 | Item | Description |
 | ----------- | ----------- |

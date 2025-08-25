@@ -18,7 +18,7 @@ Step 2: Pin is described as **«pin (-2300,1000) (0,0) 0.926 7 `17` 0x0 -1 "Inpu
 
 
 Step 3: Modify **port and data type** (`17`) with text editor by referring to table below
-- e.g. To assign an Output Port, Float, input `146` to replace `17`
+- e.g. To assign an Output Port, Float, replace `17` by `146`
 
 |Data Type| Port : Input | Port : Output | Port : DLL's GND |
 | ----------- | ----------- | ----------- | ----------- |

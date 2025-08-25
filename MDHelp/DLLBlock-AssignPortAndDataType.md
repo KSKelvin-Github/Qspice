@@ -34,7 +34,6 @@ Step 3: Modify **port and data type** (`17`) with text editor by referring to ta
 |**Float**|**145**|**146**||
 |Integer64|161|162||
 |Unsigned Integer 64|177|178||
-|Bit Vector[0:3]|196801|196802||
 
 
 [^1]: Text Editor : [Notepad++ : https://notepad-plus-plus.org/](https://notepad-plus-plus.org/)

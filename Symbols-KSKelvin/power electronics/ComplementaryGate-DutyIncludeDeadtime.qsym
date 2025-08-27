@@ -1,0 +1,36 @@
+ÿØÿÛ«symbol ComplementaryGate-DutyIncludeDeadtime
+  «type: X»
+  «description: Complementary Gate - Duty Include Deadtime»
+  «library file: |.subckt ComplementaryGate-DutyIncludeDeadtime A+ B+ ADuty A- B-\nV1 A+ A- pulse Vlow Vhigh Tdelay Trise Tfall duty/fsw-deadtime 1/fsw DC Vlow\nV2 B+ B- pulse Vlow Vhigh Tdelay+duty/fsw Trise Tfall (1-duty)/fsw-deadtime 1/fsw DC Vlow\nV3 ADuty 0 DC (duty/fsw-deadtime)*fsw\nR1 A- 0 1G\nR2 B- 0 1G\n.ends ComplementaryGate-DutyIncludeDeadtime»
+  «shorted pins: false»
+  «line (750,300) (810,300) 0 0 0x1000000 -1 -1»
+  «line (810,300) (810,500) 0 0 0x1000000 -1 -1»
+  «line (810,500) (940,500) 0 0 0x1000000 -1 -1»
+  «line (940,500) (940,300) 0 0 0x1000000 -1 -1»
+  «line (940,300) (1110,300) 0 0 0x1000000 -1 -1»
+  «line (1110,300) (1110,500) 0 0 0x1000000 -1 -1»
+  «line (1110,500) (1200,500) 0 0 0x1000000 -1 -1»
+  «line (750,-200) (790,-200) 0 0 0x1000000 -1 -1»
+  «line (790,-200) (790,-400) 0 0 0x1000000 -1 -1»
+  «line (790,-400) (960,-400) 0 0 0x1000000 -1 -1»
+  «line (960,-400) (960,-200) 0 0 0x1000000 -1 -1»
+  «line (960,-200) (1090,-200) 0 0 0x1000000 -1 -1»
+  «line (1090,-200) (1090,-400) 0 0 0x1000000 -1 -1»
+  «line (1090,-400) (1200,-400) 0 0 0x1000000 -1 -1»
+  «rect (-300,700) (1400,-900) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-293,950) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-291,800) 1 7 0 0x1000000 -1 -1 "COMPLEMENTARYGATE-DUTYINCLUDEDEADTIME"»
+  «text (-232,400) 1 7 0 0x0 -1 -1 "fsw=100k"»
+  «text (-232,250) 1 7 0 0x0 -1 -1 "duty=0.5"»
+  «text (-232,100) 1 7 0 0x0 -1 -1 "deadtime=1000n"»
+  «text (-232,-200) 1 7 0 0x0 -1 -1 "Vlow=0"»
+  «text (-232,-350) 1 7 0 0x0 -1 -1 "Vhigh=1"»
+  «text (-232,-500) 1 7 0 0x0 -1 -1 "Tdelay=0"»
+  «text (-232,-650) 1 7 0 0x0 -1 -1 "Trise=1p"»
+  «text (-232,-800) 1 7 0 0x0 -1 -1 "Tfall=1p"»
+  «pin (1400,600) (20,0) 1 11 0 0x0 -1 "A+"»
+  «pin (1400,-100) (20,0) 1 11 0 0x0 -1 "B+"»
+  «pin (1400,-800) (20,0) 1 11 0 0x0 -1 "ADuty"»
+  «pin (1400,200) (-20,0) 1 11 0 0x0 -1 "A-"»
+  «pin (1400,-500) (-20,0) 1 11 0 0x0 -1 "B-"»
+»

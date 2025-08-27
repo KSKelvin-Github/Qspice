@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Zmeas(.ac)
+  «type: X»
+  «description: Impedance Meas with .ac»
+  «library file: |.subckt Zmeas Vz+ Vz- Z\nV´Iz N01 Vz+ 0\nB1 Z 0 V=V(Vz+,Vz-)\nI1 Vz- N01 AC 1\nL1 N02 N01 1T\nV1 N02 Vz- DCbias\n.ends Zmeas»
+  «shorted pins: false»
+  «line (-300,-300) (-300,-150) 0 0 0x1000000 -1 -1»
+  «line (-500,-150) (-400,-150) 0 0 0x1000000 -1 -1»
+  «line (-500,-150) (-500,-300) 0 0 0x1000000 -1 -1»
+  «rect (-700,500) (1500,-300) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «ellipse (-350,-100) (-250,-200) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-400,-50) (-200,-250) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-700,750) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-700,600) 1 7 0 0x1000000 -1 -1 "ZMEAS"»
+  «text (-120,-200) 1 7 0 0x0 -1 -1 "DCbias=<0>"»
+  «text (-550,400) 0.681 7 1 0x1000000 -1 -1 "#1 add .ac directive (e.g. .ac list 1Meg)"»
+  «text (-550,300) 0.681 7 1 0x1000000 -1 -1 "#2 assign node name Z to pin Z"»
+  «text (-550,200) 0.681 7 1 0x1000000 -1 -1 "#3 add .func Rs() re(V(Z))"»
+  «text (-550,100) 0.681 7 1 0x1000000 -1 -1 "#4 add .func Cs() -1/2/pi/freq/im(V(Z))"»
+  «pin (-300,-300) (10,0) 1 15 0 0x0 -1 "Vz+"»
+  «pin (-500,-300) (-20,0) 1 15 0 0x0 -1 "Vz-"»
+  «pin (-700,300) (20,0) 1 7 0 0x0 -1 "Z"»
+»

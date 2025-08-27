@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol Subtract
+  «type: X»
+  «description: Subtract»
+  «library file: |.subckt subtract pos neg error\nE1 error 0 pos neg 1\n.ends subtract»
+  «shorted pins: false»
+  «line (50,0) (150,0) 0 0 0x1000000 -1 -1»
+  «line (100,50) (100,-50) 0 0 0x1000000 -1 -1»
+  «line (150,-100) (250,-100) 0 0 0x1000000 -1 -1»
+  «ellipse (0,200) (400,-200) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (200,300) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (750,-250) 1 0 2 0x1000000 -1 -1 "SUBTRACT"»
+  «pin (0,0) (20,0) 1 15 0 0x0 -1 "pos"»
+  «pin (200,-200) (-20,0) 1 15 0 0x0 -1 "neg"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "error"»
+»

@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol Diode-Ideal(.model)
+  «type: D»
+  «description: Ideal Diode with .model (embedded)»
+  «library file: |.model D-Ideal D RON=1m ROFF=10Meg VFWD=0»
+  «shorted pins: false»
+  «line (100,80) (-100,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0xf5d29b -1 -1»
+  «text (100,200) 1 7 0 0x1000000 -1 -1 "D1"»
+  «text (100,-200) 1 7 2 0x1000000 -1 -1 "D-Ideal"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "K"»
+»

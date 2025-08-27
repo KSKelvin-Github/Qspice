@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol IProbe-0Vsrc(large)
+  «type: V»
+  «description: Current Probe - with 0V voltage source by KSKelvin»
+  «shorted pins: false»
+  «line (150,130) (150,-150) 0 0 0x1000000 -1 -1»
+  «ellipse (-40,40) (40,-40) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «arc3p (0,-100) (0,100) (0,0) 0 0 0x1000000 -1 -1»
+  «triangle (150,-150) (100,-80) (200,-80) 0 0 0x1000000 0xff0012 -1 -1»
+  «text (200,0) 1 7 0 0x1000000 -1 -1 "IProbe1"»
+  «text (250,-100) 0.63 7 2 0x1000000 -1 -1 "0"»
+  «text (250,-200) 0.681 7 3 0x1000000 -1 -1 "; hold shift to probe"»
+  «pin (0,100) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-100) (0,0) 1 0 0 0x0 -1 "-"»
+»

@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol Potentiometer-VCTRL
+  «type: X»
+  «description: Potentiometer»
+  «library file: |.subckt Potentiometer-Vctrl + - m ratio\nR1 + m R=(1-V(w))*Rt\nR2 m - R=(V(w))*Rt\nB1 w 0 V=limit(1m,V(ratio),0.999)\n.ends Potentiometer-Vctrl»
+  «shorted pins: false»
+  «line (200,0) (100,0) 0 0 0x1000000 -1 -1»
+  «triangle (50,0) (100,50) (100,-50) 0 0 0x1000000 0x2000000 -1 -1»
+  «zigzag (-50,200) (50,-200) 0 0 0 0x1000000 -1 -1»
+  «text (200,150) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (100,300) 1 7 2 0x1000000 -1 -1 "Potentiometer-Vctrl"»
+  «text (100,-150) 0.857 7 0 0x0 -1 -1 "Rt=<1k>"»
+  «text (-100,120) 0.5 96 1 0x1000000 -1 -1 "0-1V"»
+  «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "m"»
+  «pin (-100,0) (0,0) 1 0 0 0x0 -1 "ratio"»
+»

@@ -1,0 +1,12 @@
+ÿØÿÛ«symbol Edge-Detector
+  «type: X»
+  «description: Edge Detector (Logic Output 0/1)»
+  «library file: |.subckt Edge-Detector sgl isRise isFall\nB1 isRise 0 V=(V(sgl)-state(1,V(sgl)))>0\nB2 isFall 0 V=(V(sgl)-state(1,V(sgl)))<0\n.ends Edge-Detector»
+  «shorted pins: false»
+  «rect (-400,300) (300,-300) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-300,500) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (-400,370) 0.681 7 0 0x1000000 -1 -1 "EDGE-DETECTOR"»
+  «pin (-400,200) (20,0) 1 7 0 0x0 -1 "sgl"»
+  «pin (300,200) (-20,0) 1 11 0 0x0 -1 "isRise"»
+  «pin (300,-200) (0,0) 1 11 0 0x0 -1 "isFall"»
+»

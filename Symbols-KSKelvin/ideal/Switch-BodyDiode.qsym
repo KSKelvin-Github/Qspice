@@ -1,0 +1,31 @@
+ÿØÿÛ«symbol Switch-BodyDiode
+  «type: X»
+  «description: Ideal Switch with Body Diode»
+  «library file: |.subckt Switch-BodyDiode G sw+ sw-\nS1 sw+ sw- G 0 SWi\nD1 sw- sw+ Di\n.model SWi SW Ron=swRon Roff=swRoff Vt=swVt Vh=swVh TTOL=ttol\n.model Di D Ron=dRon Roff=dRoff Vfwd=dVfwd\n.ends Switch-BodyDiode»
+  «shorted pins: false»
+  «line (0,200) (0,105) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-105) 0 0 0x1000000 -1 -1»
+  «line (-66,-75) (-25,80) 0 0 0x1000000 -1 -1»
+  «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (90,50) (210,50) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (150,-150) 0 0 0x1000000 -1 -1»
+  «line (150,-150) (150,150) 0 0 0x1000000 -1 -1»
+  «line (150,150) (0,150) 0 0 0x1000000 -1 -1»
+  «ellipse (-150,200) (250,-200) 0 0 0 0x1000000 0xf5d29b -1 -1»
+  «ellipse (-25,55) (25,105) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-25,-105) (25,-55) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (150,50) (90,-50) (210,-50) 0 0 0x1000000 0xf5d29b -1 -1»
+  «text (250,250) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "SWITCH-BODYDIODE"»
+  «text (251,-50) 1 7 2 0x1000000 -1 -1 "swRon=1m"»
+  «text (251,-200) 1 7 2 0x1000000 -1 -1 "swRoff=10Meg"»
+  «text (251,-350) 1 7 2 0x1000000 -1 -1 "swVt=0.5"»
+  «text (251,-500) 1 7 2 0x1000000 -1 -1 "swVh=0"»
+  «text (251,-650) 1 7 2 0x1000000 -1 -1 "ttol=1e-6"»
+  «text (251,-800) 1 7 2 0x1000000 -1 -1 "dRon=1m"»
+  «text (251,-950) 1 7 2 0x1000000 -1 -1 "dRoff=10Meg"»
+  «text (251,-1100) 1 7 2 0x1000000 -1 -1 "dVfwd=0"»
+  «pin (-300,0) (20,0) 1 15 0 0x0 -1 "G"»
+  «pin (0,200) (-20,0) 1 15 0 0x0 -1 "sw+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "sw-"»
+»

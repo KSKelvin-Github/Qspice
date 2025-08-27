@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol VlimiterForIsource
+  «type: X»
+  «description: Voltage Limiter for Current Source (In Parallel)»
+  «library file: |.subckt VlimiterForIsource I+ I-\nD1 I+ I- Dlimiter\n.model Dlimiter D Ron=1m Roff=10Meg Vfwd=abs(Vpos) Vrev=abs(Vneg) epsilon=0 revepsilon=0\n.ends VlimiterForIsource»
+  «shorted pins: false»
+  «line (-70,-100) (70,100) 0 0 0x1000000 -1 -1»
+  «line (70,100) (120,100) 0 0 0x1000000 -1 -1»
+  «line (-70,-100) (-120,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (0,150) (0,200) 0 0 0x1000000 -1 -1»
+  «line (-30,100) (30,100) 0 0 0x1000000 -1 -1»
+  «line (0,130) (0,70) 0 0 0x1000000 -1 -1»
+  «line (-30,-100) (30,-100) 0 0 0x1000000 -1 -1»
+  «rect (-150,150) (150,-150) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-250,0) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "VLIMITERFORISOURCE"»
+  «text (200,50) 1 7 0 0x0 -1 -1 "Vpos=<1>"»
+  «text (200,-100) 1 7 0 0x0 -1 -1 "Vneg=<1>"»
+  «text (200,-250) 1 7 2 0x1000000 -1 -1 "epsilon=<0>"»
+  «text (200,-400) 1 7 2 0x1000000 -1 -1 "revepsilon=<0>"»
+  «text (200,170) 0.681 7 1 0x1000000 -1 -1 "Parallel I-src"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "I+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "I-"»
+»

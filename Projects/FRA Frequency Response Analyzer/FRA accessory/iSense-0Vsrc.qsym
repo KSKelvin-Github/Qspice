@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol iSense-0Vsrc
+  «type: X»
+  «description: iSense for FRA»
+  «library file: |.subckt isense in+ in- out\nV1 in+ in- 0\nB1 out 0 V=A*I(V1)\n.ends isense»
+  «shorted pins: false»
+  «line (-90,170) (-30,170) 0 0 0x8000 -1 -1»
+  «line (-60,140) (-60,200) 0 0 0x8000 -1 -1»
+  «line (200,0) (60,0) 0 0 0x8000 -1 -1»
+  «line (0,130) (0,200) 0 0 0x8000 -1 -1»
+  «line (0,-130) (0,-200) 0 0 0x8000 -1 -1»
+  «ellipse (-60,60) (60,-60) 0 0 0 0x8000 0x1000000 -1 -1»
+  «arc3p (0,130) (0,-130) (0,0) 0 0 0x8000 -1 -1»
+  «text (100,-100) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (300,-100) 1 7 2 0x1000000 -1 -1 "iSense"»
+  «text (100,-250) 1 7 2 0x1000000 -1 -1 "A=<1>"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "in+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "in-"»
+  «pin (200,0) (0,0) 1 0 0 0x0 -1 "out"»
+»

@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol ResetWave
+  «type: X»
+  «library file: |.subckt ResetWave reset\nB1 ¥1 0 V=resetwave(V(reset))\n.ends ResetWave»
+  «shorted pins: false»
+  «line (-300,-200) (-300,200) 0 0 0x1000000 -1 -1»
+  «line (-300,200) (300,200) 0 0 0x1000000 -1 -1»
+  «line (300,200) (300,-200) 0 0 0x1000000 -1 -1»
+  «arc3p (300,-200) (0,-200) (150,-350) 0 0 0x1000000 -1 -1»
+  «arc3p (-300,-200) (0,-200) (-150,-50) 0 0 0x1000000 -1 -1»
+  «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-250,-50) 0.681 7 0 0x1000000 -1 -1 "ResetWave"»
+  «pin (-300,100) (20,0) 0.681 7 0 0x0 -1 "reset"»
+»

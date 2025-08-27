@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol powermeter
+  «type: X»
+  «description: RF Power Meter»
+  «library file: |.subckt powermeter RFin RFout pfwdW prevW\nVIi RFin RFout 0\nB1 vfwd 0 V=(V(RFin)+Zo*I(VIi))/2\nB2 vrev 0 V=(V(RFin)-Zo*I(VIi))/2\nB3 vfwd_90 0 V=delay(V(vfwd),per/4,per/2)\nB4 vrev_90 0 V=delay(V(vrev),per/4,per/2)\nB5 vfwdSUM 0 V=(V(vfwd)**2+V(vfwd_90)**2)/2/Zo\nB6 vrevSUM 0 V=(V(vrev)**2+V(vrev_90)**2)/2/Zo\nR1 vfwdSUM pfwdW 50\nC1 pfwdW 0 1/2/pi/frq/50*filter\nR2 vrevSUM prevW 50\nC2 prevW 0 1/2/pi/frq/50*filter\n.param per=1/frq\n.param filter=10\n.ends powermeter»
+  «shorted pins: false»
+  «line (-400,0) (400,0) 6 0 0x1000000 -1 -1»
+  «line (-200,-100) (-150,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (-50,-100) 0 0 0x1000000 -1 -1»
+  «rect (-600,300) (600,-400) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «rect (-400,10) (200,-10) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «arc3p (-200,-100) (-300,-200) (-200,-200) 0 0 0x1000000 -1 -1»
+  «arc3p (100,-200) (0,-100) (0,-200) 0 0 0x1000000 -1 -1»
+  «triangle (200,100) (400,0) (200,-100) 0 0 0x1000000 0xf5d29b -1 -1»
+  «triangle (-300,-200) (-270,-170) (-330,-170) 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (100,-200) (130,-170) (60,-170) 0 0 0x1000000 0xff0012 -1 -1»
+  «text (-600,549) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,200) 1 15 0 0x1000000 -1 -1 "POWERMETER"»
+  «text (-600,400) 1 7 0 0x0 -1 -1 "frq=<frq>"»
+  «pin (-600,0) (0,0) 1 15 0 0x0 -1 "RFin"»
+  «pin (600,0) (20,0) 1 15 0 0x0 -1 "RFout"»
+  «pin (300,-400) (0,0) 1 14 0 0x0 -1 "PfwdW"»
+  «pin (-300,-400) (-20,0) 1 14 0 0x0 -1 "PrevW"»
+»

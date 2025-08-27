@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol 555Timer_SymType1
+  «type: X»
+  «description: 555 Timer»
+  «library file: |.subckt 555timer GND Trig Out ¬R¬e¬s¬e¬t Vcc Disch Thres Cont\nR1 Vcc Cont 5K\nR2 Cont N01 5K\nR3 N01 0 5K\nE1 Diff1 0 Thres Cont 1\nE2 Diff2 0 N01 Trig 1\nB1 N03 0 V=if(V(Diff1)>0,1,0)\nB2 S 0 V=if(V(Diff2)>0,1,0)\nV1 v1p 0 1\nB3 Out 0 V=if(V(Q)>0.5,V(Vcc),0)\n¥2 v1p 0 Q N02 S R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nS1 Disch 0 N02 0 IdealSW\n¥1 v1p 0 R ¥0 N04 N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥3 v1p 0 ¥ N04 ¬R¬e¬s¬e¬t ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.model IdealSW SW Ron=1m Roff=1Meg Vt=0.5 Vh=0\n.ends 555timer»
+  «shorted pins: false»
+  «rect (-600,700) (500,-800) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (400,-884) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (-200,-166) 0.857 15 0 0x1000000 -1 -1 "555TIMER"»
+  «text (-650,450) 0.5 0 1 0x1000000 -1 -1 "4"»
+  «text (-650,150) 0.5 0 1 0x1000000 -1 -1 "7"»
+  «text (-650,-350) 0.5 0 1 0x1000000 -1 -1 "6"»
+  «text (-650,-650) 0.5 0 1 0x1000000 -1 -1 "2"»
+  «text (-50,-850) 0.5 0 1 0x1000000 -1 -1 "1"»
+  «text (550,-50) 0.5 0 1 0x1000000 -1 -1 "3"»
+  «text (250,750) 0.5 0 1 0x1000000 -1 -1 "8"»
+  «text (-150,750) 0.5 0 1 0x1000000 -1 -1 "5"»
+  «pin (0,-800) (20,0) 1 14 0 0x0 -1 "GND"»
+  «pin (-600,-700) (60,0) 1 7 0 0x0 -1 "Trig"»
+  «pin (500,-100) (-40,0) 1 11 0 0x0 -1 "Out"»
+  «pin (-600,400) (60,0) 1 7 0 0x0 -1 "¬R¬e¬s¬e¬t"»
+  «pin (200,700) (-20,0) 1 13 0 0x0 -1 "Vcc"»
+  «pin (-600,100) (40,0) 1 7 0 0x0 -1 "Disch"»
+  «pin (-600,-400) (50,0) 1 7 0 0x0 -1 "Thres"»
+  «pin (-200,700) (-20,0) 1 13 0 0x0 -1 "Cont"»
+»

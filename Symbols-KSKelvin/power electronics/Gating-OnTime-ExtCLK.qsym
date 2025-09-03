@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol Gating-OnTime-ExtCLK
+  «type: X»
+  «description: Gating - OnTime and External CLK»
+  «library file: |.subckt Gating-OnTime-ExtCLK OnT CLK Q\nB1 ramp 0 V=idt(1,0,V(reset)>Vlow)\n¥1 V+ V- Q ¥ OnT ramp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV2 V+ 0 Vhigh\nV3 V- 0 Vlow\nB2 edgePos 0 V=(V(CLK)-state(1,V(CLK)))>0\n¥2 V+ V- Reset ¥ edgePos ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR REF=-Vlow+0.5\n.ends Gating-OnTime-ExtCLK»
+  «shorted pins: false»
+  «line (-500,-50) (-450,-100) 0 0 0x1000000 -1 -1»
+  «line (-450,-100) (-500,-150) 0 0 0x1000000 -1 -1»
+  «line (-100,-200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «line (-50,-200) (-50,50) 0 0 0x1000000 -1 -1»
+  «line (-50,50) (150,50) 0 0 0x1000000 -1 -1»
+  «line (150,50) (150,-200) 0 0 0x1000000 -1 -1»
+  «line (150,-200) (350,-200) 0 0 0x1000000 -1 -1»
+  «rect (-500,500) (400,-300) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-500,700) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,560) 0.681 7 0 0x1000000 -1 -1 "GATING-ONTIME-EXTCLK"»
+  «text (-500,-400) 1 7 0 0x1000000 -1 -1 "Vhigh=<1>"»
+  «text (-500,-550) 1 7 0 0x1000000 -1 -1 "Vlow=<0>"»
+  «text (-500,-700) 1 7 0 0x1000000 -1 -1 "ttol=<1n>"»
+  «text (50,120) 0.794 0 1 0x1000000 -1 -1 "Ton"»
+  «pin (-500,300) (15,0) 1 7 0 0x0 -1 "OnTime"»
+  «pin (-500,-100) (60,0) 1 7 0 0x0 -1 "CLK"»
+  «pin (400,300) (-30,0) 1 11 0 0x0 -1 "Q"»
+»

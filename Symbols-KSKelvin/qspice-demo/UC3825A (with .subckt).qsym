@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol UC3825A
+  «type: X»
+  «description: UC3825A (Copy uc3825a.dll in QSPICE\Examples to working folder)»
+  «library file: |.subckt UC3825A INV NI EAOUT CLK/LEB RT CT RAMP SS ILIM COM OUTA PGND VC OUTB VCC VREF\nØ´X1 «VCC´d VREF´d CT´d N05´d RT´d CLK/LEB´d SS´d RAMP´d ILIM´d EAOUT´d» «N09´d N01´d N07´d N02´d N04´d N03´d N06´d N10´d N11´d N12´d» «COM» UC3825A Rout=2K Cout=1p\nS1 VC OUTB N07 COM Ron=8 Roff=10G Vt=.5 Vh=-.49\nD3 OUTB VC DX\nD2 PGND OUTB DX\nD1 OUTA VC DX\nD4 PGND OUTA DX\nR2 RT N05 900\nÃ1 VCC COM VREF VREF COM ¥ ¥ ¥ ¥ N01 ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=2 Vos1=5.107 capVss=10p Ref=.5 Iout=20m\nÃ2 VREF COM N05 N05 COM ¥ ¥ ¥ ¥ N06 ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=100m Vos1=2.9 Ref=.5\nÃ3 VREF COM N08 INV NI ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=58m Iout=10µ Rout=1Meg capVss=13f\nÃ4 VREF COM EAOUT EAOUT N08 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=10m Isnk=2m capVss=3p Isrc=.5m\nÃ6 VREF COM CT COM N09 ¥ ¥ ¥ ¥ N06 ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1m capVss=3p Ref=.5\nÃ7 VREF COM SS COM N11 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=14µ capVss=3p\nM1 COM SS N08 N08 SS PMOS\nC1 NI COM 3p\nC2 INV COM 3p\nD5 COM EAOUT DX\nD6 EAOUT VREF DX\nS6 COM CLK/LEB COM N10 Ron=9K Roff=10Meg Vt=-.5 Vh=-.49\nS7 CLK/LEB VREF N10 COM Ron=100 Roff=10Meg Vt=.5 Vh=-.49\nM2 SS N12 COM COM 250µA NMOS\nS4 VC OUTA N04 COM Ron=8 Roff=10G Vt=.5 Vh=-.49\nS2 OUTB PGND N02 COM Ron=6 Roff=1Meg Vt=.5 Vh=-.49\nS3 OUTA PGND N03 COM Ron=6 Roff=1Meg Vt=.5 Vh=-.49\nS5 CT COM N12 COM Ron=1K Roff=1G Vt=.5 Vh=-.4\nR1 PGND COM 1 shorted\nI1 VREF COM 80µ Vsat=1\n.model DX D Ron=.5 epsilon=1\n.model SS PMOS Vto=1.14 Kp=50m\n.model 250µA NMOS Vto=0 Kp=500µ RonX=4\n.ends UC3825A»
+  «shorted pins: false»
+  «rect (-1200,2500) (1200,-2300) 0 0 0 0x1000000 0x4000000 -1 1 -1»
+  «text (10,1810) 1.36 12 0 0x1000000 -1 -1 "X1"»
+  «text (-60,-1143) 1.36 15 0 0x1000000 -1 -1 "UC3825A"»
+  «pin (-1200,2100) (50,0) 1 7 0 0x1000000 -1 "INV"»
+  «pin (-1200,1500) (50,0) 1 7 0 0x1000000 -1 "NI"»
+  «pin (-1200,900) (50,0) 1 7 0 0x1000000 -1 "EAOUT"»
+  «pin (-1200,300) (50,0) 1 7 0 0x1000000 -1 "CLK/LEB"»
+  «pin (-1200,-300) (50,0) 1 7 0 0x1000000 -1 "RT"»
+  «pin (-1200,-900) (50,0) 1 7 0 0x1000000 -1 "CT"»
+  «pin (-1200,-1500) (50,0) 1 7 0 0x1000000 -1 "RAMP"»
+  «pin (-1200,-2100) (50,0) 1 7 0 0x1000000 -1 "SS"»
+  «pin (1200,-2100) (-50,0) 1 11 0 0x1000000 -1 "ILIM"»
+  «pin (1200,-1500) (-50,0) 1 11 0 0x1000000 -1 "COM"»
+  «pin (1200,-900) (-50,0) 1 11 0 0x1000000 -1 "OUTA"»
+  «pin (1200,-300) (-50,0) 1 11 0 0x1000000 -1 "PGND"»
+  «pin (1200,300) (-20,0) 1 11 0 0x1000000 -1 "VC"»
+  «pin (1200,900) (-50,0) 1 11 0 0x1000000 -1 "OUTB"»
+  «pin (1200,1500) (-50,0) 1 11 0 0x1000000 -1 "VCC"»
+  «pin (1200,2100) (-50,0) 1 11 0 0x1000000 -1 "VREF"»
+»

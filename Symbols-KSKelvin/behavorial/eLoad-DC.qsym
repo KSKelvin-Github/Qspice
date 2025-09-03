@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol eLoad-DC
+  «type: X»
+  «description: e-Load for DC»
+  «library file: |.subckt eLoad-DC Rext+ Rext- Pref R P\nB1 P 0 V=I(S1)*V(R+,R-)\nS1 R+ R- ctrl 0 SWres\nB2 R 0 V=V(R+,R-)/I(S1)\nB3 ctrl 0 V=Ki*idt(V(error),0)\nV5 Rext+ R+ 0\nV6 Rext- R- 0\nE2 error 0 Pref P 1\n.model SWres SW Ron=Rmin Roff=Rmax Vt=0.5 Vh=-0.5\n.ends eLoad-DC»
+  «shorted pins: false»
+  «line (-1400,500) (-1200,500) 0 0 0x1000000 -1 -1»
+  «line (-1200,-100) (-1400,-100) 0 0 0x1000000 -1 -1»
+  «line (-1200,500) (-1200,380) 0 0 0x1000000 -1 -1»
+  «line (-1200,20) (-1200,-100) 0 0 0x1000000 -1 -1»
+  «rect (-1400,600) (-500,-600) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «zigzag (-1280,380) (-1120,20) 0 0 0 0x1000000 -1 -1»
+  «text (-1400,850) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-1400,700) 1 7 0 0x1000000 -1 -1 "ELOAD-DC"»
+  «text (-1400,-700) 1 7 0 0x0 -1 -1 "Rmin=<0.1>"»
+  «text (-1400,-850) 1 7 0 0x0 -1 -1 "Rmax=<10>"»
+  «text (-1400,-1000) 1 7 0 0x0 -1 -1 "Ki=<1e2>"»
+  «pin (-1400,500) (20,0) 1 15 0 0x0 -1 "Rext+"»
+  «pin (-1400,-100) (20,0) 1 15 0 0x0 -1 "Rext-"»
+  «pin (-1400,-400) (30,0) 1 7 0 0x0 -1 "Pref"»
+  «pin (-500,400) (-40,0) 1 11 0 0x0 -1 "R"»
+  «pin (-500,0) (-40,0) 1 11 0 0x0 -1 "P"»
+»

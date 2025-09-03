@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol Stat-RealTime
+  «type: X»
+  «description: STAT-REALTIME (set tau to duration of few AC cycles)»
+  «library file: |.subckt stat-realtime x rms avg\nB1 rms 0 V=sqrt(idt((V(x)^2-if(time<tau,0,delay(V(x)^2,tau))))/tau)\nB2 avg 0 V=idt(V(x)-if(time<tau,0,delay(V(x),tau)))/tau\n.ends stat-realtime»
+  «shorted pins: false»
+  «rect (-300,100) (300,-500) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-300,350) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,200) 1 7 0 0x1000000 -1 -1 "Stat-RealTime"»
+  «text (-300,-600) 1 7 0 0x0 -1 -1 "tau=<1> ;duration of few AC cycles"»
+  «pin (-300,0) (20,0) 1 7 0 0x0 -1 "x"»
+  «pin (300,0) (-20,0) 1 11 0 0x0 -1 "rms"»
+  «pin (300,-300) (0,0) 1 11 0 0x0 -1 "mean"»
+»

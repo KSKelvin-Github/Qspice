@@ -1,0 +1,39 @@
+ÿØÿÛ«symbol PWM-HB-DutyCtrl
+  «type: X»
+  «description: PWM - Half Bridge Duty Control»
+  «library file: |.subckt PWM-HB-DutyCtrl duty HS+ HS- LS+ LS-\n¥1 p1v 0 Qb ¥ sawB dutyLimit ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥2 p1v 0 Qa ¥ sawA dutyLimit ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV4 p1v 0 1\nB1 LS+ LS- V=V(Qb)*(Vhigh-Vlow)+Vlow\nB2 HS+ HS- V=V(Qa)*(Vhigh-Vlow)+Vlow\nB3 dutyLimit 0 V=limit((1-V(duty)),1,.01)\nV3 sawA 0 pulse 0 1 Tdelay .5/frq 1n 1n 1/frq DC 0\nV5 sawB 0 pulse 0 1 .5/frq+Tdelay .5/frq 1n 1n 1/frq DC 0\n.param frq=100K\n.param ttol=1n\n.param Tdelay=0\n.param Vhigh=15\n.param Vlow=0\n.ends PWM-HB-DutyCtrl»
+  «shorted pins: false»
+  «line (700,-100) (790,-100) 0 0 0x1000000 -1 -1»
+  «line (790,-100) (790,100) 0 0 0x1000000 -1 -1»
+  «line (790,100) (840,100) 0 0 0x1000000 -1 -1»
+  «line (840,100) (840,-100) 0 0 0x1000000 -1 -1»
+  «line (840,-100) (930,-100) 0 0 0x1000000 -1 -1»
+  «line (930,-100) (930,100) 0 0 0x1000000 -1 -1»
+  «line (980,100) (930,100) 0 0 0x1000000 -1 -1»
+  «line (700,-100) (700,100) 0 0 0x1000000 -1 -1»
+  «line (700,100) (650,100) 0 0 0x1000000 -1 -1»
+  «line (720,-600) (770,-600) 0 0 0x1000000 -1 -1»
+  «line (720,-600) (720,-800) 0 0 0x1000000 -1 -1»
+  «line (720,-800) (650,-800) 0 0 0x1000000 -1 -1»
+  «line (770,-600) (770,-800) 0 0 0x1000000 -1 -1»
+  «line (770,-800) (860,-800) 0 0 0x1000000 -1 -1»
+  «line (860,-800) (860,-600) 0 0 0x1000000 -1 -1»
+  «line (860,-600) (910,-600) 0 0 0x1000000 -1 -1»
+  «line (910,-600) (910,-800) 0 0 0x1000000 -1 -1»
+  «line (910,-800) (980,-800) 0 0 0x1000000 -1 -1»
+  «rect (-400,350) (1100,-1250) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-300,450) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (300,600) 1 0 2 0x1000000 -1 -1 "PWM-HB-DUTYCTRL"»
+  «text (-350,-500) 1 7 0 0x0 -1 -1 "frq=<100k>"»
+  «text (-350,-650) 1 7 0 0x0 -1 -1 "Tdelay=<0>"»
+  «text (-350,-800) 1 7 0 0x1000000 -1 -1 "Vhigh=<15>"»
+  «text (-350,-950) 1 7 0 0x1000000 -1 -1 "Vlow=<0>"»
+  «text (-350,-1100) 1 7 0 0x1000000 -1 -1 "ttol=<1n>"»
+  «text (-350,-300) 1 7 1 0x1000000 -1 -1 "PWM"»
+  «text (-350,0) 1 7 1 0x1000000 -1 -1 "0-1V"»
+  «pin (-400,200) (20,0) 1 7 0 0x0 -1 "duty"»
+  «pin (1100,200) (-20,0) 1 11 0 0x0 -1 "HS+"»
+  «pin (1100,-200) (-20,0) 1 11 0 0x0 -1 "HS-"»
+  «pin (1100,-500) (-20,0) 1 11 0 0x0 -1 "LS+"»
+  «pin (1100,-900) (-20,0) 1 11 0 0x0 -1 "LS-"»
+»

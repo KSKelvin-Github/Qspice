@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Stop
+  «type: X»
+  «description: STOP >0.5»
+  «library file: |.subckt stop in\nB1 ¥0 0 V=AbortSim(V(in))\n.ends»
+  «shorted pins: false»
+  «line (-100,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «triangle (-100,100) (-100,-100) (100,0) 1 0 0xff 0xff -1 -1»
+  «triangle (-100,-100) (0,-200) (100,0) 1 0 0xff 0xff -1 -1»
+  «triangle (0,-200) (200,-200) (100,0) 1 0 0xff 0xff -1 -1»
+  «triangle (300,-100) (300,100) (100,0) 1 0 0xff 0xff -1 -1»
+  «triangle (200,200) (0,200) (100,0) 1 0 0xff 0xff -1 -1»
+  «triangle (200,-200) (300,-100) (100,0) 1 0 0xff 0xff -1 -1»
+  «triangle (300,100) (200,200) (100,0) 1 0 0xff 0xff -1 -1»
+  «triangle (0,200) (-100,100) (100,0) 1 0 0xff 0xff -1 -1»
+  «text (100,300) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (100,0) 1 0 0 0xffffff -1 -1 "STOP"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+»

@@ -1,0 +1,32 @@
+ÿØÿÛ«symbol SampleAndHold-CLKint
+  «type: X»
+  «description: Sample and Hold with Internal Clock»
+  «library file: |.subckt SampleAndHold-CLKint IN OUT CLKref\nV1 Vss 0 minLVL\nV2 Vdd 0 maxLVL\nE1 OUT 0 N01 0 1\nVclk CLK 0 pulse minLVL maxLVL 0 0 0 1/fsample*.1 1/fsample\n¥1 Vdd Vss N01 ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH\n¥2 v1p 0 CLKref ¥ CLK N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB1 N02 0 V=(maxLVL+minLVL)/2\nV3 v1p 0 1\n.ends SampleAndHold-CLKint»
+  «shorted pins: false»
+  «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+  «line (-210,-360) (-170,-360) 0 0 0x1000000 -1 -1»
+  «line (-170,-360) (-170,-240) 0 0 0x1000000 -1 -1»
+  «line (-170,-240) (-130,-240) 0 0 0x1000000 -1 -1»
+  «line (-200,-320) (-170,-270) 0 0 0x1000000 -1 -1»
+  «line (-170,-270) (-140,-320) 0 0 0x1000000 -1 -1»
+  «line (-200,0) (-300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (200,0) 0 0 0x1000000 -1 -1»
+  «line (-50,-150) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (50,-150) 0 0 0x1000000 -1 -1»
+  «line (300,-300) (-70,-300) 0 1 0x1000000 -1 -1»
+  «line (0,-300) (0,-150) 0 1 0x1000000 -1 -1»
+  «rect (-300,200) (300,-500) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «rect (-200,100) (200,-150) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (-270,-200) (-70,-400) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,450) 1 7 2 0x1000000 -1 -1 "SAMPLEANDHOLD-CLKINT"»
+  «text (-300,-600) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
+  «text (-300,-750) 1 7 0 0x0 -1 -1 "minLVL=<-1>"»
+  «text (-300,-900) 1 7 0 0x0 -1 -1 "maxLVL=<1>"»
+  «text (-300,-1050) 1 7 0 0x0 -1 -1 "fsample=<1k>"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "S&H"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+  «pin (300,-300) (-10,-5) 0.681 9 0 0x0 -1 "CLKref"»
+»

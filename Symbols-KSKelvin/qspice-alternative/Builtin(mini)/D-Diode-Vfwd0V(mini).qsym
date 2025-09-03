@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol D-Diode-Vfwd0V(mini) - Copy
+  «type: D»
+  «description: Behavioral Diode Vfwd=0V»
+  «library file: |.model DI D Ron=1m Roff=10Meg Vfwd=0»
+  «shorted pins: false»
+  «line (-50,40) (50,40) 0 0 0x1000000 -1 -1»
+  «line (0,40) (0,100) 0 0 0x1000000 -1 -1»
+  «line (0,-40) (0,-100) 0 0 0x1000000 -1 -1»
+  «triangle (0,40) (-50,-40) (50,-40) 0 0 0x1000000 0x3000000 -1 -1»
+  «text (80,30) 0.5 7 0 0x1000000 -1 -1 "D1"»
+  «text (80,-40) 0.5 7 0 0x1000000 -1 -1 "DI"»
+  «pin (0,-100) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (0,100) (0,0) 1 0 0 0x0 -1 "K"»
+»

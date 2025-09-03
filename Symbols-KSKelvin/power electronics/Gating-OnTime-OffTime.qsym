@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Gating-OnTime-OffTime
+  «type: X»
+  «description: Gating - OnTime and OffTime»
+  «library file: |.subckt Gating-OnTime-OffTime OnT OffT Q\nB1 ramp 0 V=idt(1,0,V(reset)>Vlow)\n¥1 V+ V- Q ¥ OnT ramp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV2 V+ 0 Vhigh\nV3 V- 0 Vlow\n¥2 V+ V- Reset ¥ ramp Tperiod ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 Tperiod 0 V=max(V(OnT)+V(OffT),V(OnT))\n.ends Gating-OnTime-OffTime»
+  «shorted pins: false»
+  «line (-50,50) (100,50) 0 0 0x1000000 -1 -1»
+  «line (100,50) (100,-200) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (350,-200) 0 0 0x1000000 -1 -1»
+  «line (-50,-200) (-50,50) 0 0 0x1000000 -1 -1»
+  «line (-100,-200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «rect (-500,500) (400,-300) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-500,700) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,580) 0.681 7 0 0x1000000 -1 -1 "Gating-OnTime-OffTime"»
+  «text (-500,-400) 1 7 0 0x1000000 -1 -1 "Vhigh=<1>"»
+  «text (-500,-550) 1 7 0 0x1000000 -1 -1 "Vlow=<0>"»
+  «text (-500,-700) 1 7 0 0x1000000 -1 -1 "ttol=<1n>"»
+  «text (20,130) 0.794 0 1 0x1000000 -1 -1 "Ton"»
+  «text (230,-120) 0.794 0 1 0x1000000 -1 -1 "Toff"»
+  «pin (-500,300) (20,0) 1 7 0 0x0 -1 "Ton"»
+  «pin (-500,-100) (20,0) 1 7 0 0x0 -1 "Toff"»
+  «pin (400,300) (-30,0) 1 11 0 0x0 -1 "Q"»
+»

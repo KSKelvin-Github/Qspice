@@ -1,0 +1,33 @@
+ÿØÿÛ«symbol TLine-Lumped-N=016
+  «type: X»
+  «description: Lumped Lossy Transmission Line»
+  «library file: |.subckt TLine-Lumped L1 L2 R1 R2\nV1 L1 A[0] 0\nV2 L2 B[0] 0\nC1 A[0] B[0] Ctline/2 Rpar=Rp*2\nL1[1] A[0] A[1] Ltline Rser=Rs\nL1[2] A[1] A[2] Ltline Rser=Rs\nL1[3] A[2] A[3] Ltline Rser=Rs\nL1[4] A[3] A[4] Ltline Rser=Rs\nL1[5] A[4] A[5] Ltline Rser=Rs\nL1[6] A[5] A[6] Ltline Rser=Rs\nL1[7] A[6] A[7] Ltline Rser=Rs\nL1[8] A[7] A[8] Ltline Rser=Rs\nL1[9] A[8] A[9] Ltline Rser=Rs\nL1[10] A[9] A[10] Ltline Rser=Rs\nL1[11] A[10] A[11] Ltline Rser=Rs\nL1[12] A[11] A[12] Ltline Rser=Rs\nL1[13] A[12] A[13] Ltline Rser=Rs\nL1[14] A[13] A[14] Ltline Rser=Rs\nL1[15] A[14] A[15] Ltline Rser=Rs\nL2[1] B[0] B[1] Ltline Rser=Rs\nL2[2] B[1] B[2] Ltline Rser=Rs\nL2[3] B[2] B[3] Ltline Rser=Rs\nL2[4] B[3] B[4] Ltline Rser=Rs\nL2[5] B[4] B[5] Ltline Rser=Rs\nL2[6] B[5] B[6] Ltline Rser=Rs\nL2[7] B[6] B[7] Ltline Rser=Rs\nL2[8] B[7] B[8] Ltline Rser=Rs\nL2[9] B[8] B[9] Ltline Rser=Rs\nL2[10] B[9] B[10] Ltline Rser=Rs\nL2[11] B[10] B[11] Ltline Rser=Rs\nL2[12] B[11] B[12] Ltline Rser=Rs\nL2[13] B[12] B[13] Ltline Rser=Rs\nL2[14] B[13] B[14] Ltline Rser=Rs\nL2[15] B[14] B[15] Ltline Rser=Rs\nC[1] A[1] B[1] Ctline Rpar=Rp\nC[2] A[2] B[2] Ctline Rpar=Rp\nC[3] A[3] B[3] Ctline Rpar=Rp\nC[4] A[4] B[4] Ctline Rpar=Rp\nC[5] A[5] B[5] Ctline Rpar=Rp\nC[6] A[6] B[6] Ctline Rpar=Rp\nC[7] A[7] B[7] Ctline Rpar=Rp\nC[8] A[8] B[8] Ctline Rpar=Rp\nC[9] A[9] B[9] Ctline Rpar=Rp\nC[10] A[10] B[10] Ctline Rpar=Rp\nC[11] A[11] B[11] Ctline Rpar=Rp\nC[12] A[12] B[12] Ctline Rpar=Rp\nC[13] A[13] B[13] Ctline Rpar=Rp\nC[14] A[14] B[14] Ctline Rpar=Rp\nC[15] A[15] B[15] Ctline Rpar=Rp\nC2 N01 N02 Ctline/2 Rpar=Rp*2\nL1 A[15] N01 Ltline Rser=Rs\nL2 B[15] N02 Ltline Rser=Rs\nV3 R1 N01 0\nV4 R2 N02 0\n.param L=Ro**2*C N=16 Ltline=L/N*Len*0.5 Rs=R/N*LEN/2 Ctline=C/N*Len Rp=N/max(0.001f,G)/Len\n.ends TLine-Lumped»
+  «shorted pins: false»
+  «line (280,250) (-270,250) 0 0 0x1000000 -1 -1»
+  «line (280,-50) (-270,-50) 0 0 0x1000000 -1 -1»
+  «line (-270,-50) (-270,-100) 0 0 0x1000000 -1 -1»
+  «line (280,-50) (280,-100) 0 0 0x1000000 -1 -1»
+  «line (400,-100) (280,-100) 0 0 0x1000000 -1 -1»
+  «line (-400,-100) (-270,-100) 0 0 0x1000000 -1 -1»
+  «line (280,150) (-270,150) 0 0 0x1000000 -1 -1»
+  «line (280,50) (-270,50) 0 0 0x1000000 -1 -1»
+  «line (-280,100) (-400,100) 0 0 0x1000000 -1 -1»
+  «line (400,100) (280,100) 0 0 0x1000000 -1 -1»
+  «ellipse (-350,250) (-200,-50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (200,250) (350,-50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-300,150) (-250,50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (250,150) (300,50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «zigzag (-100,70) (100,120) 0 0 0 0x1000000 -1 -1»
+  «text (0,300) 1 14 0 0x1000000 -1 -1 "X1"»
+  «text (0,650) 1 13 2 0x1000000 -1 -1 "TLine-Lumped"»
+  «text (0,-100) 1 13 0 0x1000000 -1 -1 "Ro=<50>"»
+  «text (0,-300) 1 13 0 0x1000000 -1 -1 "Len=<0.5>"»
+  «text (0,-500) 1 13 0 0x1000000 -1 -1 "R=<0>"»
+  «text (0,-700) 1 13 0 0x1000000 -1 -1 "C=<50p>"»
+  «text (0,-900) 1 13 0 0x1000000 -1 -1 "G=<0>"»
+  «text (50,0) 0.5 0 1 0x1000000 -1 -1 "16 segments"»
+  «pin (-400,100) (0,0) 1 0 0 0x0 -1 "L1"»
+  «pin (-400,-100) (0,0) 1 0 0 0x0 -1 "L2"»
+  «pin (400,100) (0,0) 1 0 0 0x0 -1 "R1"»
+  «pin (400,-100) (0,0) 1 0 0 0x0 -1 "R2"»
+»

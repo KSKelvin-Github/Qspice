@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Dec2Binary8
+  «type: X»
+  «description: Decimal to Binary (8-Bits)»
+  «library file: |.subckt Dec2Binary IN A0 A1 A2 A3 A4 A5 A6 A7\nB2 A0 0 V=dec2bin(V(in),0)\nB3 A1 0 V=dec2bin(V(in),1)\nB4 A2 0 V=dec2bin(V(in),2)\nB5 A3 0 V=dec2bin(V(in),3)\nB6 A4 0 V=dec2bin(V(in),4)\nB7 A5 0 V=dec2bin(V(in),5)\nB8 A6 0 V=dec2bin(V(in),6)\nB9 A7 0 V=dec2bin(V(in),7)\n.func mod(x,y) x-y*floor(x/y)\n.func dec2bin(L,i) mod(floor(L/2^i),2)\n.ends Dec2Binary»
+  «shorted pins: false»
+  «line (400,-800) (400,800) 0 0 0x1000000 -1 -1»
+  «line (400,800) (-500,800) 0 0 0x1000000 -1 -1»
+  «line (-500,800) (-800,0) 0 0 0x1000000 -1 -1»
+  «line (-800,0) (-500,-800) 0 0 0x1000000 -1 -1»
+  «line (-500,-800) (400,-800) 0 0 0x1000000 -1 -1»
+  «text (-500,1050) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,900) 1 7 0 0x1000000 -1 -1 "DEC2BINARY"»
+  «pin (-800,0) (30,0) 1 7 0 0x0 -1 "IN"»
+  «pin (400,700) (-20,0) 1 11 0 0x0 -1 "A0"»
+  «pin (400,500) (-20,0) 1 11 0 0x0 -1 "A1"»
+  «pin (400,300) (-20,0) 1 11 0 0x0 -1 "A2"»
+  «pin (400,100) (-20,0) 1 11 0 0x0 -1 "A3"»
+  «pin (400,-100) (-20,0) 1 11 0 0x0 -1 "A4"»
+  «pin (400,-300) (-20,0) 1 11 0 0x0 -1 "A5"»
+  «pin (400,-500) (-20,0) 1 11 0 0x0 -1 "A6"»
+  «pin (400,-700) (-20,0) 1 11 0 0x0 -1 "A7"»
+»

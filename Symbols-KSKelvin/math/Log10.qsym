@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol Log10
+  «type: X»
+  «description: Log10»
+  «library file: |.subckt log10 in out \nB1 out 0 V=log10(V(in))\n.ends log10»
+  «shorted pins: false»
+  «line (350,50) (400,0) 0 0 0x1000000 -1 -1»
+  «line (400,0) (350,-50) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (400,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-114,301) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (44,300) 1 7 2 0x1000000 -1 -1 "LOG10"»
+  «text (-159,10) 0.857 7 1 0x1000000 -1 -1 "log10(u)"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

@@ -1,0 +1,11 @@
+ÿØÿÛ«symbol FET-subckt
+  «type: X»
+  «description: FET (.subckt D G S)»
+  «shorted pins: false»
+  «rect (0,200) (400,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (437,0) 1 7 0 0x0 -1 -1 "X1"»
+  «text (433,-150) 1 7 0 0x0 -1 -1 "<model>"»
+  «pin (300,200) (0,0) 1 13 0 0x0 -1 "D"»
+  «pin (0,0) (20,0) 1 7 0 0x0 -1 "G"»
+  «pin (300,-200) (0,0) 1 14 0 0x0 -1 "S"»
+»

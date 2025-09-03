@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol DAC-R-2RLadder-8Bits
+  «type: X»
+  «description: DAC (8-Bits) with R-2R Ladder»
+  «library file: |.subckt DAC-R-2RLadder DAout A0 A1 A2 A3 A4 A5 A6 A7\nR1 0 N01 2*R\nR2 A0 N01 2*R\nR3 N01 N02 R\nR4 A1 N02 2*R\nR5 N02 N03 R\nR6 A2 N03 2*R\nR7 N03 N04 R\nR8 A3 N04 2*R\nR9 N04 N05 R\nR10 A4 N05 2*R\nR11 N05 N06 R\nR12 A5 N06 2*R\nR13 N06 N07 R\nR14 A6 N07 2*R\nR15 N07 buffer R\nR16 A7 buffer 2*R\nE1 DAout 0 buffer 0 gain\n.ends DAC-R-2RLadder»
+  «shorted pins: false»
+  «line (-500,800) (-500,-800) 0 0 0x1000000 -1 -1»
+  «line (-500,-800) (400,-800) 0 0 0x1000000 -1 -1»
+  «line (400,-800) (700,0) 0 0 0x1000000 -1 -1»
+  «line (700,0) (400,800) 0 0 0x1000000 -1 -1»
+  «line (400,800) (-500,800) 0 0 0x1000000 -1 -1»
+  «text (-500,1050) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,900) 1 7 0 0x1000000 -1 -1 "DAC-R-2RLADDER"»
+  «text (-137,-700) 1 7 0 0x0 -1 -1 "gain=1"»
+  «text (-137,-550) 1 7 2 0x1000000 -1 -1 "R=100k"»
+  «pin (700,0) (-50,0) 1 11 0 0x0 -1 "DAout"»
+  «pin (-500,700) (20,0) 1 7 0 0x0 -1 "A0"»
+  «pin (-500,500) (20,0) 1 7 0 0x0 -1 "A1"»
+  «pin (-500,300) (20,0) 1 7 0 0x0 -1 "A2"»
+  «pin (-500,100) (20,0) 1 7 0 0x0 -1 "A3"»
+  «pin (-500,-100) (20,0) 1 7 0 0x0 -1 "A4"»
+  «pin (-500,-300) (20,0) 1 7 0 0x0 -1 "A5"»
+  «pin (-500,-500) (20,0) 1 7 0 0x0 -1 "A6"»
+  «pin (-500,-700) (20,0) 1 7 0 0x0 -1 "A7"»
+»

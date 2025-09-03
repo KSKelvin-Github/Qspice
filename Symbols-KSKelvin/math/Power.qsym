@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol Power
+  «type: X»
+  «description: Power»
+  «library file: |.subckt power in out \nB1 out 0 V=V(in)**p\n.ends power»
+  «shorted pins: false»
+  «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (300,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-114,301) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (44,300) 1 7 2 0x1000000 -1 -1 "POWER"»
+  «text (-158,-100) 0.857 7 0 0x1000000 -1 -1 "p=<2>"»
+  «text (-119,100) 1 7 1 0x1000000 -1 -1 "u^p"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

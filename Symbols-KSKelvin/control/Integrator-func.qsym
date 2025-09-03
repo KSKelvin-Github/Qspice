@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol Integrator-func
+  «type: X»
+  «description: Integrator with RESET»
+  «library file: |.subckt integrator in reset out\nB1 out 0 V=idt(V(in),ic,V(reset))\n.ends integrator»
+  «shorted pins: false»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «rect (-300,200) (200,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-50,300) 1 7 2 0x1000000 -1 -1 "INTEGRATOR"»
+  «text (-40,20) 1 0 1 0x1000000 -1 -1 "idt()"»
+  «text (-130,-300) 1 7 0 0x0 -1 -1 "IC=<0>"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (-200,-200) (-80,0) 0.735 6 0 0x0 -1 "reset"»
+  «pin (200,0) (0,0) 1 0 0 0x0 -1 "out"»
+»

@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol PWM-PhaseShift
+  «type: X»
+  «description: PWM - Phase Shift Full Bridge»
+  «library file: |.subckt PWM-PhaseShift Q1 Q2 ¬Q¬1 ¬Q¬2 phase\nV1 sawtooth 0 Pulse 0 1 Tdelay 1/2/fsw-2p 1p 1p 1/2/fsw DC 0\n¥1 Vdd Vss ¬Q¬1 Q1 Q1 N01 Vss Vss ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP\n¥2 Vdd Vss ¬Q¬2 Q2 Q2 N03 Vss Vss ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP\nV2 Vdd 0 LogicH\n¥3 Vdd Vss N01 ¥ sawtooth N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥4 Vdd Vss N03 ¥ sawtooth N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB1 N04 0 V=limit(0.5+V(phase)/2,LL,UL)\nB2 N02 0 V=limit(0.5-V(phase)/2,LL,UL)\nV3 Vss 0 LogicL\n.param ttol=1n\n.param Tdelay=0\n.param LL=0.01\n.param UL=0.99\n.param LogicH=1\n.param LogicL=0\n.param fsw=10K\n.ends PWM-PhaseShift»
+  «shorted pins: false»
+  «rect (-700,800) (800,-800) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-700,1050) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-700,900) 1 7 0 0x1000000 -1 -1 "PWM-PHASESHIFT"»
+  «text (-650,-100) 1 7 0 0x0 -1 -1 "fsw=<100k>"»
+  «text (-650,-250) 1 7 0 0x0 -1 -1 "Tdelay=<0>"»
+  «text (-650,-400) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
+  «text (-650,-550) 1 7 0 0x0 -1 -1 "LogicH=<1>"»
+  «text (-650,-700) 1 7 0 0x0 -1 -1 "LogicL=<0>"»
+  «text (-650,-900) 1 7 1 0x1000000 -1 -1 "phase : range [0,1]"»
+  «text (-650,-1050) 1 7 1 0x1000000 -1 -1 "0 is 0 degree"»
+  «text (-650,-1200) 1 7 1 0x1000000 -1 -1 "1 is 180 degree"»
+  «pin (800,600) (-30,0) 1 11 0 0x0 -1 "Q1"»
+  «pin (800,-200) (-30,0) 1 11 0 0x0 -1 "Q2"»
+  «pin (800,200) (-30,0) 1 11 0 0x0 -1 "¬Q¬1"»
+  «pin (800,-600) (-20,0) 1 11 0 0x0 -1 "¬Q¬2"»
+  «pin (-700,600) (30,0) 1 7 0 0x0 -1 "phase"»
+»

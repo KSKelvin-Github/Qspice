@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol eLoad-Rpulse
+  «type: X»
+  «description: eLoad - Resistance Mode»
+  «library file: |.subckt eLoad-Rpulse load+ load-\nV1 R 0 pulse R2 R1 Tdelay Tfrom2to1 Tfrom1to2 T1on T1on+Tfrom2to1+T2on+Tfrom1to2 DC R1\nB1 load+ load- R=V(R)\n.ends eLoad-Rpulse»
+  «shorted pins: false»
+  «line (0,300) (0,180) 0 0 0x1000000 -1 -1»
+  «line (0,-300) (0,-180) 0 0 0x1000000 -1 -1»
+  «line (0,300) (-200,300) 0 0 0x1000000 -1 -1»
+  «line (0,-300) (-200,-300) 0 0 0x1000000 -1 -1»
+  «rect (-200,400) (900,-400) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
+  «text (-200,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-200,500) 1 7 0 0x1000000 -1 -1 "eLOAD-Rpulse"»
+  «text (150,300) 0.681 7 0 0x0 -1 -1 "R1=<2>"»
+  «text (150,200) 0.681 7 0 0x0 -1 -1 "T1on=<1m>"»
+  «text (150,100) 0.681 7 0 0x0 -1 -1 "R2=<1>"»
+  «text (150,0) 0.681 7 0 0x0 -1 -1 "T2on=<2m>"»
+  «text (150,-100) 0.681 7 0 0x0 -1 -1 "Tdelay=<5m>"»
+  «text (150,-200) 0.681 7 0 0x0 -1 -1 "Tfrom2to1=<1u>"»
+  «text (150,-300) 0.681 7 0 0x0 -1 -1 "Tfrom1to2=<1u>"»
+  «pin (-200,300) (0,0) 1 15 0 0x0 -1 "load+"»
+  «pin (-200,-300) (0,0) 1 15 0 0x0 -1 "load-"»
+»

@@ -1,0 +1,28 @@
+ÿØÿÛ«symbol Digital-Propagation-Delay
+  «type: X»
+  «description: Digital Propagation Delay»
+  «library file: |.subckt Digital-Propagation-Delay IN OUT\n¥1 Vdd Vss OUT ¥ IN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR REF=Thres-Vlow Td=Tdelay TTOL=TTOL Rout=1m\nV1 Vdd 0 Vhigh\nV2 Vss 0 Vlow\n.ends Digital-Propagation-Delay»
+  «shorted pins: false»
+  «line (50,0) (100,0) 0 0 0x1000000 -1 -1»
+  «line (100,0) (100,150) 0 0 0x1000000 -1 -1»
+  «line (100,150) (250,150) 0 0 0x1000000 -1 -1»
+  «line (250,150) (250,0) 0 0 0x1000000 -1 -1»
+  «line (250,0) (450,0) 0 0 0x1000000 -1 -1»
+  «line (50,-50) (150,-50) 0 1 0x1000000 -1 -1»
+  «line (150,-50) (150,100) 0 1 0x1000000 -1 -1»
+  «line (150,100) (300,100) 0 1 0x1000000 -1 -1»
+  «line (300,100) (300,-50) 0 1 0x1000000 -1 -1»
+  «line (300,-50) (450,-50) 0 1 0x1000000 -1 -1»
+  «line (450,150) (500,100) 0 0 0x1000000 -1 -1»
+  «line (500,100) (450,50) 0 0 0x1000000 -1 -1»
+  «rect (0,200) (500,-100) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (0,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (220,300) 1 7 2 0x1000000 -1 -1 "DIGITAL-PROPAGATION-DELAY"»
+  «text (0,-800) 1 7 2 0x1000000 -1 -1 "TTOL=<1n>"»
+  «text (0,-200) 1 7 0 0x0 -1 -1 "Thres=<0.5> ; input threshold"»
+  «text (0,-350) 1 7 0 0x1000000 -1 -1 "Vhigh=<1> ; output high voltage"»
+  «text (0,-500) 1 7 0 0x0 -1 -1 "Vlow=<0> ; output low voltage"»
+  «text (0,-650) 1 7 0 0x0 -1 -1 "Tdelay=<1u> ; delay (must less than ON or OFF Duration)"»
+  «pin (0,100) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (500,100) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

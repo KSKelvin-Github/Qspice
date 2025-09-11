@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol NE555-SymType1
+  «type: X»
+  «description: Behavioral NE555»
+  «library file: |.subckt NE555 COM TRIG OUT RESET CONT THRES DISCH VCC\nS1 DISCH COM N01 COM Ron=10 Roff=1G Vt=2 Vh=-1\nR1 VCC CONT 5K\nR2 CONT N02 5K\nR3 N02 COM 5K\n¥1 VCC COM N03 ¥ THRES CONT ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT\n¥2 VCC COM N06 ¥ N02 TRIG ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT\n¥3 VCC COM ¥ N04 RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥4 VCC COM N05 ¥ N04 N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥5 VCC COM ¥ N01 N06 N05 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=1µ Ttol=10n IC=0 UVLO=2.5\nS2 OUT VCC COM N01 Ron=12.5 Roff=1G Vt=-2 Vh=-1\nS3 COM OUT N01 COM Ron=10 Roff=1G Vt=2 Vh=-1\nC1 THRES COM 5p Rpar=.3G\nC2 TRIG COM 5p\nR4 VCC TRIG 30Meg\nC3 RESET COM 5p Rpar=150K\nR5 VCC RESET 37.5K SHORTED\n.ends NE555»
+  «shorted pins: false»
+  «rect (-800,-800) (800,800) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (0,300) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,-300) 1 15 0 0x1000000 -1 -1 "NE555"»
+  «pin (0,-800) (20,0) 1 14 0 0x0 -1 "COM"»
+  «pin (-800,-600) (20,0) 1 7 0 0x0 -1 "TRIG"»
+  «pin (800,0) (20,0) 1 11 0 0x0 -1 "OUT"»
+  «pin (-800,600) (20,0) 1 7 0 0x0 -1 "RESET"»
+  «pin (0,800) (-20,0) 1 13 0 0x0 -1 "CONT"»
+  «pin (-800,-200) (-20,0) 1 7 0 0x0 -1 "THRES"»
+  «pin (-800,200) (-20,0) 1 7 0 0x0 -1 "DISCH"»
+  «pin (500,800) (-20,0) 1 13 0 0x0 -1 "VCC"»
+»

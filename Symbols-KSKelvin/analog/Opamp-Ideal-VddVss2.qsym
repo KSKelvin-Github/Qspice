@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Opamp-Ideal-VddVss2
+  «type: X»
+  «description: Ideal Opamp with Output Voltage Limit»
+  «library file: |.subckt Opamp-Ideal-VddVss IN+ IN- OUT\nÃ1 Vdd Vss N01 IN- IN+ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=Av\nE2 OUT 0 N01 0 1\nV1 Vdd 0 Vdd\nV2 Vss 0 Vss\n.ends Opamp-Ideal-VddVss»
+  «shorted pins: false»
+  «line (-250,200) (-150,200) 0 0 0x1000000 -1 -1»
+  «line (-200,-150) (-200,-250) 0 0 0x1000000 -1 -1»
+  «line (-250,-200) (-150,-200) 0 0 0x1000000 -1 -1»
+  «triangle (300,0) (-300,450) (-300,-450) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-50,350) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (550,500) 1 0 2 0x1000000 -1 -1 "OPAMP-IDEAL-VDDVSS"»
+  «text (0,-300) 1 7 0 0x0 -1 -1 "Av=<1e6>"»
+  «text (0,-450) 1 7 0 0x0 -1 -1 "Vdd=<5>"»
+  «text (0,-600) 1 7 0 0x0 -1 -1 "Vss=<-5>"»
+  «pin (-300,-200) (20,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (-300,200) (-20,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

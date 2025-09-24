@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Dec2Binary12
   «type: X»
   «description: Decimal to Binary (12-Bits)»
-  «library file: |.subckt Dec2Binary IN A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 A10 A11\nB2 A0 0 V=dec2bin(V(in),0)\nB3 A1 0 V=dec2bin(V(in),1)\nB4 A2 0 V=dec2bin(V(in),2)\nB5 A3 0 V=dec2bin(V(in),3)\nB6 A4 0 V=dec2bin(V(in),4)\nB7 A5 0 V=dec2bin(V(in),5)\nB8 A6 0 V=dec2bin(V(in),6)\nB9 A7 0 V=dec2bin(V(in),7)\nB10 A8 0 V=dec2bin(V(in),8)\nB11 A9 0 V=dec2bin(V(in),9)\nB12 A10 0 V=dec2bin(V(in),10)\nB13 A11 0 V=dec2bin(V(in),11)\n.func mod(x,y) x-y*floor(x/y)\n.func dec2bin(L,i) mod(floor(L/2^i),2)\n.ends Dec2Binary»
+  «library file: |.subckt Dec2Binary IN A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 A10 A11\nB2 A0 0 V=dec2bin(V(in),0)*(Vhigh-Vlow)+Vlow\nB3 A1 0 V=dec2bin(V(in),1)*(Vhigh-Vlow)+Vlow\nB4 A2 0 V=dec2bin(V(in),2)*(Vhigh-Vlow)+Vlow\nB5 A3 0 V=dec2bin(V(in),3)*(Vhigh-Vlow)+Vlow\nB6 A4 0 V=dec2bin(V(in),4)*(Vhigh-Vlow)+Vlow\nB7 A5 0 V=dec2bin(V(in),5)*(Vhigh-Vlow)+Vlow\nB8 A6 0 V=dec2bin(V(in),6)*(Vhigh-Vlow)+Vlow\nB9 A7 0 V=dec2bin(V(in),7)*(Vhigh-Vlow)+Vlow\nB10 A8 0 V=dec2bin(V(in),8)*(Vhigh-Vlow)+Vlow\nB11 A9 0 V=dec2bin(V(in),9)*(Vhigh-Vlow)+Vlow\nB12 A10 0 V=dec2bin(V(in),10)*(Vhigh-Vlow)+Vlow\nB13 A11 0 V=dec2bin(V(in),11)*(Vhigh-Vlow)+Vlow\n.func mod(x,y) x-y*floor(x/y)\n.func dec2bin(L,i) mod(floor(L/2^i),2)\n.ends Dec2Binary»
   «shorted pins: false»
   «line (400,-1200) (400,1200) 0 0 0x1000000 -1 -1»
   «line (400,1200) (-500,1200) 0 0 0x1000000 -1 -1»
@@ -10,6 +10,8 @@
   «line (-500,-1200) (400,-1200) 0 0 0x1000000 -1 -1»
   «text (-500,1450) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-500,1300) 1 7 0 0x1000000 -1 -1 "DEC2BINARY"»
+  «text (400,-1300) 1 11 0 0x0 -1 -1 "Vhigh=<1>"»
+  «text (400,-1450) 1 11 0 0x0 -1 -1 "Vlow=<0>"»
   «pin (-800,0) (30,0) 1 7 0 0x0 -1 "IN"»
   «pin (400,1100) (-20,0) 1 11 0 0x0 -1 "A0"»
   «pin (400,900) (-20,0) 1 11 0 0x0 -1 "A1"»

@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Minimum-OnTime
+  «type: X»
+  «description: Minimum OnTime»
+  «library file: |.subckt minimum-OnTime IN OUT\nB1 ramp 0 V=idt(1,0,V(reset)>Vlow)\n¥1 V+ V- N01 ¥ OnT ramp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV1 OnT 0 minOnTime\nV2 V+ 0 Vhigh\nV3 V- 0 Vlow\nB2 edgePos 0 V=(V(IN)-state(1,V(IN)))>0\n¥2 V+ V- Reset ¥ edgePos ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR REF=-Vlow+0.5\n¥3 V+ V- OUT ¥2 IN N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=ttol\n.ends minimum-OnTime»
+  «shorted pins: false»
+  «line (-150,-100) (-100,-100) 0 0 0x1000000 -1 -1»
+  «line (-100,-100) (-100,50) 0 0 0x1000000 -1 -1»
+  «line (-100,50) (0,50) 0 0 0x1000000 -1 -1»
+  «line (0,50) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (150,-100) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-200,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-200,410) 0.681 7 2 0x1000000 -1 -1 "MINIMUM-ONTIME"»
+  «text (-200,-250) 0.681 7 0 0x1000000 -1 -1 "VHigh=<1>"»
+  «text (-200,-350) 0.681 7 0 0x1000000 -1 -1 "VLow=<0>"»
+  «text (-200,-450) 0.681 7 0 0x1000000 -1 -1 "MinOnTime=<1u>"»
+  «text (-200,-550) 0.681 7 0 0x1000000 -1 -1 "ttol=<1n>"»
+  «text (0,130) 0.681 0 1 0x1000000 -1 -1 "minOnT"»
+  «pin (-200,0) (20,0) 1 15 0 0x0 -1 "IN"»
+  «pin (200,0) (-20,0) 1 15 0 0x0 -1 "OUT"»
+»

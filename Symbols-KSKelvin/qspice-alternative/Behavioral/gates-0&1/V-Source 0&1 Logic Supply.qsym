@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol V-Source Logic 0&1 Supply
+ÿØÿÛ«symbol V-Source 0&1 Logic Supply
   «type: V»
   «description: Independent Voltage Source»
   «shorted pins: false»
@@ -14,6 +14,7 @@
   «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
   «text (100,150) 1 7 0 0x1000000 -1 -1 "Vlogic1V"»
   «text (100,-150) 1 7 0 0x1000000 -1 -1 "1"»
-  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+" "Vdd¥"»
+  «text (0,300) 1 0 1 0x1000000 -1 -1 "p1v"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+" "p1v"»
   «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-" "0"»
 »

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Gate-DeadTime
   «type: X»
   «description: Complementary Gate with DeadTime Control»
-  «library file: |.subckt Gate-DeadTime IN Q ¬Q\n¥1 P1V 0 N03 ¥0 IN N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=ttol\nV1 P1V 0 1\n¥2 P1V 0 N04 ¥1 ¬I¬N N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=ttol\n¥3 P1V 0 ¥ ¬I¬N IN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=ttol\n¥4 P1V 0 N02 ¥ IN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=deadtime\n¥5 P1V 0 N01 ¥ ¬I¬N ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=deadtime\nV2 Hi 0 Hi\nV3 Lo 0 Lo\n¥6 Hi Lo Q ¥ N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR REF=-Lo+0.5\n¥7 Hi Lo ¬Q ¥ N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR REF=-Lo+0.5\n.ends Gate-DeadTime»
+  «library file: |.subckt Gate-DeadTime IN Q ¬Q\n¥1 P1V 0 A ¥3 IN N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=ttol\nV1 P1V 0 1\n¥2 P1V 0 B ¥4 ¬I¬N N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=ttol\n¥3 P1V 0 ¥ ¬I¬N IN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=ttol\n¥4 P1V 0 N02 ¥ IN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=deadtime\n¥5 P1V 0 N01 ¥ ¬I¬N ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=deadtime\nB1 Q 0 V=V(A)*(VHigh-VLow)+VLow\nB2 ¬Q 0 V=V(B)*(VHigh-VLow)+VLow\n.ends Gate-DeadTime»
   «shorted pins: false»
   «line (-100,-200) (0,-200) 0 0 0x1000000 -1 -1»
   «line (0,-200) (0,0) 0 0 0x1000000 -1 -1»
@@ -22,9 +22,9 @@
   «text (300,200) 1 0 0 0x1000000 -1 -1 "GATE-DEADTIME"»
   «text (-300,-600) 1 7 0 0x0 -1 -1 "deadtime=<100n>"»
   «text (-300,-750) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
-  «text (-300,-900) 1 7 2 0x1000000 -1 -1 "Hi=<1>"»
-  «text (-300,-1050) 1 7 2 0x1000000 -1 -1 "Lo=<0>"»
+  «text (-300,-900) 1 7 2 0x1000000 -1 -1 "VHigh=<1>"»
+  «text (-300,-1050) 1 7 2 0x1000000 -1 -1 "VLow=<0>"»
   «pin (-300,0) (20,0) 1 7 0 0x0 -1 "IN"»
   «pin (700,0) (-20,0) 1 11 0 0x0 -1 "Q"»
-  «pin (700,-400) (0,0) 1 11 0 0x0 -1 "¬Q"»
+  «pin (700,-400) (-20,0) 1 11 0 0x0 -1 "¬Q"»
 »

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol SampleAndHold-CLKext
   «type: X»
-  «description: Sample and Hold with External Clock»
+  «description: Sample and Hold with External Clock (ZOH)»
   «library file: |.subckt SampleAndHold-CLKext IN OUT CLK\nV1 Vss 0 minLVL\nV2 Vdd 0 maxLVL\nE1 OUT 0 N01 0 1\n¥1 Vdd Vss N01 ¥ IN N03 Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH\n¥2 Vdd Vss N03 ¥ CLK N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV4 N02 0 0.5\n.ends SampleAndHold-CLKext»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

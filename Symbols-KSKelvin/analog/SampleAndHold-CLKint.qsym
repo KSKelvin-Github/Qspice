@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol SampleAndHold-CLKint
   «type: X»
-  «description: Sample and Hold with Internal Clock»
+  «description: Sample and Hold with Internal Clock (ZOH)»
   «library file: |.subckt SampleAndHold-CLKint IN OUT CLKref\nV1 Vss 0 minLVL\nV2 Vdd 0 maxLVL\nE1 OUT 0 N01 0 1\nVclk CLK 0 pulse minLVL maxLVL 0 0 0 1/fsample*.1 1/fsample\n¥1 Vdd Vss N01 ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH\n¥2 v1p 0 CLKref ¥ CLK N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB1 N02 0 V=(maxLVL+minLVL)/2\nV3 v1p 0 1\n.ends SampleAndHold-CLKint»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

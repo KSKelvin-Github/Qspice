@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol Differentiator-Laplace
+ÿØÿÛ«symbol Derivative-Laplace
   «type: E»
-  «description: Differentiator - Laplace (s)»
+  «description: Derivative - Laplace (s)»
   «shorted pins: false»
   «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
   «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»

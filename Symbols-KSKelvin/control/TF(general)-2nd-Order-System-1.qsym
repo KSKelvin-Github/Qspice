@@ -1,16 +1,13 @@
-ÿØÿÛ«symbol Second-Order-System
+ÿØÿÛ«symbol TF(general)-2nd-Order-System-1
   «type: X»
   «description: Transfer Function - 2nd Order System»
   «library file: |.subckt tf in out\nE1 out 0 in 0 Laplace=wn**2/(s**2+2*zeta*wn*s+wn**2)\n.ends tf»
   «shorted pins: false»
-  «line (-300,200) (-300,-200) 0 0 0x1000000 -1 -1»
-  «line (-300,-200) (1400,-200) 0 0 0x1000000 -1 -1»
-  «line (1400,200) (-300,200) 0 0 0x1000000 -1 -1»
-  «line (1400,200) (1400,-200) 0 0 0x1000000 -1 -1»
   «line (-200,0) (1300,0) 0 0 0x1000000 -1 -1»
   «line (1350,50) (1400,0) 0 0 0x1000000 -1 -1»
   «line (1400,0) (1350,-50) 0 0 0x1000000 -1 -1»
-  «text (-250,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «rect (-300,200) (1400,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 7 2 0x1000000 -1 -1 "TF"»
   «text (-300,-300) 1 7 0 0x0 -1 -1 "wn=<1>"»
   «text (-300,-450) 1 7 0 0x0 -1 -1 "zeta=<1>"»

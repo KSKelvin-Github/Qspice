@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Driver-ISO-PushPull
   «type: X»
-  «description: PushPull Isolated Ideal Driver»
+  «description: PushPull Isolated Ideal Driver (Input 0/1)»
   «library file: |.subckt Driver-ISO-PushPull boolIN OUT+ OUT-\nS1 Vdd OUT+ boolIN 0 SWsource\nS2 OUT+ Vss boolIN 0 SWsink\nV1 Vdd OUT- Vhigh\nV2 Vss OUT- Vlow\n.model SWsource SW Ron=Rsrc Roff=10Meg Vt=0.5 Vh=0\n.model SWsink SW Ron=10Meg Roff=Rsink Vt=0.5 Vh=0\n.ends Driver-ISO-PushPull»
   «shorted pins: false»
   «line (-425,320) (-455,180) 0 0 0x1000000 -1 -1»

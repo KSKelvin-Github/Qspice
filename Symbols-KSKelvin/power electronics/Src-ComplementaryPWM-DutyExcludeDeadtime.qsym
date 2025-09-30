@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Src-ComplementaryPWM-DutyExcludeDeadtime
   «type: X»
   «description: Complementary Gate - Duty Exclude Deadtime»
-  «library file: |.subckt Src-ComplementaryPWM-DutyExcludeDeadtime A+ B+ ADuty A- B-\nV1 A+ A- pulse Vlow Vhigh Tdelay Trise Tfall duty/fsw 1/fsw DC Vlow\nV2 B+ B- pulse Vlow Vhigh Tdelay+duty/fsw+deadtime Trise Tfall (1-duty)/fsw-2*deadtime 1/fsw DC Vlow\nV3 ADuty 0 DC (duty/fsw)*fsw\nR1 A- 0 1G\nR2 B- 0 1G\n.ends Src-ComplementaryPWM-DutyExcludeDeadtime»
+  «library file: |.subckt Src-ComplementaryPWM-DutyExcludeDeadtime A+ A- B+ B- ADuty\nV1 A+ A- pulse Vlow Vhigh Tdelay Trise Tfall duty/fsw 1/fsw DC Vlow\nV2 B+ B- pulse Vlow Vhigh Tdelay+duty/fsw+deadtime Trise Tfall (1-duty)/fsw-2*deadtime 1/fsw DC Vlow\nV3 ADuty 0 DC (duty/fsw)*fsw\nR1 A- 0 1G\nR2 B- 0 1G\n.ends Src-ComplementaryPWM-DutyExcludeDeadtime»
   «shorted pins: false»
   «line (600,300) (660,300) 0 0 0x1000000 -1 -1»
   «line (660,300) (660,500) 0 0 0x1000000 -1 -1»
@@ -47,8 +47,8 @@
   «text (-1050,-800) 1 7 0 0x0 -1 -1 "Tfall=<1p>"»
   «text (0,800) 1 15 1 0x1000000 -1 -1 "Duty excluded Deadtime"»
   «pin (1100,600) (20,0) 1 15 0 0x0 -1 "A+"»
-  «pin (1100,-100) (20,0) 1 15 0 0x0 -1 "B+"»
-  «pin (1100,-800) (-20,0) 1 11 0 0x0 -1 "ADuty"»
   «pin (1100,200) (-20,0) 1 15 0 0x0 -1 "A-"»
+  «pin (1100,-100) (20,0) 1 15 0 0x0 -1 "B+"»
   «pin (1100,-500) (-20,0) 1 15 0 0x0 -1 "B-"»
+  «pin (1100,-800) (-20,0) 1 11 0 0x0 -1 "ADuty"»
 »

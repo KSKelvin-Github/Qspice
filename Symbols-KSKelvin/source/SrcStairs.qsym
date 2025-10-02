@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol SrcStairs
   «type: X»
-  «description: Machine generated symbol for SRCSTAIRS»
+  «description: Stairs Waveform»
   «library file: |.subckt SrcStairs + -\n¥1 Vdd Vss OUT ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH\nV1 Vdd 0 maxLVL\nV3 CLK 0 pulse minLVL maxLVL 0 1p 1p Tstep*.1 Tstep\nV4 Vss 0 minLVL\nB1 IN 0 V=Vstep/Tstep*time+minLVL\nE1 + - OUT 0 1\n.ends SrcStairs»
   «shorted pins: false»
   «line (0,-200) (0,-130) 0 0 0x1000000 -1 -1»

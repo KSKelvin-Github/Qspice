@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol SrcStep-B
+ÿØÿÛ«symbol SrcStep
   «type: B»
-  «description: (netlist assisted)»
+  «description: Step Source»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,130) 0 0 0x1000000 -1 -1»

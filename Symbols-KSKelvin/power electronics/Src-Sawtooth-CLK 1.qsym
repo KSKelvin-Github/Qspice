@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Src-Sawtooth-CLK
   «type: X»
-  «description: Machine generated symbol for SRC-SAWTOOTH-CLK»
+  «description: Source - Clock and Sawtooth»
   «library file: |.subckt Src-Sawtooth-CLK Sawtooth CLK\nB1 SawInt 0 V=idt(fsw,0,(V(SawInt)>1)||(time<Tdelay))\nVlogic1V p1v 0 1\n¥1 p1v 0 CLKint ¥ N01 SawInt ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 Sawtooth 0 V=V(SawInt)*(VHigh-VLow)+VLow\nB3 CLK 0 V=V(CLKint)*(VHigh-VLow)+VLow\nB4 N01 0 V=if(time>Tdelay,ClkDuty,-1)\n.ends Src-Sawtooth-CLK»
   «shorted pins: false»
   «line (60,520) (160,670) 0 0 0x1000000 -1 -1»

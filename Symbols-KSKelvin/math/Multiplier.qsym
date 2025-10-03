@@ -3,8 +3,8 @@
   «description: Multiplier»
   «library file: |.subckt multiplier in1 in2 out\nB1 out 0 V=V(in1)*V(in2)\n.ends multiplier»
   «shorted pins: false»
-  «line (-150,100) (50,-100) 0 0 0x1000000 -1 -1»
-  «line (50,100) (-150,-100) 0 0 0x1000000 -1 -1»
+  «line (-130,80) (30,-80) 0 0 0x1000000 -1 -1»
+  «line (30,80) (-130,-80) 0 0 0x1000000 -1 -1»
   «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
   «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
   «rect (-300,200) (200,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»

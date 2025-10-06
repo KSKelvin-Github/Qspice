@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol Src-Sawtooth-CLK 3
+  «type: X»
+  «description: Source - Clock and Sawtooth»
+  «library file: |.subckt Src-Sawtooth-CLK Sawtooth\nB1 SawInt 0 V=idt(fsw,0,(V(SawInt)>1)||(time<Tdelay))\nVlogic1V p1v 0 1\n¥1 p1v 0 CLKint ¥ N01 SawInt ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 Sawtooth 0 V=V(SawInt)*(VHigh-VLow)+VLow\nB3 CLK 0 V=V(CLKint)*(VHigh-VLow)+VLow\nB4 N01 0 V=if(time>Tdelay,ClkDuty,-1)\n.ends Src-Sawtooth-CLK»
+  «shorted pins: false»
+  «line (-50,-50) (50,50) 0 0 0x1000000 -1 -1»
+  «line (50,50) (50,-50) 0 0 0x1000000 -1 -1»
+  «line (-50,50) (-50,-50) 0 0 0x1000000 -1 -1»
+  «line (-50,50) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (100,0) (50,-50) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-130) 0 0 0x1000000 -1 -1»
+  «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (-80,-200) (80,-200) (0,-280) 0 0 0x1000000 0x2000000 -1 -1»
+  «text (150,100) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,-50) 1 7 2 0x1000000 -1 -1 "SRC-SAWTOOTH-CLK"»
+  «text (-200,150) 1 11 0 0x0 -1 -1 "fsw=<100k>"»
+  «text (-200,0) 1 11 0 0x0 -1 -1 "VHigh=<1>"»
+  «text (-200,-150) 1 11 0 0x0 -1 -1 "VLow=<0>"»
+  «text (-200,-300) 1 11 0 0x0 -1 -1 "Tdelay=<0>"»
+  «text (-200,-600) 1 11 2 0x1000000 -1 -1 "ClkDuty=<0.01>"»
+  «text (-200,-450) 1 11 0 0x0 -1 -1 "ttol=<1n>"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "Sawtooth"»
+»

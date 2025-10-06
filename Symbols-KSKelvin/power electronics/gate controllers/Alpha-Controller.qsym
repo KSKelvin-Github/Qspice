@@ -1,0 +1,28 @@
+ÿØÿÛ«symbol Alpha-Controller
+  «type: X»
+  «description: Alpha Controller»
+  «library file: |.subckt Alpha-Controller sync alpha EN OUT\nB1 timer1 0 V=idt(1,0,V(sync)-state(1,V(sync)))\nB2 PulseWidth 0 V=1/frq*PulseWidthDeg/360\nB3 delay 0 V=1/frq*V(alpha)/360\nVlogic1V p1v 0 1\n¥1 p1v 0 trig ¥ timer1 delay ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB4 timer2 0 V=idt(1,0,V(trig)-state(1,V(trig)))\n¥2 p1v 0 N01 ¥ PulseWidth timer2 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥4 p1v 0 OUT ¥4 EN trig N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\nRpullup p1v EN 10K\n.ends Alpha-Controller»
+  «shorted pins: false»
+  «line (0,300) (-300,-100) 0 0 0x1000000 -1 -1»
+  «line (-300,-100) (300,-100) 0 0 0x1000000 -1 -1»
+  «line (300,-100) (0,300) 0 0 0x1000000 -1 -1»
+  «line (300,100) (150,100) 0 0 0x1000000 -1 -1»
+  «line (0,-300) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (-200,-300) (-200,-100) 0 0 0x1000000 -1 -1»
+  «line (-180,-70) (-150,-70) 0 0 0x1000000 -1 -1»
+  «line (-150,-70) (-150,50) 0 0 0x1000000 -1 -1»
+  «line (-150,50) (-120,50) 0 0 0x1000000 -1 -1»
+  «line (-180,-30) (-150,10) 0 0 0x1000000 -1 -1»
+  «line (-150,10) (-120,-30) 0 0 0x1000000 -1 -1»
+  «ellipse (-85,100) (15,0) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «arc3p (65,100) (65,0) (65,50) 0 0 0x1000000 -1 -1»
+  «text (-350,214) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-718,450) 1 7 2 0x1000000 -1 -1 "ALPHA-CONTROLLER"»
+  «text (400,-100) 1 7 0 0x0 -1 -1 "frq=<60>"»
+  «text (400,-250) 1 7 0 0x0 -1 -1 "PulseWidthDeg=<120>"»
+  «text (400,-400) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
+  «pin (-200,-300) (-20,0) 0.794 10 0 0x0 -1 "sync"»
+  «pin (0,-300) (20,0) 0.794 6 0 0x0 -1 "alpha"»
+  «pin (300,100) (0,0) 0.794 10 0 0x0 -1 "EN"»
+  «pin (0,300) (-20,0) 1 15 0 0x0 -1 "OUT"»
+»

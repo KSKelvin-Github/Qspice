@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol PI-Controller
+  «type: X»
+  «description: PI Controller - Gain and Time Constant»
+  «library file: |.subckt PI-Controller IN OUT\nB1 OUT 0 V=V(IN) Laplace=A*(1+s*tau)/s/tau\n.ends PI-Controller»
+  «shorted pins: false»
+  «line (-200,0) (600,0) 0 0 0x1000000 -1 -1»
+  «line (650,50) (700,0) 0 0 0x1000000 -1 -1»
+  «line (700,0) (650,-50) 0 0 0x1000000 -1 -1»
+  «rect (-300,200) (700,-200) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (-300,450) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,300) 1 7 0 0x1000000 -1 -1 "PI-CONTROLLER"»
+  «text (200,100) 0.857 0 1 0x1000000 -1 -1 "A*(1+s*tau)"»
+  «text (200,-100) 0.857 0 1 0x1000000 -1 -1 "s*tau"»
+  «text (-300,-300) 1 7 0 0x0 -1 -1 "A=<0.1>; Gain of PI controller"»
+  «text (-300,-450) 1 7 0 0x0 -1 -1 "tau=<0.001> ; Time constant of the PI controller"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (700,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

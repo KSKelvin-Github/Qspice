@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol Polar-Cartesian-Transformation
+  «type: X»
+  «description: r/angle-x/y Transformation»
+  «library file: |.subckt Polar-Cartesian-Transformation r a x y\nB1 x 0 V=V(r)*cos(V(a)*((degree*pi/180+(1-degree))))\nB2 y 0 V=V(r)*sin(V(a)*((degree*pi/180+(1-degree))))\n.ends Polar-Cartesian-Transformation»
+  «shorted pins: false»
+  «line (-150,-150) (180,-150) 0 0 0x1000000 -1 -1»
+  «line (-150,-150) (-150,170) 0 0 0x1000000 -1 -1»
+  «line (-150,-150) (100,100) 0 0 0x1000000 -1 -1»
+  «line (-150,170) (-180,120) 0 0 0x1000000 -1 -1»
+  «line (-150,170) (-120,120) 0 0 0x1000000 -1 -1»
+  «line (180,-150) (130,-120) 0 0 0x1000000 -1 -1»
+  «line (180,-150) (130,-180) 0 0 0x1000000 -1 -1»
+  «rect (-300,300) (300,-300) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «ellipse (70,130) (130,70) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «arc3p (-50,-150) (-80,-80) (-150,-150) 0 1 0x1000000 -1 -1»
+  «text (-300,400) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,550) 1 7 2 0x1000000 -1 -1 "POLAR-CARTESIAN-TRANSFORMATION"»
+  «text (-300,-500) 1 7 0 0x0 -1 -1 "degree=<int[0:1](0)>; set to 1 for degree"»
+  «text (-303,-370) 0.681 7 1 0x1000000 -1 -1 "radian (default)"»
+  «pin (-300,200) (20,0) 1 7 0 0x0 -1 "r"»
+  «pin (-300,-200) (20,0) 1 7 0 0x0 -1 "a"»
+  «pin (300,200) (-20,0) 1 11 0 0x0 -1 "x"»
+  «pin (300,-200) (-20,0) 1 11 0 0x0 -1 "y"»
+»

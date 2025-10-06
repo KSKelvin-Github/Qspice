@@ -1,0 +1,28 @@
+ÿØÿÛ«symbol VoltageSensor-Average
+  «type: X»
+  «description: Voltage Sensor (Average)»
+  «library file: |.subckt VoltageSensor-Average INpos INneg Avg CLK\nB1 IDT 0 V=idt(V(INpos,INneg)*gain,0,V(CLK)-state(1,V(CLK))>0)/V(dT)\nV1 Vdd 0 Vhigh\nV2 Vss 0 Vlow\nB2 dT 0 V=idt(1,0,V(CLK)-state(1,V(CLK))>0)\n¥1 Vdd Vss OUT ¥ IDT CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=-Vlow\nB3 sawtooth 0 V=idt(fsamp,0,V(sawtooth)>1)\nV3 N01 0 0.05\nVlogic1V p1v 0 1\n¥2 p1v 0 CLK ¥ N01 sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB4 Avg 0 V=if(time<2/fsamp,0,V(OUT))\n.ends VoltageSensor-Average»
+  «shorted pins: false»
+  «line (-200,200) (-200,-200) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-67) 0 0 0x1000000 -1 -1»
+  «line (100,0) (-50,100) 0 0 0x1000000 -1 -1»
+  «line (100,0) (-50,-100) 0 0 0x1000000 -1 -1»
+  «line (-50,100) (-50,-100) 0 0 0x1000000 -1 -1»
+  «line (-100,-133) (-100,133) 0 0 0x1000000 -1 -1»
+  «line (-200,200) (-100,133) 0 0 0x1000000 -1 -1»
+  «line (-200,-200) (-100,-133) 0 0 0x1000000 -1 -1»
+  «line (-170,100) (-130,100) 0 0 0x1000000 -1 -1»
+  «line (-150,120) (-150,80) 0 0 0x1000000 -1 -1»
+  «line (-170,-100) (-130,-100) 0 0 0x1000000 -1 -1»
+  «text (-50,250) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (-50,400) 1 0 2 0x1000000 -1 -1 "VOLTAGESENSOR-AVERAGE"»
+  «text (-200,-250) 0.681 7 0 0x0 -1 -1 "gain=<1>"»
+  «text (-200,-350) 0.681 7 0 0x0 -1 -1 "fsamp=<1k>"»
+  «text (-200,-450) 0.681 7 0 0x0 -1 -1 "ttol=<1n>"»
+  «text (-200,-550) 0.681 7 2 0x1000000 -1 -1 "Vhigh=1Meg"»
+  «text (-200,-650) 0.681 7 2 0x1000000 -1 -1 "Vlow=-1Meg"»
+  «pin (-200,100) (0,0) 1 15 0 0x0 -1 "INpos"»
+  «pin (-200,-100) (20,0) 1 15 0 0x0 -1 "INneg"»
+  «pin (100,0) (0,0) 1 15 0 0x0 -1 "Avg"»
+  «pin (0,-200) (0,0) 0.5 106 0 0x0 -1 "CLK"»
+»

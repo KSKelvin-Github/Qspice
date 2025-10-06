@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol SrcStairs
+  «type: X»
+  «description: Stairs Waveform»
+  «library file: |.subckt SrcStairs + -\n¥1 Vdd Vss OUT ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH\nV1 Vdd 0 maxLVL\nV3 CLK 0 pulse minLVL maxLVL 0 1p 1p Tstep*.1 Tstep\nV4 Vss 0 minLVL\nB1 IN 0 V=Vstep/Tstep*time+minLVL\nE1 + - OUT 0 1\n.ends SrcStairs»
+  «shorted pins: false»
+  «line (0,-200) (0,-130) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+  «line (-100,-50) (-50,-50) 0 0 0x1000000 -1 -1»
+  «line (-50,-50) (-50,-20) 0 0 0x1000000 -1 -1»
+  «line (-50,-20) (0,-20) 0 0 0x1000000 -1 -1»
+  «line (0,-20) (0,10) 0 0 0x1000000 -1 -1»
+  «line (0,10) (50,10) 0 0 0x1000000 -1 -1»
+  «line (50,10) (50,40) 0 0 0x1000000 -1 -1»
+  «line (50,40) (100,40) 0 0 0x1000000 -1 -1»
+  «line (-25,75) (25,75) 0 0 0x1000000 -1 -1»
+  «line (0,100) (0,50) 0 0 0x1000000 -1 -1»
+  «line (-25,-75) (25,-75) 0 0 0x1000000 -1 -1»
+  «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0xf5d29b -1 -1»
+  «text (150,100) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (150,50) 1 7 0 0x1000000 -1 -1 "SRCSTAIRS"»
+  «text (150,-100) 0.681 7 0 0x0 -1 -1 "minLVL=0.1"»
+  «text (150,-200) 0.681 7 0 0x0 -1 -1 "maxLVL=0.9"»
+  «text (150,-300) 0.681 7 0 0x0 -1 -1 "Vstep=0.1"»
+  «text (150,-400) 0.681 7 0 0x0 -1 -1 "Tstep=10m"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "-"»
+»

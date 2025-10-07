@@ -1,14 +1,14 @@
-ÿØÿÛ«symbol Floor
+ÿØÿÛ«symbol Cosine
   «type: X»
-  «description: Floor»
-  «library file: |.subckt floor in out \nB1 out 0 V=floor(V(in))\n.ends floor»
+  «description: Cosine (radian)»
+  «library file: |.subckt cosine in out\nB1 out 0 V=cos(V(in))\n.ends cosine»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
   «rect (-200,200) (300,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
-  «text (-114,301) 1 15 0 0x1000000 -1 -1 "X1"»
-  «text (44,300) 1 7 2 0x1000000 -1 -1 "FLOOR"»
-  «text (43,10) 1.166 15 1 0x1000000 -1 -1 "floor"»
+  «text (-200,303) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 7 2 0x1000000 -1 -1 "COSINE"»
+  «text (40,20) 1.26 0 1 0x1000000 -1 -1 "cos"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Sine Cosine (radian)
+  «type: X»
+  «description: Sine Cosine (radian)»
+  «library file: |.subckt sinecosine in out1 out2\nB1 out1 0 V=sin(V(in))\nB2 out2 0 V=cos(V(in))\n.ends sinecosine»
+  «shorted pins: false»
+  «line (250,150) (300,100) 0 0 0x1000000 -1 -1»
+  «line (300,100) (250,50) 0 0 0x1000000 -1 -1»
+  «line (250,-50) (300,-100) 0 0 0x1000000 -1 -1»
+  «line (300,-100) (250,-150) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (300,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-200,303) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 7 2 0x1000000 -1 -1 "SINECOSINE"»
+  «text (40,120) 1.166 0 1 0x1000000 -1 -1 "sin"»
+  «text (40,-80) 1.166 0 1 0x1000000 -1 -1 "cos"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (300,100) (0,0) 1 15 0 0x0 -1 "out1"»
+  «pin (300,-100) (0,0) 1 0 0 0x0 -1 "out2"»
+»

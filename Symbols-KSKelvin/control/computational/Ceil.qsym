@@ -1,15 +1,15 @@
-ÿØÿÛ«symbol Floor
+ÿØÿÛ«symbol Ceil
   «type: X»
-  «description: Floor (round down)»
-  «library file: |.subckt floor in out \nB1 out 0 V=floor(V(in))\n.ends floor»
+  «description: Ceil (round up)»
+  «library file: |.subckt ceil in out \nB1 out 0 V=ceil(V(in))\n.ends ceil»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
   «rect (-200,200) (300,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «text (-114,301) 1 15 0 0x1000000 -1 -1 "X1"»
-  «text (44,300) 1 7 2 0x1000000 -1 -1 "FLOOR"»
-  «text (43,10) 1.166 15 1 0x1000000 -1 -1 "floor"»
-  «text (50,-140) 0.583 0 1 0x1000000 -1 -1 "round down"»
+  «text (44,300) 1 7 2 0x1000000 -1 -1 "CEIL"»
+  «text (43,10) 1.166 15 1 0x1000000 -1 -1 "ceil"»
+  «text (50,-140) 0.583 0 1 0x1000000 -1 -1 "round up"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

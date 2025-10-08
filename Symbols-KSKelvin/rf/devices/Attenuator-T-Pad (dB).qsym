@@ -1,0 +1,26 @@
+ÿØÿÛ«symbol Attenuator-T-Pad (dB)
+  «type: X»
+  «description: T-Pad (dB attn) Attenuator»
+  «library file: |.subckt Attenuator-T-Pad port1 port2\nR1 port1 N01 Ra\nR3 N01 port2 Ra\nR2 N01 0 Rb\n.param Ra=Zo*(1-gain)/(gain+1)\n.param Rb=Zo*(2*gain)/(1-gain^2)\n.param gain=10^(dB/20)\n.ends Attenuator-T-Pad»
+  «shorted pins: false»
+  «line (200,200) (200,80) 0 0 0x1000000 -1 -1»
+  «line (200,-280) (200,-350) 0 0 0x1000000 -1 -1»
+  «line (680,200) (800,200) 0 0 0x1000000 -1 -1»
+  «line (320,200) (60,200) 0 0 0x1000000 -1 -1»
+  «line (-300,200) (-400,200) 0 0 0x1000000 -1 -1»
+  «rect (-400,400) (800,-500) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «ellipse (175,225) (225,175) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (130,-350) (290,-350) (210,-430) 0 0 0x1000000 0x1000000 -1 -1»
+  «zigzag (120,80) (280,-280) 0 0 0 0x1000000 -1 -1»
+  «zigzag (-300,120) (60,280) 0 0 0 0x1000000 -1 -1»
+  «zigzag (320,120) (680,280) 0 0 0 0x1000000 -1 -1»
+  «text (-400,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,500) 1 7 0 0x1000000 -1 -1 "ATTENUATOR-T-PAD"»
+  «text (-400,-600) 1 7 0 0x0 -1 -1 "Zo=<50>"»
+  «text (-400,-750) 1 7 0 0x0 -1 -1 "dB=<float[-1e308:-1p](-30)>"»
+  «text (350,-250) 1 0 1 0x1000000 -1 -1 "Rb"»
+  «text (-200,50) 1 0 1 0x1000000 -1 -1 "Ra"»
+  «text (600,50) 1 0 1 0x1000000 -1 -1 "Ra"»
+  «pin (-400,200) (0,0) 1 15 0 0x0 -1 "port1"»
+  «pin (800,200) (0,0) 1 15 0 0x0 -1 "port2"»
+»

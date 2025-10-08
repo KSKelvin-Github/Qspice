@@ -1,0 +1,31 @@
+ÿØÿÛ«symbol iSense-CurrentTransformer
+  «type: X»
+  «description: Current Sense - Current Transformer»
+  «library file: |.subckt iSense-CurrentTransformer pri+ pri- Isense+ Isense-\n×1 «Isense+ Isense- pri+ pri-» Turns=Nsec Npri L=Lsec Rser=Rsec\n.ends iSense-CurrentTransformer»
+  «shorted pins: false»
+  «line (0,200) (0,-200) 0 1 0x1000000 -1 -1»
+  «line (70,200) (70,175) 0 0 0x1000000 -1 -1»
+  «line (70,-200) (70,-175) 0 0 0x1000000 -1 -1»
+  «line (-70,200) (-70,70) 0 0 0x1000000 -1 -1»
+  «line (-70,-200) (-70,-70) 0 0 0x1000000 -1 -1»
+  «line (-200,200) (-70,200) 0 0 0x1000000 -1 -1»
+  «line (-200,-200) (-70,-200) 0 0 0x1000000 -1 -1»
+  «line (200,-200) (70,-200) 0 0 0x1000000 -1 -1»
+  «line (200,200) (70,200) 0 0 0x1000000 -1 -1»
+  «ellipse (85,175) (125,135) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «ellipse (-135,75) (-95,35) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «coil (-120,70) (-20,-70) 0 0 0 0x1000000 -1 -1»
+  «coil (120,175) (20,-175) 0 0 0 0x1000000 -1 -1»
+  «text (0,300) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "ISENSE-CURRENTTRANSFORMER"»
+  «text (-100,-300) 1 7 0 0x0 -1 -1 "Npri=<1>"»
+  «text (-100,-450) 1 7 0 0x0 -1 -1 "Nsec=<100>"»
+  «text (-100,-600) 1 7 0 0x0 -1 -1 "Lsec=<18mH>"»
+  «text (-100,-750) 1 7 0 0x0 -1 -1 "Rsec=<1>"»
+  «text (-150,-100) 0.63 32 1 0x1000000 -1 -1 "pri"»
+  «text (170,0) 0.63 32 1 0x1000000 -1 -1 "sec"»
+  «pin (-200,200) (0,0) 1 15 0 0x0 -1 "pri+"»
+  «pin (-200,-200) (20,0) 1 15 0 0x0 -1 "pri-"»
+  «pin (200,200) (0,0) 1 15 0 0x0 -1 "Isense+"»
+  «pin (200,-200) (-20,0) 1 15 0 0x0 -1 "Isense-"»
+»

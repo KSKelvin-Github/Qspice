@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Measure-RMS-MEAN
+  «type: X»
+  «description: Measure RMS and Mean (set tau to duration of few AC cycles)»
+  «library file: |.subckt Measure-RMS-MEAN x rms avg\nB1 rms 0 V=sqrt(idt((V(x)^2-if(time<tau,0,delay(V(x)^2,tau))))/tau)\nB2 avg 0 V=idt(V(x)-if(time<tau,0,delay(V(x),tau)))/tau\n.ends Measure-RMS-MEAN»
+  «shorted pins: false»
+  «line (-300,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «line (-200,-150) (-200,150) 0 0 0x1000000 -1 -1»
+  «line (-200,150) (-150,200) 0 0 0x1000000 -1 -1»
+  «line (-150,200) (0,200) 0 0 0x1000000 -1 -1»
+  «line (-200,-150) (-150,-200) 0 0 0x1000000 -1 -1»
+  «line (-150,-200) (-100,-200) 0 0 0x1000000 -1 -1»
+  «rect (-300,300) (400,-300) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «ellipse (-100,-175) (-50,-225) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (0,225) (50,175) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-225,25) (-175,-25) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «text (-300,400) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,550) 1 7 2 0x1000000 -1 -1 "MEASURE-RMS-MEAN"»
+  «text (-300,-400) 1 7 0 0x0 -1 -1 "tau=<1> ;duration of few AC cycles"»
+  «pin (-300,0) (20,0) 1 15 0 0x0 -1 "x"»
+  «pin (400,200) (-20,0) 1 11 0 0x0 -1 "RMS"»
+  «pin (400,-200) (-20,0) 1 11 0 0x0 -1 "MEAN"»
+»

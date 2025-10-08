@@ -1,0 +1,32 @@
+ÿØÿÛ«symbol Pulse-Transformer-2-windings
+  «type: X»
+  «description: Pulse Transformer (2 Windings)»
+  «library file: |.subckt Pulse-Transformer-2-windings pri+ pri- sec1+ sec1-\n×1 «pri+ pri- sec1+ sec1-» Turns=Npri Nsec L=Lpri Leak=Lleak Rser=Rdc\n.ends Pulse-Transformer-2-windings»
+  «shorted pins: false»
+  «line (-100,200) (-10,200) 0 0 0x1000000 -1 -1»
+  «line (110,200) (200,200) 0 0 0x1000000 -1 -1»
+  «line (-100,-200) (-10,-200) 0 0 0x1000000 -1 -1»
+  «line (-10,200) (-10,170) 0 0 0x1000000 -1 -1»
+  «line (-10,-170) (-10,-200) 0 0 0x1000000 -1 -1»
+  «line (110,-170) (110,-200) 0 0 0x1000000 -1 -1»
+  «line (110,200) (110,170) 0 0 0x1000000 -1 -1»
+  «line (110,-200) (200,-200) 0 0 0x1000000 -1 -1»
+  «line (50,200) (50,-200) 0 1 0x1000000 -1 -1»
+  «ellipse (-65,180) (-25,140) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (125,180) (165,140) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «coil (-50,170) (30,-170) 0 0 0 0x1000000 -1 -1»
+  «coil (150,170) (70,-170) 0 0 0 0x1000000 -1 -1»
+  «text (50,308) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (50,500) 1 15 2 0x1000000 -1 -1 "PULSE-TRANSFORMER-2-WINDINGS"»
+  «text (50,-750) 1 0 2 0x1000000 -1 -1 "Npri=1"»
+  «text (50,-900) 1 0 2 0x1000000 -1 -1 "Nsec=1"»
+  «text (50,-300) 1 0 0 0x0 -1 -1 "Lpri=<1916u>"»
+  «text (50,-450) 1 0 0 0x0 -1 -1 "Lleak=<0.6u>"»
+  «text (50,-600) 1 0 0 0x0 -1 -1 "Rdc=<1.5>"»
+  «text (-130,0) 0.681 32 1 0x1000000 -1 -1 "pri"»
+  «text (200,0) 0.681 32 1 0x1000000 -1 -1 "sec"»
+  «pin (-100,200) (0,0) 1 15 0 0x0 -1 "pri+"»
+  «pin (-100,-200) (20,0) 1 15 0 0x0 -1 "pri-"»
+  «pin (200,-200) (0,0) 1 15 0 0x0 -1 "sec1+"»
+  «pin (200,200) (-20,0) 1 15 0 0x0 -1 "sec1-"»
+»

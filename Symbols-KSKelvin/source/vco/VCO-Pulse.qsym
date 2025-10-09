@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol VCO-Behavioral
+ÿØÿÛ«symbol VCO-Pulse
   «type: X»
-  «description: VCO-Behavioral»
-  «library file: |.subckt VCO-Behavioral frq ctrl duty out Vdd Vss\nB2 frq 0 V=limit((fmax-fmin)*(V(ctrl)-minV)/(maxV-minV)+fmin,fmin,fmax)\nB1 sawtooth 0 V=idt(V(frq),0,v(sawtooth)>1)\n¥1 Vdd Vss out ¬Q duty sawtooth Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n.ends VCO-Behavioral»
+  «description: VCO-Pulse»
+  «library file: |.subckt VCO-Pulse frq ctrl duty out Vdd Vss\nB2 frq 0 V=limit((fmax-fmin)*(V(ctrl)-minV)/(maxV-minV)+fmin,fmin,fmax)\nB1 sawtooth 0 V=idt(V(frq),0,v(sawtooth)>1)\n¥1 Vdd Vss N01 ¬Q duty sawtooth Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥2 Vdd Vss out ¥ N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR IC=0\n.ends VCO-Pulse»
   «shorted pins: false»
   «line (-700,400) (50,400) 0 0 0x1000000 -1 -1»
   «line (-320,-70) (-270,70) 0 0 0x1000000 -1 -1»
@@ -29,8 +29,8 @@
   «rect (-700,700) (500,-300) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
   «rect (-400,120) (-150,-130) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «ellipse (50,225) (0,175) 0 0 0 0x1000000 0x1000000 -1 -1»
-  «text (-700,800) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-400,800) 1 7 2 0x1000000 -1 -1 "VCO-BEHAVIORAL"»
+  «text (-700,950) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-700,800) 1 7 0 0x1000000 -1 -1 "VCO-PULSE"»
   «text (-700,-400) 1 7 0 0x0 -1 -1 "minV=<0>"»
   «text (-700,-550) 1 7 0 0x0 -1 -1 "maxV=<1>"»
   «text (-700,-700) 1 7 0 0x0 -1 -1 "fmin=<10k>"»

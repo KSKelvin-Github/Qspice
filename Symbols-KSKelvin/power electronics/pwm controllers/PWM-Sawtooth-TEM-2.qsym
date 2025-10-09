@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PWM-Sawtooth-TEM-2
   «type: X»
   «description: PWM-Sawtooth-TEM (Differential Output)»
-  «library file: |.subckt PWM-Sawtooth-TEM duty gate+ gate- ¬g¬a¬t¬e+ ¬g¬a¬t¬e- sawtooth\nV1 p1v 0 1\nB2 N01 gate- V=V(Q)*(Vhigh-Vlow)+Vlow\nB1 dutyLimit 0 V=limit(V(duty),.99,0.01)\nV2 sawtooth 0 pulse 0 1 Tdelay .99/fsw .01/fsw 0 1/fsw DC 1\n¥1 p1v 0 Q ¬Q dutyLimit sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB3 N02 ¬g¬a¬t¬e- V=V(¬Q)*(Vhigh-Vlow)+Vlow\nR1 N01 gate+ Rout\nR2 N02 ¬g¬a¬t¬e+ Rout\n.ends PWM-Sawtooth-TEM»
+  «library file: |.subckt PWM-Sawtooth-TEM duty gate+ gate- ¬g¬a¬t¬e+ ¬g¬a¬t¬e- sawtooth\nV1 p1v 0 1\nB2 N01 gate- V=V(Q)*(Vhigh-Vlow)+Vlow\nB1 dutyLimit 0 V=limit(V(duty),minDuty,maxDuty)\nV2 sawtooth 0 pulse 0 1 Tdelay .99/fsw .01/fsw 0 1/fsw DC 1\n¥1 p1v 0 Q ¬Q dutyLimit sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB3 N02 ¬g¬a¬t¬e- V=V(¬Q)*(Vhigh-Vlow)+Vlow\nR1 N01 gate+ Rout\nR2 N02 ¬g¬a¬t¬e+ Rout\nR3 gate- 0 1G\nR4 ¬g¬a¬t¬e- 0 1G\n.ends PWM-Sawtooth-TEM»
   «shorted pins: false»
   «line (300,200) (-100,200) 0 0 0x1000000 -1 -1»
   «line (300,-200) (190,-200) 0 0 0x1000000 -1 -1»
@@ -52,6 +52,8 @@
   «text (100,300) 0.857 0 1 0x1000000 -1 -1 "0-1V"»
   «text (920,20) 1 0 1 0x1000000 -1 -1 "Q"»
   «text (920,-700) 1 0 1 0x1000000 -1 -1 "¬Q"»
+  «text (-100,-2300) 1 7 2 0x1000000 -1 -1 "minDuty=<0.01>"»
+  «text (-100,-2450) 1 7 2 0x1000000 -1 -1 "maxDuty=<0.99>"»
   «pin (-100,200) (20,0) 1 15 0 0x0 -1 "duty"»
   «pin (1000,200) (-20,0) 1 15 0 0x0 -1 "gate+"»
   «pin (1000,-200) (-20,0) 1 15 0 0x0 -1 "gate-"»

@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol powerSensor-Average
+  «type: X»
+  «description: RF Power Sensor (Average)»
+  «library file: |.subckt powerSensor-Average coupleV power-avg\nB1 power-avg 0 V=(idt((V(coupleV)^2-if(time<tau,0,delay(V(coupleV)^2,tau))))/tau)/50\nR2 coupleV 0 Zo\n.ends powerSensor-Average»
+  «shorted pins: false»
+  «line (-100,300) (-100,210) 0 0 0x1000000 -1 -1»
+  «line (-100,-110) (-100,-200) 0 0 0x1000000 -1 -1»
+  «line (0,-600) (0,-500) 0 0 0x1000000 -1 -1»
+  «line (-50,-100) (0,-150) 0 1 0x1000000 -1 -1»
+  «line (0,-370) (0,-150) 0 1 0x1000000 -1 -1»
+  «rect (-200,300) (200,-500) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «triangle (-160,-200) (-40,-200) (-100,-265) 0 0 0x1000000 0x1000000 -1 -1»
+  «zigzag (-160,210) (-40,-110) 0 0 0 0x1000000 -1 -1»
+  «text (200,400) 1 11 0 0x1000000 -1 -1 "X1"»
+  «text (1150,50) 1 0 2 0x1000000 -1 -1 "POWERSENSOR-AVERAGE"»
+  «text (250,-250) 1 7 0 0x0 -1 -1 "Zo=<50>"»
+  «text (250,-400) 1 7 0 0x0 -1 -1 "tau=<1u>; few RF periods"»
+  «text (80,60) 0.857 0 1 0x1000000 -1 -1 "Zo"»
+  «text (0,-420) 0.63 0 1 0x1000000 -1 -1 "power"»
+  «pin (-100,300) (0,0) 1 15 0 0x0 -1 "coupleV"»
+  «pin (0,-600) (0,0) 1 15 0 0x0 -1 "power-avg"»
+»

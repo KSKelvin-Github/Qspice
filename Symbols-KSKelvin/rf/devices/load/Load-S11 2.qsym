@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Load-S11 2
+  «type: X»
+  «description: S11 load at a single frequency»
+  «library file: |.subckt Load-S11 + -\n.param S11re = S11mag*cos(S11ph*pi/180)\n.param S11im = S11mag*sin(S11ph*pi/180)\n.param den=(1-S11re)^2+S11im^2\n.param R=Zo*(1-S11re^2-S11im^2)/den\n.param X=Zo*(2*S11im)/den\n.if(X==0)\nR + - R\n.display Z = ('R'+j'X') : R='R'\n.else\n.if(X>0)\n.param L=X/2/pi/frq\nL + - L Rser=R Rpar=0\n.display Z = ('R'+j'X') : R='R' L='L'\n.else\n.param C=1/2/pi/frq/(-X)\nC + - C Rser=R\n.display Z = ('R'+j'X') : R='R' C='C'\n.endif\n.endif\n.ends Load-S11»
+  «shorted pins: false»
+  «line (-200,0) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,0) 0 0 0x1000000 -1 -1»
+  «rect (-150,-70) (150,70) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «text (0,150) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "LOAD-S11"»
+  «text (0,-300) 1 15 0 0x0 -1 -1 "Zo=<50>"»
+  «text (0,-450) 1 15 0 0x0 -1 -1 "frq=<10Meg>"»
+  «text (0,-600) 1 15 0 0x0 -1 -1 "S11mag=<0.5>"»
+  «text (-2,-150) 1 15 1 0x1000000 -1 -1 "S11@frq"»
+  «text (0,-750) 1 15 0 0x0 -1 -1 "S11ph=<90>"»
+  «pin (-200,0) (0,0) 1 47 0 0x0 -1 "+"»
+  «pin (200,0) (0,0) 1 47 0 0x0 -1 "-"»
+»

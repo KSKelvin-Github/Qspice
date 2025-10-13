@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol viProbeHead
+  «type: X»
+  «description: VI Probe Head»
+  «library file: |.subckt viProbeHead Vrfin Vrfout Vrf Irf\nVsense Vrfin Vrfout 0\nB1 Irf 0 V=Igain*I(Vsense)\nE1 Vrf 0 Vrfin 0 Vgain\n.ends viProbeHead»
+  «shorted pins: false»
+  «line (300,0) (0,0) 0 0 0x1000000 -1 -1»
+  «line (-300,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «line (-100,-300) (-100,-30) 0 0 0x1000000 -1 -1»
+  «line (100,-300) (100,0) 0 0 0x1000000 -1 -1»
+  «line (0,110) (250,110) 0 0 0x1000000 -1 -1»
+  «rect (-300,200) (300,-200) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «ellipse (-130,30) (-70,-30) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (130,30) (70,-30) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «arc3p (0,0) (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «triangle (90,150) (160,110) (110,110) 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (90,70) (160,110) (110,110) 0 0 0x1000000 0xff0012 -1 -1»
+  «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "VIPROBEHEAD"»
+  «text (200,-300) 1 7 2 0x1000000 -1 -1 "Vgain=<1>"»
+  «text (200,-450) 1 7 2 0x1000000 -1 -1 "Igain=<1>"»
+  «pin (-300,0) (20,0) 1 15 0 0x0 -1 "Vrfin"»
+  «pin (300,0) (-20,0) 1 15 0 0x0 -1 "Vrfout"»
+  «pin (100,-300) (10,100) 0.794 6 0 0x0 -1 "Vrf"»
+  «pin (-100,-300) (-30,100) 0.794 10 0 0x0 -1 "Irf"»
+»

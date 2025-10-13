@@ -1,0 +1,61 @@
+ÿØÿÛ«symbol viSensor
+  «type: X»
+  «description: RF Power Meter (IQ mixer)»
+  «library file: |.subckt viSensor Vrf Vrf-mag Irf Irf-mag Ph Pdel Z-mag Zr Zi Pfwd Prev\nB1 avrf 0 V=2/Tperiod * (idt(V(vrf)*cos(1*2*pi/Tperiod*time))-delay( idt(V(vrf)*cos(1*2*pi/Tperiod*time)), Tperiod ))\nB2 bvrf 0 V=2/Tperiod * (idt(V(vrf)*sin(1*2*pi/Tperiod*time))-delay( idt(V(vrf)*sin(1*2*pi/Tperiod*time)), Tperiod ))\nB3 Vrf-mag 0 V=sqrt(V(avrf)^2+V(bvrf)^2)\nB4 vrf-phase 0 V=atan2(V(bvrf),V(avrf))\nB5 airf 0 V=2/Tperiod * (idt(V(irf)*cos(1*2*pi/Tperiod*time))-delay( idt(V(irf)*cos(1*2*pi/Tperiod*time)), Tperiod ))\nB6 birf 0 V=2/Tperiod * (idt(V(irf)*sin(1*2*pi/Tperiod*time))-delay( idt(V(irf)*sin(1*2*pi/Tperiod*time)), Tperiod ))\nB7 Irf-mag 0 V=sqrt(V(airf)^2+V(birf)^2)\nB8 irf-phase 0 V=atan2(V(birf),V(airf))\nB9 Ph 0 V=V(vrf-phase)-V(irf-phase)\nB10 Z-mag 0 V=V(Vrf-mag)/V(Irf-mag)\nB11 Zr 0 V=V(Z-mag)*cos(V(Ph))\nB12 Zi 0 V=V(Z-mag)*sin(V(Ph))\nB13 Pdel 0 V=(V(Vrf-mag)*V(Irf-mag)/2)*cos(V(Ph))\nB14 Pfwd 0 V=(V(Vrf-mag)^2+(V(Irf-mag)*Zo)^2+2*V(Vrf-mag)*V(Irf-mag)*Zo*cos(V(Ph)))/4/Zo/2\nB15 Prev 0 V=(V(Vrf-mag)^2+(V(Irf-mag)*Zo)^2-2*V(Vrf-mag)*V(Irf-mag)*Zo*cos(V(Ph)))/4/Zo/2\n.param Tperiod=1/mixerFreq\n.ends viSensor»
+  «shorted pins: false»
+  «line (-800,-200) (-550,-200) 0 0 0x1000000 -1 -1»
+  «line (-800,-1000) (-550,-1000) 0 0 0x1000000 -1 -1»
+  «line (-400,-500) (-300,-500) 0 0 0x1000000 -1 -1»
+  «line (-400,-500) (-400,-350) 0 0 0x1000000 -1 -1»
+  «line (-400,-700) (-300,-700) 0 0 0x1000000 -1 -1»
+  «line (-400,-700) (-400,-850) 0 0 0x1000000 -1 -1»
+  «line (-500,-100) (-300,-300) 0 0 0x1000000 -1 -1»
+  «line (-300,-100) (-500,-300) 0 0 0x1000000 -1 -1»
+  «line (-500,-900) (-300,-1100) 0 0 0x1000000 -1 -1»
+  «line (-300,-900) (-500,-1100) 0 0 0x1000000 -1 -1»
+  «line (-250,-200) (-100,-200) 0 0 0x1000000 -1 -1»
+  «line (-250,-1000) (-100,-1000) 0 0 0x1000000 -1 -1»
+  «line (200,-200) (350,-200) 0 0 0x1000000 -1 -1»
+  «line (200,-1000) (500,-1000) 0 0 0x1000000 -1 -1»
+  «line (60,-150) (40,-250) 0 0 0x1000000 -1 -1»
+  «line (60,-950) (40,-1050) 0 0 0x1000000 -1 -1»
+  «line (500,-1000) (500,-350) 0 0 0x1000000 -1 -1»
+  «line (500,-200) (550,-250) 0 0 0x1000000 -1 -1»
+  «line (750,300) (750,-1500) 0 1 0x1000000 -1 -1»
+  «line (650,-200) (750,-200) 0 0 0x1000000 -1 -1»
+  «rect (-800,300) (1200,-1500) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «rect (-300,-400) (0,-800) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-100,-50) (200,-350) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-100,-850) (200,-1150) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (350,-50) (650,-350) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (-550,-50) (-250,-350) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-550,-850) (-250,-1150) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «arc3p (-150,-500) (-50,-500) (-100,-500) 0 0 0x1000000 -1 -1»
+  «arc3p (-150,-500) (-250,-500) (-200,-500) 0 0 0x1000000 -1 -1»
+  «arc3p (-200,-700) (-250,-650) (-250,-700) 0 0 0x1000000 -1 -1»
+  «arc3p (-200,-700) (-100,-700) (-150,-700) 0 0 0x1000000 -1 -1»
+  «arc3p (-50,-650) (-100,-700) (-50,-700) 0 0 0x1000000 -1 -1»
+  «arc3p (150,-150) (60,-150) (110,-150) 0 0 0x1000000 -1 -1»
+  «arc3p (-50,-250) (40,-250) (-10,-250) 0 0 0x1000000 -1 -1»
+  «arc3p (150,-950) (60,-950) (110,-950) 0 0 0x1000000 -1 -1»
+  «arc3p (-50,-1050) (40,-1050) (-10,-1050) 0 0 0x1000000 -1 -1»
+  «arc3p (600,-200) (500,-300) (500,-200) 0 0 0x1000000 -1 -1»
+  «text (-800,550) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-800,400) 1 7 0 0x1000000 -1 -1 "VISENSOR"»
+  «text (-800,-1750) 1 7 0 0x0 -1 -1 "mixerFreq=<10Meg> ;mixer frequency"»
+  «text (-800,-1600) 1 7 0 0x0 -1 -1 "Zo=<50> ;charactertic impedance"»
+  «text (270,-100) 1 0 1 0x1000000 -1 -1 "I"»
+  «text (280,-900) 1 0 1 0x1000000 -1 -1 "Q"»
+  «text (-150,-590) 0.681 0 1 0x1000000 -1 -1 "osc"»
+  «pin (-800,-200) (20,0) 1 6 0 0x0 -1 "Vrf"»
+  «pin (1200,200) (-20,0) 1 11 0 0x0 -1 "|Vrf|"»
+  «pin (-800,-1000) (20,0) 1 6 0 0x0 -1 "Irf"»
+  «pin (1200,0) (-20,0) 1 11 0 0x0 -1 "|Irf|"»
+  «pin (1200,-200) (-20,0) 1 11 0 0x0 -1 "Ph"»
+  «pin (1200,-400) (-20,0) 1 11 0 0x0 -1 "Pdel"»
+  «pin (1200,-600) (-20,0) 1 11 0 0x0 -1 "|Z|"»
+  «pin (1200,-800) (-20,0) 1 11 0 0x0 -1 "Zr"»
+  «pin (1200,-1000) (-20,0) 1 11 0 0x0 -1 "Zi"»
+  «pin (1200,-1200) (-20,0) 1 11 0 0x0 -1 "Pfwd"»
+  «pin (1200,-1400) (-20,0) 1 11 0 0x0 -1 "Prev"»
+»

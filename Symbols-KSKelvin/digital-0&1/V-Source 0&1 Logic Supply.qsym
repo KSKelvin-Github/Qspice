@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol V-Source 0&1 Logic Supply
   «type: V»
-  «description: Independent Voltage Source»
+  «description: 1V for 0&1 logic library»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,130) 0 0 0x1000000 -1 -1»

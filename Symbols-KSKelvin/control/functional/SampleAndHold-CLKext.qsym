@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol SampleAndHold-CLKext
   «type: X»
   «description: Sample and Hold with External Clock (ZOH)»
-  «library file: |.subckt SampleAndHold-CLKext IN OUT CLK\nV1 Vss 0 minLVL\nV2 Vdd 0 maxLVL\nE1 OUT 0 N01 0 1\n¥1 Vdd Vss N01 ¥ IN N03 Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH\n¥2 Vdd Vss N03 ¥ CLK N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV4 N02 0 0.5\n.ends SampleAndHold-CLKext»
+  «library file: |.subckt SampleAndHold-CLKext IN OUT CLK\nV1 Vss 0 LL\nV2 Vdd 0 UL\nE1 OUT 0 N03 0 1\n¥2 Vdd Vss N02 ¥ CLK N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV4 N01 0 0.5\n¥1 Vdd Vss N03 ¥ IN N02 Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=-LL\n.ends SampleAndHold-CLKext»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
@@ -20,11 +20,11 @@
   «rect (-200,100) (200,-150) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-300,450) 1 7 2 0x1000000 -1 -1 "SAMPLEANDHOLD-CLKEXT"»
-  «text (-300,-600) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
-  «text (-300,-750) 1 7 0 0x0 -1 -1 "minLVL=<-1>"»
-  «text (-300,-900) 1 7 0 0x0 -1 -1 "maxLVL=<1>"»
+  «text (-300,-900) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
+  «text (-300,-600) 1 7 0 0x0 -1 -1 "LL=<-1>"»
+  «text (-300,-750) 1 7 0 0x0 -1 -1 "UL=<1>"»
   «text (0,0) 1 0 1 0x1000000 -1 -1 "S&H"»
   «pin (-300,0) (0,0) 1 15 0 0x0 -1 "IN"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "OUT"»
-  «pin (-300,-300) (10,5) 0.681 5 0 0x0 -1 "CLK"»
+  «pin (-300,-300) (10,5) 0.794 5 0 0x0 -1 "CLK"»
 »

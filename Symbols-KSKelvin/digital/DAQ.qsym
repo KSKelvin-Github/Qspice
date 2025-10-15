@@ -1,6 +1,7 @@
 ÿØÿÛ«symbol DAQ
   «type: X»
-  «library file: |.subckt DAQ IN CLK ADsampled ADdec DAVo DAIo\n¥1 Vdd Vss ADsampled ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH TTOL=ttol\nV2 Vdd 0 maxlevel\nV3 Vss 0 minlevel\nB2 DAVo 0 V=QuantAnalog(V(ADdec))\nB3 ADdec 0 V=QuantDigital(V(ADSampled))\nB1 0 DAIo I=limit(v2i*V(DAVo),-Imax,Imax)\nR1 DAIo 0 Rout\n.func QuantDigital(x) round((x-minlevel)/(maxlevel-minlevel)*(2^bits-1-midtread))\n.func QuantAnalog(x) minlevel+x/(2^bits-1-midtread)*(maxlevel-minlevel)\n.ends DAQ»
+  «description: Data Acquistion Unit»
+  «library file: |.subckt DAQ IN CLK ADsampled ADdec DAVo DAIo\n¥1 Vdd Vss ADsampled ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH TTOL=ttol IC=-minlevel\nV2 Vdd 0 maxlevel\nV3 Vss 0 minlevel\nB2 DAVo 0 V=QuantAnalog(V(ADdec))\nB3 ADdec 0 V=QuantDigital(V(ADSampled))\nB1 0 DAIo I=limit(v2i*V(DAVo),-Imax,Imax)\nR1 DAIo 0 Rout\n.func QuantDigital(x) round((x-minlevel)/(maxlevel-minlevel)*(2^bits-1-midtread))\n.func QuantAnalog(x) minlevel+x/(2^bits-1-midtread)*(maxlevel-minlevel)\n.ends DAQ»
   «shorted pins: false»
   «line (2100,-200) (1700,-200) 0 0 0x1000000 -1 -1»
   «line (-900,400) (-1100,200) 0 0 0x1000000 -1 -1»

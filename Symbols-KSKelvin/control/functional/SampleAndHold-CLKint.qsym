@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol SampleAndHold-CLKint
   «type: X»
   «description: Sample and Hold with Internal Clock (ZOH)»
-  «library file: |.subckt SampleAndHold-CLKint IN OUT CLKref\nV1 Vss 0 minLVL\nV2 Vdd 0 maxLVL\nE1 OUT 0 N01 0 1\nVclk CLK 0 pulse minLVL maxLVL 0 0 0 1/fsample*.1 1/fsample\n¥1 Vdd Vss N01 ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH\n¥2 v1p 0 CLKref ¥ CLK N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB1 N02 0 V=(maxLVL+minLVL)/2\nV3 v1p 0 1\n.ends SampleAndHold-CLKint»
+  «library file: |.subckt SampleAndHold-CLKint IN OUT CLKref\nV1 Vss 0 LL\nV2 Vdd 0 UL\nE1 OUT 0 N02 0 1\nVclk CLK 0 pulse LL UL 0 0 0 1/fsample*.1 1/fsample\n¥2 v1p 0 CLKref ¥ CLK N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB1 N01 0 V=(LL+UL)/2\nV3 v1p 0 1\n¥1 Vdd Vss N02 ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=-LL\n.ends SampleAndHold-CLKint»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
@@ -21,12 +21,12 @@
   «ellipse (-270,-200) (-70,-400) 0 0 0 0x1000000 0x1000000 -1 -1»
   «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-300,450) 1 7 2 0x1000000 -1 -1 "SAMPLEANDHOLD-CLKINT"»
-  «text (-300,-600) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
-  «text (-300,-750) 1 7 0 0x0 -1 -1 "minLVL=<-1>"»
-  «text (-300,-900) 1 7 0 0x0 -1 -1 "maxLVL=<1>"»
-  «text (-300,-1050) 1 7 0 0x0 -1 -1 "fsample=<1k>"»
+  «text (-300,-1050) 1 7 0 0x0 -1 -1 "ttol=<1n>"»
+  «text (-300,-750) 1 7 0 0x0 -1 -1 "LL=<-1>"»
+  «text (-300,-900) 1 7 0 0x0 -1 -1 "UL=<1>"»
+  «text (-300,-600) 1 7 0 0x0 -1 -1 "fsample=<1k>"»
   «text (0,0) 1 0 1 0x1000000 -1 -1 "S&H"»
   «pin (-300,0) (0,0) 1 15 0 0x0 -1 "IN"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "OUT"»
-  «pin (300,-300) (-10,-5) 0.681 9 0 0x0 -1 "CLKref"»
+  «pin (300,-300) (-10,-5) 0.794 9 0 0x0 -1 "CLKref"»
 »

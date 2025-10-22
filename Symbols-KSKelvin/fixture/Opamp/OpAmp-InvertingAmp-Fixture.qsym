@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol OpAmp-OpenLoopGain-Fixture
+ÿØÿÛ«symbol OpAmp-InvertingAmp-Fixture
   «type: X»
-  «description: Opamp Open Loop Gain Fixture (.AC)»
-  «library file: |.subckt OpAmp-OpenLoopGain-Fixture IN- IN+ OUT Vdd Vss OUTiso\nV2 Vdd 0 Vdd\nV3 Vss 0 Vss\nR1 IN IN- 1T AC 1\nR2 IN- OUT 1 AC 1T\nV1 IN 0 AC 1 DC 0\nR3 OUT 0 Rload\nVdummy 0 IN+ 0\nE1 OUTiso 0 OUT 0 1\n.ends OpAmp-OpenLoopGain-Fixture»
+  «description: Opamp Inverting Amplifier Fixture»
+  «library file: |.subckt OpAmp-InvertingAmp-Fixture IN- IN+ OUT Vdd Vss OUTiso IN\nV2 Vdd 0 Vdd\nV3 Vss 0 Vss\nR3 OUT 0 Rload\nR1 IN IN- 10K\nR2 IN- OUT 10K*Gain\nV1 IN 0 SIN 0 100m 1K 0 0 0 0 AC=1\nVdummy IN+ 0 0\nE1 OUTiso 0 OUT 0 1\n.ends OpAmp-InvertingAmp-Fixture»
   «shorted pins: false»
   «line (1300,-220) (1300,850) 0 0 0x1000000 -1 -1»
   «line (1300,-580) (1300,-700) 0 0 0x1000000 -1 -1»
@@ -9,7 +9,7 @@
   «line (280,850) (1300,850) 0 0 0x1000000 -1 -1»
   «line (-1400,850) (-1230,850) 0 0 0x1000000 -1 -1»
   «line (-1400,370) (-1400,300) 0 0 0x1000000 -1 -1»
-  «line (-1400,850) (-1400,630) 0 0 0x1000000 -1 -1»
+  «line (-1400,630) (-1400,1100) 0 0 0x1000000 -1 -1»
   «line (-700,100) (-700,850) 0 0 0x1000000 -1 -1»
   «line (900,-100) (1600,-100) 0 0 0x1000000 -1 -1»
   «line (-600,-300) (-950,-300) 0 0 0x1000000 -1 -1»
@@ -46,6 +46,7 @@
   «ellipse (1260,-55) (1340,-135) 0 0 0 0x1000000 0xff0012 -1 -1»
   «ellipse (220,470) (480,730) 0 0 0 0x1000000 0x1000000 -1 -1»
   «ellipse (220,-930) (480,-670) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-1440,895) (-1360,815) 0 0 0 0x1000000 0xff0012 -1 -1»
   «triangle (-1480,300) (-1320,300) (-1400,220) 0 0 0x1000000 0x2000000 -1 -1»
   «triangle (-950,-220) (-950,-380) (-1030,-300) 0 0 0x1000000 0x2000000 -1 -1»
   «triangle (1220,-700) (1380,-700) (1300,-780) 0 0 0x1000000 0x2000000 -1 -1»
@@ -54,21 +55,23 @@
   «zigzag (1220,-220) (1380,-580) 0 0 0 0x1000000 -1 -1»
   «zigzag (-80,770) (280,930) 0 0 0 0x1000000 -1 -1»
   «zigzag (-1230,770) (-870,930) 0 0 0 0x1000000 -1 -1»
-  «text (-1600,1350) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-1600,1200) 1 7 0 0x1000000 -1 -1 "OPAMP-OPENLOOPGAIN-FIXTURE"»
+  «text (1600,1350) 1 11 0 0x1000000 -1 -1 "X1"»
+  «text (1600,1200) 1 11 0 0x1000000 -1 -1 "OPAMP-INVERTINGAMP-FIXTURE"»
   «text (-1600,-1100) 1 7 0 0x0 -1 -1 "Rload=<2k>"»
   «text (-1600,-1250) 1 7 0 0x0 -1 -1 "Vdd=<5>"»
   «text (-1600,-1400) 1 7 0 0x0 -1 -1 "Vss=<-5>"»
-  «text (100,1000) 1 0 1 0x1000000 -1 -1 "DC 1 AC 1T"»
-  «text (-1050,1000) 1 0 1 0x1000000 -1 -1 "DC 1T AC 1"»
-  «text (-1100,450) 1 0 1 0x1000000 -1 -1 "AC 1"»
-  «text (-1100,600) 1 0 1 0x1000000 -1 -1 "DC 0"»
+  «text (-1600,-1550) 1 7 0 0x0 -1 -1 "Gain=<1>"»
+  «text (100,1000) 1 0 1 0x1000000 -1 -1 "10K*Gain"»
+  «text (-1050,1000) 1 0 1 0x1000000 -1 -1 "10K"»
+  «text (-1050,350) 1 0 1 0x1000000 -1 -1 "AC 1"»
   «text (1500,-406) 1 111 1 0x1000000 -1 -1 "Rload"»
-  «text (-800,-900) 1 15 1 0xff00ff -1 -1 ".AC analysis template"»
+  «text (-1050,500) 1 0 1 0x1000000 -1 -1 "1K"»
+  «text (-1050,650) 1 0 1 0x1000000 -1 -1 "100mV"»
   «pin (-600,100) (-20,0) 1 9 0 0x0 -1 "IN-"»
   «pin (-600,-300) (0,0) 1 9 0 0x0 -1 "IN+"»
   «pin (900,-100) (20,0) 1 6 0 0x0 -1 "OUT"»
   «pin (100,500) (-20,0) 1 10 0 0x0 -1 "Vdd"»
   «pin (100,-700) (-20,0) 1 9 0 0x0 -1 "Vss"»
   «pin (1600,-100) (0,0) 1 0 0 0x0 -1 "OUTiso"»
+  «pin (-1400,1100) (20,0) 1 15 0 0x0 -1 "IN"»
 »

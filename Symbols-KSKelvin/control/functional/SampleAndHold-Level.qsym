@@ -1,0 +1,31 @@
+ÿØÿÛ«symbol SampleAndHold-Level
+  «type: X»
+  «description: Sample and Hold (ZOH) with Logic Level Trigger»
+  «library file: |.subckt SampleAndHold-Level IN Logic OUT\nS1 N01 Chold Logic 0 SWi TTOL=ttol\nC1 Chold 0 Chold\nE1 N01 0 IN 0 1\nE2 OUT 0 Chold 0 1\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0\n.ends SampleAndHold-Level»
+  «shorted pins: false»
+  «line (-200,200) (-150,200) 0 0 0x1000000 -1 -1»
+  «line (-150,200) (-50,250) 0 0 0x1000000 -1 -1»
+  «line (-50,200) (200,200) 0 0 0x1000000 -1 -1»
+  «line (50,200) (50,100) 0 0 0x1000000 -1 -1»
+  «line (50,55) (50,-20) 0 0 0x1000000 -1 -1»
+  «line (-400,200) (-500,200) 0 0 0x1000000 -1 -1»
+  «line (500,200) (400,200) 0 0 0x1000000 -1 -1»
+  «line (-100,-200) (-100,150) 0 1 0x1000000 -1 -1»
+  «line (-100,-200) (-500,-200) 0 1 0x1000000 -1 -1»
+  «rect (-500,400) (500,-300) 0 0 0 0x1000000 0xf5d796 -1 0 -1»
+  «rect (-30,100) (130,95) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-30,60) (130,55) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (25,225) (75,175) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (-400,350) (-400,50) (-200,200) 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (200,350) (200,50) (400,200) 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (10,-20) (90,-20) (50,-60) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-500,500) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,650) 1 7 2 0x1000000 -1 -1 "SAMPLEANDHOLD-LEVEL"»
+  «text (-500,-400) 1 7 0 0x0 -1 -1 "Ron=<1>"»
+  «text (-500,-550) 1 7 0 0x0 -1 -1 "Roff=<1G>"»
+  «text (-500,-700) 1 7 0 0x0 -1 -1 "Chold=<100p> ; higher value at lower sampling frequency"»
+  «text (-500,-850) 1 7 0 0x0 -1 -1 "ttol=<1u>"»
+  «pin (-500,200) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (-500,-200) (0,0) 1 15 0 0x0 -1 "Logic"»
+  «pin (500,200) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

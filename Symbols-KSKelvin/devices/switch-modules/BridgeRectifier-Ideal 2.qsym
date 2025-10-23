@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol BridgeRectifier-Ideal 2
   «type: X»
   «description: Bridge Rectifier (Ideal)»
-  «library file: |.subckt BridgeRectifier-Ideal DC+ DC- AC+ AC-\nD1 AC+ DC+ D\nD2 AC- DC+ D\nD3 DC- AC+ D\nD4 DC- AC- D\n.model D D Ron=1m Roff=10Meg Vfwd=Vfwd\n.ends BridgeRectifier-Ideal»
+  «library file: |.subckt BridgeRectifier-Ideal AC+ AC- DC+ DC-\nD1 AC+ DC+ Db\nD2 AC- DC+ Db\nD3 DC- AC+ Db\nD4 DC- AC- Db\n.model Db D Ron=Ron Roff=Roff Vfwd=Vfwd Epsilon=Epsilon\n.ends BridgeRectifier-Ideal»
   «shorted pins: false»
   «line (250,0) (350,0) 0 0 0x1000000 -1 -1»
   «line (300,50) (300,-50) 0 0 0x1000000 -1 -1»
@@ -22,15 +22,18 @@
   «arc3p (0,270) (80,270) (40,270) 0 0 0x1000000 -1 -1»
   «arc3p (0,-260) (-80,-260) (-40,-260) 0 0 0x1000000 -1 -1»
   «arc3p (0,-260) (80,-260) (40,-260) 0 0 0x1000000 -1 -1»
-  «triangle (215,285) (115,185) (240,160) 0 0 0x1000000 0xf5d29b -1 -1»
-  «triangle (-185,-115) (-285,-215) (-160,-240) 0 0 0x1000000 0xf5d29b -1 -1»
-  «triangle (115,-185) (215,-285) (240,-160) 0 0 0x1000000 0xf5d29b -1 -1»
-  «triangle (-285,215) (-185,115) (-160,240) 0 0 0x1000000 0xf5d29b -1 -1»
+  «triangle (215,285) (115,185) (240,160) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «triangle (-185,-115) (-285,-215) (-160,-240) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «triangle (115,-185) (215,-285) (240,-160) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «triangle (-285,215) (-185,115) (-160,240) 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-250,350) 1 11 0 0x1000000 -1 -1 "X1"»
   «text (0,500) 1 0 2 0x1000000 -1 -1 "BRIDGERECTIFIER-IDEAL"»
   «text (-100,-400) 1 11 0 0x0 -1 -1 "Vfwd=<0>"»
-  «pin (400,0) (0,0) 1 15 0 0x0 -1 "DC+"»
-  «pin (-400,0) (20,0) 1 15 0 0x0 -1 "DC-"»
+  «text (-100,-550) 1 11 2 0x1000000 -1 -1 "Ron=<1m>"»
+  «text (-100,-700) 1 11 2 0x1000000 -1 -1 "Roff=<10Meg>"»
+  «text (-100,-850) 1 11 2 0x1000000 -1 -1 "Epsilon=<0>"»
   «pin (0,400) (0,0) 1 15 0 0x0 -1 "AC+"»
   «pin (0,-400) (-20,0) 1 15 0 0x0 -1 "AC-"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "DC+"»
+  «pin (-400,0) (20,0) 1 15 0 0x0 -1 "DC-"»
 »

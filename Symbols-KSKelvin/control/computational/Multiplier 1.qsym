@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Multiplier
+ÿØÿÛ«symbol Multiplier 1
   «type: X»
   «description: Multiplier»
   «library file: |.subckt multiplier in1 in2 out\nB1 out 0 V=V(in1)*V(in2)\n.ends multiplier»
@@ -7,7 +7,7 @@
   «line (80,80) (-80,-80) 0 0 0x1000000 -1 -1»
   «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
   «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
-  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
   «text (-200,300) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (50,300) 1 7 2 0x1000000 -1 -1 "MULTIPLIER"»
   «pin (-200,100) (0,0) 1 15 0 0x0 -1 "in1"»

@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol .option - bode with constant amplitude
+ÿØÿÛ«symbol .option - timestep too samll
   «type: .»
   «description: Options»
   «shorted pins: false»
@@ -15,33 +15,27 @@
   «line (-625,120) (-625,170) 0 0 0x1000000 -1 -1»
   «line (-690,60) (-690,-40) 0 0 0x1000000 -1 -1»
   «line (-610,-40) (-610,60) 0 0 0x1000000 -1 -1»
+  «line (-750,-200) (-800,-250) 0 0 0x1000000 -1 -1»
+  «line (-800,-250) (-800,-1400) 0 0 0x1000000 -1 -1»
+  «line (-800,-1400) (-750,-1450) 0 0 0x1000000 -1 -1»
   «line (600,600) (650,550) 0 0 0x1000000 -1 -1»
-  «line (800,100) (800,650) 0 0 0x1000000 -1 -1»
-  «line (800,650) (750,550) 0 0 0x1000000 -1 -1»
-  «line (800,650) (850,550) 0 0 0x1000000 -1 -1»
-  «line (800,100) (1600,100) 0 0 0x1000000 -1 -1»
-  «line (1600,100) (1500,150) 0 0 0x1000000 -1 -1»
-  «line (1600,100) (1500,50) 0 0 0x1000000 -1 -1»
-  «line (900,400) (1500,400) 0 0 0x1000000 -1 -1»
-  «line (1700,850) (1750,800) 0 0 0x1000000 -1 -1»
-  «line (1750,800) (1750,-150) 0 0 0x1000000 -1 -1»
-  «line (1750,-150) (1700,-100) 0 0 0x1000000 -1 -1»
-  «line (1750,-150) (750,-150) 0 0 0x1000000 -1 -1»
-  «line (750,-150) (700,-100) 0 0 0x1000000 -1 -1»
   «rect (-800,200) (600,-100) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «rect (-400,400) (600,200) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «rect (-200,600) (600,400) 0 0 0 0x1000000 0x1000000 -1 0 -1»
-  «rect (700,850) (1700,-100) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «arc3p (-675,170) (-625,170) (-650,110) 0 0 0x1000000 -1 -1»
   «arc3p (-690,-40) (-610,-40) (-650,-30) 0 0 0x1000000 -1 -1»
   «triangle (600,-100) (600,20) (480,-100) 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-800,300) 1 7 0 0x0 -1 -1 ".opt"»
-  «text (-700,-250) 1 7 0 0x0 -1 -1 "BodeInput=<{NodeName}> ;input node"»
-  «text (-700,-400) 1 7 0 0x0 -1 -1 "BodeOutput=<{NodeName}> ;output node"»
-  «text (-700,-550) 1 7 0 0x0 -1 -1 "BodeAmpFreq=<0> ;Constant amplitude"»
+  «text (-700,-1450) 1 7 1 0x1000000 -1 -1 "Reltol=<0.001> ; Relative Error Tolerance"»
+  «text (-700,-850) 1 7 1 0x1000000 -1 -1 "Gshunt=<1p> ; Conductance added between each node and ground"»
+  «text (-700,-1000) 1 7 1 0x1000000 -1 -1 "Cshunt=<1p> ; Capacitance added between each node and ground"»
+  «text (-700,-1150) 1 7 1 0x1000000 -1 -1 "ITL4=<1000> ; Transient analysis iteration limit"»
+  «text (-700,-1300) 1 7 1 0x1000000 -1 -1 "maxstep=<value> ; Maximum timestep size"»
+  «text (-700,-550) 1 7 1 0x1000000 -1 -1 "Trtol=<7> ; Truncation error overestimation factor"»
+  «text (-700,-400) 1 7 0 0x0 -1 -1 "Fastmath=<int[0:1](0)> ; Preferred 64 bits (1) or 80 bits solver"»
+  «text (-700,-700) 1 7 1 0x1000000 -1 -1 "Method=<gear> ; Trapezoidal(trap) / Gear(gear)"»
+  «text (-700,-250) 1 7 1 0x1000000 -1 -1 "Timestep too small verify sequence"»
   «text (50,50) 1.36 0 1 0x1000000 -1 -1 "Options"»
-  «text (100,300) 0.857 15 1 0x1000000 -1 -1 "Constant AMP"»
-  «text (150,500) 0.857 15 1 0x1000000 -1 -1 ".bode"»
-  «text (1150,0) 1 0 1 0x1000000 -1 -1 "pert freq"»
-  «text (1050,750) 1 0 1 0x1000000 -1 -1 "pert amp"»
+  «text (100,300) 0.857 15 1 0x1000000 -1 -1 "Convergence"»
+  «text (200,500) 0.857 15 1 0x1000000 -1 -1 "Qspice"»
 »

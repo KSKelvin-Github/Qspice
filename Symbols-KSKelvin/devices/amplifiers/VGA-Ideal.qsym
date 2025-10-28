@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol VGA-Ideal
+  «type: X»
+  «description: Variable Gain Amplifier (VGA) - Ideal»
+  «library file: |.subckt VGA-Ideal IN+ IN- Gain OUT\nB1 OUT 0 V=if(UnitsDB==0,V(Gain)*V(IN+,IN-),10^(V(Gain)/20)*V(IN+,IN-))\nR1 Gain 0 1G\n.ends VGA-Ideal»
+  «shorted pins: false»
+  «line (100,-400) (100,-230) 0 0 0x1000000 -1 -1»
+  «rect (-150,203) (-55,197) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-103,155) (-97,250) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-150,-197) (-55,-203) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «triangle (-200,450) (-200,-450) (400,0) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (50,396) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (100,700) 1 0 2 0x1000000 -1 -1 "VGA-IDEAL"»
+  «text (50,0) 1 0 1 0x1000000 -1 -1 "VGA"»
+  «text (150,550) 1 0 0 0x0 -1 -1 "UnitsDB=<0>; 0 is Linear, 1 is dB"»
+  «pin (-200,200) (0,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (-200,-200) (20,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (100,-400) (20,0) 1 6 0 0x0 -1 "Gain"»
+  «pin (400,0) (-20,0) 1 15 0 0x0 -1 "OUT"»
+»

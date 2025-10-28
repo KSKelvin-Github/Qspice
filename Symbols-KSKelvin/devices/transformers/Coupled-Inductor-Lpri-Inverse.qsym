@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol Coupled-Inductor2
+ÿØÿÛ«symbol Coupled-Inductor-Lpri-Inverse
   «type: X»
-  «description: Coupled Inductor»
+  «description: Coupled Inductor (K Lp N)»
   «library file: |.subckt Coupled-Inductor p+ p- s+ s-\nL1 p+ p- Lp\nL2 s+ s- Ls\nK1 L1 L2 Kcoup\n.param Ls=Lp/N/N\n.ends Coupled-Inductor»
   «shorted pins: false»
   «line (-200,200) (-200,180) 0 0 0x1000000 -1 -1»

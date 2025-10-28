@@ -1,0 +1,53 @@
+ÿØÿÛ«symbol Harmonics-Vsrc
+  «type: X»
+  «description: Harmonics Source»
+  «library file: |.subckt Harmonics-Vsrc + -\nV1 + N01 sin Voffset A1 FundamentalFreq Tdelay 0 Ph1\nV2 N01 N02 sin 0 A2 FundamentalFreq*2 Tdelay 0 Ph2\nV3 N02 N03 sin 0 A3 FundamentalFreq*3 Tdelay 0 Ph3\nV4 N03 N04 sin 0 A4 FundamentalFreq*4 Tdelay 0 Ph4\nV5 N04 N05 sin 0 A5 FundamentalFreq*5 Tdelay 0 Ph5\nV6 N05 N06 sin 0 A6 FundamentalFreq*6 Tdelay 0 Ph6\nV7 N06 N07 sin 0 A7 FundamentalFreq*7 Tdelay 0 Ph7\nV8 N07 N08 sin 0 A8 FundamentalFreq*8 Tdelay 0 Ph8\nV9 N08 - sin 0 A9 FundamentalFreq*9 Tdelay 0 Ph9\n.ends Harmonics-Vsrc»
+  «shorted pins: false»
+  «rect (-400,-200) (200,400) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «arc3p (-300,250) (-350,100) (50,-100) 0 0 0x1000000 -1 -1»
+  «arc3p (-250,250) (-300,250) (-275,240) 0 0 0x1000000 -1 -1»
+  «arc3p (-250,250) (-200,250) (-225,260) 0 0 0x1000000 -1 -1»
+  «arc3p (-150,250) (-200,250) (-175,240) 0 0 0x1000000 -1 -1»
+  «arc3p (-100,100) (-150,250) (-500,-100) 0 0 0x1000000 -1 -1»
+  «arc3p (100,-50) (150,100) (-250,300) 0 0 0x1000000 -1 -1»
+  «arc3p (50,-50) (100,-50) (75,-40) 0 0 0x1000000 -1 -1»
+  «arc3p (50,-50) (0,-50) (25,-60) 0 0 0x1000000 -1 -1»
+  «arc3p (-50,-50) (0,-50) (-25,-40) 0 0 0x1000000 -1 -1»
+  «arc3p (-100,100) (-50,-50) (300,300) 0 0 0x1000000 -1 -1»
+  «text (-350,-100) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (950,100) 1 0 2 0x1000000 -1 -1 "HARMONICS-VSRC"»
+  «text (-1881,650) 1 7 0 0x0 -1 -1 "FundamentalFreq=<1k>"»
+  «text (-1877,350) 1 7 0 0x0 -1 -1 "A1=<4/pi>"»
+  «text (-1077,350) 1 7 0 0x0 -1 -1 "Ph1=<0>"»
+  «text (-1877,200) 1 7 0 0x0 -1 -1 "A2=<0>"»
+  «text (-1077,200) 1 7 0 0x0 -1 -1 "Ph2=<0>"»
+  «text (-1877,50) 1 7 0 0x0 -1 -1 "A3=<4/3/pi>"»
+  «text (-1077,50) 1 7 0 0x0 -1 -1 "Ph3=<0>"»
+  «text (-1877,-100) 1 7 0 0x0 -1 -1 "A4=<0>"»
+  «text (-1077,-100) 1 7 0 0x0 -1 -1 "Ph4=<0>"»
+  «text (-1877,-250) 1 7 0 0x0 -1 -1 "A5=<4/5/pi>"»
+  «text (-1077,-250) 1 7 0 0x0 -1 -1 "Ph5=<0>"»
+  «text (-1877,-400) 1 7 0 0x0 -1 -1 "A6=<0>"»
+  «text (-1077,-400) 1 7 0 0x0 -1 -1 "Ph6=<0>"»
+  «text (-1877,-550) 1 7 0 0x0 -1 -1 "A7=<4/7/pi>"»
+  «text (-1077,-550) 1 7 0 0x0 -1 -1 "Ph7=<0>"»
+  «text (-1877,-700) 1 7 0 0x0 -1 -1 "A8=<0>"»
+  «text (-1077,-700) 1 7 0 0x0 -1 -1 "Ph8=<0>"»
+  «text (-1877,-850) 1 7 0 0x0 -1 -1 "A9=<4/9/pi>"»
+  «text (-1077,-850) 1 7 0 0x0 -1 -1 "Ph9=<0>"»
+  «text (-1877,500) 1 7 1 0x1000000 -1 -1 "Amp"»
+  «text (-1077,500) 1 7 1 0x1000000 -1 -1 "Phase"»
+  «text (-1950,350) 1 11 1 0x1000000 -1 -1 "Fundamental"»
+  «text (-1950,200) 1 11 1 0x1000000 -1 -1 "2nd harmonic"»
+  «text (-1950,50) 1 11 1 0x1000000 -1 -1 "3rd harmonic"»
+  «text (-1950,-100) 1 11 1 0x1000000 -1 -1 "4th harmonic"»
+  «text (-1950,-250) 1 11 1 0x1000000 -1 -1 "5th harmonic"»
+  «text (-1950,-400) 1 11 1 0x1000000 -1 -1 "6th harmonic"»
+  «text (-1950,-550) 1 11 1 0x1000000 -1 -1 "7th harmonic"»
+  «text (-1950,-700) 1 11 1 0x1000000 -1 -1 "8th harmonic"»
+  «text (-1950,-850) 1 11 1 0x1000000 -1 -1 "9th harmonic"»
+  «text (-1881,800) 1 7 0 0x0 -1 -1 "Tdelay=<0>"»
+  «text (-1881,950) 1 7 0 0x0 -1 -1 "Voffset=<0>"»
+  «pin (-100,400) (0,30) 1 13 0 0x0 -1 "+"»
+  «pin (-100,-200) (0,-20) 1 14 0 0x0 -1 "-"»
+»

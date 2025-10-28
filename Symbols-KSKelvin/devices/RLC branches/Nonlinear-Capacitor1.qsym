@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Nonlinear-Capacitor1
+  «type: X»
+  «description: Nonlinear Capacitor»
+  «library file: |.subckt Nonlinear-Capacitor + -\nC1 + - C0 Vsat=V1 Csat=Csat SATFRAC=C1/C0\n.ends Nonlinear-Capacitor»
+  «shorted pins: false»
+  «line (0,200) (0,40) 0 0 0x1000000 -1 -1»
+  «line (0,-40) (0,-200) 0 0 0x1000000 -1 -1»
+  «rect (-130,-40) (130,-30) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-130,30) (130,40) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «text (-350,-2) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "NONLINEAR-CAPACITOR"»
+  «text (850,150) 1 11 0 0x1000000 -1 -1 "C0=<1u>"»
+  «text (850,0) 1 11 0 0x1000000 -1 -1 "C1=<0.5u>"»
+  «text (1030,0) 1 7 0 0x1000000 -1 -1 "V1=<1>"»
+  «text (850,-150) 1 11 0 0x1000000 -1 -1 "Csat=<0.1u>"»
+  «text (880,150) 1 7 1 0x1000000 -1 -1 "@V0=0"»
+  «text (880,-150) 1 7 1 0x1000000 -1 -1 "@Vsat=INF"»
+  «text (880,0) 1 7 1 0x1000000 -1 -1 "@"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "-"»
+»

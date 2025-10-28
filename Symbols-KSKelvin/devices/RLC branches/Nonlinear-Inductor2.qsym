@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol Nonlinear-Inductor2
+  «type: X»
+  «description: Nonlinear Inductor / Saturation Inductor»
+  «library file: |.subckt Nonlinear-Inductor + -\nL1 + - L0 Isat=I1 Lsat=Lsat SATFRAC=L1/L0\n.ends Nonlinear-Inductor»
+  «shorted pins: false»
+  «line (-200,0) (-180,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (180,0) 0 0 0x1000000 -1 -1»
+  «line (-200,100) (-100,100) 0 0 0x1000000 -1 -1»
+  «line (-100,100) (100,-100) 0 0 0x1000000 -1 -1»
+  «line (100,-100) (200,-100) 0 0 0x1000000 -1 -1»
+  «coil (180,-60) (-180,60) 0 0 0 0x1000000 -1 -1»
+  «text (0,200) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 15 2 0x1000000 -1 -1 "NONLINEAR-INDUCTOR"»
+  «text (0,-200) 1 11 0 0x1000000 -1 -1 "L0=<1u>"»
+  «text (0,-350) 1 11 0 0x1000000 -1 -1 "L1=<0.5u>"»
+  «text (170,-350) 1 7 0 0x1000000 -1 -1 "I1=<1>"»
+  «text (0,-500) 1 11 0 0x1000000 -1 -1 "Lsat=<0.1u>"»
+  «text (30,-200) 1 7 1 0x1000000 -1 -1 "@I0=0"»
+  «text (30,-500) 1 7 1 0x1000000 -1 -1 "@Isat=INF"»
+  «text (30,-350) 1 7 1 0x1000000 -1 -1 "@"»
+  «pin (-200,0) (0,0) 1 47 0 0x0 -1 "+"»
+  «pin (200,0) (0,0) 1 47 0 0x0 -1 "-"»
+»

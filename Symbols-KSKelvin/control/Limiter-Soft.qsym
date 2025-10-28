@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Limiter-Soft
+  «type: X»
+  «description: Limiter - Soft Limit»
+  «library file: |.subckt Limiter-Soft in out\nB2 out 0 V=ulim(dlim(V(in),LL,z),UL,z)\n.param z=(UL-LL)*percentage/100\n.ends Limiter-Soft»
+  «shorted pins: false»
+  «line (140,100) (200,100) 0 0 0x1000000 -1 -1»
+  «line (85,70) (15,-70) 0 0 0x1000000 -1 -1»
+  «line (-40,-100) (-100,-100) 0 0 0x1000000 -1 -1»
+  «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «arc3p (140,100) (85,70) (140,40) 0 0 0x1000000 -1 -1»
+  «arc3p (-40,-100) (15,-70) (-40,-40) 0 0 0x1000000 -1 -1»
+  «text (-200,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (50,300) 1 7 2 0x1000000 -1 -1 "LIMITER-SOFT"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "UL=<1>"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "LL=<-1>"»
+  «text (-200,-600) 1 7 2 0x1000000 -1 -1 "percentage=10"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

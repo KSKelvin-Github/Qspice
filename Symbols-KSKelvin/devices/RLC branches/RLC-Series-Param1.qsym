@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol RLC-Series-Param1
+  «type: X»
+  «description: Series LCR»
+  «library file: |.subckt RLC-Series-Param1 1 2\nR1 1 N01 R\nL1 N01 N02 L\nC1 N02 2 C\n.param omega0=1/sqrt(L*C)\n.param f0=1/2/pi/sqrt(L*C)\n.param BW=R/2/pi/L\n.ends RLC-Series-Param1»
+  «shorted pins: false»
+  «line (0,-400) (0,-300) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (0,-20) 0 0 0x1000000 -1 -1»
+  «line (0,100) (0,25) 0 0 0x1000000 -1 -1»
+  «line (0,300) (0,400) 0 0 0x1000000 -1 -1»
+  «rect (-75,25) (80,20) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-75,-15) (80,-20) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «coil (-50,300) (50,100) 0 0 0 0x1000000 -1 -1»
+  «zigzag (-50,-100) (50,-300) 0 0 0 0x1000000 -1 -1»
+  «text (100,400) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,550) 1 0 2 0x1000000 -1 -1 "RLC-SERIES-PARAM1"»
+  «text (100,-200) 1 7 0 0x0 -1 -1 "R=<1>"»
+  «text (100,200) 1 7 0 0x0 -1 -1 "L=<1u>"»
+  «text (100,0) 1 7 0 0x0 -1 -1 "C=<1u>"»
+  «pin (0,400) (0,0) 1 15 0 0x0 -1 "1"»
+  «pin (0,-400) (0,0) 1 15 0 0x0 -1 "2"»
+»

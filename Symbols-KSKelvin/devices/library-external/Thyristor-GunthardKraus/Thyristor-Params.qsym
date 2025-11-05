@@ -1,0 +1,29 @@
+ÿØÿÛ«symbol Thyristor-Params
+  «type: X»
+  «description: Thyristor/SCR Marcomodel»
+  «library file: |.subckt Scr anode gate cathode\nScr anode anode0 control 0 Vswitch\nDak1 anode0 anode2 Dakfwd OFF\nDka cathode anode0 Dkarev OFF\nVIak anode2 cathode 0\nEmon dvdt0 0 TABLE {v(anode,cathode)} (0 0) (2000 2000)\nCdVdt dvdt0 dvdt1 100pfd\nRdlay dvdt1 dvdt2 1k\nVdVdt dvdt2 cathode DC 0.0\nEdVdt condvdt 0 TABLE {i(vdVdt)-100p*dVdt} (0 0 ) (.1m 10)\nRdVdt condvdt 0 1meg\nRseries gate gate1 {(Vgt-0.65)/Igt}\nRshunt gate1 gate2 {0.65/Igt}\nDgkf gate1 gate2 Dgk\nVIgf gate2 cathode 0\nEgate1 gate4 0 TABLE {i(Vigf)-0.95*Igt} (0 0) (1m 10)\nRgate1 gate4 0 1meg\nEgon1 congate 0 TABLE {v(gate4)*v(anode,cathode)} (0 0) (10 10)\nRgon1 congate 0 1meg\nEItot Itot 0 TABLE {i(VIak)+5E-5*i(VIgf)/Igt} (0 0) (2000 2000)\nRItot Itot 0 1meg\nEprod prod 0 TABLE {v(anode,cathode)*v(Itot)} (0 0) (10 10)\nRprod prod 0 1meg\nElin conmain 0 TABLE {10*(v(prod) - (Vtm*Ih))/(Vtm*Ih)} (0 0) (2 10)\nRlin conmain 0 1meg\nEonoff contot 0 TABLE {v(congate)+v(conmain)+v(condvdt)} (0 0) (10 10)\nRton contot dlay1 825\nDton dlay1 control Delay\nRtoff contot dlay2 {290*Toff/Ton}\nDtoff control dlay2 Delay\nCton control 0 {Ton/454}\nDbreak anode break1 Dbreak\nDbreak2 cathode break1 Dseries\n.MODEL Vswitch vswitch (Ron = {(Vtm-0.7)/Itm}, Roff = {Vdrm*Vdrm/(Vtm*Ih)}, Von = 5.0, Voff = 1.5)\n.MODEL Dgk D (Is=1E-16 Cjo=50pf Rs=5)\n.MODEL Dseries D (Is=1E-14)\n.MODEL Delay D (Is=1E-12 Cjo=5pf Rs=0.01)\n.MODEL Dkarev D (Is=1E-10 Cjo=5pf Rs=0.01)\n.MODEL Dakfwd D (Is=4E-11 Cjo=5pf)\n.MODEL Dbreak D (Ibv=1E-7 Bv={1.1*Vrrm} Cjo=5pf Rs=0.5)\nRfloat gate cathode 1e10\n.ends»
+  «shorted pins: false»
+  «line (-100,-80) (100,-80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,70) 0 0 0x1000000 -1 -1»
+  «line (-50,-80) (-100,-200) 0 0 0x1000000 -1 -1»
+  «line (-100,-200) (-200,-200) 0 0 0x1000000 -1 -1»
+  «triangle (0,-80) (-100,70) (100,70) 0 0 0x1000000 0x2000000 -1 -1»
+  «text (175,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (175,0) 1 7 0 0x1000000 -1 -1 "SCR"»
+  «text (175,-150) 1 7 0 0x1000000 -1 -1 "Vdrm=<400> ;Forward breakover voltage"»
+  «text (175,-300) 1 7 0 0x1000000 -1 -1 "Vrrm=<400> ;Reverse breakover voltage"»
+  «text (175,-450) 1 7 0 0x1000000 -1 -1 "Idrm=<10u> ;Peak blocking current"»
+  «text (175,-600) 1 7 0 0x1000000 -1 -1 "Ih=<6m> ;Holding current"»
+  «text (175,-750) 1 7 0 0x1000000 -1 -1 "dVdt=<5e7> ;Critical value for dV/dt triggering"»
+  «text (175,-900) 1 7 0 0x1000000 -1 -1 "Igt=<5m> ;Gate trigger current"»
+  «text (175,-1050) 1 7 0 0x1000000 -1 -1 "Vgt=<0.7> ;Gate trigger voltage"»
+  «text (175,-1200) 1 7 0 0x1000000 -1 -1 "Vtm=<1.7> ;On-state voltage"»
+  «text (175,-1350) 1 7 0 0x1000000 -1 -1 "Itm=<24> ;On-state current"»
+  «text (175,-1500) 1 7 0 0x1000000 -1 -1 "Ton=<1u> ;Turn-on time"»
+  «text (175,-1650) 1 7 0 0x1000000 -1 -1 "Toff=<15u> ;Turn-off time"»
+  «text (175,150) 1 7 1 0x1000000 -1 -1 "<Part Number>"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (-200,-200) (0,0) 1 0 0 0x0 -1 "G"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "K"»
+»

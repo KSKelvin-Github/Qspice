@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Varistor
+  «type: X»
+  «description: Varistor (Equivalent to LTspice A-device Varistor)»
+  «library file: |.subckt varistor V+ V- C+ C-\nD1 N01 V+ Di\nD2 V+ N02 Di\nBminClamp V- N01 V=abs(V(C+,C-))\nBmaxClamp N02 V- V=abs(V(C+,C-))\n.param Rclamp=1\n.model Di D Ron=Rclamp Vfwd=0\n.ends varistor»
+  «shorted pins: false»
+  «line (-100,200) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (100,-150) 0 0 0x1000000 -1 -1»
+  «line (100,-150) (100,-200) 0 0 0x1000000 -1 -1»
+  «line (0,150) (0,200) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (-200,100) (-50,100) 0 0 0x1000000 -1 -1»
+  «line (-200,-100) (-50,-100) 0 0 0x1000000 -1 -1»
+  «rect (-50,150) (50,-150) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,0) 1 7 0 0x1000000 -1 -1 "VARISTOR"»
+  «text (150,-150) 1 7 0 0x1000000 -1 -1 "Rclamp=<1>"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "V+"»
+  «pin (0,-200) (20,0) 1 15 0 0x0 -1 "V-"»
+  «pin (-200,100) (0,0) 1 15 0 0x0 -1 "C+"»
+  «pin (-200,-100) (-20,0) 1 15 0 0x0 -1 "C-"»
+»

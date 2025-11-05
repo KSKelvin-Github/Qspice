@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Optocoupler - subckt AKCE
+ÿØÿÛ«symbol Optocoupler-4pins-subckt
   «type: X»
   «description: Optocoupler-4pins (.subckt A K C E)»
   «shorted pins: false»
@@ -24,8 +24,8 @@
   «triangle (400,-100) (400,-150) (350,-150) 0 0 0x1000000 0x2000000 -1 -1»
   «triangle (170,0) (220,0) (220,50) 0 0 0x1000000 0x2000000 -1 -1»
   «triangle (170,-100) (220,-100) (220,-50) 0 0 0x1000000 0x2000000 -1 -1»
-  «text (-250,660) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-250,500) 1 7 0 0x1000000 -1 -1 "<model>"»
+  «text (-300,660) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,500) 1 7 0 0x1000000 -1 -1 "<model>"»
   «text (-300,-500) 1 7 0 0x0 -1 -1 "<param>"»
   «pin (-300,300) (0,0) 1 15 0 0x0 -1 "A"»
   «pin (-300,-300) (20,0) 1 15 0 0x0 -1 "K"»

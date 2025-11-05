@@ -1,0 +1,12 @@
+ÿØÿÛ«symbol .option for Infineon
+  «type: .»
+  «description: Infineon model - Qspice80.exe (80 bits math)»
+  «shorted pins: false»
+  «line (-500,0) (750,0) 0 0 0x1000000 -1 -1»
+  «line (750,200) (-500,200) 0 0 0x1000000 -1 -1»
+  «ellipse (650,200) (850,0) 0 0 0 0x1000000 0xffe6c8 -1 -1»
+  «arc3p (-500,200) (-500,0) (-500,100) 0 0 0x1000000 -1 -1»
+  «text (-500,100) 1 7 0 0x0 -1 -1 ".option"»
+  «text (-500,-100) 1 7 0 0x0 -1 -1 "fastmath=<0>"»
+  «text (30,100) 1 7 1 0x1000000 -1 -1 "Infineon"»
+»

@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol UC3825
+  «type: X»
+  «description: UC3825 PWM Controller by Valentin Volodin (Qspice Version from KSKelvin)»
+  «library file: |.subckt uc3825 CLK RT CT RAMP EAOUT NI INV SS ILIM VCC 0 VC OUTA OUTB PGND VREF\n¥7 p5v1 0 N038 ¥ N035 N014 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=20n Rout=30\n¥8 p5v1 0 N028 ¥ N027 N014 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=20n Rout=30\n¥9 p5v1 0 N027 ¥ N026 N020 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=20n Rout=30\n¥11 p5v1 0 N020 N034 N038 N040 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=20n Rout=30\n¥12 p5v1 0 N030 ¥ N028 N034 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=20n Rout=30\nG1 VCC 0 VCC 0 table=(0 0,1 0.5m,8 1.5m,9 2.5m,10 22m)\nG2 SS 0 N030 0 49u\nI1 0 SS 9u\n¥3 p5v1 0 ¥ N015 N010 N011 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=20n Rout=30\n¥10 p5v1 0 N023 ¥ N010 N003 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=20n Rout=30\n¥13 p5v1 0 N024 ¥ N003 N011 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=20n Rout=30\n¥14 p5v1 0 N012 ¥ N002 N015 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=20n Rout=30\n¥15 p5v1 0 N025 ¥ N023 N024 N020 N014 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=20n Rout=30\n¥16 p5v1 0 ¥ N019 N012 N025 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=20n Rout=30\n¥17 p5v1 0 N013 ¥ N002 N019 N020 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=20n Rout=30\n¥18 p5v1 0 N016 N008 N008 N013 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP Trise=20n Rout=30\n¥19 p5v1 0 N009 N005 N013 N014 N016 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=400n Rout=30\n¥20 p5v1 0 N021 N022 N008 N013 N014 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=400n Rout=30\n¥21 p5v1 0 N010 ¥ N018 EAOUT p5v1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=20n Rout=30 Vt=0 Vh=0\nV1 N018 RAMP 1.25\nV3 N006 0 3\nF1 0 CT V3 -1\nS1 0 CT N001 0 OSC\n¥2 p5v1 0 ¥ N040 SS ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Ref=0.2 Trise=20n Rout=30\n¥1 p5v1 0 N035 ¥ ILIM ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Ref=1.4 Trise=20n Rout=30\n¥6 p5v1 0 N011 ¥ ILIM ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Ref=1.0 Trise=20n Rout=30\n¥5 p5v1 0 N026 ¥ SS ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Ref=5.0 Trise=20n Rout=30\n¥22 p5v1 0 N001 ¥ CT 0 p5v1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Rout=30 Vt=1.9 Vh=0.9\nXS2 CLK VREF N001 0 LEB\nE3 N029 0 SS 0 1\nD1 EAOUT N029 IDEAL\n¥4 p5v1 0 N045 N014 VCC 0 p5v1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=20n Rout=30 Vt=8.8 Vh=0.4\nI2 CLK 0 400u\nV5 N007 0 2.3\nD4 N007 CLK IDEAL\nD5 N006 RT IDEAL\nXS3 OUTA N004 N005 0 HOUT\nXS4 PGND P001 N009 0 LOUT\nXS5 OUTB N017 N022 0 HOUT\nXS6 PGND P002 N021 0 LOUT\nD3 0 SS Z5_1\nD7 VC N004 IDEAL\nD8 VC N017 IDEAL\nD9 OUTA P001 IDEAL\nD10 OUTB P002 IDEAL\nD11 0 VREF Z5_1\nG3 0 VREF N045 0 10m\nE1 N031 0 NI INV 56234\nE2 N039 0 N033 0 1\nR1 N031 N032 1k\nC1 N032 0 15.9p ic=0\nD2 N041 N036 IDEAL\nV2 0 N041 19080\nD6 N036 N042 IDEAL\nV4 N042 0 19080\nR2 N032 N033 1meg\nC2 N033 0 1.59n ic=0\nV6 N044 0 4.5\nD12 N037 N044 IDEAL\nR3 INV 0 5meg\nR4 NI 0 5meg\nR5 EAOUT N039 500\nV7 N043 0 0.5\nD13 N043 N037 IDEAL\nR6 N032 N036 25\nR7 N033 N037 25\n¥24 p5v1 0 N002 N003 CLK 0 p5v1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Rout=30 Vt=2.8 Vh=0.1\nVLogicPlus1 p5v1 0 5.1\n.MODEL Z5_1 D(Ron=1m Roff=1G Vfwd=0 Vrev=5.1)\n.model OSC SW(Ron=100 Roff=1meg Vt=2.5 Vh=-1.5)\n.subckt LEB + - +C -C Vser=0.6 Ilimit=5m\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nIS1 N003 N002 Ilimit Vsat=100m\nDS1 - N003 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW(Ron=10 Roff=1meg Vt=2.5 Vh=-1.5)\n.ends LEB\n.MODEL IDEAL D(Ron=1m Roff=1G Vfwd=0)\n.subckt HOUT + - +C -C Vser=1.4 Ilimit=2\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nIS1 N003 N002 Ilimit Vsat=100m\nDS1 - N003 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW(Ron=0.75 Roff=250k Vt=2.55 Vh=-1.25)\n.ends HOUT\n.model LOUT SW(Ron=2 Roff=250k Vt=2.55 Vh=-1.25 Vser=0.2 Ilimit=2)\n.subckt LOUT + - +C -C Vser=0.2 Ilimit=2\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nIS1 N003 N002 Ilimit Vsat=100m\nDS1 - N003 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW(Ron=2 Roff=250k Vt=2.55 Vh=-1.25)\n.ends LOUT\n.model DAMP D(Ron=1m Rrev=500 Roff=1G Vfwd=0 Vrev=4 Revepsilon=1)\n.ends uc3825»
+  «shorted pins: false»
+  «rect (-1000,-1800) (1000,1800) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (0,733) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,-333) 1 15 0 0x1000000 -1 -1 "UC3825"»
+  «pin (-1000,1600) (20,0) 1 7 0 0x0 -1 "CLK"»
+  «pin (-1000,1200) (20,0) 1 7 0 0x0 -1 "RT"»
+  «pin (-1000,800) (20,0) 1 7 0 0x0 -1 "CT"»
+  «pin (-1000,400) (20,0) 1 7 0 0x0 -1 "RAMP"»
+  «pin (-1000,0) (20,0) 1 7 0 0x0 -1 "EAOUT"»
+  «pin (-1000,-400) (20,0) 1 7 0 0x0 -1 "NI"»
+  «pin (-1000,-800) (20,0) 1 7 0 0x0 -1 "INV"»
+  «pin (-1000,-1200) (20,0) 1 7 0 0x0 -1 "SS"»
+  «pin (-1000,-1600) (30,0) 1 7 0 0x0 -1 "ILIM"»
+  «pin (0,1800) (-20,0) 1 13 0 0x0 -1 "VCC"»
+  «pin (0,-1800) (-20,0) 1 14 0 0x0 -1 "0"»
+  «pin (1000,1200) (-20,0) 1 11 0 0x0 -1 "VC"»
+  «pin (1000,800) (-20,0) 1 11 0 0x0 -1 "OUTA"»
+  «pin (1000,400) (-20,0) 1 11 0 0x0 -1 "OUTB"»
+  «pin (1000,0) (-20,0) 1 11 0 0x0 -1 "PGND"»
+  «pin (1000,-1200) (-20,0) 1 11 0 0x0 -1 "VREF"»
+»

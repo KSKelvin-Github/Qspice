@@ -1,0 +1,49 @@
+ÿØÿÛ«symbol BLDCM
+  «type: X»
+  «description: BLDCM by Marcos Alonso (Qspice Version from KSKelvin)»
+  «library file: |.subckt bldcm pha phb phc tload ea eb ec ha hb hc te w wrpm thetarot nr\nXU1 a b c n thetat N007 hc hb ha bemf\nLa N001 N002 {L-M}\nLb N003 N004 {L-M}\nLc N005 N006 {L-M}\nRa N001 pha {R}\nRb N003 phb {R}\nRc N005 phc {R}\nXU2 thetarott thetat Gain A={npp}\nXUa N002 a ia isense k=1\nXUb N004 b ib isense k=1\nXUc N006 c ic isense k=1\nXU3 ea ia N008 mul\nXU4 eb ib N009 mul\nXU5 ec ic N017 mul\nXU6 N008 N009 N017 Pe Adder3\nXU7 Pe w Te div eps=1e-6\nXU8 Te N016 N010 Sub2\nXU9 N010 Tload N011 Sub2\nXU10 N016 Constant K={To}\nXU13 N011 N015 N012 div eps=0\nXU14 N015 Constant K={J}\nXU11 N012 N013 Integ ic=0\nXU12 N018 thetarott N019 mul\nXU15 N018 Constant K={Bv/J}\nXU16 N013 N019 N014 Sub2\nXU18 w N007 Gain A={Kv}\nXU21 w wrpm Gain A=60/(2*pi)\nXU22 a n ea Sub2\nXU23 b n eb Sub2\nXU24 c n ec Sub2\nXU17 w thetarott Integ ic=0\nXU29 N014 w abs k=1\nE1 nr 0 value={ floor( V(thetarott)/(2*pi) )}\nRin1 nr 0 10Meg\nE2 thetarot 0 value={ ( V(thetarott)/(2*pi) - V(nr) )*2*pi}\nRin2 thetarot 0 10Meg\n.ends bldcm\n.subckt bemf a b c n thetat amp hc hb ha\nEa a N value= {if(V(theta)<pi/6, V(amp)*V(theta)/(pi/6),if(V(theta)<5*pi/6, V(amp), if(V(theta)<7*pi/6, V(amp)-V(amp)*(V(theta)-5*pi/6)/(pi/6), if( V(theta)<11*pi/6, -V(amp), if(V(theta)<2*pi, -V(amp) + V(amp)*(V(theta)-11*pi/6)/(pi/6),0) ) ) ) )}\nEb b N value={if(V(theta)<pi/2, -V(amp), if( V(theta)< 5*pi/6, -V(amp)+V(amp)*(V(theta)-3*pi/6)/(pi/6), if( V(theta)<9*pi/6, V(amp), if(V(theta)<11*pi/6, V(amp)-V(amp)*(V(theta)-9*pi/6)/(pi/6), if( V(theta)<2*pi, -V(amp), 0 ) ) ) ) )}\nEc c N value={if(V(theta)<pi/6, V(amp), if( V(theta)<3*pi/6, V(amp)-V(amp)*(V(theta)-pi/6)/(pi/6), if(V(theta)<7*pi/6, -V(amp), if(V(theta)<9*pi/6, -V(amp)+V(amp)*(V(theta)-7*pi/6)/(pi/6), if( V(theta)<2*pi, V(amp), 0 ) ) ) ) ) }\nXUhc 0 ca hc comp Vhigh=5 Vlow=0\nEca ca 0 value={V(c)-V(a)}\nXUhb 0 ab hb comp Vhigh=5 Vlow=0\nEab ab 0 value={V(a)-V(b)}\nXUha bc 0 ha comp Vhigh=5 Vlow=0\nEbc bc 0 value={V(b)-V(c)}\nRin1 thetat 0 10Meg\nRin2 amp 0 10Meg\nE1 theta 0 value={ ( V(thetat)/(2*pi) - floor( V(thetat)/(2*pi) ) )*2*pi}\nRin4 theta 0 10Meg\n.ends bemf\n.subckt Gain in out\nE1 out 0 value={A*v(in)}\nRin in 0 10Meg\n.ends Gain\n.subckt isense in+ in- out\nV1 in+ in- 0\nE1 out 0 value = {k*i(V1)}\n.ends isense\n.subckt Mul in1 in2 out\nE1 out 0 value = {V(in1)*V(in2)}\nRin1 in1 0 10Meg\nRin2 in2 0 10Meg\n.ends Mul\n.subckt Adder3 in1 in2 in3 out\nE1 out 0 value={v(in1)+v(in2)+v(in3)}\nRin1 in1 0 10Meg\nRin2 in2 0 10Meg\nRin3 in3 0 10Meg\n.ends Adder3\n.subckt Div in1 in2 out\nE1 out 0 value = {V(in1)/( V(in2) + eps)}\nRin1 in1 0 10Meg\nRin2 in2 0 10Meg\n.ends Div\n.subckt Constant out\nE1 out 0 value={K}\n.ends Constant\n.subckt Integ in out\nE1 in1 0 value={v(in)}\nE2 out 0 value={i(L1)}\nL1 ind 0 1\nR1 ind in1 1n\nRin in 0 10Meg\n.ic i(L1) {ic}\n.ends Integ\n.subckt Sub2 in1 in2 out\nE1 out 0 value={v(in1)-v(in2)}\nRin1 in1 0 10Meg\nRin2 in2 0 10Meg\n.ends Sub2\n.subckt abs in out\nE1 out 0 value = {k*abs(V(in))}\nRin in 0 10Meg\n.ends abs\n.subckt comp in+ in- out\nE1 out 0 value = {if(V(in+, in-)>0, {Vhigh}, {Vlow})}\nRin+ in+ 0 10Meg\nRin- in- 0 10Meg\nRin in+ in- 1Meg\n.ends comp»
+  «shorted pins: false»
+  «line (-1000,300) (-520,300) 0 0 0x1000000 -1 -1»
+  «line (-1000,0) (-600,0) 0 0 0x1000000 -1 -1»
+  «line (-1000,-300) (-520,-300) 0 0 0x1000000 -1 -1»
+  «line (-1000,-600) (-500,-600) 0 0 0x1000000 -1 -1»
+  «line (-500,-600) (0,0) 0 0 0x1000000 -1 -1»
+  «line (-150,400) (150,400) 0 0 0x1000000 -1 -1»
+  «line (-150,350) (150,350) 0 0 0x1000000 -1 -1»
+  «line (400,150) (400,-150) 0 0 0x1000000 -1 -1»
+  «line (350,150) (350,-150) 0 0 0x1000000 -1 -1»
+  «line (-400,150) (-400,-150) 0 0 0x1000000 -1 -1»
+  «line (-350,150) (-350,-150) 0 0 0x1000000 -1 -1»
+  «line (-150,-400) (150,-400) 0 0 0x1000000 -1 -1»
+  «line (-150,-350) (150,-350) 0 0 0x1000000 -1 -1»
+  «rect (1200,-900) (-1000,800) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+  «ellipse (-600,600) (600,-600) 0 0 0 0x1000000 0xff8057 -1 -1»
+  «ellipse (-500,500) (500,-500) 0 0 0 0x1000000 0xa0ffff -1 -1»
+  «ellipse (-50,50) (50,-50) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «text (12,-200) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (21,200) 1 15 0 0x1000000 -1 -1 "BLDCM"»
+  «text (-1000,1350) 1 7 0 0x0 -1 -1 "R=<0.08>"»
+  «text (0,1350) 1 7 0 0x0 -1 -1 "L=<15u>"»
+  «text (-1000,1200) 1 7 0 0x0 -1 -1 "M=<0>"»
+  «text (0,1200) 1 7 0 0x0 -1 -1 "npp=<6>"»
+  «text (-1000,1050) 1 7 0 0x0 -1 -1 "Kv=<9.55e-3>"»
+  «text (0,1050) 1 7 0 0x0 -1 -1 "To=<0>"»
+  «text (-1000,900) 1 7 0 0x0 -1 -1 "J=<1e-6>"»
+  «text (0,900) 1 7 0 0x0 -1 -1 "Bv=<0.2e-3>"»
+  «text (-350,700) 1 0 1 0x1000000 -1 -1 "By Marcos Alonso"»
+  «pin (-1000,300) (20,0) 1 6 0 0x0 -1 "pha"»
+  «pin (-1000,0) (20,0) 1 6 0 0x0 -1 "phb"»
+  «pin (-1000,-300) (20,0) 1 6 0 0x0 -1 "phc"»
+  «pin (-1000,-600) (20,0) 1 6 0 0x0 -1 "tload"»
+  «pin (-700,-900) (20,0) 1 14 0 0x0 -1 "ea"»
+  «pin (-400,-900) (20,0) 1 14 0 0x0 -1 "eb"»
+  «pin (-100,-900) (20,0) 1 14 0 0x0 -1 "ec"»
+  «pin (300,-900) (20,0) 1 14 0 0x0 -1 "ha"»
+  «pin (600,-900) (-20,0) 1 14 0 0x0 -1 "hb"»
+  «pin (900,-900) (-20,0) 1 14 0 0x0 -1 "hc"»
+  «pin (1200,-600) (-20,0) 1 11 0 0x0 -1 "te"»
+  «pin (1200,-300) (-20,0) 1 11 0 0x0 -1 "w"»
+  «pin (1200,0) (-20,0) 1 11 0 0x0 -1 "wrpm"»
+  «pin (1200,300) (-20,0) 1 11 0 0x0 -1 "thetarot"»
+  «pin (1200,600) (-20,0) 1 11 0 0x0 -1 "nr"»
+»

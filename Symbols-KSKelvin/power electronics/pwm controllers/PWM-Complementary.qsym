@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PWM-Complementary
   «type: X»
   «description: PWM Complementary (0-50% duty)»
-  «library file: |.subckt PWM-Complementary Duty sawtooth OutA OutB\nVlogic1V p1v 0 1\n¥2 p1v 0 Q ¬Q p1v T 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ T-FLOP TTOL=ttol\n¥3 p1v 0 ¥ A Q T ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥4 p1v 0 ¥ B ¬Q T ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\nB1 OutA 0 V=V(A)*(Vhigh-Vlow)+Vlow\nB2 OutB 0 V=V(B)*(Vhigh-Vlow)+Vlow\n¥1 p1v 0 T ¥ sawtooth N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB3 sawtooth 0 V=idt(fsw,0,V(sawtooth)>1)\nB4 N01 0 V=limit(2*V(Duty),0,0.99)\n.ends PWM-Complementary»
+  «library file: |.subckt PWM-Complementary Duty sawtooth OutA OutB\nVlogic1V p1v 0 1\n¥2 p1v 0 Q ¬Q p1v T 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ T-FLOP TTOL=ttol\n¥3 p1v 0 ¥ A Q T ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥4 p1v 0 ¥ B ¬Q T ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\nB1 OutA 0 V=if(time>0,V(A)*(Vhigh-Vlow)+Vlow,Vlow)\nB2 OutB 0 V=if(time>0,V(B)*(Vhigh-Vlow)+Vlow,Vlow)\n¥1 p1v 0 T ¥ sawtooth N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB3 sawtooth 0 V=idt(fsw,0,V(sawtooth)>1)\nB4 N01 0 V=limit(2*V(Duty),0,0.99)\n.ends PWM-Complementary»
   «shorted pins: false»
   «line (-700,-200) (-510,-200) 0 0 0x1000000 -1 -1»
   «line (-100,-50) (-50,-100) 0 0 0x1000000 -1 -1»

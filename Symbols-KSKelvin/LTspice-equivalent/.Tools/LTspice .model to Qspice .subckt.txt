@@ -1,0 +1,114 @@
+***********************************************************
+* Current source with load
+
+* LTspice netlist
+I1 n01 n02 value load
+
+* Qspice netlist
+I1 n01 n02 value Vsat=0.5
+
+
+***********************************************************
+* Behavioral Diode with Ilimit (method 1 : best fit to LTspice)
+
+* LTspice netlist
+D1 n01 n02 <ModelName>
+.model <ModelName> D <Ron=100m Roff=10Meg Vfwd=0 Ilimit=100m>
+
+* Qspice netlist
+XD1 n01 n02 <ModelName>
+.subckt <ModelName> A K <Ilimit=100m Ron=100m>
+D1 A N001 Dq
+I1 N001 K Ilimit Vsat=2*Ilimit*(Ron-1m)
+.model Dq D (Ron=1m <Roff=10Meg Vfwd=0>)
+.ends <ModelName>
+
+***********************************************************
+* Behavioral Diode with Ilimit (method 2 : not the best fit to LTspice)
+
+* LTspice netlist
+D1 n01 n02 <ModelName>
+.model <ModelName> D <Ron=100m Roff=10Meg Vfwd=0 Ilimit=100m>
+
+* Qspice netlist
+XD1 n01 n02 <ModelName>
+.subckt <ModelName> A K <Ilimit=100m>
+D1 A N001 Dq
+I1 N001 K Ilimit Vsat=100m
+.model Dq D (<Ron=100m Roff=10Meg Vfwd=0>)
+.ends <ModelName>
+
+***********************************************************
+* Behavioral Switch with Ilimit
+
+* LTspice netlist
+S1 n01 n02 n03 n04 <ModelName>
+.model <ModelName> SW <Ron=10 Vt=1.51 Vh=1.49 Ilimit=20m>
+
+* Qspice netlist
+XS1 n01 n02 n03 n04 <ModelName>
+.subckt <ModelName> + - C+ C- <Ilimit=20m>
+S1 + N001 C+ C- SWq
+I1 N002 N001 Ilimit Vsat=100m
+I2 N001 N003 Ilimit Vsat=100m
+D1 - N002 Di
+D2 N003 - Di
+.model Di D Ron=1m Roff=10Meg Vfwd=0
+.model SWq SW (<Ron=10 Vt=1.51 Vh=1.49>)
+.ends <ModelName> 
+
+
+***********************************************************
+* Behavioral Switch with Vser
+
+* LTspice netlist
+S1 n01 n02 n03 n04 <ModelName>
+.model <ModelName> SW <Ron=10 Roff=1meg Vt=2.5 Vh=-1.5 Vser=1>
+
+* Qspice netlist
+XS1 n01 n02 n03 n04 <ModelName>
+.subckt <ModelName> + - +C -C <Vser=1>
+S1 + N001 +C -C SWq
+VS1 N002 N001 Vser
+DS1 - N002 Di
+.model Di D Ron=1m Roff=100Meg Vfwd=0
+.model SWq SW(<Ron=10 Roff=1Meg Vt=2.5 Vh=-1.5>)
+.ends <ModelName>
+
+
+***********************************************************
+* Behavioral Switch with Vser and Ilimit
+
+* LTspice netlist
+S1 n01 n02 n03 n04 <ModelName>
+.model <ModelName> SW <Ron=10 Roff=1meg Vt=2.5 Vh=-1.5 Vser=1 Ilimit=5m>
+
+* Qspice netlist
+XS1 n01 n02 n03 n04 <ModelName>
+.subckt <ModelName> + - +C -C <Vser=1 Ilimit=5m>
+S1 + N001 +C -C SWq
+VS1 N002 N001 Vser
+IS1 N003 N002 Ilimit Vsat=100m
+DS1 - N003 Di
+.model Di D Ron=1m Roff=100Meg Vfwd=0
+.model SWq SW(<Ron=10 Roff=1Meg Vt=2.5 Vh=-1.5>)
+.ends <ModelName>
+
+
+
+***********************************************************
+* A-device : Varistor
+
+* LTspice netlist
+A1 nC+ nC- nV- nV- nV- nV- nV+ nV- VARISTOR <Rclamp=1>
+
+* Qspice netlist
+XA1 <nC+ nC- nV- nV+> VaristorLT <Rclamp=1>
+.subckt VaristorLT C+ C- V- V+
+D1 N01 V+ Di
+D2 V+ N02 Di
+BminClamp V- N01 V=abs(V(C+,C-))
+BmaxClamp N02 V- V=abs(V(C+,C-))
+.model Di D Ron=Rclamp Vfwd=0
+.param Rclamp=1
+.ends VaristorLT

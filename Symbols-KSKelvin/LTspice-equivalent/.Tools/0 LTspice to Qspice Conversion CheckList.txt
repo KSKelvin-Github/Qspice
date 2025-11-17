@@ -1,0 +1,13 @@
+** LTspice to Qspice conversion checklist
+
+* Direct change of netlist
+1. Diode .model - If D model with Ron=0, change it to Ron=1m
+2. I-source (current source) with instance parameter LOAD doesn't source power, change LOAD to VSAT=0.5
+
+* matlab file : "LTspice2Qspice_A_Device.m"
+1. Use it to convert A-device (AND, OR, XOR, SRFLOP, DFLOP, SCHMITT) to Qspice ¥-device
+
+* text file : "LTspice .model to Qspice .subckt.txt"
+1. Diode .model - If D model with Ilimit, refer to this document and substitute with equivalent subcircuit model
+2. Switch .model - If SW model with Vser/Ilimit, refer to this document and substitute with equivalent subcircuit model
+3. A-device type Varistor, refer to this document and substitute with equivalent subcircuit model

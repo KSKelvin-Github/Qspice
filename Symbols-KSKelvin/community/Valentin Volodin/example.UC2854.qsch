@@ -609,31 +609,31 @@
       «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
   »
-  «component (-200,-100) 0 0
+  «component (-100,-200) 0 0
     «symbol UC2854
       «type: X»
       «description: UC2854 Power Factor Preregulator by Valentin Volodin (Qspice Version from KSKelvin)»
-      «library file: |.subckt UC2854 0 PKLIM CAOUT ISENSE MULTOUT IAC VAOUT VRMS REF ENA VSENSE RSET SS CT VCC GTDRV\n¥1 p15v 0 N003 ¥ Vcc 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=13 Vh=3\n¥2 p15v 0 N005 ¥ ENA 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=2.425 Vh=0.125\n¥3 p15v 0 uc_en N004 N003 N005 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=10n\nR1 REF N001 0.5\nG1 0 N001 uc_en 0 1.866m\nR2 N001 0 417\nS1 0 SS N004 0 SS\nI1 Vcc SS 14u Vsat=0.5\nV1 Rset 0 7\nF1 0 CT V1 -1\nD2 N008 N010 Ideal\nI2 CT N008 10m Vsat=0.5\nR3 PKLIM 0 1k\n¥6 p15v 0 N013 ¥ N012 N016 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=10n\n¥7 p15v 0 N016 ¥ N006 N017 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥8 p15v 0 N010 N012 N015 uc_en ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Td=80n Trise=10n Rout=10\n¥9 p14v5 0 N014 ¥ N013 N010 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=35n\n¥10 p15v 0 N006 ¥ CT CAOUT p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=0 Vh=1m\nD3 N009 N014 Ideal\nG2 Vcc 0 uc_en 0 0.9m\nE1 N011 0 N009 0 1\nE2 N027 0 N019 0 1\nC2 N019 0 15.9n ic=0\nR6 N025 N018 1meg\nR8 N020 N027 290\nE3 N028 0 N022 0 1\nC3 N022 0 15.9n ic=0\nR9 N026 N021 1meg\nR10 MULTOUT Isense 100k\nR11 N023 N028 290\n¥5 p15v 0 ¥ N017 PKLIM 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Td=1µ Trise=1µ Vt=0 Vh=1m\nC1 SS 0 3p ic=0\nXA11 0 SS N024 0 VaristorLT\nV6 N024 0 7.5 Rser=1k\n¥4 p15v 0 ¥ N015 CT 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=4 Vh=2.3\nV15qspice p15v 0 15\nV14d5qspice p14v5 0 14.5\nD5 SS REF Ideal1\nE4 N025 0 N024 Vsense 100000\nI3 N018 N019 5.5m Vsat=0.5\nC17 N018 0 0.02p ic=0\nI4 N019 N018 5.5m Vsat=0.5\nE5 N026 0 MULTOUT Isense 100000\nI5 N021 N022 5.5m Vsat=0.5\nI6 N022 N021 5.5m Vsat=0.5\nC18 N021 0 0.02p ic=0\nV7 N029 0 0.5\nV8 N033 0 16\nV9 N032 0 5.8\nD6 N029 N022 Ideal\nD7 N029 N019 Ideal\nD11 N019 N032 Ideal\nD12 N022 N033 Ideal\nR7 VAOUT 0 8k\nD13 N020 VAOUT Ideal\nD14 N023 CAOUT Ideal\nR13 CAOUT 0 8k\nR14 N011 GTDRV 5\nD8 N007 N009 Ideal2\nR4 Vcc N007 30k\nR15 N009 0 1meg\nR5 Vrms 0 5meg\nE6 ivrms 0 Vrms 0 table=(0 1m,11 11)\nB1 N034 0 V=I(V2)*(V(VAOUT)-1)/V(ivrms)**2\nE7 N030 0 N034 0 table=(0 0,100u 103.18m,200u 190.3m,300u 267.58m,400u 342.2m,500u 410.29m,600u 473.09m,700u 534.69m,1.5m 1.027)\nR12 N030 N031 1k\nD9 N031 N035 Ideal\nH1 N035 0 V1 -546.428\nG3 0 N036 N031 0 1m\nR16 MULTOUT 0 R=7.5*V(MULTOUT)/I(v3)\nV3 N036 MULTOUT 0\nV11 7_5V 0 7.5\nD1 N001 N002 Ideal\nR34 N002 7_5V 0.5\nD4 Iac N037 Ideal\nV2 N037 0 5.7 Rser=1k\nC4 Iac 0 3p ic=0\n.model SS SW(Ron=100 Roff=1g Vt=7.5 Vh=-.5)\n.model Ideal D(Ron=1m Roff=1g Vfwd=0)\n.model Ideal1 D(Ron=1m Roff=1g Vfwd=0.5)\n.model Ideal2 D(Ron=1m Roff=1g Vfwd=1.2)\n.model IAC SW(Ron=1m Roff=1g Vt=7.5 Vh=-.5)\n.subckt VaristorLT C+ C- V- V+\nD1 N01 V+ Di\nD2 V+ N02 Di\nBminClamp V- N01 V=abs(V(C+,C-))\nBmaxClamp N02 V- V=abs(V(C+,C-))\n.model Di D Ron=Rclamp Vfwd=0\n.param Rclamp=1\n.ends VaristorLT\n.ends UC2854»
+      «library file: |.subckt UC2854 0 PKLIM CAOUT ISENSE MULTOUT IAC VAOUT VRMS REF ENA VSENSE RSET SS CT VCC GTDRV\nVQ1 p15v 0 15\n¥1 p15v 0 N003 ¥ Vcc 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=13 Vh=3\n¥2 p15v 0 N005 ¥ ENA 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=2.425 Vh=0.125\n¥3 p15v 0 uc_en N004 N003 ¥ ¥ ¥ N005 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=10n\nR1 REF N001 0.5\nG1 0 N001 uc_en 0 1.866m\nR2 N001 0 417\nS1 0 SS N004 0 SS\nI1 Vcc SS 14u Vsat=0.5\nV1 Rset 0 7\nF1 0 CT V1 -1\nD2 N008 N010 Ideal\nI2 CT N008 10m Vsat=0.5\nR3 PKLIM 0 1k\n¥6 p15v 0 N013 ¥ N012 N016 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=10n\n¥7 p15v 0 N016 ¥ N006 ¥ ¥ ¥ N017 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥8 p15v 0 N010 N012 N015 uc_en ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Td=80n Trise=80n Rout=10\nVQ2 p14.5v 0 14.5\n¥9 p14.5v 0 N014 ¥ N013 N010 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=35n\n¥10 p15v 0 N006 ¥ CT CAOUT p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=0 Vh=1m\nD3 N009 N014 Ideal\nG2 Vcc 0 uc_en 0 0.9m\nE1 N011 0 N009 0 1\nE2 N027 0 N019 0 1\nC2 N019 0 15.9n ic=0\nR6 N025 N018 1meg\nR8 N020 N027 290\nE3 N028 0 N022 0 1\nC3 N022 0 15.9n ic=0\nR9 N026 N021 1meg\nR10 MULTOUT Isense 100k\nR11 N023 N028 290\n¥5 p15v 0 ¥ N017 PKLIM 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Td=1u Trise=1u Vt=0 Vh=1m\nC1 SS 0 3p ic=0\nXA11 0 SS N024 0 VaristorLT\nV6 N024 0 7.5 Rser=1k\n¥4 p15v 0 ¥ N015 CT 0 p15v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=4 Vh=2.3\nD5 SS REF Ideal1\nE4 N025 0 N024 Vsense 100000\nI3 N018 N019 5.5m Vsat=0.5\nC17 N018 0 0.02p ic=0\nI4 N019 N018 5.5m Vsat=0.5\nE5 N026 0 MULTOUT Isense 100000\nI5 N021 N022 5.5m Vsat=0.5\nI6 N022 N021 5.5m Vsat=0.5\nC18 N021 0 0.02p ic=0\nV7 N029 0 0.5\nV8 N033 0 16\nV9 N032 0 5.8\nD6 N029 N022 Ideal\nD7 N029 N019 Ideal\nD11 N019 N032 Ideal\nD12 N022 N033 Ideal\nR7 VAOUT 0 8k\nD13 N020 VAOUT Ideal\nD14 N023 CAOUT Ideal\nR13 CAOUT 0 8k\nR14 N011 GTDRV 5\nD8 N007 N009 Ideal2\nR4 Vcc N007 30k\nR15 N009 0 1meg\nR5 Vrms 0 5meg\nE6 ivrms 0 Vrms 0 table=(0 1m,11 11)\nB1 N034 0 V=I(V2)*(V(VAOUT)-1)/V(ivrms)**2\nE7 N030 0 N034 0 table=(0 0,100u 103.18m,200u 190.3m,300u 267.58m,400u 342.2m,500u 410.29m,600u 473.09m,700u 534.69m,1.5m 1.027)\nR12 N030 N031 1k\nD9 N031 N035 Ideal\nH1 N035 0 V1 -546.428\nG3 0 N036 N031 0 1m\nR16 MULTOUT 0 R=7.5*V(MULTOUT)/I(v3)\nV3 N036 MULTOUT 0\nV11 7_5V 0 7.5\nD1 N001 N002 Ideal\nR34 N002 7_5V 0.5\nD4 Iac N037 Ideal\nV2 N037 0 5.7 Rser=1k\nC4 Iac 0 3p ic=0\n.model SS SW(Ron=100 Roff=1g Vt=7.5 Vh=-.5)\n.model Ideal D(Ron=1m Roff=1g Vfwd=0)\n.model Ideal1 D(Ron=1m Roff=1g Vfwd=0.5)\n.model Ideal2 D(Ron=1m Roff=1g Vfwd=1.2)\n.model IAC SW(Ron=1m Roff=1g Vt=7.5 Vh=-.5)\n.subckt VaristorLT C+ C- V- V+\nD1 N01 V+ Di\nD2 V+ N02 Di\nBminClamp V- N01 V=abs(V(C+,C-))\nBmaxClamp N02 V- V=abs(V(C+,C-))\n.model Di D Ron=Rclamp Vfwd=0\n.param Rclamp=1\n.ends VaristorLT\n.ends UC2854»
       «shorted pins: false»
-      «rect (-800,-1700) (1000,1500) 0 0 0 0xff0000 0x4000000 -1 0 -1»
-      «text (100,683) 1 15 0 0x1000000 -1 -1 "X1"»
-      «text (100,-983) 1 15 0 0x1000000 -1 -1 "UC2854"»
-      «pin (100,-1700) (20,0) 1 14 0 0x0 -1 "0"»
-      «pin (-800,1300) (20,0) 1 7 0 0x0 -1 "PKLIM"»
-      «pin (-800,900) (20,0) 1 7 0 0x0 -1 "CAOUT"»
-      «pin (-800,500) (20,0) 1 7 0 0x0 -1 "ISENSE"»
-      «pin (-800,100) (20,0) 1 7 0 0x0 -1 "MULTOUT"»
-      «pin (-800,-1100) (20,0) 1 7 0 0x0 -1 "IAC"»
-      «pin (-800,-300) (20,0) 1 7 0 0x0 -1 "VAOUT"»
-      «pin (-800,-1500) (20,0) 1 7 0 0x0 -1 "VRMS"»
-      «pin (1000,100) (-20,0) 1 11 0 0x0 -1 "REF"»
-      «pin (1000,-1500) (-20,0) 1 11 0 0x0 -1 "ENA"»
-      «pin (-800,-700) (30,0) 1 7 0 0x0 -1 "VSENSE"»
-      «pin (1000,-300) (-20,0) 1 11 0 0x0 -1 "RSET"»
-      «pin (1000,-1100) (-20,0) 1 11 0 0x0 -1 "SS"»
-      «pin (1000,-700) (-20,0) 1 11 0 0x0 -1 "CT"»
-      «pin (100,1500) (-20,0) 1 13 0 0x0 -1 "VCC"»
-      «pin (1000,1300) (-20,0) 1 11 0 0x0 -1 "GTDRV"»
+      «rect (-900,-1600) (900,1600) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+      «text (0,783) 1 15 0 0x1000000 -1 -1 "X1"»
+      «text (0,-883) 1 15 0 0x1000000 -1 -1 "UC2854"»
+      «pin (0,-1600) (0,0) 1 14 0 0x0 -1 "0"»
+      «pin (-900,1400) (20,0) 1 7 0 0x0 -1 "PKLIM"»
+      «pin (-900,1000) (20,0) 1 7 0 0x0 -1 "CAOUT"»
+      «pin (-900,600) (20,0) 1 7 0 0x0 -1 "ISENSE"»
+      «pin (-900,200) (20,0) 1 7 0 0x0 -1 "MULTOUT"»
+      «pin (-900,-1000) (20,0) 1 7 0 0x0 -1 "IAC"»
+      «pin (-900,-200) (20,0) 1 7 0 0x0 -1 "VAOUT"»
+      «pin (-900,-1400) (20,0) 1 7 0 0x0 -1 "VRMS"»
+      «pin (900,200) (-20,0) 1 11 0 0x0 -1 "REF"»
+      «pin (900,-1400) (-20,0) 1 11 0 0x0 -1 "ENA"»
+      «pin (-900,-600) (20,0) 1 7 0 0x0 -1 "VSENSE"»
+      «pin (900,-200) (-20,0) 1 11 0 0x0 -1 "RSET"»
+      «pin (900,-1000) (-20,0) 1 11 0 0x0 -1 "SS"»
+      «pin (900,-600) (-20,0) 1 11 0 0x0 -1 "CT"»
+      «pin (0,1600) (20,0) 1 13 0 0x0 -1 "VCC"»
+      «pin (900,1400) (-20,0) 1 11 0 0x0 -1 "GTDRV"»
     »
   »
   «net (300,1600) 1 13 0 "GND"»

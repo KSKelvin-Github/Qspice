@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol D-FLOP-CD4013B
+  «type: X»
+  «description: D-flop (CD4013B/LTspice Version)»
+  «library file: |.subckt D-FLOP-CD4013B Vdd Vss Q ¬Q D CLK SET RESET\n¥1 Vdd Vss N01 N02 D CLK SET RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=TTOL REF=REF\n¥2 Vdd Vss N03 ¥ SET RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND REF=REF TTOL=TTOL\n¥3 Vdd Vss Q ¥ N03 N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR IC=IC Rsrc=Rsrc\n¥4 Vdd Vss ¬Q ¥ N03 N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR IC=IC Rsrc=Rsrc\n.ends D-FLOP-CD4013B»
+  «shorted pins: false»
+  «line (600,200) (500,200) 0 0 0x1000000 -1 2»
+  «line (550,-200) (600,-200) 0 0 0x1000000 -1 3»
+  «line (-500,-150) (-450,-200) 0 0 0x1000000 -1 -1»
+  «line (-450,-200) (-500,-250) 0 0 0x1000000 -1 -1»
+  «rect (-500,500) (500,-500) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (500,-175) (550,-225) 0 0 0 0x1000000 0x1000000 -1 3»
+  «text (0,150) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,650) 1 0 2 0x1000000 -1 -1 "D-FLOP-CD4013B"»
+  «text (265,-1050) 1 7 0 0x1000000 -1 -1 "IC=<0>"»
+  «text (265,-600) 1 7 0 0x1000000 -1 -1 "TTOL=<1u>"»
+  «text (265,-750) 1 7 0 0x1000000 -1 -1 "Rsrc=<100>"»
+  «text (265,-900) 1 7 0 0x1000000 -1 -1 "REF=<0>"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "CD4013B"»
+  «pin (-300,500) (0,0) 1 0 0 0x1000000 -1 "Vdd"»
+  «pin (-300,-500) (0,0) 1 0 0 0x1000000 -1 "Vss"»
+  «pin (600,200) (-120,0) 1 11 0 0x1000000 -1 "Q"»
+  «pin (600,-200) (-120,0) 1 11 0 0x1000000 -1 "¬Q"»
+  «pin (-500,200) (50,0) 1 7 0 0x1000000 -1 "D"»
+  «pin (-500,-200) (50,0) 1 7 0 0x1000000 -1 "CLK"»
+  «pin (0,500) (0,0) 1 13 0 0x1000000 -1 "PRE"»
+  «pin (0,-500) (0,0) 1 14 0 0x1000000 -1 "CLR"»
+»

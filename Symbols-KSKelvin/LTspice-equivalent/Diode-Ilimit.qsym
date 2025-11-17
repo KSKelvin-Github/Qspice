@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol Diode-Ilimit
+  «type: X»
+  «description: Diode with Ilimit (Equivalent to LTspice A-device)»
+  «library file: |.subckt Diode-Ilimit A K\nD1 A N001 Dq\nI1 N001 K Ilimit Vsat=2*Ilimit*(Ron-1m)\n.model Dq D (Ron=1m Roff=Roff Vfwd=Vfwd Epsilon=Epsilon)\n.ends Diode-Ilimit»
+  «shorted pins: false»
+  «line (100,-80) (-100,-80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,70) 0 0 0x1000000 -1 -1»
+  «triangle (0,-80) (100,70) (-100,70) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (150,200) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,350) 1 7 2 0x1000000 -1 -1 "DIODE-ILIMIT"»
+  «text (150,50) 1 7 0 0x1000000 -1 -1 "Ilimit=<100m>"»
+  «text (150,-100) 1 7 0 0x1000000 -1 -1 "Vfwd=<0>"»
+  «text (150,-250) 1 7 0 0x1000000 -1 -1 "Ron=<100m>"»
+  «text (150,-400) 1 7 0 0x1000000 -1 -1 "Roff=<10Meg>"»
+  «text (150,-550) 1 7 2 0x1000000 -1 -1 "Epsilon=<0>"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "A"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "K"»
+»

@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol LC-HighPass-Filter
+  «type: X»
+  «description: LC High Pass Filter (Single Ended)»
+  «library file: |.subckt LC-HighPass-Filter IN OUT\nC1 IN OUT C\nL1 OUT 0 L\n.param omega0=2*pi*f0\n.param C=Qfactor/omega0/Rext\n.param L=Rext/Qfactor/omega0\n.ends LC-HighPass-Filter»
+  «shorted pins: false»
+  «line (-400,100) (-190,100) 0 0 0x1000000 -1 -1»
+  «line (-110,100) (300,100) 0 0 0x1000000 -1 -1»
+  «line (150,-280) (150,-300) 0 0 0x1000000 -1 -1»
+  «rect (-400,250) (300,-400) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «rect (-180,-30) (-190,230) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-110,-30) (-120,230) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «ellipse (125,75) (175,125) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (75,-300) (225,-300) (150,-375) 0 0 0x1000000 0x1000000 -1 -1»
+  «coil (230,-280) (70,80) 0 0 0 0x1000000 -1 -1»
+  «text (-400,350) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 0 2 0x1000000 -1 -1 "LC-HIGHPASS-FILTER"»
+  «text (-400,-500) 1 7 0 0x0 -1 -1 "f0=<100k>"»
+  «text (-400,-650) 1 7 0 0x0 -1 -1 "Qfactor=<0.707>"»
+  «text (-400,-800) 1 7 0 0x0 -1 -1 "Rext=<8>"»
+  «pin (-400,100) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (300,100) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

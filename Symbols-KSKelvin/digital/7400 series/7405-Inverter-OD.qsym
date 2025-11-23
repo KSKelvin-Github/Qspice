@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol 7405-Inverter-OD
+  «type: X»
+  «description: 7405 Inverter with Open Drain Output»
+  «library file: |.subckt 7405-Inverter-OD Vdd Vss ¬Q b0\nS1 ¬Q Vss N01 Vss SWOD\n¥1 Vdd Vss N01 ¥ b0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=Td TTOL=TTOL\n.model SWOD SW Ron=1m Roff=100Meg Vt=0.5 Vh=0\n.ends 7405-Inverter-OD»
+  «shorted pins: false»
+  «line (-100,-150) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (-100,-150) 0 0 0x1000000 -1 -1»
+  «line (300,0) (280,0) 0 0 0x1000000 -1 -1»
+  «line (0,50) (-50,0) 0 0 0x1000000 -1 -1»
+  «line (-50,0) (0,-50) 0 0 0x1000000 -1 -1»
+  «line (0,-50) (50,0) 0 0 0x1000000 -1 -1»
+  «line (50,0) (0,50) 0 0 0x1000000 -1 -1»
+  «line (-50,-50) (50,-50) 0 0 0x1000000 -1 -1»
+  «ellipse (200,40) (280,-40) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (175,150) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (20,300) 1 0 2 0x1000000 -1 -1 "7405-INVERTER-OD"»
+  «text (250,-150) 1 0 1 0x1000000 -1 -1 "7405"»
+  «text (100,-300) 1 7 2 0x1000000 -1 -1 "Td=<0>"»
+  «pin (0,100) (0,0) 1 0 0 0x1000000 -1 "Vdd"»
+  «pin (0,-100) (0,0) 1 0 0 0x1000000 -1 "Vss"»
+  «pin (300,0) (0,0) 1 0 0 0x1000000 -1 "¬Q"»
+  «pin (-100,0) (0,0) 1 0 0 0x1000000 -1 "b0"»
+»

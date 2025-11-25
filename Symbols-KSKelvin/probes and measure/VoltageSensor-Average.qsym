@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol VoltageSensor-Average
   «type: X»
   «description: Voltage Sensor (Average)»
-  «library file: |.subckt VoltageSensor-Average INpos INneg Avg CLK\nB1 IDT 0 V=idt(V(INpos,INneg)*gain,0,V(CLK)-state(1,V(CLK))>0)/V(dT)\nV1 Vdd 0 Vhigh\nV2 Vss 0 Vlow\nB2 dT 0 V=idt(1,0,V(CLK)-state(1,V(CLK))>0)\n¥1 Vdd Vss OUT ¥ IDT CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=-Vlow IC=-Vlow\nB3 sawtooth 0 V=idt(fsamp,0,V(sawtooth)>1)\nV3 N01 0 0.05\nVlogic1V p1v 0 1\n¥2 p1v 0 CLK ¥ N01 sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB4 Avg 0 V=V(OUT)\n.ends VoltageSensor-Average»
+  «library file: |.subckt VoltageSensor-Average INpos INneg Avg CLK\nVdd Vdd 0 Vhigh\nVss Vss 0 Vlow\nVclk CLK 0 pulse 0 1 0 0 0 .1/fsamp 1/fsamp\n¥1 Vdd Vss IDT0 ¥ IDT CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow TTOL=TTOL\n¥2 Vdd Vss IDT1 ¥ IDT0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow\n¥3 Vdd Vss T0 ¥ T CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow\n¥4 Vdd Vss T1 ¥ T0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow\nB1 IDT 0 V=idt(V(INpos,INneg)*gain,0)\nB2 T 0 V=time\nB3 Avg 0 V=if(time>1/fsamp,(V(IDT0)-V(IDT1))/(V(T0)-V(T1)),0)\n.param Vhigh=1e9\n.param Vlow=-1e9\n.ends VoltageSensor-Average»
   «shorted pins: false»
   «line (-200,200) (-200,-200) 0 0 0x1000000 -1 -1»
   «line (0,-200) (0,-67) 0 0 0x1000000 -1 -1»
@@ -18,9 +18,7 @@
   «text (-50,400) 1 0 2 0x1000000 -1 -1 "VOLTAGESENSOR-AVERAGE"»
   «text (-200,-250) 0.681 7 0 0x0 -1 -1 "gain=<1>"»
   «text (-200,-350) 0.681 7 0 0x0 -1 -1 "fsamp=<1k>"»
-  «text (-200,-450) 0.681 7 0 0x0 -1 -1 "ttol=<1n>"»
-  «text (-200,-550) 0.681 7 2 0x1000000 -1 -1 "Vhigh=1Meg"»
-  «text (-200,-650) 0.681 7 2 0x1000000 -1 -1 "Vlow=-1Meg"»
+  «text (-200,-450) 0.681 7 0 0x0 -1 -1 "TTOL=<1u>"»
   «pin (-200,100) (0,0) 1 15 0 0x0 -1 "INpos"»
   «pin (-200,-100) (20,0) 1 15 0 0x0 -1 "INneg"»
   «pin (100,0) (0,0) 1 15 0 0x0 -1 "Avg"»

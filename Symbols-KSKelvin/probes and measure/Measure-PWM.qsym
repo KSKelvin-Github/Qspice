@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Measure-PWM
   «type: X»
   «description: Measure PWM (Result at next PWM rising edge)»
-  «library file: |.subckt Measure-PWM PWM Tperiod Ton freq duty\nV2 N01 0 Vt\nVlogic1V p1v 0 1\n¥2 Vdd 0 Tf0 ¥ N02 ¬P¬W¬M¬q Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\nV3 Vdd 0 1G\n¥3 Vdd 0 Tr0 ¥ N02 PWMq Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\nB7 duty 0 V=V(Ton)/V(Tperiod)\nB8 freq 0 V=if(V(Tperiod)>0,1/V(Tperiod),0)\n¥4 p1v 0 PWMq ¬P¬W¬M¬q PWM N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT\n¥1 Vdd 0 Tr1 ¥ Tr0 PWMq Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\nB1 N02 0 V=time\nB2 Tperiod 0 V=V(Tr0)-V(Tr1)\nB3 TonCalculate 0 V=V(Tf0)-V(Tr0)\n¥6 Vdd 0 Ton ¥ TonCalculate PWMq Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\n.ends Measure-PWM»
+  «library file: |.subckt Measure-PWM PWM Tperiod Ton freq duty\nVlogic1V p1v 0 1\n¥1 p1v 0 PWMq ¬P¬W¬M¬q PWM N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT\n¥2 Vdd 0 Tr0 ¥ N02 PWMq Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\n¥3 Vdd 0 Tr1 ¥ Tr0 PWMq Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\n¥4 Vdd 0 Tf0 ¥ N02 ¬P¬W¬M¬q Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\n¥5 Vdd 0 Ton ¥ TonCalculate PWMq Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5\nV1 N01 0 Vt\nV2 Vdd 0 1G\nB1 N02 0 V=time\nB2 TonCalculate 0 V=V(Tf0)-V(Tr0)\nB3 Tperiod 0 V=V(Tr0)-V(Tr1)\nB4 duty 0 V=V(Ton)/V(Tperiod)\nB5 freq 0 V=if(V(Tperiod)>0,1/V(Tperiod),0)\n.param Vt=0.5\n.param ttol=1n\n.ends Measure-PWM»
   «shorted pins: false»
   «line (-400,200) (-50,200) 0 0 0x1000000 -1 -1»
   «line (-50,300) (-50,-100) 0 0 0x1000000 -1 -1»

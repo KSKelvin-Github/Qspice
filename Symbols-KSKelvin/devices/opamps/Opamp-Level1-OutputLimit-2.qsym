@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol Opamp-Level1-OutputLimit-2
+  «type: X»
+  «description: Opamp - Single Pole model by G-source»
+  «library file: |.subckt Opamp-Level1-OutputLimit-G IN+ IN- OUT\nG1 0 N01 IN+ IN- Aol/1Meg\nR3 N01 0 1Meg\nC3 N01 0 Aol/GBW/2/pi/1Meg\nV1 N03 0 Vmax\nV2 N04 0 Vmin\nD1 N04 N01 DI\nD2 N01 N03 DI\nE1 N02 0 N01 0 1\nR1 N02 OUT Rout\n.model DI D Ron=10m Roff=10Meg Vfwd=0\n.ends Opamp-Level1-OutputLimit-G»
+  «shorted pins: false»
+  «line (-150,-200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «line (-150,200) (-50,200) 0 0 0x1000000 -1 -1»
+  «line (-100,-150) (-100,-250) 0 0 0x1000000 -1 -1»
+  «line (-200,-450) (-200,450) 0 0 0x1000000 -1 -1»
+  «line (-200,450) (400,0) 0 0 0x1000000 -1 -1»
+  «line (400,0) (-200,-450) 0 0 0x1000000 -1 -1»
+  «text (300,250) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,550) 1 15 2 0x1000000 -1 -1 "OPAMP-LEVEL1-OUTPUTLIMIT-G"»
+  «text (200,-200) 1 7 0 0x0 -1 -1 "Aol=<100K>; open loop gain"»
+  «text (200,-350) 1 7 0 0x0 -1 -1 "GBW=<100Meg>; gain bandwidth"»
+  «text (200,-500) 1 7 0 0x0 -1 -1 "Rout=<1>; output resistance"»
+  «text (60,0) 0.926 0 1 0x1000000 -1 -1 "OpAmp"»
+  «text (50,120) 0.735 0 1 0x1000000 -1 -1 "L1"»
+  «text (200,-650) 1 7 0 0x0 -1 -1 "Vmax=<1>; max output"»
+  «text (200,-800) 1 7 0 0x0 -1 -1 "Vmin=<-1>; min output"»
+  «pin (-200,-200) (0,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (-200,200) (0,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

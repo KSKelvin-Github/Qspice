@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol ZOH
+  «type: X»
+  «description: ZOH - Sample and Hold from Unit-Delay»
+  «library file: |.subckt Unit-Delay OUT IN CLK\n¥1 Vdd Vss OUT ¥ IN CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\nVdd Vdd 0 RNG\nVss Vss 0 -RNG\n.ends Unit-Delay»
+  «shorted pins: false»
+  «line (-150,-10) (-100,-10) 0 0 0x1000000 -1 -1»
+  «line (-100,-10) (-100,-80) 0 0 0x1000000 -1 -1»
+  «line (-100,-80) (0,-80) 0 0 0x1000000 -1 -1»
+  «line (0,-10) (40,-10) 0 0 0x1000000 -1 -1»
+  «line (40,-10) (40,65) 0 0 0x1000000 -1 -1»
+  «line (40,65) (150,65) 0 0 0x1000000 -1 -1»
+  «line (-50,-200) (0,-150) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (50,-200) 0 0 0x1000000 -1 -1»
+  «line (0,-10) (0,-80) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «arc3p (-150,-10) (0,-10) (-75,-10) 0 0 0xffa0a1 -1 -1»
+  «arc3p (150,-10) (0,-10) (75,-10) 0 0 0xffa0a1 -1 -1»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "UNIT-DELAY"»
+  «text (100,-450) 1 7 2 0x1000000 -1 -1 "RNG=1e6"»
+  «text (100,-300) 1 7 2 0x1000000 -1 -1 "TTOL=1e-6"»
+  «pin (200,0) (20,0) 1 15 0 0x0 -1 "OUT"»
+  «pin (-200,0) (-20,0) 1 15 0 0x0 -1 "IN"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "CLK"»
+»

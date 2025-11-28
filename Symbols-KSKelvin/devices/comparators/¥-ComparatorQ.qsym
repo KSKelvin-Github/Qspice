@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol ¥-ComparatorQ
+ÿØÿÛ«symbol ¥-Comparator-2
   «type: ¥»
-  «description: Qspice SCHMITT trigger with Outputs»
+  «description: Qspice SCHMITT trigger w/ complementary Outputs»
   «shorted pins: false»
   «line (-200,-400) (-200,400) 0 0 0x1000000 -1 -1»
   «line (-200,400) (400,0) 0 0 0x1000000 -1 -1»

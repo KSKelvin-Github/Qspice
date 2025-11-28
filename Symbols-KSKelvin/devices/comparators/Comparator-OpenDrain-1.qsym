@@ -1,13 +1,13 @@
-ÿØÿÛ«symbol Comptr-OD2
+ÿØÿÛ«symbol Comparator-OpenDrain-1
   «type: X»
   «description: Ideal Comparator with Open Drain»
-  «library file: |.SUBCKT Comptr-OD pos neg out\nB1 N02 0 V=V(pos)<V(neg)\nS1 out 0 N01 0 IdealSW\n¥1 N03 0 N01 ¥ N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\nV1 N03 0 1\n.model IdealSW SW (Ron=1m Roff=10Meg Vt=0.5 Vh=0)\n.ends Comptr-OD»
+  «library file: |.subckt Comparator-OpenDrain IN+ IN- OUT\nS1 OUT 0 N01 0 IdealSW\nVdd N02 0 1\n¥1 N02 0 ¥ N01 IN+ IN- ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL Td=Td Vt=Vt Vh=Vh\n.model IdealSW SW (Ron=1m Roff=10Meg Vt=0.5 Vh=0)\n.ends Comparator-OpenDrain»
   «shorted pins: false»
   «line (0,-400) (0,400) 0 0 0x1000000 -1 -1»
   «line (0,400) (600,0) 0 0 0x1000000 -1 -1»
   «line (600,0) (0,-400) 0 0 0x1000000 -1 -1»
   «line (50,200) (150,200) 0 0 0x1000000 -1 -1»
-  «line (100,-250) (100,-150) 0 0 0x1000000 -1 -1»
+  «line (100,250) (100,150) 0 0 0x1000000 -1 -1»
   «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
   «line (600,0) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (300,-20) 0 0 0x1000000 -1 -1»
@@ -21,9 +21,12 @@
   «ellipse (275,-120) (325,-170) 0 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (220,-300) (380,-300) (300,-380) 0 0 0x1000000 0x2000000 -1 -1»
   «text (300,300) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (50,450) 1 7 2 0x1000000 -1 -1 "Comptr-OD"»
+  «text (300,450) 1 7 2 0x1000000 -1 -1 "COMPARATOR-OPENDRAIN"»
   «text (400,-200) 1 7 0 0x0 -1 -1 "TTOL=<1u>"»
-  «pin (0,-200) (20,0) 1 15 0 0x0 -1 "pos"»
-  «pin (0,200) (-20,0) 1 15 0 0x0 -1 "neg"»
-  «pin (600,0) (0,10) 1 15 0 0x0 -1 "out"»
+  «text (400,-350) 1 7 2 0x1000000 -1 -1 "Td=<0>"»
+  «text (400,-500) 1 7 2 0x1000000 -1 -1 "Vt=<0>"»
+  «text (400,-650) 1 7 2 0x1000000 -1 -1 "Vh=<0>"»
+  «pin (0,200) (20,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (600,0) (0,10) 1 15 0 0x0 -1 "OUT"»
 »

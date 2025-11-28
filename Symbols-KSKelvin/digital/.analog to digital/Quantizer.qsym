@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol Quantizer
+  «type: X»
+  «description: Quantizer»
+  «library file: |.subckt Quantizer CVin CVout\nB3 ADdec 0 V=QuantDigital(V(CVin))\nB2 CVout 0 V=QuantAnalog(V(ADdec))\n.func QuantDigital(x) round((x-minlevel)/(maxlevel-minlevel)*(2^bits-1-midtread))\n.func QuantAnalog(x) minlevel+x/(2^bits-1-midtread)*(maxlevel-minlevel)\n.ends Quantizer»
+  «shorted pins: false»
+  «line (-300,0) (300,0) 0 0 0x1000000 -1 -1»
+  «line (0,-250) (0,250) 0 0 0x1000000 -1 -1»
+  «line (0,-50) (-100,-50) 0 0 0x1000000 -1 -1»
+  «line (0,50) (100,50) 0 0 0x1000000 -1 -1»
+  «line (100,50) (100,150) 0 0 0x1000000 -1 -1»
+  «line (100,150) (200,150) 0 0 0x1000000 -1 -1»
+  «line (200,150) (200,250) 0 0 0x1000000 -1 -1»
+  «line (200,250) (300,250) 0 0 0x1000000 -1 -1»
+  «line (-100,-50) (-100,-150) 0 0 0x1000000 -1 -1»
+  «line (-100,-150) (-200,-150) 0 0 0x1000000 -1 -1»
+  «line (-200,-150) (-200,-250) 0 0 0x1000000 -1 -1»
+  «line (-200,-250) (-300,-250) 0 0 0x1000000 -1 -1»
+  «rect (-400,400) (400,-400) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-400,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,500) 1 7 0 0x1000000 -1 -1 "QUANTIZER"»
+  «text (-400,-500) 1 7 0 0x0 -1 -1 "midtread=<int[0:1](0)> ;0 is midrise, 1 is midtread"»
+  «text (-400,-650) 1 7 0 0x0 -1 -1 "bits=<int[0:1024](8)> ;number of bits -> quantization level = 2^bits"»
+  «text (-400,-800) 1 7 0 0x0 -1 -1 "maxlevel=<1> ;max quantization value"»
+  «text (-400,-950) 1 7 0 0x0 -1 -1 "minlevel=<-1> ;min quantization value"»
+  «pin (-400,0) (0,0) 1 15 0 0x0 -1 "CVin"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "CVout"»
+»

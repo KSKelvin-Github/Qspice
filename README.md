@@ -29,3 +29,9 @@ Download KSKelvin symbols (.qsym) for Qspice
 [QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) - Symbols
 
 [QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website)
+
+## Download Symbol Library without Cloning
+Visit the 3rd-party web tool: : https://download-directory.github.io/
+Paste the URL https://github.com/KSKelvin-Github/Qspice/tree/main/Symbols-KSKelvin and press Enter
+Download the .zip file and unzip it to a folder
+In Qspice, navigate to View > Symbol & IP Browser, and add this folder from the Symbol & IP Browser window

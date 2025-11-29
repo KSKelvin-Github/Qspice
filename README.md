@@ -1,8 +1,12 @@
 # Qspice
+*QSpice Download: [https://www.qorvo.com/design-hub/design-tools/interactive/qspice](https://www.qorvo.com/design-hub/design-tools/interactive/qspice) 
+*QSpice Forum : [https://forum.qorvo.com/c/qspice/](https://forum.qorvo.com/c/qspice/)
 
-QSpice Download: [https://www.qorvo.com/design-hub/design-tools/interactive/qspice](https://www.qorvo.com/design-hub/design-tools/interactive/qspice) 
-
-QSpice Forum : [https://forum.qorvo.com/c/qspice/](https://forum.qorvo.com/c/qspice/)
+## Cloning with Github Desktop
+* Download GitHub Desktop from GitHub : https://desktop.github.com/download/ , You may need to create a GitHub account (free)
+* To download a repository, follow this : https://www.youtube.com/watch?v=PoZNIbs_wx8
+* Use this URL path to clone KSKelvin-Github/Qspice: https://github.com/KSKelvin-Github/Qspice.git
+* Once cloning is finished, in GitHub Desktop, navigate to Repository > Show in Explorer to access the saved directory
 
 ## Guideline
 This section provides a quick start tutorial and in-depth study of usage and device model guidelines for Qspice
@@ -20,18 +24,8 @@ Additional materials related to spice simulation in this section
 Download KSKelvin symbols (.qsym) for Qspice
 
 ## Other Recommended Sites
-[QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)
-
-[QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE)
-
-[Qspice Forum @masashi.nogawa's Github repo](https://github.com/Qorvo/PyQSPICE) - PyQspice
-
-[QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) - Symbols
-
-[QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website)
-
-## Download Symbol Library without Cloning
-* Visit the 3rd-party web tool: https://download-directory.github.io/<br/>
-* Paste the URL https://github.com/KSKelvin-Github/Qspice/tree/main/Symbols-KSKelvin and press Enter<br/>
-* Download the .zip file and unzip it to a folder<br/>
-* In Qspice, navigate to View > Symbol & IP Browser, and add this folder from the Symbol & IP Browser window<br/>
+*[QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)
+*[QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE)
+*[Qspice Forum @masashi.nogawa's Github repo](https://github.com/Qorvo/PyQSPICE) - PyQspice
+*[QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) - Symbols
+*[QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website)

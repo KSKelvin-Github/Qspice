@@ -1,6 +1,9 @@
 # Guideline
 Guideline for Qspice
 
+## Download a single file from Github
+Replace /blob/ by /raw/ in that single file URL
+
 ## Documentation Files
 * Qspice - Entry User Guide by KSKelvin.pdf &mdash; Beginner Quickstart Guideline
 * Qspice - General Reference Guide by KSKelvin.pdf &mdash; General Reference Guideline

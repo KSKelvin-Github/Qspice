@@ -3,7 +3,7 @@
 * QSpice Forum : [https://forum.qorvo.com/c/qspice/](https://forum.qorvo.com/c/qspice/)
 
 ## Cloning with Github Desktop
-* Download GitHub Desktop from GitHub : https://desktop.github.com/download/ , You may need to create a GitHub account (free)
+* Download GitHub Desktop from GitHub : https://desktop.github.com/download/ , you may need to create a GitHub account (free)
 * To download a repository, follow this : https://www.youtube.com/watch?v=PoZNIbs_wx8
 * Use this URL path to clone KSKelvin-Github/Qspice: https://github.com/KSKelvin-Github/Qspice.git
 * Once cloning is finished, in GitHub Desktop, navigate to Repository > Show in Explorer to access the saved directory

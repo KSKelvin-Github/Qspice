@@ -9,3 +9,4 @@
 * To download a repository, follow this : https://www.youtube.com/watch?v=PoZNIbs_wx8
 * Use this URL path to clone KSKelvin-Github/Qspice: https://github.com/KSKelvin-Github/Qspice.git
 * Once cloning is finished, in GitHub Desktop, navigate to Repository > Show in Explorer to access the saved directory
+* In the future, to update files, open GitHub and click on Pull origin or go to Repository > Pull from the menu.

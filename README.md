@@ -1,6 +1,6 @@
 # Qspice
-*QSpice Download: [https://www.qorvo.com/design-hub/design-tools/interactive/qspice](https://www.qorvo.com/design-hub/design-tools/interactive/qspice) 
-*QSpice Forum : [https://forum.qorvo.com/c/qspice/](https://forum.qorvo.com/c/qspice/)
+* QSpice Download: [https://www.qorvo.com/design-hub/design-tools/interactive/qspice](https://www.qorvo.com/design-hub/design-tools/interactive/qspice)
+* QSpice Forum : [https://forum.qorvo.com/c/qspice/](https://forum.qorvo.com/c/qspice/)
 
 ## Cloning with Github Desktop
 * Download GitHub Desktop from GitHub : https://desktop.github.com/download/ , You may need to create a GitHub account (free)
@@ -24,8 +24,8 @@ Additional materials related to spice simulation in this section
 Download KSKelvin symbols (.qsym) for Qspice
 
 ## Other Recommended Sites
-*[QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)
-*[QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE)
-*[Qspice Forum @masashi.nogawa's Github repo](https://github.com/Qorvo/PyQSPICE) - PyQspice
-*[QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) - Symbols
-*[QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website)
+* [QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)
+* [QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE)
+* [Qspice Forum @masashi.nogawa's Github repo](https://github.com/Qorvo/PyQSPICE) - PyQspice
+* [QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) - Symbols
+* [QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website)

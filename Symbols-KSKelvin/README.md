@@ -5,7 +5,7 @@
 * In Qspice, navigate to View > Symbol & IP Browser, and add this folder from the Symbol & IP Browser window<br/>
 
 ## Cloning with Github Desktop
-* Download Github desktop from Github : https://desktop.github.com/download/ , you may need to create a Github account (free)
-* To download a repository, follow this reference from youtube : https://www.youtube.com/watch?v=PoZNIbs_wx8
+* Download GitHub Desktop from GitHub : https://desktop.github.com/download/ , You may need to create a GitHub account (free)
+* To download a repository, follow this : https://www.youtube.com/watch?v=PoZNIbs_wx8
 * Use this URL path to clone KSKelvin-Github/Qspice: https://github.com/KSKelvin-Github/Qspice.git
-* After cloning is completed, in Github Desktop : Repository > Show in Explorer to access saved directory
+* Once cloning is finished, in GitHub Desktop, navigate to Repository > Show in Explorer to access the saved directory

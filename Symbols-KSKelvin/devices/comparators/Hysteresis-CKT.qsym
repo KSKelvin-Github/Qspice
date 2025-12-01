@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Hysteresis-CKT
   «type: X»
   «description: Hysteresis Comparator»
-  «library file: |.subckt Hysteresis-CKT Q ¬Q b0 b1\n¥1 Vdd Vss Q ¬Q N01 b1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Rout=Rout TTOL=TTOL Td=Td\nR1 b0 N01 R1\nR2 N01 Q R2\nV1 Vdd 0 Vhigh\nV2 Vss 0 Vlow\n.param R2=R1*(Vhigh/Vh-Vlow/Vh-1)\n.ends Hysteresis-CKT»
+  «library file: |.subckt Hysteresis-CKT Q ¬Q b0 b1\n¥1 Vdd Vss Q ¬Q N01 b1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Rout=Rout TTOL=TTOL Td=Td\nR1 b0 N01 R1\nR2 N01 Q R2\nV1 Vdd 0 Vhigh\nV2 Vss 0 Vlow\n.param R2=R1*(Vhigh/Vhyst-Vlow/Vhyst-1)\n.ends Hysteresis-CKT»
   «shorted pins: false»
   «line (500,-100) (376,-100) 0 0 0x1000000 -1 -1»
   «line (-200,-450) (-200,450) 0 0 0x1000000 -1 -1»
@@ -33,7 +33,7 @@
   «text (-900,-600) 1 7 0 0x0 -1 -1 "Vhigh=<5>"»
   «text (-900,-750) 1 7 0 0x0 -1 -1 "Vlow=<-5>"»
   «text (-900,-1050) 1 7 0 0x0 -1 -1 "R1=<10k> ; R1"»
-  «text (-900,-1200) 1 7 0 0x0 -1 -1 "Vh=<0.5> ;hysteresis band"»
+  «text (-900,-1200) 1 7 0 0x0 -1 -1 "Vhyst=<0.5> ;hysteresis band"»
   «text (-900,-1350) 1 7 2 0x1000000 -1 -1 "Rout=<100>"»
   «text (-900,-900) 1 7 0 0x0 -1 -1 "TTOL=<1u>"»
   «text (-900,-1500) 1 7 2 0x1000000 -1 -1 "Td=<0>"»

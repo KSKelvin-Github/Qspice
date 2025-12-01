@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol FIR-Filter(Order5)
+ÿØÿÛ«symbol FIR-Filter-(Order5)
   «type: X»
   «description: FIR Filter Native Device Implementation (Order 5)»
   «library file: |.subckt FIR-Filter X y0 CLK x0 x1 x2 x3 x4 x5\nVdd Vdd 0 RNG\nVss Vss 0 -RNG\nB1 y0 0 V=b0*V(x0)+b1*V(x1)+b2*V(x2)+b3*V(x3)+b4*V(x4)+b5*V(x5)\n¥1 Vdd Vss x0 ¥ X CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥2 Vdd Vss x1 ¥ x0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥3 Vdd Vss x2 ¥ x1 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥4 Vdd Vss x3 ¥ x2 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥5 Vdd Vss x4 ¥ x3 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥6 Vdd Vss x5 ¥ x4 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n.ends FIR-Filter»
@@ -49,7 +49,7 @@
   «triangle (-100,-150) (-100,-350) (50,-250) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-800,1350) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-800,1200) 1 7 0 0x1000000 -1 -1 "FIR-FILTER"»
-  «text (-800,-1800) 1 7 0 0x1000000 -1 -1 "RNG=<1e6>; +ve/-ve range"»
+  «text (-800,-1800) 1 7 0 0x1000000 -1 -1 "RNG=<1e9>; +ve/-ve range"»
   «text (-800,-1950) 1 7 0 0x1000000 -1 -1 "TTOL=<1u>"»
   «text (800,-600) 1 11 0 0x1000000 -1 -1 "b0=<0.0174>"»
   «text (800,-800) 1 11 0 0x1000000 -1 -1 "b1=<0.1292>"»

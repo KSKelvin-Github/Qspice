@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol Integrator-z
+  «type: X»
+  «description: Integrator (z-domain) - 0=trap ; 1=backward; 2=forward»
+  «library file: |.subckt Integrator-z u0 CLK y0\nVdd Vdd 0 RNG\nVss Vss 0 -RNG\n¥1 Vdd Vss u1 ¥ u0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥2 Vdd Vss y1 ¥ y0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥3 Vdd Vss t0 ¥ N01 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥4 Vdd Vss t1 ¥ t0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\nB1 N01 0 V=time\nB2 Ts 0 V=V(t0)-V(t1)\nB3 y0 0 V=if(algorithm==0, V(y1)+V(Ts)/2*(V(u0)+V(u1)), if(algorithm==1, V(y1)+V(Ts)*V(u0), V(y1)+V(Ts)*V(u1)) )\n.ends Integrator-z»
+  «shorted pins: false»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «line (10,70) (-10,-80) 0 0 0x1000000 -1 -1»
+  «line (-50,-200) (0,-150) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (50,-200) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-100,-130) (-50,-90) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «ellipse (50,80) (100,120) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «arc3p (-80,-130) (-10,-80) (-60,-70) 0 0 0x1000000 -1 -1»
+  «arc3p (80,120) (10,70) (60,60) 0 0 0x1000000 -1 -1»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "INTEGRATOR-Z"»
+  «text (100,-300) 1 7 2 0x1000000 -1 -1 "Algorithm=<(0),1,2> ; 0:trap ; 1:backward ; 2:forward"»
+  «text (100,-600) 1 7 2 0x1000000 -1 -1 "RNG=<1e9>"»
+  «text (100,-450) 1 7 2 0x1000000 -1 -1 "TTOL=<1e-6>"»
+  «text (150,150) 1 0 1 0x1000000 -1 -1 "z"»
+  «pin (-200,0) (-20,0) 1 15 0 0x0 -1 "u0"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "CLK"»
+  «pin (200,0) (20,0) 1 15 0 0x0 -1 "y0"»
+»

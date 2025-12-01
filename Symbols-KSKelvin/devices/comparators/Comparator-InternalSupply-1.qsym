@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol Comparator-0&1-1
+ÿØÿÛ«symbol Comparator-InternalSupply-1
   «type: X»
-  «description: Ideal Comparator with 0/1 Output»
-  «library file: |.subckt Comparator-0&1 IN+ IN- Q\nVdd N01 0 1\n¥1 N01 0 Q ¥ IN+ IN- ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL Td=Td Vh=Vh Vt=Vt\n.ends Comparator-0&1»
+  «description: Ideal Comparator with Internal Supply»
+  «library file: |.subckt Comparator-InternalSupply IN+ IN- Q\nVdd Vdd 0 Vhigh\nVss Vss 0 Vlow\n¥1 Vdd Vss Q ¥ IN+ IN- ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL Td=Td Vh=Vh Vt=Vt\n.ends Comparator-InternalSupply»
   «shorted pins: false»
   «line (0,-400) (0,400) 0 0 0x1000000 -1 -1»
   «line (0,400) (600,0) 0 0 0x1000000 -1 -1»
@@ -14,12 +14,13 @@
   «line (200,-130) (120,-130) 0 0 0x1000000 -1 -1»
   «line (150,0) (250,0) 0 0 0x1000000 -1 -1»
   «text (350,250) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (350,400) 1 7 2 0x1000000 -1 -1 "COMPARATOR-0&1"»
-  «text (400,-200) 1 7 0 0x0 -1 -1 "TTOL=<1u>"»
-  «text (400,-350) 1 7 2 0x1000000 -1 -1 "Td=<0>"»
-  «text (400,-500) 1 7 2 0x1000000 -1 -1 "Vt=<0>"»
-  «text (400,-650) 1 7 2 0x1000000 -1 -1 "Vh=<0>"»
-  «text (400,0) 0.735 0 1 0x1000000 -1 -1 "0&1"»
+  «text (350,400) 1 7 2 0x1000000 -1 -1 "COMPARATOR-INTERNALSUPPLY"»
+  «text (350,-250) 1 7 0 0x0 -1 -1 "Vhigh=<1>"»
+  «text (350,-400) 1 7 0 0x0 -1 -1 "Vlow=<0>"»
+  «text (350,-550) 1 7 0 0x0 -1 -1 "TTOL=<1u>"»
+  «text (350,-700) 1 7 2 0x1000000 -1 -1 "Td=<0>"»
+  «text (350,-850) 1 7 2 0x1000000 -1 -1 "Vt=<0>"»
+  «text (350,-1000) 1 7 2 0x1000000 -1 -1 "Vh=<0>"»
   «pin (0,200) (20,0) 1 15 0 0x0 -1 "IN+"»
   «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "IN-"»
   «pin (600,0) (0,10) 1 15 0 0x0 -1 "Q"»

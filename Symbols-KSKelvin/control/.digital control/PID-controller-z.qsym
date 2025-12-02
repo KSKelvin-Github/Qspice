@@ -1,0 +1,53 @@
+ÿØÿÛ«symbol PID-controller-z
+  «type: X»
+  «description: PID Compensator (z-domain)»
+  «library file: |.subckt PID-controller-z error CLK ctrl\nVdd Vdd 0 RNG\nVss Vss 0 -RNG\nE1 u0 0 error 0 Kp\nE2 v0 0 error 0 Ki\nE3 w0 0 error 0 Kd\n¥1 Vdd Vss v1 ¥ v0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥2 Vdd Vss idt1 ¥ idt0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥3 Vdd Vss w1 ¥ w0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥4 Vdd Vss t0 ¥ N01 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥5 Vdd Vss t1 ¥ t0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\nB1 N01 0 V=time\nB2 Ts 0 V=V(t0)-V(t1)\nB3 idt0 0 V=if(algorithm==0, V(idt1)+V(Ts)/2*(V(v0)+V(v1)), if(algorithm==1, V(idt1)+V(Ts)*V(v0), V(idt1)+V(Ts)*V(v1)) )\nB4 ddt0 0 V=if(V(Ts)>0,1/V(Ts)*(V(w0)-V(w1)),0)\nB5 ctrl 0 V=limit( V(u0) + limit(V(idt0),Vlower,Vupper) + V(ddt0), Vlower , Vupper)\n.ends PID-controller-z»
+  «shorted pins: false»
+  «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (-200,-400) (-200,400) 0 0 0x1000000 -1 -1»
+  «line (-200,400) (-100,400) 0 0 0x1000000 -1 -1»
+  «line (-100,-400) (-200,-400) 0 0 0x1000000 -1 -1»
+  «line (100,400) (700,400) 0 0 0x1000000 -1 -1»
+  «line (700,400) (700,100) 0 0 0x1000000 -1 -1»
+  «line (500,0) (600,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (100,0) 0 0 0x1000000 -1 -1»
+  «line (200,-400) (100,-400) 0 0 0x1000000 -1 -1»
+  «line (500,-400) (700,-400) 0 0 0x1000000 -1 -1»
+  «line (700,-400) (700,-100) 0 0 0x1000000 -1 -1»
+  «line (800,0) (900,0) 0 0 0x1000000 -1 -1»
+  «line (650,0) (750,0) 0 0 0x1000000 -1 -1»
+  «line (700,50) (700,-50) 0 0 0x1000000 -1 -1»
+  «line (-300,-400) (-200,-500) 0 0 0x1000000 -1 -1»
+  «line (-200,-500) (-300,-600) 0 0 0x1000000 -1 -1»
+  «line (365,25) (355,-25) 0 0 0x1000000 -1 -1»
+  «line (680,-650) (750,-650) 0 0 0x1000000 -1 -1»
+  «line (750,-650) (800,-450) 0 0 0x1000000 -1 -1»
+  «line (800,-450) (870,-450) 0 0 0x1000000 -1 -1»
+  «rect (-300,600) (900,-700) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «rect (200,100) (500,-100) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (200,-300) (500,-500) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (600,100) (800,-100) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-225,25) (-175,-25) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «ellipse (412,57) (377,37) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «ellipse (343,-37) (308,-57) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «arc3p (405,55) (365,25) (405,35) 0 0 0x1000000 -1 -1»
+  «arc3p (315,-55) (355,-25) (315,-35) 0 0 0x1000000 -1 -1»
+  «triangle (-100,500) (-100,300) (100,400) 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (-100,100) (-100,-100) (100,0) 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (-100,-500) (-100,-300) (100,-400) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-300,850) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,700) 1 7 0 0x1000000 -1 -1 "PID-CONTROLLER-Z"»
+  «text (350,-400) 1 0 1 0x1000000 -1 -1 "D"»
+  «text (-50,250) 1 7 0 0x0 -1 -1 "Kp=<1>"»
+  «text (-50,-200) 1 7 0 0x0 -1 -1 "Ki=<1>"»
+  «text (-50,-600) 1 7 0 0x0 -1 -1 "Kd=<1>"»
+  «text (-300,-800) 1 7 0 0x0 -1 -1 "Vupper=<10>; max output limit"»
+  «text (-300,-950) 1 7 0 0x0 -1 -1 "Vlower=<-10>; min output limit"»
+  «text (-300,-1100) 1 7 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «text (-300,-1250) 1 7 2 0x1000000 -1 -1 "Algorithm=<0,(1),2>; Integration : 0:trap ; 1:backward ; 2:forward"»
+  «text (-300,-1400) 1 7 2 0x1000000 -1 -1 "RNG=<1e9>"»
+  «text (850,550) 1 0 1 0x1000000 -1 -1 "z"»
+  «pin (-300,0) (30,90) 1 15 0 0x0 -1 "error"»
+  «pin (-300,-500) (0,0) 1 0 0 0x0 -1 "CLK"»
+  «pin (900,0) (-20,90) 1 15 0 0x0 -1 "ctrl"»
+»

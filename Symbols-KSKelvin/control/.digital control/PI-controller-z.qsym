@@ -1,0 +1,30 @@
+ÿØÿÛ«symbol PI-controller-z
+  «type: X»
+  «description: PI Controller (z-domain)»
+  «library file: |.subckt PI-controller-z error CLK ctrl\nVdd Vdd 0 RNG\nVss Vss 0 -RNG\n¥1 Vdd Vss v1 ¥ v0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥2 Vdd Vss idt1 ¥ idt0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥3 Vdd Vss t0 ¥ N01 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥4 Vdd Vss t1 ¥ t0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\nE1 v0 0 error 0 A/tau\nE2 u0 0 error 0 A\nB1 N01 0 V=time\nB2 Ts 0 V=V(t0)-V(t1)\nB3 idt0 0 V=if(algorithm==0, V(idt1)+V(Ts)/2*(V(v0)+V(v1)), if(algorithm==1, V(idt1)+V(Ts)*V(v0), V(idt1)+V(Ts)*V(v1)) )\nB4 ctrl 0 V=limit( V(u0) + limit(V(idt0),Vlower,Vupper) , Vlower , Vupper)\n.ends PI-controller-z»
+  «shorted pins: false»
+  «line (-430,0) (370,0) 0 0 0x1000000 -1 -1»
+  «line (450,-50) (500,0) 0 0 0x1000000 -1 -1»
+  «line (500,0) (450,50) 0 0 0x1000000 -1 -1»
+  «line (-500,-50) (-450,-100) 0 0 0x1000000 -1 -1»
+  «line (-450,-100) (-500,-150) 0 0 0x1000000 -1 -1»
+  «line (430,-60) (380,-60) 0 0 0x1000000 -1 -1»
+  «line (380,-60) (350,-170) 0 0 0x1000000 -1 -1»
+  «line (350,-170) (300,-170) 0 0 0x1000000 -1 -1»
+  «rect (-500,200) (500,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-500,450) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,300) 1 7 0 0x1000000 -1 -1 "PI-CONTROLLER-Z"»
+  «text (-30,100) 0.857 0 1 0x1000000 -1 -1 "A*(1+s*tau)"»
+  «text (-30,-100) 0.857 0 1 0x1000000 -1 -1 "s*tau"»
+  «text (-500,-300) 1 7 0 0x0 -1 -1 "Vupper=<10>; max output limit"»
+  «text (-500,-450) 1 7 0 0x0 -1 -1 "Vlower=<-10>; min output limit"»
+  «text (-500,-600) 1 7 0 0x0 -1 -1 "A=<0.1>; Gain of PI controller"»
+  «text (-500,-750) 1 7 0 0x0 -1 -1 "tau=<0.001> ; Time constant of the PI controller"»
+  «text (-500,-900) 1 7 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «text (-500,-1050) 1 7 2 0x1000000 -1 -1 "Algorithm=<0,(1),2>; Integration : 0:trap ; 1:backward ; 2:forward"»
+  «text (-500,-1200) 1 7 2 0x1000000 -1 -1 "RNG=<1e9>"»
+  «text (450,150) 1 0 1 0x1000000 -1 -1 "z"»
+  «pin (-500,100) (20,0) 1 15 0 0x0 -1 "error"»
+  «pin (-500,-100) (-20,0) 1 15 0 0x0 -1 "CLK"»
+  «pin (500,0) (0,0) 1 15 0 0x0 -1 "ctrl"»
+»

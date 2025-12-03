@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol SR-flop-SetDominate
   «type: X»
   «description: SR-flop (Set Dominate)»
-  «library file: |.subckt SR-flop-SetDominate Vdd Vss Q ¬Q S R\n¥1 Vdd Vss N01 ¥6 S R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP TTOL=TTOL REF=REF\n¥2 Vdd Vss N02 ¥ S R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL REF=REF\n¥3 Vdd Vss Q ¬Q N02 N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR IC=IC TTOL=TTOL Rsrc=Rsrc\n.ends SR-flop-SetDominate»
+  «library file: |.subckt SR-flop-SetDominate Vdd Vss Q ¬Q S R\n¥1 Vdd Vss Q ¬Q N03 N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP TTOL=TTOL Rsrc=Rsrc IC=IC\n¥2 Vdd Vss N02 ¥ N04 N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥3 Vdd Vss ¥ N04 S ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL REF=REF\n¥4 Vdd Vss N01 ¥ R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL REF=REF\n¥5 Vdd Vss ¥ N03 N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.ends SR-flop-SetDominate»
   «shorted pins: false»
   «line (500,200) (400,200) 0 0 0x1000000 -1 2»
   «line (450,-200) (500,-200) 0 0 0x1000000 -1 3»

@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol ¥-Device Latch (Sample and Hold ZOH)3
+ÿØÿÛ«symbol ¥-Device Latch (Sample and Hold ZOH)1
   «type: ¥»
   «description: Edge-Sensitive Sample and Hold [ZOH] (Always Enable)»
   «shorted pins: false»
@@ -21,6 +21,7 @@
   «arc3p (300,-150) (-300,-150) (0,-150) 0 0 0x1000000 -1 -1»
   «text (-500,600) 1 7 0 0x1000000 -1 -1 "¥1"»
   «text (0,250) 1 15 0 0x1000000 -1 -1 "LATCH"»
+  «text (200,-600) 1 7 0 0x0 -1 -1 "IC=<0>"»
   «pin (0,500) (0,0) 0.794 13 0 0x1000000 -1 "Vdd"»
   «pin (0,-500) (0,0) 0.794 14 0 0x1000000 -1 "Vss"»
   «pin (500,0) (-20,0) 1 15 0 0x1000000 -1 "OUT"»

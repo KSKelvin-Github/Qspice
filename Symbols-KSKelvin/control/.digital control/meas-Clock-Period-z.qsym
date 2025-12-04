@@ -1,0 +1,26 @@
+ÿØÿÛ«symbol meas-Clock-Period-z
+  «type: X»
+  «description: Return Clock Period (z-domain)»
+  «library file: |.subckt meas-Clock-Period-z CLK Ts\nVdd Vdd 0 RNG\nVss Vss 0 -RNG\n¥1 Vdd Vss t0 ¥ N01 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥2 Vdd Vss t1 ¥ t0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\nB1 N01 0 V=time\nB2 Ts 0 V=V(t0)-V(t1)\n.ends meas-Clock-Period-z»
+  «shorted pins: false»
+  «line (-200,-50) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (-200,50) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (-150,-50) (150,-50) 0 0 0x1000000 -1 -1»
+  «line (-100,-50) (-100,70) 0 0 0x1000000 -1 -1»
+  «line (0,-50) (0,70) 0 0 0x1000000 -1 -1»
+  «line (100,-50) (100,70) 0 0 0x1000000 -1 -1»
+  «line (-170,-100) (-100,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (70,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (30,-70) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (30,-130) 0 0 0x1000000 -1 -1»
+  «line (-100,-100) (-130,-70) 0 0 0x1000000 -1 -1»
+  «line (-100,-100) (-130,-130) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "MEAS-CLOCK-PERIOD-Z"»
+  «text (-200,-450) 1 7 2 0x1000000 -1 -1 "RNG=<1e9>"»
+  «text (-200,-300) 1 7 2 0x1000000 -1 -1 "TTOL=<1e-6>"»
+  «text (150,150) 1 0 1 0xff00ff -1 -1 "z"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "CLK"»
+  «pin (200,0) (-20,0) 1 15 0 0x0 -1 "Ts"»
+»

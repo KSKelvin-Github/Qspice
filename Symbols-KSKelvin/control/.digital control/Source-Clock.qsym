@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Source-Clock
   «type: X»
   «description: Source Clock for digital library»
-  «library file: |.subckt Source-Clock CLK Ts Fs\nV1 CLK 0 pulse 0 1 0 1/CLKfreq/1e5 1/CLKfreq/1e5 duty/CLKfreq 1/CLKfreq\nB1 Ts 0 V=1/CLKfreq\nB2 Fs 0 V=CLKfreq\n.ends Source-Clock»
+  «library file: |.subckt Source-Clock CLK Ts\nV1 CLK 0 pulse 0 1 0 1/CLKfreq/1e5 1/CLKfreq/1e5 duty/CLKfreq 1/CLKfreq\nB1 Ts 0 V=1/CLKfreq\n.ends Source-Clock»
   «shorted pins: false»
   «line (-600,-130) (-600,-200) 0 0 0x1000000 -1 -1»
   «line (-600,200) (-600,130) 0 0 0x1000000 -1 -1»
@@ -12,17 +12,14 @@
   «line (-630,80) (-570,80) 0 0 0x1000000 -1 -1»
   «line (-600,110) (-600,50) 0 0 0x1000000 -1 -1»
   «line (-630,-90) (-570,-90) 0 0 0x1000000 -1 -1»
-  «line (-730,-10) (-850,-200) 0 0 0x1000000 -1 -1»
-  «line (-850,-200) (-1000,-200) 0 0 0x1000000 -1 -1»
-  «line (-1000,-400) (-850,-400) 0 0 0x1000000 -1 -1»
-  «line (-850,-400) (-670,-110) 0 0 0x1000000 -1 -1»
+  «line (-470,0) (-400,-100) 0 0 0x1000000 -1 -1»
+  «line (-300,-100) (-400,-100) 0 0 0x1000000 -1 -1»
   «ellipse (-730,130) (-470,-130) 0 0 0 0x1000000 0xffe6c8 -1 -1»
   «triangle (-670,-200) (-530,-200) (-600,-270) 0 0 0x1000000 0x2000000 -1 -1»
-  «text (-800,200) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (-1300,500) 1 0 2 0x1000000 -1 -1 "SOURCE-CLOCK"»
-  «text (-800,50) 1 11 0 0x0 -1 -1 "CLKfreq=<100k>"»
-  «text (-800,350) 1 11 2 0x1000000 -1 -1 "duty=<0.1>"»
+  «text (-750,100) 1 11 0 0x1000000 -1 -1 "X1"»
+  «text (-1250,400) 1 0 2 0x1000000 -1 -1 "SOURCE-CLOCK"»
+  «text (-750,-50) 1 11 0 0x0 -1 -1 "CLKfreq=<100k>"»
+  «text (-750,250) 1 11 2 0x1000000 -1 -1 "duty=<0.1>"»
   «pin (-600,200) (-20,0) 1 15 0 0x0 -1 "CLK"»
-  «pin (-1000,-400) (0,0) 1 6 0 0x0 -1 "Ts"»
-  «pin (-1000,-200) (0,0) 1 6 0 0x0 -1 "Fs"»
+  «pin (-300,-100) (0,0) 1 9 0 0x0 -1 "Ts"»
 »

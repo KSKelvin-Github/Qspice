@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Subtract
   «type: X»
-  «description: Subtract»
+  «description: Subtract / Difference»
   «library file: |.subckt subtract pos neg error\nE1 error 0 pos neg 1\n.ends subtract»
   «shorted pins: false»
   «line (50,0) (150,0) 0 0 0x1000000 -1 -1»

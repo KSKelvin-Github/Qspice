@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol Wrap180
+  «type: X»
+  «description: Phase Wrapping in degree (-180o to 180o)»
+  «library file: |.subckt Wrap180 phi-d wrap180\nB1 wrap180 0 V=((V(phi-d)-180) % 360) - 180\n.ends Wrap180»
+  «shorted pins: false»
+  «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «rect (10,35) (20,-35) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-200,450) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-200,300) 1 7 0 0x1000000 -1 -1 "WRAP180"»
+  «text (30,120) 1 0 1 0x1000000 -1 -1 "-180°"»
+  «text (50,-110) 1 0 1 0x1000000 -1 -1 "180°"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "phi-d"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "wrap360"»
+»

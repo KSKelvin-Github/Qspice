@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol RTD
+  «type: X»
+  «description: Resonant Tunneling Diode RTD (piecewise model)»
+  «library file: |.subckt RTD N01 N02\nBRTD1 N01 N02 I={ Sstart( V(N01,N02) ) * ( w1( V(N01,N02) )*I1( V(N01,N02) )+ w2( V(N01,N02) )*I2( V(N01,N02) )+ w3( V(N01,N02) )*I3( V(N01,N02) )) + Gmin*V(N01,N02)}\n.param Ip = { Vp/Rp }\n.param Iv = { Ip + (Vv - Vp)/Rn }\n.func Sstep(z) = { 0.5*(1 + tanh(z/epsV)) }\n.func Sstart(V) = { 0.5*(1 + tanh(V/eps0)) }\n.func w1(V) = { 1 - Sstep(V - Vp) }\n.func w2(V) = { Sstep(V - Vp) - Sstep(V - Vv) }\n.func w3(V) = { Sstep(V - Vv) }\n.func I1(V) = { V/Rp }\n.func I2(V) = { Ip + (V - Vp)/Rn }\n.func I3(V) = { Iv + (V - Vv)/RQ }\n.ends RTD»
+  «shorted pins: false»
+  «line (100,80) (-100,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «line (100,40) (100,80) 0 0 0x1000000 -1 -1»
+  «line (-100,80) (-100,40) 0 0 0x1000000 -1 -1»
+  «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0x2000000 -1 -1»
+  «text (150,200) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,50) 1 7 0 0x1000000 -1 -1 "RTD"»
+  «text (150,-100) 1 7 0 0x0 -1 -1 "Vp=<0.5> ;peak point voltage"»
+  «text (150,-250) 1 7 0 0x0 -1 -1 "Vv=<0.9> ;valley point voltage"»
+  «text (150,-400) 1 7 0 0x0 -1 -1 "Rp=<10> ;tunneling resistance"»
+  «text (150,-550) 1 7 0 0x0 -1 -1 "Rn=<-10> ;negative resistance"»
+  «text (150,-700) 1 7 0 0x0 -1 -1 "RQ=<10> ;diode resistance"»
+  «text (150,-850) 1 7 0 0x0 -1 -1 "epsV=<20m>"»
+  «text (150,-1000) 1 7 0 0x0 -1 -1 "eps0=<10m>"»
+  «text (150,-1150) 1 7 0 0x0 -1 -1 "Gmin=<1m> ;minimum conductance"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "A"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "K"»
+»

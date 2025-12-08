@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol InversePark-dq-Þß-transformation
+  «type: X»
+  «description: Inverse Park (dq-alpha/beta) transformation»
+  «library file: |.subckt InversePark-dq-Þß-transformation d q phi alpha beta\nB1 alpha 0 V=cos(V(phi))*V(d) - sin(V(phi))*V(q)\nB2 beta 0 V=sin(V(phi))*V(d) + cos(V(phi))*V(q)\n.ends InversePark-dq-Þß-transformation»
+  «shorted pins: false»
+  «line (-300,-400) (300,400) 0 0 0x1000000 -1 -1»
+  «rect (-400,-400) (400,400) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (-400,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,800) 1 7 2 0x1000000 -1 -1 "INVERSEPARK-DQ-Þß-TRANSFORMATION"»
+  «text (150,-100) 1.36 0 1 0x1000000 -1 -1 "Þß"»
+  «text (-150,150) 1.36 0 1 0x1000000 -1 -1 "dq"»
+  «text (-400,500) 1 7 1 0x1000000 -1 -1 "Inverse Park dq-Þß"»
+  «pin (-400,200) (20,0) 1 7 0 0x0 -1 "d"»
+  «pin (-400,-200) (20,0) 1 7 0 0x0 -1 "q"»
+  «pin (0,-400) (0,20) 1 14 0 0x0 -1 "phi"»
+  «pin (400,200) (-20,0) 1 11 0 0x0 -1 "Þ"»
+  «pin (400,-200) (-20,0) 1 11 0 0x0 -1 "ß"»
+»

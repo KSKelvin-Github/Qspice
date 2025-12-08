@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol abc-dqo-transformation
+  «type: X»
+  «description: abc-dqo transformation»
+  «library file: |.subckt abc-dqo-transformation a b c phi d q o\nB1 d 0 V=2/3 * ( cos(V(phi))*V(a)+cos(V(phi)-2*pi/3)*V(b)+cos(V(phi)+2*pi/3)*V(c) )\nB2 q 0 V=if( flag==0, 2/3 * ( -sin(V(phi))*V(a)-sin(V(phi)-2*pi/3)*V(b)-sin(V(phi)+2*pi/3)*V(c) ) , 2/3 * ( +sin(V(phi))*V(a)+sin(V(phi)-2*pi/3)*V(b)+sin(V(phi)+2*pi/3)*V(c) ) )\nB3 o 0 V=2/3 * ( 1/2*V(a)+1/2*V(b)+1/2*V(c) )\n.ends abc-dqo-transformation»
+  «shorted pins: false»
+  «line (-300,-400) (300,400) 0 0 0x1000000 -1 -1»
+  «rect (-400,-400) (400,400) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (-400,800) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,950) 1 7 2 0x1000000 -1 -1 "ABC-DQO-TRANSFORMATION"»
+  «text (-400,650) 1 7 0 0x0 -1 -1 "flag=<(0),1>; 0: q leads d, 1: q lags d"»
+  «text (-150,150) 1.36 0 1 0x1000000 -1 -1 "abc"»
+  «text (150,-100) 1.36 0 1 0x1000000 -1 -1 "dqo"»
+  «text (-400,500) 1 7 1 0x1000000 -1 -1 "abc-dqo"»
+  «pin (-400,300) (20,0) 1 7 0 0x0 -1 "a"»
+  «pin (-400,0) (20,0) 1 7 0 0x0 -1 "b"»
+  «pin (-400,-300) (20,0) 1 7 0 0x0 -1 "c"»
+  «pin (0,-400) (0,20) 1 14 0 0x0 -1 "phi"»
+  «pin (400,300) (-20,0) 1 11 0 0x0 -1 "d"»
+  «pin (400,0) (-20,0) 1 11 0 0x0 -1 "q"»
+  «pin (400,-300) (-20,0) 1 11 0 0x0 -1 "o"»
+»

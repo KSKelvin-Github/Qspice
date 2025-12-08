@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol dvdt-Limiter
+  «type: X»
+  «description: dv/dt limiter»
+  «library file: |.subckt dvdt-Limiter in out\nC1 dVdt 0 1\nB3 0 dVdt I=if(abs(V(in)-V(dvdt))<Vh,0,sgn(V(in)-V(dvdt))*slew*1)*(time>0)\nE1 out 0 dVdt 0 1\n.ends dvdt-Limiter»
+  «shorted pins: false»
+  «line (50,120) (50,-120) 0 0 0x1000000 -1 -1»
+  «line (-140,0) (240,0) 0 0 0x1000000 -1 -1»
+  «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+  «line (-120,-110) (220,110) 0 0 0x1000000 -1 -1»
+  «line (110,40) (200,40) 0 0 0x1000000 -1 -1»
+  «line (200,40) (200,95) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-200,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "DVDT-LIMITER"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "slew=<1Meg> ;slew rate V/s"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "Vh=<1m> ;hysteresis between in and out"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

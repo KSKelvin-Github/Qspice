@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PLL-1ph
   «type: X»
   «description: Phase Lock Loop - 1 Phase»
-  «library file: |.subckt PLL-1ph u y y90 freq phi-wrap\nB1 z 0 V=V(u)*V(ycos)\nB2 dw 0 V=Ki*idt(V(z),0)\nB3 w 0 V=V(dw)+w0\nB4 x 0 V=V(w)+V(zkp)\nB5 phi 0 V=idt(V(x),0)\nB6 ycos 0 V=cos(V(phi))\nB7 y 0 V=sin(V(phi))\nB8 freq 0 V=V(w)/2/pi\nB9 phi-d 0 V=V(phi)*180/pi\nB10 phi-wrap 0 V=( ( V(phi-d) - 180) % 360 ) - 180\nE1 zkp 0 z 0 Kp\nE2 y90 0 ycos 0 -1\n.param w0=2*pi*f0\n.ends PLL-1ph»
+  «library file: |.subckt PLL-1ph u y y90 freq phi-deg\nB1 z 0 V=V(u)*V(ycos)\nB2 dw 0 V=Ki*idt(V(z),0)\nB3 w 0 V=V(dw)+w0\nB4 x 0 V=V(w)+V(zkp)\nB5 phi 0 V=(idt(V(x),0)-pi)%(2*pi) - pi\nB6 ycos 0 V=cos(V(phi))\nB7 y 0 V=sin(V(phi))\nB8 freq 0 V=V(w)/2/pi\nB9 phi-deg 0 V=V(phi)*180/pi\nE1 zkp 0 z 0 Kp\nE2 y90 0 ycos 0 -1\n.ends PLL-1ph»
   «shorted pins: false»
   «line (-900,0) (-750,0) 0 0 0x1000000 -1 -1»
   «line (-700,50) (-600,-50) 0 0 0x1000000 -1 -1»
@@ -76,5 +76,5 @@
   «pin (1600,300) (-20,0) 1 10 0 0x0 -1 "y"»
   «pin (1600,0) (-20,0) 1 10 0 0x0 -1 "y90"»
   «pin (1600,-800) (-20,10) 1 10 0 0x0 -1 "freq"»
-  «pin (1600,-600) (-20,0) 1 10 0 0x0 -1 "phi"»
+  «pin (1600,-600) (-20,0) 1 10 0 0x0 -1 "phi-deg"»
 »

@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol Clarke-abc-Þß-transformation
+  «type: X»
+  «description: Clarke (abc-alpha/beta) transformation»
+  «library file: |.subckt Clarke-abc-Þß-transformation a b c alpha beta\nB1 alpha 0 V=if( flag==0, 2/3 * ( 1*V(a) - 1/2*V(b) - 1/2*V(c) ) , sqrt(2/3) * ( 1*V(a) - 1/2*V(b) - 1/2*V(c) ) )\nB2 beta 0 V=if( flag==0, 2/3 * ( 0*V(a) + sqrt(3)/2*V(b) - sqrt(3)/2*V(c) ) , sqrt(2/3) * ( 0*V(a) + sqrt(3)/2*V(b) - sqrt(3)/2*V(c) ) )\n.ends Clarke-abc-Þß-transformation»
+  «shorted pins: false»
+  «line (-300,-400) (300,400) 0 0 0x1000000 -1 -1»
+  «rect (-400,-400) (400,400) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (-400,800) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,950) 1 7 2 0x1000000 -1 -1 "CLARKE-ABC-Þß-TRANSFORMATION"»
+  «text (-400,650) 1 7 0 0x0 -1 -1 "flag=<(0),1>; 0: amplitude invariant, 1: power invariant"»
+  «text (-150,150) 1.36 0 1 0x1000000 -1 -1 "abc"»
+  «text (150,-100) 1.36 0 1 0x1000000 -1 -1 "Þß"»
+  «text (-400,500) 1 7 1 0x1000000 -1 -1 "Clarke abc-Þß"»
+  «pin (-400,300) (20,0) 1 7 0 0x0 -1 "a"»
+  «pin (-400,0) (20,0) 1 7 0 0x0 -1 "b"»
+  «pin (-400,-300) (20,0) 1 7 0 0x0 -1 "c"»
+  «pin (400,200) (-20,0) 1 11 0 0x0 -1 "Þ"»
+  «pin (400,-200) (-20,0) 1 11 0 0x0 -1 "ß"»
+»

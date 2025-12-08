@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Park-Þß-dq-transformation
+  «type: X»
+  «description: Park (alpha/beta-dq) transformation»
+  «library file: |.subckt Park-Þß-dq-transformation alpha beta phi d q\nB1 d 0 V=cos(V(phi))*V(alpha) + sin(V(phi))*V(beta)\nB2 q 0 V=-sin(V(phi))*V(alpha) + cos(V(phi))*V(beta)\n.ends Park-Þß-dq-transformation»
+  «shorted pins: false»
+  «line (-300,-400) (300,400) 0 0 0x1000000 -1 -1»
+  «rect (-400,-400) (400,400) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (-400,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,800) 1 7 2 0x1000000 -1 -1 "PARK-Þß-DQ-TRANSFORMATION"»
+  «text (-150,150) 1.36 0 1 0x1000000 -1 -1 "Þß"»
+  «text (150,-100) 1.36 0 1 0x1000000 -1 -1 "dq"»
+  «text (-400,500) 1 7 1 0x1000000 -1 -1 "Park Þß-dq"»
+  «pin (-400,200) (20,0) 1 7 0 0x0 -1 "Þ"»
+  «pin (-400,-200) (20,0) 1 7 0 0x0 -1 "ß"»
+  «pin (0,-400) (0,20) 1 14 0 0x0 -1 "phi"»
+  «pin (400,200) (-20,0) 1 11 0 0x0 -1 "d"»
+  «pin (400,-200) (-20,0) 1 11 0 0x0 -1 "q"»
+»

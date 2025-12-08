@@ -1,0 +1,38 @@
+ÿØÿÛ«symbol p-MOSFET-Rdson-Tj
+  «type: X»
+  «description: p-MOSFET Rdson - Rdson * (1 + Kt * (Tj - Tjb))»
+  «library file: |.subckt p-MOSFET-Rdson-Tj d g s Tj\nS1 N01 s g 0 SWi\nB1 d N01 R=dlim(Rdson*(1+Kt*(V(Tj)-Tjb)),1µ,0)\nR1 Tj 0 1G\nD1 d s Di\n.model SWi SW Ron=1µ Roff=Roff Vt=0.5 Vh=0 TTOL=TTOL\n.model Di D Ron=DRon Roff=Roff Vfwd=DVfwd\n.ends p-MOSFET-Rdson-Tj»
+  «shorted pins: false»
+  «line (35,165) (60,60) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,300) 0 0 0x1000000 -1 -1»
+  «line (0,-190) (0,-300) 0 0 0x1000000 -1 -1»
+  «line (0,-50) (0,10) 0 0 0x1000000 -1 -1»
+  «line (-300,100) (-70,100) 0 0 0x1000000 -1 -1»
+  «line (100,-50) (230,-50) 0 0 0x1000000 -1 -1»
+  «line (165,60) (165,250) 0 0 0x1000000 -1 -1»
+  «line (165,250) (0,250) 0 0 0x1000000 -1 -1»
+  «line (165,-50) (165,-250) 0 0 0x1000000 -1 -1»
+  «line (165,-250) (0,-250) 0 0 0x1000000 -1 -1»
+  «line (-200,-120) (-70,-120) 0 0 0xff00ff -1 -1»
+  «line (-200,-120) (-200,-300) 0 0 0xff00ff -1 -1»
+  «rect (-300,300) (300,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-35,200) (35,130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-35,80) (35,10) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-25,275) (25,225) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «ellipse (-25,-225) (25,-275) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (230,60) (100,60) (165,-50) 0 0 0x1000000 0x1000000 -1 -1»
+  «zigzag (-35,-50) (35,-190) 0 0 0 0x1000000 -1 -1»
+  «text (350,250) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "P-MOSFET-RDSON-TJ"»
+  «text (100,-400) 1 7 0 0x1000000 -1 -1 "Tjb=<25> ;Tj at test"»
+  «text (100,-550) 1 7 0 0x1000000 -1 -1 "Rdson=<100m> ;Rdson at Tjb"»
+  «text (100,-700) 1 7 0 0x1000000 -1 -1 "Kt=<5m> ;Temperature coefficient"»
+  «text (100,-850) 1 7 2 0x1000000 -1 -1 "TTOL=<1>"»
+  «text (100,-1000) 1 7 2 0x1000000 -1 -1 "DVfwd=<0> ;Diode Forward Voltage"»
+  «text (100,-1150) 1 7 2 0x1000000 -1 -1 "DRon=<0> ;Diode Resistance"»
+  «text (100,-1300) 1 7 2 0x1000000 -1 -1 "Roff=<20Meg>"»
+  «pin (0,300) (0,0) 1 15 0 0x0 -1 "d"»
+  «pin (-300,100) (20,0) 1 15 0 0x0 -1 "g"»
+  «pin (0,-300) (0,0) 1 15 0 0x0 -1 "s"»
+  «pin (-200,-300) (20,10) 0.857 6 0 0x0 -1 "Tj"»
+»

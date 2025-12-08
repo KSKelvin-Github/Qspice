@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol Mod 2
+  «type: X»
+  «description: Modulo / Remainder (num%den)»
+  «library file: |.subckt mod num den out\nB1 out 0 V=V(num) % V(den)\n.ends mod»
+  «shorted pins: false»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-180,90) (-140,50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-200,303) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (7,300) 1 7 2 0x1000000 -1 -1 "MOD"»
+  «text (-20,10) 1 0 1 0x1000000 -1 -1 "mod"»
+  «pin (-200,0) (10,10) 0.583 15 0 0x0 -1 "num"»
+  «pin (0,-200) (10,20) 0.583 15 0 0x0 -1 "den"»
+  «pin (200,0) (0,0) 1 0 0 0x0 -1 "out"»
+»

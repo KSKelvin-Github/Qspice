@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol R-Resistor(USA Style Symbol)
+  «type: R»
+  «description: Resistor(USA Style Symbol)»
+  «shorted pins: false»
+  «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
+  «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»
+  «ellipse (-100,150) (-50,100) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "R1"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "<val>"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+»

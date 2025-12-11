@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PWM-PhaseShift-IV&I
   «type: X»
   «description: Phase Shifted PWM -90 to 90 degree (Behavorial Implementation)»
-  «library file: |.subckt PWM-PhaseShift-IV&I Ctrl Sawtooth OutA OutB OutC OutD\nB1 N04 0 V=limit(V(ctrl),LL,UL)\nB2 N02 0 V=limit(0.5,LL,UL)\nB3 Sawtooth 0 V=idt(fsw*2,0,if(time>Tdelay,V(sawtooth)>1,1))\n¥1 p1v 0 N01 ¥ Sawtooth N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥3 p1v 0 N03 ¥ Sawtooth N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nVlogic1V p1v 0 1\n¥2 p1v 0 OutB OutA OutA N01 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=ttol\n¥4 p1v 0 OutD OutC OutC N03 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=ttol\n.param LL=0.01\n.param UL=0.99\n.ends PWM-PhaseShift-IV&I»
+  «library file: |.subckt PWM-PhaseShift-IV&I Ctrl Sawtooth OutA OutB OutC OutD\nB1 N04 0 V=limit(V(ctrl),LL,UL)\nB2 N02 0 V=limit(0.5,LL,UL)\nB3 Sawtooth 0 V=idt(fsw*2,0,if(time>Tdelay,V(sawtooth)>1,1))\n¥1 p1v 0 N01 ¥ Sawtooth N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥3 p1v 0 N03 ¥ Sawtooth N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nVlogic1V p1v 0 1\n¥2 p1v 0 B A A N01 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=ttol IC=1\n¥4 p1v 0 D C C N03 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=ttol IC=1\nB4 OutB 0 V=V(B)*(time>Tdelay)\nB5 OutA 0 V=V(A)*(time>Tdelay)\nB6 OutD 0 V=V(D)*(time>Tdelay)\nB7 OutC 0 V=V(C)*(time>Tdelay)\n.param LL=0.01\n.param UL=0.99\n.ends PWM-PhaseShift-IV&I»
   «shorted pins: false»
   «line (200,250) (250,200) 0 0 0x1000000 -1 -1»
   «line (250,200) (200,150) 0 0 0x1000000 -1 -1»

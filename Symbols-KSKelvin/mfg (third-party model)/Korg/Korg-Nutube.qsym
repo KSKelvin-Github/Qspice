@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol Korg-Nutube
+  «type: X»
+  «description: Korg Nutube (Trioode)»
+  «library file: |.SUBCKT Nutube12 A G K\nBGG GG 0 V=V(G,K)-2\nBEP EP 0 V=URAMP(V(A,K)-1.5)\nBM1 M1 0 V=V(EP)**-0.1129\nBM2 M2 0 V=(URAMP(V(GG)+V(EP)/15.4))**1.613\nBP P 0 V=42e-6*URAMP(V(GG)+V(EP)/18)**1.5\nBIK IK 0 V=U(V(GG))*V(P)+(1-U(V(GG)))*45.26e-6*V(M1)*V(M2)\nBIG IG 0 V=25e-6*URAMP(V(GG))**1.5*(V(GG)/(URAMP(V(EP)+V(GG))+1e-15)*1.2+0.3)\nBIAK A K I=URAMP(V(IK,IG)-URAMP(V(IK,IG)-(22.9e-6*V(EP)**1.5)))+1e-15*V(A,K)\nBIGK G K I=V(IG)\nCGA G A 2.52p\nCGK G K 9.08p\nCAK A K 4.32p\n.ends Nutube12»
+  «shorted pins: false»
+  «line (-100,100) (100,100) 0 0 0x1000000 -1 -1»
+  «line (100,0) (-200,0) 0 1 0x1000000 -1 -1»
+  «line (100,-100) (100,-150) 0 0 0x1000000 -1 -1»
+  «line (-100,-100) (-100,-200) 0 0 0x1000000 -1 -1»
+  «line (0,100) (0,200) 0 0 0x1000000 -1 -1»
+  «rect (-100,-95) (100,-105) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (-200,200) (200,-200) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (250,150) 1 7 0 0x0 -1 -1 "X1"»
+  «text (250,-150) 1 7 0 0x0 -1 -1 "NUTUBE12"»
+  «text (250,0) 1 7 1 0x1000000 -1 -1 "Korg"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "G"»
+  «pin (-100,-200) (0,0) 1 0 0 0x0 -1 "K"»
+»

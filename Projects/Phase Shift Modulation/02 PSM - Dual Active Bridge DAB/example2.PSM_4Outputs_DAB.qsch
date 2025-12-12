@@ -1,0 +1,189 @@
+ÿØÿÛ«schematic
+  «component (-2700,400) 0 0
+    «symbol SrcCLK
+      «type: X»
+      «description: Source - Clock»
+      «library file: |.subckt SrcClk + -\nV1 + - pulse Vlow Vhigh Td Trise Tfall Ton 1/fsw DC=DC\n.ends SrcClk»
+      «shorted pins: false»
+      «line (-70,-30) (-50,-30) 0 0 0x1000000 -1 -1»
+      «line (-50,-30) (-50,30) 0 0 0x1000000 -1 -1»
+      «line (-50,30) (-20,30) 0 0 0x1000000 -1 -1»
+      «line (-20,30) (-20,-30) 0 0 0x1000000 -1 -1»
+      «line (-20,-30) (10,-30) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «line (0,-200) (0,-130) 0 0 0x1000000 -1 -1»
+      «line (10,-30) (10,30) 0 0 0x1000000 -1 -1»
+      «line (10,30) (40,30) 0 0 0x1000000 -1 -1»
+      «line (40,30) (40,-30) 0 0 0x1000000 -1 -1»
+      «line (40,-30) (70,-30) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «triangle (-50,10) (-60,-10) (-40,-10) 0 0 0x1000000 0x2000000 -1 -1»
+      «triangle (10,10) (0,-10) (20,-10) 0 0 0x1000000 0x2000000 -1 -1»
+      «text (200,150) 1 7 0 0x1000000 -1 -1 "X2"»
+      «text (200,0) 1 7 0 0x1000000 -1 -1 "SrcClk"»
+      «text (200,-150) 0.681 7 0 0x0 -1 -1 "Vhigh=<1>"»
+      «text (200,-250) 0.681 7 0 0x0 -1 -1 "Vlow=<0>"»
+      «text (200,-350) 0.681 7 0 0x0 -1 -1 "Td=<0>"»
+      «text (200,-450) 0.681 7 0 0x0 -1 -1 "Ton=<1u>"»
+      «text (200,-550) 0.681 7 0 0x0 -1 -1 "fsw=<fext>"»
+      «text (200,-650) 0.681 7 2 0x1000000 -1 -1 "Trise=<1n>"»
+      «text (200,-750) 0.681 7 2 0x1000000 -1 -1 "Tfall=<1n>"»
+      «text (200,-850) 0.681 7 2 0x1000000 -1 -1 "DC=<0>"»
+      «pin (0,200) (0,0) 1 15 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 15 0 0x0 -1 "-"»
+    »
+  »
+  «component (-1400,-800) 8 0
+    «symbol B1
+      «type: B»
+      «description: Behavioral Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (180,150) 1 7 0 0x1000000 -1 -1 "B1"»
+      «text (180,-150) 1 7 0 0x1000000 -1 -1 "V=if(time>50us,90,-90)"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (-1400,-200) 8 0
+    «symbol B1
+      «type: B»
+      «description: Behavioral Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (180,150) 1 7 0 0x1000000 -1 -1 "B2"»
+      «text (180,-150) 1 7 0 0x1000000 -1 -1 "V=if(time>100us,180,0)"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (-1400,-1400) 8 0
+    «symbol B1
+      «type: B»
+      «description: Behavioral Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (180,150) 1 7 0 0x1000000 -1 -1 "B3"»
+      «text (180,-150) 1 7 0 0x1000000 -1 -1 "V=if(time>150us,180,0)"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (300,0) 0 0
+    «symbol PSM_4Outputs_DAB
+      «type: Ø(.DLL)»
+      «description: Phase Shift Modulation - 4 Outputs - Dual Active Bridge (DAB)»
+      «shorted pins: false»
+      «line (-800,700) (-700,600) 0 0 0x1000000 -1 -1»
+      «line (-700,600) (-800,500) 0 0 0x1000000 -1 -1»
+      «rect (-800,800) (900,-2900) 0 0 0 0x1000000 0xf5d29b -1 0 -1»
+      «text (-800,1050) 1 7 0 0x1000000 -1 -1 "X1"»
+      «text (-800,900) 1 7 0 0x1000000 -1 -1 "PSM_4Outputs_DAB"»
+      «text (-803,-3000) 1 7 0 0x0 -1 -1 "bool ConsoleDisplay=<int[0:1](0)>"»
+      «text (-800,-3150) 1 7 0 0x1000000 -1 -1 "float deadtime=<200n>"»
+      «text (-800,-3300) 1 7 0 0x1000000 -1 -1 "bool intCLK=<int[0:1](0)>"»
+      «text (-800,-3450) 1 7 0 0x1000000 -1 -1 "float fsw=<200K>"»
+      «text (-800,-3600) 1 7 0 0x1000000 -1 -1 "float minPhaseStp=<float[-359:0](-180)>"»
+      «text (-800,-3750) 1 7 0 0x1000000 -1 -1 "float v2degree=<1>"»
+      «text (-766,150) 1 7 1 0x1000000 -1 -1 "1V to v2degree°"»
+      «text (-766,-150) 0.926 7 1 0x1000000 -1 -1 "Phase to A [0-360°)"»
+      «text (-766,-750) 0.926 7 1 0x1000000 -1 -1 "Phase to A"»
+      «text (0,-900) 0.63 0 1 0x1000000 -1 -1 "[minPhaseStp:minPhaseStp+360°)"»
+      «text (-766,-1350) 0.926 7 1 0x1000000 -1 -1 "Phase to C [0-360°)"»
+      «pin (-800,600) (100,0) 1 7 17 0x0 -1 "CLKext"»
+      «pin (-800,0) (20,0) 1 7 145 0x0 -1 "PhaseStpB"»
+      «pin (-800,-600) (20,0) 1 7 145 0x0 -1 "PhaseStpC"»
+      «pin (-800,-1200) (20,0) 1 7 145 0x0 -1 "PhaseStpD"»
+      «pin (900,600) (-20,0) 1 11 18 0x0 -1 "A"»
+      «pin (900,300) (-20,0) 1 11 18 0x0 -1 "¬A"»
+      «pin (900,0) (-20,0) 1 11 18 0x0 -1 "B"»
+      «pin (900,-300) (-20,0) 1 11 18 0x0 -1 "¬B"»
+      «pin (900,-600) (-20,0) 1 11 18 0x0 -1 "C"»
+      «pin (900,-900) (-20,0) 1 11 18 0x0 -1 "¬C"»
+      «pin (900,-1200) (-20,0) 1 11 18 0x0 -1 "D"»
+      «pin (900,-1500) (-20,0) 1 11 18 0x0 -1 "¬D"»
+      «pin (900,-2100) (-20,0) 1 11 18 0x0 -1 "CLKa"»
+      «pin (900,-2300) (-20,0) 1 11 18 0x0 -1 "CLKb"»
+      «pin (900,-2500) (-20,0) 1 11 18 0x0 -1 "CLKc"»
+      «pin (900,-2700) (-10,0) 1 11 18 0x0 -1 "CLKd"»
+      «pin (900,-1900) (-40,0) 1 11 18 0x0 -1 "CLKr"»
+      «pin (-800,-1900) (20,0) 1 7 146 0x0 -1 "PhBdeg"»
+      «pin (-800,-2100) (20,0) 1 7 146 0x0 -1 "PhCdeg"»
+      «pin (-800,-2300) (20,0) 1 7 146 0x0 -1 "PhDdeg"»
+      «pin (-800,-2500) (20,0) 1 7 146 0x0 -1 "debug1"»
+      «pin (-800,-2700) (20,0) 1 7 146 0x0 -1 "debug2"»
+    »
+  »
+  «net (-2700,200) 1 13 0 "GND"»
+  «net (-1400,-400) 1 13 0 "GND"»
+  «net (-800,600) 1 14 0 "CLKext"»
+  «net (-800,0) 1 14 0 "PhBv"»
+  «net (1500,-2100) 1 7 0 "CLKa"»
+  «net (1500,600) 1 7 0 "A"»
+  «net (1500,300) 1 7 0 "¬A"»
+  «net (1500,0) 1 7 0 "B"»
+  «net (1500,-300) 1 7 0 "¬B"»
+  «net (1500,-2300) 1 7 0 "CLKb"»
+  «net (1500,-600) 1 7 0 "C"»
+  «net (1500,-900) 1 7 0 "¬C"»
+  «net (1500,-1200) 1 7 0 "D"»
+  «net (1500,-1500) 1 7 0 "¬D"»
+  «net (1500,-2500) 1 7 0 "CLKc"»
+  «net (1500,-2700) 1 7 0 "CLKd"»
+  «net (-800,-600) 1 14 0 "PhCv"»
+  «net (-800,-1200) 1 14 0 "PhDv"»
+  «net (-1400,-1000) 1 13 0 "GND"»
+  «net (-1400,-1600) 1 13 0 "GND"»
+  «net (1500,-1900) 1 7 0 "CLKr"»
+  «net (-800,-1900) 1 11 0 "PhBdeg"»
+  «net (-800,-2100) 1 11 0 "PhCdeg"»
+  «net (-800,-2300) 1 11 0 "PhDdeg"»
+  «wire (-800,600) (-2700,600) "CLKext"»
+  «wire (1500,600) (1200,600) "A"»
+  «wire (1500,300) (1200,300) "¬A"»
+  «wire (1500,0) (1200,0) "B"»
+  «wire (1500,-300) (1200,-300) "¬B"»
+  «wire (1500,-2300) (1200,-2300) "CLKb"»
+  «wire (1500,-2100) (1200,-2100) "CLKa"»
+  «wire (-500,0) (-800,0) "PhBv"»
+  «wire (-500,600) (-800,600) "CLKext"»
+  «wire (1500,-600) (1200,-600) "C"»
+  «wire (1500,-900) (1200,-900) "¬C"»
+  «wire (1500,-1200) (1200,-1200) "D"»
+  «wire (1500,-1500) (1200,-1500) "¬D"»
+  «wire (1500,-2700) (1200,-2700) "CLKd"»
+  «wire (1500,-2500) (1200,-2500) "CLKc"»
+  «wire (-1400,0) (-800,0) "PhBv"»
+  «wire (-500,-600) (-800,-600) "PhCv"»
+  «wire (-500,-1200) (-800,-1200) "PhDv"»
+  «wire (-800,-600) (-1400,-600) "PhCv"»
+  «wire (-800,-1200) (-1400,-1200) "PhDv"»
+  «wire (1200,-1900) (1500,-1900) "CLKr"»
+  «wire (-500,-1900) (-800,-1900) "PhBdeg"»
+  «wire (-500,-2100) (-800,-2100) "PhCdeg"»
+  «wire (-500,-2300) (-800,-2300) "PhDdeg"»
+  «text (-5600,-2050) 1 7 0 0x1000000 -1 -1 "ï»¿.tran Tstop"»
+  «text (-5600,-1850) 1 7 0 0x1000000 -1 -1 "ï»¿.param fext=100K"»
+  «text (-5600,-1650) 1 7 0 0x1000000 -1 -1 "ï»¿.param Tstop=200Âµ"»
+  «text (-5820,2750) 1 7 1 0x1000000 -1 -1 "ï»¿Phase Shift Modulation DLL module for generating phase-shifted modulated outputs.\nThe output pair (A, Â¬A | B, Â¬B | ...) is complementary with controllable dead time.\n \nPhase control of DAB \nPhaseStpC (accept -ve phase angle) is the voltage input used to regulate the phase between Output C to A\n  - The phase is calculated as: Phase = PhaseStpB * v2degree\n  - v2degree=360 represent 1V = 360 degree of phase change\nminPhaseStp : To control usable phase setpoint of C in the range from [minPhaseStp, minPhaseStp+360)\n(full range can within 360 degree) \nintCLK determines to use external clock (CLKext) or internal clock (switching frequency = fsw)\n \nSoftStart of DAB\nPhaseStpB set phase between Output B to A (only accept 0 to 360 degree)\nPhaseStpD set phase between Otuput D to C (only accept 0 to 360 degree)\n[B is phase shift between leg of primary bridge, D is phase shift between leg of secondary bridge]"»
+  «text (-5600,-2800) 1 7 0 0x1000000 -1 -1 "ï»¿.plot V(A) V(B)+1.1 V(C)+2.2 V(D)+3.3\n.plot V(PhBv) V(PhCv) V(PhDv) \n.plot V(PhBdeg) V(PhCdeg) V(PhDdeg) \n.plot V(A) V(Â¬A) V(B)+1.1 V(Â¬B)+1.1\n.plot V(CLKr) V(CLKa)+1.1 V(CLKb)+2.2 V(CLKc)+3.3 V(CLKd)+4.4"»
+»
+

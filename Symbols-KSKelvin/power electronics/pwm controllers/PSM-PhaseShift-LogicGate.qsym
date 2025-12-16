@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PWM-PhaseShift-LogicGate
   «type: X»
-  «description: Phase Shifted PWM (Logic Gate Implementation)»
-  «library file: |.subckt PWM-PhaseShift-LogicGate Ctrl Sawtooth CLK OutA OutB OutC OutD\nVlogic1V p1v 0 1\n¥4 p1v 0 Qd ¬Q¬d ¬Q¬d CLK 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0\n¥6 p1v 0 OutC OutD Qd ¬Q¬r¬s ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ XOR TTOL=ttol\n¥5 p1v 0 ¥7 ¬Q¬r¬s S CLK ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\n¥3 p1v 0 ¥ S CLK N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=ttol\nB1 Sawtooth 0 V=idt(2*fsw,0,V(sawtooth)>1)\n¥2 p1v 0 N01 ¥ Ctrl Sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥1 p1v 0 CLK ¥ N02 Sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV2 N02 0 1/100\n¥7 p1v 0 OutA OutB Qd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=ttol\n.ends PWM-PhaseShift-LogicGate»
+  «description: Phase Shifted Modulation (Logic Gate Implementation)»
+  «library file: |.subckt PSM-PhaseShift-LogicGate Ctrl Sawtooth CLK OutA OutB OutC OutD\nVlogic1V p1v 0 1\n¥4 p1v 0 Qd ¬Q¬d ¬Q¬d CLK 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0\n¥6 p1v 0 OutC OutD Qd ¬Q¬r¬s ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ XOR TTOL=ttol\n¥5 p1v 0 ¥7 ¬Q¬r¬s S CLK ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\n¥3 p1v 0 ¥ S CLK N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=ttol\nB1 Sawtooth 0 V=idt(2*fsw,0,V(sawtooth)>1)\n¥2 p1v 0 N01 ¥ Ctrl Sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥1 p1v 0 CLK ¥ N02 Sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV2 N02 0 1/100\n¥7 p1v 0 OutA OutB Qd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=ttol\n.ends PSM-PhaseShift-LogicGate»
   «shorted pins: false»
   «line (400,250) (450,200) 0 0 0x1000000 -1 -1»
   «line (450,200) (400,150) 0 0 0x1000000 -1 -1»
@@ -73,7 +73,7 @@
   «arc3p (1250,-650) (1250,-350) (1050,-500) 0 0 0x1000000 -1 -1»
   «arc3p (1200,-650) (1200,-350) (1000,-500) 0 0 0x1000000 -1 -1»
   «text (2000,950) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (2000,800) 0.794 11 0 0x1000000 -1 -1 "PWM-PHASESHIFT-LOGICGATE"»
+  «text (2000,800) 0.794 11 0 0x1000000 -1 -1 "PSM-PHASESHIFT-LOGICGATE"»
   «text (2000,-1100) 1 11 0 0x0 -1 -1 "fsw=<50k>"»
   «text (2000,-1250) 1 11 0 0x0 -1 -1 "ttol=<1n>"»
   «text (470,400) 1 0 1 0x1000000 -1 -1 "D"»

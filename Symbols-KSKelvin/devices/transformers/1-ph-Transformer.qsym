@@ -27,14 +27,14 @@
   «zigzag (500,350) (700,250) 0 0 0 0x1000000 -1 -1»
   «text (0,350) 1 0 0 0x0 -1 -1 "X1"»
   «text (0,500) 1 0 2 0x1000000 -1 -1 "1-PH-TRANSFORMER"»
-  «text (-300,-450) 1 7 0 0x0 -1 -1 "Kcoup=<1>"»
-  «text (-300,-600) 1 7 0 0x0 -1 -1 "Lm=<0.5>"»
-  «text (-300,-750) 1 7 0 0x0 -1 -1 "Np=<1>"»
-  «text (-300,-900) 1 7 0 0x0 -1 -1 "Ns=<1>"»
-  «text (-300,-1050) 1 7 0 0x0 -1 -1 "Lp=<0.0001>"»
-  «text (-300,-1200) 1 7 0 0x0 -1 -1 "Ls=<0.0001>"»
-  «text (-300,-1350) 1 7 0 0x0 -1 -1 "Rp=<0.001>"»
-  «text (-300,-1500) 1 7 0 0x0 -1 -1 "Rs=<0.001>"»
+  «text (-300,-1500) 1 7 2 0x1000000 -1 -1 "Kcoup=<1>; Always 1 in this model"»
+  «text (-300,-450) 1 7 0 0x0 -1 -1 "Lm=<0.5>; Magnetizing inductance"»
+  «text (-300,-600) 1 7 0 0x0 -1 -1 "Np=<1>; No. of turns in primary"»
+  «text (-300,-750) 1 7 0 0x0 -1 -1 "Ns=<1>; No. of turns in secondary"»
+  «text (-300,-900) 1 7 0 0x0 -1 -1 "Lp=<0.0001>; Primary leakage inductance"»
+  «text (-300,-1050) 1 7 0 0x0 -1 -1 "Ls=<0.0001>; Secondary leakage inductance"»
+  «text (-300,-1200) 1 7 0 0x0 -1 -1 "Rp=<0.001>; Primary resistance"»
+  «text (-300,-1350) 1 7 0 0x0 -1 -1 "Rs=<0.001>; Secondary resistance"»
   «text (0,-270) 0.857 0 1 0x1000000 -1 -1 "Np:Ns"»
   «text (-600,200) 0.681 0 1 0x1000000 -1 -1 "Rp"»
   «text (-350,200) 0.681 0 1 0x1000000 -1 -1 "Lp"»

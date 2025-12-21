@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol Resistor-Log-VCTRL
+  «type: X»
+  «description: Resistor in Log Scale with External Control»
+  «library file: |.subckt Resistor-Log-VCTRL + - adj\nB1 + - R=limit(Rmax*10^(log10(Rmax/Rmin)*(V(adj)-1)),Rmin,Rmax)\n.ends Resistor-Log-VCTRL»
+  «shorted pins: false»
+  «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
+  «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (130,190) (80,150) 0 0 0x1000000 -1 -1»
+  «line (130,190) (150,130) 0 0 0x1000000 -1 -1»
+  «arc3p (-160,-170) (130,190) (-450,190) 0 0 0x1000000 -1 -1»
+  «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
+  «text (150,0) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "RESISTOR-LOG-VCTRL"»
+  «text (150,-150) 1 7 0 0x0 -1 -1 "Rmax=<100k>"»
+  «text (150,-300) 1 7 0 0x0 -1 -1 "Rmin=<1k>"»
+  «text (-120,120) 0.5 96 1 0x1000000 -1 -1 "0-1V"»
+  «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»
+  «pin (-100,0) (0,0) 1 15 0 0x0 -1 "adj"»
+»

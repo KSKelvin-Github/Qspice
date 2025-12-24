@@ -1,12 +1,13 @@
-ÿØÿÛ«symbol Resistor-Log-VCTRL
+ÿØÿÛ«symbol Pot-Logarithmic-VCTRL
   «type: X»
-  «description: Resistor in Logarithmic with Knob Adjustment»
-  «library file: |.subckt Resistor-Log-VCTRL + - knob\nB1 + - R=limit(Rmax*10^(log10(Rmax/Rmin)*(V(knob)-1)),Rmin,Rmax)\n.ends Resistor-Log-VCTRL»
+  «description: Potentiometer Logarithmic Taper with Knob Adjustment»
+  «library file: |.subckt Pot-Logarithmic-VCTRL + - m knob\nR1 + m R=V(w)*Rt\nR2 m - R=(1-V(w))*Rt\nB2 w 0 V=1-10^(dB*(V(knobLIMIT)-1)/10)\nR3 knob 0 1G\nB1 knobLIMIT 0 V=limit(V(knob),1e-3,1-1e-3)\n.ends Pot-Logarithmic-VCTRL»
   «shorted pins: false»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»
   «line (130,190) (80,150) 0 0 0x1000000 -1 -1»
   «line (130,190) (150,130) 0 0 0x1000000 -1 -1»
+  «line (100,0) (300,0) 0 0 0x1000000 -1 -1»
   «line (-120,155) (-120,135) 0 0 0x1000000 -1 -1»
   «line (-95,115) (-145,115) 0 0 0x1000000 -1 -1»
   «line (-95,115) (-110,125) 0 0 0x1000000 -1 -1»
@@ -14,12 +15,14 @@
   «line (-145,75) (-95,55) 0 0 0x1000000 -1 -1»
   «ellipse (-145,195) (-95,165) 0 0 0 0x1000000 0x1000000 -1 -1»
   «arc3p (-160,-170) (130,190) (-450,190) 0 0 0x1000000 -1 -1»
+  «triangle (100,0) (150,50) (150,-50) 0 0 0x1000000 0x2000000 -1 -1»
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
-  «text (150,0) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (0,300) 1 0 2 0x1000000 -1 -1 "RESISTOR-LOG-VCTRL"»
-  «text (150,-150) 1 7 0 0x0 -1 -1 "Rmax=<100k> ;maximum resistance at knob=1V"»
-  «text (150,-300) 1 7 0 0x0 -1 -1 "Rmin=<1k> ;minimum resistance at knob=0V"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "POT-LOGARITHMIC-VCTRL"»
+  «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<10k> ;total resistance"»
+  «text (100,-450) 1 7 0 0x0 -1 -1 "dB=<20> ;attenuation(dB)@knob=0V"»
   «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
   «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»
+  «pin (300,0) (0,0) 1 0 0 0x0 -1 "m"»
   «pin (-100,0) (0,0) 1 15 0 0x0 -1 "knob"»
 »

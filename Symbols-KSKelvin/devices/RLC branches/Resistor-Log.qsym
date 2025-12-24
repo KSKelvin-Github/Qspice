@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Resistor-Log
   «type: X»
-  «description: Resistor in Log Scale»
-  «library file: |.subckt Resistor-Log + -\nB1 + - R=limit(Rmax*10^(log10(Rmax/Rmin)*(adj-1)),Rmin,Rmax)\n.ends Resistor-Log»
+  «description: Resistor in Logarithmic (Knob : 0 to 1)»
+  «library file: |.subckt Resistor-Log + -\nB1 + - R=limit(Rmax*10^(log10(Rmax/Rmin)*(knob-1)),Rmin,Rmax)\n.ends Resistor-Log»
   «shorted pins: false»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»
@@ -11,9 +11,9 @@
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
   «text (150,0) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 0 2 0x1000000 -1 -1 "RESISTOR-LOG"»
-  «text (150,-150) 1 7 0 0x0 -1 -1 "Rmax=<100k>"»
-  «text (150,-300) 1 7 0 0x0 -1 -1 "Rmin=<1k>"»
-  «text (150,-450) 1 7 0 0x0 -1 -1 "adj=<0.5> ;adjust with 0(0%)-1(100%)"»
+  «text (150,-150) 1 7 0 0x0 -1 -1 "Rmax=<100k> ;maximum resistance at knob=1"»
+  «text (150,-300) 1 7 0 0x0 -1 -1 "Rmin=<1k> ;minimum resistance at knob=0"»
+  «text (150,-450) 1 7 0 0x0 -1 -1 "knob=<0.5> ;knob adjust with 0(0%)-1(100%)"»
   «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
   «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»
 »

@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Pot-Logarithmic
+  «type: X»
+  «description: Potentiometer Logarithmic Taper»
+  «library file: |.subckt Pot-Logarithmic + - m\nR1 + m R=w*Rt\nR2 m - R=(1-w)*Rt\n.param knob=0.5\n.param knobLIMIT=limit(knob,1e-3,1-1e-3)\n.param w=1-10^(dB*(knobLIMIT-1)/10)\n.ends Pot-Logarithmic»
+  «shorted pins: false»
+  «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
+  «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (130,190) (80,150) 0 0 0x1000000 -1 -1»
+  «line (130,190) (150,130) 0 0 0x1000000 -1 -1»
+  «line (100,0) (300,0) 0 0 0x1000000 -1 -1»
+  «arc3p (-160,-170) (130,190) (-450,190) 0 0 0x1000000 -1 -1»
+  «triangle (100,0) (150,50) (150,-50) 0 0 0x1000000 0x2000000 -1 -1»
+  «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "POT-LOGARITHMIC"»
+  «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<10k> ;total resistance"»
+  «text (100,-450) 1 7 0 0x0 -1 -1 "dB=<20> ;attenuation@knob=0V"»
+  «text (100,-600) 1 7 0 0x0 -1 -1 "knob=<0.5> ;knob position 0(0%)-1(100%)"»
+  «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»
+  «pin (300,0) (0,0) 1 0 0 0x0 -1 "m"»
+»

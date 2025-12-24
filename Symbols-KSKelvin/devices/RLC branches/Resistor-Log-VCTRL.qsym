@@ -1,18 +1,19 @@
 ÿØÿÛ«symbol Resistor-Log-VCTRL
   «type: X»
   «description: Resistor in Logarithmic with Knob Adjustment»
-  «library file: |.subckt Resistor-Log-VCTRL + - knob\nB1 + - R=limit(Rmax*10^(log10(Rmax/Rmin)*(V(knob)-1)),Rmin,Rmax)\n.ends Resistor-Log-VCTRL»
+  «library file: |.subckt Resistor-Log-VCTRL + - knob\nR1 + - R=limit(Rmax*10^(log10(Rmax/Rmin)*(V(knob)-1)),Rmin,Rmax)\n.ends Resistor-Log-VCTRL»
   «shorted pins: false»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»
   «line (130,190) (80,150) 0 0 0x1000000 -1 -1»
   «line (130,190) (150,130) 0 0 0x1000000 -1 -1»
-  «line (-120,155) (-120,135) 0 0 0x1000000 -1 -1»
-  «line (-95,115) (-145,115) 0 0 0x1000000 -1 -1»
-  «line (-95,115) (-110,125) 0 0 0x1000000 -1 -1»
-  «line (-95,95) (-145,75) 0 0 0x1000000 -1 -1»
-  «line (-145,75) (-95,55) 0 0 0x1000000 -1 -1»
-  «ellipse (-145,195) (-95,165) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «line (-200,95) (-180,95) 0 0 0x1000000 -1 -1»
+  «line (-160,120) (-160,70) 0 0 0x1000000 -1 -1»
+  «line (-160,120) (-170,105) 0 0 0x1000000 -1 -1»
+  «line (-140,120) (-120,70) 0 0 0x1000000 -1 -1»
+  «line (-120,70) (-100,120) 0 0 0x1000000 -1 -1»
+  «ellipse (-240,70) (-210,120) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-200,40) (-120,-40) 0 0 0 0x1000000 0xffe6c8 -1 -1»
   «arc3p (-160,-170) (130,190) (-450,190) 0 0 0x1000000 -1 -1»
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
   «text (150,0) 1 7 0 0x1000000 -1 -1 "X1"»
@@ -21,5 +22,5 @@
   «text (150,-300) 1 7 0 0x0 -1 -1 "Rmin=<1k> ;minimum resistance at knob=0V"»
   «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
   «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»
-  «pin (-100,0) (0,0) 1 15 0 0x0 -1 "knob"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "knob"»
 »

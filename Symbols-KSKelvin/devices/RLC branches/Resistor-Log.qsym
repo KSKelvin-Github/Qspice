@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Resistor-Log
   «type: X»
   «description: Resistor in Logarithmic (Knob : 0 to 1)»
-  «library file: |.subckt Resistor-Log + -\nB1 + - R=limit(Rmax*10^(log10(Rmax/Rmin)*(knob-1)),Rmin,Rmax)\n.ends Resistor-Log»
+  «library file: |.subckt Resistor-Log + -\nR1 + - limit(Rmax*10^(log10(Rmax/Rmin)*(knob-1)),Rmin,Rmax)\n.ends Resistor-Log»
   «shorted pins: false»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»

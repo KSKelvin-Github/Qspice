@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol Fuse-I2T-Simple
+  «type: X»
+  «description: Fuse (Simple Model, I2T for I > melt current)»
+  «library file: |.subckt Fuse-I2T-Simple port1 port2 I2T fuseOpen\nVsense port1 N02 0\nR1 N02 N01 Rnom\nS1 N01 port2 N03 0 SWi\nB1 conditioned 0 V=if( abs(I(Vsense))>Imelt_min, abs(I(Vsense)), 0)\nB2 I2T 0 V=idt(V(conditioned)^2)\nB3 N03 0 V=if( V(I2T)>I2Tnom, 0, 1)\nVlogic1V p1v 0 1\n¥1 p1v 0 ¥ fuseOpen N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.model SWi SW Ron=1m Roff=100Meg Vt=0.5 Vh=0 TTOL=1µ\n.ends Fuse-I2T-Simple»
+  «shorted pins: false»
+  «line (-235,0) (-300,0) 0 0 0x1000000 -1 -1»
+  «line (225,0) (300,0) 0 0 0x1000000 -1 -1»
+  «rect (-300,150) (300,-500) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-235,35) (-165,-35) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (155,35) (225,-35) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «arc3p (-195,-35) (0,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «arc3p (195,35) (0,0) (100,0) 0 0 0x1000000 -1 -1»
+  «text (-300,400) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,250) 1 7 0 0x1000000 -1 -1 "FUSE-I2T-SIMPLE"»
+  «text (-300,-600) 1 7 0 0x0 -1 -1 "Irated=<15> ;rated current (display only)"»
+  «text (-300,-750) 1 7 0 0x0 -1 -1 "Imelt_min=<30> ;minimum melt current (not rated)"»
+  «text (-300,-900) 1 7 0 0x0 -1 -1 "Rnom=<0.00446> ;nominal resistance"»
+  «text (-300,-1050) 1 7 0 0x0 -1 -1 "I2Tnom=<68.8> ;nominal melting"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "port1"»
+  «pin (300,0) (20,0) 1 15 0 0x0 -1 "port2"»
+  «pin (300,-200) (-20,0) 0.794 11 0 0x0 -1 "I2T"»
+  «pin (300,-400) (-20,0) 0.794 11 0 0x0 -1 "fuseOpen"»
+»

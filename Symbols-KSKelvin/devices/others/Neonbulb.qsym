@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Neonbulb
   «type: X»
   «description: Neon Bulb»
-  «library file: |.subckt neonbulb 1 2\nXS1 1 2 2 N001 G\nXS2 2 1 N001 2 G\nR1 1 N001 100Meg\nC1 N001 2 {Tau/100Meg}\n.subckt G + - +C -C Ron={Zon} Roff=1T Vt={.5*(Vstrike+Vhold)} Vh={.5*(Vstrike-Vhold)} Vser={Vhold-Ihold*Zon}\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nDS1 - N002 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW(Ron=Ron Roff=Roff Vt=Vt Vh=Vh)\n.ends G\n.param Vstrike=100 Vhold=50 Zon=2K Ihold=200u Tau=100u\n.ends neonbulb»
+  «library file: |.subckt neonbulb 1 2\nXS1 1 2 2 N001 G\nXS2 2 1 N001 2 G\nR1 1 N001 100Meg\nC1 N001 2 {Tau/100Meg}\n.subckt G + - +C -C Vser={Vhold-Ihold*Zon}\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nDS1 - N002 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW Ron={Zon} Roff=1T Vt={.5*(Vstrike+Vhold)} Vh={.5*(Vstrike-Vhold)}\n.ends G\n.param Vstrike=100 Vhold=50 Zon=2K Ihold=200u Tau=100u\n.ends neonbulb»
   «shorted pins: false»
   «line (0,240) (0,400) 0 0 0x1000000 -1 -1»
   «line (0,60) (0,-100) 0 0 0x1000000 -1 -1»

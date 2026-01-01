@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Src-GatingBlock
   «type: X»
-  «description: Gating Block»
+  «description: Gating Block (Gate Input Degree)»
   «library file: |.subckt Src-GatingBlock gate\nV1 gate 0 PULSE lo hi theta1/360/fsw+Td 1n 1n (theta2-theta1)/360/fsw 1/fsw\n.ends Src-GatingBlock»
   «shorted pins: false»
   «line (-370,-50) (-320,-50) 0 0 0x1000000 -1 -1»

@@ -4,6 +4,7 @@
 
 ## Files
 * FRAnalyzer2KSK.qsym - symbol of FRA
+* franalyzer2ksk.dll - .dll file required in simulation
 * franalyzer2ksk.cpp - C++ code (only requires if you want to study or modify the code)
 
 ## Folders

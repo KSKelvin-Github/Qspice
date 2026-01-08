@@ -1,0 +1,35 @@
+ÿØÿÛ«symbol Bode-InOut-Switch
+  «type: X»
+  «library file: |.subckt Bode-InOut-Switch num den num0 den0 num1 den1\nR1num num0 num R=if(idx==0,1µ,1G)\nR2num num1 num R=if(idx==1,1µ,1G)\nR1den den0 den R=if(idx==0,1µ,1G)\nR2den den1 den R=if(idx==1,1µ,1G)\nRnum num 0 1Meg\nRden den 0 1Meg\n.ends Bode-InOut-Switch»
+  «shorted pins: false»
+  «line (-950,100) (-600,100) 0 0 0x1000000 -1 -1»
+  «line (-950,-500) (-600,-500) 0 0 0x1000000 -1 -1»
+  «line (530,-200) (850,-200) 0 0 0x1000000 -1 -1»
+  «line (-450,-500) (-100,-500) 0 0 0x1000000 -1 -1»
+  «line (-100,-500) (50,-350) 0 0 0x1000000 -1 -1»
+  «line (50,-50) (-100,100) 0 0 0x1000000 -1 -1»
+  «line (-100,100) (-450,100) 0 0 0x1000000 -1 -1»
+  «line (220,-200) (0,-150) 0 0 0x1000000 -1 -1»
+  «line (320,-200) (470,-200) 0 0 0x1000000 -1 -1»
+  «rect (-1000,1200) (900,-700) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (220,-150) (320,-250) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (0,-50) (100,-150) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (0,-250) (100,-350) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-1000,1450) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-1000,1300) 1 7 0 0x1000000 -1 -1 "BODE-INOUT-SWITCH"»
+  «text (-1000,-800) 1 7 0 0x0 -1 -1 "idx=<idx>; Don't change this"»
+  «text (-950,1000) 0.794 7 1 0x1000000 -1 -1 "1. add ".step param idx list 0 1""»
+  «text (-950,1120) 0.794 7 1 0x1000000 -1 -1 "Procedure (for .bode)"»
+  «text (-950,880) 0.794 7 1 0x1000000 -1 -1 "2. Label port den as "den""»
+  «text (-950,760) 0.794 7 1 0x1000000 -1 -1 "3. Label port num as "num""»
+  «text (-950,640) 0.794 7 1 0x1000000 -1 -1 "4. Add ".option BodeOut=num""»
+  «text (-950,520) 0.794 7 1 0x1000000 -1 -1 "5. Add ".option BodeIn=den""»
+  «text (-950,320) 0.794 7 1 0x1000000 -1 -1 "TF(idx=0)"»
+  «text (-950,-280) 0.794 7 1 0x1000000 -1 -1 "TF(idx=1)"»
+  «pin (900,-100) (-50,0) 1 11 0 0x0 -1 "num"»
+  «pin (900,-300) (-80,0) 1 11 0 0x0 -1 "den"»
+  «pin (-1000,200) (30,0) 1 7 0 0x0 -1 "num0"»
+  «pin (-1000,0) (50,0) 1 7 0 0x0 -1 "den0"»
+  «pin (-1000,-400) (30,0) 1 7 0 0x0 -1 "num1"»
+  «pin (-1000,-600) (50,0) 1 7 0 0x0 -1 "den1"»
+»

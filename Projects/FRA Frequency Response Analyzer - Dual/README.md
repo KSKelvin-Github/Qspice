@@ -11,7 +11,7 @@
 
 ## Screen Capture
 * example1.Buck-FRAnalyzer2KSK.qsch
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/FRA%20Frequency%20Response%20Analyzer/screen%20capture/FRA%20(screen%20capture%231).png)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/FRA%20Frequency%20Response%20Analyzer%20-%20Dual/screen%20capture/FRA%20(screen%20capture%231).png)
 
 * example6.TransferFunction-FRAanlyzer2KSK.qsch
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/FRA%20Frequency%20Response%20Analyzer/screen%20capture/FRA%20(screen%20capture%232).png)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/FRA%20Frequency%20Response%20Analyzer%20-%20Dual/screen%20capture/FRA%20(screen%20capture%232).png)

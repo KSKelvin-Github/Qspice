@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol TL431A-analog@ieee
+  «type: X»
+  «description: TL431A marco model (analog@ieee.org)»
+  «library file: |.SUBCKT TL431A Ref Anode Cathode\nR1 Ref Anode 1e6\nD4 Anode 4 2V5\nD5 Anode Cathode Dc\nD1 Ref Cathode Dc\nG2 Cathode 4 6 Anode 90m\nG1 Anode 5 Ref 4 1\nC1 5 Anode 1n Rpar=1k\nR2 6 5 700k\nD2 4 Ref Dc\nD3 Anode 6 Di\nC2 Cathode 6 40p Rser=6k Rpar=400k\n.model Di D(Ron=10m)\n.model Dc D(Ron=7 Vfwd=.6 Vrev=36)\n.model 2V5 D(Ron=.13 Vfwd=.6 Vrev=2.5 Roff=7k)\n.backanno\n.ends»
+  «shorted pins: false»
+  «line (-50,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «line (80,80) (-80,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «line (80,80) (130,130) 0 0 0x1000000 -1 -1»
+  «line (-130,30) (-80,80) 0 0 0x1000000 -1 -1»
+  «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (150,100) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,-50) 1 7 0 0x1000000 -1 -1 "TL431A"»
+  «text (150,-180) 0.681 7 1 0x1000000 -1 -1 "analog@ieee"»
+  «pin (-200,0) (40,80) 1 15 0 0x0 -1 "R"»
+  «pin (0,-200) (90,180) 1 15 0 0x0 -1 "A"»
+  «pin (0,200) (-20,90) 1 15 0 0x0 -1 "K"»
+»

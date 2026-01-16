@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol LM337-1
+  «type: X»
+  «description: LM337-1 Negative Adjustable Regulator -1.5A Output»
+  «library file: |.SUBCKT LM337-1 8 1 19\n.MODEL QN NPN (BF=50 TF=1N CJC=1P)\n.MODEL QPOUT PNP (BF=50 TF=1N RE=.2 CJC=1P)\n.MODEL QP PNP CJC=1P TF=2N\n.MODEL DN D\n.MODEL D2 D BV=12 IBV=100U\nR10 25 6 1K\nQ3 8 17 16 QPOUT\nQ4 8 25 17 QP\nR18 19 17 250\nR19 19 16 .3\nG1 8 6 1 18 .1\nC7 6 2 .04U\nR24 2 8 100\nI_ADJ 0 1 65U\nR26 8 25 200K\nQ5 25 4 19 QP\nR27 16 4 200\nR28 7 4 7K\nD1 8 7 D2\nD2 8 6 DN\nV1 18 19 1.25\n.ENDS»
+  «shorted pins: false»
+  «rect (-400,-300) (400,300) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «ellipse (-350,250) (-280,180) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (0,400) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 0 0 0x1000000 -1 -1 "LM337-1"»
+  «pin (-400,0) (20,0) 1 15 0 0x0 -1 "IN"»
+  «pin (0,-300) (-20,0) 0.794 14 0 0x0 -1 "ADJ"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

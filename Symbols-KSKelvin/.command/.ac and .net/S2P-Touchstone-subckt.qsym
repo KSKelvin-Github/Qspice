@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol S2P-Touchstone-subckt
+  «type: X»
+  «description: S-parameters 2-Ports (.s2p) (.subckt)»
+  «library file: |.subckt S2P-Eqn-ReIm 1+ 2+ 1- 2-\nR0 1+ 100 -Zo\nR1 100 1- 2*Zo\nR2 2+ 200 -Zo\nR3 200 2- 2*Zo\nB0 1- 100 I=V(100,1-) r_i FREQ 1 S11r/2/Zo S11i/2/Zo\nB1 1- 100 I=V(200,2-) r_i FREQ 1 S12r/2/Zo S12i/2/Zo\nB2 2- 200 I=V(100,1-) r_i FREQ 1 S21r/2/Zo S21i/2/Zo\nB3 2- 200 I=V(200,2-) r_i FREQ 1 S22r/2/Zo S22i/2/Zo\n.ends S2P-Eqn-ReIm»
+  «shorted pins: false»
+  «rect (-400,300) (400,-300) 0 0 0 0x1000000 0xffff -1 0 -1»
+  «text (0,550) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,400) 1 0 0 0x1000000 -1 -1 "<model>"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 ".s2p"»
+  «pin (-400,100) (20,0) 1 7 0 0x0 -1 "1"»
+  «pin (400,100) (-20,0) 1 11 0 0x0 -1 "2"»
+  «pin (0,-300) (-20,0) 1 14 0 0x0 -1 "REF"»
+»

@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol S2P-Eqn-ReIm
+  «type: X»
+  «description: S-parameters 2-Ports Equation (real,imaginary)»
+  «library file: |.subckt S2P-Eqn-ReIm 1+ 2+ 1- 2-\nR0 1+ 100 -Zo\nR1 100 1- 2*Zo\nR2 2+ 200 -Zo\nR3 200 2- 2*Zo\nB0 1- 100 I=V(100,1-) r_i FREQ 1 S11r/2/Zo S11i/2/Zo\nB1 1- 100 I=V(200,2-) r_i FREQ 1 S12r/2/Zo S12i/2/Zo\nB2 2- 200 I=V(100,1-) r_i FREQ 1 S21r/2/Zo S21i/2/Zo\nB3 2- 200 I=V(200,2-) r_i FREQ 1 S22r/2/Zo S22i/2/Zo\n.ends S2P-Eqn-ReIm»
+  «shorted pins: false»
+  «rect (-400,300) (400,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,1150) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,1000) 1 0 0 0x1000000 -1 -1 "S2P-EQN-REIM"»
+  «text (-42,850) 1 11 0 0x0 -1 -1 "S11r=<0>"»
+  «text (38,850) 1 7 0 0x0 -1 -1 "S11i=<0>"»
+  «text (-42,700) 1 11 0 0x0 -1 -1 "S21r=<1>"»
+  «text (38,700) 1 7 0 0x0 -1 -1 "S21i=<0>"»
+  «text (-42,550) 1 11 0 0x0 -1 -1 "S12r=<1>"»
+  «text (38,550) 1 7 0 0x0 -1 -1 "S12i=<0>"»
+  «text (-42,400) 1 11 0 0x0 -1 -1 "S22r=<0>"»
+  «text (38,400) 1 7 0 0x0 -1 -1 "S22i=<0>"»
+  «text (0,-400) 1 0 0 0x1000000 -1 -1 "Zo=<50>"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "S2P"»
+  «pin (-400,200) (20,0) 1 7 0 0x0 -1 "1+"»
+  «pin (400,200) (-20,0) 1 11 0 0x0 -1 "2+"»
+  «pin (-400,-200) (20,0) 1 7 0 0x0 -1 "1-"»
+  «pin (400,-200) (-20,0) 1 11 0 0x0 -1 "2-"»
+»

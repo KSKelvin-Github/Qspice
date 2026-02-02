@@ -38,7 +38,7 @@
       «pin (0,-300) (0,0) 1 0 0 0x0 -1 "-"»
     »
   »
-  «component (-1100,-1600) 0 0
+  «component (-1200,-1400) 0 0
     «symbol .ac1 - Sweep
       «type: .»
       «description: AC - LIN/DEC/OCT Sweep»
@@ -81,7 +81,7 @@
       «text (150,300) 0.926 15 1 0x1000000 -1 -1 "Sweep"»
     »
   »
-  «component (800,-1600) 0 0
+  «component (600,-1400) 0 0
     «symbol .net - Two Ports
       «type: .»
       «description: NET - Two Ports (.ac)»

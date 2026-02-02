@@ -1,0 +1,11 @@
+ÿØÿÛ«symbol Get-Freq(.ac)
+  «type: X»
+  «description: Get Frequency in .ac»
+  «library file: |.subckt Get-Freq FRQ\nV1 AC1 0 AC 1\nB1 FRQ 0 V=V(AC1) mag FREQ 0,0,0, 100T,100T,0\n.ends Get-Freq»
+  «shorted pins: false»
+  «line (300,0) (200,0) 0 0 0x1000000 -1 -1»
+  «ellipse (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (0,450) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "GET-FREQ"»
+  «pin (300,0) (-150,0) 1 11 0 0x0 -1 "FRQ"»
+»

@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol B-DIODE
+  «type: X»
+  «description: B-Source Diode (Arief)»
+  «library file: |.subckt Diode K A\nB4 A K I=if(v(A,K)>vfwdlim,(v(A,K)-vfwdlim)/rfwd,v(A,K)/roff)\n.param rfwd=1m roff=1E9 vfwd=1\n.param vfwdlim=vfwd*(roff/rfwd)/(roff/rfwd - 1)\n.ends Diode»
+  «shorted pins: false»
+  «line (100,-120) (-100,-120) 0 0 0x1000000 -1 -1»
+  «line (0,0) (0,-120) 0 0 0x1000000 -1 -1»
+  «line (0,-400) (0,-270) 0 0 0x1000000 -1 -1»
+  «triangle (0,-120) (100,-270) (-100,-270) 0 0 0x1000000 0x2000000 -1 -1»
+  «text (150,0) 1 7 0 0x1000000 -1 -1 "BD1"»
+  «text (150,-500) 1 7 2 0x1000000 -1 -1 "Diode"»
+  «text (150,-150) 0.681 7 0 0x1000000 -1 -1 "vfwd=<1>"»
+  «text (150,-250) 0.681 7 0 0x1000000 -1 -1 "rfwd=<1m>"»
+  «text (150,-350) 0.681 7 0 0x1000000 -1 -1 "roff=<1G>"»
+  «pin (0,0) (0,0) 0.5 15 0 0x0 -1 "K"»
+  «pin (0,-400) (0,0) 0.5 15 0 0x0 -1 "A"»
+»

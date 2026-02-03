@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol B-SWITCH
+  «type: X»
+  «description: B-Source Bidirectional Source (Arief)»
+  «library file: |.subckt Bsw D1 D2 G\nB1 D1 D2 R=if(v(G),ron,roff)\n.ends Bsw»
+  «shorted pins: false»
+  «line (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (100,0) (200,0) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (0,-300) 0 0 0xff00ff -1 -1»
+  «line (100,0) (-100,-100) 0 0 0x1000000 -1 -1»
+  «triangle (0,-100) (25,-155) (-25,-155) 0 0 0xff00ff 0xff00ff -1 -1»
+  «text (0,150) 1 15 0 0x1000000 -1 -1 "BSW1"»
+  «text (100,-300) 0.681 7 2 0x1000000 -1 -1 "BSW"»
+  «text (100,-100) 0.681 7 0 0x1000000 -1 -1 "ron=<1m>"»
+  «text (100,-200) 0.681 7 0 0x1000000 -1 -1 "roff=<1G>"»
+  «pin (-200,0) (20,0) 1 15 0 0x0 -1 "D1"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "D2"»
+  «pin (0,-300) (0,0) 1 15 0 0x0 -1 "G"»
+»

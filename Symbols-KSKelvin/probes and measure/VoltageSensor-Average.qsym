@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol VoltageSensor-Average
   «type: X»
-  «description: Voltage Sensor (Average)»
+  «description: Voltage Sensor (Average/Mean) - Discrete Output»
   «library file: |.subckt VoltageSensor-Average INpos INneg Avg CLK\nVdd Vdd 0 Vhigh\nVss Vss 0 Vlow\nVclk CLK 0 pulse 0 1 0 0 0 .1/fsamp 1/fsamp\n¥1 Vdd Vss IDT0 ¥ IDT CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow TTOL=TTOL\n¥2 Vdd Vss IDT1 ¥ IDT0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow\n¥3 Vdd Vss T0 ¥ T CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow\n¥4 Vdd Vss T1 ¥ T0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH REF=0.5-Vlow IC=-Vlow\nB1 IDT 0 V=idt(V(INpos,INneg)*gain,0)\nB2 T 0 V=time\nB3 Avg 0 V=if(time>1/fsamp,(V(IDT0)-V(IDT1))/(V(T0)-V(T1)),0)\n.param Vhigh=1e9\n.param Vlow=-1e9\n.ends VoltageSensor-Average»
   «shorted pins: false»
   «line (-200,200) (-200,-200) 0 0 0x1000000 -1 -1»

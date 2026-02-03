@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Measure-RMS-MEAN
   «type: X»
-  «description: Measure RMS and Mean (set tau to duration of few AC cycles)»
+  «description: Measure RMS and Mean/Average (set tau to duration of few AC cycles)»
   «library file: |.subckt Measure-RMS-MEAN x rms avg\nB1 rms 0 V=sqrt(idt((V(x)^2-if(time<tau,0,delay(V(x)^2,tau))))/tau)\nB2 avg 0 V=idt(V(x)-if(time<tau,0,delay(V(x),tau)))/tau\n.ends Measure-RMS-MEAN»
   «shorted pins: false»
   «line (-300,0) (-200,0) 0 0 0x1000000 -1 -1»

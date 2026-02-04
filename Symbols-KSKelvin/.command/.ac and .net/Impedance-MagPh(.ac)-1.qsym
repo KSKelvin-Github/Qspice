@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol Impedance-MagPh(.ac)-1
+  «type: X»
+  «description: Impedance Mag-Phase(degree) (.ac)»
+  «library file: |.subckt Impedance-MagPh + -\nR1 + - AC R X\n.param R=mag*cos(ph*pi/180)\n.param X=mag*sin(ph*pi/180)\n.ends Impedance-MagPh»
+  «shorted pins: false»
+  «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-180) 0 0 0x1000000 -1 -1»
+  «rect (-100,180) (100,-180) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (150,150) 1 7 0 0x0 -1 -1 "X1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "IMPEDANCE-MAGPH"»
+  «text (150,0) 1 7 0 0x0 -1 -1 "mag=<1> ;magnitude"»
+  «text (150,-150) 1 7 0 0x0 -1 -1 "ph=<0> ;phase in degree"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+»

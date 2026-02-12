@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol TTOL-I-2
+  «type: X»
+  «description: TTOL-I (Current)»
+  «library file: |.subckt TTOL-I + -\n¥1 0 0 ¥2 ¥3 N02 N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\nV2 N01 0 REF\nV1 + - 0\nB1 N02 0 V=I(V1)\n.ends TTOL-I»
+  «shorted pins: false»
+  «line (0,-100) (0,100) 0 0 0x1000000 -1 -1»
+  «arc3p (0,-100) (0,100) (-40,70) 0 0 0xff00ff -1 -1»
+  «arc3p (0,100) (0,-100) (40,70) 0 0 0xff00ff -1 -1»
+  «text (100,300) 1 7 2 0x1000000 -1 -1 "X1"»
+  «text (100,150) 0.681 7 2 0x1000000 -1 -1 "TTOL-I"»
+  «text (100,50) 0.681 7 0 0x0 -1 -1 "REF=<0>"»
+  «text (100,-50) 0.681 7 0 0x0 -1 -1 "TTOL=<1n>"»
+  «pin (0,100) (0,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-100) (0,0) 1 15 0 0x0 -1 "-"»
+»

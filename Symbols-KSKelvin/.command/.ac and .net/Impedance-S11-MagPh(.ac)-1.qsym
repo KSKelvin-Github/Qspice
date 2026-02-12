@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol Impedance-S11-MagPh(.ac)-1
+  «type: X»
+  «description: Impedance S11 (Mag, Phase-degree) (.ac)»
+  «library file: |.subckt Impedance-S11-MagPh + -\nR1 + - AC R X\n.param S11re = S11mag*cos(S11ph*pi/180)\n.param S11im = S11mag*sin(S11ph*pi/180)\n.param den=(1-S11re)^2+S11im^2\n.param R=Zo*(1-S11re^2-S11im^2)/den\n.param X=Zo*(2*S11im)/den\n.ends Impedance-S11-MagPh»
+  «shorted pins: false»
+  «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-180) 0 0 0x1000000 -1 -1»
+  «rect (-100,180) (100,-180) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (150,200) 1 7 0 0x0 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "IMPEDANCE-S11-MAGPH"»
+  «text (150,50) 1 7 0 0x0 -1 -1 "S11mag=<float[0:0.999](0)> ;|S11|"»
+  «text (150,-100) 1 7 0 0x0 -1 -1 "S11ph=<0> ;Phase of S11 (degree)"»
+  «text (150,-250) 1 7 0 0x0 -1 -1 "Zo=<50> ;Characteristic impedance"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+»

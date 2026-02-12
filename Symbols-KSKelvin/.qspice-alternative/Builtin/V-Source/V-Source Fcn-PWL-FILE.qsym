@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol V-Source Fcn-PWL-FILE
   «type: V»
-  «description: Independent Voltage Source»
+  «description: Independent Voltage Source - PWL File»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,130) 0 0 0x1000000 -1 -1»

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol signal-IQmixer
   «type: X»
   «description: RF Signal Analyzer (IQ mixer)»
-  «library file: |.subckt signal-IQmixer sgl1 sgl2 sgl1-mag sgl2-mag MagRatio2to1 DeltaPh2to1\nB1 asgl1 0 V=2/Tperiod * (idt(V(sgl1)*cos(1*2*pi/Tperiod*time))-delay( idt(V(sgl1)*cos(1*2*pi/Tperiod*time)), Tperiod ))\nB2 bsgl1 0 V=2/Tperiod * (idt(V(sgl1)*sin(1*2*pi/Tperiod*time))-delay( idt(V(sgl1)*sin(1*2*pi/Tperiod*time)), Tperiod ))\nB3 sgl1-mag 0 V=sqrt(V(asgl1)^2+V(bsgl1)^2)\nB4 sgl1-phase 0 V=atan2(V(bsgl1),V(asgl1))\nB5 asgl2 0 V=2/Tperiod * (idt(V(sgl2)*cos(1*2*pi/Tperiod*time))-delay( idt(V(sgl2)*cos(1*2*pi/Tperiod*time)), Tperiod ))\nB6 bsgl2 0 V=2/Tperiod * (idt(V(sgl2)*sin(1*2*pi/Tperiod*time))-delay( idt(V(sgl2)*sin(1*2*pi/Tperiod*time)), Tperiod ))\nB7 sgl2-mag 0 V=sqrt(V(asgl2)^2+V(bsgl2)^2)\nB8 sgl2-phase 0 V=atan2(V(bsgl2),V(asgl2))\nB9 DeltaPh2to1 0 V=V(sgl1-phase)-V(sgl2-phase)\nB10 MagRatio2to1 0 V=V(sgl2-mag)/V(sgl1-mag)\n.param Tperiod=1/mixerFreq\n.ends signal-IQmixer»
+  «library file: |.subckt signal-IQmixer sgl1 sgl2 sgl1-mag sgl2-mag MagRatio2to1 DeltaPh2to1\nB1 asgl1 0 V=2/Tperiod * (idt(V(sgl1)*cos(1*2*pi/Tperiod*time))-delay( idt(V(sgl1)*cos(1*2*pi/Tperiod*time)), Tperiod ))\nB2 bsgl1 0 V=2/Tperiod * (idt(V(sgl1)*sin(1*2*pi/Tperiod*time))-delay( idt(V(sgl1)*sin(1*2*pi/Tperiod*time)), Tperiod ))\nB3 sgl1-mag 0 V=hypot(V(asgl1),V(bsgl1))\nB4 sgl1-phase 0 V=-atan2(V(bsgl1),V(asgl1))\nB5 asgl2 0 V=2/Tperiod * (idt(V(sgl2)*cos(1*2*pi/Tperiod*time))-delay( idt(V(sgl2)*cos(1*2*pi/Tperiod*time)), Tperiod ))\nB6 bsgl2 0 V=2/Tperiod * (idt(V(sgl2)*sin(1*2*pi/Tperiod*time))-delay( idt(V(sgl2)*sin(1*2*pi/Tperiod*time)), Tperiod ))\nB7 sgl2-mag 0 V=hypot(V(asgl2),V(bsgl2))\nB8 sgl2-phase 0 V=-atan2(V(bsgl2),V(asgl2))\nB9 DeltaPh2to1 0 V=V(sgl2-phase)-V(sgl1-phase)\nB10 MagRatio2to1 0 V=V(sgl2-mag)/V(sgl1-mag)\n.param Tperiod=1/mixerFreq\n.ends signal-IQmixer»
   «shorted pins: false»
   «line (-800,-200) (-500,-200) 0 0 0x1000000 -1 -1»
   «line (-800,-1000) (-500,-1000) 0 0 0x1000000 -1 -1»
@@ -22,8 +22,8 @@
   «line (550,-1000) (550,-350) 0 0 0x1000000 -1 -1»
   «line (700,-200) (800,-200) 0 0 0x1000000 -1 -1»
   «line (550,-200) (600,-250) 0 0 0x1000000 -1 -1»
-  «line (800,100) (800,-1200) 0 1 0x1000000 -1 -1»
-  «rect (-800,100) (1800,-1200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «line (800,100) (800,-1300) 0 1 0x1000000 -1 -1»
+  «rect (-800,100) (1800,-1300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
   «rect (-250,-400) (50,-800) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «rect (-50,-50) (250,-350) 0 0 0 0x1000000 0x1000000 -1 0 -1»
   «rect (-50,-850) (250,-1150) 0 0 0 0x1000000 0x1000000 -1 0 -1»
@@ -42,15 +42,15 @@
   «arc3p (650,-200) (550,-300) (550,-200) 0 0 0x1000000 -1 -1»
   «text (-800,350) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-800,200) 1 7 0 0x1000000 -1 -1 "SIGNAL-IQMIXER"»
-  «text (-800,-1300) 1 7 0 0x0 -1 -1 "mixerFreq=<10Meg> ;mixer frequency"»
+  «text (-800,-1400) 1 7 0 0x0 -1 -1 "mixerFreq=<10Meg> ;mixer frequency"»
   «text (320,-100) 1 0 1 0x1000000 -1 -1 "I"»
   «text (330,-900) 1 0 1 0x1000000 -1 -1 "Q"»
   «text (-100,-590) 0.681 0 1 0x1000000 -1 -1 "osc"»
-  «text (1590,-1120) 0.681 0 1 0x1000000 -1 -1 "(radian)"»
+  «text (1590,-1220) 0.681 0 1 0x1000000 -1 -1 "(radian)"»
   «pin (-800,-200) (20,0) 1 6 0 0x0 -1 "sgl1"»
   «pin (-800,-1000) (20,0) 1 6 0 0x0 -1 "sgl2"»
   «pin (1800,-100) (-20,0) 1 11 0 0x0 -1 "|sgl1|"»
   «pin (1800,-400) (-20,0) 1 11 0 0x0 -1 "|sgl2|"»
-  «pin (1800,-700) (-20,0) 1 11 0 0x0 -1 "MagRatio2to1"»
-  «pin (1800,-1000) (-20,0) 1 11 0 0x0 -1 "DeltaPh2to1"»
+  «pin (1800,-800) (-20,0) 1 11 0 0x0 -1 "MagRatio2to1"»
+  «pin (1800,-1100) (-20,0) 1 11 0 0x0 -1 "DeltaPh2to1"»
 »

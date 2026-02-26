@@ -207,11 +207,17 @@ extern "C" __declspec(dllexport) void franalyzer2ksk(struct sFRANALYZER2KSK **op
 
       // Amplitude adjustment based on frequency (piecewise linear interpolation)
       if(mixerfreq<=lvlmidfreq){
-         // Ramp amplitude from lvlstart to lvlmid for lower frequencies
-         lvl = (lvlmid-lvlstart)/(lvlmidfreq-fstart)*(mixerfreq-fstart)+lvlstart;
+         if(lvlmidfreq != fstart)
+            // Ramp amplitude from lvlstart to lvlmid for lower frequencies
+            lvl = (lvlmid-lvlstart)/(lvlmidfreq-fstart)*(mixerfreq-fstart)+lvlstart;
+         else
+            lvl = lvlmid;
       }else{
-         // Ramp amplitude from lvlmid to lvlstop for higher frequencies
-         lvl = (lvlmid-lvlstop)/(lvlmidfreq-fstop)*(mixerfreq-fstop)+lvlstop;
+         if(lvlmidfreq != fstop)
+            // Ramp amplitude from lvlmid to lvlstop for higher frequencies
+            lvl = (lvlmid-lvlstop)/(lvlmidfreq-fstop)*(mixerfreq-fstop)+lvlstop;
+         else
+            lvl = lvlmid;
       }
    }
 

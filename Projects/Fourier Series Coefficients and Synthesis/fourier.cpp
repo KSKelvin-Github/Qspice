@@ -134,7 +134,7 @@ extern "C" __declspec(dllexport) void fourier(struct sFOURIER **opaque, double t
          if (DisplayCoeff){
             // Calculate magnitude/phase for each harmonic
             double mag = sqrt(inst->a[n]*inst->a[n] + inst->b[n]*inst->b[n]);
-            double phase = atan2(inst->b[n], inst->a[n]);
+            double phase = -atan2(inst->b[n], inst->a[n]);
             // Display the calculated coefficients
             Display("   a%d = %9.6f; b%d = %9.6f",n,inst->a[n],n,inst->b[n]);
             Display("; mag%d = %4.2f; phase%d = %4.2f\n",n,mag,n,phase*180/M_PI);

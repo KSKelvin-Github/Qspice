@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol PFM-Bridge-DeadTime
   «type: X»
-  «description: PFM (Pulse Frequency Modulation) with DeadTime % Control»
+  «description: PFM (Pulse Frequency Modulation) with Adaptive DeadTime»
   «library file: |.subckt PFM-Bridge-DeadTime frq DT OUTA+ OUTA- OUTB+ OUTB-\nB1 sin 0 V=sin(2*pi*idt(V(frq),0))\nB2 ¬s¬i¬n 0 V=-V(sin)\nB3 DTlvl 0 V=limit(sin(V(DT)*pi/2),0.02,0.98)\nVlogic1V p1v 0 1\n¥1 p1v 0 OUTA ¥ sin DTlvl ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥2 p1v 0 OUTB ¥ ¬s¬i¬n DTlvl ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\nB4 OUTA+ OUTA- V=V(OUTA)*(Vhigh-Vlow)+Vlow\nB5 OUTB+ OUTB- V=V(OUTB)*(Vhigh-Vlow)+Vlow\nR1 OUTA- 0 1G SHORTED\nR2 OUTB- 0 1G SHORTED\n.ends PFM-Bridge-DeadTime»
   «shorted pins: false»
   «line (-700,-500) (-150,-500) 0 0 0x1000000 -1 -1»

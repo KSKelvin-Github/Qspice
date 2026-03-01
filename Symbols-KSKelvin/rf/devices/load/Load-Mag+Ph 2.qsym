@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol Load-Mag+Ph 2
+  «type: X»
+  «description: Mag/Phase(degree) load at a single frequency»
+  «library file: |.subckt Load-Mag+Ph + -\n.param R=Mag*cos(Ph*pi/180)\n.param X=Mag*sin(Ph*pi/180)\n.if(X==0)\nR + - R\n.display Z = ('R'+j'X') : R='R'\n.else\n.if(X>0)\n.param L=X/2/pi/frq\nL + - L Rser=R Rpar=0\n.display Z = ('R'+j'X') : R='R' L='L'\n.else\n.param C=1/2/pi/frq/(-X)\nC + - C Rser=R\n.display Z = ('R'+j'X') : R='R' C='C'\n.endif\n.endif\n.ends Load-Mag+Ph»
+  «shorted pins: false»
+  «line (-200,0) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,0) 0 0 0x1000000 -1 -1»
+  «rect (-150,-70) (150,70) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,150) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "LOAD-MAG+PH"»
+  «text (0,-300) 1 15 0 0x0 -1 -1 "frq=<10Meg>"»
+  «text (0,-450) 1 15 0 0x0 -1 -1 "Mag=<50>; magnitude"»
+  «text (0,-600) 1 15 0 0x0 -1 -1 "Ph=<0>; phase in degree"»
+  «text (0,-150) 1 15 1 0x1000000 -1 -1 "Mag/Ph@frq"»
+  «pin (-200,0) (0,0) 1 47 0 0x0 -1 "+"»
+  «pin (200,0) (0,0) 1 47 0 0x0 -1 "-"»
+»

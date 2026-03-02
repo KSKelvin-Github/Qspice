@@ -49,7 +49,7 @@
   «triangle (0,350) (0,-50) (300,150) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (0,-550) (0,-950) (300,-750) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-700,700) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-700,570) 0.857 7 0 0x1000000 -1 -1 "PFM-SYMCOMPL-DEADTIME"»
+  «text (-700,570) 0.857 7 0 0x1000000 -1 -1 "PFM-SymCompl-Deadtime"»
   «text (-700,-1200) 1 7 0 0x0 -1 -1 "Vhigh=<15> ;output high voltage level"»
   «text (-700,-1350) 1 7 0 0x0 -1 -1 "Vlow=<0> ;output low voltage level"»
   «text (-700,-1500) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»

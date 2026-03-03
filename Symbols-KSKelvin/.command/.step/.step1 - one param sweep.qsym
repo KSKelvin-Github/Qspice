@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol .step1 - one param sweep
+  «type: .»
+  «description: Step User-Defined Parameter»
+  «shorted pins: false»
+  «rect (-600,200) (600,-150) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-600,200) (600,100) 0 0 0 0x1000000 0xff0012 -1 0 -1»
+  «text (-600,300) 1 7 0 0x0 -1 -1 ".step"»
+  «text (400,-250) 1 7 0 0x0 -1 -1 "LIN"»
+  «text (-1100,-400) 1 7 2 0x1000000 -1 -1 "param"»
+  «text (350,-400) 1 7 0 0x0 -1 -1 "<ParamName>"»
+  «text (-200,-550) 1 7 0 0x0 -1 -1 "1"»
+  «text (-200,-700) 1 7 0 0x1000000 -1 -1 "10"»
+  «text (650,-850) 1 7 0 0x0 -1 -1 "1"»
+  «text (-600,-250) 1 7 1 0x1000000 -1 -1 "Type(lin,dec):"»
+  «text (-600,-400) 1 7 1 0x1000000 -1 -1 "ParamName:"»
+  «text (-600,-550) 1 7 1 0x1000000 -1 -1 "First:"»
+  «text (-600,-700) 1 7 1 0x1000000 -1 -1 "Last:"»
+  «text (-600,-850) 1 7 1 0x1000000 -1 -1 "Delta[lin]/N[dec]:"»
+  «text (0,0) 1.166 0 1 0x1000000 -1 -1 "Param Sweep"»
+»

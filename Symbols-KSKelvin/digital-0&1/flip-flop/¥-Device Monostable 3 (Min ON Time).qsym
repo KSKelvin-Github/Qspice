@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol ¥-Device Monostable 3 (Min ON Time)
   «type: ¥»
-  «description: Monostable Pulse Generator (One Shot) - min On Time»
+  «description: Monostable Multivibrator (One Shot) - Retriggerable - min On Time»
   «shorted pins: false»
   «line (-50,-150) (-50,50) 0 0 0x1000000 -1 -1»
   «line (-50,50) (10,50) 0 0 0x1000000 -1 -1»

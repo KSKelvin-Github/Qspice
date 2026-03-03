@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol Monostable-NonRetriggerable
+  «type: X»
+  «description: Monostable Multivibrator (One Shot) - Non-Retriggerable»
+  «library file: |.subckt Monostable-NonRetriggerable Vdd Vss Q ¬Q CLK\n¥1 Vdd Vss N01 ¥ Q CLK ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\n¥2 Vdd Vss Q ¬Q ¥ N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ monostable Ton=Ton TTOL=TTOL\n.ends Monostable-NonRetriggerable»
+  «shorted pins: false»
+  «line (600,200) (500,200) 0 0 0x1000000 -1 2»
+  «line (550,-200) (600,-200) 0 0 0x1000000 -1 3»
+  «line (-500,-150) (-450,-200) 0 0 0x1000000 -1 -1»
+  «line (-450,-200) (-500,-250) 0 0 0x1000000 -1 -1»
+  «rect (-500,500) (500,-500) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (500,-175) (550,-225) 0 0 0 0x1000000 0x1000000 -1 3»
+  «text (0,250) 1 15 0 0x1000000 -1 -1 "¥1"»
+  «text (0,600) 1 0 2 0x1000000 -1 -1 "MONOSTABLE-NONRETRIGGERABLE"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 "monostable"»
+  «text (200,-600) 1 7 0 0x0 -1 -1 "Ton=<1u>"»
+  «text (0,-50) 0.926 0 1 0x1000000 -1 -1 "non-retrigger"»
+  «text (200,-750) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
+  «pin (0,500) (20,0) 1 0 0 0x1000000 -1 "Vdd"»
+  «pin (0,-500) (20,0) 1 0 0 0x1000000 -1 "Vss"»
+  «pin (600,200) (-120,0) 1 11 0 0x1000000 -1 "Q"»
+  «pin (600,-200) (-120,0) 1 11 0 0x1000000 -1 "¬Q"»
+  «pin (-500,-200) (50,0) 1 7 0 0x1000000 -1 "CLK"»
+»

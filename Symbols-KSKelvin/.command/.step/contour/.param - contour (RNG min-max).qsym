@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol .param - contour (RNG min-max)
+  «type: .»
+  «shorted pins: false»
+  «line (-600,100) (-600,-150) 0 0 0x1000000 -1 -1»
+  «line (-600,-150) (700,-150) 0 0 0x1000000 -1 -1»
+  «line (700,-150) (700,100) 0 0 0x1000000 -1 -1»
+  «line (600,100) (-600,100) 0 0 0x1000000 -1 -1»
+  «rect (-600,200) (700,100) 0 0 0 0x1000000 0xff0012 -1 0 -1»
+  «text (-601,300) 1 7 0 0x0 -1 -1 ".param"»
+  «text (-601,-250) 1 7 0 0x0 -1 -1 "X=(Xmax-Xmin)*if(loop<1,loop,if(loop<2,1,if(loop<3,3-loop,0)))+Xmin"»
+  «text (-601,-400) 1 7 0 0x0 -1 -1 "Y=(Ymax-Ymin)*if(loop<1,0,if(loop<2,loop-1,if(loop<3,1,if(loop<4,4-loop,0))))+Ymin"»
+  «text (50,0) 1.166 0 1 0x1000000 -1 -1 "Contour Sweep"»
+  «text (-601,-550) 1 7 0 0x0 -1 -1 "Xmin=<0>"»
+  «text (-601,-700) 1 7 0 0x0 -1 -1 "Xmax=<1>"»
+  «text (-601,-850) 1 7 0 0x0 -1 -1 "Ymin=<0>"»
+  «text (-601,-1000) 1 7 0 0x0 -1 -1 "Ymax=<0>"»
+»

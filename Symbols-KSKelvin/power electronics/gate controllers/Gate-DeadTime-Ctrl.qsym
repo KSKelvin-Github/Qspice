@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Gate-DeadTime-Ctrl
   «type: X»
-  «description: Machine generated symbol for GATE-DEADTIME-CTRL»
+  «description: Complementary Gate with Adaptive DeadTime»
   «library file: |.subckt Gate-DeadTime-Ctrl IN DeadT Q\nVlogic1V p1v 0 1\n¥2 p1v 0 DT ¥ idtIN N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB1 N01 0 V=V(DeadT)\nB2 idtIN 0 V=idt(V(IN),0,V(IN)<0.5)\n¥1 p1v 0 Q ¥ IN DT ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=ttol\n.ends Gate-DeadTime-Ctrl»
   «shorted pins: false»
   «line (-200,200) (550,200) 0 0 0x1000000 -1 -1»
@@ -33,7 +33,7 @@
   «arc3p (50,50) (10,50) (30,50) 0 0 0x1000000 -1 -1»
   «arc3p (-50,-50) (-10,-50) (-30,-50) 0 0 0x1000000 -1 -1»
   «text (-200,600) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-200,470) 0.681 7 0 0x1000000 -1 -1 "GATE-DEADTIME-CTRL"»
+  «text (-200,470) 0.857 7 0 0x1000000 -1 -1 "Gate-DeadTime-Ctrl"»
   «text (-200,-500) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
   «pin (-200,200) (20,0) 1 6 0 0x0 -1 "IN"»
   «pin (-200,-200) (10,-20) 1 5 0 0x0 -1 "DeadT"»

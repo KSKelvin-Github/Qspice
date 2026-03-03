@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Fault-Protection
+ÿØÿÛ«symbol Fault-Protection-1InOut
   «type: X»
   «description: Overcurrent and Fault Protection with Restart Delay Time»
   «library file: |.subckt Fault-Protection Ilim Fault IN OUT ENo\n¥1 v1p 0 Ifault ¥ Ilim N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV1 v1p 0 1\nV2 N01 0 OverCurrent\n¥2 v1p 0 Q ¥ Ifault Fault ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=1µ Rout=1m\nD1 Q Qdelay Dx\nR1 Qdelay 0 100K\nC1 Qdelay 0 C\n¥3 v1p 0 NoGate ENo Qdelay N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=1µ\nV3 N02 0 exp(-1)\nB1 OUT 0 V=if(V(NoGate),0,V(IN))\n.model Dx D Ron=1m Roff=10Meg Vfwd=0\n.param C=RestartDelay/100K\n.ends Fault-Protection»
@@ -29,7 +29,7 @@
   «arc3p (1100,-350) (950,-500) (950,-350) 0 0 0x1000000 -1 -1»
   «triangle (300,500) (300,100) (600,300) 0 0 0x1000000 0x1000000 -1 -1»
   «text (0,850) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (0,700) 1 7 0 0x1000000 -1 -1 "FAULT-PROTECTION"»
+  «text (0,700) 1 7 0 0x1000000 -1 -1 "Fault-Protection"»
   «text (0,-900) 1 7 0 0x0 -1 -1 "OverCurrent=<10>"»
   «text (0,-1050) 1 7 0 0x0 -1 -1 "RestartDelay=<5m>"»
   «pin (0,400) (20,0) 1 6 0 0x0 -1 "Ilim"»

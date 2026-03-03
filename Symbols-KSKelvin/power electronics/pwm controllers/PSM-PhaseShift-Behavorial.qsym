@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol PSM-PhaseShift
+ÿØÿÛ«symbol PSM-PhaseShift-Behavorial
   «type: X»
   «description: Phase Shifted Modulation (Behavorial Implementation)»
   «library file: |.subckt PSM-PhaseShift Ctrl Sawtooth CLKo OutA OutB OutC OutD\nB1 N02 0 V=limit(V(ctrl1)+LL*mode,LL,UL)\nB2 N01 0 V=limit(0.5*(1-mode)+LL*mode,LL,UL)\n¥1 p1v 0 CLK1 ¥ Sawtooth N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥3 p1v 0 CLK2 ¥ Sawtooth N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nVlogic1V p1v 0 1\n¥2 p1v 0 B A A CLK1 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=ttol IC=1\n¥4 p1v 0 D C C CLK2 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=ttol IC=1\nB4 OutB 0 V=if(time>Tdelay+1/fsw*LL,V(B),InitB)\nB5 OutA 0 V=if(time>Tdelay+1/fsw*LL,V(A),InitA)\nB6 OutD 0 V=if(time>Tdelay+1/fsw*LL,V(D),InitD)\nB7 OutC 0 V=if(time>Tdelay+1/fsw*LL,V(C),InitC)\n¥5 p1v 0 CLKo ¥ N03 Sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV1 N03 0 0.1\nV2 Sawtooth 0 pulse 0 1 1p 1/fsw/2-2p 1p 1p 1/fsw/2\n¥6 p1v 0 ctrl1 ¥ Ctrl CLKo p1v ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=0\n.param LL=0.01\n.param UL=0.99\n.ends PSM-PhaseShift»
@@ -80,7 +80,7 @@
   «ellipse (650,-150) (750,-250) 0 0 0 0x1000000 0xff0012 -1 -1»
   «ellipse (-550,150) (-450,50) 0 0 0 0x1000000 0xff0012 -1 -1»
   «text (1200,1050) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (1200,900) 1 11 0 0x1000000 -1 -1 "PSM-PHASESHIFT"»
+  «text (1200,900) 1 11 0 0x1000000 -1 -1 "PSM-PhaseShift"»
   «text (-1100,-1300) 1 7 0 0x0 -1 -1 "mode=<0,(1)>; phase range"»
   «text (-1100,-1450) 1 7 0 0x0 -1 -1 "fsw=<50k>; switching freq"»
   «text (-1100,-1600) 1 7 2 0x1000000 -1 -1 "Tdelay=<0>; startup delay"»

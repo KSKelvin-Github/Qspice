@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol LM741-Transistors-2
+  «type: X»
+  «description: LM741 (Transistor Model) [Bipolar Opamp]»
+  «library file: |.subckt LM741-Transistors IN+ IN- Vcc Vee OUT\nR1 N04 Vee 1K\nR2 N05 Vee 50K\nQ1 N08 IN+ N01 [0] NP NPN\nQ2 N08 IN- N02 [0] NP NPN\nQ3 Vcc N03 N05 [0] NP NPN\nQ4 N08 N08 Vcc [0] PN PNP\nQ5 N06 N09 N02 [0] PN PNP\nQ6 N03 N09 N01 [0] PN PNP\nQ7 N03 N05 N04 [0] NP NPN\nQ8 N06 N05 N07 [0] NP NPN\nR3 N07 Vee 1K\nQ9 N09 N08 Vcc [0] PN PNP\nQ10 N10 N10 Vcc [0] PN PNP\nQ11 N14 N10 Vcc [0] PN PNP\nR13 N10 N12 39K\nQ12 N12 N12 Vee [0] NP NPN\nQ13 N09 N12 N11 [0] NP NPN\nR4 N11 Vee 5K\nC1 N14 N06 30p\nQ14 N14 N15 N13 [0] NP NPN\nR8 N15 N14 4.5K\nR7 N15 N13 7.5K\nQ16 N13 N06 N17 [0] NP NPN\nQ15 N13 N17 N16 [0] NP NPN\nQ17 N06 N16 Vee [0] NP NPN\nR5 N17 Vee 50K\nR6 N16 Vee 50\nQ20 N14 N18 OUT [0] NP NPN\nQ18 Vcc N14 N18 [0] NP NPN\nQ19 Vee N13 N19 [0] PN PNP\nR9 N18 OUT 25\nR10 OUT N19 50\n.model NP NPN(BF=125 Cje=.5p Cjc=.5p Rb=500)\n.model PN LPNP(BF=25 Cje=.3p Cjc=1.5p Rb=250)\n.ends LM741-Transistors»
+  «shorted pins: false»
+  «line (-150,-200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «line (-150,200) (-50,200) 0 0 0x1000000 -1 -1»
+  «line (-100,-150) (-100,-250) 0 0 0x1000000 -1 -1»
+  «line (-200,-450) (-200,450) 0 0 0x1000000 -1 -1»
+  «line (-200,450) (400,0) 0 0 0x1000000 -1 -1»
+  «line (400,0) (-200,-450) 0 0 0x1000000 -1 -1»
+  «line (50,300) (110,300) 0 0 0x1000000 -1 -1»
+  «line (80,330) (80,270) 0 0 0x1000000 -1 -1»
+  «line (50,-300) (110,-300) 0 0 0x1000000 -1 -1»
+  «text (300,250) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (200,-250) 1 7 2 0x1000000 -1 -1 "LM741-TRANSISTORS"»
+  «text (-150,0) 1 7 1 0x1000000 -1 -1 "LM741"»
+  «pin (-200,-200) (20,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (-200,200) (20,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (0,300) (20,0) 1 15 0 0x0 -1 "Vdd"»
+  «pin (0,-300) (-20,0) 1 15 0 0x0 -1 "Vss"»
+  «pin (400,0) (-20,0) 1 15 0 0x0 -1 "OUT"»
+»

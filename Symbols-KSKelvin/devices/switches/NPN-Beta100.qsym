@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol NPN-Beta100
   «type: QN»
-  «description: NPN Bipolar Transistor»
+  «description: Ideal NPN (beta=100)»
   «library file: |.model NPNi NPN BF=100 NF=1»
   «shorted pins: false»
   «line (100,180) (-10,70) 0 0 0x1000000 -1 -1»

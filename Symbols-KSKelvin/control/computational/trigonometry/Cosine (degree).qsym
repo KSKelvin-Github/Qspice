@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Cosine (degree)
   «type: X»
-  «description: Cosine (degree)»
+  «description: Cosine (degree) - cos»
   «library file: |.subckt cosine in out\nB1 out 0 V=cos(V(in)*PI/180)\n.ends cosine»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

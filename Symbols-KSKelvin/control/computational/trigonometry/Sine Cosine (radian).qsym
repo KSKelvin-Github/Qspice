@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Sine Cosine (radian)
   «type: X»
-  «description: Sine Cosine (radian)»
+  «description: Sine Cosine (radian) - sin cos»
   «library file: |.subckt sinecosine in out1 out2\nB1 out1 0 V=sin(V(in))\nB2 out2 0 V=cos(V(in))\n.ends sinecosine»
   «shorted pins: false»
   «line (250,150) (300,100) 0 0 0x1000000 -1 -1»

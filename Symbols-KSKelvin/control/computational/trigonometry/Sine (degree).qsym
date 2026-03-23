@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Sine (degree)
   «type: X»
-  «description: Sine (degree)»
+  «description: Sine (degree) - sin»
   «library file: |.subckt sine in out\nB1 out 0 V=sin(V(in)*PI/180)\n.ends sine»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

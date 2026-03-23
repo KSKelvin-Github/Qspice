@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol ArcCosine (radian)
   «type: X»
-  «description: ArcCosine (radian)»
+  «description: ArcCosine (radian) - acos»
   «library file: |.subckt arccosine in out\nB1 out 0 V=acos(V(in))\n.ends arccosine»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

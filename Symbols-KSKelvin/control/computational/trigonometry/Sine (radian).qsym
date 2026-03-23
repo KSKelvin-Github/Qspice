@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Sine (radian)
   «type: X»
-  «description: Sine (radian)»
+  «description: Sine (radian) - sin»
   «library file: |.subckt sine in out\nB1 out 0 V=sin(V(in))\n.ends sine»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

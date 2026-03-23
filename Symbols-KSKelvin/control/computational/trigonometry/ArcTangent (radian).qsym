@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol ArcTangent (radian)
   «type: X»
-  «description: ArcTangent (radian)»
+  «description: ArcTangent (radian) - atan»
   «library file: |.subckt arctangent in out\nB1 out 0 V=atan(V(in))\n.ends arctangent»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

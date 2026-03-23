@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Switch-Compl-BodyD-Ideal 1
   «type: X»
-  «description: Switch - Complementary (Ideal)»
+  «description: Switch - Complementary (Ideal) with Body Diode»
   «library file: |.subckt Switch-Compl-BodyD-Ideal out gate Vdd Vss\nS1 out Vss gate 0 LS\nS2 Vdd out 0 gate HS\nD1 out Vdd Di\nD2 Vss out Di\n.model HS SW Ron=Ron Roff=Roff Vt=-Vt Vh=Vh\n.model LS SW Ron=Ron Roff=Roff Vt=Vt Vh=Vh\n.model Di D Ron=Ron Roff=Roff Vfwd=DVfwd\n.ends Switch-Compl-BodyD-Ideal»
   «shorted pins: false»
   «line (0,600) (0,440) 0 0 0x1000000 -1 -1»

@@ -1,0 +1,10 @@
+ÿØÿÛ«symbol Constant-5digit
+  «type: V»
+  «description: Constant (5 digits)»
+  «shorted pins: false»
+  «rect (-200,150) (300,-150) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-200,250) 1 7 0 0x1000000 -1 -1 "V1"»
+  «text (50,10) 1 15 0 0x1000000 -1 -1 "1.000"»
+  «pin (300,0) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "-" "0"»
+»

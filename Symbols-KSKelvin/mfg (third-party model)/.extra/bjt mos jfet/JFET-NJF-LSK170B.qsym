@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol JFET-N-LSK170B
+  «type: JN»
+  «description: JFET NJF (LS, 40V 400mW)»
+  «library file: |.model LSK170B NJF Beta=30m Betatce=-.5 Vto=-.54 Lambda=30m Is=15f Rd=4.9 Rs=5.1 Cgd=20p Cgs=27p M=.32 Pb=.6 Mj=.3 Kf=.004f Gdsnoi=7 XTI=0 Nlev=3 eta=50m RonX=2 RonX2=.005 RonX3=2 RonX4=1 mfg="Linear Systems"»
+  «shorted pins: false»
+  «line (100,200) (100,100) 0 0 0x1000000 -1 -1»
+  «line (100,-100) (100,-200) 0 0 0x1000000 -1 -1»
+  «line (100,-100) (-200,-100) 0 0 0x1000000 -1 -1»
+  «line (100,100) (-50,100) 0 0 0x1000000 -1 -1»
+  «line (-50,150) (-50,-150) 0 0 0x1000000 -1 -1»
+  «triangle (-50,-100) (-145,-75) (-145,-125) 0 0 0x1000000 0x3000000 -1 -1»
+  «text (150,100) 1 7 0 0x1000000 -1 -1 "J1"»
+  «text (150,-100) 1 7 0 0x1000000 -1 -1 "LSK170B"»
+  «pin (100,200) (0,0) 1 0 0 0x0 -1 "D"»
+  «pin (-200,-100) (0,0) 1 0 0 0x0 -1 "G"»
+  «pin (100,-200) (0,0) 1 0 0 0x0 -1 "S"»
+»

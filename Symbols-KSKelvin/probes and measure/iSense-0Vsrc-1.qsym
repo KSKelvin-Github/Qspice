@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol iSense-0Vsrc
+ÿØÿÛ«symbol iSense-0Vsrc-1
   «type: X»
-  «description: iSense»
+  «description: iSense - Current Sense»
   «library file: |.subckt isense in+ in- out\nV1 in+ in- 0\nB1 out 0 V=A*I(V1)\n.ends isense»
   «shorted pins: false»
   «line (-120,120) (-60,120) 0 0 0x1000000 -1 -1»

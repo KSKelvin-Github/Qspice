@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol .step IDX
+  «type: .»
+  «description: Lookup Table Sweep (.step IDX)»
+  «shorted pins: false»
+  «rect (0,200) (1100,0) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (0,250) (1100,200) 0 0 0 0x1000000 0xff3e00 -1 0 -1»
+  «text (5,350) 1 7 0 0x0 -1 -1 ".step param IDX"»
+  «text (1255,350) 1 7 2 0x1000000 -1 -1 "0"»
+  «text (1000,-100) 1 7 0 0x0 -1 -1 "9"»
+  «text (1450,350) 1 7 2 0x1000000 -1 -1 "1"»
+  «text (550,100) 1 0 1 0x1000000 -1 -1 "IDX: 0,2,3...,9"»
+  «text (0,-100) 1 7 1 0x1000000 -1 -1 "From 1 to []:"»
+»

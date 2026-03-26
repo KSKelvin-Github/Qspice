@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol Bridge-Thyristor
+  «type: X»
+  «description: Thyristor Bridge (Ideal)»
+  «library file: |.subckt Bridge-Thyristor AC+ AC- OUT+ OUT- G\nX3 OUT- N01 AC+ Thyristor-Ideal Vfwd=Vfwd\nX4 OUT- N02 AC- Thyristor-Ideal Vfwd=Vfwd\nX1 AC+ N03 OUT+ Thyristor-Ideal Vfwd=Vfwd\nX2 AC- N04 OUT+ Thyristor-Ideal Vfwd=Vfwd\nE3 N01 AC+ G 0 1\nE4 N02 AC- G 0 1\nE1 N03 OUT+ G 0 1\nE2 N04 OUT+ G 0 1\n.subckt Thyristor-Ideal A G K\nD1 N01 K D\nS1 A N01 Q 0 SW\n¥1 N02 0 Q ¥ Set Reset ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nB1 Reset 0 V=if(V(A,K)<=Vfwd,1,0)\nE1 Set 0 G K 1\nV1 N02 0 1\n.model D D Ron=1m Roff=10Meg Vfwd=Vfwd\n.model SW SW Ron=1m Roff=10Meg Vt=0.5 Vh=0\n.ends Thyristor-Ideal\n.ends Bridge-Thyristor»
+  «shorted pins: false»
+  «line (250,300) (350,300) 0 0 0x1000000 -1 -1»
+  «line (300,350) (300,250) 0 0 0x1000000 -1 -1»
+  «line (350,-300) (250,-300) 0 0 0x1000000 -1 -1»
+  «line (-100,50) (100,50) 0 0 0x1000000 -1 -1»
+  «line (0,50) (0,150) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (30,50) (100,150) 0 0 0x1000000 -1 -1»
+  «rect (-400,400) (400,-400) 0 0 0 0x1000000 0xffe6c8 -1 1 -1»
+  «arc3p (-270,300) (-350,300) (-310,300) 0 0 0x1000000 -1 -1»
+  «arc3p (-270,300) (-190,300) (-230,300) 0 0 0x1000000 -1 -1»
+  «arc3p (-270,-300) (-350,-300) (-310,-300) 0 0 0x1000000 -1 -1»
+  «arc3p (-270,-300) (-190,-300) (-230,-300) 0 0 0x1000000 -1 -1»
+  «triangle (0,50) (-100,-100) (100,-100) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (0,650) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,800) 1 0 2 0x1000000 -1 -1 "BRIDGE-THYRISTOR"»
+  «text (0,500) 1 15 0 0x0 -1 -1 "Vfwd=<0>"»
+  «pin (-400,300) (0,0) 1 15 0 0x0 -1 "AC+"»
+  «pin (-400,-300) (-20,0) 1 15 0 0x0 -1 "AC-"»
+  «pin (400,300) (0,0) 1 15 0 0x0 -1 "OUT+"»
+  «pin (400,-300) (20,0) 1 15 0 0x0 -1 "OUT-"»
+  «pin (0,-400) (0,0) 1 0 0 0x0 -1 "G"»
+»

@@ -1,0 +1,43 @@
+ÿØÿÛ«symbol 3Ph-Y-D-Transformer
+  «type: X»
+  «description: 3-Phase Y/D Transformer»
+  «library file: |.subckt 3Ph-Y-D-Transformer Ap Bp Cp Np As Bs Cs\nLp1 N01 Np Lm Rser=Rpri IC=0\nLs1 N04 Bs Lm/N/N Rser=Rsec/N/N\nLp2 N02 Np Lm Rser=Rpri IC=0\nLp3 N03 Np Lm Rser=Rpri IC=0\nLplk1 Ap N01 Lplk\nLplk2 Bp N02 Lplk\nLplk3 Cp N03 Lplk\nLslk1 As N04 Lslk/N/N\nLs2 N05 Cs Lm/N/N Rser=Rsec/N/N\nLslk2 Bs N05 Lslk/N/N\nLs3 N06 As Lm/N/N Rser=Rsec/N/N\nLslk3 Cs N06 Lslk/N/N\nRs1 As 0 1G\nRs2 Bs 0 1G\nRs3 Cs 0 1G\nRpN Np 0 1G\n.param N=Npri/Nsec\nK1 Lp1 Ls1 1\nK2 Lp2 Ls2 1\nK3 Lp3 Ls3 1\n.ends 3Ph-Y-D-Transformer»
+  «shorted pins: false»
+  «line (-300,0) (-300,-200) 0 0 0x1000000 -1 -1»
+  «line (-470,150) (-300,0) 0 0 0x1000000 -1 -1»
+  «line (-300,0) (-130,160) 0 0 0x1000000 -1 -1»
+  «line (-1200,0) (-620,0) 0 0 0x1000000 -1 -1»
+  «line (1200,0) (620,0) 0 0 0x1000000 -1 -1»
+  «line (1200,-600) (800,-600) 0 0 0x1000000 -1 -1»
+  «line (800,-600) (480,-270) 0 0 0x1000000 -1 -1»
+  «line (1200,600) (800,600) 0 0 0x1000000 -1 -1»
+  «line (-1200,600) (-800,600) 0 0 0x1000000 -1 -1»
+  «line (-1200,-600) (-800,-600) 0 0 0x1000000 -1 -1»
+  «line (-480,270) (-800,600) 0 0 0x1000000 -1 -1»
+  «line (-470,-270) (-800,-600) 0 0 0x1000000 -1 -1»
+  «line (800,600) (470,270) 0 0 0x1000000 -1 -1»
+  «line (-300,-800) (-300,-320) 0 0 0x1000000 -1 -1»
+  «rect (-1200,900) (1200,-800) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-620,320) (20,-320) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-20,320) (620,-320) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (200,200) (200,-200) (450,0) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (0,1150) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,1000) 1 15 0 0x1000000 -1 -1 "3PH-Y-D-TRANSFORMER"»
+  «text (-1200,-900) 1 7 0 0x0 -1 -1 "Rpri=<0.001>"»
+  «text (1200,-900) 1 11 0 0x0 -1 -1 "Rsec=<0.001>"»
+  «text (-1200,-1050) 1 7 0 0x0 -1 -1 "Lplk=<1e-5>"»
+  «text (1200,-1050) 1 11 0 0x0 -1 -1 "Lslk=<1e-5>"»
+  «text (-1200,-1350) 1 7 0 0x0 -1 -1 "Lm=<0.5>"»
+  «text (-1200,-1200) 1 7 0 0x0 -1 -1 "Npri=<1>"»
+  «text (1200,-1200) 1 11 0 0x0 -1 -1 "Nsec=<1>"»
+  «text (0,830) 0.857 0 1 0x1000000 -1 -1 "Rser, Lslk reference to primary side"»
+  «text (-450,400) 1 0 1 0x1000000 -1 -1 "P"»
+  «text (450,400) 1 0 1 0x1000000 -1 -1 "S"»
+  «pin (-1200,600) (20,0) 1 6 0 0x0 -1 "Ap"»
+  «pin (-1200,0) (20,0) 1 6 0 0x0 -1 "Bp"»
+  «pin (-1200,-600) (20,0) 1 6 0 0x0 -1 "Cp"»
+  «pin (-300,-800) (-20,10) 1 10 0 0x0 -1 "Np"»
+  «pin (1200,600) (-20,0) 1 10 0 0x0 -1 "As"»
+  «pin (1200,0) (-20,0) 1 10 0 0x0 -1 "Bs"»
+  «pin (1200,-600) (-20,0) 1 10 0 0x0 -1 "Cs"»
+»

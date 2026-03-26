@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol 555Timer-3
+  «type: X»
+  «description: 555 Timer (Behavioral)»
+  «library file: |.subckt 555Timer COM Trig Out ¬R¬e¬s¬e¬t Cont Thres Disch Vcc\nR1 Vcc Cont 5K\nR2 Cont N01 5K\nR3 N01 COM 5K\nE1 Diff1 0 Thres Cont 1\nE2 Diff2 0 N01 Trig 1\nB1 N03 0 V=if(V(Diff1)>0,1,0)\nB2 S 0 V=if(V(Diff2)>0,1,0)\nV1 v1p 0 1\nB3 Out COM V=if(V(Q)>0.5,max(V(Vcc)-headroom,0),0) Rser=Rout\n¥2 v1p 0 Q N02 S R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nS1 Disch COM N02 0 IdealSW On\n¥1 v1p 0 R ¥8 N04 N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥3 v1p 0 ¥ N04 ¬R¬e¬s¬e¬t ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.model IdealSW SW Ron=1m Roff=1Meg Vt=0.5 Vh=0\n.ends 555Timer»
+  «shorted pins: false»
+  «rect (-500,800) (500,-800) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,900) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 15 0 0x1000000 -1 -1 "555TIMER"»
+  «text (-500,-900) 1 7 2 0x1000000 -1 -1 "Rout=<30> ;output resistance at Out"»
+  «text (-500,-1050) 1 7 2 0x1000000 -1 -1 "headroom=<0.9> ;Vcc headroom at Out"»
+  «text (-550,650) 0.5 0 1 0x1000000 -1 -1 "1"»
+  «text (-550,250) 0.5 0 1 0x1000000 -1 -1 "2"»
+  «text (-550,-150) 0.5 0 1 0x1000000 -1 -1 "3"»
+  «text (-550,-550) 0.5 0 1 0x1000000 -1 -1 "4"»
+  «text (550,-550) 0.5 0 1 0x1000000 -1 -1 "5"»
+  «text (550,-150) 0.5 0 1 0x1000000 -1 -1 "6"»
+  «text (550,250) 0.5 0 1 0x1000000 -1 -1 "7"»
+  «text (550,650) 0.5 0 1 0x1000000 -1 -1 "8"»
+  «pin (-500,600) (20,0) 1 7 0 0x0 -1 "GND"»
+  «pin (-500,200) (20,0) 1 7 0 0x0 -1 "Trig"»
+  «pin (-500,-200) (20,0) 1 7 0 0x0 -1 "Out"»
+  «pin (-500,-600) (20,0) 1 7 0 0x0 -1 "¬R¬e¬s¬e¬t"»
+  «pin (500,-600) (-20,0) 1 11 0 0x0 -1 "Cont"»
+  «pin (500,-200) (-20,0) 1 11 0 0x0 -1 "Thres"»
+  «pin (500,200) (-20,0) 1 11 0 0x0 -1 "Disch"»
+  «pin (500,600) (-20,0) 1 11 0 0x0 -1 "Vcc"»
+»

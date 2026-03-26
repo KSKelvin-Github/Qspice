@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol PSIM-VTri
+  «type: X»
+  «description: PSIM Triangular V-Source»
+  «library file: |.subckt PSIM-VTri + -\nV1 x 0 pulse V1 V2 Tdelay Trise Tfall Ton Tperiod\nB1 + - V=V(x)*(time>Tstart)\n.param V1=DCoffset\n.param V2=Vpp+DCoffset\n.param Tdelay=(PhDelay)/360/freq\n.param Trise=duty/freq\n.param Tfall=(1-duty)/freq\n.param Ton=0\n.param Tperiod=1/freq\n.ends PSIM-VTri»
+  «shorted pins: false»
+  «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-50,50) 0 0 0x1000000 -1 -1»
+  «line (-50,50) (50,-50) 0 0 0x1000000 -1 -1»
+  «line (50,-50) (100,0) 0 0 0x1000000 -1 -1»
+  «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-150,300) 1 11 0 0x1000000 -1 -1 "X1"»
+  «text (-150,150) 1 11 0 0x1000000 -1 -1 "PSIM-VTRI"»
+  «text (-150,0) 0.681 11 0 0x1000000 -1 -1 "Vpp=<2>"»
+  «text (-150,-100) 0.681 11 0 0x1000000 -1 -1 "freq=<1000>"»
+  «text (-150,-200) 0.681 11 0 0x1000000 -1 -1 "duty=<0.5> ;rising slope interval"»
+  «text (-150,-300) 0.681 11 0 0x1000000 -1 -1 "DCoffset=<-1>"»
+  «text (-150,-400) 0.681 11 0 0x1000000 -1 -1 "Tstart=<0.002>"»
+  «text (-150,-500) 0.681 11 0 0x1000000 -1 -1 "PhDelay=<90> ;in degree"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+»

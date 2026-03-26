@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol 555Timer-4
   «type: X»
   «description: 555 Timer (Behavioral)»
-  «library file: |.subckt 555Timer COM Trig Out ¬R¬e¬s¬e¬t Cont Thres Disch Vcc\nR1 Vcc Cont 5K\nR2 Cont N01 5K\nR3 N01 COM 5K\nE1 Diff1 0 Thres Cont 1\nE2 Diff2 0 N01 Trig 1\nB1 N03 0 V=if(V(Diff1)>0,1,0)\nB2 S 0 V=if(V(Diff2)>0,1,0)\nV1 v1p 0 1\nB3 Out COM V=if(V(Q)>0.5,max(V(Vcc)-headroom,0),0) Rser=Rout\n¥2 v1p 0 Q N02 S R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nS1 Disch COM N02 0 IdealSW On\n¥1 v1p 0 R ¥8 N04 N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥3 v1p 0 ¥ N04 ¬R¬e¬s¬e¬t ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.model IdealSW SW Ron=1m Roff=1Meg Vt=0.5 Vh=0\n.ends 555Timer»
+  «library file: |.subckt 555Timer COM Trig Out ¬R¬e¬s¬e¬t Cont Thres Disch Vcc\nR1 Vcc Cont 5K\nR2 Cont N01 5K\nR3 N01 COM 5K\nE1 Diff1 0 Thres Cont 1\nE2 Diff2 0 N01 Trig 1\nB1 N03 0 V=if(V(Diff1)>0,1,0)\nB2 S 0 V=if(V(Diff2)>0,1,0)\nV1 v1p 0 1\nB3 Out COM V=if(V(Q)>0.5,max(V(Vcc)-headroom,0),0) Rser=Rout IC=0\n¥2 v1p 0 Q N02 S R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nS1 Disch COM N02 0 IdealSW On\n¥1 v1p 0 R ¥8 N04 N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥3 v1p 0 ¥ N04 ¬R¬e¬s¬e¬t ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.model IdealSW SW Ron=1m Roff=1Meg Vt=0.5 Vh=0\n.ends 555Timer»
   «shorted pins: false»
   «line (-600,900) (-600,800) 0 0 0x1000000 -1 -1»
   «line (-1100,500) (-400,500) 0 0 0x1000000 -1 -1»

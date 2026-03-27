@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol SrcRamp-Slew
+ÿØÿÛ«symbol V-Ramp-Time1V
   «type: X»
   «description: Source - Ramp»
-  «library file: |.subckt SrcRamp + -\nV1 + - PWL 0 0 Td 0 Td+1/Slew 1 XTRAP\n.ends SrcRamp»
+  «library file: |.subckt V-Ramp + -\nV1 + - PWL 0 0 Td 0 Td+Time1V 1 XTRAP\n.ends V-Ramp»
   «shorted pins: false»
   «line (-70,-30) (-30,-30) 0 0 0x1000000 -1 -1»
   «line (0,130) (0,200) 0 0 0x1000000 -1 -1»
@@ -12,8 +12,8 @@
   «line (-25,-75) (25,-75) 0 0 0x1000000 -1 -1»
   «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-150,150) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (-150,0) 1 11 0 0x1000000 -1 -1 "SrcRamp"»
-  «text (-150,-150) 0.681 11 0 0x0 -1 -1 "Slew=<10>"»
+  «text (-150,0) 1 11 0 0x1000000 -1 -1 "V-Ramp"»
+  «text (-150,-150) 0.681 11 0 0x0 -1 -1 "Time1V=<1>"»
   «text (-150,-250) 0.681 11 0 0x0 -1 -1 "Td=<0>"»
   «pin (0,200) (0,0) 1 15 0 0x0 -1 "+"»
   «pin (0,-200) (0,0) 1 15 0 0x0 -1 "-"»

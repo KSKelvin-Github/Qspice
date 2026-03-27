@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol SrcSineCosine-FreqControl
+ÿØÿÛ«symbol Src-SineCosine-FreqControl
   «type: X»
   «description: Source - Sine Cosine pair with Frequency Control»
-  «library file: |.subckt SrcSineCosine-FreqControl f sin cos\nB1 sin 0 V=sin(2*pi*idt(V(f),0)+theta0*pi/180)\nB2 cos 0 V=sin(2*pi*idt(V(f),0)+theta0*pi/180+90/180*pi)\n.ends SrcSineCosine-FreqControl»
+  «library file: |.subckt Src-SineCosine-FreqControl f sin cos\nB1 sin 0 V=sin(2*pi*idt(V(f),0)+theta0*pi/180)\nB2 cos 0 V=sin(2*pi*idt(V(f),0)+theta0*pi/180+90/180*pi)\n.ends Src-SineCosine-FreqControl»
   «shorted pins: false»
   «line (100,-130) (100,-200) 0 0 0x1000000 -1 -1»
   «line (100,200) (100,130) 0 0 0x1000000 -1 -1»
@@ -29,7 +29,7 @@
   «triangle (30,-200) (170,-200) (100,-270) 0 0 0x1000000 0xffe6c8 -1 -1»
   «triangle (30,-800) (170,-800) (100,-870) 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-200,500) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-200,650) 1 7 2 0x1000000 -1 -1 "SrcSineCosine-FreqControl"»
+  «text (-200,650) 1 7 2 0x1000000 -1 -1 "Src-SineCosine-FreqControl"»
   «text (-200,-1000) 1 7 0 0x1000000 -1 -1 "theta0=<0>"»
   «pin (-200,0) (20,90) 1 7 0 0x0 -1 "f"»
   «pin (300,200) (-110,-10) 1 14 0 0x0 -1 "sin"»

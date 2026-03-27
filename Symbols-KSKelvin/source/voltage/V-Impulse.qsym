@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Impulse
   «type: V»
-  «description: V Source - Single Spike in Pulse Sharp»
+  «description: V Source - Impulse (One-Shot / Single Pulse)»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,130) 0 0 0x1000000 -1 -1»

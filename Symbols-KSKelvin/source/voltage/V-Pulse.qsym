@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol SrcPulse
+ÿØÿÛ«symbol V-Pulse
   «type: X»
-  «description: Source - Pulsing»
-  «library file: |.subckt SrcPulse + -\nV1 + - pulse Vlow Vhigh Td Trise Tfall duty/fsw 1/fsw DC=DC\n.ends SrcPulse»
+  «description: Source - Pulsing (Square)»
+  «library file: |.subckt V-Pulse + -\nV1 + - pulse Vlow Vhigh Td Trise Tfall duty/fsw 1/fsw DC=DC\n.ends V-Pulse»
   «shorted pins: false»
   «line (-70,-30) (-50,-30) 0 0 0x1000000 -1 -1»
   «line (-50,-30) (-40,30) 0 0 0x1000000 -1 -1»
@@ -16,16 +16,16 @@
   «line (0,100) (0,50) 0 0 0x1000000 -1 -1»
   «line (-25,-75) (25,-75) 0 0 0x1000000 -1 -1»
   «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0xffe6c8 -1 -1»
-  «text (-150,150) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (-150,0) 1 11 0 0x1000000 -1 -1 "SrcPulse"»
-  «text (-150,-150) 0.681 11 0 0x0 -1 -1 "Vhigh=<1>"»
-  «text (-150,-250) 0.681 11 0 0x0 -1 -1 "Vlow=<0>"»
-  «text (-150,-350) 0.681 11 0 0x0 -1 -1 "Td=<0>"»
-  «text (-150,-450) 0.681 11 0 0x0 -1 -1 "duty=<0.5>"»
-  «text (-150,-550) 0.681 11 0 0x0 -1 -1 "fsw=<1k>"»
-  «text (-150,-650) 0.681 11 0 0x1000000 -1 -1 "Trise=<0>"»
-  «text (-150,-750) 0.681 11 0 0x1000000 -1 -1 "Tfall=<0>"»
-  «text (-150,-850) 0.681 11 2 0x1000000 -1 -1 "DC=<0>"»
+  «text (-150,250) 1 11 0 0x1000000 -1 -1 "X1"»
+  «text (-150,100) 1 11 0 0x1000000 -1 -1 "V-Pulse"»
+  «text (-150,-50) 0.681 11 0 0x0 -1 -1 "Vhigh=<1>"»
+  «text (-150,-150) 0.681 11 0 0x0 -1 -1 "Vlow=<0>"»
+  «text (-150,-250) 0.681 11 0 0x0 -1 -1 "Td=<0>"»
+  «text (-150,-350) 0.681 11 0 0x0 -1 -1 "duty=<0.5>"»
+  «text (-150,-450) 0.681 11 0 0x0 -1 -1 "fsw=<1k>"»
+  «text (-150,-550) 0.681 11 2 0x1000000 -1 -1 "Trise=<0>"»
+  «text (-150,-650) 0.681 11 2 0x1000000 -1 -1 "Tfall=<0>"»
+  «text (-150,-750) 0.681 11 2 0x1000000 -1 -1 "DC=<0>"»
   «pin (0,200) (0,0) 1 15 0 0x0 -1 "+"»
   «pin (0,-200) (0,0) 1 15 0 0x0 -1 "-"»
 »

@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol SrcClock
+ÿØÿÛ«symbol V-Clock
   «type: X»
   «description: Source - Clock»
-  «library file: |.subckt SrcClock + -\nV1 + - pulse Vlow Vhigh Td Trise Tfall Ton 1/fsw DC=DC\n.ends SrcClock»
+  «library file: |.subckt V-Clock + -\nV1 + - pulse Vlow Vhigh Td Trise Tfall Ton 1/fsw DC=DC\n.ends V-Clock»
   «shorted pins: false»
   «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
   «line (0,-200) (0,-130) 0 0 0x1000000 -1 -1»
@@ -16,7 +16,7 @@
   «line (60,-30) (60,30) 0 0 0x1000000 -1 -1»
   «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-150,150) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (-150,0) 1 11 0 0x1000000 -1 -1 "SrcClock"»
+  «text (-150,0) 1 11 0 0x1000000 -1 -1 "V-Clock"»
   «text (-150,-150) 0.681 11 0 0x0 -1 -1 "Vhigh=<1>"»
   «text (-150,-250) 0.681 11 0 0x0 -1 -1 "Vlow=<0>"»
   «text (-150,-350) 0.681 11 0 0x0 -1 -1 "Td=<0>"»

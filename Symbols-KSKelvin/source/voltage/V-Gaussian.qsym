@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol SrcGaussian
+ÿØÿÛ«symbol V-Gaussian
   «type: X»
   «description: Generate two Gaussian Distribution»
-  «library file: |.subckt SrcGaussian Y0+ Y0- Y1+ Y1-\nB1 U1 0 V=limit(random(1e15*time/V(divider)+1e15*random()),1m,0.999)\nB2 U2 0 V=limit(random(1e15*time/V(divider)+1e15*random()),1m,0.999)\nB3 Z0 0 V=sqrt(-2.0*log(V(U1)))*cos(2.0*3.14159*V(U2))\nB4 Z1 0 V=sqrt(-2.0*log(V(U1)))*sin(2.0*3.14159*V(U2))\nB5 Y0+ Y0- V=mean + std * V(Z0)\nB6 Y1+ Y1- V=mean + std * V(Z1)\nB7 divider 0 V=pow(10,floor(log10(time)))\n.ends SrcGaussian»
+  «library file: |.subckt V-Gaussian Y0+ Y0- Y1+ Y1-\nB1 U1 0 V=limit(random(1e15*time/V(divider)+1e15*random()),1m,0.999)\nB2 U2 0 V=limit(random(1e15*time/V(divider)+1e15*random()),1m,0.999)\nB3 Z0 0 V=sqrt(-2.0*log(V(U1)))*cos(2.0*3.14159*V(U2))\nB4 Z1 0 V=sqrt(-2.0*log(V(U1)))*sin(2.0*3.14159*V(U2))\nB5 Y0+ Y0- V=mean + std * V(Z0)\nB6 Y1+ Y1- V=mean + std * V(Z1)\nB7 divider 0 V=pow(10,floor(log10(time)))\n.ends V-Gaussian»
   «shorted pins: false»
   «line (300,400) (100,400) 0 0 0x1000000 -1 -1»
   «line (100,400) (100,330) 0 0 0x1000000 -1 -1»
@@ -29,7 +29,7 @@
   «arc3p (150,-490) (100,-440) (100,-490) 0 0 0x1000000 -1 -1»
   «arc3p (150,-490) (200,-540) (200,-490) 0 0 0x1000000 -1 -1»
   «text (-400,750) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-400,600) 1 7 0 0x1000000 -1 -1 "SRCGAUSSIAN"»
+  «text (-400,600) 1 7 0 0x1000000 -1 -1 "V-Gaussian"»
   «text (-403,-900) 1 7 0 0x0 -1 -1 "mean=<0>"»
   «text (-403,-1050) 1 7 0 0x0 -1 -1 "std=<1>"»
   «pin (300,400) (-20,0) 1 15 0 0x0 -1 "Y0+"»

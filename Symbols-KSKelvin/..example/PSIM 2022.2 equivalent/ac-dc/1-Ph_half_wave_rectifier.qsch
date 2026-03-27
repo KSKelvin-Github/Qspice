@@ -1,36 +1,4 @@
 ÿØÿÛ«schematic
-  «component (-1300,300) 0 0
-    «symbol Alpha-Controller
-      «type: X»
-      «description: Alpha Controller»
-      «library file: |.subckt Alpha-Controller sync alpha EN OUT\nB1 timer1 0 V=idt(1,0,V(sync)-state(1,V(sync)))\nB2 PulseWidth 0 V=1/frq*PulseWidthDeg/360\nB3 delay 0 V=1/frq*V(alpha)/360\nVlogic1V p1v 0 1\n¥1 p1v 0 trig ¥ timer1 delay ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB4 timer2 0 V=idt(1,0,V(trig)-state(1,V(trig)))\n¥2 p1v 0 N01 ¥ PulseWidth timer2 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥4 p1v 0 OUT ¥4 EN trig N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\nRpullup p1v EN 10K\n.ends Alpha-Controller»
-      «shorted pins: false»
-      «line (0,300) (-300,-100) 0 0 0x1000000 -1 -1»
-      «line (-300,-100) (300,-100) 0 0 0x1000000 -1 -1»
-      «line (300,-100) (0,300) 0 0 0x1000000 -1 -1»
-      «line (-150,100) (-500,100) 0 0 0x1000000 -1 -1»
-      «line (0,-300) (0,-100) 0 0 0x1000000 -1 -1»
-      «line (-200,-300) (-200,-100) 0 0 0x1000000 -1 -1»
-      «line (-180,-70) (-150,-70) 0 0 0x1000000 -1 -1»
-      «line (-150,-70) (-150,50) 0 0 0x1000000 -1 -1»
-      «line (-150,50) (-120,50) 0 0 0x1000000 -1 -1»
-      «line (-180,-30) (-150,10) 0 0 0x1000000 -1 -1»
-      «line (-150,10) (-120,-30) 0 0 0x1000000 -1 -1»
-      «line (0,400) (0,300) 0 0 0x1000000 -1 -1»
-      «rect (-500,400) (400,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
-      «ellipse (-85,100) (15,0) 0 0 0 0x1000000 0x1000000 -1 -1»
-      «arc3p (65,100) (65,0) (65,50) 0 0 0x1000000 -1 -1»
-      «text (-500,500) 1 7 0 0x1000000 -1 -1 "X1"»
-      «text (-500,650) 1 7 2 0x1000000 -1 -1 "ALPHA-CONTROLLER"»
-      «text (450,100) 1 7 0 0x0 -1 -1 "frq=<60>"»
-      «text (450,-50) 1 7 0 0x0 -1 -1 "PulseWidthDeg=<30>"»
-      «text (450,-200) 1 7 0 0x0 -1 -1 "ttol=<1p>"»
-      «pin (-200,-300) (-20,0) 0.794 10 0 0x0 -1 "sync"»
-      «pin (0,-300) (20,0) 0.794 6 0 0x0 -1 "alpha"»
-      «pin (-500,100) (20,0) 0.794 6 0 0x0 -1 "EN"»
-      «pin (0,400) (-20,0) 1 15 0 0x0 -1 "OUT"»
-    »
-  »
   «component (-1300,-700) 0 0
     «symbol V
       «type: V»
@@ -238,6 +206,39 @@
       «pin (0,200) (0,0) 1 64 0 0x0 -1 "A"»
       «pin (-200,-200) (0,0) 1 64 0 0x0 -1 "G"»
       «pin (0,-200) (0,0) 1 64 0 0x0 -1 "K"»
+    »
+  »
+  «component (-1300,300) 0 0
+    «symbol Alpha-Controller-1
+      «type: X»
+      «description: Alpha Controller (ACTRL)»
+      «library file: |.subckt Alpha-Controller sync alpha EN OUT\nB1 timer1 0 V=idt(1,0,V(sync)-state(1,V(sync)))\nB2 PulseWidth 0 V=1/frq*PulseWidthDeg/360\nB3 delay 0 V=1/frq*V(alpha)/360\nVlogic1V p1v 0 1\n¥1 p1v 0 trig ¥ timer1 delay ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB4 timer2 0 V=idt(1,0,V(trig)-state(1,V(trig)))\n¥2 p1v 0 N01 ¥ PulseWidth timer2 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥4 p1v 0 OUT ¥4 EN trig N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\nRpullup p1v EN 10K\n.ends Alpha-Controller»
+      «shorted pins: false»
+      «line (0,300) (-300,-100) 0 0 0x1000000 -1 -1»
+      «line (-300,-100) (300,-100) 0 0 0x1000000 -1 -1»
+      «line (300,-100) (0,300) 0 0 0x1000000 -1 -1»
+      «line (-150,100) (-500,100) 0 0 0x1000000 -1 -1»
+      «line (0,-300) (0,-100) 0 0 0x1000000 -1 -1»
+      «line (-180,-70) (-150,-70) 0 0 0x1000000 -1 -1»
+      «line (-150,-70) (-150,50) 0 0 0x1000000 -1 -1»
+      «line (-150,50) (-120,50) 0 0 0x1000000 -1 -1»
+      «line (-180,-30) (-150,10) 0 0 0x1000000 -1 -1»
+      «line (-150,10) (-120,-30) 0 0 0x1000000 -1 -1»
+      «line (0,400) (0,300) 0 0 0x1000000 -1 -1»
+      «line (-200,-300) (-200,-150) 0 0 0x1000000 -1 -1»
+      «line (-200,-150) (-150,-100) 0 0 0x1000000 -1 -1»
+      «rect (-500,400) (400,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+      «ellipse (-85,100) (15,0) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «arc3p (65,100) (65,0) (65,50) 0 0 0x1000000 -1 -1»
+      «text (-500,500) 1 7 0 0x1000000 -1 -1 "X1"»
+      «text (-500,650) 1 7 2 0x1000000 -1 -1 "ALPHA-CONTROLLER"»
+      «text (450,100) 1 7 0 0x0 -1 -1 "frq=<60>"»
+      «text (450,-50) 1 7 0 0x0 -1 -1 "PulseWidthDeg=<30>"»
+      «text (450,-200) 1 7 0 0x0 -1 -1 "ttol=<1p>"»
+      «pin (-200,-300) (-20,0) 0.794 10 0 0x0 -1 "sync"»
+      «pin (0,-300) (20,0) 0.794 6 0 0x0 -1 "alpha"»
+      «pin (-500,100) (20,0) 0.794 6 0 0x0 -1 "EN"»
+      «pin (0,400) (-20,0) 1 15 0 0x0 -1 "OUT"»
     »
   »
   «net (-1300,-900) 1 13 0 "GND"»

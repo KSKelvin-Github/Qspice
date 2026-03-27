@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Switch-Compl-BodyD-Ideal 2
+ÿØÿÛ«symbol Switch-Compl-BodyD-Ideal-CtrlT
   «type: X»
   «description: Switch - Complementary (Ideal) with Body Diode»
   «library file: |.subckt Switch-Compl-BodyD-Ideal out gate Vdd Vss\nS2 out Vss 0 gate HS\nS1 Vdd out gate 0 LS\nD1 out Vdd Di\nD2 Vss out Di\n.model HS SW Ron=Ron Roff=Roff Vt=-Vt Vh=Vh\n.model LS SW Ron=Ron Roff=Roff Vt=Vt Vh=Vh\n.model Di D Ron=Ron Roff=Roff Vfwd=DVfwd\n.ends Switch-Compl-BodyD-Ideal»
@@ -18,9 +18,9 @@
   «line (200,260) (200,150) 0 0 0x1000000 -1 -1»
   «line (200,150) (0,150) 0 0 0x1000000 -1 -1»
   «line (200,500) (0,500) 0 0 0x1000000 -1 -1»
-  «line (300,-240) (100,-240) 0 0 0x1000000 -1 -1»
-  «line (200,-150) (200,-240) 0 0 0x1000000 -1 -1»
-  «line (200,-390) (200,-500) 0 0 0x1000000 -1 -1»
+  «line (300,-260) (100,-260) 0 0 0x1000000 -1 -1»
+  «line (200,-150) (200,-260) 0 0 0x1000000 -1 -1»
+  «line (200,-410) (200,-500) 0 0 0x1000000 -1 -1»
   «line (200,-500) (0,-500) 0 0 0x1000000 -1 -1»
   «line (200,-150) (0,-150) 0 0 0x1000000 -1 -1»
   «ellipse (-235,-40) (-165,-110) 0 0 0 0x1000000 0xffe6c8 -1 -1»
@@ -36,7 +36,7 @@
   «ellipse (-30,-120) (30,-180) 0 0 0 0x1000000 0xff0012 -1 -1»
   «triangle (-200,-40) (-130,80) (-270,80) 0 0 0x1000000 0xffe6c8 -1 -1»
   «triangle (200,410) (300,260) (100,260) 0 0 0x1000000 0xffe6c8 -1 -1»
-  «triangle (200,-240) (300,-390) (100,-390) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «triangle (200,-260) (300,-410) (100,-410) 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-100,500) 1 11 0 0x1000000 -1 -1 "X1"»
   «text (0,750) 1 0 2 0x1000000 -1 -1 "SWITCH-COMPL-BODYD-IDEAL"»
   «text (350,-100) 1 7 2 0x1000000 -1 -1 "Ron=<1m>"»

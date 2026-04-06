@@ -1,0 +1,462 @@
+ÿØÿÛ«schematic
+  «component (-1700,100) 0 0
+    «symbol Clarke-abc-Þß-transformation
+      «type: X»
+      «description: Clarke (abc-alpha/beta) transformation»
+      «library file: |.subckt Clarke-abc-Þß-transformation a b c alpha beta\nB1 alpha 0 V=if( flag==0, 2/3 * ( 1*V(a) - 1/2*V(b) - 1/2*V(c) ) , sqrt(2/3) * ( 1*V(a) - 1/2*V(b) - 1/2*V(c) ) )\nB2 beta 0 V=if( flag==0, 2/3 * ( 0*V(a) + sqrt(3)/2*V(b) - sqrt(3)/2*V(c) ) , sqrt(2/3) * ( 0*V(a) + sqrt(3)/2*V(b) - sqrt(3)/2*V(c) ) )\n.ends Clarke-abc-Þß-transformation»
+      «shorted pins: false»
+      «line (-300,-400) (300,400) 0 0 0x1000000 -1 -1»
+      «rect (-400,-400) (400,400) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+      «text (-400,800) 1 7 0 0x1000000 -1 -1 "X2"»
+      «text (-400,950) 1 7 2 0x1000000 -1 -1 "CLARKE-ABC-Þß-TRANSFORMATION"»
+      «text (-400,650) 1 7 0 0x0 -1 -1 "flag=<(0),1>; 0: amplitude invariant, 1: power invariant"»
+      «text (-150,150) 1.36 0 1 0x1000000 -1 -1 "abc"»
+      «text (150,-100) 1.36 0 1 0x1000000 -1 -1 "Þß"»
+      «text (-400,500) 1 7 1 0x1000000 -1 -1 "Clarke abc-Þß"»
+      «pin (-400,300) (20,0) 1 7 0 0x0 -1 "a"»
+      «pin (-400,0) (20,0) 1 7 0 0x0 -1 "b"»
+      «pin (-400,-300) (20,0) 1 7 0 0x0 -1 "c"»
+      «pin (400,200) (-20,0) 1 11 0 0x0 -1 "Þ"»
+      «pin (400,-200) (-20,0) 1 11 0 0x0 -1 "ß"»
+    »
+  »
+  «component (-3800,400) 10 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (130,0) 1 110 0 0x1000000 -1 -1 "V1"»
+      «text (-130,0) 1 109 0 0x1000000 -1 -1 "sin 0 Vamp 50 0 0 0"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (-3800,-300) 10 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (130,0) 1 110 0 0x1000000 -1 -1 "V2"»
+      «text (-130,0) 1 109 0 0x1000000 -1 -1 "sin 0 Vamp 50 0 0 -120"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (-3800,-1000) 10 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (130,0) 1 110 0 0x1000000 -1 -1 "V3"»
+      «text (-130,0) 1 109 0 0x1000000 -1 -1 "sin 0 Vamp 50 0 0 120"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (2600,100) 8 0
+    «symbol B1
+      «type: B»
+      «description: Behavioral Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (180,150) 1 7 0 0x1000000 -1 -1 "B1"»
+      «text (180,-150) 1 7 0 0x1000000 -1 -1 "V=V(ao,bo)"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (3400,300) 0 0
+    «symbol TF-2ndOrder-LowPass
+      «type: X»
+      «description: 2nd-order Low Pass Filter (Transfer Function)»
+      «library file: |.subckt TF-2ndOrder-LowPass IN OUT\nE1 OUT 0 IN 0 Kp Laplace=omega**2/(s**2+2*zeta*omega*s+omega**2)\n.param omega=2*pi*fc\n.param zeta=damping\n.ends TF-2ndOrder-LowPass»
+      «shorted pins: false»
+      «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+      «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+      «rect (-300,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+      «rect (-291,-96) (251,123) 0 0 2 0xff0000 0x5000000 -1 0 -1 89504e470d0a1a0a0000000d49484452000001070000006a08020000003ed403c00000000970485973000012740000127401de661f7800000d0d49444154789ced9dbdaba55715c6df7fe086b42902a96e93c290422408c62e6063e7546231e91406a611616082200485b11a412581011131308588c22d02361eab5808a6b3d3c2227f823e9c4516eb3e6b7fbde7ecf7de73cf7d363f863be7bc1ffbdd7b3d6baffdf19ebdecfefd3f214464e91e21c47d43aa1082912a8460a48a33e4eaf32f3efce8e5c3c74fbff59def7de3bd6f03fcf1e88367dd138521559c15cf3ff9141ab878e5d56559f0ef6bafbfb15c4f4f9e7ddcbd88902ace8acb37df32ebc71f2fae3eb30fa193280cff5cd4902ace0a57051a0dff1001555405a2a9ee75ee3952c55961aac0bfc5cf2dbdfdcebbddebdc73a48ab3e2e5dffe850029c7485082ab020155f73af71ca9621d6676884f3efce8257aae8f3e78669c78b01ebbdd0f1f3fed1e7fcf912ad6413d574f1049f7dcdb021af67c421ee866744fb9e74815eb8049a165c8aa401bd23df7b6f0f0e9e29557632f5cd4902a0e21765ecd01774fb92d10e6793e35593188547108343b76b2fd57b46036a32749ac42aa580d0dff2fa7da7f453ead4d83302489554815ab899d574ba7d9d5b6810149e200a48ad5e4def6098eea3c78ff91e54d923800a9623534389b27926f868614bd879dd7c9da7c4bf7e2f71ca96235d4d58657f6af6070f836333e6e8bf00c32eb2a0d17c431c5b51bdec38e19736c94763c3ff713a9621db0fbe57a8a9d0a585b5c5b6169709600be1f763c3864e40152168667c05eab88f880f209867c278554b18e38fc6f89fc2ef5c5073bbb30d318987507b5e238581446718631a76e7eee392aa075c0e346f382d1d301d12ef1edc8f094c55d7e5631f2c9c453acff00a9e4d78c723ae539c71341aa58477bfe2ece9ac1858f84ef90849f62670d8637684f624e702f5345976ea74548152b68cfdf45978fcf478cdb27da2c510f04dfdab270275e13ad50cc89de259a8854b10232c42574b511c3f8dbd22351934183bc64d9ede942eaf7e7584e1c8c54b1020a5a96fd3bd0f60302f6df5583b05963349390bbcef1e2f8bbf1ad3806a96205b5972b3cad72d8b4f0362f316c4f1766558c8cff8a11a48a1550571bff8d1d654b83e1532318abdd8ec6a6da3327e218a48a51b215da4444bb6f5023076314ff748d3eeb4a6dc52ca48a516a513ed9f76010455aca7308dde9c276af431c8354310ad9b15b7ff6d923d649d1515eb841d385593627b248f12c912a46a9d9719ec418f945d7f66c60e3767e53ead27417898871a48a21b2e9c7be6f6334a93697478b084915b953415d6d6aa0a09091064a0c22550cd11e32f215ac6ea3f639248140a8b8de9b7a051420e5be785405cd882f6a286623550cd11e32ca9ac1f1f0f7fe8e687ed127373e7ec1b832caad3f36262442086f6475891847aa18a2ddb56d2c56c5e7b577df6841079a14fb4942bf14ac3f8ae7c9b38ff12d49627c35a11847aa1882bab6795222af595a0696cde2ac3c0fb8ec9b17845866eec52bd331622e52451f581e22a248d1fde343387228012d09da96f1d7a361dc38de4fccd7b70cd801009a44bb213d6c87542104235508c1481542305285108c542104235508c1481542305285108c542104235508c1481542305285108c542104235508c1481542305285108c542104535045f17d4825a5b34f5285921227a9424989534b1542dc73a40a2118a9420846aa1082912a846066aae2eaf32f9e7ff2e9c3c74f2fdf7c2bfe50a4fd1e5ef77421b6a06893afbdfec683f71fd57eef749a2a7cc369bf25fd4e30b2a51f811437c98babcffc47dd619c3048c8837e27bbb899e03455f88e55d1fa697792c19d14859882efa00049c4fd46a2308afb18ce57056df519f7771bdc49518829b82ac81dd34e9cf977b2a7a9021194fd62368549b41f4af73aa700c24d1428ca0e0f05f007dad9c1f0cfcf6aa35d806f0014b2d924796adafc20d7c5e6661a7b17a7bccfa70d15c0a9143794b0f4f63befda1edb0d6adbbb50ea5e476c07a922f7b9375745dc25e83447a2a0074897c4605b49144dbcd13bcabb3c16936d62d4cd98d88818bf14772ddc561550a1df1e1636d1147ca7156a1c0f206672493db3bc1bfc52df3b386f9097d369ba86c3c0f35a2ddcad1d5ce3c0d4b6635045bcab5dbbfdc1f8867179a7eab5902ab2c5d386f04b7dd800b9427341c4d6f2cc02270f8fe756eea6c4dd6b6bde6d4355b89725ef3b858d54516cd0f27ea74b2918cd586ce685706692d8dd4155a0d63c54a62dcc235ba9c2b7c7dd4212bbcd54512ba925a5ae1d2087de4a9ca52476774d15a811f422da156dac5305ae0b604646e3300bdd3692c46eaa2a76fb4109a3f6507960aadd56c029784f7d2349aceaa48dd4da019c942aba05e291705b12bb415558d79656925842dddb3227cf93fbc8ed24b19bad8ac17b79c2a335ea206e23bfacec4be05cf8b3e2c00865c946c9da87c1586101deb98c09e7e2ab23ad796b5598e18d18127a0830c54636bc3bd195c46e4415b42734fe2e8e57ba13b2921a799263b84955e491a5c6e02c15d7481d183440dcd6929b634d3f317eb354acb823d7e06caa8ab88aa9bd882ebaad624e509856b083d5d151050c22d6310ad13317fbf2286ebfbd7d922bd5b6a31edf85bacd4daa82c6a05020b538845a89c13ad82523ee8ede463b280a235ecd3c94555c34b5a5a7bd2edba982169b7603bf58479419ef61e7eab0b62817424715de3b594a618317bd9966fbf676f0ac06e4c65411472d2cd586f34812e36b846327a4587a45e22994256adc48637174a16b6d6d3652459c6543918e78d2f8c8d150bd879dab03ff35cf9e1bcc962a68a6d61b849c152b779250c43fbf73aaa086a266b2575f0e30f8e30f1a0a49625c4b71290d355f143be532b73b5e1cbd58730b55d0c2b9f1d68c821afb30463464937e7caed3962a68b9c8925c8ba90da06a47a6759779c57733aaa089ed184012648883febeada5ab307064c4bb371a84e89e96922fc4b9b6eab19bc336d355118d7849959b0b247e4b830a7600b5f3c594e3d5156dc5d25cde571ce8c869bcc9c6dd7dc034f3e35ffcd62ef8b56fbed738ecf9f05ad70c9569431264a039d4ac415a22f3cd5e297a7daa9de8f84915cb1a8f1bb9daaf986c80c2b7ebdb2ae01abffec35fbbf7daa51074496bbca9b8c81aa9554796a8d9a9a51c12b7548142c952bba80c2e5926ba0c9acbae54b587a5c362b6ab30e3b3342541fe7e19e82b1bb975252320c7b95cf7292faf2f5489dfe61397e1e62b32b8d8b19b72ec5d846a3c47013486464f44aac0e9be4cabcdeaf72b8ae5bb1c3da237c2edaa22baa586247625e31e6c0f494bd908daae319becf32fc318e4b6387a5ef368356e5215b9189f5f8fca7266e8594815dd399f06fdf98ad8ab8b098f3a323870303fffcd9fd0eed7f8c1939f5a36bef2d5af370e037ffcfb7fbaf722a22f78d05bf5ddb6dd1ad9086a7d624fe41adb5692a3114f834d1940d1b5cb16856fd7fceef77fd838ec27bffc7df75edd627c92162f93f7e95e619cbe2a76f516e3f8418c83d9aeb7bd4a12bb64bb832e2a87bc54c75dd7d875ae39b4f3f4e4a06e4666566f3bc7ea39dea3a6201b3d0517831551644815bb7d144b5ab4541bbcdf9a8d54115d6c3b7072a8400663cbae63ebbac676afa371d832cf9dcd52451e57c8ba25efd3ed750c564491515518d9c38d848c5bb0852aa2736dcc1ba00a616aeeb9c9c90de6a7dbc2906bcce5dcd59503b5e446e3483b3666a922bb006a18afc25cbe2572c7b9693da63d5ca78a5daa8c595e672d5ba8c21fadfddaa0b5d46ec7d9e0467adb6b3d1fc926871cedde421eb09ad2c8cf52457738aedb0d237f7d515f95334259150ff70b158be3ee94bfb3692b62a481c72f8ebbe3d9dd85fb7d73fb099d74aba43d0a993d1fc5d97986c4e6f8acd68a83b024b3635ca9334b1539826acf542cc9f5906f3a60183a52568567220f8c506337cb28d73257158393a03179d85a1b066d570c8dec51fc939516af569b2171db2a465394c9ae6e4798a58adcf445c32bce9b457f7df02c6a8db22a3c1339de25277764711ccc5c55e437b3bb299a696318b4b16e2a1e165bfc7835b7fef898a428d48819416ceec8d792339e5268bb79aad8254710fbca7e97e80bbcb8c8a3ad9d932952500535dfc80a9ed9563a514376643b750c135571d85cd5c3b410b5360c5aebb8938783715b90e64eddc685edef8bfd0b7d2ff6abf1e92cbf78ac1d1c6fab30708ac5c3fed5488037c84455ec521444cf7bb15f24e6ffcdc5b5cc7bedb1a08adaec444cb36e7f30135531f2bc39157babf1ad80986aa384b91369c9fa0666ee39e6f66370bba8b762204709c6344b12bbd9aac0b3d41aedcbf0fb7fc5198265ff68b3a695cb11140a0e460f1f835ce266c8134afc72ff4ae483fd6b8d47c66dc7335115e681d6d2b083a2cc1a2586e3ad90ad84f3ca1c54073e8cc7a0766aed8fd79a1f5fbbecf1cc558561d5d17e580b5bb67bb4d523b327c29ffff15fd43df8d1cf7ed53df8e6c95df0b9d57622a0f0ad167ef7977f760fbe43dc55559c3e345837316e115b23556c45ec0f34269ec50922556c451c6a9c32912c6e0ca9621368e16df7787152481593b95af91b36e204912ae663a34f97698b1d7157902ae6634bcd6f7d4a471c8c542104235508c1fc1f174e5c0b694bf2d80000000049454e44ae426082»
+      «text (-300,300) 1 7 0 0x1000000 -1 -1 "X3"»
+      «text (0,450) 1 0 2 0x1000000 -1 -1 "TF-2NDORDER-LOWPASS"»
+      «text (-300,-450) 1 7 0 0x0 -1 -1 "Kp=<1> ;gain"»
+      «text (-300,-600) 1 7 0 0x0 -1 -1 "fc=<1000>;cutoff frequency"»
+      «text (-300,-750) 1 7 0 0x0 -1 -1 "damping=<0.5>;damping factor"»
+      «text (-300,-300) 1 7 1 0x1000000 -1 -1 "Low-Pass"»
+      «pin (-300,0) (0,0) 1 15 0 0x0 -1 "IN"»
+      «pin (300,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+    »
+  »
+  «component (300,2500) 0 0
+    «symbol 3ph-Inverter
+      «type: X»
+      «description: 3-ph Inverter (Ideal)»
+      «library file: |.subckt 3ph-Inverter dc+ dc- a b c s1 s4 s3 s6 s5 s2\nS1 dc+ a s1 0 SWi\nS4 a dc- s4 0 SWi\nD1 a dc+ Di\nD4 dc- a Di\nS3 dc+ b s3 0 SWi\nS6 b dc- s6 0 SWi\nD3 b dc+ Di\nD6 dc- b Di\nS5 dc+ c s5 0 SWi\nS2 c dc- s2 0 SWi\nD5 c dc+ Di\nD2 dc- c Di\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0 TTOL=TTOL\n.model Di D Ron=Ron Roff=Roff Vfwd=Vfwd\n.ends 3ph-Inverter»
+      «shorted pins: false»
+      «line (-100,480) (-300,480) 0 0 0x1000000 -1 -1»
+      «line (-200,600) (-200,480) 0 0 0x1000000 -1 -1»
+      «line (-200,200) (-200,330) 0 0 0x1000000 -1 -1»
+      «line (-500,515) (-500,700) 0 0 0x1000000 -1 -1»
+      «line (-406,355) (-480,450) 0 0 0x1000000 -1 -1»
+      «line (-200,600) (-500,600) 0 0 0x1000000 -1 -1»
+      «line (-200,200) (-500,200) 0 0 0x1000000 -1 -1»
+      «line (-800,700) (900,700) 0 0 0x1000000 -1 -1»
+      «line (-100,-320) (-300,-320) 0 0 0x1000000 -1 -1»
+      «line (-200,-200) (-200,-320) 0 0 0x1000000 -1 -1»
+      «line (-200,-600) (-200,-470) 0 0 0x1000000 -1 -1»
+      «line (-500,-700) (-500,-515) 0 0 0x1000000 -1 -1»
+      «line (-406,-445) (-480,-350) 0 0 0x1000000 -1 -1»
+      «line (-200,-200) (-500,-200) 0 0 0x1000000 -1 -1»
+      «line (-200,-600) (-500,-600) 0 0 0x1000000 -1 -1»
+      «line (-800,-700) (900,-700) 0 0 0x1000000 -1 -1»
+      «line (-500,-285) (-500,285) 0 0 0x1000000 -1 -1»
+      «line (600,480) (400,480) 0 0 0x1000000 -1 -1»
+      «line (500,600) (500,480) 0 0 0x1000000 -1 -1»
+      «line (500,200) (500,330) 0 0 0x1000000 -1 -1»
+      «line (200,515) (200,700) 0 0 0x1000000 -1 -1»
+      «line (294,355) (220,450) 0 0 0x1000000 -1 -1»
+      «line (500,600) (200,600) 0 0 0x1000000 -1 -1»
+      «line (500,200) (200,200) 0 0 0x1000000 -1 -1»
+      «line (600,-320) (400,-320) 0 0 0x1000000 -1 -1»
+      «line (500,-200) (500,-320) 0 0 0x1000000 -1 -1»
+      «line (500,-600) (500,-470) 0 0 0x1000000 -1 -1»
+      «line (200,-700) (200,-515) 0 0 0x1000000 -1 -1»
+      «line (294,-445) (220,-350) 0 0 0x1000000 -1 -1»
+      «line (500,-200) (200,-200) 0 0 0x1000000 -1 -1»
+      «line (500,-600) (200,-600) 0 0 0x1000000 -1 -1»
+      «line (200,-285) (200,285) 0 0 0x1000000 -1 -1»
+      «line (1450,100) (1450,700) 0 0 0x1000000 -1 -1»
+      «line (1450,-100) (1450,-700) 0 0 0x1000000 -1 -1»
+      «line (1300,480) (1100,480) 0 0 0x1000000 -1 -1»
+      «line (1200,600) (1200,480) 0 0 0x1000000 -1 -1»
+      «line (1200,200) (1200,330) 0 0 0x1000000 -1 -1»
+      «line (900,515) (900,700) 0 0 0x1000000 -1 -1»
+      «line (994,355) (920,450) 0 0 0x1000000 -1 -1»
+      «line (1200,600) (900,600) 0 0 0x1000000 -1 -1»
+      «line (1200,200) (900,200) 0 0 0x1000000 -1 -1»
+      «line (1300,-320) (1100,-320) 0 0 0x1000000 -1 -1»
+      «line (1200,-200) (1200,-320) 0 0 0x1000000 -1 -1»
+      «line (1200,-600) (1200,-470) 0 0 0x1000000 -1 -1»
+      «line (900,-700) (900,-515) 0 0 0x1000000 -1 -1»
+      «line (994,-445) (920,-350) 0 0 0x1000000 -1 -1»
+      «line (1200,-200) (900,-200) 0 0 0x1000000 -1 -1»
+      «line (1200,-600) (900,-600) 0 0 0x1000000 -1 -1»
+      «line (900,-285) (900,285) 0 0 0x1000000 -1 -1»
+      «line (1450,700) (1600,700) 0 0 0x1000000 -1 -1»
+      «line (1450,-700) (1600,-700) 0 0 0x1000000 -1 -1»
+      «line (1450,100) (-500,100) 0 0 0x1000000 -1 -1»
+      «line (1600,0) (200,0) 0 0 0x1000000 -1 -1»
+      «line (1450,-100) (900,-100) 0 0 0x1000000 -1 -1»
+      «rect (-800,-900) (1600,800) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+      «ellipse (-535,445) (-465,515) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (-535,285) (-465,355) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (-525,125) (-475,75) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (-525,225) (-475,175) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (-525,625) (-475,575) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (-535,-355) (-465,-285) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (-535,-515) (-465,-445) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (-525,-575) (-475,-625) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (-525,-175) (-475,-225) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (165,445) (235,515) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (165,285) (235,355) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (175,25) (225,-25) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (175,225) (225,175) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (175,625) (225,575) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (165,-355) (235,-285) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (165,-515) (235,-445) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (175,-575) (225,-625) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (175,-175) (225,-225) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (-525,725) (-475,675) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (-525,-675) (-475,-725) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (865,445) (935,515) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (865,285) (935,355) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (875,-75) (925,-125) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (875,225) (925,175) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (875,625) (925,575) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (865,-355) (935,-285) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (865,-515) (935,-445) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «ellipse (875,-575) (925,-625) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «ellipse (875,-175) (925,-225) 0 0 0 0x1000000 0xff0012 -1 -1»
+      «triangle (-200,480) (-100,330) (-300,330) 0 0 0x1000000 0x1000000 -1 -1»
+      «triangle (-200,-320) (-100,-470) (-300,-470) 0 0 0x1000000 0x1000000 -1 -1»
+      «triangle (500,480) (600,330) (400,330) 0 0 0x1000000 0x1000000 -1 -1»
+      «triangle (500,-320) (600,-470) (400,-470) 0 0 0x1000000 0x1000000 -1 -1»
+      «triangle (1200,480) (1300,330) (1100,330) 0 0 0x1000000 0x1000000 -1 -1»
+      «triangle (1200,-320) (1300,-470) (1100,-470) 0 0 0x1000000 0x1000000 -1 -1»
+      «text (-800,1050) 1 7 0 0x1000000 -1 -1 "X5"»
+      «text (-800,900) 1 7 0 0x1000000 -1 -1 "3PH-INVERTER"»
+      «text (500,1350) 1 7 2 0x1000000 -1 -1 "Ron=<1m>"»
+      «text (500,1200) 1 7 2 0x1000000 -1 -1 "Roff=<20Meg>"»
+      «text (500,1050) 1 7 2 0x1000000 -1 -1 "Vfwd=<0>"»
+      «text (500,900) 1 7 2 0x1000000 -1 -1 "TTOL=<1>"»
+      «text (-650,400) 1 0 1 0x1000000 -1 -1 "S1"»
+      «text (-650,-400) 1 0 1 0x1000000 -1 -1 "S4"»
+      «text (50,400) 1 0 1 0x1000000 -1 -1 "S3"»
+      «text (50,-400) 1 0 1 0x1000000 -1 -1 "S6"»
+      «text (750,400) 1 0 1 0x1000000 -1 -1 "S5"»
+      «text (750,-400) 1 0 1 0x1000000 -1 -1 "S2"»
+      «pin (-800,700) (20,0) 1 15 0 0x0 -1 "dc+"»
+      «pin (-800,-700) (20,0) 1 15 0 0x0 -1 "dc-"»
+      «pin (1600,700) (-20,0) 1 15 0 0x0 -1 "a"»
+      «pin (1600,0) (0,0) 1 0 0 0x0 -1 "b"»
+      «pin (1600,-700) (0,0) 1 0 0 0x0 -1 "c"»
+      «pin (-500,-900) (0,0) 1 14 0 0x0 -1 "s1"»
+      «pin (-200,-900) (0,0) 1 14 0 0x0 -1 "s4"»
+      «pin (200,-900) (0,0) 1 14 0 0x0 -1 "s3"»
+      «pin (500,-900) (0,0) 1 14 0 0x0 -1 "s6"»
+      «pin (900,-900) (0,0) 1 14 0 0x0 -1 "s5"»
+      «pin (1200,-900) (0,0) 1 14 0 0x0 -1 "s2"»
+    »
+  »
+  «component (-1100,2400) 8 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (180,150) 1 7 0 0x1000000 -1 -1 "V4"»
+      «text (180,-150) 1 7 0 0x1000000 -1 -1 "294"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (3100,2500) 0 0
+    «symbol Branch-RL3
+      «type: X»
+      «description: 3-phase resistor-inductor branch»
+      «library file: |.subckt Branch-RL3 I1 I2 I3 O1 O2 O3\nR1 I1 N01 R\nR2 I2 N02 R\nR3 I3 N03 R\nL1 N01 O1 L\nL2 N02 O2 L\nL3 N03 O3 L\n.ends Branch-RL3»
+      «shorted pins: false»
+      «line (-400,0) (-300,0) 0 0 0x1000000 -1 -1»
+      «line (300,0) (390,0) 0 0 0x1000000 -1 -1»
+      «line (0,0) (-50,0) 0 0 0x1000000 -1 -1»
+      «line (-400,-600) (-300,-600) 0 0 0x1000000 -1 -1»
+      «line (300,-600) (390,-600) 0 0 0x1000000 -1 -1»
+      «line (0,-600) (-50,-600) 0 0 0x1000000 -1 -1»
+      «line (-400,600) (-300,600) 0 0 0x1000000 -1 -1»
+      «line (300,600) (390,600) 0 0 0x1000000 -1 -1»
+      «line (0,600) (-50,600) 0 0 0x1000000 -1 -1»
+      «rect (-400,800) (400,-800) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+      «ellipse (-350,700) (-300,650) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «coil (0,70) (300,-60) 0 0 0 0x1000000 -1 -1»
+      «coil (0,-530) (300,-660) 0 0 0 0x1000000 -1 -1»
+      «coil (0,670) (300,540) 0 0 0 0x1000000 -1 -1»
+      «zigzag (-300,-75) (-50,75) 0 0 0 0x1000000 -1 -1»
+      «zigzag (-300,-675) (-50,-525) 0 0 0 0x1000000 -1 -1»
+      «zigzag (-300,525) (-50,675) 0 0 0 0x1000000 -1 -1»
+      «text (0,900) 1 15 0 0x1000000 -1 -1 "X6"»
+      «text (0,1050) 1 15 2 0x1000000 -1 -1 "BRANCH-RL3"»
+      «text (-400,-900) 1 7 0 0x0 -1 -1 "R=<4>"»
+      «text (-400,-1050) 1 7 0 0x0 -1 -1 "L=<2m>"»
+      «pin (-400,600) (20,0) 1 15 0 0x0 -1 "I1"»
+      «pin (-400,0) (20,0) 1 15 0 0x0 -1 "I2"»
+      «pin (-400,-600) (20,0) 1 15 0 0x0 -1 "I3"»
+      «pin (400,600) (-20,0) 1 15 0 0x0 -1 "O1"»
+      «pin (400,0) (-20,0) 1 15 0 0x0 -1 "O2"»
+      «pin (400,-600) (-20,0) 1 15 0 0x0 -1 "O3"»
+    »
+  »
+  «component (2700,-1300) 8 0
+    «symbol B1
+      «type: B»
+      «description: Behavioral Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (180,150) 1 7 0 0x1000000 -1 -1 "B2"»
+      «text (180,-150) 1 7 0 0x1000000 -1 -1 "V=V(s1,s4)"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (3400,-1100) 0 0
+    «symbol TF-2ndOrder-LowPass
+      «type: X»
+      «description: 2nd-order Low Pass Filter (Transfer Function)»
+      «library file: |.subckt TF-2ndOrder-LowPass IN OUT\nE1 OUT 0 IN 0 Kp Laplace=omega**2/(s**2+2*zeta*omega*s+omega**2)\n.param omega=2*pi*fc\n.param zeta=damping\n.ends TF-2ndOrder-LowPass»
+      «shorted pins: false»
+      «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+      «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+      «rect (-300,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+      «rect (-291,-96) (251,123) 0 0 2 0xff0000 0x5000000 -1 0 -1 89504e470d0a1a0a0000000d49484452000001070000006a08020000003ed403c00000000970485973000012740000127401de661f7800000d0d49444154789ced9dbdaba55715c6df7fe086b42902a96e93c290422408c62e6063e7546231e91406a611616082200485b11a412581011131308588c22d02361eab5808a6b3d3c2227f823e9c4516eb3e6b7fbde7ecf7de73cf7d363f863be7bc1ffbdd7b3d6baffdf19ebdecfefd3f214464e91e21c47d43aa1082912a8460a48a33e4eaf32f3efce8e5c3c74fbff59def7de3bd6f03fcf1e88367dd138521559c15cf3ff9141ab878e5d56559f0ef6bafbfb15c4f4f9e7ddcbd88902ace8acb37df32ebc71f2fae3eb30fa193280cff5cd4902ace0a57051a0dff1001555405a2a9ee75ee3952c55961aac0bfc5cf2dbdfdcebbddebdc73a48ab3e2e5dffe850029c7485082ab020155f73af71ca9621d6676884f3efce8257aae8f3e78669c78b01ebbdd0f1f3fed1e7fcf912ad6413d574f1049f7dcdb021af67c421ee866744fb9e74815eb8049a165c8aa401bd23df7b6f0f0e9e29557632f5cd4902a0e21765ecd01774fb92d10e6793e35593188547108343b76b2fd57b46036a32749ac42aa580d0dff2fa7da7f453ead4d83302489554815ab899d574ba7d9d5b6810149e200a48ad5e4def6098eea3c78ff91e54d923800a9623534389b27926f868614bd879dd7c9da7c4bf7e2f71ca96235d4d58657f6af6070f836333e6e8bf00c32eb2a0d17c431c5b51bdec38e19736c94763c3ff713a9621db0fbe57a8a9d0a585b5c5b6169709600be1f763c3864e40152168667c05eab88f880f209867c278554b18e38fc6f89fc2ef5c5073bbb30d318987507b5e238581446718631a76e7eee392aa075c0e346f382d1d301d12ef1edc8f094c55d7e5631f2c9c453acff00a9e4d78c723ae539c71341aa58477bfe2ece9ac1858f84ef90849f62670d8637684f624e702f5345976ea74548152b68cfdf45978fcf478cdb27da2c510f04dfdab270275e13ad50cc89de259a8854b10232c42574b511c3f8dbd22351934183bc64d9ede942eaf7e7584e1c8c54b1020a5a96fd3bd0f60302f6df5583b05963349390bbcef1e2f8bbf1ad3806a96205b5972b3cad72d8b4f0362f316c4f1766558c8cff8a11a48a1550571bff8d1d654b83e1532318abdd8ec6a6da3327e218a48a51b215da4444bb6f5023076314ff748d3eeb4a6dc52ca48a516a513ed9f76010455aca7308dde9c276af431c8354310ad9b15b7ff6d923d649d1515eb841d385593627b248f12c912a46a9d9719ec418f945d7f66c60e3767e53ead27417898871a48a21b2e9c7be6f6334a93697478b084915b953415d6d6aa0a09091064a0c22550cd11e32f215ac6ea3f639248140a8b8de9b7a051420e5be785405cd882f6a286623550cd11e32ca9ac1f1f0f7fe8e687ed127373e7ec1b832caad3f36262442086f6475891847aa18a2ddb56d2c56c5e7b577df6841079a14fb4942bf14ac3f8ae7c9b38ff12d49627c35a11847aa1882bab6795222af595a0696cde2ac3c0fb8ec9b17845866eec52bd331622e52451f581e22a248d1fde343387228012d09da96f1d7a361dc38de4fccd7b70cd801009a44bb213d6c87542104235508c1481542305285108c542104235508c1481542305285108c542104235508c1481542305285108c542104235508c1481542305285108c542104535045f17d4825a5b34f5285921227a9424989534b1542dc73a40a2118a9420846aa1082912a846066aae2eaf32f9e7ff2e9c3c74f2fdf7c2bfe50a4fd1e5ef77421b6a06893afbdfec683f71fd57eef749a2a7cc369bf25fd4e30b2a51f811437c98babcffc47dd619c3048c8837e27bbb899e03455f88e55d1fa697792c19d14859882efa00049c4fd46a2308afb18ce57056df519f7771bdc49518829b82ac81dd34e9cf977b2a7a9021194fd62368549b41f4af73aa700c24d1428ca0e0f05f007dad9c1f0cfcf6aa35d806f0014b2d924796adafc20d7c5e6661a7b17a7bccfa70d15c0a9143794b0f4f63befda1edb0d6adbbb50ea5e476c07a922f7b9375745dc25e83447a2a0074897c4605b49144dbcd13bcabb3c16936d62d4cd98d88818bf14772ddc561550a1df1e1636d1147ca7156a1c0f206672493db3bc1bfc52df3b386f9097d369ba86c3c0f35a2ddcad1d5ce3c0d4b6635045bcab5dbbfdc1f8867179a7eab5902ab2c5d386f04b7dd800b9427341c4d6f2cc02270f8fe756eea6c4dd6b6bde6d4355b89725ef3b858d54516cd0f27ea74b2918cd586ce685706692d8dd4155a0d63c54a62dcc235ba9c2b7c7dd4212bbcd54512ba925a5ae1d2087de4a9ca52476774d15a811f422da156dac5305ae0b604646e3300bdd3692c46eaa2a76fb4109a3f6507960aadd56c029784f7d2349aceaa48dd4da019c942aba05e291705b12bb415558d79656925842dddb3227cf93fbc8ed24b19bad8ac17b79c2a335ea206e23bfacec4be05cf8b3e2c00865c946c9da87c1586101deb98c09e7e2ab23ad796b5598e18d18127a0830c54636bc3bd195c46e4415b42734fe2e8e57ba13b2921a799263b84955e491a5c6e02c15d7481d183440dcd6929b634d3f317eb354acb823d7e06caa8ab88aa9bd882ebaad624e509856b083d5d151050c22d6310ad13317fbf2286ebfbd7d922bd5b6a31edf85bacd4daa82c6a05020b538845a89c13ad82523ee8ede463b280a235ecd3c94555c34b5a5a7bd2edba982169b7603bf58479419ef61e7eab0b62817424715de3b594a618317bd9966fbf676f0ac06e4c65411472d2cd586f34812e36b846327a4587a45e22994256adc48637174a16b6d6d3652459c6543918e78d2f8c8d150bd879dab03ff35cf9e1bcc962a68a6d61b849c152b779250c43fbf73aaa086a266b2575f0e30f8e30f1a0a49625c4b71290d355f143be532b73b5e1cbd58730b55d0c2b9f1d68c821afb30463464937e7caed3962a68b9c8925c8ba90da06a47a6759779c57733aaa089ed184012648883febeada5ab307064c4bb371a84e89e96922fc4b9b6eab19bc336d355118d7849959b0b247e4b830a7600b5f3c594e3d5156dc5d25cde571ce8c869bcc9c6dd7dc034f3e35ffcd62ef8b56fbed738ecf9f05ad70c9569431264a039d4ac415a22f3cd5e297a7daa9de8f84915cb1a8f1bb9daaf986c80c2b7ebdb2ae01abffec35fbbf7daa51074496bbca9b8c81aa9554796a8d9a9a51c12b7548142c952bba80c2e5926ba0c9acbae54b587a5c362b6ab30e3b3342541fe7e19e82b1bb975252320c7b95cf7292faf2f5489dfe61397e1e62b32b8d8b19b72ec5d846a3c47013486464f44aac0e9be4cabcdeaf72b8ae5bb1c3da237c2edaa22baa586247625e31e6c0f494bd908daae319becf32fc318e4b6387a5ef368356e5215b9189f5f8fca7266e8594815dd399f06fdf98ad8ab8b098f3a323870303fffcd9fd0eed7f8c1939f5a36bef2d5af370e037ffcfb7fbaf722a22f78d05bf5ddb6dd1ad9086a7d624fe41adb5692a3114f834d1940d1b5cb16856fd7fceef77fd838ec27bffc7df75edd627c92162f93f7e95e619cbe2a76f516e3f8418c83d9aeb7bd4a12bb64bb832e2a87bc54c75dd7d875ae39b4f3f4e4a06e4666566f3bc7ea39dea3a6201b3d0517831551644815bb7d144b5ab4541bbcdf9a8d54115d6c3b7072a8400663cbae63ebbac676afa371d832cf9dcd52451e57c8ba25efd3ed750c564491515518d9c38d848c5bb0852aa2736dcc1ba00a616aeeb9c9c90de6a7dbc2906bcce5dcd59503b5e446e3483b3666a922bb006a18afc25cbe2572c7b9693da63d5ca78a5daa8c595e672d5ba8c21fadfddaa0b5d46ec7d9e0467adb6b3d1fc926871cedde421eb09ad2c8cf52457738aedb0d237f7d515f95334259150ff70b158be3ee94bfb3692b62a481c72f8ebbe3d9dd85fb7d73fb099d74aba43d0a993d1fc5d97986c4e6f8acd68a83b024b3635ca9334b1539826acf542cc9f5906f3a60183a52568567220f8c506337cb28d73257158393a03179d85a1b066d570c8dec51fc939516af569b2171db2a465394c9ae6e4798a58adcf445c32bce9b457f7df02c6a8db22a3c1339de25277764711ccc5c55e437b3bb299a696318b4b16e2a1e165bfc7835b7fef898a428d48819416ceec8d792339e5268bb79aad8254710fbca7e97e80bbcb8c8a3ad9d932952500535dfc80a9ed9563a514376643b750c135571d85cd5c3b410b5360c5aebb8938783715b90e64eddc685edef8bfd0b7d2ff6abf1e92cbf78ac1d1c6fab30708ac5c3fed5488037c84455ec521444cf7bb15f24e6ffcdc5b5cc7bedb1a08adaec444cb36e7f30135531f2bc39157babf1ad80986aa384b91369c9fa0666ee39e6f66370bba8b762204709c6344b12bbd9aac0b3d41aedcbf0fb7fc5198265ff68b3a695cb11140a0e460f1f835ce266c8134afc72ff4ae483fd6b8d47c66dc7335115e681d6d2b083a2cc1a2586e3ad90ad84f3ca1c54073e8cc7a0766aed8fd79a1f5fbbecf1cc558561d5d17e580b5bb67bb4d523b327c29ffff15fd43df8d1cf7ed53df8e6c95df0b9d57622a0f0ad167ef7977f760fbe43dc55559c3e345837316e115b23556c45ec0f34269ec50922556c451c6a9c32912c6e0ca9621368e16df7787152481593b95af91b36e204912ae663a34f97698b1d7157902ae6634bcd6f7d4a471c8c542104235508c1fc1f174e5c0b694bf2d80000000049454e44ae426082»
+      «text (-300,300) 1 7 0 0x1000000 -1 -1 "X7"»
+      «text (0,450) 1 0 2 0x1000000 -1 -1 "TF-2NDORDER-LOWPASS"»
+      «text (-300,-450) 1 7 0 0x0 -1 -1 "Kp=<1> ;gain"»
+      «text (-300,-600) 1 7 0 0x0 -1 -1 "fc=<1000>;cutoff frequency"»
+      «text (-300,-750) 1 7 0 0x0 -1 -1 "damping=<0.5>;damping factor"»
+      «text (-300,-300) 1 7 1 0x1000000 -1 -1 "Low-Pass"»
+      «pin (-300,0) (0,0) 1 15 0 0x0 -1 "IN"»
+      «pin (300,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+    »
+  »
+  «component (400,-700) 0 0
+    «symbol SVPWM
+      «type: »
+      «description: SVPWM subcircuit model by KSKelvin»
+      «shorted pins: false»
+      «line (210,620) (-210,-120) 0 0 0x1000000 -1 -1»
+      «line (-210,620) (210,-120) 0 0 0x1000000 -1 -1»
+      «line (210,620) (460,250) 0 0 0x1000000 -1 -1»
+      «line (-210,620) (-460,250) 0 0 0x1000000 -1 -1»
+      «line (-460,250) (-210,-120) 0 0 0x1000000 -1 -1»
+      «line (-210,-120) (210,-120) 0 0 0x1000000 -1 -1»
+      «line (210,-120) (460,250) 0 0 0x1000000 -1 -1»
+      «line (210,620) (-210,620) 0 0 0x1000000 -1 -1»
+      «line (-460,250) (460,250) 0 0 0x1000000 -1 -1»
+      «rect (-700,-1500) (700,1200) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+      «text (-700,1450) 1 7 0 0x1000000 -1 -1 "X1"»
+      «text (-700,1300) 1 7 0 0x1000000 -1 -1 "SVPWM"»
+      «text (-700,-1600) 1 7 0 0x1000000 -1 -1 "fsampling=<5K>"»
+      «text (-700,-1750) 1 7 0 0x1000000 -1 -1 "TTOL=<1µ>"»
+      «pin (-700,1000) (20,0) 1 7 0 0x0 -1 "alpha"»
+      «pin (-700,600) (20,0) 1 7 0 0x0 -1 "beta"»
+      «pin (700,1000) (-20,0) 1 11 0 0x0 -1 "s1"»
+      «pin (700,800) (-20,0) 1 11 0 0x0 -1 "s4"»
+      «pin (700,400) (-20,0) 1 11 0 0x0 -1 "s3"»
+      «pin (700,200) (-20,0) 1 11 0 0x0 -1 "s6"»
+      «pin (700,-200) (-20,0) 1 11 0 0x0 -1 "s5"»
+      «pin (700,-400) (-20,0) 1 11 0 0x0 -1 "s2"»
+      «pin (700,-1300) (-20,0) 1 11 0 0x0 -1 "¬E¬N"»
+      «pin (-700,-100) (20,0) 1 7 0 0x0 -1 "sawth"»
+      «pin (-700,-300) (20,0) 1 7 0 0x0 -1 "M"»
+      «pin (-700,-500) (20,0) 1 7 0 0x0 -1 "theta"»
+      «pin (-700,-700) (20,0) 1 7 0 0x0 -1 "sector"»
+      «pin (-700,-1000) (20,0) 1 7 0 0x0 -1 "thres_s1"»
+      «pin (-700,-1200) (20,0) 1 7 0 0x0 -1 "thres_s3"»
+      «pin (-700,-1400) (20,0) 1 7 0 0x0 -1 "thres_s5"»
+    »
+  »
+  «net (-4000,-1000) 1 11 0 "GND"»
+  «net (-4000,-300) 1 11 0 "GND"»
+  «net (-4000,400) 1 11 0 "GND"»
+  «net (-800,300) 1 14 0 "alpha"»
+  «net (-800,-100) 1 14 0 "beta"»
+  «net (1300,300) 1 7 0 "s1"»
+  «net (1300,-1100) 1 7 0 "s2"»
+  «net (1300,-300) 1 7 0 "s3"»
+  «net (1300,100) 1 7 0 "s4"»
+  «net (1300,-900) 1 7 0 "s5"»
+  «net (1300,-500) 1 7 0 "s6"»
+  «net (-2300,400) 1 14 0 "a"»
+  «net (-2300,100) 1 14 0 "b"»
+  «net (-2300,-200) 1 14 0 "c"»
+  «net (2600,-100) 1 13 0 "GND"»
+  «net (3800,300) 1 7 0 "ab-LP"»
+  «net (-200,1500) 1 13 0 "s1"»
+  «net (100,1500) 1 13 0 "s4"»
+  «net (500,1500) 1 13 0 "s3"»
+  «net (800,1500) 1 13 0 "s6"»
+  «net (1200,1500) 1 13 0 "s5"»
+  «net (1500,1500) 1 13 0 "s2"»
+  «net (-1100,1700) 1 13 0 "GND"»
+  «net (2300,3100) 1 14 0 "ao"»
+  «net (2300,2500) 1 14 0 "bo"»
+  «net (2300,1900) 1 14 0 "co"»
+  «net (2700,-1500) 1 13 0 "GND"»
+  «net (3800,-1100) 1 7 0 "s1s4-LP"»
+  «net (-500,-1700) 1 11 0 "thres_s1"»
+  «net (-500,-1900) 1 11 0 "thres_s3"»
+  «net (-500,-2100) 1 11 0 "thres_s5"»
+  «net (-500,-1400) 1 11 0 "sector"»
+  «net (-500,-800) 1 11 0 "sawth"»
+  «net (-500,-1000) 1 11 0 "REFmag"»
+  «net (-500,-1200) 1 11 0 "REFph"»
+  «net (1300,-2100) 1 13 0 "GND"»
+  «junction (3800,2500)»
+  «junction (-1100,1800)»
+  «wire (-800,-100) (-1300,-100) "beta"»
+  «wire (-800,300) (-1300,300) "alpha"»
+  «wire (-2300,400) (-3600,400) "a"»
+  «wire (-2300,100) (-2600,100) "b"»
+  «wire (-2600,100) (-2600,-300) "b"»
+  «wire (-2600,-300) (-3600,-300) "b"»
+  «wire (-2100,-200) (-2300,-200) "c"»
+  «wire (-2300,-200) (-2300,-1000) "c"»
+  «wire (-2300,-1000) (-3600,-1000) "c"»
+  «wire (-300,300) (-800,300) "alpha"»
+  «wire (-300,-100) (-800,-100) "beta"»
+  «wire (1100,300) (1300,300) "s1"»
+  «wire (1100,100) (1300,100) "s4"»
+  «wire (1100,-300) (1300,-300) "s3"»
+  «wire (1100,-500) (1300,-500) "s6"»
+  «wire (1100,-900) (1300,-900) "s5"»
+  «wire (1100,-1100) (1300,-1100) "s2"»
+  «wire (-2100,400) (-2300,400) "a"»
+  «wire (-2100,100) (-2300,100) "b"»
+  «wire (3700,300) (3800,300) "ab-LP"»
+  «wire (3100,300) (2600,300) "N01"»
+  «wire (-200,1600) (-200,1500) "s1"»
+  «wire (100,1600) (100,1500) "s4"»
+  «wire (500,1600) (500,1500) "s3"»
+  «wire (800,1600) (800,1500) "s6"»
+  «wire (1200,1600) (1200,1500) "s5"»
+  «wire (1500,1600) (1500,1500) "s2"»
+  «wire (-500,1800) (-1100,1800) "GND"»
+  «wire (-1100,2600) (-1100,3200) "N02"»
+  «wire (-1100,1800) (-1100,2200) "GND"»
+  «wire (-1100,3200) (-500,3200) "N02"»
+  «wire (-1100,1700) (-1100,1800) "GND"»
+  «wire (1900,3200) (2100,3200) "ao"»
+  «wire (2100,3200) (2100,3100) "ao"»
+  «wire (2300,3100) (2700,3100) "ao"»
+  «wire (2300,2500) (2700,2500) "bo"»
+  «wire (1900,1800) (2100,1800) "co"»
+  «wire (2100,1800) (2100,1900) "co"»
+  «wire (2300,1900) (2700,1900) "co"»
+  «wire (3500,3100) (3800,3100) "N03"»
+  «wire (3800,2500) (3800,1900) "N03"»
+  «wire (3800,1900) (3500,1900) "N03"»
+  «wire (3500,2500) (3800,2500) "N03"»
+  «wire (3800,3100) (3800,2500) "N03"»
+  «wire (2100,3100) (2300,3100) "ao"»
+  «wire (1900,2500) (2300,2500) "bo"»
+  «wire (2100,1900) (2300,1900) "co"»
+  «wire (3700,-1100) (3800,-1100) "s1s4-LP"»
+  «wire (2700,-1100) (3100,-1100) "N04"»
+  «wire (-300,-1700) (-500,-1700) "thres_s1"»
+  «wire (-300,-1900) (-500,-1900) "thres_s3"»
+  «wire (-300,-2100) (-500,-2100) "thres_s5"»
+  «wire (-300,-800) (-500,-800) "sawth"»
+  «wire (-300,-1000) (-500,-1000) "REFmag"»
+  «wire (-300,-1400) (-500,-1400) "sector"»
+  «wire (-300,-1200) (-500,-1200) "REFph"»
+  «wire (1300,-2100) (1300,-2000) "GND"»
+  «wire (1300,-2000) (1100,-2000) "GND"»
+  «rect (-2800,1200) (-4750,-1450) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «text (-4900,2150) 1 7 0 0x1000000 -1 -1 "ï»¿.param fsamp=5K\n.tran 0 6/50 4/50\n.plot V(ao,bo) V(a,b)*294 V(ab-LP)\n.plot V(s1,s4) V(s1s4-LP)\n.plot V(thres_s1) V(thres_s3) V(thres_s5)\n.plot V(s1)+2.2 V(s3)+1.1 V(s5)\n.plot V(alpha) V(beta)"»
+  «text (-4650,850) 1 7 0 0x1000000 -1 -1 "ï»¿.param Vamp=1/sqrt(3)"»
+  «text (-4650,4300) 1.6 7 1 0x1000000 -1 -1 "ï»¿Space-Vector Pulse Width Modulation (SVPWM) in C++ blocks using Qspice"»
+  «text (-4650,1050) 1 7 1 0x1000000 -1 -1 "ï»¿Reference signal (a,b,c)"»
+  «text (-4650,3850) 1.25 7 1 0x1000000 -1 -1 "ï»¿[focusing on coding for ease of understanding rather than optimization]\nby KSKelvin on 4-5-2026"»
+  «text (-4900,3050) 1 7 0 0x1000000 -1 -1 "ï»¿.option maxstep=1/2K/100"»
+»
+

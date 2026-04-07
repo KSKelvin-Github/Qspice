@@ -1,4 +1,5 @@
 # Fourier Series Coefficients and Synthesis
+* This is an educational project that I was inspired to create from a forum discussion.  For a known frequency signal, Fourier analysis can compute Fourier series coefficients, and with these coefficients, it can synthesize the input signal using sine and cosine functions. This forms the basis of signal processing. Utilizing the Qspice DLL block, we can demonstrate the computation of Fourier series coefficients and the synthesis results, which I believe serves as an interesting educational example of Qspice.
 
 ## Files
 * example.Fourier.qsch - example

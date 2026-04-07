@@ -1,0 +1,18 @@
+# Space-Vector Pulse Width Modulation (SVPWM)
+
+## Files
+* Space-Vector Pulse Width Modulation (SVPWM) by KSKelvin.pdf : Explains operation principal and mathematics of SVPWM
+
+## Folders
+* /01 Basic Operation (DLL 3-segment)/ - fundamental concept (C++ version)
+* /02 Basic Operation (DLL 7-segment)/ - 7-segment switching pattern (C++ version)
+* /03a B-source SVPWM Implementation (7-segment)/ - B-source implementation
+* /03b B-source SVPWM Implementation (3-5-7-segment)/ - B-source with selectable 3-,5-,7-segment
+* /04 Local Geometry (DLL)/ - SVPWM with local geometry C++ version
+
+## How to use
+* download all files from a folder, run simulation in Qspice.  For C++ version, first time simulation execution will pop up window and ask to compile .dll.
+
+## Screen Capture
+* /04 Local Geometry (DLL)/example.Space-VectorPWM(LocalGeometry).qsch
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/FRA%20Frequency%20Response%20Analyzer/screen%20capture/FRA%20(screen%20capture%232).png)

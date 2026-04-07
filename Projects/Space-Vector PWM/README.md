@@ -1,4 +1,5 @@
 # Space-Vector Pulse Width Modulation (SVPWM)
+*This project showcases the utilization of C++ blocks to implement Space-Vector Pulse Width Modulation (SVPWM) in QSpice. It is designed as a tutorial to assist others in comprehending the mathematical concepts and implementation of SVPWM in Qspice. The folder comprises both the C++ block version and the B-sources version, accompanied by a pdf presentation that systematically explains the algorithm, operational principles and implementation.
 
 ## Files
 * Space-Vector Pulse Width Modulation (SVPWM) by KSKelvin.pdf : Explains operation principal and mathematics of SVPWM

@@ -15,4 +15,4 @@
 
 ## Screen Capture
 * /04 Local Geometry (DLL)/example.Space-VectorPWM(LocalGeometry).qsch
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/FRA%20Frequency%20Response%20Analyzer/screen%20capture/FRA%20(screen%20capture%232).png)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/Space-Vector%20PWM/screen%20capture/SVPWM-Local-Geometry.png)

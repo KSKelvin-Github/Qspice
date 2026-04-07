@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Src-3Phase-Star1
   «type: X»
-  «description: Source 3-Phase Star (with Neutral)»
+  «description: Source 3-Phase Star»
   «library file: |.subckt Src-3Phase-Star VA VB VC N\nV1 VA N sin 0 sqrt(2)*Vrms/(if(LL,sqrt(3),1)) Freq 0 0 InitialPhaseA Rser=Rser\nV2 VB N sin 0 sqrt(2)*Vrms/(if(LL,sqrt(3),1)) Freq 0 0 InitialPhaseA-120 Rser=Rser\nV3 VC N sin 0 sqrt(2)*Vrms/(if(LL,sqrt(3),1)) Freq 0 0 InitialPhaseA-240 Rser=Rser\n.ends Src-3Phase-Star»
   «shorted pins: false»
   «line (-750,-750) (-750,-30) 0 0 0x1000000 -1 -1»

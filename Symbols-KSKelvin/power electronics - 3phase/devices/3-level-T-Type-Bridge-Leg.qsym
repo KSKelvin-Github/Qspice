@@ -1,0 +1,31 @@
+ÿØÿÛ«symbol 3-level-T-Type-Bridge-Leg
+  «type: X»
+  «description: 3-Level T-Type Bridge Leg»
+  «library file: |.subckt 3-level-T-Type-Bridge-Leg dc+ dc- ac dcn s1 s2 s3 s4\nS1 dc+ ac s1 0 SWi OFF\nS2 dcn N01 s2 0 SWi OFF\nS3 N01 ac s3 0 SWi OFF\nS4 ac dc- s4 0 SWi OFF\nD1 ac dc+ Di\nD4 dc- ac Di\nD2 N01 dcn Di\nD3 N01 ac Di\n.model SWi SW Ron=Ron Roff=20Meg Vt=0.5 Vh=0\n.model Di D Ron=1m Roff=20Meg Vfwd=0\n.ends 3-level-T-Type-Bridge-Leg»
+  «shorted pins: false»
+  «line (-500,700) (300,700) 0 0 0x1000000 -1 -1»
+  «line (300,700) (300,500) 0 0 0x1000000 -1 -1»
+  «line (300,350) (300,-300) 0 0 0x1000000 -1 -1»
+  «line (-500,-700) (300,-700) 0 0 0x1000000 -1 -1»
+  «line (300,-700) (300,-450) 0 0 0x1000000 -1 -1»
+  «line (300,500) (200,350) 0 0 0x1000000 -1 -1»
+  «line (300,-300) (200,-450) 0 0 0x1000000 -1 -1»
+  «line (500,0) (100,0) 0 0 0x1000000 -1 -1»
+  «line (-50,0) (-250,0) 0 0 0x1000000 -1 -1»
+  «line (-500,0) (-400,0) 0 0 0x1000000 -1 -1»
+  «line (-400,0) (-250,100) 0 0 0x1000000 -1 -1»
+  «line (100,0) (-50,100) 0 0 0x1000000 -1 -1»
+  «rect (-500,900) (500,-900) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (275,25) (325,-25) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «text (0,1000) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,1150) 1 15 2 0x1000000 -1 -1 "3-LEVEL-T-TYPE-BRIDGE-LEG"»
+  «text (550,-800) 1 7 2 0x1000000 -1 -1 "Ron=1m ;Switch Resistance"»
+  «pin (-500,700) (20,0) 1 6 0 0x0 -1 "dc+"»
+  «pin (-500,-700) (20,0) 1 6 0 0x0 -1 "dc-"»
+  «pin (500,0) (20,0) 1 15 0 0x0 -1 "ac"»
+  «pin (-500,0) (20,0) 1 15 0 0x0 -1 "dcn"»
+  «pin (-300,-900) (0,0) 1 14 0 0x0 -1 "s1"»
+  «pin (-100,-900) (0,0) 1 14 0 0x0 -1 "s2"»
+  «pin (100,-900) (0,0) 1 14 0 0x0 -1 "s3"»
+  «pin (300,-900) (0,0) 1 14 0 0x0 -1 "s4"»
+»

@@ -1,0 +1,37 @@
+ÿØÿÛ«symbol SVPWM-2level-alpha-beta
+  «type: X»
+  «description: SVPWM subcircuit model by KSKelvin»
+  «library file: |.subckt SVPWM-2level-alpha-beta alpha beta s1 s4 s3 s6 s5 s2 ¬E¬N sawth M theta sector thres_s1 thres_s3 thres_s5\nB_atan2 theta 0 V=atan2(-v(beta),-v(alpha))+pi\nB_M M 0 V=hypot(v(beta),v(alpha))\nB_phi phi 0 V=v(theta)-int(v(theta)*3/pi)*pi/3\nB_sector sector 0 V=limit(0,6,ceil(v(theta)*3/pi))\nB_t1 t1 0 V=sqrt(3)*v(M)*sin(pi/3-v(phi))\nB_t2 t2 0 V=sqrt(3)*v(M)*sin(v(phi))\nB_t3 t0 0 V=(1-v(t1)-v(t2))\nB_Ta thres_s1 0 V=if(segment==7, table(int(v(sector)),1,v(t0)/2+v(t1)+v(t2),2,v(t0)/2+v(t1),3,v(t0)/2,4,v(t0)/2,5,v(t0)/2+v(t2),6,v(t0)/2+v(t1)+v(t2)), if(segment==5, table(int(v(sector)),1,v(t0)+v(t1)+v(t2),2,v(t1),3,v(t0),4,0,5,v(t0)+v(t2),6,v(t1)+v(t2)), table(int(v(sector)),1,v(t1)+v(t2),2,v(t0)+v(t1),3,0,4,v(t0),5,v(t2),6,v(t0)+v(t1)+v(t2)) ))\nB_Tb thres_s3 0 V=if(segment==7, table(int(v(sector)),1,v(t0)/2+v(t2),2,v(t0)/2+v(t1)+v(t2),3,v(t0)/2+v(t1)+v(t2),4,v(t0)/2+v(t1),5,v(t0)/2,6,v(t0)/2), if(segment==5, table(int(v(sector)),1,v(t0)+v(t2),2,v(t1)+v(t2),3,v(t0)+v(t1)+v(t2),4,v(t1),5,v(t0),6,0), table(int(v(sector)),1,v(t2),2,v(t0)+v(t1)+v(t2),3,v(t1)+v(t2),4,v(t0)+v(t1),5,0,6,v(t0)) ))\nB_Tc thres_s5 0 V=if(segment==7, table(int(v(sector)),1,v(t0)/2,2,v(t0)/2,3,v(t0)/2+v(t2),4,v(t0)/2+v(t1)+v(t2),5,v(t0)/2+v(t1)+v(t2),6,v(t0)/2+v(t1)), if(segment==5, table(int(v(sector)),1,v(t0),2,0,3,v(t0)+v(t2),4,v(t1)+v(t2),5,v(t0)+v(t1)+v(t2),6,v(t1)), table(int(v(sector)),1,0,2,v(t0),3,v(t2),4,v(t0)+v(t1)+v(t2),5,v(t1)+v(t2),6,v(t0)+v(t1)) ))\nVos5 sawth 0 Pulse 0 1 0 sym/fsampling (1-sym)/fsampling 0 1/fsampling trigger=V(¬E¬N)<0.5\nRen 0 ¬E¬N 1G shorted\nVQ1 p1v 0 1\n¥1 p1v 0 s1 s4 thres_s1 sawth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥2 p1v 0 s3 s6 thres_s3 sawth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥3 p1v 0 s5 s2 thres_s5 sawth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n.param sym=0.5\n.ends SVPWM-2level-alpha-beta»
+  «shorted pins: false»
+  «line (210,620) (-210,-120) 0 0 0x1000000 -1 -1»
+  «line (-210,620) (210,-120) 0 0 0x1000000 -1 -1»
+  «line (210,620) (460,250) 0 0 0x1000000 -1 -1»
+  «line (-210,620) (-460,250) 0 0 0x1000000 -1 -1»
+  «line (-460,250) (-210,-120) 0 0 0x1000000 -1 -1»
+  «line (-210,-120) (210,-120) 0 0 0x1000000 -1 -1»
+  «line (210,-120) (460,250) 0 0 0x1000000 -1 -1»
+  «line (210,620) (-210,620) 0 0 0x1000000 -1 -1»
+  «line (-460,250) (460,250) 0 0 0x1000000 -1 -1»
+  «rect (-700,-1500) (700,1200) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (-700,1450) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-700,1300) 1 7 0 0x1000000 -1 -1 "SVPWM-2LEVEL-ALPHA-BETA"»
+  «text (-700,-1600) 1 7 0 0x1000000 -1 -1 "fsampling=<10K>"»
+  «text (-700,-1750) 1 7 0 0x1000000 -1 -1 "segment=<3,5,(7)>"»
+  «text (-700,-1900) 1 7 0 0x1000000 -1 -1 "TTOL=<1u>"»
+  «pin (-700,1000) (20,0) 1 7 0 0x0 -1 "alpha"»
+  «pin (-700,600) (20,0) 1 7 0 0x0 -1 "beta"»
+  «pin (700,1000) (-20,0) 1 11 0 0x0 -1 "s1"»
+  «pin (700,800) (-20,0) 1 11 0 0x0 -1 "s4"»
+  «pin (700,400) (-20,0) 1 11 0 0x0 -1 "s3"»
+  «pin (700,200) (-20,0) 1 11 0 0x0 -1 "s6"»
+  «pin (700,-200) (-20,0) 1 11 0 0x0 -1 "s5"»
+  «pin (700,-400) (-20,0) 1 11 0 0x0 -1 "s2"»
+  «pin (700,-1300) (-20,0) 1 11 0 0x0 -1 "¬E¬N"»
+  «pin (-700,-100) (20,0) 1 7 0 0x0 -1 "sawth"»
+  «pin (-700,-300) (20,0) 1 7 0 0x0 -1 "M"»
+  «pin (-700,-500) (20,0) 1 7 0 0x0 -1 "theta"»
+  «pin (-700,-700) (20,0) 1 7 0 0x0 -1 "sector"»
+  «pin (-700,-1000) (20,0) 1 7 0 0x0 -1 "thres_s1"»
+  «pin (-700,-1200) (20,0) 1 7 0 0x0 -1 "thres_s3"»
+  «pin (-700,-1400) (20,0) 1 7 0 0x0 -1 "thres_s5"»
+»

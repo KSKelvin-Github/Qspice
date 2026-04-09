@@ -1,18 +1,18 @@
-ÿØÿÛ«symbol TF(general)-2nd-Order-System-3
+ÿØÿÛ«symbol TF(general)-2nd-Order-System-2
   «type: X»
   «description: Transfer Function - 2nd Order System»
   «library file: |.subckt tf in out\nE1 out 0 in 0 Laplace=wn**2/(s**2+2*zeta*wn*s+wn**2)\n.ends tf»
   «shorted pins: false»
-  «line (-200,0) (1300,0) 0 0 0x1000000 -1 -1»
-  «line (1350,50) (1400,0) 0 0 0x1000000 -1 -1»
-  «line (1400,0) (1350,-50) 0 0 0x1000000 -1 -1»
-  «rect (-300,200) (1400,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
-  «text (-300,300) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (0,300) 1 7 2 0x1000000 -1 -1 "TF"»
-  «text (-300,-300) 1 7 0 0x0 -1 -1 "wn=<1> ;natural frequency"»
-  «text (-300,-450) 1 7 0 0x0 -1 -1 "zeta=<1> ;damping factor"»
-  «text (550,100) 0.857 0 1 0x1000000 -1 -1 "wn^2"»
-  «text (550,-100) 0.857 0 1 0x1000000 -1 -1 "s^2+2*zeta*wn*s+wn^2"»
-  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»
-  «pin (1400,0) (0,0) 1 0 0 0x0 -1 "out"»
+  «line (-620,0) (630,0) 0 0 0x1000000 -1 -1»
+  «line (650,50) (700,0) 0 0 0x1000000 -1 -1»
+  «line (700,0) (650,-50) 0 0 0x1000000 -1 -1»
+  «rect (-700,200) (700,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-700,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,300) 1 7 2 0x1000000 -1 -1 "TF"»
+  «text (-700,-300) 1 7 0 0x0 -1 -1 "wn=<1> ;natural frequency"»
+  «text (-700,-450) 1 7 0 0x0 -1 -1 "zeta=<1> ;damping factor"»
+  «text (0,100) 0.857 0 1 0x1000000 -1 -1 "wn²"»
+  «text (0,-100) 0.857 0 1 0x1000000 -1 -1 "s²+2*zeta*wn*s+wn²"»
+  «pin (-700,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (700,0) (0,0) 1 0 0 0x0 -1 "out"»
 »

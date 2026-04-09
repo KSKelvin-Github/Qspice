@@ -9,20 +9,28 @@
 * Once cloning is finished, in GitHub Desktop, navigate to Repository > Show in Explorer to access the saved directory
 * In the future, to update files, open GitHub and click on Pull origin or go to Repository > Pull from the menu.
 
+## One Click Download Everything! (No Github Desktop is required)
+* Go to https://github.com/KSKelvin-Github/Qspice
+* Locate the green '<> Code' button, click it, and select 'Download ZIP'
+* This will bundle and download everything, including the guidelines, projects, and the symbol library
+
 ## Guideline
-This section provides a quick start tutorial and in-depth study of usage and device model guidelines for Qspice
+This section provides a quick start tutorial and an in-depth study of usage and device model guidelines for QSpice
 
 ## Matlab2Qspice
-Use Matlab to create netlists and output data files for Qspice, as well as simulate and plot the results
+Use Matlab to create netlists and output data files for QSpice, as well as to simulate and plot the results
 
 ## Projects
-My Qspice projects
+My QSpice projects
+
+## SPICE-library
+Libraries of BJT, Diode, JFET, and MOSFET models (among others) featuring .model statements collected from LTspice, LTwiki, VolVal, and other sources
 
 ## Supplementary
-Additional materials related to spice simulation in this section
+This section contains additional materials related to SPICE simulation
 
-## Symbols
-Download KSKelvin symbols (.qsym) for Qspice
+## Symbols-KSKelvin
+Download KSKelvin symbols (.qsym) for QSpice—custom symbols designed to ease the simulation process
 
 ## Other Recommended Sites
 * [QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)

@@ -17,3 +17,8 @@
 * Once cloning is finished, in GitHub Desktop, navigate to Repository > Show in Explorer to access the saved directory
 * In Qspice, navigate to View > Symbol & IP Browser, and add this folder from the Symbol & IP Browser window<br/>
 * In the future, to update files, open GitHub and click on Pull origin or go to Repository > Pull from the menu<br/>
+
+## Method 3 : One Click Download Everything!
+* Go to https://github.com/KSKelvin-Github/Qspice
+* Locate the green '<> Code' button, click it, and select 'Download ZIP'
+* This will bundle and download everything, including the guidelines, projects, and the symbol library

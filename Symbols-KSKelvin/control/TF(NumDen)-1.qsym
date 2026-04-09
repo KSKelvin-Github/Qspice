@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol TF(NumDen)-1
   «type: X»
   «description: Transfer Function»
-  «library file: |.subckt tf in out\nE1 out 0 in 0 Laplace=Kgain/(a*s**2+b*s+c)\n.ends tf»
+  «library file: |.subckt tf in out\nE1 out 0 in 0 Laplace=A/(a2*s**2+a1*s+a0)\n.ends tf»
   «shorted pins: false»
   «line (-150,0) (650,0) 0 0 0x1000000 -1 -1»
   «line (750,50) (800,0) 0 0 0x1000000 -1 -1»

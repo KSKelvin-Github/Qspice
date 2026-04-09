@@ -33,8 +33,8 @@ This section contains additional materials related to SPICE simulation
 Download KSKelvin symbols (.qsym) for QSpice—custom symbols designed to ease the simulation process
 
 ## Other Recommended Sites
-* [QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice) <br>- Resource for C++ blocks (DLL blocks) and mini-tools for QSpice (e.g., QColorPrefs for changing the waveform viewer color scheme)
-* [QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE) - Power electronics projects, with a focus on digital control using C++ blocks.
-* [QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website) - General resources and teaching materials for QSpice; [MarcosAlonso youtube channel](https://www.youtube.com/@MarcosAlonsoElectronics)
-* [Qspice Forum @masashi.nogawa's Github repo](https://github.com/Qorvo/PyQSPICE) - PyQSpice resources
-* [QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) - A collection of QSpice symbols
+* [QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)<br>- Resource for C++ blocks (DLL blocks) and mini-tools for QSpice (e.g., QColorPrefs for changing the waveform viewer color scheme)
+* [QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE)<br>- Power electronics projects, with a focus on digital control using C++ blocks.
+* [QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website)<br>- General resources and teaching materials for QSpice; [MarcosAlonso youtube channel](https://www.youtube.com/@MarcosAlonsoElectronics)
+* [Qspice Forum @masashi.nogawa's Github repo](https://github.com/Qorvo/PyQSPICE) <br>- PyQSpice resources
+* [QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) <br>- A collection of QSpice symbols

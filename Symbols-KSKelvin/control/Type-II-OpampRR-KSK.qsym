@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Type-II-OpampRR-KSK
   «type: X»
   «description: Type II Compensator (Opamp)»
-  «library file: |.subckt Type-II-OpampRR-KSK REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC1 N03 Ctrl C1 IC=0\nR2 N01 N03 R2\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param C2=1/2/pi/R1/fp0\n.param C1=C2*(fp1-fz1)/fz1\n.param R2=1/2/pi/C1/fz1\n.ends Type-II-OpampRR-KSK»
+  «library file: |.subckt Type-II-OpampRR-KSK REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC1 N03 Ctrl C1 IC=0\nR2 N01 N03 R2\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param C2=1/2/pi/R1/fp0\n.param C1=C2*(fp1-fz1)/fz1\n.param R2=1/2/pi/C1/fz1\n.display Type-II: RB='RB' R1='R1',R2='R2',C1='C1',C2='C2'\n.ends Type-II-OpampRR-KSK»
   «shorted pins: false»
   «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
   «line (100,-150) (100,-250) 0 0 0x1000000 -1 -1»

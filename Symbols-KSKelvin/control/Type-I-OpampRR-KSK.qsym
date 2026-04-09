@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Type-I-OpampRR-KSK
   «type: X»
   «description: Type I Compensator (Opamp)»
-  «library file: |.subckt Type-I-OpampRR-KSK REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param C2=1/2/pi/fp0/R1\n.ends Type-I-OpampRR-KSK»
+  «library file: |.subckt Type-I-OpampRR-KSK REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param C2=1/2/pi/fp0/R1\n.display Type-I: RB='RB' R1='R1',C2='C2'\n.ends Type-I-OpampRR-KSK»
   «shorted pins: false»
   «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
   «line (100,-150) (100,-250) 0 0 0x1000000 -1 -1»

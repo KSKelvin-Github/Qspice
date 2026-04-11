@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-differentiator
   «type: X»
   «description: control - Opamp Differentiator (output inverted)»
-  «library file: |.subckt opamp-differentiator in out\nE1 out 0 0 N01 AVOL\nC1 in N01 C IC=0\nR1 N01 out R\n.param C=Kd/R\n.display Differentiator: Kd='Kd',R='R',C='C'\n.ends opamp-differentiator»
+  «library file: |.subckt opamp-differentiator in out\nE1 out 0 0 N01 AVOL\nC1 in N01 C IC=0\nR1 N01 out R\n.param C=Kd/R\n.display Differentiator: Kd='Kd',R='R',C='C'\n.option concise\n.ends opamp-differentiator»
   «shorted pins: false»
   «line (550,0) (-50,450) 0 0 0x1000000 -1 -1»
   «line (-50,450) (-50,-450) 0 0 0x1000000 -1 -1»

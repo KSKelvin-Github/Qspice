@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-controller-PID
   «type: X»
   «description: control - Opamp PID-Controller»
-  «library file: |.subckt opamp-controller-PID ref fb out\nE1 out 0 ref N01 AVOL\nC1 N02 out C1 IC=0\nR1 fb N01 R1\nR2 N01 N02 R2\nC3 fb N01 C3\n.param C1=1/Ki/R1\n.param C3=C1/2*(Kp-sqrt(Kp^2-4*Kd*Ki))\n.param R2=Kd/C3\n.display PID-controller: Kp='Kp',Ki='Ki',Kd='Kd',R1='R1',R2='R2',C1='C1',C3='C3'\n.ends opamp-controller-PID»
+  «library file: |.subckt opamp-controller-PID ref fb out\nE1 out 0 ref N01 AVOL\nC1 N02 out C1 IC=0\nR1 fb N01 R1\nR2 N01 N02 R2\nC3 fb N01 C3\n.param C1=1/Ki/R1\n.param C3=C1/2*(Kp-sqrt(Kp^2-4*Kd*Ki))\n.param R2=Kd/C3\n.display PID-controller: Kp='Kp',Ki='Ki',Kd='Kd',R1='R1',R2='R2',C1='C1',C3='C3'\n.option concise\n.ends opamp-controller-PID»
   «shorted pins: false»
   «line (650,0) (50,450) 0 0 0x1000000 -1 -1»
   «line (50,450) (50,-450) 0 0 0x1000000 -1 -1»

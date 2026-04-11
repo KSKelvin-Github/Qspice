@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-controller-I
   «type: X»
   «description: control - Opamp I-Controller»
-  «library file: |.subckt opamp-controller-I ref fb out\nE1 out 0 ref N01 AVOL\nC2 N01 out C2 IC=0\nR1 fb N01 R1\n.param C2=1/Ki/R1\n.display I-controller: Ki='Ki',R1='R1',C2='C2'\n.ends opamp-controller-I»
+  «library file: |.subckt opamp-controller-I ref fb out\nE1 out 0 ref N01 AVOL\nC2 N01 out C2 IC=0\nR1 fb N01 R1\n.param C2=1/Ki/R1\n.display I-controller: Ki='Ki',R1='R1',C2='C2'\n.option concise\n.ends opamp-controller-I»
   «shorted pins: false»
   «line (550,0) (-50,450) 0 0 0x1000000 -1 -1»
   «line (-50,450) (-50,-450) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol TL431-Marcomodel1992
+ÿØÿÛ«symbol TL431-Macromodel1992
   «type: X»
-  «description: TL431 marco model (3-26-1992)»
+  «description: TL431 macro model (3-26-1992)»
   «library file: |.SUBCKT TL431 1 2 3\nV1 6 7 DC 1.4V\nI1 2 4 1E-3\nR1 1 2 1.2E6\nR2 4 2 RMOD 2.495E3\nR3 5 7 .2\nD1 3 6 DMOD1\nD2 2 3 DMOD1\nD3 2 7 DMOD2\nE1 5 2 POLY(2) (4,2) (1,2) 0 710 -710\n.MODEL RMOD RES (TC1=1.4E-5 TC2=-1E-6)\n.MODEL DMOD1 D (RS=.3)\n.MODEL DMOD2 D (RS=1E-6)\n.ENDS»
   «shorted pins: false»
   «line (-50,0) (-200,0) 0 0 0x1000000 -1 -1»

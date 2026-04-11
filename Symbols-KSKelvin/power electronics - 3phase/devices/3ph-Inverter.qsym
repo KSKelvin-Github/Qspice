@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol 3ph-Inverter
   «type: X»
   «description: 3-ph Inverter (Ideal)»
-  «library file: |.subckt 3ph-Inverter dc+ dc- a b c s1 s4 s3 s6 s5 s2\nS1 dc+ a s1 0 SWi\nS4 a dc- s4 0 SWi\nD1 a dc+ Di\nD4 dc- a Di\nS3 dc+ b s3 0 SWi\nS6 b dc- s6 0 SWi\nD3 b dc+ Di\nD6 dc- b Di\nS5 dc+ c s5 0 SWi\nS2 c dc- s2 0 SWi\nD5 c dc+ Di\nD2 dc- c Di\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0 TTOL=TTOL\n.model Di D Ron=Ron Roff=Roff Vfwd=Vfwd\n.ends 3ph-Inverter»
+  «library file: |.subckt 3ph-Inverter dc+ dc- a b c s1 s4 s3 s6 s5 s2\nS1 dc+ a s1 0 SWi OFF\nS4 a dc- s4 0 SWi OFF\nD1 a dc+ Di\nD4 dc- a Di\nS3 dc+ b s3 0 SWi OFF\nS6 b dc- s6 0 SWi OFF\nD3 b dc+ Di\nD6 dc- b Di\nS5 dc+ c s5 0 SWi OFF\nS2 c dc- s2 0 SWi OFF\nD5 c dc+ Di\nD2 dc- c Di\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0 TTOL=TTOL\n.model Di D Ron=Ron Roff=Roff Vfwd=Vfwd\n.ends 3ph-Inverter»
   «shorted pins: false»
   «line (-100,480) (-300,480) 0 0 0x1000000 -1 -1»
   «line (-200,600) (-200,480) 0 0 0x1000000 -1 -1»

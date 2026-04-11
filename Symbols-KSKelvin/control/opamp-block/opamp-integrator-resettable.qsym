@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-integrator-resettable
   «type: X»
   «description: control - Opamp Integrator Resettable (output inverted)»
-  «library file: |.subckt opamp-integrator in out reset\nE1 out 0 0 N01 AVOL\nC1 N01 out C IC=0\nR1 in N01 R\nS1 N01 out reset 0 SWi\nRdummy reset 0 1G\n.param C=1/R/Ki\n.model SWi SW Ron=1m Roff=1G Vt=0.5 Vh=0\n.display Integrator: Ki='Ki',R='R',C='C'\n.ends opamp-integrator»
+  «library file: |.subckt opamp-integrator in out reset\nE1 out 0 0 N01 AVOL\nC1 N01 out C IC=0\nR1 in N01 R\nS1 N01 out reset 0 SWi\nRdummy reset 0 1G\n.param C=1/R/Ki\n.model SWi SW Ron=1m Roff=1G Vt=0.5 Vh=0\n.display Integrator: Ki='Ki',R='R',C='C'\n.option concise\n.ends opamp-integrator»
   «shorted pins: false»
   «line (550,0) (-50,450) 0 0 0x1000000 -1 -1»
   «line (-50,450) (-50,-450) 0 0 0x1000000 -1 -1»

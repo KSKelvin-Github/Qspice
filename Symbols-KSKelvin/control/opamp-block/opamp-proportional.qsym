@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-proportional
   «type: X»
   «description: control - Opamp Proportional (output inverted)»
-  «library file: |.subckt opamp-proportional in out\nE1 out 0 0 N01 AVOL\nR1 in N01 R1\nR2 N01 out R2\n.param R2=Kp*R1\n.display Proportional: Kp='Kp',R1='R1',R2='R2'\n.ends opamp-proportional»
+  «library file: |.subckt opamp-proportional in out\nE1 out 0 0 N01 AVOL\nR1 in N01 R1\nR2 N01 out R2\n.param R2=Kp*R1\n.display Proportional: Kp='Kp',R1='R1',R2='R2'\n.option concise\n.ends opamp-proportional»
   «shorted pins: false»
   «line (550,0) (-50,450) 0 0 0x1000000 -1 -1»
   «line (-50,450) (-50,-450) 0 0 0x1000000 -1 -1»

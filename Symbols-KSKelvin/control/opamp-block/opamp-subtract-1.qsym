@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-subtract-1
   «type: X»
   «description: control - Opamp Subtract»
-  «library file: |.subckt opamp-subtract in+ in- out\nE1 out 0 N02 N01 AVOL\nR1 in- N01 R\nRf N01 out Rf\nR2 in+ N02 R\nR3 N02 0 Rf\n.param Rf=Gain*R\n.display Subtract: Gain='Gain',R='R',Rf='Rf'\n.ends opamp-subtract»
+  «library file: |.subckt opamp-subtract in+ in- out\nE1 out 0 N02 N01 AVOL\nR1 in- N01 R\nRf N01 out Rf\nR2 in+ N02 R\nR3 N02 0 Rf\n.param Rf=Gain*R\n.display Subtract: Gain='Gain',R='R',Rf='Rf'\n.option concise\n.ends opamp-subtract»
   «shorted pins: false»
   «line (550,0) (-50,450) 0 0 0x1000000 -1 -1»
   «line (-50,450) (-50,-450) 0 0 0x1000000 -1 -1»

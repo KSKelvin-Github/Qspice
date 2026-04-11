@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-sum3
   «type: X»
   «description: control - Opamp Sum3 (output inverted)»
-  «library file: |.subckt opamp-sum3 in1 in2 in3 out\nE1 out 0 0 N01 AVOL\nR1 in1 N01 R\nRf N01 out Rf\nR2 in2 N01 R\nR3 in3 N01 R\n.param Rf=Gain*R\n.display Sum3: Gain='Gain',R='R',Rf='Rf'\n.ends opamp-sum3»
+  «library file: |.subckt opamp-sum3 in1 in2 in3 out\nE1 out 0 0 N01 AVOL\nR1 in1 N01 R\nRf N01 out Rf\nR2 in2 N01 R\nR3 in3 N01 R\n.param Rf=Gain*R\n.display Sum3: Gain='Gain',R='R',Rf='Rf'\n.option concise\n.ends opamp-sum3»
   «shorted pins: false»
   «line (550,0) (-50,450) 0 0 0x1000000 -1 -1»
   «line (-50,450) (-50,-450) 0 0 0x1000000 -1 -1»

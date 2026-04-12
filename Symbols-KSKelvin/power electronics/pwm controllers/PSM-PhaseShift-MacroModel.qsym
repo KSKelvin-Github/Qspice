@@ -1,0 +1,39 @@
+ÿØÿÛ«symbol PSM-PhaseShift-MacroModel
+  «type: X»
+  «description: Phase Shift Modulation (PSIM equivalent) with Adjustable Duty»
+  «library file: |.subckt PSM-PhaseShift-MacroModel shift duty1 duty2 S11 S12 S21 S22\nB1 mod1 0 V=sin(2*pi*fsw*time-PhaseDelay/180*pi)\nB2 mod2 0 V=sin(2*pi*fsw*time-PhaseDelay/180*pi-V(phi)/180*pi)\nVlogic1V p1v 0 1\nB3 phi 0 V=V(shift)*360\n¥1 p1v 0 N03 N01 mod1 thre1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥2 p1v 0 N06 N02 mod2 thre2 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥3 p1v 0 S11 ¥ N03 N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥4 p1v 0 N04 ¥ N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime1 TTOL=TTOL\n¥5 p1v 0 S12 ¥ N01 N05 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥6 p1v 0 N05 ¥ N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime1 TTOL=TTOL\n¥7 p1v 0 S21 ¥ N06 N07 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥8 p1v 0 N07 ¥ N06 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime2 TTOL=TTOL\n¥9 p1v 0 S22 ¥ N02 N08 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥10 p1v 0 N08 ¥ N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime2 TTOL=TTOL\nB4 thre1 0 V=cos(pi*V(duty1))\nB5 thre2 0 V=cos(pi*V(duty2))\n.param fsw=10K\n.param DeadTime1=0\n.param DeadTime2=0\n.param PhaseDelay=90\n.param TTOL=1n\n.ends PSM-PhaseShift-MacroModel»
+  «shorted pins: false»
+  «line (-140,-230) (200,-230) 0 0 0x1000000 -1 -1»
+  «line (100,-180) (100,600) 0 0 0x1000000 -1 -1»
+  «line (100,600) (200,600) 0 0 0x1000000 -1 -1»
+  «line (-140,-180) (100,-180) 0 0 0x1000000 -1 -1»
+  «line (350,450) (350,500) 0 0 0x1000000 -1 -1»
+  «line (350,300) (350,330) 0 0 0x1000000 -1 -1»
+  «line (350,-350) (350,-300) 0 0 0x1000000 -1 -1»
+  «line (350,-500) (350,-470) 0 0 0x1000000 -1 -1»
+  «rect (-500,700) (500,-700) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (325,380) (375,330) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (325,-420) (375,-470) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (300,450) (400,450) (350,380) 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (300,-350) (400,-350) (350,-420) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-500,950) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,1100) 1 7 2 0x1000000 -1 -1 "PSM-PHASESHIFT-MACROMODEL"»
+  «text (-500,-800) 1 7 0 0x0 -1 -1 "fsw=<10k> ;switching frequency"»
+  «text (-500,-950) 1 7 0 0x0 -1 -1 "DeadTime1=<0> ;dead time of S11 and S12"»
+  «text (-500,-1100) 1 7 0 0x0 -1 -1 "DeadTime2=<0> ;dead time of S21 and S22"»
+  «text (-500,-1250) 1 7 0 0x0 -1 -1 "PhaseDelay=<0> ;phase delay of S11 from 0s"»
+  «text (-500,-1400) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
+  «text (-500,800) 1 7 1 0x1000000 -1 -1 "PSM Adjustable Duty"»
+  «text (-480,-330) 0.794 7 1 0x1000000 -1 -1 "RNG:0-1"»
+  «text (-480,-450) 0.794 7 1 0x1000000 -1 -1 "0=0°"»
+  «text (-480,-570) 0.794 7 1 0x1000000 -1 -1 "1=360°"»
+  «text (-480,470) 0.794 7 1 0x1000000 -1 -1 "S11 duty"»
+  «text (-480,70) 0.794 7 1 0x1000000 -1 -1 "S21 duty"»
+  «pin (-500,-200) (20,0) 1 7 0 0x0 -1 "shift"»
+  «pin (-500,600) (20,0) 1 7 0 0x0 -1 "duty1"»
+  «pin (-500,200) (20,0) 1 7 0 0x0 -1 "duty2"»
+  «pin (500,600) (-20,0) 1 11 0 0x0 -1 "S11"»
+  «pin (500,200) (-20,0) 1 11 0 0x0 -1 "S12"»
+  «pin (500,-200) (-20,0) 1 11 0 0x0 -1 "S21"»
+  «pin (500,-600) (-20,0) 1 11 0 0x0 -1 "S22"»
+»

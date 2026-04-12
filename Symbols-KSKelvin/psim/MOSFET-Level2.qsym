@@ -1,0 +1,42 @@
+ÿØÿÛ«symbol MOSFET-Level2
+  «type: X»
+  «description: n-MOSFET Level 2 (PSIM equivalent)»
+  «library file: |.subckt MOSFET-Level2 Dext Gext Sext\nB1 D S I=if( V(G,S)>=Vgs_thres, min( V(D,S)/Rds_on , gm*(V(G,S)-Vgs_thres) ), 0)\nD1 S D Di\nR1 Gext G Rg\nCgs G S Cgs\nCgd D G Cgd\nCds D S Cds\nL1 Dext D Lp_d\nL2 S Sext Lp_s\n.model Di D Ron=DRon Roff=10Meg Vfwd=DVfwd Vrev=Vbreakdown\n.ends MOSFET-Level2»
+  «shorted pins: false»
+  «line (100,200) (100,150) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (100,0) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «line (100,-150) (-50,-150) 0 0 0x1000000 -1 -1»
+  «line (100,150) (-50,150) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (-100,-150) 0 0 0x1000000 -1 -1»
+  «line (100,0) (-50,0) 0 0 0x1000000 -1 -1»
+  «line (-50,190) (-50,110) 0 0 0x1000000 -1 -1»
+  «line (-50,50) (-50,-50) 0 0 0x1000000 -1 -1»
+  «line (-50,-110) (-50,-190) 0 0 0x1000000 -1 -1»
+  «line (140,50) (260,50) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (200,-200) 0 0 0x1000000 -1 -1»
+  «line (200,50) (200,200) 0 0 0x1000000 -1 -1»
+  «line (200,200) (100,200) 0 0 0x1000000 -1 -1»
+  «line (200,-200) (200,-50) 0 0 0x1000000 -1 -1»
+  «ellipse (130,230) (70,170) 0 0 0 0x1000000 0xff0000 -1 -1»
+  «ellipse (130,-170) (70,-230) 0 0 0 0x1000000 0xff0000 -1 -1»
+  «triangle (-50,0) (45,25) (45,-25) 0 0 0x1000000 0x3000000 -1 -1»
+  «triangle (200,50) (140,-50) (260,-50) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (250,150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (250,-150) 1 7 0 0x1000000 -1 -1 "mosfet-Level2"»
+  «text (250,-300) 1 7 2 0x1000000 -1 -1 "Vbreakdown=<100> ;drain-source breakdown"»
+  «text (250,-450) 1 7 2 0x1000000 -1 -1 "Rds_on=<4.8m> ;On Resistance Rds(on)"»
+  «text (250,-600) 1 7 2 0x1000000 -1 -1 "Vgs_thres=<3> ;Vgs(threshold)"»
+  «text (250,-750) 1 7 2 0x1000000 -1 -1 "Rg=<0.7> ;Internal Gate Resistance"»
+  «text (250,-900) 1 7 2 0x1000000 -1 -1 "gm=<150> ;transconductance"»
+  «text (250,-1050) 1 7 2 0x1000000 -1 -1 "Cgs=<6.3n> ;capacitance Cgs"»
+  «text (250,-1200) 1 7 2 0x1000000 -1 -1 "Cgd=<0.22n> ;capacitance Cgd"»
+  «text (250,-1350) 1 7 2 0x1000000 -1 -1 "Cds=<0.35n> ;capacitance Cds"»
+  «text (250,-1500) 1 7 2 0x1000000 -1 -1 "DVfwd=<1> ;diode forware voltage"»
+  «text (250,-1650) 1 7 2 0x1000000 -1 -1 "DRon=<1m> ;diode resistance"»
+  «text (250,-1800) 1 7 2 0x1000000 -1 -1 "Lp_d=<0> ;parasitic inductance (drain)"»
+  «text (250,-1950) 1 7 2 0x1000000 -1 -1 "Lp_s=<0> ;parasitic inductance (source)"»
+  «pin (100,200) (0,0) 1 0 0 0x0 -1 "D"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "G"»
+  «pin (100,-200) (0,0) 1 0 0 0x0 -1 "S"»
+»

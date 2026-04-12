@@ -1,6 +1,7 @@
-ÿØÿÛ«symbol PMOS-BodyDiode-subckt
+ÿØÿÛ«symbol p-MOSFET-Level1
   «type: X»
-  «description: P-Channel MOSFET (.subckt D G S)»
+  «description: p-MOSFET Level 1 (PSIM equivalent)»
+  «library file: |.subckt p-MOSFET-Level1 D G S\nD1 D S Di\nB1 D S I=if( V(G,S)<=Vgs_thres, max( V(D,S)/Rds_on , gm*(V(G,S)-Vgs_thres) ), 0)\n.model Di D Ron=DRon Roff=10Meg Vfwd=DVfwd\n.ends p-MOSFET-Level1»
   «shorted pins: false»
   «line (100,0) (100,200) 0 0 0x1000000 -1 -1»
   «line (-100,0) (-200,0) 0 0 0x1000000 -1 -1»
@@ -15,14 +16,18 @@
   «line (100,-200) (200,-200) 0 0 0x1000000 -1 -1»
   «line (200,50) (200,200) 0 0 0x1000000 -1 -1»
   «line (200,200) (100,200) 0 0 0x1000000 -1 -1»
-  «line (100,-200) (100,-150) 0 0 0x1000000 -1 -1»
   «line (200,-200) (200,-50) 0 0 0x1000000 -1 -1»
   «ellipse (130,230) (70,170) 0 0 0 0x1000000 0xff0000 -1 -1»
   «ellipse (130,-170) (70,-230) 0 0 0 0x1000000 0xff0000 -1 -1»
   «triangle (100,0) (5,-25) (5,25) 0 0 0x1000000 0x3000000 -1 -1»
   «triangle (200,50) (140,-50) (260,-50) 0 0 0x1000000 0x1000000 -1 -1»
   «text (250,150) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (250,-150) 1 7 0 0x1000000 -1 -1 "<model>"»
+  «text (250,-150) 1 7 0 0x1000000 -1 -1 "p-mosfet-Level1"»
+  «text (250,-300) 1 7 2 0x1000000 -1 -1 "Rds_on=<4.8m> ;On Resistance Rds(on)"»
+  «text (250,-450) 1 7 2 0x1000000 -1 -1 "Vgs_thres=<-3> ;Vgs(threshold), must be negative"»
+  «text (250,-600) 1 7 2 0x1000000 -1 -1 "gm=<150> ;transconductance"»
+  «text (250,-750) 1 7 2 0x1000000 -1 -1 "DVfwd=<1> ;diode forware voltage"»
+  «text (250,-900) 1 7 2 0x1000000 -1 -1 "DRon=<1m> ;diode resistance"»
   «pin (100,-200) (0,0) 1 0 0 0x0 -1 "D"»
   «pin (-200,0) (0,0) 1 0 0 0x0 -1 "G"»
   «pin (100,200) (0,0) 1 0 0 0x0 -1 "S"»

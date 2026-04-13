@@ -243,14 +243,14 @@
       «triangle (150,50) (90,-50) (210,-50) 0 0 0x1000000 0xffe6c8 -1 -1»
       «text (250,100) 1 102 0 0x1000000 -1 -1 "X8"»
       «text (-300,-200) 1 103 2 0x1000000 -1 -1 "SWITCH-BODYDIODE"»
-      «text (-450,-200) 1 103 2 0x1000000 -1 -1 "swRon=<4.8m>"»
+      «text (-450,-200) 1 103 2 0x1000000 -1 -1 "swRon=<1m>"»
       «text (-600,-200) 1 103 2 0x1000000 -1 -1 "swRoff=<10Meg>"»
       «text (-750,-200) 1 103 2 0x1000000 -1 -1 "swVt=<0.5>"»
       «text (-900,-200) 1 103 2 0x1000000 -1 -1 "swVh=<0>"»
       «text (-1050,-200) 1 103 2 0x1000000 -1 -1 "ttol=<1e-6>"»
       «text (-1200,-200) 1 103 2 0x1000000 -1 -1 "dRon=<1m>"»
       «text (-1350,-200) 1 103 2 0x1000000 -1 -1 "dRoff=<10Meg>"»
-      «text (-1500,-200) 1 103 2 0x1000000 -1 -1 "dVfwd=<3>"»
+      «text (-1500,-200) 1 103 2 0x1000000 -1 -1 "dVfwd=<0>"»
       «pin (-300,0) (20,0) 1 15 0 0x0 -1 "G"»
       «pin (0,200) (-20,0) 1 15 0 0x0 -1 "sw+"»
       «pin (0,-200) (0,0) 1 15 0 0x0 -1 "sw-"»
@@ -330,9 +330,9 @@
   «wire (-200,-500) (-200,500) "gate"»
   «wire (800,-1500) (700,-1500) "Saw"»
   «wire (700,-1500) (700,-1700) "Saw"»
-  «text (-2450,600) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0.0015 uic"»
+  «text (-2450,600) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0.0008 uic"»
   «text (-2450,50) 1 7 0 0x1000000 -1 -1 "ï»¿.plot V(Vo)\n.plot V(gate)\n.plot V(Saw) V(Vm) \n.plot V(iref)/1V*1A I(L1)"»
   «text (-2400,1850) 1.6 7 1 0x1000000 -1 -1 "ï»¿Average Current-Mode Control"»
-  «text (-2400,1550) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, average current-mode MOSFET.psimsch\nby KSKelvin on 4-10-2025"»
+  «text (-2400,1550) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, average current-mode.sch\nby KSKelvin on 4-10-2026"»
 »
 

@@ -386,8 +386,8 @@
   «wire (2800,3100) (2800,3200) "RL"»
   «wire (3500,3200) (3400,3200) "RL"»
   «wire (-600,700) (-900,700) "N07"»
-  «text (2000,900) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0 0.012 0 200n\n.plot V(RL)\n.plot I(L1) I(L2)\n.plot V(S11) V(S21)"»
-  «text (-2050,4800) 2 7 1 0x1000000 -1 -1 "ï»¿Interleaved Boost Converter"»
+  «text (2000,900) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0 0.012 0 200n uic\n.plot V(RL)\n.plot I(L1) I(L2)\n.plot V(S11) V(S21)"»
+  «text (-2050,4750) 1.6 7 1 0x1000000 -1 -1 "ï»¿Interleaved Boost Converter"»
   «text (-2050,4450) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, Boost converter - interleaved.psimsch\nby KSKelvin on 5-10-2025"»
 »
 

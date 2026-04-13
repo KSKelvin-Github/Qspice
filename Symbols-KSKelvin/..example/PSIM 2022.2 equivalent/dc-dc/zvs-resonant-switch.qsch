@@ -208,7 +208,7 @@
   «text (650,-250) 1 7 1 0x1000000 -1 -1 "ï»¿.option maxstep=1/30K/5000 ; smaller timestep"»
   «text (650,-450) 1 7 1 0x1000000 -1 -1 "ï»¿.option method=gear ; use gear integration"»
   «text (950,1400) 1 7 1 0x1000000 -1 -1 "ï»¿eliminate trap ringing"»
-  «text (-850,2900) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, zvs-resonant-switch.psimsch\nby KSKelvin on 12-17-2025"»
-  «text (-850,3300) 2 7 1 0x1000000 -1 -1 "ï»¿ZVS-Resonant-Switch Converter"»
+  «text (-850,2900) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, zvs-resonant-switch.sch\nby KSKelvin on 4-13-2026"»
+  «text (-850,3250) 1.6 7 1 0x1000000 -1 -1 "ï»¿ZVS-Resonant-Switch Converter"»
 »
 

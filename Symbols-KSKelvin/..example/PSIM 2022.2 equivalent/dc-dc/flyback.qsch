@@ -256,9 +256,9 @@
   «wire (200,2400) (800,2400) "N04"»
   «wire (800,2400) (800,3000) "N04"»
   «wire (800,2200) (800,2400) "N04"»
-  «text (-1600,4500) 2 7 1 0x1000000 -1 -1 "ï»¿Flyback Converter"»
+  «text (-1600,4500) 1.6 7 1 0x1000000 -1 -1 "ï»¿Flyback Converter"»
   «text (-1900,2450) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0 5e-5 0 2e-8\n.plot V(Vo)\n.plot V(gate)"»
   «text (-1900,1900) 1 7 0 0x1000000 -1 -1 "ï»¿.option fastmath=0\n.option gshunt=1f"»
-  «text (-1600,4150) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, flyback.psimsch\nby KSKelvin on 10-5-2025"»
+  «text (-1600,4150) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, flyback.sch\nby KSKelvin on 10-5-2025"»
 »
 

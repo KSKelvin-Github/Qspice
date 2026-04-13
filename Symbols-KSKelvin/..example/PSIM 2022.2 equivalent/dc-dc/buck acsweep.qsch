@@ -416,7 +416,7 @@
   «wire (-800,-2600) (-800,-2500) "GND"»
   «text (-2450,600) 1 7 1 0x1000000 -1 -1 "ï»¿.tran 2m"»
   «text (-2450,50) 1 7 0 0x1000000 -1 -1 "ï»¿.plot V(Vo)\n.plot V(gate)\n.plot V(Saw) V(Vm) \n.plot V(iref)/1V*1A I(L1)"»
-  «text (-2250,2150) 1.6 7 1 0x1000000 -1 -1 "ï»¿Open-Loop Transfer Function of a Buck Converter (switchmode)"»
+  «text (-2250,2100) 1.6 7 1 0x1000000 -1 -1 "ï»¿Open-Loop Transfer Function of a Buck Converter (switchmode)"»
   «text (-2250,1750) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, buck acsweep.psimsch\nby KSKelvin on 10-25-2025"»
 »
 

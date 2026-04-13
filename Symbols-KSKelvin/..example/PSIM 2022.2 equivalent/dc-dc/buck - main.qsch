@@ -156,7 +156,7 @@
   «wire (-500,-300) (-300,-300) "gate"»
   «wire (-300,-300) (-300,500) "gate"»
   «text (150,-450) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0 10m 0 1e-6\n.plot I(L1)\n.plot V(Vo)"»
-  «text (-1250,1900) 2 7 1 0x1000000 -1 -1 "ï»¿Buck Converter"»
-  «text (-1250,1500) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, buck - main.psimsch\nby KSKelvin on 4-10-2025"»
+  «text (-1250,1900) 1.6 7 1 0x1000000 -1 -1 "ï»¿Buck Converter"»
+  «text (-1250,1550) 1 7 1 0x1000000 -1 -1 "ï»¿based on example from PSIM, dc-dc, buck - main.psimsch\nby KSKelvin on 4-10-2025"»
 »
 

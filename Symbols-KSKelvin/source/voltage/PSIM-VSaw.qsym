@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol PSIM-VSaw
+ÿØÿÛ«symbol psim-VSaw
   «type: X»
-  «description: PSIM Sawtooth V-Source»
+  «description: Sawtooth V-Source (PSIM)»
   «library file: |.subckt PSIM-VSaw + -\nV1 + - pulse 0 Vpeak 0 0.999/freq 0.001/freq 0 1/freq\n.ends PSIM-VSaw»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
@@ -14,7 +14,7 @@
   «line (-100,-50) (-10,70) 0 0 0x1000000 -1 -1»
   «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
   «text (-150,150) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (-150,0) 1 11 0 0x1000000 -1 -1 "PSIM-VSAW"»
+  «text (-150,0) 1 11 0 0x1000000 -1 -1 "psim-VSAW"»
   «text (-150,-150) 0.681 11 0 0x1000000 -1 -1 "Vpeak=<1>"»
   «text (-150,-250) 0.681 11 0 0x1000000 -1 -1 "freq=<5000>"»
   «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»

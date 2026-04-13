@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol PSM-PhaseShift-MacroModel-FixedD
   «type: X»
-  «description: Phase Shift Modulation (PSIM equivalent) with Fixed 50% Duty»
+  «description: Phase Shift Modulation (PSIM functionality) with Fixed 50% Duty»
   «library file: |.subckt PSM-PhaseShift-MacroModel-FixedD shift S11 S12 S21 S22\nB1 mod1 0 V=sin(2*pi*fsw*time-PhaseDelay/180*pi)\nB2 mod2 0 V=sin(2*pi*fsw*time-PhaseDelay/180*pi-V(phi)/180*pi)\nB3 phi 0 V=V(shift)*360\n¥1 p1v 0 N03 N01 mod1 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥2 p1v 0 N06 N02 mod2 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥3 p1v 0 S11 ¥ N03 N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥4 p1v 0 N04 ¥ N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime1 TTOL=TTOL\n¥5 p1v 0 S12 ¥ N01 N05 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥6 p1v 0 N05 ¥ N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime1 TTOL=TTOL\n¥7 p1v 0 S21 ¥ N06 N07 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥8 p1v 0 N07 ¥ N06 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime2 TTOL=TTOL\n¥9 p1v 0 S22 ¥ N02 N08 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥10 p1v 0 N08 ¥ N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TD=DeadTime2 TTOL=TTOL\nVlogic1V p1v 0 1\n.ends PSM-PhaseShift-MacroModel-FixedD»
   «shorted pins: false»
   «line (350,450) (350,500) 0 0 0x1000000 -1 -1»

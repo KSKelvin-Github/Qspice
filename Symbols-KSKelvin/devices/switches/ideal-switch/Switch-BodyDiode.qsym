@@ -1,0 +1,32 @@
+ÿØÿÛ«symbol Switch-BodyDiode 1
+  «type: X»
+  «description: Ideal Switch with Body Diode (Initial ON/OFF configurable)»
+  «library file: |.subckt Switch-BodyDiode G sw+ sw-\nS1 sw+ sw- G 0 SWi ON=ON OFF=OFF\nD1 sw- sw+ Di\n.model SWi SW Ron=swRon Roff=swRoff Vt=swVt Vh=swVh TTOL=ttol\n.model Di D Ron=dRon Roff=dRoff Vfwd=dVfwd\n.param ON =if(Initial==0,0,if(Initial==1,1,0))\n.param OFF=if(Initial==0,1,if(Initial==1,0,0))\n.ends Switch-BodyDiode»
+  «shorted pins: false»
+  «line (0,200) (0,105) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-105) 0 0 0x1000000 -1 -1»
+  «line (-66,-75) (-25,80) 0 0 0x1000000 -1 -1»
+  «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (70,50) (190,50) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (130,-150) 0 0 0x1000000 -1 -1»
+  «line (130,-150) (130,150) 0 0 0x1000000 -1 -1»
+  «line (130,150) (0,150) 0 0 0x1000000 -1 -1»
+  «ellipse (-150,200) (250,-200) 0 0 0 0x1000000 0xffe6c8 -1 -1»
+  «ellipse (-25,55) (25,105) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-25,-105) (25,-55) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (130,50) (70,-50) (190,-50) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (250,250) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,400) 1 0 2 0x1000000 -1 -1 "SWITCH-BODYDIODE"»
+  «text (251,0) 1 7 2 0x1000000 -1 -1 "Initial=<-1,(0),1> ;0:InitialOFF / 1:InitialON / -1:NotSet"»
+  «text (251,-150) 1 7 2 0x1000000 -1 -1 "swRon=<1m> ;switch - on resistance"»
+  «text (251,-300) 1 7 2 0x1000000 -1 -1 "swRoff=<20Meg> ;switch - off resistance"»
+  «text (251,-450) 1 7 2 0x1000000 -1 -1 "swVt=<0.5> ;switch - threshold"»
+  «text (251,-600) 1 7 2 0x1000000 -1 -1 "swVh=<0> ;switch - hysteresis"»
+  «text (251,-750) 1 7 2 0x1000000 -1 -1 "ttol=<1e-6> ;switch - TTOL"»
+  «text (251,-900) 1 7 2 0x1000000 -1 -1 "dRon=<1m> ;diode - on resistance"»
+  «text (251,-1050) 1 7 2 0x1000000 -1 -1 "dRoff=<20Meg> ;diode - off resistance"»
+  «text (251,-1200) 1 7 2 0x1000000 -1 -1 "dVfwd=<0> ;diode forward voltage"»
+  «pin (-300,0) (20,0) 1 15 0 0x0 -1 "G"»
+  «pin (0,200) (-20,0) 1 15 0 0x0 -1 "sw+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "sw-"»
+»

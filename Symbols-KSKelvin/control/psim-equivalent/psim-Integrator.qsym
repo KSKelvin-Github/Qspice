@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol PSIM-Integrator
+ÿØÿÛ«symbol psim-Integrator
   «type: X»
-  «description: PSIM equivalent - Integrator with Ext. Reset»
+  «description: Integrator with Ext. Reset (PSIM)»
   «library file: |.subckt PSIM-Integrator-ExtReset in out reset\nB2 out 0 V=idt(V(in)/tau,IC,V(reset))\nR1 reset 0 1G\n.ends PSIM-Integrator-ExtReset»
   «shorted pins: false»
   «line (150,50) (200,0) 0 0 0x1000000 -1 -1»

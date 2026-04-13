@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol Smooth-Diode
+  «type: D»
+  «description: Smooth Transition Diode»
+  «library file: |.model Dsm D Ron=.1m Roff=1Meg Vfwd=0 Epsilon=10»
+  «shorted pins: false»
+  «line (100,80) (-100,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0x2000000 -1 -1»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "D1"»
+  «text (150,-150) 1 7 0 0x1000000 -1 -1 "Dsm"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "K"»
+»

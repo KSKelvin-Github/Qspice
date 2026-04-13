@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Smooth-Switch
+  «type: X»
+  «description: Smooth TransitionSwitch»
+  «library file: |.subckt Smooth-Switch + - +C\n¥1 p1v 0 SWctrl ¥ +C ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=1/slew\nV1 p1v 0 1\nS1 + - SWctrl 0 SWsmooth\n.model SWsmooth SW Ron=Ron Roff=Roff Vt=0.5 Vh=-0.5\n.ends Smooth-Switch»
+  «shorted pins: false»
+  «line (0,200) (0,105) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-105) 0 0 0x1000000 -1 -1»
+  «line (69,-70) (20,70) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-20,0) 0 1 0x1000000 -1 -1»
+  «line (-150,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «ellipse (-150,-150) (150,150) 0 0 0 0x1000000 0xffe6c8 -1 -1»
+  «ellipse (-25,55) (25,105) 0 0 0 0x1000000 0xffe6c8 -1 -1»
+  «ellipse (-25,-105) (25,-55) 0 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 15 2 0x1000000 -1 -1 "Smooth-Switch"»
+  «text (150,-200) 0.794 7 2 0x1000000 -1 -1 "Ron=<10m>"»
+  «text (150,-300) 0.794 7 2 0x1000000 -1 -1 "Roff=<1Meg>"»
+  «text (150,-100) 0.794 7 0 0x1000000 -1 -1 "Slew=<1Meg>; slew rate V/s"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "+C"»
+»

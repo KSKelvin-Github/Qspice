@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol psim-Monostable
+  «type: X»
+  «description: Monostable (PSIM) - Rising and Falling Edge Trigger»
+  «library file: |.subckt psim-Monostable posEdge negEdge Q ¬Q\n¥1 p1v 0 N02 ¥4 ¥ posEdge ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ monostable Ton=PulseWidth\nV1 p1v 0 1\n¥2 p1v 0 N03 ¥5 ¥ N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ monostable Ton=PulseWidth\n¥3 p1v 0 ¥ N01 negEdge ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥4 p1v 0 Q ¬Q N02 N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.ends psim-Monostable»
+  «shorted pins: false»
+  «line (-250,110) (-200,110) 0 0 0x1000000 -1 -1»
+  «line (-200,110) (-200,250) 0 0 0x1000000 -1 -1»
+  «line (-200,250) (-150,250) 0 0 0x1000000 -1 -1»
+  «line (-240,160) (-200,200) 0 0 0x1000000 -1 -1»
+  «line (-200,200) (-160,160) 0 0 0x1000000 -1 -1»
+  «line (-250,-110) (-200,-110) 0 0 0x1000000 -1 -1»
+  «line (-200,-110) (-200,-250) 0 0 0x1000000 -1 -1»
+  «line (-200,-250) (-150,-250) 0 0 0x1000000 -1 -1»
+  «line (-240,-160) (-200,-200) 0 0 0x1000000 -1 -1»
+  «line (-200,-200) (-160,-160) 0 0 0x1000000 -1 -1»
+  «rect (-300,300) (300,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-300,550) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,400) 1 7 0 0x1000000 -1 -1 "PSIM-Monostable"»
+  «text (-300,-400) 1 7 0 0x1000000 -1 -1 "PulseWidth=<1e-5>"»
+  «pin (-300,200) (0,0) 1 15 0 0x0 -1 "posEdge"»
+  «pin (-300,-200) (0,0) 1 15 0 0x0 -1 "negEdge"»
+  «pin (300,200) (-20,0) 1 11 0 0x0 -1 "Q"»
+  «pin (300,-200) (-20,0) 1 11 0 0x0 -1 "¬Q"»
+»

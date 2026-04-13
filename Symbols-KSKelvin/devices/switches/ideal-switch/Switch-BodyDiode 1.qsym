@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Switch-BodyDiode 1
+ÿØÿÛ«symbol Switch-BodyDiode
   «type: X»
   «description: Ideal Switch with Body Diode (Initial ON/OFF configurable)»
   «library file: |.subckt Switch-BodyDiode G sw+ sw-\nS1 sw+ sw- G 0 SWi ON=ON OFF=OFF\nD1 sw- sw+ Di\n.model SWi SW Ron=swRon Roff=swRoff Vt=swVt Vh=swVh TTOL=ttol\n.model Di D Ron=dRon Roff=dRoff Vfwd=dVfwd\n.param ON =if(Initial==0,0,if(Initial==1,1,0))\n.param OFF=if(Initial==0,1,if(Initial==1,0,0))\n.ends Switch-BodyDiode»

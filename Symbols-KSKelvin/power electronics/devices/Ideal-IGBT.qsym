@@ -1,0 +1,34 @@
+ÿØÿÛ«symbol Ideal-IGBT
+  «type: X»
+  «description: Ideal IGBT»
+  «library file: |.subckt Ideal-IGBT C G E\nS1 C N01 G 0 SWi ON=ON OFF=OFF\nD1 E C Dp\nD2 N01 E Ds\n.model SWi SW Ron=Ron_CE/2 Roff=Roff Vt=Vt Vh=Vh TTOL=TTOL\n.model Ds D Ron=Ron_CE/2 Roff=Roff Vfwd=Vfwd_CE\n.model Dp D Ron=dpRon Roff=2*Roff Vfwd=dpVfwd\n.param ON =if(Initial==0,0,if(Initial==1,1,0))\n.param OFF=if(Initial==0,1,if(Initial==1,0,0))\n.ends Ideal-IGBT»
+  «shorted pins: false»
+  «line (160,50) (40,50) 0 0 0x1000000 -1 -1»
+  «line (100,200) (100,50) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (100,-50) 0 0 0x1000000 -1 -1»
+  «line (100,200) (0,200) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,150) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (-200,150) (-200,-150) 0 0 0x1000000 -1 -1»
+  «line (-200,0) (-300,0) 0 0 0xff00ff -1 -1»
+  «line (0,-150) (-150,-50) 0 0 0x1000000 -1 -1»
+  «line (0,150) (-150,50) 0 0 0x1000000 -1 -1»
+  «line (-150,150) (-150,-150) 0 0 0x1000000 -1 -1»
+  «triangle (100,50) (160,-50) (40,-50) 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (0,-150) (-45,-85) (-75,-135) 0 0 0x1000000 0x3000000 -1 -1»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "IDEAL-IGBT"»
+  «text (151,-150) 1 7 2 0x1000000 -1 -1 "Initial=<-1,(0),1> ;0:InitialOFF / 1:InitialON / -1:NotSet"»
+  «text (150,-300) 1 7 2 0x1000000 -1 -1 "Ron_CE=<1m> ;ON resistance between C-E"»
+  «text (150,-450) 1 7 2 0x1000000 -1 -1 "Vfwd_CE=<0> ;Vfwd of C-E"»
+  «text (150,-600) 1 7 2 0x1000000 -1 -1 "Roff=<10Meg> ;Roff of IGBT"»
+  «text (150,-750) 1 7 2 0x1000000 -1 -1 "dpRon=<1m> ;Ron of Body Diode"»
+  «text (150,-900) 1 7 2 0x1000000 -1 -1 "dpVfwd=<1m> ;Vfwd of Body Diode"»
+  «text (150,-1050) 1 7 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «text (150,-1200) 1 7 2 0x1000000 -1 -1 "Vt=<0.5> ;gate threshold"»
+  «text (150,-1350) 1 7 2 0x1000000 -1 -1 "Vh=<0> ;gate hysteresis"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "C"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "G"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "E"»
+»

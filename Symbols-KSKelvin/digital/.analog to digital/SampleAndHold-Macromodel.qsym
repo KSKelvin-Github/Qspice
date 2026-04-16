@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol SampleAndHold-Macromodel
+  «type: X»
+  «description: Sample and Hold - Macromodel»
+  «library file: |.subckt SampleAndHold-Macromodel CLK IN OUT\nB1 OUT 0 V=idt(0,V(IN), if(mode==0,V(CLKr)>thres,V(CLK)>thres) )\nB2 CLKr 0 V=(V(CLK)>=thres)*(state(1,V(CLK))<thres)\n.ends SampleAndHold-Macromodel»
+  «shorted pins: false»
+  «line (-300,-270) (-230,-200) 0 0 0x1000000 -1 -1»
+  «line (-300,-130) (-230,-200) 0 0 0x1000000 -1 -1»
+  «line (-150,-100) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (0,0) 0 0 0x1000000 -1 -1»
+  «line (0,0) (50,0) 0 0 0x1000000 -1 -1»
+  «line (50,0) (50,90) 0 0 0x1000000 -1 -1»
+  «line (50,90) (220,90) 0 0 0x1000000 -1 -1»
+  «line (-150,-100) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-220,0) 0 0 0x1000000 -1 -1»
+  «rect (-300,-300) (300,300) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «arc3p (-220,0) (0,0) (-110,0) 0 1 0xffa0a1 -1 -1»
+  «arc3p (220,0) (0,0) (110,0) 0 1 0xffa0a1 -1 -1»
+  «text (0,400) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,550) 1 0 2 0x1000000 -1 -1 "SAMPLEANDHOLD-MACROMODEL"»
+  «text (-300,-400) 1 7 0 0x0 -1 -1 "thres=<0.5> ;logic threshold"»
+  «text (-300,-550) 1 7 0 0x0 -1 -1 "mode=<(0),1> ;triggering - 0:rising edge, 1:leveling"»
+  «pin (-300,-200) (90,0) 0.794 7 0 0x0 -1 "CLK"»
+  «pin (-300,200) (20,0) 0.794 7 0 0x0 -1 "IN"»
+  «pin (300,200) (-20,0) 0.794 11 0 0x0 -1 "OUT"»
+»

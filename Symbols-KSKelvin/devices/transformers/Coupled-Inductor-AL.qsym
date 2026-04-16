@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Coupled-Inductor-AL 1
+ÿØÿÛ«symbol Coupled-Inductor-AL
   «type: X»
   «description: Coupled Inductor (AL N1 N2)»
   «library file: |.subckt Coupled-Inductor-AL p+ p- s+ s-\nL1 p+ p- Lp\nL2 s+ s- Ls\nK1 L1 L2 Kcoup\n.param Lp=AL*N1^2\n.param Ls=AL*N2^2\n.ends Coupled-Inductor-AL»
@@ -15,13 +15,13 @@
   «coil (120,180) (280,-180) 0 0 0 0x1000000 -1 -1»
   «text (0,350) 1 0 0 0x0 -1 -1 "X1"»
   «text (0,500) 1 0 2 0x1000000 -1 -1 "Coupled-Inductor-AL"»
-  «text (0,-500) 1 0 0 0x0 -1 -1 "Kcoup=<1>"»
-  «text (0,-650) 1 15 0 0x0 -1 -1 "AL=<value>"»
-  «text (0,-800) 1 0 0 0x0 -1 -1 "N1=<1>"»
+  «text (0,-500) 1 0 0 0x0 -1 -1 "Kcoup=<1> ;coupling factor"»
+  «text (0,-650) 1 15 0 0x0 -1 -1 "AL=<value> ;nominal inductance (H/turn²)"»
+  «text (0,-800) 1 0 0 0x0 -1 -1 "N1=<1> ;number of turns of primary"»
   «text (0,-370) 1 0 1 0x1000000 -1 -1 "N1:N2"»
   «text (-350,0) 0.5 32 1 0x1000000 -1 -1 "pri"»
   «text (350,0) 0.5 32 1 0x1000000 -1 -1 "sec"»
-  «text (0,-950) 1 0 0 0x0 -1 -1 "N2=<1>"»
+  «text (0,-950) 1 0 0 0x0 -1 -1 "N2=<1> ;number of turns of secondary"»
   «pin (-200,200) (0,0) 1 0 0 0x0 -1 "p+"»
   «pin (-200,-200) (0,0) 1 0 0 0x0 -1 "p-"»
   «pin (200,200) (0,0) 1 0 0 0x0 -1 "s+"»

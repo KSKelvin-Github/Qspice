@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol AND5
   «type: ¥»
-  «description: 5-Input AND w/ complementary outputs»
+  «description: (0&1) 5-Input AND w/ complementary outputs»
   «shorted pins: false»
   «line (300,-100) (260,-100) 0 0 0x1000000 -1 -1»
   «line (-200,-200) (-200,200) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol ¥-Device Comparator 4
   «type: ¥»
-  «description: SCHMITT trigger»
+  «description: (0&1) SCHMITT trigger»
   «shorted pins: false»
   «line (-200,-300) (-200,300) 0 0 0x1000000 -1 -1»
   «line (-200,300) (300,0) 0 0 0x1000000 -1 -1»

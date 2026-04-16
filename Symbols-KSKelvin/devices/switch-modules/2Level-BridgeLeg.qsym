@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol 2Level-BridgeLeg
   «type: X»
   «description: 2-Level Bridge Leg (Ideal)»
-  «library file: |.subckt 2Level-BridgeLeg dc+ dc- ac s1 s2\nS1 dc+ ac s1 0 SWi\nS2 ac dc- s2 0 SWi\nD1 ac dc+ Di\nD2 dc- ac Di\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0 TTOL=TTOL\n.model Di D Ron=Ron Roff=Roff Vfwd=Vfwd\n.ends 2Level-BridgeLeg»
+  «library file: |.subckt 2Level-BridgeLeg dc+ dc- ac s1 s2\nS1 dc+ ac s1 0 SWi OFF=OFF_HS ON=ON_HS\nS2 ac dc- s2 0 SWi OFF=OFF_LS ON=ON_LS\nD1 ac dc+ Di\nD2 dc- ac Di\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0 TTOL=TTOL\n.model Di D Ron=Ron Roff=Roff Vfwd=Vfwd\n.param ON_HS =if(Initial==0,0,if(Initial==1,0,if(Initial==2,1,0)))\n.param OFF_HS=if(Initial==0,1,if(Initial==1,1,if(Initial==2,0,0)))\n.param ON_LS =if(Initial==0,0,if(Initial==1,1,if(Initial==2,0,0)))\n.param OFF_LS =if(Initial==0,1,if(Initial==1,0,if(Initial==2,1,0)))\n.ends 2Level-BridgeLeg»
   «shorted pins: false»
   «line (300,480) (100,480) 0 0 0x1000000 -1 -1»
   «line (200,600) (200,480) 0 0 0x1000000 -1 -1»
@@ -33,8 +33,9 @@
   «ellipse (-125,-175) (-75,-225) 0 0 0 0x1000000 0xff0012 -1 -1»
   «triangle (200,480) (300,330) (100,330) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (200,-320) (300,-470) (100,-470) 0 0 0x1000000 0x1000000 -1 -1»
-  «text (0,900) 1 15 0 0x1000000 -1 -1 "X1"»
-  «text (0,1050) 1 15 2 0x1000000 -1 -1 "2LEVEL-BRIDGELEG"»
+  «text (0,1050) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,1200) 1 15 2 0x1000000 -1 -1 "2Level-BridgeLeg"»
+  «text (0,900) 1 15 0 0x1000000 -1 -1 "Initial=<-1,(0),1,2> ;Initial 0:All-OFF/1:LS-ON/2:HS-ON/-1:NotSet"»
   «text (450,-350) 1 7 2 0x1000000 -1 -1 "Ron=<1m>"»
   «text (450,-500) 1 7 2 0x1000000 -1 -1 "Roff=<20Meg>"»
   «text (450,-650) 1 7 2 0x1000000 -1 -1 "Vfwd=<0>"»

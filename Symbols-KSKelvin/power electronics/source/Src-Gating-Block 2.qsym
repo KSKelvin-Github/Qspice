@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Src-Gating-Block 2
+  «type: X»
+  «description: Gating Block (Gate Input Degree)»
+  «library file: |.subckt Src-Gating-Block gate\nV1 gate 0 PULSE lo hi theta1/360/fsw+Td 1n 1n (theta2-theta1)/360/fsw 1/fsw\n.ends Src-Gating-Block»
+  «shorted pins: false»
+  «line (-390,50) (-350,50) 0 0 0x1000000 -1 -1»
+  «line (-350,50) (-350,150) 0 0 0x1000000 -1 -1»
+  «line (-350,150) (-290,150) 0 0 0x1000000 -1 -1»
+  «line (-290,150) (-290,50) 0 0 0x1000000 -1 -1»
+  «line (-290,50) (-240,50) 0 0 0x1000000 -1 -1»
+  «rect (-400,200) (0,0) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-400,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,450) 1 7 2 0x1000000 -1 -1 "SRC-GATING-BLOCK"»
+  «text (-400,-50) 0.681 7 0 0x0 -1 -1 "theta1=<0> ;turn ON - phase(°)"»
+  «text (-400,-150) 0.681 7 0 0x0 -1 -1 "theta2=<90> ;turn OFF - phase(°)"»
+  «text (-400,-250) 0.681 7 0 0x0 -1 -1 "fsw=<100k> ;switching frequency"»
+  «text (-400,-350) 0.681 7 0 0x0 -1 -1 "Td=<0> ;delay time"»
+  «text (-400,-450) 0.681 7 2 0x1000000 -1 -1 "hi=<1> ;high level output"»
+  «text (-400,-550) 0.681 7 2 0x1000000 -1 -1 "lo=<0> ;low level output"»
+  «pin (0,100) (-20,10) 0.681 11 0 0x0 -1 "gate"»
+»

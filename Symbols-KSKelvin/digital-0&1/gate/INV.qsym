@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol INV
   «type: ¥»
-  «description: Inverter (NOT gate)»
+  «description: (0&1) Inverter (NOT gate)»
   «shorted pins: false»
   «line (200,0) (180,0) 0 0 0x1000000 -1 -1»
   «line (-100,-100) (100,0) 0 0 0x1000000 -1 -1»

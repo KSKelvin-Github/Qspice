@@ -1,0 +1,46 @@
+ÿØÿÛ«symbol psim-1-ph-3-w-Transformer
+  «type: X»
+  «description: PSIM 1-ph 3-winding transformer»
+  «library file: |.subckt psim-1-ph-3-w-Transformer p1+ p1- s1+ s1- s2+ s2-\nLpri1 N05 p1- Lm\nLsec1 N03 s1- Lm/(Np/Ns)**2\nLsec2 N01 s2- Lm/(Np/Nt)**2\nL1 p1+ N06 Lp\nR1 N06 N05 Rp\nL3 N04 s1+ Ls/(Np/Ns)**2\nR3 N03 N04 Rs/(Np/Ns)**2\nL4 N02 s2+ Lt/(Np/Nt)**2\nR4 N01 N02 Rt/(Np/Nt)**2\nK1 Lpri1 Lsec1 Lsec2 1\n.ends psim-1-ph-3-w-Transformer»
+  «shorted pins: false»
+  «line (-200,200) (-60,200) 0 0 0x1000000 -1 -1»
+  «line (60,500) (200,500) 0 0 0x1000000 -1 -1»
+  «line (-200,-200) (-60,-200) 0 0 0x1000000 -1 -1»
+  «line (-60,200) (-60,170) 0 0 0x1000000 -1 -1»
+  «line (-60,-170) (-60,-200) 0 0 0x1000000 -1 -1»
+  «line (60,130) (60,100) 0 0 0x1000000 -1 -1»
+  «line (60,500) (60,470) 0 0 0x1000000 -1 -1»
+  «line (60,100) (200,100) 0 0 0x1000000 -1 -1»
+  «line (60,-100) (200,-100) 0 0 0x1000000 -1 -1»
+  «line (60,-470) (60,-500) 0 0 0x1000000 -1 -1»
+  «line (60,-100) (60,-130) 0 0 0x1000000 -1 -1»
+  «line (60,-500) (200,-500) 0 0 0x1000000 -1 -1»
+  «line (0,500) (0,-500) 0 1 0x1000000 -1 -1»
+  «ellipse (-115,180) (-75,140) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (75,480) (115,440) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (75,-120) (115,-160) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «coil (-100,170) (-20,-170) 0 0 0 0x1000000 -1 -1»
+  «coil (100,470) (20,130) 0 0 0 0x1000000 -1 -1»
+  «coil (100,-130) (20,-470) 0 0 0 0x1000000 -1 -1»
+  «text (0,600) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,750) 1 15 2 0x1000000 -1 -1 "PSIM-1-PH-3-W-TRANSFORMER"»
+  «text (0,-600) 1 0 0 0x0 -1 -1 "Rp=<1m> ;Resistance of primary"»
+  «text (0,-750) 1 0 0 0x0 -1 -1 "Rs=<1m> ;Resistance of secondary (referred to primary):Rs=Rs_real*(Np/Ns)²"»
+  «text (0,-900) 1 0 0 0x0 -1 -1 "Rt=<1m> ;Resistance of tertiary (referred to primary):Rt=Rt_real*(Np/Nt)²"»
+  «text (0,-1050) 1 0 0 0x0 -1 -1 "Lp=<0.1m> ;Leakage Inductance of primary"»
+  «text (0,-1200) 1 0 0 0x0 -1 -1 "Ls=<0.1m> ;Leakage Inductance of secondary (referred to primary):Ls=Ls_real*(Np/Ns)²"»
+  «text (0,-1350) 1 0 0 0x0 -1 -1 "Lt=<0.1m> ;Leakage Inductance of tertiary (referred to primary):Lt=Lt_real*(Np/Nt)²"»
+  «text (0,-1500) 1 0 0 0x0 -1 -1 "Lm=<0.5> ;Magnetizing inductance seen from primary"»
+  «text (0,-1650) 1 0 0 0x0 -1 -1 "Np=<1> ;Number of turns of the primary"»
+  «text (0,-1800) 1 0 0 0x0 -1 -1 "Ns=<1> ;Number of turns of the secondary"»
+  «text (0,-1950) 1 0 0 0x0 -1 -1 "Nt=<1> ;Number of turns of the tertiary"»
+  «text (-200,0) 0.794 32 1 0x1000000 -1 -1 "pri"»
+  «text (200,300) 0.794 32 1 0x1000000 -1 -1 "sec"»
+  «text (200,-300) 0.794 32 1 0x1000000 -1 -1 "ter"»
+  «pin (-200,200) (20,0) 1 15 0 0x0 -1 "p1+"»
+  «pin (-200,-200) (20,0) 1 15 0 0x0 -1 "p1-"»
+  «pin (200,500) (-20,0) 1 15 0 0x0 -1 "s1+"»
+  «pin (200,100) (-20,0) 1 15 0 0x0 -1 "s1-"»
+  «pin (200,-100) (-20,0) 1 15 0 0x0 -1 "s2+"»
+  «pin (200,-500) (-20,0) 1 15 0 0x0 -1 "s2-"»
+»

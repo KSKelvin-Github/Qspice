@@ -1,0 +1,35 @@
+ÿØÿÛ«symbol CLK-Compl-DeadTime
+  «type: X»
+  «description: Complementary Output with Deadtime (CLK Input)»
+  «library file: |.subckt CLK-Compl-DeadTime CLK Deadtime Q ¬Q\n¥1 p1v 0 Qa ¬Q¬a ¬Q¬a CLK 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=TTOL\nVlogic1V p1v 0 1\nB1 timer2 0 V=idt(1,0,V(Qa))\nB2 timer1 0 V=idt(1,0,V(¬Q¬a))\n¥2 p1v 0 Q ¥ Qa N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL IC=0\n¥4 p1v 0 ¬Q ¥ ¬Q¬a N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL IC=0\n¥3 p1v 0 N01 ¥ timer1 N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥5 p1v 0 N03 ¥ timer2 N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\nB3 N02 0 V=if(DTmode==0,Deadtime,V(Deadtime))\n.ends CLK-Compl-DeadTime»
+  «shorted pins: false»
+  «line (-700,-400) (-400,-400) 0 0 0x1000000 -1 -1»
+  «line (-400,0) (-500,0) 0 0 0x1000000 -1 -1»
+  «line (-500,0) (-500,200) 0 0 0x1000000 -1 -1»
+  «line (-500,200) (100,200) 0 0 0x1000000 -1 -1»
+  «line (100,200) (100,-400) 0 0 0x1000000 -1 -1»
+  «line (0,-400) (200,-400) 0 0 0x1000000 -1 -1»
+  «line (0,0) (200,0) 0 0 0x1000000 -1 -1»
+  «line (500,0) (700,0) 0 0 0x1000000 -1 -1»
+  «line (500,-400) (700,-400) 0 0 0x1000000 -1 -1»
+  «line (300,100) (300,300) 0 1 0x1000000 -1 -1»
+  «line (300,-300) (300,-100) 0 1 0x1000000 -1 -1»
+  «line (300,300) (-700,300) 0 1 0x1000000 -1 -1»
+  «rect (-700,-600) (700,500) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «rect (-400,100) (0,-500) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (200,100) (500,-100) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (200,-300) (500,-500) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (-700,775) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-700,600) 1 7 0 0x1000000 -1 -1 "CLK-Compl-DeadTime"»
+  «text (-700,-850) 1 7 0 0x1000000 -1 -1 "DTmode=<0,(1)> ;Deadtime Mode (0:Internal / 1:External)"»
+  «text (-700,-1000) 1 7 0 0x1000000 -1 -1 "Deadtime=<0>"»
+  «text (-700,-1150) 1 7 0 0x1000000 -1 -1 "TTOL=<1n>"»
+  «text (-200,-200) 0.794 0 1 0x1000000 -1 -1 "D-flop"»
+  «text (350,0) 0.794 0 1 0x1000000 -1 -1 "DT"»
+  «text (350,-400) 0.794 0 1 0x1000000 -1 -1 "DT"»
+  «text (-700,-700) 1 7 1 0x1000000 -1 -1 "fsw halve of fclk"»
+  «pin (-700,-400) (10,0) 1 6 0 0x0 -1 "CLK"»
+  «pin (-700,300) (20,0) 1 6 0 0x0 -1 "Deadtime"»
+  «pin (700,0) (-20,0) 1 10 0 0x0 -1 "Q"»
+  «pin (700,-400) (-20,0) 1 10 0 0x0 -1 "¬Q"»
+»

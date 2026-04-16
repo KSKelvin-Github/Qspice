@@ -1,0 +1,31 @@
+ÿØÿÛ«symbol Src-Gating-Block-4Pts
+  «type: X»
+  «description: Gating Block - 4 Points (Gate Input Degree)»
+  «library file: |.subckt Src-Gating-Block-4Pts gate\nV1 gate 0 PWL REPEAT FOREVER 0 lo T1-1p 0 T1 hi T2-1p hi T2 lo T3-1p lo T3 hi T4-1p hi T4 lo Ts lo ENDREPEAT trigger=time>=Tdelay\n.param Ts=1/fsw\n.param T1=max(1p,theta1/360*Ts)\n.param T2=theta2/360*Ts\n.param T3=theta3/360*Ts\n.param T4=theta4/360*Ts\n.ends Src-Gating-Block-4Pts»
+  «shorted pins: false»
+  «line (-370,40) (-320,40) 0 0 0x1000000 -1 -1»
+  «line (-320,40) (-320,160) 0 0 0x1000000 -1 -1»
+  «line (-320,160) (-290,160) 0 0 0x1000000 -1 -1»
+  «line (-290,160) (-290,40) 0 0 0x1000000 -1 -1»
+  «line (-290,40) (-240,40) 0 0 0x1000000 -1 -1»
+  «line (-240,40) (-240,160) 0 0 0x1000000 -1 -1»
+  «line (-240,160) (-140,160) 0 0 0x1000000 -1 -1»
+  «line (-140,160) (-140,40) 0 0 0x1000000 -1 -1»
+  «line (-140,40) (-110,40) 0 0 0x1000000 -1 -1»
+  «line (-110,160) (-110,40) 0 0 0x1000000 -1 -1»
+  «line (-110,160) (-80,160) 0 0 0x1000000 -1 -1»
+  «line (-80,160) (-80,40) 0 0 0x1000000 -1 -1»
+  «line (-80,40) (-30,40) 0 0 0x1000000 -1 -1»
+  «rect (-400,200) (0,0) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-400,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-400,450) 1 7 2 0x1000000 -1 -1 "SRC-GATING-BLOCK-4PTS"»
+  «text (-400,-50) 0.681 7 0 0x0 -1 -1 "theta1=<0> ;1st turn ON - phase(°)"»
+  «text (-400,-150) 0.681 7 0 0x0 -1 -1 "theta2=<45>;1st turn OFF - phase(°)"»
+  «text (-400,-250) 0.681 7 0 0x0 -1 -1 "theta3=<90> ;2nd turn ON - phase(°)"»
+  «text (-400,-350) 0.681 7 0 0x0 -1 -1 "theta4=<270> ;2nd turn OFF - phase(°)"»
+  «text (-400,-450) 0.681 7 0 0x0 -1 -1 "fsw=<100k> ;switching frequency"»
+  «text (-400,-550) 0.681 7 2 0x1000000 -1 -1 "Tdelay=<0> ;delay time"»
+  «text (-400,-650) 0.681 7 2 0x1000000 -1 -1 "hi=<1> ;high level output"»
+  «text (-400,-750) 0.681 7 2 0x1000000 -1 -1 "lo=<0> ;low level output"»
+  «pin (0,100) (-20,20) 0.857 15 0 0x0 -1 "gate"»
+»

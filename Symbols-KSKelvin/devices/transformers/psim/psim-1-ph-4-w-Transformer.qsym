@@ -1,0 +1,58 @@
+ÿØÿÛ«symbol psim-1-ph-4-w-Transformer
+  «type: X»
+  «description: PSIM 1-ph 4-winding transformer»
+  «library file: |.subckt psim-1-ph-4-w-Transformer p1+ p1- p2+ p2- s1+ s1- s2+ s2-\nLpri1 N07 p1- Lm\nLpri2 N05 p2- Lm/(Np_1/Np_2)**2\nLsec1 N03 s1- Lm/(Np_1/Ns_1)**2\nLsec2 N01 s2- Lm/(Np_1/Ns_2)**2\nL1 p1+ N08 Lp_1\nR1 N08 N07 Rp_1\nL2 p2+ N06 Lp_2/(Np_1/Np_2)**2\nR2 N06 N05 Rp_2/(Np_1/Np_2)**2\nL3 N04 s1+ Ls_1/(Np_1/Ns_1)**2\nR3 N03 N04 Rs_1/(Np_1/Ns_1)**2\nL4 N02 s2+ Ls_2/(Np_1/Ns_2)**2\nR4 N01 N02 Rs_2/(Np_1/Ns_2)**2\nK1 Lpri1 Lpri2 Lsec1 Lsec2 1\n.ends psim-1-ph-4-w-Transformer»
+  «shorted pins: false»
+  «line (-200,500) (-60,500) 0 0 0x1000000 -1 -1»
+  «line (60,500) (200,500) 0 0 0x1000000 -1 -1»
+  «line (-200,100) (-60,100) 0 0 0x1000000 -1 -1»
+  «line (-60,500) (-60,470) 0 0 0x1000000 -1 -1»
+  «line (-60,130) (-60,100) 0 0 0x1000000 -1 -1»
+  «line (60,130) (60,100) 0 0 0x1000000 -1 -1»
+  «line (60,500) (60,470) 0 0 0x1000000 -1 -1»
+  «line (60,100) (200,100) 0 0 0x1000000 -1 -1»
+  «line (60,-100) (200,-100) 0 0 0x1000000 -1 -1»
+  «line (60,-470) (60,-500) 0 0 0x1000000 -1 -1»
+  «line (60,-100) (60,-130) 0 0 0x1000000 -1 -1»
+  «line (60,-500) (200,-500) 0 0 0x1000000 -1 -1»
+  «line (-60,-100) (-200,-100) 0 0 0x1000000 -1 -1»
+  «line (-60,-470) (-60,-500) 0 0 0x1000000 -1 -1»
+  «line (-60,-100) (-60,-130) 0 0 0x1000000 -1 -1»
+  «line (-60,-500) (-200,-500) 0 0 0x1000000 -1 -1»
+  «line (0,500) (0,-500) 0 1 0x1000000 -1 -1»
+  «ellipse (-115,480) (-75,440) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (75,480) (115,440) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (75,-120) (115,-160) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (-75,-120) (-115,-160) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «coil (-100,470) (-20,130) 0 0 0 0x1000000 -1 -1»
+  «coil (100,470) (20,130) 0 0 0 0x1000000 -1 -1»
+  «coil (100,-130) (20,-470) 0 0 0 0x1000000 -1 -1»
+  «coil (-100,-130) (-20,-470) 0 0 0 0x1000000 -1 -1»
+  «text (0,600) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,750) 1 15 2 0x1000000 -1 -1 "PSIM-1-PH-4-W-TRANSFORMER"»
+  «text (0,-600) 1 0 0 0x0 -1 -1 "Rp_1=<1m> ;Resistance of 1st primary"»
+  «text (0,-750) 1 0 0 0x0 -1 -1 "Rp_2=<1m> ;Resistance of 2nd primary (referred to 1st primary):Rp_2=Rp_2_real*(Np_1/Np_2)²"»
+  «text (0,-900) 1 0 0 0x0 -1 -1 "Rs_1=<1m> ;Resistance of 1st secondary (referred to 1st primary):Rs_1=Rs_1_real*(Np_1/Ns_1)²"»
+  «text (0,-1050) 1 0 0 0x0 -1 -1 "Rs_2=<1m> ;Resistance of 2nd secondary (referred to 1st primary):Rs_2=Rs_2_real*(Np_1/Ns_2)²"»
+  «text (0,-1200) 1 0 0 0x0 -1 -1 "Lp_1=<0.1m> ;Leakage Inductance of 1st primary"»
+  «text (0,-1350) 1 0 0 0x0 -1 -1 "Lp_2=<0.1m> ;Leakage Inductance of 2nd primary (referred to 1st primary):Lp_2=Lp_2_real*(Np_1/Np_2)²"»
+  «text (0,-1500) 1 0 0 0x0 -1 -1 "Ls_1=<0.1m> ;Leakage Inductance of 1st secondary (referred to 1st primary):Ls_1=Ls_1_real*(Np_1/Ns_1)²"»
+  «text (0,-1650) 1 0 0 0x0 -1 -1 "Ls_2=<0.1m> ;Leakage Inductance of 2nd secondary (referred to 1st primary):Ls_2=Ls_2_real*(Np_1/Ns_2)²"»
+  «text (0,-1800) 1 0 0 0x0 -1 -1 "Lm=<0.5> ;Magnetizing inductance seen from 1st primary"»
+  «text (0,-1950) 1 0 0 0x0 -1 -1 "Np_1=<1> ;Number of turns of the 1st primary"»
+  «text (0,-2100) 1 0 0 0x0 -1 -1 "Np_2=<1> ;Number of turns of the 2nd primary"»
+  «text (0,-2250) 1 0 0 0x0 -1 -1 "Ns_1=<1> ;Number of turns of the 1st secondary"»
+  «text (0,-2400) 1 0 0 0x0 -1 -1 "Ns_2=<1> ;Number of turns of the 2nd secondary"»
+  «text (-200,300) 0.794 32 1 0x1000000 -1 -1 "pri1"»
+  «text (-200,-300) 0.794 32 1 0x1000000 -1 -1 "pri2"»
+  «text (200,300) 0.794 32 1 0x1000000 -1 -1 "sec1"»
+  «text (200,-300) 0.794 32 1 0x1000000 -1 -1 "sec2"»
+  «pin (-200,500) (20,0) 1 15 0 0x0 -1 "p1+"»
+  «pin (-200,100) (20,0) 1 15 0 0x0 -1 "p1-"»
+  «pin (-200,-100) (20,0) 1 15 0 0x0 -1 "p2+"»
+  «pin (-200,-500) (20,0) 1 15 0 0x0 -1 "p2-"»
+  «pin (200,500) (-20,0) 1 15 0 0x0 -1 "s1+"»
+  «pin (200,100) (-20,0) 1 15 0 0x0 -1 "s1-"»
+  «pin (200,-100) (-20,0) 1 15 0 0x0 -1 "s2+"»
+  «pin (200,-500) (-20,0) 1 15 0 0x0 -1 "s2-"»
+»

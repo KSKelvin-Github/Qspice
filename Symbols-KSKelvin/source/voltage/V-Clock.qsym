@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol V-Clock
   «type: X»
-  «description: Source - Clock»
+  «description: Source - Clock (CLK)»
   «library file: |.subckt V-Clock + -\nV1 + - pulse Vlow Vhigh Td Trise Tfall Ton 1/fsw DC=DC\n.ends V-Clock»
   «shorted pins: false»
   «line (0,200) (0,130) 0 0 0x1000000 -1 -1»

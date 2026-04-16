@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol BUFQ-B-source
+  «type: X»
+  «description: B-source Buffer»
+  «library file: |.subckt BUFQ-B-source b0 Q\nB1 Q 0 V=(HI-LO)*(V(b0)>thres)+LO\n.ends BUFQ-B-source»
+  «shorted pins: false»
+  «line (100,0) (200,0) 0 0 0xc000 -1 -1»
+  «triangle (-100,100) (-100,-100) (100,0) 0 0 0xc000 0x1000000 -1 -1»
+  «text (100,120) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (50,300) 1 0 2 0x1000000 -1 -1 "BUFQ-B-SOURCE"»
+  «text (-100,-200) 1 7 2 0x1000000 -1 -1 "HI=<1>"»
+  «text (-100,-350) 1 7 2 0x1000000 -1 -1 "LO=<0>"»
+  «text (-100,-500) 1 7 2 0x1000000 -1 -1 "thres=<0.5>"»
+  «pin (-100,0) (0,0) 1 15 0 0x0 -1 "b0"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "Q"»
+»

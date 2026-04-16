@@ -1,0 +1,36 @@
+ÿØÿÛ«symbol psim-1-ph-Transformer-noLm
+  «type: X»
+  «description: PSIM 1-ph transformer (no magnetizing inductance)»
+  «library file: |.subckt psim-1-ph-Transformer-noLm p1+ p1- s1+ s1-\nL1 p1+ N04 Lp\nR1 N04 N03 Rp\nL3 N02 s1+ Ls/(Np/Ns)**2\nR3 N01 N02 Rs/(Np/Ns)**2\n×1 «N03 p1- N01 s1-» Turns=Np Ns\n.ends psim-1-ph-Transformer-noLm»
+  «shorted pins: false»
+  «line (-200,300) (-200,180) 0 0 0x1000000 -1 -1»
+  «line (-200,-300) (-200,-180) 0 0 0x1000000 -1 -1»
+  «line (200,180) (200,300) 0 0 0x1000000 -1 -1»
+  «line (200,-300) (200,-180) 0 0 0x1000000 -1 -1»
+  «line (-50,200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «line (50,200) (50,-200) 0 0 0x1000000 -1 -1»
+  «line (-200,300) (-400,300) 0 0 0x1000000 -1 -1»
+  «line (-400,-300) (-200,-300) 0 0 0x1000000 -1 -1»
+  «line (200,-300) (400,-300) 0 0 0x1000000 -1 -1»
+  «line (400,300) (200,300) 0 0 0x1000000 -1 -1»
+  «rect (-400,400) (400,-400) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «ellipse (-280,160) (-220,100) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (120,160) (180,100) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «coil (-280,180) (-120,-180) 0 0 0 0x1000000 -1 -1»
+  «coil (120,180) (280,-180) 0 0 0 0x1000000 -1 -1»
+  «text (0,500) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,650) 1 15 2 0x1000000 -1 -1 "PSIM-1-PH-TRANSFORMER-NOLM"»
+  «text (0,-500) 1 0 0 0x0 -1 -1 "Rp=<1m> ;Resistance of primary"»
+  «text (0,-650) 1 0 0 0x0 -1 -1 "Rs=<1m> ;Resistance of secondary (referred to primary):Rs=Rs_real*(Np/Ns)²"»
+  «text (0,-800) 1 0 0 0x0 -1 -1 "Lp=<0.1m> ;Leakage Inductance of primary"»
+  «text (0,-950) 1 0 0 0x0 -1 -1 "Ls=<0.1m> ;Leakage Inductance of secondary (referred to primary):Ls=Ls_real*(Np/Ns)²"»
+  «text (0,-1100) 1 0 0 0x0 -1 -1 "Np=<1> ;Number of turns of the primary"»
+  «text (0,-1250) 1 0 0 0x0 -1 -1 "Ns=<1> ;Number of turns of the secondary"»
+  «text (-350,0) 0.735 32 1 0x1000000 -1 -1 "pri1"»
+  «text (330,0) 0.735 32 1 0x1000000 -1 -1 "sec1"»
+  «text (0,320) 0.735 0 1 0x1000000 -1 -1 "no Lm"»
+  «pin (-400,300) (20,0) 1 15 0 0x0 -1 "p1+"»
+  «pin (-400,-300) (20,0) 1 15 0 0x0 -1 "p1-"»
+  «pin (400,300) (-20,0) 1 15 0 0x0 -1 "s1+"»
+  «pin (400,-300) (-20,0) 1 15 0 0x0 -1 "s1-"»
+»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol BUF
   «type: ¥»
-  «description: Buffer w/ complementary outputs»
+  «description: (0&1) Buffer w/ complementary outputs»
   «shorted pins: false»
   «line (-100,-100) (100,0) 0 0 0x1000000 -1 -1»
   «line (100,0) (-100,100) 0 0 0x1000000 -1 -1»

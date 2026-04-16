@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol OR2
   «type: ¥»
-  «description: 2-Input OR w/ complementary outputs»
+  «description: (0&1) 2-Input OR w/ complementary outputs»
   «shorted pins: false»
   «line (300,-100) (221,-100) 0 0 0x1000000 -1 -1»
   «line (300,100) (123,100) 0 0 0x1000000 -1 -1»

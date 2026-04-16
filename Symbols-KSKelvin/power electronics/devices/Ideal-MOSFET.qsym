@@ -1,0 +1,34 @@
+ÿØÿÛ«symbol Ideal-MOSFET
+  «type: X»
+  «description: Ideal MOSFET»
+  «library file: |.subckt Ideal-MOSFET D G S\nS1 D S G 0 SWi ON=ON OFF=OFF\nD1 S D Dp\n.model SWi SW Ron=Rdson Roff=2*Roff Vt=Vt Vh=Vh TTOL=TTOL\n.model Dp D Ron=dRon Roff=2*Roff Vfwd=dVfwd\n.param ON =if(Initial==0,0,if(Initial==1,1,0))\n.param OFF=if(Initial==0,1,if(Initial==1,0,0))\n.ends Ideal-MOSFET»
+  «shorted pins: false»
+  «line (0,200) (0,150) 0 0 0x1000000 -1 -1»
+  «line (0,0) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (-200,150) (-200,-150) 0 0 0x1000000 -1 -1»
+  «line (-200,0) (-300,0) 0 0 0xff00ff -1 -1»
+  «line (0,-150) (-150,-150) 0 0 0x1000000 -1 -1»
+  «line (0,150) (-150,150) 0 0 0x1000000 -1 -1»
+  «line (-150,150) (-150,-150) 0 0 0x1000000 -1 -1»
+  «line (0,0) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (160,50) (40,50) 0 0 0x1000000 -1 -1»
+  «line (100,200) (100,50) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (100,-50) 0 0 0x1000000 -1 -1»
+  «line (100,200) (0,200) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (0,-200) 0 0 0x1000000 -1 -1»
+  «triangle (-150,0) (-55,25) (-55,-25) 0 0 0x1000000 0x3000000 -1 -1»
+  «triangle (100,50) (160,-50) (40,-50) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "IDEAL-MOSFET"»
+  «text (151,-150) 1 7 2 0x1000000 -1 -1 "Initial=<-1,(0),1> ;0:InitialOFF / 1:InitialON / -1:NotSet"»
+  «text (150,-300) 1 7 2 0x1000000 -1 -1 "Rdson=<1m> ;Rds,on"»
+  «text (150,-450) 1 7 2 0x1000000 -1 -1 "Roff=<10Meg> ;Roff of MOSFET and DIODE"»
+  «text (150,-600) 1 7 2 0x1000000 -1 -1 "dRon=<1m> ;Ron of Body Diode"»
+  «text (150,-750) 1 7 2 0x1000000 -1 -1 "dVfwd=<1m> ;Vfwd of Body Diode"»
+  «text (150,-900) 1 7 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «text (150,-1050) 1 7 2 0x1000000 -1 -1 "Vt=<0.5> ;gate threshold"»
+  «text (150,-1200) 1 7 2 0x1000000 -1 -1 "Vh=<0> ;gate hysteresis"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "D"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "G"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "S"»
+»

@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol psim-SVPWM
+  «type: X»
+  «description: Space-Vector PWM (SVPWM)»
+  «library file: |.subckt psim-SVPWM a b c ao bo co\nB_atan2 theta 0 V=atan2(-v(beta),-v(alpha))+pi\nB_M M 0 V=hypot(v(beta),v(alpha))\nB_phi phi 0 V=v(theta)-int(v(theta)*3/pi)*pi/3\nB_sector sector 0 V=limit(0,6,ceil(v(theta)*3/pi))\nB_t1 t1 0 V=2*v(M)*sin(pi/3-v(phi))\nB_t2 t2 0 V=2*v(M)*sin(v(phi))\nB_t3 t0 0 V=(1-v(t1)-v(t2))\nB_Ta ao 0 V=table(int(v(sector)),1,v(t0)/2+v(t1)+v(t2),2,v(t0)/2+v(t1),3,v(t0)/2,4,v(t0)/2,5,v(t0)/2+v(t2),6,v(t0)/2+v(t1)+v(t2))-0.5\nB_Tb bo 0 V=table(int(v(sector)),1,v(t0)/2+v(t2),2,v(t0)/2+v(t1)+v(t2),3,v(t0)/2+v(t1)+v(t2),4,v(t0)/2+v(t1),5,v(t0)/2,6,v(t0)/2)-0.5\nB_Tc co 0 V=table(int(v(sector)),1,v(t0)/2,2,v(t0)/2,3,v(t0)/2+v(t2),4,v(t0)/2+v(t1)+v(t2),5,v(t0)/2+v(t1)+v(t2),6,v(t0)/2+v(t1))-0.5\nB1 alpha 0 V=2/3 * ( 1*V(a) - 1/2*V(b) - 1/2*V(c) )\nB2 beta 0 V=2/3 * ( 0*V(a) + sqrt(3)/2*V(b) - sqrt(3)/2*V(c) )\n.ends psim-SVPWM»
+  «shorted pins: false»
+  «line (-400,0) (400,0) 0 0 0x1000000 -1 -1»
+  «line (200,345) (-200,-345) 0 0 0x1000000 -1 -1»
+  «line (-200,345) (200,-345) 0 0 0x1000000 -1 -1»
+  «line (400,0) (200,345) 0 0 0x1000000 -1 -1»
+  «line (200,345) (-200,345) 0 0 0x1000000 -1 -1»
+  «line (-200,345) (-400,0) 0 0 0x1000000 -1 -1»
+  «line (-400,0) (-200,-345) 0 0 0x1000000 -1 -1»
+  «line (-200,-345) (200,-345) 0 0 0x1000000 -1 -1»
+  «line (400,0) (200,-345) 0 0 0x1000000 -1 -1»
+  «rect (-600,-500) (600,500) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (0,750) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,600) 1 15 0 0x1000000 -1 -1 "psim-SVPWM"»
+  «pin (-600,300) (20,0) 1 7 0 0x0 -1 "a"»
+  «pin (-600,0) (20,0) 1 7 0 0x0 -1 "b"»
+  «pin (-600,-300) (20,0) 1 7 0 0x0 -1 "c"»
+  «pin (600,300) (-20,0) 1 11 0 0x0 -1 "ao"»
+  «pin (600,0) (-20,0) 1 11 0 0x0 -1 "bo"»
+  «pin (600,-300) (-20,0) 1 11 0 0x0 -1 "co"»
+»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol ¥-Device D-flop 2
   «type: ¥»
-  «description: D-flop Without EN PRE and CLR»
+  «description: (0&1) D-flop Without EN PRE and CLR»
   «shorted pins: false»
   «line (500,200) (400,200) 0 0 0x1000000 -1 2»
   «line (450,-200) (500,-200) 0 0 0x1000000 -1 3»

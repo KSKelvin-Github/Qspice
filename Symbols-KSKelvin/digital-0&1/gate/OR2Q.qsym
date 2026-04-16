@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol OR2Q
   «type: ¥»
-  «description: 2-Input OR gate»
+  «description: (0&1) 2-Input OR gate»
   «shorted pins: false»
   «line (300,0) (203,0) 0 0 0x1000000 -1 -1»
   «line (-200,100) (-135,100) 0 0 0x1000000 -1 -1»

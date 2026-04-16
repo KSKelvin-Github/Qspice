@@ -1,0 +1,29 @@
+ÿØÿÛ«symbol Ideal-Transformer
+  «type: X»
+  «description: Ideal Transformer (No magnitizing / leakage inductance)»
+  «library file: |.subckt Ideal-Transformer PRI+ PRI- SEC+ SEC-\n×1 «PRI+ PRI- SEC+ SEC-» Turns=Np Ns\n.ends Ideal-Transformer»
+  «shorted pins: false»
+  «line (-200,200) (-110,200) 0 0 0x1000000 -1 -1»
+  «line (10,200) (100,200) 0 0 0x1000000 -1 -1»
+  «line (-200,-200) (-110,-200) 0 0 0x1000000 -1 -1»
+  «line (-110,200) (-110,170) 0 0 0x1000000 -1 -1»
+  «line (-110,-170) (-110,-200) 0 0 0x1000000 -1 -1»
+  «line (10,-170) (10,-200) 0 0 0x1000000 -1 -1»
+  «line (10,200) (10,170) 0 0 0x1000000 -1 -1»
+  «line (10,-200) (100,-200) 0 0 0x1000000 -1 -1»
+  «line (-50,200) (-50,-200) 0 1 0x1000000 -1 -1»
+  «ellipse (-165,180) (-125,140) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «ellipse (25,180) (65,140) 0 0 0 0x1000000 0x3000000 -1 -1»
+  «coil (-150,170) (-70,-170) 0 0 0 0x1000000 -1 -1»
+  «coil (50,170) (-30,-170) 0 0 0 0x1000000 -1 -1»
+  «text (-50,300) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (-50,440) 1 0 2 0x1000000 -1 -1 "IDEAL-TRANSFORMER"»
+  «text (-50,-300) 1 15 0 0x1000000 -1 -1 "Np=<1>;no. of turns in primary"»
+  «text (-50,-450) 1 15 0 0x1000000 -1 -1 "Ns=<1>;no. of turns in secondary"»
+  «text (-250,0) 0.794 32 1 0x1000000 -1 -1 "pri"»
+  «text (100,0) 0.794 32 1 0x1000000 -1 -1 "sec"»
+  «pin (-200,200) (0,0) 1 15 0 0x0 -1 "PRI+"»
+  «pin (-200,-200) (0,0) 1 15 0 0x0 -1 "PRI-"»
+  «pin (100,200) (0,0) 1 15 0 0x0 -1 "SEC+"»
+  «pin (100,-200) (0,0) 1 15 0 0x0 -1 "SEC-"»
+»

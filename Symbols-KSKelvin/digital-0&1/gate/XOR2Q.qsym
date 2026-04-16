@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol XOR2Q
   «type: ¥»
-  «description: 2-Input XOR gate»
+  «description: (0&1) 2-Input XOR gate»
   «shorted pins: false»
   «line (-200,100) (-165,100) 0 0 0x1000000 -1 -1»
   «line (-200,-100) (-165,-100) 0 0 0x1000000 -1 -1»

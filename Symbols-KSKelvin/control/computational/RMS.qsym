@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol RMS
+  «type: X»
+  «description: RMS (Root-Mean-Square)»
+  «library file: |.subckt RMS x RMS\nB1 RMS 0 V=sqrt(idt((V(x)^2-if(time<tau,0,delay(V(x)^2,tau,100*tau))))/tau)\n.param tau=1/fbase\n.ends RMS»
+  «shorted pins: false»
+  «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-114,301) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (44,300) 1 7 2 0x1000000 -1 -1 "RMS"»
+  «text (43,10) 1.166 15 1 0x1000000 -1 -1 "RMS"»
+  «text (-206,-300) 0.857 7 0 0x1000000 -1 -1 "fbase=<60> ;base freq: period to calculate the mean=1/fbase"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "x"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "rms"»
+»

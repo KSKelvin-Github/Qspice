@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol TTOL-V
+  «type: X»
+  «description: TTOL-V (Voltage)»
+  «library file: |.subckt TTOL-V v\n¥1 0 0 ¥1 ¥ v N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\nV1 N01 0 REF\n.ends TTOL-V»
+  «shorted pins: false»
+  «arc3p (20,70) (-100,0) (300,-100) 0 0 0xff00ff -1 -1»
+  «arc3p (-100,0) (20,-70) (300,100) 0 0 0xff00ff -1 -1»
+  «arc3p (20,-70) (20,70) (10,0) 0 0 0xff00ff -1 -1»
+  «text (100,350) 1 7 2 0x1000000 -1 -1 "X1"»
+  «text (100,200) 1 7 2 0x1000000 -1 -1 "TTOL-V"»
+  «text (100,50) 0.681 7 0 0x0 -1 -1 "REF=<0>"»
+  «text (100,-50) 0.681 7 0 0x0 -1 -1 "TTOL=<1n>"»
+  «pin (-100,0) (0,0) 1 15 0 0x0 -1 "v"»
+»

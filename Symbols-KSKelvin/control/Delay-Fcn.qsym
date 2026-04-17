@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Delay-Fcn
   «type: X»
   «description: Delay»
-  «library file: |.subckt delay in out \nB1 out 0 V=delay(V(in),tau)\n.ends delay»
+  «library file: |.subckt delay in out \nB1 out 0 V=delay(V(in),tau,100*tau)\n.ends delay»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»

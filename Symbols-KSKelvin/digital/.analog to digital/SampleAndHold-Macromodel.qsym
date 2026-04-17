@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol SampleAndHold-Macromodel
+ÿØÿÛ«symbol SampleAndHold-IDT-Macromodel
   «type: X»
-  «description: Sample and Hold - Macromodel»
-  «library file: |.subckt SampleAndHold-Macromodel CLK IN OUT\nB1 OUT 0 V=idt(0,V(IN), if(mode==0,V(CLKr)>thres,V(CLK)>thres) )\nB2 CLKr 0 V=(V(CLK)>=thres)*(state(1,V(CLK))<thres)\n.ends SampleAndHold-Macromodel»
+  «description: Sample and Hold - idt function (ZOH)»
+  «library file: |.subckt SampleAndHold-IDT-Macromodel CLK IN OUT\nB1 OUT 0 V=idt(0,V(IN), if(mode==0,V(CLKr)>thres,V(CLK)>thres) )\nB2 CLKr 0 V=(V(CLK)>=thres)*(state(1,V(CLK))<thres)\n.ends SampleAndHold-IDT-Macromodel»
   «shorted pins: false»
   «line (-300,-270) (-230,-200) 0 0 0x1000000 -1 -1»
   «line (-300,-130) (-230,-200) 0 0 0x1000000 -1 -1»
@@ -16,7 +16,7 @@
   «arc3p (-220,0) (0,0) (-110,0) 0 1 0xffa0a1 -1 -1»
   «arc3p (220,0) (0,0) (110,0) 0 1 0xffa0a1 -1 -1»
   «text (0,400) 1 0 0 0x1000000 -1 -1 "X1"»
-  «text (0,550) 1 0 2 0x1000000 -1 -1 "SAMPLEANDHOLD-MACROMODEL"»
+  «text (0,550) 1 0 2 0x1000000 -1 -1 "SAMPLEANDHOLD-IDT-Macromodel"»
   «text (-300,-400) 1 7 0 0x0 -1 -1 "thres=<0.5> ;logic threshold"»
   «text (-300,-550) 1 7 0 0x0 -1 -1 "mode=<(0),1> ;triggering - 0:rising edge, 1:leveling"»
   «pin (-300,-200) (90,0) 0.794 7 0 0x0 -1 "CLK"»

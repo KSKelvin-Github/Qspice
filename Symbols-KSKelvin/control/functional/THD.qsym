@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol THD
+  «type: X»
+  «description: THD (Total Harmonic Distortion)»
+  «library file: |.subckt THD v v1 THD\nB1 RMS-all 0 V=sqrt(idt((V(v)^2-if(time<tau,0,delay(V(v)^2,tau,100*tau))))/tau)\nB2 RMS-1 0 V=sqrt(idt((V(v1)^2-if(time<tau,0,delay(V(v1)^2,tau,100*tau))))/tau)\nB3 THD 0 V=if(time>tau, sqrt( V(RMS-all)**2 - V(RMS-1)**2) / V(RMS-1) , 0)\nE1 v1 0 v 0 Laplace=ButterworthBP(2,f0,BW)\n.param tau=1/f0\n.ends THD»
+  «shorted pins: false»
+  «rect (-300,300) (300,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-300,550) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,400) 1 7 0 0x1000000 -1 -1 "THD"»
+  «text (-300,-400) 1 7 0 0x1000000 -1 -1 "f0=<60> ;fundamental freq"»
+  «text (-300,-550) 1 7 0 0x1000000 -1 -1 "BW=<20> ;bandwidth freq"»
+  «pin (-300,0) (20,0) 1 7 0 0x0 -1 "v"»
+  «pin (300,-200) (-20,0) 1 11 0 0x0 -1 "v1"»
+  «pin (300,200) (-20,0) 1 11 0 0x0 -1 "THD"»
+»

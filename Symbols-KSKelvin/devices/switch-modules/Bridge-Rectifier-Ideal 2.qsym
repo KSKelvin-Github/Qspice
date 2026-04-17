@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol BridgeRectifier-Ideal 2
+ÿØÿÛ«symbol Bridge-Rectifier-Ideal 2
   «type: X»
-  «description: Bridge Rectifier (Ideal)»
-  «library file: |.subckt BridgeRectifier-Ideal AC+ AC- DC+ DC-\nD1 AC+ DC+ Db\nD2 AC- DC+ Db\nD3 DC- AC+ Db\nD4 DC- AC- Db\n.model Db D Ron=Ron Roff=Roff Vfwd=Vfwd Epsilon=Epsilon\n.ends BridgeRectifier-Ideal»
+  «description: Diode Bridge Rectifier (Ideal)»
+  «library file: |.subckt Bridge-Rectifier-Ideal AC+ AC- DC+ DC-\nD1 AC+ DC+ Db\nD2 AC- DC+ Db\nD3 DC- AC+ Db\nD4 DC- AC- Db\n.model Db D Ron=Ron Roff=Roff Vfwd=Vfwd Epsilon=Epsilon\n.ends Bridge-Rectifier-Ideal»
   «shorted pins: false»
   «line (250,0) (350,0) 0 0 0x1000000 -1 -1»
   «line (300,50) (300,-50) 0 0 0x1000000 -1 -1»
@@ -27,7 +27,7 @@
   «triangle (115,-185) (215,-285) (240,-160) 0 0 0x1000000 0xffe6c8 -1 -1»
   «triangle (-285,215) (-185,115) (-160,240) 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-250,350) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (0,500) 1 0 2 0x1000000 -1 -1 "BRIDGERECTIFIER-IDEAL"»
+  «text (0,500) 1 0 2 0x1000000 -1 -1 "BRIDGE-RECTIFIER-IDEAL"»
   «text (-100,-400) 1 11 0 0x0 -1 -1 "Vfwd=<0>"»
   «text (-100,-550) 1 11 2 0x1000000 -1 -1 "Ron=<1m>"»
   «text (-100,-700) 1 11 2 0x1000000 -1 -1 "Roff=<10Meg>"»

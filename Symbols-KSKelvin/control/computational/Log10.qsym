@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Log10
   «type: X»
-  «description: Log10»
+  «description: Log10 (base 10)»
   «library file: |.subckt log10 in out \nB1 out 0 V=log10(V(in))\n.ends log10»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

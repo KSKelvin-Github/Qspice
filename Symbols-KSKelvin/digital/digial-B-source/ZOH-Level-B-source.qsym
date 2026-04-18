@@ -1,0 +1,26 @@
+ÿØÿÛ«symbol ZOH-Level-B-source
+  «type: X»
+  «description: Zero-order Hold (ZOH) - B-source : Trigger Selectable»
+  «library file: |.subckt ZOH-Level-B-source IN CLK OUT EOC\nB1 OUT 0 V=idt(0,V(IN),V(Latch))\nB2 EOC 0 V=(V(Latch)<thres)*(state(1,V(Latch))>=thres)\nB3 Latch 0 V=if(mode==0,(V(CLK)>=thres)*(state(1,V(CLK))<thres),V(CLK)>thres)\n.ends ZOH-Level-B-source»
+  «shorted pins: false»
+  «line (-500,-230) (-430,-300) 0 0 0xc000 -1 -1»
+  «line (-430,-300) (-500,-370) 0 0 0xc000 -1 -1»
+  «line (-300,-200) (-300,-50) 0 0 0xc000 -1 -1»
+  «line (-300,-200) (-50,-200) 0 0 0xc000 -1 -1»
+  «line (-50,-200) (-50,-50) 0 0 0xc000 -1 -1»
+  «line (-50,-50) (60,-50) 0 0 0xc000 -1 -1»
+  «line (290,110) (60,110) 0 0 0xc000 -1 -1»
+  «line (60,110) (60,-50) 0 0 0xc000 -1 -1»
+  «line (-300,-50) (-390,-50) 0 0 0xc000 -1 -1»
+  «rect (-500,400) (400,-500) 0 0 0 0xc000 0x1000000 -1 0 -1»
+  «arc3p (-390,-50) (-50,-50) (-220,-50) 0 1 0xffa0a1 -1 -1»
+  «arc3p (290,-50) (-50,-50) (120,-50) 0 1 0xffa0a1 -1 -1»
+  «text (-500,500) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,650) 1 7 2 0x1000000 -1 -1 "ZOH-LEVEL-B-SOURCE"»
+  «text (-500,-600) 1 7 0 0x1000000 -1 -1 "mode=<(0),1> ;0:rising edge | 1:level trigger"»
+  «text (-500,-750) 1 7 2 0x1000000 -1 -1 "thres=<0.5>"»
+  «pin (-500,200) (20,0) 1 7 0 0x0 -1 "IN"»
+  «pin (-500,-300) (80,0) 1 7 0 0x0 -1 "CLK"»
+  «pin (400,200) (-20,0) 1 11 0 0x0 -1 "OUT"»
+  «pin (400,-300) (-20,0) 1 11 0 0x0 -1 "ECO"»
+»

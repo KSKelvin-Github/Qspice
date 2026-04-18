@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Ln
   «type: X»
-  «description: Ln»
+  «description: Ln (base e)»
   «library file: |.subckt ln in out \nB1 out 0 V=ln(V(in))\n.ends ln»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

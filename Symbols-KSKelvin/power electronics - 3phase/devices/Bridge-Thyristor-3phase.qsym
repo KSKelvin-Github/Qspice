@@ -1,0 +1,36 @@
+ÿØÿÛ«symbol Bridge-Thyristor-3phase
+  «type: X»
+  «description: Bridge Rectifier - 3 Phase (Ideal)»
+  «library file: |.subckt Bridge-Thyristor-3phase A B C DC+ DC- s1 s2 s3 s4 s5 s6\nX4 DC- N01 A Thyristor-Ideal Vfwd=Vfwd\nX6 DC- N02 B Thyristor-Ideal Vfwd=Vfwd\nX1 A N03 DC+ Thyristor-Ideal Vfwd=Vfwd\nX3 B N04 DC+ Thyristor-Ideal Vfwd=Vfwd\nE4 N01 A s4 0 1\nE6 N02 B s6 0 1\nE1 N03 DC+ s1 0 1\nE3 N04 DC+ s3 0 1\nX2 DC- N05 C Thyristor-Ideal Vfwd=Vfwd\nX5 C N06 DC+ Thyristor-Ideal Vfwd=Vfwd\nE2 N05 C s2 0 1\nE5 N06 DC+ s5 0 1\n.subckt Thyristor-Ideal A G K\nD1 N01 K D\nS1 A N01 Q 0 SW\n¥1 N02 0 Q ¥ Set Reset ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nB1 Reset 0 V=if(V(A,K)<=Vfwd,1,0)\nE1 Set 0 G K 1\nV1 N02 0 1\n.model D D Ron=1m Roff=10Meg Vfwd=Vfwd\n.model SW SW Ron=1m Roff=10Meg Vt=0.5 Vh=0\n.ends Thyristor-Ideal\n.ends Bridge-Thyristor-3phase»
+  «shorted pins: false»
+  «line (320,300) (520,300) 0 0 0x1000000 -1 -1»
+  «line (420,390) (420,200) 0 0 0x1000000 -1 -1»
+  «line (520,-900) (320,-900) 0 0 0x1000000 -1 -1»
+  «line (-150,-200) (150,-200) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-50) 0 0 0x1000000 -1 -1»
+  «line (0,-400) (0,-550) 0 0 0x1000000 -1 -1»
+  «line (50,-200) (100,-50) 0 0 0x1000000 -1 -1»
+  «line (100,-50) (200,-50) 0 0 0x1000000 -1 -1»
+  «rect (-600,500) (600,-1100) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «arc3p (-430,300) (-530,300) (-480,300) 0 0 0x1000000 -1 -1»
+  «arc3p (-430,300) (-330,300) (-380,300) 0 0 0x1000000 -1 -1»
+  «arc3p (-430,-300) (-530,-300) (-480,-300) 0 0 0x1000000 -1 -1»
+  «arc3p (-430,-300) (-330,-300) (-380,-300) 0 0 0x1000000 -1 -1»
+  «arc3p (-430,-900) (-530,-900) (-480,-900) 0 0 0x1000000 -1 -1»
+  «arc3p (-430,-900) (-330,-900) (-380,-900) 0 0 0x1000000 -1 -1»
+  «triangle (0,-200) (-150,-400) (150,-400) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (0,750) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,900) 1 0 2 0x1000000 -1 -1 "BRIDGE-THYRISTOR-3PHASE"»
+  «text (0,600) 1 15 0 0x0 -1 -1 "Vfwd=<0>"»
+  «pin (-600,300) (0,0) 1 15 0 0x0 -1 "A"»
+  «pin (-600,-300) (0,0) 1 15 0 0x0 -1 "B"»
+  «pin (-600,-900) (0,0) 1 0 0 0x0 -1 "C"»
+  «pin (600,300) (0,0) 1 15 0 0x0 -1 "DC+"»
+  «pin (600,-900) (0,0) 1 15 0 0x0 -1 "DC-"»
+  «pin (-500,-1100) (0,0) 1 14 0 0x0 -1 "s1"»
+  «pin (-300,-1100) (0,0) 1 14 0 0x0 -1 "s2"»
+  «pin (-100,-1100) (0,0) 1 14 0 0x0 -1 "s3"»
+  «pin (100,-1100) (0,0) 1 14 0 0x0 -1 "s4"»
+  «pin (300,-1100) (0,0) 1 14 0 0x0 -1 "s5"»
+  «pin (500,-1100) (0,0) 1 14 0 0x0 -1 "s6"»
+»

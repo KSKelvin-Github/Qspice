@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Lineart
   «type: X»
-  «description: Linear Transformation»
+  «description: Linear Transformation y=m*x+c»
   «library file: |.subckt lineart in out\nB1 out 0 V=m*V(in)+c\n.ends lineart»
   «shorted pins: false»
   «line (-100,150) (-100,-150) 0 0 0x1000000 -1 -1»
@@ -11,8 +11,8 @@
   «rect (-200,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
   «text (-200,303) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (50,300) 1 7 2 0x1000000 -1 -1 "Lineart"»
-  «text (-200,-300) 1 7 0 0x0 -1 -1 "m=<1>"»
-  «text (-200,-450) 1 7 0 0x0 -1 -1 "c=<0>"»
+  «text (-200,-300) 1 7 0 0x0 -1 -1 "m=<1> ;slope"»
+  «text (-200,-450) 1 7 0 0x0 -1 -1 "c=<0> ;y-intercept"»
   «text (150,0) 0.857 0 1 0x1000000 -1 -1 "m"»
   «text (-150,-80) 0.857 0 1 0x1000000 -1 -1 "c"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»

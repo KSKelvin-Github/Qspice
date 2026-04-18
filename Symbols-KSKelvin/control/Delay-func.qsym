@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol Delay-Fcn
+ÿØÿÛ«symbol Delay-func
   «type: X»
-  «description: Delay»
-  «library file: |.subckt delay in out \nB1 out 0 V=delay(V(in),tau,100*tau)\n.ends delay»
+  «description: Delay with delay(x,y,z)»
+  «library file: |.subckt delay in out \nB1 out 0 V=delay(V(in),tau,history*tau)\n.ends delay»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
@@ -12,7 +12,8 @@
   «arc3p (75,0) (225,0) (150,0) 0 0 0xffa0a1 -1 -1»
   «text (-200,301) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (50,300) 1 7 2 0x1000000 -1 -1 "DELAY"»
-  «text (-200,-250) 0.857 7 0 0x1000000 -1 -1 "tau=<1m>"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "tau=<1m> ;delay time"»
+  «text (-200,-450) 1 7 2 0x1000000 -1 -1 "history=<int[1:65535](100)>"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol LC-LowPass-Filter
   «type: X»
   «description: LC Low Pass Filter (Single Ended)»
-  «library file: |.subckt LC-LowPass-Filter IN OUT\nL1 IN OUT L\nC1 OUT 0 C\n.param omega0=2*pi*f0\n.param C=Qfactor/omega0/Rext\n.param L=Rext/Qfactor/omega0\n.ends LC-LowPass-Filter»
+  «library file: |.subckt LC-LowPass-Filter IN OUT\nL1 IN OUT L\nC1 OUT 0 C\n.param omega0=2*pi*f0\n.param C=Qfactor/omega0/Rext\n.param L=Rext/Qfactor/omega0\n.display Filter-LP: L='L', C='C'\n.option concise\n.ends LC-LowPass-Filter»
   «shorted pins: false»
   «line (-400,100) (-330,100) 0 0 0x1000000 -1 -1»
   «line (30,100) (300,100) 0 0 0x1000000 -1 -1»

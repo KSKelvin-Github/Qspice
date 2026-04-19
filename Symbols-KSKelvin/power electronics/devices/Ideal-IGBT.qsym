@@ -21,7 +21,7 @@
   «text (0,350) 1 0 2 0x1000000 -1 -1 "IDEAL-IGBT"»
   «text (151,-150) 1 7 2 0x1000000 -1 -1 "Initial=<-1,(0),1> ;0:InitialOFF / 1:InitialON / -1:NotSet"»
   «text (150,-300) 1 7 2 0x1000000 -1 -1 "Ron_CE=<1m> ;ON resistance between C-E"»
-  «text (150,-450) 1 7 2 0x1000000 -1 -1 "Vfwd_CE=<0> ;Vfwd of C-E"»
+  «text (150,-450) 1 7 2 0x1000000 -1 -1 "Vfwd_CE=<0> ;Vfwd of C-E (Saturation Voltage)"»
   «text (150,-600) 1 7 2 0x1000000 -1 -1 "Roff=<10Meg> ;Roff of IGBT"»
   «text (150,-750) 1 7 2 0x1000000 -1 -1 "dpRon=<1m> ;Ron of Body Diode"»
   «text (150,-900) 1 7 2 0x1000000 -1 -1 "dpVfwd=<1m> ;Vfwd of Body Diode"»

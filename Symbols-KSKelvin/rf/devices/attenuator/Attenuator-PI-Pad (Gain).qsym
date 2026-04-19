@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Attenuator-PI-Pad (Gain)
   «type: X»
   «description: PI-Pad (gain attn) Attenuator»
-  «library file: |.subckt Attenuator-PI-Pad port1 port2\nR1 port1 0 Ra\nR2 port1 port2 Rb\nR3 port2 0 Ra\n.param Ra=Zo*(1+gain)/(1-gain)\n.param Rb=Zo*(1-gain^2)/2/gain\n.param gain=10^(dB/20)\n.ends Attenuator-PI-Pad»
+  «library file: |.subckt Attenuator-PI-Pad port1 port2\nR1 port1 0 Ra\nR2 port1 port2 Rb\nR3 port2 0 Ra\n.param Ra=Zo*(1+gain)/(1-gain)\n.param Rb=Zo*(1-gain^2)/2/gain\n.param gain=10^(dB/20)\n.display PI-Pad: Ra='Ra',Rb='Rb'\n.option concise\n.ends Attenuator-PI-Pad»
   «shorted pins: false»
   «line (-150,200) (-150,80) 0 0 0x1000000 -1 -1»
   «line (-150,-280) (-150,-350) 0 0 0x1000000 -1 -1»

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol T-HighPass-Filter
   «type: X»
   «description: T Low Pass Filter»
-  «library file: |.subckt T-HighPass-Filter IN OUT\nL1 N01 0 L\nC1 IN N01 Cdouble\nC2 N01 OUT Cdouble\n.param L=Zo/4/pi/fc\n.param C=1/Zo/4/pi/fc\n.param Cdouble=2*C\n.ends T-HighPass-Filter»
+  «library file: |.subckt T-HighPass-Filter IN OUT\nL1 N01 0 L\nC1 IN N01 Cdouble\nC2 N01 OUT Cdouble\n.param L=Zo/4/pi/fc\n.param C=1/Zo/4/pi/fc\n.param Cdouble=2*C\n.display T-HP: L='L',2C='Cdouble'\n.option concise\n.ends T-HighPass-Filter»
   «shorted pins: false»
   «line (-500,200) (-280,200) 0 0 0x1000000 -1 -1»
   «line (600,200) (380,200) 0 0 0x1000000 -1 -1»

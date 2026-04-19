@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol T-LowPass-Filter
   «type: X»
   «description: T Low Pass Filter»
-  «library file: |.subckt T-LowPass-Filter IN OUT\nC1 N01 0 C\nL1 IN N01 Lhalve\nL2 N01 OUT Lhalve\n.param L=Zo/pi/fc\n.param C=1/Zo/pi/fc\n.param Lhalve=L/2\n.ends T-LowPass-Filter»
+  «library file: |.subckt T-LowPass-Filter IN OUT\nC1 N01 0 C\nL1 IN N01 Lhalve\nL2 N01 OUT Lhalve\n.param L=Zo/pi/fc\n.param C=1/Zo/pi/fc\n.param Lhalve=L/2\n.display T-LP: L/2='Lhalve',C='C'\n.option concise\n.ends T-LowPass-Filter»
   «shorted pins: false»
   «line (50,200) (50,40) 0 0 0x1000000 -1 -1»
   «line (50,-40) (50,-200) 0 0 0x1000000 -1 -1»

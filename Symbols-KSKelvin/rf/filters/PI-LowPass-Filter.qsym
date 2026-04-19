@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PI-LowPass-Filter
   «type: X»
   «description: PI Low Pass Filter»
-  «library file: |.subckt PI-LowPass-Filter IN OUT\nC1 IN 0 Chalve\nC2 OUT 0 Chalve\nL1 IN OUT L\n.param L=Zo/pi/fc\n.param C=1/Zo/pi/fc\n.param Chalve=C/2\n.ends PI-LowPass-Filter»
+  «library file: |.subckt PI-LowPass-Filter IN OUT\nC1 IN 0 Chalve\nC2 OUT 0 Chalve\nL1 IN OUT L\n.param L=Zo/pi/fc\n.param C=1/Zo/pi/fc\n.param Chalve=C/2\n.display PI-LP: L='L',C/2='Chalve'\n.option concise\n.ends PI-LowPass-Filter»
   «shorted pins: false»
   «line (-300,200) (-300,40) 0 0 0x1000000 -1 -1»
   «line (-300,-40) (-300,-200) 0 0 0x1000000 -1 -1»

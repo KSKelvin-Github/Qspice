@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol RC-LowPass-Filter
   «type: X»
   «description: RC Low Pass Filter»
-  «library file: |.subckt RC-LowPass-Filter IN OUT\nR1 IN OUT R\nC1 OUT 0 1/R/2/pi/fc\n.param C=1/R/2/pi/fc\n.ends RC-LowPass-Filter»
+  «library file: |.subckt RC-LowPass-Filter IN OUT\nR1 IN OUT R\nC1 OUT 0 1/R/2/pi/fc\n.display Filter-LP: R='R', C='C'\n.param C=1/R/2/pi/fc\n.option concise\n.ends RC-LowPass-Filter»
   «shorted pins: false»
   «line (-400,100) (-330,100) 0 0 0x1000000 -1 -1»
   «line (30,100) (300,100) 0 0 0x1000000 -1 -1»

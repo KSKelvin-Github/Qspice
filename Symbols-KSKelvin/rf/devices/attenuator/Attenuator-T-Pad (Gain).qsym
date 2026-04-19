@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Attenuator-T-Pad (Gain)
   «type: X»
   «description: T-Pad (Gain attn) Attenuator»
-  «library file: |.subckt Attenuator-T-Pad port1 port2\nR1 port1 N01 Ra\nR3 N01 port2 Ra\nR2 N01 0 Rb\n.param Ra=Zo*(1-gain)/(gain+1)\n.param Rb=Zo*(2*gain)/(1-gain^2)\n.param gain=10^(dB/20)\n.ends Attenuator-T-Pad»
+  «library file: |.subckt Attenuator-T-Pad port1 port2\nR1 port1 N01 Ra\nR3 N01 port2 Ra\nR2 N01 0 Rb\n.param Ra=Zo*(1-gain)/(gain+1)\n.param Rb=Zo*(2*gain)/(1-gain^2)\n.param gain=10^(dB/20)\n.display T-Pad: Ra='Ra',Rb='Rb'\n.option concise\n.ends Attenuator-T-Pad»
   «shorted pins: false»
   «line (200,200) (200,80) 0 0 0x1000000 -1 -1»
   «line (200,-280) (200,-350) 0 0 0x1000000 -1 -1»

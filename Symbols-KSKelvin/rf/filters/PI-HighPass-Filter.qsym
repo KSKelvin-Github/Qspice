@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PI-HighPass-Filter
   «type: X»
   «description: PI High Pass Filter»
-  «library file: |.subckt PI-HighPass-Filter IN OUT\nC1 IN OUT C\nL1 IN 0 Ldouble\nL2 OUT 0 Ldouble\n.param C=1/Zo/4/pi/fc\n.param L=Zo/4/pi/fc\n.param Ldouble=2*L\n.ends PI-HighPass-Filter»
+  «library file: |.subckt PI-HighPass-Filter IN OUT\nC1 IN OUT C\nL1 IN 0 Ldouble\nL2 OUT 0 Ldouble\n.param C=1/Zo/4/pi/fc\n.param L=Zo/4/pi/fc\n.param Ldouble=2*L\n.display PI-HP: 2L='Ldouble',C='C'\n.option concise\n.ends PI-HighPass-Filter»
   «shorted pins: false»
   «line (-500,200) (10,200) 0 0 0x1000000 -1 -1»
   «line (600,200) (90,200) 0 0 0x1000000 -1 -1»

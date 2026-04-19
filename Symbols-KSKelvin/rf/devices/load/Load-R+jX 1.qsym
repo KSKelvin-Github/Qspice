@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Load-R+jX 1
   «type: X»
   «description: R+jX load at a single frequency»
-  «library file: |.subckt Load-R+jX + -\n.param frq=10Meg\n.param R=50\n.param X=10\n.if(X==0)\nR + - R\n.display Z = ('R'+j'X') : R='R'\n.else\n.if(X>0)\n.param L=X/2/pi/frq\nL + - L Rser=R Rpar=0\n.display Z = ('R'+j'X') : R='R' L='L'\n.else\n.param C=1/2/pi/frq/(-X)\nC + - C Rser=R\n.display Z = ('R'+j'X') : R='R' C='C'\n.endif\n.endif\n.ends Load-R+jX»
+  «library file: |.subckt Load-R+jX + -\n.param frq=10Meg\n.param R=50\n.param X=10\n.if(X==0)\nR + - R\n.display Z = ('R') : R='R'\n.else\n.if(X>0)\n.param L=X/2/pi/frq\nL + - L Rser=R Rpar=0\n.display Z = ('R'+j*'X') : R='R' L='L'\n.else\n.param C=1/2/pi/frq/(-X)\nC + - C Rser=R\n.display Z = ('R'+j*'X') : R='R' C='C'\n.endif\n.endif\n.option concise\n.ends Load-R+jX»
   «shorted pins: false»
   «line (0,200) (0,150) 0 0 0x1000000 -1 -1»
   «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»

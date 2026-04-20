@@ -1,0 +1,31 @@
+ÿØÿÛ«symbol MOC3021
+  «type: X»
+  «description: Opto Triac - (by Helmut Sennewald)»
+  «library file: |.SUBCKT MOC3021 1 2 3 4\n.PARAM Itrig=8m\n.PARAM RH1=20k\n.PARAM RH2=20k\n.PARAM RH3=16.7k\nQ2 vb1 vb1p vd1 0 PNP1 off\nQ1 vb1p vb1 4 0 NPN1 off\nR3 vb1 4 {RH2}\nD1 1 N01 DL\nVD1 N01 2 0\nR1 ctrl1 4 1\nC1 ctrl1 4 10µ\nR2 ctrl1 vb1 {RH1}\nR4 vd1 vb1p {RH3}\nB1 ctrl1 4 I=-500*I(VD1)*3m/Itrig\nR6 vd2 vb2 {RH2}\nD3 vd2 3 D1\nQ3 vb2 vb2p 4 0 PNP1 off\nQ4 vb2p vb2 vd2 0 NPN1 off\nE1 vd2 N001 ctrl1 4 -1\nR5 N001 vb2 {RH1}\nR7 vb2p 4 {RH3}\nD2 3 vd1 D1\nR34 3 4 10000MEG\nC34 3 4 30p\n.MODEL PNP1 PNP(Is=1e-15 BF=10 Cjc=10p Cje=20p Tf=0.1u Ise=1e-12)\n.MODEL NPN1 NPN(Is=1e-15 BF=10 Cjc=10p Cje=20p Tf=0.1u Ise=1e-12)\n.MODEL D1 D(Is=0.1u Rs=2 Cj0=50p)\n.MODEL DL D(Is=1e-20 Rs=5)\n.ENDS»
+  «shorted pins: false»
+  «line (-200,20) (-400,20) 0 0 0x1000000 -1 -1»
+  «line (-300,-300) (-300,20) 0 0 0x1000000 -1 -1»
+  «line (-300,300) (-300,170) 0 0 0x1000000 -1 -1»
+  «line (-300,300) (-500,300) 0 0 0x1000000 -1 -1»
+  «line (-300,-300) (-500,-300) 0 0 0x1000000 -1 -1»
+  «line (450,70) (250,70) 0 0 0x1000000 -1 -1»
+  «line (50,-80) (250,-80) 0 0 0x1000000 -1 -1»
+  «line (250,-300) (250,-80) 0 0 0x1000000 -1 -1»
+  «line (250,70) (250,300) 0 0 0x1000000 -1 -1»
+  «line (250,300) (500,300) 0 0 0x1000000 -1 -1»
+  «line (250,-300) (500,-300) 0 0 0x1000000 -1 -1»
+  «line (-150,150) (0,50) 0 0 0x1000000 -1 -1»
+  «line (0,50) (-150,50) 0 0 0x1000000 -1 -1»
+  «line (-150,50) (-45,-20) 0 0 0x1000000 -1 -1»
+  «rect (-500,-400) (500,400) 0 0 0 0xff0000 0xffe9e9 -1 0 -1»
+  «triangle (-300,20) (-200,170) (-400,170) 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (350,70) (450,-80) (250,-80) 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (150,-80) (50,70) (250,70) 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (-32,0) (-60,-40) (0,-50) 0 0 0x1000000 0xff0012 -1 -1»
+  «text (-500,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,500) 1 7 0 0x1000000 -1 -1 "MOC3021"»
+  «pin (-500,300) (20,0) 1 15 0 0x0 -1 "D+"»
+  «pin (-500,-300) (20,0) 1 15 0 0x0 -1 "D-"»
+  «pin (500,-300) (-20,0) 1 15 0 0x0 -1 "MT2"»
+  «pin (500,300) (-20,0) 1 15 0 0x0 -1 "MT1"»
+»

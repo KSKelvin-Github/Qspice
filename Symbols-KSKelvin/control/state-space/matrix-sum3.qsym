@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol matrix-sum3
+  «type: X»
+  «description: Matrix Sum3 - y = K*x»
+  «library file: |.subckt matrix-sum3 x[1] x[2] x[3] y\nB1 y 0 V=k11*V(x[1])+k12*V(x[2])+k13*V(x[3])\nR1 x[1] 0 1G Shorted\nR2 x[2] 0 1G Shorted\nR3 x[3] 0 1G Shorted\n.ends matrix-sum3»
+  «shorted pins: false»
+  «rect (-400,-400) (200,400) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (-400,647) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-412,500) 1 7 0 0x1000000 -1 -1 "matrix-Sum3"»
+  «text (-412,-500) 1 7 0 0x1000000 -1 -1 "k11=<1>"»
+  «text (-412,-650) 1 7 0 0x1000000 -1 -1 "k12=<1>"»
+  «text (-412,-800) 1 7 0 0x1000000 -1 -1 "k13=<1>"»
+  «text (-100,300) 1 0 1 0x1000000 -1 -1 "y=K x"»
+  «pin (-400,100) (30,0) 1 7 0 0x0 -1 "x[1]"»
+  «pin (-400,-100) (20,0) 1 7 0 0x0 -1 "x[2]"»
+  «pin (-400,-300) (20,0) 1 7 0 0x0 -1 "x[3]"»
+  «pin (200,0) (-20,0) 1 11 0 0x0 -1 "y"»
+»

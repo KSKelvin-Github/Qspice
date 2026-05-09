@@ -1,0 +1,9 @@
+ÿØÿÛ«symbol DLL-Symbol-1IN-1OUT
+  «type: Ø(.DLL)»
+  «shorted pins: false»
+  «rect (-300,200) (300,-300) 0 0 0 0x1000000 0xc8c8c8 -1 1 -1»
+  «text (0,450) 1 15 0 0x0 -1 -1 "X1"»
+  «text (0,300) 1 15 0 0x0 -1 -1 "<DLL_name_here>"»
+  «pin (-300,0) (20,0) 1 7 145 0x0 -1 "in"»
+  «pin (300,0) (-20,0) 1 11 146 0x0 -1 "out"»
+»

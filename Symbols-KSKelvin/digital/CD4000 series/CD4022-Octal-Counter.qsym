@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol CD4022
+  «type: X»
+  «description: CD4022 Octal Counter with 8 Decoded Outputs»
+  «library file: |.subckt CD4022 Vdd Vss CLK CLK-Inhibit RESET O0 O1 O2 O3 O4 O5 O6 O7 CarryO\n¥3 Vdd Vss ¥ N01 N02 N03 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥1 Vdd Vss ¥ N02 CLK ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥2 Vdd Vss N03 ¥ CLK-Inhibit ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥9 Vdd Vss N08 ¥ N07 N05 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥10 Vdd Vss ¥ N10 N09 N08 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥11 Vdd Vss O0 ¥ N04 N05 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥12 Vdd Vss O1 ¥ N06 N09 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥13 Vdd Vss O2 ¥ N12 N07 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥14 Vdd Vss O3 ¥ N11 N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥15 Vdd Vss O4 ¥ N06 N13 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥16 Vdd Vss O5 ¥ N05 N12 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥17 Vdd Vss O6 ¥ N09 N11 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥18 Vdd Vss O7 ¥ N07 N13 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n¥4 Vdd Vss N06 N05 N04 N01 Vss RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL\n¥5 Vdd Vss N12 N09 N06 N01 Vss RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL\n¥6 Vdd Vss N11 N07 N10 N01 Vss RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL\n¥7 Vdd Vss N13 N04 N11 N01 Vss RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL\n¥21 Vdd Vss ¥ CarryO N13 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n.ends CD4022»
+  «shorted pins: false»
+  «rect (-600,-500) (600,1500) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (600,1600) 1 11 0 0x1000000 -1 -1 "X1"»
+  «text (150,-600) 1 7 0 0x1000000 -1 -1 "CD4022"»
+  «text (150,-750) 1 7 0 0x1000000 -1 -1 "TTOL=<1u>"»
+  «pin (0,1500) (20,0) 1 15 0 0x0 -1 "Vdd"»
+  «pin (0,-500) (20,0) 1 15 0 0x0 -1 "Vss"»
+  «pin (-600,1300) (20,0) 1 7 0 0x0 -1 "CLK"»
+  «pin (-600,900) (20,0) 1 7 0 0x0 -1 "CLK-Inhibit"»
+  «pin (-600,500) (20,0) 1 7 0 0x0 -1 "RESET"»
+  «pin (600,1300) (-20,0) 1 11 0 0x0 -1 "O0"»
+  «pin (600,1100) (-20,0) 1 11 0 0x0 -1 "O1"»
+  «pin (600,900) (-20,0) 1 11 0 0x0 -1 "O2"»
+  «pin (600,700) (-20,0) 1 11 0 0x0 -1 "O3"»
+  «pin (600,500) (-20,0) 1 11 0 0x0 -1 "O4"»
+  «pin (600,300) (-20,0) 1 11 0 0x0 -1 "O5"»
+  «pin (600,100) (-20,0) 1 11 0 0x0 -1 "O6"»
+  «pin (600,-100) (-20,0) 1 11 0 0x0 -1 "O7"»
+  «pin (600,-300) (-20,0) 1 11 0 0x0 -1 "CarryO"»
+»

@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol 74139-2-to-4Decoder
+  «type: X»
+  «description: 74139-2-TO-4DECODERS»
+  «library file: |.subckt 74139-2-to-4Decoder Vdd Vss A0 A1 ¬E¬N Y0 Y1 Y2 Y3\n¥1 Vdd Vss ¥ N01 ¬E¬N ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥2 Vdd Vss N05 N02 A0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥3 Vdd Vss N04 N03 A1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR\n¥4 Vdd Vss ¥ Y0 N02 N03 N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Td=Td Trise=Trise Rout=Rout TTOL=TTOL\n¥5 Vdd Vss ¥ Y1 N01 N03 N05 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Td=Td Trise=Trise Rout=Rout TTOL=TTOL\n¥6 Vdd Vss ¥ Y2 N01 N02 N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Td=Td Trise=Trise Rout=Rout TTOL=TTOL\n¥7 Vdd Vss ¥ Y3 N01 N05 N04 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Td=Td Trise=Trise Rout=Rout TTOL=TTOL\n.ends 74139-2-to-4Decoder»
+  «shorted pins: false»
+  «rect (-500,700) (500,-600) 0 0 0 0x1000000 0xffe6c8 -1 1 -1»
+  «text (0,283) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,817) 1 15 2 0x1000000 -1 -1 "74139-2-TO-4DECODER"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 "74139"»
+  «text (0,-50) 1 0 1 0x1000000 -1 -1 "2-to-4"»
+  «text (0,-200) 1 0 1 0x1000000 -1 -1 "decoder"»
+  «text (200,-700) 1 7 2 0x1000000 -1 -1 "Td=<0>"»
+  «text (200,-850) 1 7 2 0x1000000 -1 -1 "Trise=<0>"»
+  «text (200,-1000) 1 7 2 0x1000000 -1 -1 "Rout=<100>"»
+  «text (200,-1150) 1 7 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «pin (0,700) (20,0) 1 13 0 0x0 -1 "Vdd"»
+  «pin (0,-600) (20,0) 1 14 0 0x0 -1 "Vss"»
+  «pin (-500,500) (20,0) 1 7 0 0x0 -1 "A0"»
+  «pin (-500,200) (20,0) 1 7 0 0x0 -1 "A1"»
+  «pin (-500,-400) (20,0) 1 7 0 0x0 -1 "¬E¬N"»
+  «pin (500,500) (-20,0) 1 11 0 0x0 -1 "Y0"»
+  «pin (500,200) (-20,0) 1 11 0 0x0 -1 "Y1"»
+  «pin (500,-100) (-20,0) 1 11 0 0x0 -1 "Y2"»
+  «pin (500,-400) (-20,0) 1 11 0 0x0 -1 "Y3"»
+»

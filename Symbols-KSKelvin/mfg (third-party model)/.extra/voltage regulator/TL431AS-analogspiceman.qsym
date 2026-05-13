@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol TL431ED-EugeneDvoskin
+ÿØÿÛ«symbol TL431AS-analogspiceman
   «type: X»
   «description: TL431 Transistor-level by analog spiceman»
   «library file: |.subckt TL431AS A K R\nD1 R K Dc\nR1 A R 1.3e6 tc1=3m\nG1 A 5 R 4 1\nC1 5 A 1n Rpar=600\nD2 7 R Dc\nD3 7 4 Dn\nR2 7 4 950k\nR3 6 5 600k\nD4 A 6 Di\nC2 K 6 40p Rser=5k Rpar=1e6\nG2 K 7 6 A 95m\nD5 A 7 2V5\nD6 7 A Dk\nC3 7 A 50p\nD7 A K Dc\n.model Dc d Ron=10 Vfwd=0.65 Vrev=36 Epsilon=50m\n.model Dn d Is=1p Kf=0p2 Cjo=0p3\n.model Di d Ron=10m epsilon=1m\n.model Dk d Ron=5k7 Vfwd=0.8 Epsilon=0.5\n.model 2V5 d Ron=27m Vfwd=0.6 Epsilon=10m Vrev={Vr} revEpsilon=10m\n.param Vr=2.5+dt*(95u-dt*2u6) dt=temp-10\n.ends TL431AS»
@@ -12,7 +12,7 @@
   «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (150,100) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (150,-50) 1 7 0 0x1000000 -1 -1 "TL431AS"»
-  «text (150,-180) 0.681 7 1 0x1000000 -1 -1 "Eugene Dvoskin"»
+  «text (150,-180) 0.681 7 1 0x1000000 -1 -1 "analog spiceman"»
   «text (150,-280) 0.681 7 1 0x1000000 -1 -1 "Transistor-level"»
   «pin (0,-200) (90,180) 1 15 0 0x0 -1 "A"»
   «pin (0,200) (-20,90) 1 15 0 0x0 -1 "K"»

@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol TL431A-HelmutSennewald
+  «type: X»
+  «description: TL431A Transistor-level by Helmut Sennewald»
+  «library file: |.SUBCKT TL431A A K R\nQ1 3 2 1 0 NPN1 2.70\nQ2 2 2 A 0 NPN1 1\nR1 1 A 800 TC1=0.00035\nR2 4 2 2.4k\nR3 4 3 7.2k\nR4 5 4 3.28k\nQ3 6 3 A 0 NPN1 1\nR5 7 6 4k\nQ4 10 5 7 0 NPN1 1\nQ5 K R 5 0 NPN1 1\nR6 2 12 1k\nQ6 11 12 A 0 NPN1 0.2\nQ9 K 11 13 0 NPN1 2\nQ10 K 14 A 0 NPN1 10\nR10 14 A 10k\nR9 13 14 150\nR7 K 8 800\nQ7 10 10 8 0 PNP1 1\nQ8 11 10 9 0 PNP1 1\nD2 A K D1\nD1 A 11 D3\nR8 K 9 800\nC1 K 11 20p\nC2 6 3 20p\nD3 11 R D2\n.MODEL NPN1 NPN(Is=0.8e-14 BF=100 VAF=100 TF=0.5e-9 RB=50 IKF=10m KF=1e-16 AF=1 RE=10)\n.MODEL PNP1 PNP(Is=1e-14 BF=50 VAF=50 TF=1e-8 IKF=2m KF=1e-16 AF=1)\n.MODEL D1 D(Is=1e-13 Rs=10 CJ0=20p)\n.MODEL D2 D(Is=1e-13 Rs=10 CJ0=2p BV=5 IBV=10u)\n.MODEL D3 D(Is=1e-13 Rs=10 CJ0=2p )\n.ends»
+  «shorted pins: false»
+  «line (-50,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «line (80,80) (-80,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «line (80,80) (130,130) 0 0 0x1000000 -1 -1»
+  «line (-130,30) (-80,80) 0 0 0x1000000 -1 -1»
+  «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (150,100) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,-50) 1 7 0 0x1000000 -1 -1 "TL431A"»
+  «text (150,-180) 0.681 7 1 0x1000000 -1 -1 "Helmut Sennewald"»
+  «text (150,-280) 0.681 7 1 0x1000000 -1 -1 "Transistor-level"»
+  «pin (0,-200) (90,180) 1 15 0 0x0 -1 "A"»
+  «pin (0,200) (-20,90) 1 15 0 0x0 -1 "K"»
+  «pin (-200,0) (40,80) 1 15 0 0x0 -1 "R"»
+»

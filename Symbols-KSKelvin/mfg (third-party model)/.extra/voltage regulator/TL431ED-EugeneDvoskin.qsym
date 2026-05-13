@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol TL431A-HelmutSennewald
+  «type: X»
+  «description: TL431 Transistor-level by Eugene Dvoskin»
+  «library file: |.SUBCKT TL431ED CATHODE ANODE REF\nQ1 CATHODE REF N005 QN_ED\nR4 N005 N009 3.28k\nR2 N009 N012 2.4k\nR3 N009 N010 7.2k\nQ2 N012 N012 ANODE QN_ED area=1.2\nQ3 N010 N012 N014 QN_ED area=2.2\nR1 N014 ANODE 800\nQ4 N003 N005 N006 QN_ED\nR5 N006 N011 4k\nQ5 N011 N010 ANODE QN_ED\nQ6 N004 N013 ANODE QN_ED area=0.5\nQ7 N003 N003 N001 QP_ED\nQ8 N004 N003 N002 QP_ED\nR7 CATHODE N001 800\nR8 CATHODE N002 800\nQ9 CATHODE N004 N007 QN_ED\nR9 N008 N007 150\nQ10 CATHODE N008 ANODE QN_ED area=5\nR10 N008 ANODE 10k\nQ11 N004 N004 REF QN_ED\nD1 ANODE N004 D_ED\nR6 N013 N012 1k\nD2 ANODE CATHODE D_ED\nC1 CATHODE N004 10p\nC2 N010 N011 20p\n.model QN_ED NPN(BF=140 Cje=1p Cjc=2p Rb=40 VAF=80 VAR=50 KF=3.2e-16 AF=1)\n.model QP_ED PNP(BF=60 Cje=1p Cjc=3p Rb=80 VAF=70 VAR=40)\n.MODEL D_ED D(Rs=5 CJ0=4.0p)\n.ends TL431ED»
+  «shorted pins: false»
+  «line (-50,0) (-200,0) 0 0 0x1000000 -1 -1»
+  «line (80,80) (-80,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «line (80,80) (130,130) 0 0 0x1000000 -1 -1»
+  «line (-130,30) (-80,80) 0 0 0x1000000 -1 -1»
+  «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (150,100) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,-50) 1 7 0 0x1000000 -1 -1 "TL431ED"»
+  «text (150,-180) 0.681 7 1 0x1000000 -1 -1 "Eugene Dvoskin"»
+  «text (150,-280) 0.681 7 1 0x1000000 -1 -1 "Transistor-level"»
+  «pin (0,200) (-20,90) 1 15 0 0x0 -1 "K"»
+  «pin (0,-200) (90,180) 1 15 0 0x0 -1 "A"»
+  «pin (-200,0) (40,80) 1 15 0 0x0 -1 "R"»
+»

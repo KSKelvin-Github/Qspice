@@ -1,5 +1,6 @@
 ÿØÿÛ«symbol Bode-InOut-Switch
   «type: X»
+  «description: Switch for NUM and DEN for .bode»
   «library file: |.subckt Bode-InOut-Switch num den num0 den0 num1 den1\nR1num num0 num R=if(idx==0,1µ,1G)\nR2num num1 num R=if(idx==1,1µ,1G)\nR1den den0 den R=if(idx==0,1µ,1G)\nR2den den1 den R=if(idx==1,1µ,1G)\nRnum num 0 1Meg\nRden den 0 1Meg\n.ends Bode-InOut-Switch»
   «shorted pins: false»
   «line (-950,100) (-600,100) 0 0 0x1000000 -1 -1»

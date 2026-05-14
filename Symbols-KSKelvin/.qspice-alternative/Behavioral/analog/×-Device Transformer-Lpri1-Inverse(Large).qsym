@@ -1,5 +1,6 @@
 ÿØÿÛ«symbol ×-Device Transformer-Lpri1-Inverse(Large)
   «type: ×»
+  «description: Transformer with 2 windings»
   «shorted pins: false»
   «line (-500,300) (0,300) 0 0 0x1000000 -1 -1»
   «line (-500,-300) (0,-300) 0 0 0x1000000 -1 -1»

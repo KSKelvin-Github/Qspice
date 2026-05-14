@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol Capacitor-Series-Parallel-Equivalent
+  «type: C»
+  «description: Capacitance measured at 1MegHz»
+  «shorted pins: false»
+  «line (0,200) (0,40) 0 0 0x1000000 -1 -1»
+  «line (0,-40) (0,-200) 0 0 0x1000000 -1 -1»
+  «rect (-130,-40) (130,-30) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-130,30) (130,40) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "C1"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "2.2508e-9"»
+  «text (100,-300) 1 7 0 0x1000000 -1 -1 "Rser=70.7107"»
+  «text (100,-450) 1 7 1 0x1000000 -1 -1 "freq in description"»
+  «text (100,-600) 1 7 1 0x1000000 -1 -1 "right-click : equivalent model"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+»

@@ -1,5 +1,6 @@
 ÿØÿÛ«symbol .step - contour
   «type: .»
+  «description: Contour Sweep (.step)»
   «shorted pins: false»
   «line (-600,100) (-600,-150) 0 0 0x1000000 -1 -1»
   «line (-600,-150) (700,-150) 0 0 0x1000000 -1 -1»

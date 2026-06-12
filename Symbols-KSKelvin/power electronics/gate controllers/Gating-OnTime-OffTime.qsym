@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Gating-OnTime-OffTime
   «type: X»
   «description: Gating - OnTime and OffTime»
-  «library file: |.subckt Gating-OnTime-OffTime OnT OffT Q\nB1 ramp 0 V=idt(1,0,V(reset)>Vlow)\n¥1 V+ V- Q ¥ OnT ramp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV2 V+ 0 Vhigh\nV3 V- 0 Vlow\n¥2 V+ V- Reset ¥ ramp Tperiod ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 Tperiod 0 V=max(V(OnT)+V(OffT),V(OnT))\n.ends Gating-OnTime-OffTime»
+  «library file: |.subckt Gating-OnTime-OffTime OnT OffT Q\nB1 ramp 0 V=idt(1,0,V(reset)>Vlow)\n¥1 V+ V- Q ¥ OnT ramp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol IC=Vlow\nV2 V+ 0 Vhigh\nV3 V- 0 Vlow\n¥2 V+ V- Reset ¥ ramp Tperiod ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 Tperiod 0 V=max(V(OnT)+V(OffT),V(OnT))\n.ends Gating-OnTime-OffTime»
   «shorted pins: false»
   «line (-50,50) (100,50) 0 0 0x1000000 -1 -1»
   «line (100,50) (100,-200) 0 0 0x1000000 -1 -1»

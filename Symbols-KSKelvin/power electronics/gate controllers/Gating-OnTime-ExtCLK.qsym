@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Gating-OnTime-ExtCLK
   «type: X»
   «description: Gating - OnTime and External CLK»
-  «library file: |.subckt Gating-OnTime-ExtCLK OnT CLK Q\nB1 ramp 0 V=idt(1,0,V(reset)>Vlow)\n¥1 V+ V- Q ¥ OnT ramp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV2 V+ 0 Vhigh\nV3 V- 0 Vlow\nB2 edgePos 0 V=(V(CLK)-state(1,V(CLK)))>0\n¥2 V+ V- Reset ¥ edgePos ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR REF=-Vlow+0.5\n.ends Gating-OnTime-ExtCLK»
+  «library file: |.subckt Gating-OnTime-ExtCLK OnT CLK Q\nB1 ramp 0 V=idt(1,0,V(reset)>Vlow)\n¥1 V+ V- Q ¥ OnT ramp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol IC=Vlow\nV2 V+ 0 Vhigh\nV3 V- 0 Vlow\nB2 edgePos 0 V=(V(CLK)-state(1,V(CLK)))>0\n¥2 V+ V- Reset ¥ edgePos ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR REF=-Vlow+0.5\n.ends Gating-OnTime-ExtCLK»
   «shorted pins: false»
   «line (-500,-50) (-450,-100) 0 0 0x1000000 -1 -1»
   «line (-450,-100) (-500,-150) 0 0 0x1000000 -1 -1»

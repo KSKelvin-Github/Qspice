@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Low-Side-Driver-Buffer
+  «type: X»
+  «description: Low Side Gate Driver (Buffer) with Enable»
+  «library file: |.subckt Low-Side-Driver-Buffer Vdd Vss OUT IN EN\n¥1 Vdd Vss OUT ¥5 N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Rsrc=Rsource Rsink=Rsink\n¥2 Vdd Vss N01 ¥ IN EN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND REF=REF\n.ends Low-Side-Driver-Buffer»
+  «shorted pins: false»
+  «line (-100,100) (-300,100) 0 0 0x1000000 -1 -1»
+  «line (300,100) (100,100) 0 0 0x1000000 -1 -1»
+  «line (-300,-200) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,25) 0 0 0x1000000 -1 -1»
+  «rect (-300,400) (300,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «triangle (-100,250) (-100,-50) (100,100) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-300,500) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,650) 1 15 2 0x1000000 -1 -1 "LOW-SIDE-DRIVER-BUFFER"»
+  «text (180,-400) 1 7 2 0x1000000 -1 -1 "REF=<0.5>"»
+  «text (180,-550) 1 7 2 0x1000000 -1 -1 "Rsource=<0.1>"»
+  «text (180,-700) 1 7 2 0x1000000 -1 -1 "Rsink=<0.1>"»
+  «pin (0,400) (20,0) 0.857 15 0 0x0 -1 "Vdd"»
+  «pin (0,-300) (20,0) 0.857 15 0 0x0 -1 "Vss"»
+  «pin (300,100) (20,0) 1 15 0 0x0 -1 "OUT"»
+  «pin (-300,100) (-20,0) 1 15 0 0x0 -1 "IN"»
+  «pin (-300,-200) (20,0) 0.857 6 0 0x0 -1 "EN"»
+»

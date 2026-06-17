@@ -1,4 +1,5 @@
 * Merge Libraries by KSKelvin
+* filename: standard (from mpkopec).jft
 * filename: standard (from ltwiki).jft
 * filename: standard (from VolVal).jft
 * filename: standard (from LTspice).jft
@@ -21,6 +22,7 @@
 .model 2n3687-volval njf vto=-0.5102 beta=840u betatce=-0.5 lambda=1.167m rd=1 rs=1 cgs=2.083p cgd=2p pb=0.5 is=114.5f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n3819-ltspice njf beta=1.304m betatce=-.5 rd=1 rs=1 lambda=2.25m vto=-3 vtotc=-2.5m is=33.57f isr=322.4f n=1 nr=2 xti=3 alpha=311.7u vk=243.6 cgd=1.6p m=.3622 pb=1 fc=.5 cgs=2.414p kf=9.882e-18 af=1 mfg=vishay
 .model 2n3819-ltwiki njf beta=1.304m betatce=-.5 rd=1 rs=1 lambda=2.25m vto=-3 vtotc=-2.5m is=33.57f isr=322.4f n=1 nr=2 xti=3 alpha=311.7u vk=243.6 cgd=1.6p m=.3622 pb=1 fc=.5 cgs=2.414p kf=9.882e-18 af=1 mfg=vishay
+.model 2n3819-mpkopec njf beta=1.304m betatce=-.5 rd=1 rs=1 lambda=2.25m vto=-3 vtotc=-2.5m is=33.57f isr=322.4f n=1 nr=2 xti=3 alpha=311.7u vk=243.6 cgd=1.6p m=.3622 pb=1 fc=.5 cgs=2.414p kf=9.882e-18 af=1 mfg=vishay
 .model 2n3819-volval njf beta=1.304m betatce=-.5 rd=1 rs=1 lambda=2.25m vto=-3 vtotc=-2.5m is=33.57f isr=322.4f n=1 nr=2 xti=3 alpha=311.7u vk=243.6 cgd=1.6p m=.3622 pb=1 fc=.5 cgs=2.414p kf=9.882e-18 af=1 mfg=vishay
 .model 2n3821-ltwiki njf vto=-0.8467 beta=1.517m betatce=-0.5 lambda=2.045m rd=1 rs=1 cgs=4.627p cgd=4p pb=0.5 is=181.3f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n3821-volval njf vto=-0.8467 beta=1.517m betatce=-0.5 lambda=2.045m rd=1 rs=1 cgs=4.627p cgd=4p pb=0.5 is=181.3f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
@@ -54,16 +56,19 @@
 .model 2n4093-volval njf vto=-1.3550 beta=6.94457m betatce=-0.5 lambda=3.97876e-2 rd=3.51442 rs=3.51442 cgs=8p cgd=8.3p pb=7.27722e-1 is=6.91657e-16 xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nxp
 .model 2n4117-ltspice njf beta=0.033m betatce=-0.5 vto=-1.2 vtotc=-2.5m lambda=13m is=5.261f xti=3 isr=51.03f nr=2 n=1 rd=1 rs=1 cgd=3.94p cgs=4.93p fc=0.5 vk=90.45 m=435.9m pb=1 kf=45610f af=1 mfg=linear_systems
 .model 2n4117-ltwiki njf beta=33.07u betatce=-.5 rd=1 rs=1 lambda=13m vto=-1.2 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=45.61e-18 af=1 mfg=fairchild
+.model 2n4117-mpkopec njf beta=33.07u betatce=-.5 rd=1 rs=1 lambda=13m vto=-1.2 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=45.61e-18 af=1 mfg=fairchild
 .model 2n4117-volval njf beta=33.07u betatce=-.5 rd=1 rs=1 lambda=13m vto=-1.2 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=45.61e-18 af=1 mfg=fairchild
 .model 2n4117a-ltspice njf beta=0.56m betatce=-0.5 vto=-1.209 vtotc=-2.5m lambda=7.5m is=4.477f xti=3 isr=43.76f nr=2 alpha=18010u n=1 rd=1 rs=1 cgd=4.49p cgs=4.49p fc=0.5 vk=350.6 m=435.9m pb=1 kf=30820f af=1 mfg=linear_systems
 .model 2n4117a-ltwiki njf vto=-1.1 beta=49.01u betatce=-0.5 lambda=13m rd=1 rs=1 cgs=4.93p cgd=3.94p pb=1 is=5.261f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n4117a-volval njf vto=-1.1 beta=49.01u betatce=-0.5 lambda=13m rd=1 rs=1 cgs=4.93p cgd=3.94p pb=1 is=5.261f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n4118-ltspice njf beta=0.05258m betatce=-0.5 vto=-1.732 vtotc=-2.5m lambda=15m is=5.261f xti=3 isr=51.03f nr=2 alpha=0.7979u n=1 rd=1 rs=1 cgd=3.94p cgs=4.93p fc=0.5 vk=90.45 m=435m pb=1 kf=76700f af=1 mfg=linear_systems
 .model 2n4118-ltwiki njf beta=52.58u betatce=-.5 rd=1 rs=1 lambda=15m vto=-1.732 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=76.7e-18 af=1 mfg=fairchild
+.model 2n4118-mpkopec njf beta=52.58u betatce=-.5 rd=1 rs=1 lambda=15m vto=-1.732 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=76.7e-18 af=1 mfg=fairchild
 .model 2n4118-volval njf beta=52.58u betatce=-.5 rd=1 rs=1 lambda=15m vto=-1.732 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=76.7e-18 af=1 mfg=fairchild
 .model 2n4118a-ltspice njf beta=0.095m betatce=-0.5 vto=-1.299 vtotc=-2.5m lambda=7.5m is=4.477f xti=3 isr=43.76f nr=2 alpha=18010u n=1 rd=1 rs=1 cgd=4.49p cgs=4.49p fc=0.5 vk=350.6 m=435.9m pb=1 kf=76700f af=1 mfg=linear_systems
 .model 2n4119-ltspice njf beta=0.068m betatce=-0.5 vto=-2.536 vtotc=-2.5m lambda=19m is=5.261f xti=3 isr=51.03f nr=2 alpha=0.7979u n=1 rd=1 rs=1 cgd=3.94p cgs=4.93p fc=0.5 vk=90.45 m=435m pb=1 kf=101800f af=1 mfg=linear_systems
 .model 2n4119-ltwiki njf beta=68.08u betatce=-.5 rd=1 rs=1 lambda=19m vto=-2.536 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=101.8e-18 af=1 mfg=fairchild
+.model 2n4119-mpkopec njf beta=68.08u betatce=-.5 rd=1 rs=1 lambda=19m vto=-2.536 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=101.8e-18 af=1 mfg=fairchild
 .model 2n4119-volval njf beta=68.08u betatce=-.5 rd=1 rs=1 lambda=19m vto=-2.536 vtotc=-2.5m is=5.261f isr=51.03f n=1 nr=2 xti=3 alpha=797.9n vk=90.45 cgd=3.94p m=.4335 pb=1 fc=.5 cgs=4.93p kf=101.8e-18 af=1 mfg=fairchild
 .model 2n4119a-ltspice njf beta=0.022m betatce=-0.5 vto=-4.5 vtotc=-2.5m lambda=10m is=4.477f xti=3 isr=43.76f nr=2 alpha=18010u n=1 rd=1 rs=1 cgd=4.49p cgs=4.49p fc=0.5 vk=350.6 m=435.9m pb=1 kf=101800f af=1 mfg=linear_systems
 .model 2n4220-ltwiki njf vto=-1.195 beta=819.8u betatce=-0.5 lambda=3.266m rd=1 rs=1 cgs=4.627p cgd=4p pb=0.5 is=181.3f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
@@ -76,6 +81,7 @@
 .model 2n4223-volval njf vto=-3.05 beta=1.04m betatce=-0.5 lambda=5.5m rd=1 rs=1 cgs=2.414p cgd=1.6p pb=1 is=33.57f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n4338-ltspice njf beta=0.781m betatce=-0.5 vto=-.6606 vtotc=-2.5m lambda=1.167m is=114.5f xti=3 isr=1091f nr=2 alpha=506.8u n=1 rd=1 rs=1 cgd=2.8p cgs=2.916p fc=0.5 vk=251.7 m=227m pb=0.5 kf=29180f af=1 mfg=linear_systems
 .model 2n4338-ltwiki njf beta=781u betatce=-.5 rd=1 rs=1 lambda=1.167m vto=-.6606 vtotc=-2.5m is=114.5f isr=1.091p n=1 nr=2 xti=3 alpha=506.8u vk=251.7 cgd=2.8p m=.2271 pb=.5 fc=.5 cgs=2.916p kf=2.918e-18 af=1 mfg=fairchild
+.model 2n4338-mpkopec njf beta=781u betatce=-.5 rd=1 rs=1 lambda=1.167m vto=-.6606 vtotc=-2.5m is=114.5f isr=1.091p n=1 nr=2 xti=3 alpha=506.8u vk=251.7 cgd=2.8p m=.2271 pb=.5 fc=.5 cgs=2.916p kf=2.918e-18 af=1 mfg=fairchild
 .model 2n4338-volval njf beta=781u betatce=-.5 rd=1 rs=1 lambda=1.167m vto=-.6606 vtotc=-2.5m is=114.5f isr=1.091p n=1 nr=2 xti=3 alpha=506.8u vk=251.7 cgd=2.8p m=.2271 pb=.5 fc=.5 cgs=2.916p kf=2.918e-18 af=1 mfg=fairchild
 .model 2n4339-ltwiki njf vto=-1.218 beta=555.8u betatce=-0.5 lambda=3.5m rd=1 rs=1 cgs=2.916p cgd=2.8p pb=0.5 is=114.5f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n4339-volval njf vto=-1.218 beta=555.8u betatce=-0.5 lambda=3.5m rd=1 rs=1 cgs=2.916p cgd=2.8p pb=0.5 is=114.5f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
@@ -93,9 +99,11 @@
 .model 2n4392-volval njf vto=-2.2088 beta=4.22567m betatce=-0.5 lambda=6.40354e-2 rd=1.14866 rs=1.14866 cgs=7.75000p cgd=7.75000p pb=7.55484e-1 is=4.90805e-16 xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nxp
 .model 2n4393-ltspice njf beta=9.109m betatce=-0.5 vto=-1.422 vtotc=-2.5m lambda=6m is=205.2f xti=3 isr=1988f nr=2 alpha=20.98u n=1 rd=1 rs=1 cgd=4.57p cgs=4.06p fc=0.5 vk=123.7 m=407m pb=1 kf=12300f af=1 mfg=linear_systems
 .model 2n4393-ltwiki njf beta=9.109m betatce=-.5 rd=1 rs=1 lambda=6m vto=-1.422 vtotc=-2.5m is=205.2f isr=1.988p n=1 nr=2 xti=3 alpha=20.98u vk=123.7 cgd=4.57p m=.4069 pb=1 fc=.5 cgs=4.06p kf=123e-18 af=1 mfg=fairchild
+.model 2n4393-mpkopec njf beta=9.109m betatce=-.5 rd=1 rs=1 lambda=6m vto=-1.422 vtotc=-2.5m is=205.2f isr=1.988p n=1 nr=2 xti=3 alpha=20.98u vk=123.7 cgd=4.57p m=.4069 pb=1 fc=.5 cgs=4.06p kf=123e-18 af=1 mfg=fairchild
 .model 2n4393-volval njf beta=9.109m betatce=-.5 rd=1 rs=1 lambda=6m vto=-1.422 vtotc=-2.5m is=205.2f isr=1.988p n=1 nr=2 xti=3 alpha=20.98u vk=123.7 cgd=4.57p m=.4069 pb=1 fc=.5 cgs=4.06p kf=123e-18 af=1 mfg=fairchild
 .model 2n4416-ltspice njf beta=0.989m betatce=-0.5 vto=-3.07 vtotc=-2.5m lambda=5.5m is=33.57f xti=3 isr=322.4f nr=2 alpha=311.7u n=1 rd=1 rs=1 cgd=1.6p cgs=2.414p fc=0.5 vk=243.6 m=362m pb=1 kf=74450f af=1 mfg=linear_systems
 .model 2n4416-ltwiki njf beta=989.4u betatce=-.5 rd=1 rs=1 lambda=5.5m vto=-3.06 vtotc=-2.5m is=33.57f isr=322.4f n=1 nr=2 xti=3 alpha=311.7u vk=243.6 cgd=1.6p m=.3622 pb=1 fc=.5 cgs=2.414p kf=7.445e-18 af=1 mfg=fairchild
+.model 2n4416-mpkopec njf beta=989.4u betatce=-.5 rd=1 rs=1 lambda=5.5m vto=-3.06 vtotc=-2.5m is=33.57f isr=322.4f n=1 nr=2 xti=3 alpha=311.7u vk=243.6 cgd=1.6p m=.3622 pb=1 fc=.5 cgs=2.414p kf=7.445e-18 af=1 mfg=fairchild
 .model 2n4416-volval njf beta=989.4u betatce=-.5 rd=1 rs=1 lambda=5.5m vto=-3.06 vtotc=-2.5m is=33.57f isr=322.4f n=1 nr=2 xti=3 alpha=311.7u vk=243.6 cgd=1.6p m=.3622 pb=1 fc=.5 cgs=2.414p kf=7.445e-18 af=1 mfg=fairchild
 .model 2n4856-ltwiki njf vto=-5.3298 beta=2.86527m betatce=-0.5 lambda=6.19323e-2 rd=1.62278 rs=1.62278 cgs=1.05000e-11 cgd=1.30000e-11 pb=7.98217e-1 is=1.18582f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nxp
 .model 2n4856-volval njf vto=-5.3298 beta=2.86527m betatce=-0.5 lambda=6.19323e-2 rd=1.62278 rs=1.62278 cgs=1.05000e-11 cgd=1.30000e-11 pb=7.98217e-1 is=1.18582f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nxp
@@ -141,6 +149,7 @@
 .model 2n5105-volval njf vto=-2.5 beta=1.464m betatce=-0.5 lambda=3.167m rd=1 rs=1 cgs=2.414p cgd=1.6p pb=1 is=33.57f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n5114-ltspice pjf beta=0.510m betatce=-0.5 vto=-8.095 vtotc=-2.5m lambda=40m is=461.5f xti=3 isr=4402f nr=2 alpha=32.54u n=1 rd=1 rs=1 cgd=6.5p cgs=9p fc=0.5 vk=393.2 m=279m pb=1 kf=32960f af=1 mfg=linear_systems
 .model 2n5114-ltwiki pjf beta=510.2u betatce=-.5 rd=1 rs=1 lambda=40m vto=-8.095 vtotc=-2.5m is=461.5f isr=4.402p n=1 nr=2 xti=3 alpha=32.54u vk=393.2 cgd=6.5p m=.2789 pb=1 fc=.5 cgs=9p kf=32.96e-18 af=1 mfg=fairchild
+.model 2n5114-mpkopec pjf beta=510.2u betatce=-.5 rd=1 rs=1 lambda=40m vto=-8.095 vtotc=-2.5m is=461.5f isr=4.402p n=1 nr=2 xti=3 alpha=32.54u vk=393.2 cgd=6.5p m=.2789 pb=1 fc=.5 cgs=9p kf=32.96e-18 af=1 mfg=fairchild
 .model 2n5114-volval pjf beta=510.2u betatce=-.5 rd=1 rs=1 lambda=40m vto=-8.095 vtotc=-2.5m is=461.5f isr=4.402p n=1 nr=2 xti=3 alpha=32.54u vk=393.2 cgd=6.5p m=.2789 pb=1 fc=.5 cgs=9p kf=32.96e-18 af=1 mfg=fairchild
 .model 2n5115-ltspice pjf beta=1.031m betatce=-0.5 vto=-4.896 vtotc=-2.5m lambda=32m is=461.5f xti=3 isr=4402f nr=2 alpha=32.54u n=1 rd=1 rs=1 cgd=6.5p cgs=9p fc=0.5 vk=393.2 m=278m pb=1 kf=66610f af=1 mfg=linear_systems
 .model 2n5116-ltspice pjf beta=1.71m betatce=-0.5 vto=-2.373 lambda=25m is=461.5f xti=3 nr=2 n=1 rd=1 rs=1 cgd=6.5p cgs=9p fc=0.5 pb=1 af=1 mfg=linear_systems
@@ -158,31 +167,39 @@
 .model 2n5398-volval njf vto=-3.323 beta=1.242m betatce=-0.5 lambda=8m rd=1 rs=1 cgs=3.383p cgd=3p pb=1 is=101.9f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n5432-ltspice njf beta=9.109m betatce=-.5 rd=1 rs=1 lambda=50m vto=-5.397 vtotc=-2.5m is=533.7f isr=5.174p n=1 nr=2 xti=3 alpha=152.8u vk=111.9 cgd=35.6p m=.4283 pb=1 fc=.5 cgs=35.6p kf=124.3e-18 af=1 mfg=fairchild
 .model 2n5432-ltwiki njf beta=9.109m betatce=-.5 rd=1 rs=1 lambda=50m vto=-5.397 vtotc=-2.5m is=533.7f isr=5.174p n=1 nr=2 xti=3 alpha=152.8u vk=111.9 cgd=35.6p m=.4283 pb=1 fc=.5 cgs=35.6p kf=124.3e-18 af=1 mfg=fairchild
+.model 2n5432-mpkopec njf beta=9.109m betatce=-.5 rd=1 rs=1 lambda=50m vto=-5.397 vtotc=-2.5m is=533.7f isr=5.174p n=1 nr=2 xti=3 alpha=152.8u vk=111.9 cgd=35.6p m=.4283 pb=1 fc=.5 cgs=35.6p kf=124.3e-18 af=1 mfg=fairchild
 .model 2n5432-volval njf beta=9.109m betatce=-.5 rd=1 rs=1 lambda=50m vto=-5.397 vtotc=-2.5m is=533.7f isr=5.174p n=1 nr=2 xti=3 alpha=152.8u vk=111.9 cgd=35.6p m=.4283 pb=1 fc=.5 cgs=35.6p kf=124.3e-18 af=1 mfg=fairchild
 .model 2n5433-ltwiki njf vto=-4.16 beta=12.42m betatce=-0.5 lambda=40m rd=1 rs=1 cgs=35.6p cgd=35.6p pb=1 is=533.7f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n5433-volval njf vto=-4.16 beta=12.42m betatce=-0.5 lambda=40m rd=1 rs=1 cgs=35.6p cgd=35.6p pb=1 is=533.7f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n5434-ltspice njf beta=18m betatce=-.5 rd=1 rs=1 lambda=25m vto=-1.9 vtotc=-2.5m is=.5p isr=5p alpha=150u vk=110 cgd=35p m=.4283 cgs=35p mfg=vishay
 .model 2n5434-ltwiki njf beta=18m betatce=-.5 rd=1 rs=1 lambda=25m vto=-1.9 vtotc=-2.5m is=.5p isr=5p alpha=150u vk=110 cgd=35p m=.4283 cgs=35p mfg=vishay
+.model 2n5434-mpkopec njf beta=18m betatce=-.5 rd=1 rs=1 lambda=25m vto=-1.9 vtotc=-2.5m is=.5p isr=5p alpha=150u vk=110 cgd=35p m=.4283 cgs=35p mfg=vishay
 .model 2n5434-volval njf beta=18m betatce=-.5 rd=1 rs=1 lambda=25m vto=-1.9 vtotc=-2.5m is=.5p isr=5p alpha=150u vk=110 cgd=35p m=.4283 cgs=35p mfg=vishay
 .model 2n5452-ltwiki njf vto=-2.017 beta=768.3u betatce=-0.5 lambda=2.5m rd=1 rs=1 cgs=0.86p cgd=1.71p pb=1 is=24.55f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n5452-volval njf vto=-2.017 beta=768.3u betatce=-0.5 lambda=2.5m rd=1 rs=1 cgs=0.86p cgd=1.71p pb=1 is=24.55f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n5460-ltspice pjf is=1.5p alpha=1e-4 vk=300 vto=-3.4 vtotc=-3m beta=1.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5460-ltwiki pjf is=1.5p alpha=1e-4 vk=300 vto=-3.4 vtotc=-3m beta=1.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
+.model 2n5460-mpkopec pjf is=1.5p alpha=1e-4 vk=300 vto=-3.4 vtotc=-3m beta=1.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5460-volval pjf is=1.5p alpha=1e-4 vk=300 vto=-3.4 vtotc=-3m beta=1.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5461-ltspice pjf is=1.5p alpha=1e-4 vk=300 vto=-4.3 vtotc=-3m beta=1.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5461-ltwiki pjf is=1.5p alpha=1e-4 vk=300 vto=-4.3 vtotc=-3m beta=1.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
+.model 2n5461-mpkopec pjf is=1.5p alpha=1e-4 vk=300 vto=-4.3 vtotc=-3m beta=1.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5461-volval pjf is=1.5p alpha=1e-4 vk=300 vto=-4.3 vtotc=-3m beta=1.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5462-ltspice pjf is=1.5p alpha=1e-4 vk=300 vto=-5.4 vtotc=-3m beta=2.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5462-ltwiki pjf is=1.5p alpha=1e-4 vk=300 vto=-5.4 vtotc=-3m beta=2.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
+.model 2n5462-mpkopec pjf is=1.5p alpha=1e-4 vk=300 vto=-5.4 vtotc=-3m beta=2.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5462-volval pjf is=1.5p alpha=1e-4 vk=300 vto=-5.4 vtotc=-3m beta=2.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=5p cgd=5p kf=3e-17 mfg=siliconix
 .model 2n5484-ltspice njf is=.25p alpha=1e-4 vk= 80 vto=-1.5 vtotc=-3m beta=3.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5484-ltwiki njf is=.25p alpha=1e-4 vk=80 vto=-1.5 vtotc=-3m beta=3.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
+.model 2n5484-mpkopec njf is=.25p alpha=1e-4 vk= 80 vto=-1.5 vtotc=-3m beta=3.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5484-volval njf is=.25p alpha=1e-4 vk=80 vto=-1.5 vtotc=-3m beta=3.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5485-ltspice njf is=.25p alpha=1e-4 vk= 80 vto=-2.0 vtotc=-3m beta=3.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5485-ltwiki njf is=.25p alpha=1e-4 vk=80 vto=-2.0 vtotc=-3m beta=3.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
+.model 2n5485-mpkopec njf is=.25p alpha=1e-4 vk= 80 vto=-2.0 vtotc=-3m beta=3.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5485-volval njf is=.25p alpha=1e-4 vk=80 vto=-2.0 vtotc=-3m beta=3.5m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5486-ltspice njf is=.25p alpha=1e-4 vk= 80 vto=-4.0 vtotc=-3m beta=4.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5486-ltwiki njf is=.25p alpha=1e-4 vk=80 vto=-4.0 vtotc=-3m beta=4.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
+.model 2n5486-mpkopec njf is=.25p alpha=1e-4 vk= 80 vto=-4.0 vtotc=-3m beta=4.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5486-volval njf is=.25p alpha=1e-4 vk=80 vto=-4.0 vtotc=-3m beta=4.0m lambda=10m betatce=-.5 rd=10 rs=10 cgs=4p cgd=4p kf=3e-17 mfg=siliconix
 .model 2n5515-ltwiki njf vto=-2.5 beta=518.5u betatce=-0.5 lambda=300u rd=1 rs=1 cgs=14.64p cgd=8p pb=0.5 is=52.8f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model 2n5515-volval njf vto=-2.5 beta=518.5u betatce=-0.5 lambda=300u rd=1 rs=1 cgs=14.64p cgd=8p pb=0.5 is=52.8f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
@@ -1207,6 +1224,7 @@
 .model u308-volval njf vto=-2.852 beta=4.337m betatce=-0.5 lambda=16m rd=1 rs=1 cgs=5p cgd=5p pb=1 is=193.9f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc
 .model u309-ltspice njf beta=4.682m betatce=-0.5 vto=-2.075 vtotc=-2.5m lambda=14.5m is=193.9f xti=3 isr=1881f nr=2 alpha=7.533u n=1 rd=1 rs=1 cgd=6.2p cgs=6.2p fc=0.5 vk=74.1 m=465m pb=1 kf=64120f af=1 mfg=linear_systems
 .model u309-ltwiki njf beta=5.04m betatce=-.5 rd=1 rs=1 lambda=14m vto=-2.026 vtotc=-2.5m is=193.9f isr=1.881p n=1 nr=2 xti=3 alpha=7.533u vk=74.1 cgd=5p m=.4647 pb=1 fc=.5 cgs=5p kf=69.01e-18 af=1 mfg=fairchild
+.model u309-mpkopec njf beta=5.04m betatce=-.5 rd=1 rs=1 lambda=14m vto=-2.026 vtotc=-2.5m is=193.9f isr=1.881p n=1 nr=2 xti=3 alpha=7.533u vk=74.1 cgd=5p m=.4647 pb=1 fc=.5 cgs=5p kf=69.01e-18 af=1 mfg=fairchild
 .model u309-volval njf beta=5.04m betatce=-.5 rd=1 rs=1 lambda=14m vto=-2.026 vtotc=-2.5m is=193.9f isr=1.881p n=1 nr=2 xti=3 alpha=7.533u vk=74.1 cgd=5p m=.4647 pb=1 fc=.5 cgs=5p kf=69.01e-18 af=1 mfg=fairchild
 .model u310-ltspice njf beta=3.384m betatce=-0.5 vto=-3.409 vtotc=-2.5m lambda=17m is=193.9f xti=3 isr=1881f nr=2 alpha=7.533u n=1 rd=1 rs=1 cgd=6.2p cgs=6.2p fc=0.5 vk=74.1 m=465m pb=1 kf=46340f af=1 mfg=linear_systems
 .model u310-ltwiki njf vto=-3.324 beta=3.688m betatce=-0.5 lambda=17m rd=1 rs=1 cgs=7.4p cgd=7.4p pb=1 is=193.9f xti=3 af=1 fc=0.5 n=1 nr=2 mfg=nsc

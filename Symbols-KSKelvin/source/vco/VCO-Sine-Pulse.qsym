@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol VCO-Sine-Pulse
   «type: X»
   «description: VCO - Pulse (eqn : freq = f0 + V(ctrl)*Kvco) with Duty»
-  «library file: |.subckt VCO-Sine-Pulse ctrl duty vco\nB1 vco 0 V=sin(2*pi*f0*time+2*pi*Kvco*idt(V(ctrl),0)+theta0*pi/180)>(sin((1-V(duty)*2)*pi/2))\n.ends VCO-Sine-Pulse»
+  «library file: |.subckt VCO-Sine-Pulse ctrl duty vco\nB1 vco 0 V=sin(2*pi*idt(f0+Kvco*V(ctrl),0)+theta0*pi/180)>(sin((1-V(duty)*2)*pi/2))\n.ends VCO-Sine-Pulse»
   «shorted pins: false»
   «line (100,-130) (100,-200) 0 0 0x1000000 -1 -1»
   «line (100,200) (100,130) 0 0 0x1000000 -1 -1»

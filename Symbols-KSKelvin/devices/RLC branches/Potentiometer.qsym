@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Potentiometer
   «type: X»
-  «description: Potentiometer»
+  «description: Potentiometer / Variable Resistor»
   «library file: |.subckt Potentiometer + - m \n.param w = limit(1m,knob,0.999)\nR1 + m (1-w)*Rt\nR2 m - (w)*Rt\n.ends Potentiometer»
   «shorted pins: false»
   «line (300,0) (150,0) 0 0 0x1000000 -1 -1»
@@ -13,7 +13,7 @@
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
   «text (100,-150) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 15 2 0x1000000 -1 -1 "Potentiometer"»
-  «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<1k>"»
+  «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<1k> ;total resistance"»
   «text (100,-450) 1 7 0 0x0 -1 -1 "knob=<0.5>"»
   «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
   «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»

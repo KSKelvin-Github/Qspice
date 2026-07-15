@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Potentiometer-VCTRL
   «type: X»
-  «description: Potentiometer with Knob Adjustment»
+  «description: Potentiometer / Variable Resistor with Knob Adjustment»
   «library file: |.subckt Potentiometer-Vctrl + - m knob\nR1 + m R=(1-V(w))*Rt\nR2 m - R=(V(w))*Rt\nB1 w 0 V=limit(1m,V(knob),0.999)\n.ends Potentiometer-Vctrl»
   «shorted pins: false»
   «line (300,0) (150,0) 0 0 0x1000000 -1 -1»
@@ -20,7 +20,7 @@
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
   «text (100,-150) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 15 2 0x1000000 -1 -1 "Potentiometer-Vctrl"»
-  «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<1k>"»
+  «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<1k> ;total resistance"»
   «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
   «pin (0,-200) (-20,0) 1 15 0 0x0 -1 "-"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "m"»

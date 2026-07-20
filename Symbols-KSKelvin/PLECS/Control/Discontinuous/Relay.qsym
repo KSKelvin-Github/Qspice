@@ -1,25 +1,25 @@
 ÿØÿÛ«symbol Relay
   «type: X»
-  «description: Relay (PLECS equivalent)»
+  «description: PLECS - Relay»
   «library file: |.subckt Relay in out\n¥1 Vdd Vss Q ¥ in 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT VT=(UpperThreshold+LowerThreshold)/2 VH=(UpperThreshold-LowerThreshold)/2 TTOL=TTOL\nV2 Vss 0 OffStateOutput\nB1 out 0 V=if(time>0,V(Q),if(InitialState,OnStateOutput,OffStateOutput))\nV1 Vdd 0 OnStateOutput\n.ends Relay»
   «shorted pins: false»
-  «line (250,0) (-250,0) 0 0 0xffa0a1 -1 -1»
-  «line (0,-250) (0,250) 0 0 0xffa0a1 -1 -1»
-  «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
-  «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
-  «line (-50,200) (200,200) 0 0 0x1000000 -1 -1»
-  «line (-200,-200) (50,-200) 0 0 0x1000000 -1 -1»
-  «line (50,-200) (50,200) 0 0 0x1000000 -1 -1»
-  «line (-50,200) (-50,-200) 0 0 0x1000000 -1 -1»
-  «rect (-300,300) (300,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
-  «text (-300,550) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-300,400) 1 7 0 0x1000000 -1 -1 "RELAY"»
-  «text (-300,-400) 1 7 0 0x1000000 -1 -1 "UpperThreshold=<0.1>"»
-  «text (-300,-550) 1 7 0 0x1000000 -1 -1 "LowerThreshold=<-0.1>"»
-  «text (-300,-700) 1 7 0 0x1000000 -1 -1 "OnStateOutput=<1>"»
-  «text (-300,-850) 1 7 0 0x1000000 -1 -1 "OffStateOutput=<0>"»
-  «text (-300,-1000) 1 7 0 0x1000000 -1 -1 "InitialState=<0,(1)>"»
-  «text (-300,-1150) 1 7 2 0x1000000 -1 -1 "TTOL=<1µ>"»
+  «line (50,0) (-250,0) 0 0 0xffa0a1 -1 -1»
+  «line (-100,-160) (-100,160) 0 0 0xffa0a1 -1 -1»
+  «line (50,50) (100,0) 0 0 0x1000000 -1 -1»
+  «line (100,0) (50,-50) 0 0 0x1000000 -1 -1»
+  «line (-150,130) (50,130) 0 0 0x1000000 -1 -1»
+  «line (-250,-130) (-50,-130) 0 0 0x1000000 -1 -1»
+  «line (-50,-130) (-50,130) 0 0 0x1000000 -1 -1»
+  «line (-150,130) (-150,-130) 0 0 0x1000000 -1 -1»
+  «rect (-300,200) (100,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-300,450) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,300) 1 7 0 0x1000000 -1 -1 "RELAY"»
+  «text (-300,-300) 1 7 0 0x1000000 -1 -1 "UpperThreshold=<0.1>"»
+  «text (-300,-450) 1 7 0 0x1000000 -1 -1 "LowerThreshold=<-0.1>"»
+  «text (-300,-600) 1 7 0 0x1000000 -1 -1 "OnStateOutput=<1>"»
+  «text (-300,-750) 1 7 0 0x1000000 -1 -1 "OffStateOutput=<0>"»
+  «text (-300,-900) 1 7 0 0x1000000 -1 -1 "InitialState=<0,(1)>"»
+  «text (-300,-1050) 1 7 2 0x1000000 -1 -1 "TTOL=<1µ>"»
   «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»
-  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+  «pin (100,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Pulse-Generator
   «type: X»
   «description: PLECS - Pulse Geneator»
-  «library file: |.subckt Pulse-Generator out\nV1 out 0 pulse LowStateOutput HighStateOutput (PhaseDelay-1/Frequency) 2p 2p DutyCycle/Frequency 1/Frequency\n.ends Pulse-Generator»
+  «library file: |.subckt Pulse-Generator out\nV1 out 0 pulse Lo Hi (Delay-1/f) 2p 2p DutyCycle/f 1/f\n.ends Pulse-Generator»
   «shorted pins: false»
   «line (-150,-150) (-100,-150) 0 0 0x1000000 -1 -1»
   «line (-100,-150) (-100,150) 0 0 0x1000000 -1 -1»
@@ -15,10 +15,10 @@
   «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
   «text (-200,450) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-200,300) 1 7 0 0x1000000 -1 -1 "Pulse-Generator"»
-  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "HighStateOutput=<1>"»
-  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "LowStateOutput=<0>"»
-  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "Frequency=<1> ;(Hz)"»
-  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "DutyCycle=<0.5> ;(p.u.)"»
-  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "PhaseDelay=<0> ;(s)"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "Hi=<1> ;High State Output"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "Lo=<0> ;Low State Output"»
+  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "f=<1> ;Frequency (Hz))"»
+  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "DutyCycle=<0.5> ;Duty Cycle (p.u.)"»
+  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "Delay=<0> ;Phase Delay (s)"»
   «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

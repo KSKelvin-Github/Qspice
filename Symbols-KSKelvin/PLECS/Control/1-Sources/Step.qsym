@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Step
   «type: X»
   «description: PLECS - Step»
-  «library file: |.subckt Step out\nB1 out 0 V=if(time<StepTime,InitialOutput,FinalOutput)\n.ends Step»
+  «library file: |.subckt Step out\nB1 out 0 V=if(time<StepTime,Before,After)\n.ends Step»
   «shorted pins: false»
   «line (0,150) (0,-150) 0 0 0x1000000 -1 -1»
   «line (0,-150) (-150,-150) 0 0 0x1000000 -1 -1»
@@ -9,8 +9,8 @@
   «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
   «text (-200,450) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-200,300) 1 7 0 0x1000000 -1 -1 "Step"»
-  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "StepTime=<1>"»
-  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "InitialOutput=<0>"»
-  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "FinalOutput=<1>"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "StepTime=<1> ;Step Time (s)"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "Before=<0> ;Inital Output"»
+  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "After=<1> ;Final Output"»
   «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol PID-Laplace-v2
   «type: X»
-  «description: PID Compensator (v2 with Integrator IC=0)»
+  «description: PID Controller/Compensator (v2 with Integrator IC=0)»
   «library file: |.subckt PID-Laplace-v2 err out\nB1 PD 0 V=V(err) Laplace=Kp+Kd*s\nB2 I 0 V=V(err) Laplace=Ki/s IC=0\nB3 out 0 V=V(PD)+V(I)\n.ends PID-Laplace-v2»
   «shorted pins: false»
   «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»

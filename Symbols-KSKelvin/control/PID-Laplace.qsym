@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol PID-Laplace
   «type: X»
-  «description: PID Compensator»
+  «description: PID Controller/Compensator»
   «library file: |.subckt PID-Laplace err out\nB1 out 0 V=V(err) Laplace=Kp+Ki/s+Kd*s\n.ends PID-Laplace»
   «shorted pins: false»
   «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»

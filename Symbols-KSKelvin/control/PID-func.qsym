@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol PID-func
   «type: X»
-  «description: PID Compensator»
+  «description: PID Controller/Compensator»
   «library file: |.subckt PID-func err out\nB1 out 0 V=Kp*V(err)+Ki*idt(V(err),0)+Kd*ddt(V(err))\n.ends PID-func»
   «shorted pins: false»
   «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»

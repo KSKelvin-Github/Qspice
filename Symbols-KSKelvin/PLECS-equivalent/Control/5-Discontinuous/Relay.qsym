@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol Relay
+  «type: X»
+  «description: (PLECS) Relay»
+  «library file: |.subckt Relay in out\n¥1 Vdd Vss Q ¥ in 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT VT=(OnSwitchValue+OffSwitchValue)/2 VH=(OnSwitchValue-OffSwitchValue)/2 TTOL=TTOL\nV2 Vss 0 OffOutputValue\nB1 out 0 V=if(time>0,V(Q),if(InitialState,OnOutputValue,OffOutputValue))\nV1 Vdd 0 OnOutputValue\n.ends Relay»
+  «shorted pins: false»
+  «line (150,0) (-150,0) 0 0 0xffa0a1 -1 -1»
+  «line (0,-160) (0,160) 0 0 0xffa0a1 -1 -1»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «line (-50,130) (150,130) 0 0 0x1000000 -1 -1»
+  «line (-150,-130) (50,-130) 0 0 0x1000000 -1 -1»
+  «line (50,-130) (50,130) 0 0 0x1000000 -1 -1»
+  «line (-50,130) (-50,-130) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 15 0 0x1000000 -1 -1 "RELAY"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "OnSwitchValue=<0.1> ;Upper Threshold"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "OffSwitchValue=<-0.1> ;LowerThreshold"»
+  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "OnOutputValue=<1> ;On State Output"»
+  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "OffOutputValue=<0> ;Off State Output"»
+  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "InitialState=<0,(1)> ;Initial State : 0=Off, 1=On"»
+  «text (-200,-1050) 1 7 2 0x1000000 -1 -1 "TTOL=<1µ>"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

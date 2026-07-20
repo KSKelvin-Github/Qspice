@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol Divide
+  «type: X»
+  «description: (PLECS) Divide [*/]»
+  «library file: |.subckt Divide in1 in2 out\nB1 out 0 V=V(in1)/V(in2)\n.ends Divide»
+  «shorted pins: false»
+  «line (-150,150) (-50,50) 0 0 0x1000000 -1 -1»
+  «line (-50,150) (-150,50) 0 0 0x1000000 -1 -1»
+  «line (-150,-100) (-50,-100) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-110,-40) (-90,-60) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «ellipse (-110,-140) (-90,-160) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "DIVIDE"»
+  «pin (-200,100) (20,0) 1 15 0 0x0 -1 "in1"»
+  «pin (-200,-100) (-20,0) 1 15 0 0x0 -1 "in2"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

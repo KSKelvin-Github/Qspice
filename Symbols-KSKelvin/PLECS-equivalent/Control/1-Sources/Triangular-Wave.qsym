@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Triangular-Wave
   «type: X»
-  «description: PLECS - Triangular Wave Geneator»
+  «description: (PLECS) Triangular Wave Geneator»
   «library file: |.subckt Triangular-Wave out\nV1 out 0 pulse Min Max (Delay-1/f) EffDutyCycle/f (1-EffDutyCycle)/f 0 1/f\n.param EffDutyCycle=limit(0.01,DutyCycle,0.99)\n.ends Triangular-Wave»
   «shorted pins: false»
   «line (-150,-150) (-150,150) 0 0 0xffa0a1 -1 -1»
@@ -11,8 +11,8 @@
   «line (20,150) (70,-150) 0 0 0x1000000 -1 -1»
   «line (70,-150) (130,150) 0 0 0x1000000 -1 -1»
   «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
-  «text (-200,450) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-200,300) 1 7 0 0x1000000 -1 -1 "Triangular-wave"»
+  «text (-200,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-200,450) 1 7 2 0x1000000 -1 -1 "Triangular-wave"»
   «text (-200,-300) 1 7 0 0x1000000 -1 -1 "Min=<-0.5> ;Minimum signal value"»
   «text (-200,-450) 1 7 0 0x1000000 -1 -1 "Max=<0.5> ;Maximum signal value"»
   «text (-200,-600) 1 7 0 0x1000000 -1 -1 "f=<1> ;Frequency (Hz)"»

@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol Turn-on-Delay
+  «type: X»
+  «description: (PLECS) Turn-on Delay»
+  «library file: |.subckt Turn-on-Delay IN OUT\n¥1 p1v 0 N01 ¥ IN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=T_d\n¥2 p1v 0 OUT ¥ IN N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Rout=1m\nV1 p1v 0 1\n.ends Turn-on-Delay»
+  «shorted pins: false»
+  «line (-150,-100) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (0,100) 0 0 0x1000000 -1 -1»
+  «line (-100,100) (100,100) 0 0 0x1000000 -1 -1»
+  «line (100,100) (100,-100) 0 0 0x1000000 -1 -1»
+  «line (100,-100) (150,-100) 0 0 0x1000000 -1 -1»
+  «line (-100,-100) (-100,100) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (0,0) 5 0 0x0 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «triangle (0,0) (-40,20) (-40,-20) 0 0 0x0 0x0 -1 -1»
+  «text (0,300) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "TURN-ON-DELAY"»
+  «text (-200,-300) 1 7 0 0x0 -1 -1 "T_d=<2e-3> ;Dead time(s)"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

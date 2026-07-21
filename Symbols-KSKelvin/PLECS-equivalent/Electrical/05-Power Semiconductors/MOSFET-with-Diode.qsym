@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol MOSFET-with-Diode
   «type: X»
-  «description: (PLECS) MOSFET with Diode - Ideal»
+  «description: (PLECS) MOSFET with Diode [Ideal]»
   «library file: |.subckt MOSFET-with-Diode D G S\nS1 D S G 0 SWi ON=s_init OFF=!s_init\nD1 S D Di\n.model Di D Ron=1m Roff=20Meg Vfwd=0\n.model SWi SW Ron=max(1m,Ron) Roff=20Meg Vt=0.5 Vh=0\n.ends MOSFET-with-Diode»
   «shorted pins: false»
   «line (0,200) (0,150) 0 0 0x1000000 -1 -1»

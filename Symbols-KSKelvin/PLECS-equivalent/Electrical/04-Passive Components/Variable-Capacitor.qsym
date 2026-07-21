@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Variable-Capacitor
+  «type: X»
+  «description: (PLECS) Variable Capacitor [d/dt*C input=0]»
+  «library file: |.subckt Variable-Capacitor + - in\nC1 + - C=V(in) IC=v_init\n.ends Variable-Capacitor»
+  «shorted pins: false»
+  «line (0,200) (0,40) 0 0 0x1000000 -1 -1»
+  «line (0,-40) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (100,-150) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-100,100) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (-50,135) 0 0 0x1000000 -1 -1»
+  «rect (-130,-40) (130,-30) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-130,30) (130,40) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (25,102) (75,98) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (48,75) (52,125) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «triangle (-200,-40) (-200,40) (-130,0) 0 0 0x1000000 0xff12 -1 -1»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "XC1"»
+  «text (100,300) 1 7 2 0x1000000 -1 -1 "VARIABLE-CAPACITOR"»
+  «text (106,-200) 1 7 0 0x1000000 -1 -1 "v_init=<0> ;initial voltage"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "in"»
+»

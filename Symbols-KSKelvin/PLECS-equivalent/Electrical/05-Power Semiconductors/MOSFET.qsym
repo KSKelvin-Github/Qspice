@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol MOSFET
   «type: X»
-  «description: (PLECS) MOSFET - Ideal»
+  «description: (PLECS) MOSFET [Ideal]»
   «library file: |.subckt MOSFET D G S\nS1 D S G 0 SWi ON=s_init OFF=!s_init\n.model SWi SW Ron=max(1m,Ron) Roff=10Meg Vt=0.5 Vh=0\n.ends MOSFET»
   «shorted pins: false»
   «line (0,200) (0,150) 0 0 0x1000000 -1 -1»

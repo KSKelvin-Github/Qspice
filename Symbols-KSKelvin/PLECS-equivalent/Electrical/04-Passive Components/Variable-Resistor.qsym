@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol Variable-Resistor
+  «type: X»
+  «description: (PLECS) Variable Resistor»
+  «library file: |.subckt Variable-Resistor + - in\nB1 + - R=V(in)\n.ends Variable-Resistor»
+  «shorted pins: false»
+  «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»
+  «line (0,150) (0,200) 0 0 0x1000000 -1 -1»
+  «line (100,-150) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (-50,135) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (-100,100) 0 0 0x1000000 -1 -1»
+  «line (-50,0) (-130,0) 0 0 0x1000000 -1 -1»
+  «rect (50,-150) (-50,150) 0 0 0 0x1000000 0x2000000 -1 0 -1»
+  «triangle (-200,-40) (-200,40) (-130,0) 0 0 0x1000000 0xff12 -1 -1»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "XR1"»
+  «text (100,-150) 1 7 2 0x1000000 -1 -1 "VARIABLE-RESISTOR"»
+  «pin (0,-200) (0,0) 1 64 0 0x0 -1 "+"»
+  «pin (0,200) (0,0) 1 64 0 0x0 -1 "-"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "in"»
+»

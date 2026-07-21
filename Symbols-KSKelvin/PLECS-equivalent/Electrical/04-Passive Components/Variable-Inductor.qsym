@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol Variable-Inductor
+  «type: X»
+  «description: (PLECS) Variable Inductor [d/dt*L input=0]»
+  «library file: |.subckt Variable-Inductor + - in\nL1 + - L=V(in) IC=i_init\n.ends Variable-Inductor»
+  «shorted pins: false»
+  «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-180) 0 0 0x1000000 -1 -1»
+  «line (100,-150) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (-50,135) 0 0 0x1000000 -1 -1»
+  «line (-100,150) (-100,100) 0 0 0x1000000 -1 -1»
+  «triangle (-200,-40) (-200,40) (-130,0) 0 0 0x1000000 0xff12 -1 -1»
+  «coil (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "XL1"»
+  «text (100,300) 1 7 2 0x1000000 -1 -1 "VARIABLE-INDUCTOR"»
+  «text (100,-200) 1 7 0 0x1000000 -1 -1 "i_init=<0> ;initial current"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "in"»
+»

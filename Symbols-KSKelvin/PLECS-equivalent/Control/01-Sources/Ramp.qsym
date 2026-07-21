@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol Ramp
+  «type: X»
+  «description: (PLECS) Ramp [No Final output param]»
+  «library file: |.subckt Ramp out\nB1 out 0 V=if(time<start,X0,slope*(time-start)+X0)\n.ends Ramp»
+  «shorted pins: false»
+  «line (150,150) (0,-150) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (-150,-150) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-200,300) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-200,450) 1 7 2 0x1000000 -1 -1 "Ramp"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "slope=<1> ;Slope (1/s)"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "start=<0> ;Start time (s)"»
+  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "X0=<0> ;Initial output"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

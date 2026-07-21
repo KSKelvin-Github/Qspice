@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol Transport-Delay
+  «type: X»
+  «description: (PLECS) Transport Delay»
+  «library file: |.subckt Transport-Delay in out\nB1 out 0 V=if(time<T_d,y_init,delay(V(in),T_d,T_d))\n.ends Transport-Delay»
+  «shorted pins: false»
+  «line (-20,60) (80,60) 5 0 0x0 -1 -1»
+  «line (-150,0) (-50,150) 0 0 0x1000000 -1 -1»
+  «line (50,-150) (150,0) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-50,0) 0 0 0x1000000 -1 -1»
+  «line (-50,0) (50,150) 0 0 0x1000000 -1 -1»
+  «line (15,-50) (115,-50) 5 0 0x0 -1 -1»
+  «line (-40,0) (200,0) 0 0 0xffa0a1 -1 -1»
+  «line (-150,150) (-150,-150) 0 0 0xffa0a1 -1 -1»
+  «line (-50,150) (50,-150) 0 0 0x1000000 -1 -1»
+  «line (50,150) (150,-150) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «triangle (80,60) (40,80) (40,40) 0 0 0x0 0x0 -1 -1»
+  «triangle (115,-50) (75,-30) (75,-70) 0 0 0x0 0x0 -1 -1»
+  «text (0,300) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "TRANSPORT-DELAY"»
+  «text (-200,-300) 1 7 0 0x0 -1 -1 "T_d=<0.1> ;Time delay (s)"»
+  «text (-200,-450) 1 7 0 0x0 -1 -1 "y_init=<0> ;Initial output"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

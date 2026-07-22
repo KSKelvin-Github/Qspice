@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Triangular-Wave
   «type: X»
   «description: (PLECS) Triangular Wave Geneator»
-  «library file: |.subckt Triangular-Wave out\nV1 out 0 pulse Min Max (Delay-1/f) EffDutyCycle/f (1-EffDutyCycle)/f 0 1/f\n.param EffDutyCycle=limit(0.01,DutyCycle,0.99)\n.ends Triangular-Wave»
+  «library file: |.subckt Triangular-Wave out\nV1 out 0 pulse Min Max (Delay-trunc(Delay*f))-1/f EffDutyCycle/f (1-EffDutyCycle)/f 0 1/f\n.param EffDutyCycle=limit(0.01,DutyCycle,0.99)\n.ends Triangular-Wave»
   «shorted pins: false»
   «line (-150,-150) (-150,150) 0 0 0xffa0a1 -1 -1»
   «line (-180,0) (150,0) 0 0 0xffa0a1 -1 -1»

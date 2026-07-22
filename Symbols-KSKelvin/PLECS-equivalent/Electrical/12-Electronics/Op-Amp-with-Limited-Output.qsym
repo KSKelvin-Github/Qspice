@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol Op-Amp-with-Limited-Output
+  «type: X»
+  «description: (PLECS) Op-Amp with Limited Output»
+  «library file: |.subckt Op-Amp-with-Limited-Output IN+ IN- OUT+ OUT-\nB1 OUT+ OUT- V=limit(A*V(IN+,IN-),Vmin,Vmax)\nR1 IN+ IN- 1e15\n.ends Op-Amp-with-Limited-Output»
+  «shorted pins: false»
+  «line (-150,-200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «line (-150,200) (-50,200) 0 0 0x1000000 -1 -1»
+  «line (-100,250) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-200,-400) (-200,400) 0 0 0x1000000 -1 -1»
+  «line (-200,400) (400,0) 0 0 0x1000000 -1 -1»
+  «line (400,0) (-200,-400) 0 0 0x1000000 -1 -1»
+  «line (100,-300) (100,-200) 0 0 0x1000000 -1 -1»
+  «line (-50,-100) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (50,100) 0 0 0x1000000 -1 -1»
+  «line (50,100) (100,100) 0 0 0x1000000 -1 -1»
+  «text (96,350) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (200,350) 1 7 2 0x1000000 -1 -1 "OP-AMP-WITH-LIMITED-OUTPUT"»
+  «text (200,-200) 1 7 0 0x1000000 -1 -1 "A=<1e6> ;Open-loop gain"»
+  «text (200,-350) 1 7 0 0x1000000 -1 -1 "Vmin=<-10> ;Output voltage limit - Vmin"»
+  «text (200,-500) 1 7 0 0x1000000 -1 -1 "Vmax=<10> ;Output votlage limit - Vmax"»
+  «pin (-200,200) (20,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (-200,-200) (20,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (400,0) (-20,0) 1 15 0 0x0 -1 "OUT+"»
+  «pin (100,-300) (0,0) 1 0 0 0x0 -1 "OUT-"»
+»

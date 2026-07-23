@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Opamp-Level0-OutputLimit-B-2
+  «type: X»
+  «description: Opamp - Ideal Output Limit by B-source»
+  «library file: |.subckt Opamp-Level0-OutputLimit-B IN+ IN- OUT\nB1 OUT 0 V=limit(Aol*V(IN+,IN-),Vmin,Vmax)\nR1 IN+ IN- 1e15\n.ends Opamp-Level0-OutputLimit-B»
+  «shorted pins: false»
+  «line (-150,-200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «line (-150,200) (-50,200) 0 0 0x1000000 -1 -1»
+  «line (-100,-150) (-100,-250) 0 0 0x1000000 -1 -1»
+  «line (-200,-450) (-200,450) 0 0 0x1000000 -1 -1»
+  «line (-200,450) (400,0) 0 0 0x1000000 -1 -1»
+  «line (400,0) (-200,-450) 0 0 0x1000000 -1 -1»
+  «text (300,250) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,550) 1 15 2 0x1000000 -1 -1 "OPAMP-LEVEL0-OUTPUTLIMIT-B"»
+  «text (200,-200) 1 7 0 0x0 -1 -1 "Aol=<100K>; open loop gain"»
+  «text (200,-350) 1 7 0 0x0 -1 -1 "Vmax=<1>; max output"»
+  «text (200,-500) 1 7 0 0x0 -1 -1 "Vmin=<-1>; min output"»
+  «text (60,0) 0.926 0 1 0x1000000 -1 -1 "OpAmp"»
+  «text (50,120) 0.735 0 1 0x1000000 -1 -1 "L0"»
+  «pin (-200,-200) (0,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (-200,200) (0,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

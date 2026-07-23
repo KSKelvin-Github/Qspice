@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol Fractional
+  «type: X»
+  «description: Fractional»
+  «library file: |.subckt Fractional num den xx yy\nB1 yy 0 V=(V(num)%V(den))/V(den)\nB2 xx 0 V=trunc(V(num)/V(den))\n.ends Fractional»
+  «shorted pins: false»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-170,170) (-130,130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-200,303) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (7,300) 1 7 2 0x1000000 -1 -1 "Fractional"»
+  «text (-50,10) 0.583 0 1 0x1000000 -1 -1 "=xx.yy"»
+  «pin (-200,100) (10,10) 0.583 15 0 0x0 -1 "num"»
+  «pin (-200,-100) (10,20) 0.583 15 0 0x0 -1 "den"»
+  «pin (200,100) (-20,0) 0.735 11 0 0x0 -1 "xx"»
+  «pin (200,-100) (-20,0) 0.735 11 0 0x0 -1 "yy"»
+»

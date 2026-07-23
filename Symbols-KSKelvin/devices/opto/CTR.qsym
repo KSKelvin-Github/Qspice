@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol CTR
+  «type: X»
+  «description: CTR Current Transfer Ratio (Current to Current)»
+  «library file: |.subckt CTR LightIN LightOUT\nV1 LightIN 0 0\nB1 0 LightOUT I=CTR*I(V1)\n.ends CTR»
+  «shorted pins: false»
+  «line (-100,80) (100,80) 0 0 0xffa0a1 -1 -1»
+  «line (100,80) (50,130) 0 0 0xffa0a1 -1 -1»
+  «line (100,80) (50,30) 0 0 0xffa0a1 -1 -1»
+  «line (-100,-80) (100,-80) 0 0 0xffa0a1 -1 -1»
+  «line (100,-80) (50,-30) 0 0 0xffa0a1 -1 -1»
+  «line (100,-80) (50,-130) 0 0 0xffa0a1 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "CTR"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "CTR=<1> ;Current transfer ratio"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "LightIN"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "LightOUT"»
+»

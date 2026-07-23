@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Dead-Zone
+  «type: X»
+  «description: (PLECS) Dead-Zone»
+  «library file: |.subckt Dead-Zone in out\nB1 out 0 V=if(V(in)<lower,V(in)-lower, if(V(in)>upper,V(in)-upper,0))\n.ends Dead-Zone»
+  «shorted pins: false»
+  «line (-150,0) (-55,0) 0 0 0xffa0a1 -1 -1»
+  «line (0,-160) (0,160) 0 0 0xffa0a1 -1 -1»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «line (55,0) (150,0) 0 0 0xffa0a1 -1 -1»
+  «line (-50,0) (50,0) 0 0 0x1000000 -1 -1»
+  «line (-50,0) (-150,-150) 0 0 0x1000000 -1 -1»
+  «line (150,150) (50,0) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 15 0 0x1000000 -1 -1 "DEAD-ZONE"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "lower=<-eps> ;Lower dead zone limit"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "upper=<eps> ;Upper dead zone limit"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

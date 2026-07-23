@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol Photodiode
+  «type: X»
+  «description: Photodiode»
+  «library file: |.subckt Photodiode A K light\nD1 A K D\nR1 K A 1G\nB1 K A I=gain*I(V1)\nV1 light 0 0\n.model D D\n.ends Photodiode»
+  «shorted pins: false»
+  «line (100,80) (-100,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «line (-200,180) (-90,70) 0 0 0xffa0a1 -1 -1»
+  «line (-200,100) (-90,-10) 0 0 0xffa0a1 -1 -1»
+  «triangle (0,80) (100,-70) (-100,-70) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «triangle (-90,70) (-125,125) (-145,105) 0 0 0xffa0a1 0xffa0a1 -1 -1»
+  «triangle (-90,-10) (-125,45) (-145,25) 0 0 0xffa0a1 0xffa0a1 -1 -1»
+  «text (100,200) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (100,350) 1 7 2 0x1000000 -1 -1 "PHOTODIODE"»
+  «text (100,-200) 1 7 2 0x1000000 -1 -1 "gain=<1>"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "K"»
+  «pin (-200,100) (0,0) 1 0 0 0x0 -1 "Light"»
+»

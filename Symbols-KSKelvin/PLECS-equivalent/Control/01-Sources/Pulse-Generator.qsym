@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Pulse-Generator
   «type: X»
   «description: (PLECS) Pulse Geneator»
-  «library file: |.subckt Pulse-Generator out\nV1 out 0 pulse Lo Hi (Delay-trunc(Delay*f))-1/f-2p 1p 1p DutyCycle/f 1/f\n.ends Pulse-Generator»
+  «library file: |.subckt Pulse-Generator out\nV1 out 0 pulse Lo Hi remainder(Delay,1/f) 1p 1p DutyCycle/f 1/f DC if(remainder(Delay,1/f)<=0,Hi,Lo)\n.func remainder(x,y)=x-y*round(x/y)\n.ends Pulse-Generator»
   «shorted pins: false»
   «line (-150,-150) (-100,-150) 0 0 0x1000000 -1 -1»
   «line (-100,-150) (-100,150) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol psim-PI-Controller-2
   «type: X»
-  «description: PI Controller (PSIM) - Gain and Time Constant»
+  «description: (PSIM) PI Controller - Gain and Time Constant»
   «library file: |.subckt psim-PI-Controller IN OUT\nB1 I 0 V=V(IN) Laplace=1/s/tau IC=0\nB2 OUT 0 V=A*(V(IN)+V(I))\n.display G(s)=A+(A/tau)/s='A'+'A/tau'/s\n.ends psim-PI-Controller»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»

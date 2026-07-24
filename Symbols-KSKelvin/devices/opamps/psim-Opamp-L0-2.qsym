@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol psim-Opamp-L0-2
   «type: X»
-  «description: Ideal Opamp (PSIM L0)»
+  «description: (PSIM L0) Ideal Opamp»
   «library file: |.subckt psim-Opamp-L0 v+ v- Vo+ Vo-\nE1 N01 Vo- v+ v- Ao\nR1 N01 Vo+ Ro\nV1 N02 Vo- Vdd\nV2 N03 Vo- Vss\nD1 Vo+ N02 Di\nD2 N03 Vo+ Di\n.model Di D Ron=1µ Roff=10Meg Vfwd=0\n.ends psim-Opamp-L0»
   «shorted pins: false»
   «line (-250,-200) (-150,-200) 0 0 0x1000000 -1 -1»

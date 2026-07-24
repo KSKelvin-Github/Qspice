@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol psim-1-ph-4-w-Transformer
   «type: X»
-  «description: PSIM 1-ph 4-winding transformer»
+  «description: (PSIM) 1-ph 4-winding transformer»
   «library file: |.subckt psim-1-ph-4-w-Transformer p1+ p1- p2+ p2- s1+ s1- s2+ s2-\nLpri1 N07 p1- Lm\nLpri2 N05 p2- Lm/(Np_1/Np_2)**2\nLsec1 N03 s1- Lm/(Np_1/Ns_1)**2\nLsec2 N01 s2- Lm/(Np_1/Ns_2)**2\nL1 p1+ N08 Lp_1\nR1 N08 N07 Rp_1\nL2 p2+ N06 Lp_2/(Np_1/Np_2)**2\nR2 N06 N05 Rp_2/(Np_1/Np_2)**2\nL3 N04 s1+ Ls_1/(Np_1/Ns_1)**2\nR3 N03 N04 Rs_1/(Np_1/Ns_1)**2\nL4 N02 s2+ Ls_2/(Np_1/Ns_2)**2\nR4 N01 N02 Rs_2/(Np_1/Ns_2)**2\nK1 Lpri1 Lpri2 Lsec1 Lsec2 1\n.ends psim-1-ph-4-w-Transformer»
   «shorted pins: false»
   «line (-200,500) (-60,500) 0 0 0x1000000 -1 -1»

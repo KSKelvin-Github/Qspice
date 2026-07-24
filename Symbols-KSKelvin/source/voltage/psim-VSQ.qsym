@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol psim-VSQ
   «type: X»
-  «description: Square V-Source (PSIM)»
+  «description: (PSIM) Square V-Source»
   «library file: |.subckt PSIM-VSQ + -\nV1 square 0 PULSE V1 V2 Td Trise Tfall Ton Tperiod\nB1 + - V=if(time>=Tstart,V(square),0)\n.param V1=DCoffset\n.param V2=DCoffset+Vpp\n.param Td=PhaseDelay/360/Freq\n.param Ton=Duty/Freq\n.param Tperiod=1/Freq\n.param Trise=0\n.param Tfall=0\n.ends PSIM-VSQ»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»

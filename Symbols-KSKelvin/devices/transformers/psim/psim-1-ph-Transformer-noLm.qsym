@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol psim-1-ph-Transformer-noLm
   «type: X»
-  «description: PSIM 1-ph transformer (no magnetizing inductance)»
+  «description: (PSIM) 1-ph transformer (no magnetizing inductance)»
   «library file: |.subckt psim-1-ph-Transformer-noLm p1+ p1- s1+ s1-\nL1 p1+ N04 Lp\nR1 N04 N03 Rp\nL3 N02 s1+ Ls/(Np/Ns)**2\nR3 N01 N02 Rs/(Np/Ns)**2\n×1 «N03 p1- N01 s1-» Turns=Np Ns\n.ends psim-1-ph-Transformer-noLm»
   «shorted pins: false»
   «line (-200,300) (-200,180) 0 0 0x1000000 -1 -1»

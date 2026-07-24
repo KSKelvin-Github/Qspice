@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol psim-p-MOSFET-Ideal
   «type: X»
-  «description: p-MOSFET Level 1 (PSIM equivalent)»
+  «description: (PSIM) p-MOSFET Level 1»
   «library file: |.subckt p-MOSFET-Ideal D G S\nD1 D S Di\nB1 D S I=if( V(G,S)<=-0.5, V(D,S)/Rds_on , 0)\n.model Di D Ron=DRon Roff=10Meg Vfwd=DVfwd\n.ends p-MOSFET-Ideal»
   «shorted pins: false»
   «line (100,0) (100,200) 0 0 0x1000000 -1 -1»

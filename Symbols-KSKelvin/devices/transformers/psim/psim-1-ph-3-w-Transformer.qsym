@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol psim-1-ph-3-w-Transformer
   «type: X»
-  «description: PSIM 1-ph 3-winding transformer»
+  «description: (PSIM) 1-ph 3-winding transformer»
   «library file: |.subckt psim-1-ph-3-w-Transformer p1+ p1- s1+ s1- s2+ s2-\nLpri1 N05 p1- Lm\nLsec1 N03 s1- Lm/(Np/Ns)**2\nLsec2 N01 s2- Lm/(Np/Nt)**2\nL1 p1+ N06 Lp\nR1 N06 N05 Rp\nL3 N04 s1+ Ls/(Np/Ns)**2\nR3 N03 N04 Rs/(Np/Ns)**2\nL4 N02 s2+ Lt/(Np/Nt)**2\nR4 N01 N02 Rt/(Np/Nt)**2\nK1 Lpri1 Lsec1 Lsec2 1\n.ends psim-1-ph-3-w-Transformer»
   «shorted pins: false»
   «line (-200,200) (-60,200) 0 0 0x1000000 -1 -1»

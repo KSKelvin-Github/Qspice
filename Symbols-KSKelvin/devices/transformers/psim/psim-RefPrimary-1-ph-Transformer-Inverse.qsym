@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol RefPrimary-1-ph-Transformer-Inverse
   «type: X»
-  «description: PSIM 1-ph Transformer (Inverse)»
+  «description: (PSIM) 1-ph Transformer (Inverse)»
   «library file: |.subckt RefPrimary-1-ph-Transformer p+ p- s+ s-\nL3 N01 N02 Lp\nL4 N03 N04 Ls\nR2 p+ N01 Rp\nR3 N02 N03 Rs\nL1 N02 p- Lm\n×1 «N04 p- s+ s-» Turns=Np Ns\n.ends RefPrimary-1-ph-Transformer»
   «shorted pins: false»
   «line (400,300) (400,180) 0 0 0x1000000 -1 -1»

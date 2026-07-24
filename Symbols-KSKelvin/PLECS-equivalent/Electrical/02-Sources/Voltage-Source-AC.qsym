@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Voltage-Source-AC
+  «type: X»
+  «description: (PLECS) Voltage Source AC»
+  «library file: |.subckt Voltage-Source-AC + -\nV1 + - SIN 0 V w/2/pi 0 0 phi/pi*180\n.ends Voltage-Source-AC»
+  «shorted pins: false»
+  «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+  «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «arc3p (0,0) (60,0) (30,0) 0 0 0x1000000 -1 -1»
+  «arc3p (0,0) (-60,0) (-30,0) 0 0 0x1000000 -1 -1»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "Xsrc1"»
+  «text (100,300) 1 7 2 0x1000000 -1 -1 "VOLTAGE-SOURCE-AC"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "V=<1> ;Amplitude (V)"»
+  «text (100,-300) 1 7 0 0x1000000 -1 -1 "w=<2*pi*50> ;Frequency (rad/s)"»
+  «text (100,-450) 1 7 0 0x1000000 -1 -1 "phi=<0> ;Phase (rad)"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+»

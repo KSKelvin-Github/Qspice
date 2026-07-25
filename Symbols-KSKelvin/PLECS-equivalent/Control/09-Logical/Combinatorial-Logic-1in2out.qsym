@@ -3,7 +3,7 @@
   «description: (PLECS) Combinatorial Logic 1 IN 2 OUT»
   «library file: |.subckt Combinatorial-Logic-1in2out in0 out0 out1\nB1 logic0 0 V=if(V(in0),1,0)\nB3 out0 0 V=if(!V(logic0),A00,A10)\nB4 out1 0 V=if(!V(logic0),A01,A11)\n.ends Combinatorial-Logic-1in2out»
   «shorted pins: false»
-  «rect (-400,400) (400,-400) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «rect (-400,400) (400,-400) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
   «text (0,650) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (0,500) 1 15 0 0x1000000 -1 -1 "Combinatorial-Logic-1in2out"»
   «text (0,-650) 1 15 0 0x1000000 -1 -1 "A00=1 A01=0"»

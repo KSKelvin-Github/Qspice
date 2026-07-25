@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Set-Reset-Switch
+  «type: X»
+  «description: (PLECS) Set Reset Switch (Last State Dominate)»
+  «library file: |.subckt Set-Reset-Switch + - Set Reset\nS1 + - C 0 SWi ON=s_init OFF=!s_init\nB1 C 0 V=if( ((V(Set)>thres)&(V(Reset)<=thres)),1, if( ((V(Set)<=thres)&(V(Reset)>thres)),0, V(memory) ) )\nB2 memory 0 V=state(1,V(C))\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0\n.param Ron=if(extreme,1µ,1m)\n.param Roff=if(extreme,1G,10Meg)\n.ends Set-Reset-Switch»
+  «shorted pins: false»
+  «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,150) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (-100,150) 0 0 0x1000000 -1 -1»
+  «line (-120,0) (-80,0) 0 0 0x1000000 -1 -1»
+  «triangle (-200,-50) (-200,50) (-120,0) 0 0 0x1000000 0xff12 -1 -1»
+  «triangle (100,50) (100,-50) (20,0) 0 0 0x1000000 0xff -1 -1»
+  «text (100,200) 1 7 0 0x1000000 -1 -1 "XS1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "SET-RESET-SWITCH"»
+  «text (100,-200) 1 7 0 0x1000000 -1 -1 "s_init=<(0),1> ;Initial Off (0) / Initial On (1)"»
+  «text (100,-350) 1 7 2 0x1000000 -1 -1 "extreme=<0,(1)> ;Extreme Ron/Roff value"»
+  «text (100,-500) 1 7 2 0x1000000 -1 -1 "thres=<0.5> ;logic threshold"»
+  «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "-"»
+  «pin (-200,0) (-20,0) 1 15 0 0x0 -1 "Set"»
+  «pin (100,0) (0,0) 1 0 0 0x0 -1 "Reset"»
+»

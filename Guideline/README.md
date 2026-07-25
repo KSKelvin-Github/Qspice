@@ -1,7 +1,7 @@
 # Guideline
 Unofficial Guideline for Qspice by KSKelvin
 
-## Direct File Download
+## Direct File Download URL
 Replace /blob/ by /raw/ in that single file URL, here is direct download link
 * [Qspice - Entry User Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Entry%20User%20Guide%20by%20KSKelvin.pdf) &mdash; Beginner Quickstart Guideline
 * [Qspice - General Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20General%20Reference%20Guide%20by%20KSKelvin.pdf) &mdash; General Reference Guideline

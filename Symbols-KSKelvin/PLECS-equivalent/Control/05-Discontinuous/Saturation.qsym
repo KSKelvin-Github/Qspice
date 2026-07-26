@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Saturation
+  «type: X»
+  «description: (PLECS) Saturation»
+  «library file: |.subckt Saturation in out\nB1 out 0 V=limit(V(in),LowerLimit,UpperLimit)\n.ends Saturation»
+  «shorted pins: false»
+  «line (0,-170) (0,170) 0 0 0xffa0a1 -1 -1»
+  «line (-170,0) (170,0) 0 0 0xffa0a1 -1 -1»
+  «line (50,100) (150,100) 0 0 0x1000000 -1 -1»
+  «line (50,100) (-50,-100) 0 0 0x1000000 -1 -1»
+  «line (-50,-100) (-150,-100) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "Saturation"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "UpperLimit=<0.5>"»
+  «text (0,-450) 1 0 0 0x1000000 -1 -1 "LowerLimit=<-0.5>"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

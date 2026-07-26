@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol Measure-Moving-Average
+  «type: X»
+  «description: Moving Average / Mean»
+  «library file: |.subckt Measure-Moving-Average x mavg\nB1 mavg 0 V=idt(V(x)-if(time<Tavg,0,delay(V(x),Tavg,2*Tavg)))/Tavg\n.ends Measure-Moving-Average»
+  «shorted pins: false»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «line (-150,-150) (-150,150) 0 0 0xffa0a1 -1 -1»
+  «line (-150,-150) (150,-150) 0 0 0xffa0a1 -1 -1»
+  «line (-150,-130) (-100,-130) 0 0 0x1000000 -1 -1»
+  «line (-100,-130) (-100,100) 0 0 0x1000000 -1 -1»
+  «line (-100,100) (70,100) 0 0 0x1000000 -1 -1»
+  «line (70,100) (70,-130) 0 0 0x1000000 -1 -1»
+  «line (70,-130) (150,-130) 0 0 0x1000000 -1 -1»
+  «line (70,-20) (140,-20) 0 0 0x0 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «triangle (140,-20) (110,0) (110,-40) 0 0 0x0 0x0 -1 -1»
+  «text (-7,301) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "MEASURE-MOVING-AVERAGE"»
+  «text (-7,-299) 1 15 0 0x1000000 -1 -1 "Tavg=<0.1> ;averaging time (s)"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "x"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "mavg"»
+»

@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol Hit-Crossing
+  «type: X»
+  «description: (PLECS) Hit Crossing»
+  «library file: |.subckt Hit-Crossing in Q\nB1 rising 0 V=if(V(in)>=Offset & state(1,V(in))<Offset,1,0)\nB2 falling 0 V=if(V(in)<=Offset & state(1,V(in))>Offset,1,0)\nB3 Q 0 V=if(Direction==0,V(rising)|V(falling), if(Direction==-1,V(falling),V(rising)) )\n¥1 N01 0 ¥2 ¥ Q ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\nV1 N01 0 1\n.ends Hit-Crossing»
+  «shorted pins: false»
+  «line (0,-170) (0,170) 0 0 0xffa0a1 -1 -1»
+  «line (-170,0) (170,0) 0 0 0xffa0a1 -1 -1»
+  «line (-150,-150) (0,150) 0 0 0x1000000 -1 -1»
+  «line (0,150) (150,-150) 0 0 0x1000000 -1 -1»
+  «line (75,0) (75,150) 0 0 0x0 -1 -1»
+  «line (-75,0) (-75,150) 0 0 0x0 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «triangle (75,150) (55,120) (95,120) 0 0 0x0 0x0 -1 -1»
+  «triangle (-75,150) (-95,120) (-55,120) 0 0 0x0 0x0 -1 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "Hit-Crossing"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "Offset=<0> Hit crossing offset"»
+  «text (0,-450) 1 0 0 0x1000000 -1 -1 "Direction=<-1,(0),1> Hit crossing direction -1:falling, 0:either, +1:rising"»
+  «text (0,-600) 1 0 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "Q"»
+»

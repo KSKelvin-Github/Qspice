@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol Comparator
+  «type: X»
+  «description: (PLECS) Comparator [output does not change if both inputs are equal]»
+  «library file: |.subckt Comparator in+ in- Q\nB2 memory 0 V=state(1,V(Q))\nB1 Q 0 V=if(V(in+)==V(in-),V(memory), if(V(in+)>V(in-),1,0) )\n¥1 N01 0 ¥3 ¥ Q ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\nV1 N01 0 1\n.ends Comparator»
+  «shorted pins: false»
+  «line (-90,100) (-160,100) 0 0 0x1000000 -1 4»
+  «line (-125,65) (-125,135) 0 0 0x1000000 -1 4»
+  «line (-80,-100) (-150,-100) 0 0 0x1000000 -1 5»
+  «triangle (-200,200) (-200,-200) (200,0) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (0,250) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (50,-300) 1 0 0 0x1000000 -1 -1 "Comparator"»
+  «text (50,-450) 1 0 2 0x1000000 -1 -1 "TTOL=<1e308>"»
+  «pin (-200,100) (20,0) 1 15 0 0x0 -1 "in+"»
+  «pin (-200,-100) (-20,0) 1 15 0 0x0 -1 "in-"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "Q"»
+»

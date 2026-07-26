@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol Gain
+  «type: X»
+  «description: (PLECS) Gain»
+  «library file: |.subckt Gain in out\nE1 out 0 in 0 K\n.ends Gain»
+  «shorted pins: false»
+  «line (-80,50) (-80,-60) 0 0 0x1000000 -1 -1»
+  «line (-10,50) (-80,-20) 0 0 0x1000000 -1 -1»
+  «line (-10,-60) (-60,0) 0 0 0x1000000 -1 -1»
+  «triangle (-200,200) (-200,-200) (200,0) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (0,250) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,-250) 1 0 0 0x1000000 -1 -1 "GAIN"»
+  «text (0,-400) 1 0 0 0x1000000 -1 -1 "K=<1> Gain"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

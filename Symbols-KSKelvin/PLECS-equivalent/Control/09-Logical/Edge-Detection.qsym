@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Edge-Detection
+  «type: X»
+  «description: (PLECS) Edge Detection»
+  «library file: |.subckt Edge-Detection in out\nB1 out 0 V=if(Direction==0,V(rising)+V(falling), if(Direction==-1,V(falling),V(rising)) )\nB2 rising 0 V=if(V(in)>state(1,V(in)),1,0)\nB3 falling 0 V=if(V(in)<state(1,V(in)),1,0)\n.ends Edge-Detection»
+  «shorted pins: false»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «line (-150,-150) (-80,-150) 0 0 0x1000000 -1 -1»
+  «line (-80,-150) (-80,150) 0 0 0x1000000 -1 -1»
+  «line (-80,150) (80,150) 0 0 0x1000000 -1 -1»
+  «line (80,150) (80,-150) 0 0 0x1000000 -1 -1»
+  «line (80,-150) (150,-150) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «triangle (80,-30) (40,30) (120,30) 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (-80,30) (-40,-30) (-120,-30) 0 0 0x1000000 0xff0012 -1 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "Edge-Detection"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "Direction=<-1,(0),1> Edge direction: -1=failing, 0=either, 1=rising"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

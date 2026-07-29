@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol ZOH-IntCLK-B-source
+  «type: X»
+  «description: Zero-order Hold (ZOH) - B-source : Internal Clock»
+  «library file: |.subckt ZOH-IntCLK-B-source IN OUT\nB1 OUT 0 V=idt(0,V(IN),V(Latch))\nB3 Latch 0 V=(V(CLK)>=thres)*(state(1,V(CLK))<thres)\nV1 CLK 0 Pulse 0 1 0 1/CLK/1e5 0 1/CLK/1e3 1/CLK\n.ends ZOH-IntCLK-B-source»
+  «shorted pins: false»
+  «line (150,50) (200,0) 0 0 0xc000 -1 -1»
+  «line (150,-50) (200,0) 0 0 0xc000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0xc000 0x1000000 -1 0 -1»
+  «text (0,300) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "ZOH-INTCLK-B-SOURCE"»
+  «text (0,-300) 1 15 0 0x1000000 -1 -1 "CLK=<1> ;Clock Frequency"»
+  «text (0,-450) 1 15 2 0x1000000 -1 -1 "thres=<0.5>"»
+  «text (-20,0) 1 0 1 0xc000 -1 -1 "ZOH"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "IN"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

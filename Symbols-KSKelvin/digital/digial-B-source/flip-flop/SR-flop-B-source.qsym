@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol SR-flop-B-source
+  «type: X»
+  «description: B-source SR-flop / SR Flip flop [level trigger]»
+  «library file: |.subckt SR-flop-B-source S R Q ¬Q\nB1 Q 0 V=if(((V(S)>thre)&(V(R)<=thre)),1, if(((V(S)<=thre)&(V(R)>thre)),0, if(((V(S)<=thre)&(V(R)<thre)),V(memory),V(restricted)) ) )\nB2 memory 0 V=if(time<=0,IC,state(1,V(Q)))\nB3 ¬Q 0 V=!V(Q)\nB4 restricted 0 V=if(restricted==-1,V(memory),if(restricted==0,0,1))\n.ends SR-flop-B-source»
+  «shorted pins: false»
+  «line (400,200) (300,200) 0 0 0xc000 -1 2»
+  «line (400,-200) (300,-200) 0 0 0xc000 -1 3»
+  «rect (-300,300) (300,-300) 0 0 0 0xc000 0x1000000 -1 0 -1»
+  «text (0,400) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,550) 1 0 2 0x1000000 -1 -1 "SR-flop-B-source"»
+  «text (0,-400) 1 0 2 0x1000000 -1 -1 "IC=<(0),1> ;Initial state"»
+  «text (0,-700) 1 0 2 0x1000000 -1 -1 "thre=<0.5> ;logic threshold"»
+  «text (0,-550) 1 0 2 0x1000000 -1 -1 "restricted=<(-1),0,1> ; -1:LastStateDominate ; 0:ResetDominate ; 1:SetDominate"»
+  «pin (-300,200) (20,0) 1 7 0 0x0 -1 "S"»
+  «pin (-300,-200) (20,0) 1 7 0 0x0 -1 "R"»
+  «pin (400,200) (-120,0) 1 11 0 0x0 -1 "Q"»
+  «pin (400,-200) (-120,0) 1 11 0 0x0 -1 "¬Q"»
+»

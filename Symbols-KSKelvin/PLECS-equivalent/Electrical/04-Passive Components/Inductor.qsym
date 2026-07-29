@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol
+ÿØÿÛ«symbol Inductor
   «type: L»
   «description: (PLECS) Inductor»
   «shorted pins: false»
@@ -8,7 +8,7 @@
   «coil (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
   «text (100,150) 1 7 0 0x1000000 -1 -1 "L1"»
   «text (100,-50) 1 7 0 0x1000000 -1 -1 "0.001"»
-  «text (100,-200) 1 7 0 0x1000000 -1 -1 "IC=0"»
+  «text (100,-200) 1 7 0 0x1000000 -1 -1 "IC=<0> Initial current (A)"»
   «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
   «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
 »

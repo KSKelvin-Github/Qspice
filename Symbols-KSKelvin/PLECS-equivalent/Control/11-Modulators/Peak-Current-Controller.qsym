@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol Peak-Current-Controller
+  «type: X»
+  «description: (PLECS) Peak Current Controller»
+  «library file: |.subckt Peak-Current-Controller Isense Iref s\n.subckt Xsrc2•Triangular-Wave out\nV1 out 0 pulse Min Max (Delay-trunc(Delay*f))-1/f EffDutyCycle/f (1-EffDutyCycle)/f 0 1/f\n.param EffDutyCycle=limit(0.01,DutyCycle,0.99)\n.ends Triangular-Wave\nXsrc2 Icomp Xsrc2•Triangular-wave Min=0 Max=Islope f=fs DutyCycle=1 Delay=0\nB1 Reset 0 V=((V(Isense) >= (V(Iref)-V(Icomp)) | !V(dmax))) & (!V(dmin))\n.subckt XSRC3•Pulse-Generator out\nV1 out 0 pulse Lo Hi remainder(Delay,1/f) 1p 1p DutyCycle/f 1/f DC if(remainder(Delay,1/f)<=0,Hi,Lo)\n.func remainder(x,y)=x-y*round(x/y)\n.ends Pulse-Generator\nXSRC3 dmax XSRC3•Pulse-Generator Hi=1 Lo=0 f=fs DutyCycle=dmax/100 Delay=0\n.subckt XSRC4•Pulse-Generator out\nV1 out 0 pulse Lo Hi remainder(Delay,1/f) 1p 1p DutyCycle/f 1/f DC if(remainder(Delay,1/f)<=0,Hi,Lo)\n.func remainder(x,y)=x-y*round(x/y)\n.ends Pulse-Generator\nXSRC4 dmin XSRC4•Pulse-Generator Hi=1 Lo=0 f=fs DutyCycle=dmin/100 Delay=0\nB2 Set 0 V=(V(dmax)-state(1,V(dmax)))>0\n.subckt X1•SR-Flip-flop S R Q ¬Q\nB1 Q 0 V=if(((V(S)>thre)&(V(R)<=thre)),1, if(((V(S)<=thre)&(V(R)>thre)),0, if(((V(S)<=thre)&(V(R)<thre)),V(memory),V(restricted)) ) )\nB2 memory 0 V=if(time<=0,x_init,state(1,V(Q)))\nB3 ¬Q 0 V=!V(Q)\nB4 restricted 0 V=if(restricted==-1,V(memory),if(restricted==0,0,1))\n.ends SR-Flip-flop\nX1 Set Reset s ¥3 X1•SR-FLIP-FLOP x_init=0 thre=0.5 restricted=0\n.ends Peak-Current-Controller»
+  «shorted pins: false»
+  «rect (-500,400) (500,-400) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (0,650) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 0 0 0x1000000 -1 -1 "Peak-Current-Controller"»
+  «text (0,-500) 1 0 0 0x1000000 -1 -1 "fs=<50e3> Switching frequency (Hz)"»
+  «text (0,-650) 1 0 0 0x1000000 -1 -1 "dmin=<1> Minimum duty cycle (%)"»
+  «text (0,-800) 1 0 0 0x1000000 -1 -1 "dmax=<99> Maximum duty cycle (%)"»
+  «text (0,-950) 1 0 0 0x1000000 -1 -1 "Islope=<0> Slope compensation (A)"»
+  «pin (-500,200) (20,0) 1 7 0 0x0 -1 "Isense"»
+  «pin (-500,-200) (30,0) 1 7 0 0x0 -1 "Iref"»
+  «pin (500,0) (-20,0) 1 11 0 0x0 -1 "s"»
+»

@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol Monoflop
+  «type: X»
+  «description: (PLECS) Monoflop»
+  «library file: |.subckt Monoflop in out\nV1 Q 0 Pulse 0 1 0 1p 1p Duration Trigger=V(trigger)\nB1 trigger 0 V=if(Trigger==0,V(in)-state(1,V(in))>0, V(in)-state(1,V(in))<0)\nB2 out 0 V=if(Trigger==2,V(Q)+V(in)>0.5,V(Q))\n.ends Monoflop»
+  «shorted pins: false»
+  «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
+  «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
+  «line (-150,-150) (-80,-150) 0 0 0x1000000 -1 -1»
+  «line (-80,-150) (-80,150) 0 0 0x1000000 -1 -1»
+  «line (-80,150) (80,150) 0 0 0x1000000 -1 -1»
+  «line (80,150) (80,-150) 0 0 0x1000000 -1 -1»
+  «line (80,-150) (150,-150) 0 0 0x1000000 -1 -1»
+  «line (-80,40) (80,40) 0 0 0x0 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «triangle (20,70) (20,10) (80,40) 0 0 0x0 0x0 -1 -1»
+  «triangle (-20,10) (-20,70) (-80,40) 0 0 0x0 0x0 -1 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "MONOFLOP"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "Trigger=<(0),1,2> Trigger Type - 0:rising, 1:falling, 2:level"»
+  «text (0,-500) 1 0 0 0x1000000 -1 -1 "Duration=<1> Pulse duration source"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

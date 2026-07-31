@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol JK-flop-B-source
+  «type: X»
+  «description: JK-flop / JK flip-flop B-source (Trigger Selectable)»
+  «library file: |.subckt JK-flop-B-source J K CLK Q ¬Q\nB2 lastQ 0 V=if(time<=0,IC,state(1,V(Q)))\nB1 Latch 0 V=if(trigger==0,(V(CLK)>=thres)&(state(1,V(CLK))<thres),(V(CLK)<=thres)&(state(1,V(CLK))>thres))\nB3 Q 0 V=if(V(Latch), if(V(J)>=thres & V(K)>=thres,!V(lastQ), if(V(J)>=thres & V(K)<thres,1, if(V(J)<=thres & V(K)>thres,0,V(lastQ)) ) ) ,V(lastQ))\nB4 ¬Q 0 V=!V(Q)\n.ends JK-flop-B-source»
+  «shorted pins: false»
+  «line (400,200) (300,200) 0 0 0xc000 -1 -1»
+  «line (400,-200) (300,-200) 0 0 0xc000 -1 -1»
+  «rect (-300,300) (300,-300) 0 0 0 0xc000 0x1000000 -1 0 -1»
+  «triangle (-300,-50) (-250,0) (-300,50) 0 0 0xc000 0x1000000 -1 -1»
+  «text (0,400) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,550) 1 0 2 0x1000000 -1 -1 "JK-FLOP-B-SOURCE"»
+  «text (0,-400) 1 0 2 0x1000000 -1 -1 "trigger=<0> ;Trigger 0: rising, 1:falling"»
+  «text (0,-600) 1 0 2 0x1000000 -1 -1 "IC=<(0),1>; Initial condition"»
+  «text (0,-800) 1 0 2 0x1000000 -1 -1 "thres=<0.5>"»
+  «pin (-300,200) (20,0) 1 7 0 0x0 -1 "J"»
+  «pin (-300,-200) (20,0) 1 7 0 0x0 -1 "K"»
+  «pin (-300,0) (70,0) 1 7 0 0x0 -1 "CLK"»
+  «pin (400,200) (-120,0) 1 11 0 0x0 -1 "Q"»
+  «pin (400,-200) (-130,0) 1 11 0 0x0 -1 "¬Q"»
+»

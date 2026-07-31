@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol ×-Device Transformer4-pushpulllabel
+ÿØÿÛ«symbol ×-Device Transformer5-PushPull
   «type: ×»
-  «description: Transformer with 4 windings»
+  «description: Transformer with 4 windings (PushPull Converter)»
   «shorted pins: false»
   «line (-200,500) (-110,500) 0 0 0x1000000 -1 -1»
   «line (10,500) (100,500) 0 0 0x1000000 -1 -1»

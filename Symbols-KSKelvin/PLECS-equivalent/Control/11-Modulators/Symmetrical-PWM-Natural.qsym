@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Symmetrical-PWM-Natural
+  «type: X»
+  «description: (PLECS) Symmetrical PWM [Natural Sampling]»
+  «library file: |.subckt Symmetrical-PWM-Natural m s\n.subckt Xsrc1•Triangular-Wave out\nV1 out 0 pulse Min Max (Delay-trunc(Delay*f))-1/f EffDutyCycle/f (1-EffDutyCycle)/f 0 1/f\n.param EffDutyCycle=limit(0.01,DutyCycle,0.99)\n.ends Triangular-Wave\nXsrc1 carrier Xsrc1•Triangular-wave Min=carrier_limits_min Max=carrier_limits_max f=fc DutyCycle=0.5 Delay=Tmode/fc\nB1 s 0 V=if(V(m)>=V(carrier),output_values_on,output_values_off)\n¥1 N02 N03 N01 ¥ s ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\nV1 N02 0 output_values_on\nV2 N03 0 output_values_off\n.param Tmode=if(sampling==1,0.5, if(sampling==0,0.25,0) )\n.ends Symmetrical-PWM-Natural»
+  «shorted pins: false»
+  «rect (-300,200) (300,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "Symmetrical-PWM-Natural"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "sampling=<(-1),0,1> Natural -1:starts at min | 0:starts at center | 1:starts at max"»
+  «text (0,-450) 1 0 0 0x1000000 -1 -1 "fc=<1000> Carrier frequency (Hz)"»
+  «text (0,-600) 1 0 0 0x1000000 -1 -1 "carrier_limits_min=<-1> Carrier limits min"»
+  «text (0,-750) 1 0 0 0x1000000 -1 -1 "carrier_limits_max=<1> Carrier limits max"»
+  «text (0,-900) 1 0 0 0x1000000 -1 -1 "output_values_off=<-1> Output values off"»
+  «text (0,-1050) 1 0 0 0x1000000 -1 -1 "output_values_on=<1> Output values on"»
+  «text (0,-1200) 1 0 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «pin (-300,0) (20,0) 1 7 0 0x0 -1 "m"»
+  «pin (300,0) (-20,0) 1 11 0 0x0 -1 "s"»
+»

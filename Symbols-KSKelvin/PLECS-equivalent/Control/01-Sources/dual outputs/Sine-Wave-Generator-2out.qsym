@@ -1,0 +1,24 @@
+ÿØÿÛ«symbol Sine-Wave-Generator-2out
+  «type: X»
+  «description: (PLECS) Sine Wave Geneator (2 outputs)»
+  «library file: |.subckt Sine-Wave-Generator-2out out1 out2\nV1 out1 0 sin Bias Amplitude FrequencyHz 0 0 PhaseDegree1\nV2 out2 0 sin Bias Amplitude FrequencyHz 0 0 PhaseDegree2\n.param FrequencyHz=if(Units==0,Freq/2/pi,Freq)\n.param PhaseDegree1=if(Units==0,Phase1*pi/180, if(Units==1,Phase1*360,Phase1) )\n.param PhaseDegree2=if(Units==0,Phase2*pi/180, if(Units==1,Phase2*360,Phase2) )\n.ends Sine-Wave-Generator-2out»
+  «shorted pins: false»
+  «line (-150,-150) (-150,150) 0 0 0xffa0a1 -1 -1»
+  «line (-180,0) (150,0) 0 0 0xffa0a1 -1 -1»
+  «line (-120,100) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (-40,100) (20,-100) 0 0 0x1000000 -1 -1»
+  «line (130,0) (100,-100) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «arc3p (-40,100) (-120,100) (-80,90) 0 0 0x1000000 -1 -1»
+  «arc3p (20,-100) (100,-100) (60,-90) 0 0 0x1000000 -1 -1»
+  «text (-200,300) 1 7 0 0x1000000 -1 -1 "Xsrc1"»
+  «text (-200,450) 1 7 2 0x1000000 -1 -1 "Sine-Wave-Generator-2out"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "Amplitude=<1> Amplitude"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "Bias=<0> Bias"»
+  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "Freq=<1> Freuqency"»
+  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "Phase1=<0> Phase"»
+  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "Phase2=<0> Phase"»
+  «text (-200,-1050) 1 7 0 0x1000000 -1 -1 "Units=<0,1,(2)> 0:rad/s,rad | 1:Hertz,p.u. | 2:Hertz,degree"»
+  «pin (200,100) (0,0) 1 15 0 0x0 -1 "out1"»
+  «pin (200,-100) (0,0) 1 0 0 0x0 -1 "out2"»
+»

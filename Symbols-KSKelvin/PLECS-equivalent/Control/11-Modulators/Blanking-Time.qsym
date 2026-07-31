@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol Blanking-Time
+  «type: X»
+  «description: (PLECS) Blanking Time»
+  «library file: |.subckt Blanking-Time i o\nØ´X1 «i´d N01´d» «i_delay´d» «0» DelayedPulseTrain float delay=tb float ttol=TTOL\nV1 N01 0 1\nB1 o 0 V=V(i)&V(i_delay)\n.ends Blanking-Time»
+  «shorted pins: false»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (-14,443) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "Blanking-Time"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "tb=<10e-6> Delay time (s)"»
+  «text (0,-450) 1 0 2 0x1000000 -1 -1 "TTOL=<1n>"»
+  «pin (-200,0) (20,0) 1 7 0 0x0 -1 "i"»
+  «pin (200,0) (-20,0) 1 11 0 0x0 -1 "o"»
+»

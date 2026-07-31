@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol ×-Device Transformer5-Forward
   «type: ×»
-  «description: Transformer with 3 windings»
+  «description: Transformer with 3 windings (Forward Converter)»
   «shorted pins: false»
   «line (-200,200) (-110,200) 0 0 0x1000000 -1 -1»
   «line (10,200) (100,200) 0 0 0x1000000 -1 -1»

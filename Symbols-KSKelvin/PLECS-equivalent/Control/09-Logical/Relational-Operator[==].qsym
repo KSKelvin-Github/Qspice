@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol Relational-Operator[==]
+  «type: X»
+  «description: (PLECS) [==]»
+  «library file: |.subckt Relational-Operator A B Q\nB1 Q 0 V=V(A)==V(B)\n.ends Relational-Operator»
+  «shorted pins: false»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «ellipse (-175,175) (-125,125) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "RELATIONAL-OPERATOR"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "=="»
+  «pin (-200,100) (20,0) 1 15 0 0x0 -1 "A"»
+  «pin (-200,-100) (-20,0) 1 15 0 0x0 -1 "B"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "Q"»
+»

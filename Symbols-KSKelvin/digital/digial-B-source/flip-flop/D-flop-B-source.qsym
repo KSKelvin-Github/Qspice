@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol D-flop-B-source
   «type: X»
   «description: D-flop / D flip-flop B-source (Trigger Selectable)»
-  «library file: |.subckt D-flop-B-source D CLK Q ¬Q\nB1 Latch 0 V=if(trigger==0,(V(CLK)>=thres)&(state(1,V(CLK))<thres),(V(CLK)<=thres)&(state(1,V(CLK))>thres))\nB2 lastQnow 0 V=if(time<=0,IC,state(1,V(Qnow)))\nB3 Qnow 0 V=if(V(Latch)>=thres, if(V(D)>thres,1,0) ,V(lastQnow))\nB4 ¬Q 0 V=!V(Q)\nB6 Q 0 V=state(1,V(Qnow))\n.ends D-flop-B-source»
+  «library file: |.subckt D-flop-B-source D CLK Q ¬Q\nB1 Latch 0 V=if(trigger==0,(V(CLK)>=thres)&(state(1,V(CLK))<thres),(V(CLK)<=thres)&(state(1,V(CLK))>thres))\nB2 lastQnow 0 V=if(time<=0,IC,state(1,V(Qnow)))\nB3 Qnow 0 V=if(V(Latch), if(V(D)>thres,1,0) ,V(lastQnow))\nB4 ¬Q 0 V=!V(Q)\nB6 Q 0 V=state(1,V(Qnow))\n.ends D-flop-B-source»
   «shorted pins: false»
   «line (400,200) (300,200) 0 0 0xc000 -1 -1»
   «line (400,-200) (300,-200) 0 0 0xc000 -1 -1»

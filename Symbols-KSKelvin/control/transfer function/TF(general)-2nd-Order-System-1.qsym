@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol TF(general)-2nd-Order-System-1
   «type: X»
   «description: Transfer Function - 2nd Order System»
-  «library file: |.subckt tf in out\nE1 out 0 in 0 Laplace=wn**2/(s**2+2*zeta*wn*s+wn**2)\n.ends tf»
+  «library file: |.subckt tf in out\nB1 out 0 V=V(in) Laplace=wn**2/(s**2+2*zeta*wn*s+wn**2) IC=IC\n.ends tf»
   «shorted pins: false»
   «line (550,50) (600,0) 0 0 0x1000000 -1 -1»
   «line (600,0) (550,-50) 0 0 0x1000000 -1 -1»
@@ -11,6 +11,7 @@
   «text (0,300) 1 7 2 0x1000000 -1 -1 "TF"»
   «text (-300,-300) 1 7 0 0x0 -1 -1 "wn=<1> ;natural frequency"»
   «text (-300,-450) 1 7 0 0x0 -1 -1 "zeta=<1> ;damping factor"»
+  «text (-300,-600) 1 7 2 0x1000000 -1 -1 "IC=<0> Initial condition"»
   «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (600,0) (0,0) 1 0 0 0x0 -1 "out"»
 »

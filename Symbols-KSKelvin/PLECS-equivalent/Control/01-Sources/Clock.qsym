@@ -1,0 +1,12 @@
+ÿØÿÛ«symbol Clock
+  «type: X»
+  «description: (PLECS) Clock - Output Simulation Time»
+  «library file: |.subckt Clock time\nB1 time 0 V=time\n.ends Clock»
+  «shorted pins: false»
+  «line (-30,0) (-30,110) 0 0 0x1000000 -1 -1»
+  «line (-30,0) (70,0) 0 0 0x1000000 -1 -1»
+  «ellipse (-160,130) (100,-130) 0 0 0 0x1000000 0xc8ffe6 -1 -1»
+  «text (-40,220) 1 15 0 0x1000000 -1 -1 "Xsrc1"»
+  «text (-30,-210) 1 0 0 0x1000000 -1 -1 "CLOCK"»
+  «pin (100,0) (0,0) 1 15 0 0x0 -1 "time"»
+»

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol TF(general)-1st-Order-System-2
   «type: X»
   «description: Transfer Function - 1st Order System»
-  «library file: |.subckt tf in out\nE1 out 0 in 0 Laplace=p/(s+p)\n.ends tf»
+  «library file: |.subckt tf in out\nB1 out 0 V=V(in) Laplace=p/(s+p) IC=IC\n.ends tf»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
@@ -14,6 +14,7 @@
   «text (-300,-600) 1 7 0 0x0 -1 -1 "p=<1>"»
   «text (0,-300) 0.857 0 1 0x1000000 -1 -1 "1st-order"»
   «text (0,-400) 0.857 0 1 0x1000000 -1 -1 "system"»
+  «text (-300,-800) 1 7 2 0x1000000 -1 -1 "IC=<0> Initial condition"»
   «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (300,0) (0,0) 1 0 0 0x0 -1 "out"»
 »

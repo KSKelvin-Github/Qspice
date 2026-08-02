@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol TF(zpk)-1pole0zero
   «type: X»
   «description: Transfer Function»
-  «library file: |.subckt tf in out\nE1 out 0 in 0 Laplace=A/(s+p)\n.ends tf»
+  «library file: |.subckt tf in out\nB1 out 0 V=V(in) Laplace=A/(s+p) IC=IC\n.ends tf»
   «shorted pins: false»
   «line (-100,0) (100,0) 0 0 0x1000000 -1 -1»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
@@ -11,6 +11,7 @@
   «text (0,300) 1 7 2 0x1000000 -1 -1 "TF"»
   «text (-300,-300) 1 7 0 0x0 -1 -1 "A=<1>"»
   «text (-300,-450) 1 7 0 0x0 -1 -1 "p=<1>"»
+  «text (-300,-600) 1 7 2 0x1000000 -1 -1 "IC=<0> Initial condition"»
   «text (0,17) 0.857 14 1 0x1000000 -1 -1 "A"»
   «text (0,-17) 0.857 13 1 0x1000000 -1 -1 "s+p"»
   «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»

@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol Variable-Phase-PWM-Sawtooth
+  «type: X»
+  «description: (PLECS) Variable Phase PWM - Sawtooth Carrier»
+  «library file: |.subckt Variable-Phase-PWM-Sawtooth m ph1 ph2 s1 s2\nB1 master 0 V=SawTooth(1/f,0)\nB2 latch 0 V=V(master)<0.02\nB3 ph1-zoh 0 V=idt(0,V(ph1),V(latch))\nB4 ph2-zoh 0 V=idt(0,V(ph2),V(latch))\nB5 saw1 0 V=SawTooth(1/f,V(ph1-zoh))*(CarrierLimits_max-CarrierLimits_min)+CarrierLimits_min\nB6 saw2 0 V=SawTooth(1/f,V(ph2-zoh))*(CarrierLimits_max-CarrierLimits_min)+CarrierLimits_min\nB7 s1 0 V=if(V(m)>V(saw1),OutputValues_max,OutputValues_min)\nB8 s2 0 V=if(V(m)>V(saw2),OutputValues_max,OutputValues_min)\n.func SawTooth(Tper,Ph)=(time+(1-wrap1(Ph))*Tper)/Tper-trunc((time+(1-wrap1(Ph))*Tper)/Tper)\n.func wrap1(Ph)=mod(Ph,1)/1\n.func mod(x,y)=x-y*trunc(x/y)\n.ends Variable-Phase-PWM-Sawtooth»
+  «shorted pins: false»
+  «rect (-600,-500) (600,500) 0 0 0 0xff0000 0xc8ffe6 -1 0 -1»
+  «text (0,750) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,600) 1 15 0 0x1000000 -1 -1 "Variable-Phase-PWM-Sawtooth"»
+  «text (0,-600) 1 15 0 0x1000000 -1 -1 "f=<1000> Carrier frequency (Hz)"»
+  «text (0,-750) 1 15 0 0x1000000 -1 -1 "CarrierLimits_min=<-1> Carrier limits [min]"»
+  «text (0,-900) 1 15 0 0x1000000 -1 -1 "CarrierLimits_max=<1> Carrier limits [max]"»
+  «text (0,-1050) 1 15 0 0x1000000 -1 -1 "OutputValues_min=<-1> Output values [off]"»
+  «text (0,-1200) 1 15 0 0x1000000 -1 -1 "OutputValues_max=<1> Output values [on]"»
+  «pin (-600,300) (20,0) 1 7 0 0x0 -1 "m"»
+  «pin (-600,0) (20,0) 1 7 0 0x0 -1 "ph1(p.u.)"»
+  «pin (-600,-300) (20,0) 1 7 0 0x0 -1 "ph2(p.u.)"»
+  «pin (600,0) (-20,0) 1 11 0 0x0 -1 "s1"»
+  «pin (600,-300) (-20,0) 1 11 0 0x0 -1 "s2"»
+»

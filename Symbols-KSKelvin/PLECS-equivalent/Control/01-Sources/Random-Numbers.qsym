@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol Random-Numbers
+  «type: X»
+  «description: (PLECS) White Noise»
+  «library file: |.subckt Random-Numbers out\nV1 sawtooth 0 pulse 0 1 0 0.99*Ts 0.01*Ts 0 Ts\nB1 latch 0 V=V(sawtooth)<=0.5 & state(1,V(sawtooth))>0.5\nB2 divider 0 V=pow(10,floor(log10(time)))\nB3 U1 0 V=idt(0,random(1e15*time/V(divider)+seed),V(latch))\nB4 out 0 V=V(U1)*(max-min)+min\n.ends Random-Numbers»
+  «shorted pins: false»
+  «line (-150,-150) (150,-150) 0 0 0xffa0a1 -1 -1»
+  «line (-150,-150) (-150,150) 0 0 0xffa0a1 -1 -1»
+  «line (-150,-50) (-100,-50) 0 0 0x1000000 -1 -1»
+  «line (-100,-50) (-100,50) 0 0 0x1000000 -1 -1»
+  «line (-100,50) (-50,50) 0 0 0x1000000 -1 -1»
+  «line (-50,50) (-50,0) 0 0 0x1000000 -1 -1»
+  «line (-50,0) (0,0) 0 0 0x1000000 -1 -1»
+  «line (0,0) (0,-130) 0 0 0x1000000 -1 -1»
+  «line (0,-130) (50,-130) 0 0 0x1000000 -1 -1»
+  «line (50,-130) (50,150) 0 0 0x1000000 -1 -1»
+  «line (50,150) (100,150) 0 0 0x1000000 -1 -1»
+  «line (100,150) (100,-100) 0 0 0x1000000 -1 -1»
+  «line (100,-100) (150,-100) 0 0 0x1000000 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (0,450) 1 0 0 0x1000000 -1 -1 "Xsrc1"»
+  «text (0,300) 1 0 0 0x1000000 -1 -1 "Random-Numbers"»
+  «text (0,-300) 1 15 0 0x1000000 -1 -1 "min=<-1> Minimum"»
+  «text (0,-450) 1 0 0 0x1000000 -1 -1 "max=<1> Maximum"»
+  «text (0,-600) 1 0 0 0x1000000 -1 -1 "seed=<0> Seed"»
+  «text (0,-750) 1 0 0 0x1000000 -1 -1 "Ts=<0.00001> Sample time (s)"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

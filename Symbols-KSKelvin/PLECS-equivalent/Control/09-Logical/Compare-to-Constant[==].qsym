@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol Compare-to-Constant[==]
+  «type: X»
+  «description: (PLECS) [==]»
+  «library file: |.subckt Compare-to-Constant in Q\nB1 Q 0 V=V(in)==thres\n.ends Compare-to-Constant»
+  «shorted pins: false»
+  «rect (-200,100) (200,-100) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (0,200) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "COMPARE-TO-CONSTANT"»
+  «text (0,0) 0.63 0 1 0x1000000 -1 -1 "==thres"»
+  «text (0,-200) 1 0 0 0x1000000 -1 -1 "thres=<0> Threshold value"»
+  «pin (-200,0) (20,0) 1 15 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "Q"»
+»

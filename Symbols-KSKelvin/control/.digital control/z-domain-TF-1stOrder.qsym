@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol z-domain-TF-1stOrder
+  «type: X»
+  «description: z-domain Transfer Function (2nd-Order)»
+  «library file: |.subckt z-domain-TF-1stOrder x0 CLK y0\nVdd Vdd 0 RNG\nVss Vss 0 -RNG\nB1 y0 0 V=(b0*V(x0)+b1*V(x1)-a1*V(y1))/a0\n¥1 Vdd Vss x1 ¥ x0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n¥2 Vdd Vss y1 ¥ y0 CLK Vdd ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ LATCH IC=RNG REF=0.5+RNG TTOL=TTOL\n.ends z-domain-TF-1stOrder»
+  «shorted pins: false»
+  «line (-640,-10) (-20,-10) 0 0 0x1000000 -1 -1»
+  «line (50,50) (100,0) 0 0 0x1000000 -1 -1»
+  «line (100,0) (50,-50) 0 0 0x1000000 -1 -1»
+  «rect (-700,-400) (100,200) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «triangle (-700,-360) (-700,-240) (-630,-300) 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-700,450) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-700,300) 1 7 0 0x1000000 -1 -1 "z-Domain-TF-1stOrder"»
+  «text (-330,100) 1 0 1 0x1000000 -1 -1 "b0*z+b1"»
+  «text (-330,-100) 1 0 1 0x1000000 -1 -1 "a0*z+a1"»
+  «text (-700,-1250) 1 7 2 0x1000000 -1 -1 "RNG=<1e9>"»
+  «text (-700,-1100) 1 7 2 0x1000000 -1 -1 "TTOL=<1u>"»
+  «text (-700,-800) 1 7 0 0x1000000 -1 -1 "a0=<a0>"»
+  «text (-700,-950) 1 7 0 0x1000000 -1 -1 "a1=<a1>"»
+  «text (-700,-500) 1 7 0 0x1000000 -1 -1 "b0=<b0>"»
+  «text (-700,-650) 1 7 0 0x1000000 -1 -1 "b1=<b1>"»
+  «text (50,150) 1 0 1 0xff00ff -1 -1 "z"»
+  «pin (-700,0) (20,0) 1 15 0 0x0 -1 "x0"»
+  «pin (-700,-300) (-20,0) 1 15 0 0x0 -1 "CLK"»
+  «pin (100,0) (0,0) 1 15 0 0x0 -1 "y0"»
+»

@@ -8,7 +8,7 @@
   «text (0,400) 1 0 0 0x1000000 -1 -1 "SR-FLIP-FLOP"»
   «text (0,-400) 1 0 0 0x1000000 -1 -1 "x_init=<(0),1> ;Initial state"»
   «text (0,-550) 1 0 2 0x1000000 -1 -1 "thre=<0.5> ;logic threshold"»
-  «text (0,-700) 1 0 2 0x1000000 -1 -1 "restricted=<(-1),0,1> ; -1:LastStateDominate ; 0:ResetDominate ; 1:SetDominate"»
+  «text (0,-700) 1 0 2 0x1000000 -1 -1 "restricted=<-1,(0),1> ; -1:LastStateDominate ; 0:ResetDominate ; 1:SetDominate"»
   «pin (-300,200) (20,0) 1 7 0 0x0 -1 "S"»
   «pin (-300,-200) (20,0) 1 7 0 0x0 -1 "R"»
   «pin (300,200) (0,0) 1 11 0 0x0 -1 "Q"»

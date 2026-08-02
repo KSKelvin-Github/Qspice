@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol Offset
+  «type: X»
+  «description: Machine generated symbol for OFFSET»
+  «library file: |.subckt Offset in out\nB1 out 0 V=V(in)+offset\n.ends Offset»
+  «shorted pins: false»
+  «rect (-300,200) (300,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (2,299) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "OFFSET"»
+  «text (0,-300) 1 15 0 0x1000000 -1 -1 "Offset=<0> Offset"»
+  «text (0,0) 0.857 15 1 0x1000000 -1 -1 "u+offset"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+»

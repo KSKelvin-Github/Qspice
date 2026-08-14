@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol opamp-LTspice
+  «type: X»
+  «description: (LTspice) opamp - ideal single-pole [.lib opamp.sub]»
+  «library file: |.subckt opamp-LTspice IN+ IN- OUT\nG1 0 OUT IN+ IN- Aol\nR3 OUT 0 1\nC3 OUT 0 Aol/GBW/6.28318530717959\n.ends opamp-LTspice»
+  «shorted pins: false»
+  «line (-150,-200) (-50,-200) 0 0 0x1000000 -1 -1»
+  «line (-150,200) (-50,200) 0 0 0x1000000 -1 -1»
+  «line (-100,-150) (-100,-250) 0 0 0x1000000 -1 -1»
+  «line (-200,-450) (-200,450) 0 0 0x1000000 -1 -1»
+  «line (-200,450) (400,0) 0 0 0x1000000 -1 -1»
+  «line (400,0) (-200,-450) 0 0 0x1000000 -1 -1»
+  «text (150,350) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,550) 1 15 2 0x1000000 -1 -1 "OPAMP-LTSPICE"»
+  «text (100,-300) 1 7 0 0x0 -1 -1 "Aol=<100K>; open loop gain"»
+  «text (100,-450) 1 7 0 0x0 -1 -1 "GBW=<10Meg>; gain bandwidth"»
+  «pin (-200,-200) (0,0) 1 15 0 0x0 -1 "IN+"»
+  «pin (-200,200) (0,0) 1 15 0 0x0 -1 "IN-"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "OUT"»
+»

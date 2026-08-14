@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol L-Inductor with Q+Freq
+ÿØÿÛ«symbol L-Inductor with Qpar+Freq
   «type: L»
-  «description: Inductor with Q»
+  «description: Inductor with Qpar»
   «shorted pins: false»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-200) (0,-180) 0 0 0x1000000 -1 -1»
@@ -9,6 +9,7 @@
   «text (100,0) 1 7 0 0x1000000 -1 -1 "<val>"»
   «text (89,-150) 1 7 0 0x0 -1 -1 "Q=<100>"»
   «text (89,-300) 1 7 0 0x1000000 -1 -1 "Frequency=<100Meg>"»
+  «text (89,-450) 1 7 2 0x1000000 -1 -1 "Verbose=<(0),1>"»
   «pin (0,200) (0,0) 1 0 0 0x0 -1 "1"»
   «pin (0,-200) (0,0) 1 0 0 0x0 -1 "2"»
 »

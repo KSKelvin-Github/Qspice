@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol manual-switch
+  «type: X»
+  «description: Manual Switch (Inst Param)»
+  «library file: |.subckt manual-switch m+ m-\nB1 m+ m- R=if(ON!=0,1p,1T)\n.ends manual-switch»
+  «shorted pins: false»
+  «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-130) 0 0 0x1000000 -1 -1»
+  «line (-30,-100) (-70,100) 0 0 0x1000000 -1 -1»
+  «ellipse (-30,130) (30,70) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-30,-70) (30,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (50,150) 1 7 0 0x1000000 -1 -1 "XJ1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "MANUAL-SWITCH"»
+  «text (50,-150) 1 7 0 0x1000000 -1 -1 "ON=<0>"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "m+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "m-"»
+»

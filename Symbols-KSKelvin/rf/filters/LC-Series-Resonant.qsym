@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol LC-Series-Resonant
+  «type: X»
+  «description: LC Series Resonant»
+  «library file: |.subckt LC-Series-Resonant + -\nL1 + N01 Ls Rpar=0\nC1 N01 - Cs\n.param XLs=Zr*QL+max(Zi,0)\n.param XCs=Zr*QL+max(-Zi,0)\n.param Ls=XLs/2/pi/frq\n.param Cs=1/XCs/2/pi/frq\n.param BW=frq/QL\n.if (verbose)\n.display Ls='Ls', Cs='Cs', BW='BW', (fr='frq', Zre='Zre', QL='QL')\n.option concise\n.endif\n.ends LC-Series-Resonant»
+  «shorted pins: false»
+  «line (-500,0) (-380,0) 0 0 0x1000000 -1 -1»
+  «line (-20,0) (260,0) 0 0 0x1000000 -1 -1»
+  «line (340,0) (500,0) 0 0 0x1000000 -1 -1»
+  «rect (-500,200) (500,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «rect (340,-130) (330,130) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (270,-130) (260,130) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «coil (-20,-80) (-380,80) 0 0 0 0x1000000 -1 -1»
+  «text (-500,450) 1 7 0 0x1000000 -1 -1 "XLC1"»
+  «text (-500,300) 1 7 0 0x1000000 -1 -1 "LC-Series-Resonant"»
+  «text (-500,-300) 1 7 0 0x1000000 -1 -1 "frq=<10Meg> operating frequency / center frequency"»
+  «text (-500,-450) 1 7 0 0x1000000 -1 -1 "QL=<10> quality factor of series resonant"»
+  «text (-500,-600) 1 7 0 0x1000000 -1 -1 "Zr=<50> expected load impedance (real part)"»
+  «text (-500,-750) 1 7 0 0x1000000 -1 -1 "Zi=<0> expected load impedance (imaginary part) @ frq"»
+  «text (-500,-900) 1 7 2 0x1000000 -1 -1 "Verbose=<0,(1)> return .display"»
+  «pin (-500,0) (20,0) 1 15 0 0x0 -1 "+"»
+  «pin (500,0) (-20,0) 1 15 0 0x0 -1 "-"»
+»

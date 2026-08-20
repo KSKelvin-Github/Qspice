@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol eLoad-Iconstant
   «type: I»
-  «description: Current Source»
+  «description: eLoad for Constant Current (I-source with Vsat2)»
   «shorted pins: false»
   «line (0,100) (0,-100) 15 0 0x1000000 -1 -1»
   «line (-100,180) (-100,120) 15 0 0x1000000 -1 -1»

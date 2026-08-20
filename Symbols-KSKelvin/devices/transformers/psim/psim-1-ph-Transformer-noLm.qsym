@@ -18,7 +18,7 @@
   «ellipse (120,160) (180,100) 0 0 0 0x1000000 0x3000000 -1 -1»
   «coil (-280,180) (-120,-180) 0 0 0 0x1000000 -1 -1»
   «coil (120,180) (280,-180) 0 0 0 0x1000000 -1 -1»
-  «text (0,500) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 15 0 0x1000000 -1 -1 "XT1"»
   «text (0,650) 1 15 2 0x1000000 -1 -1 "PSIM-1-PH-TRANSFORMER-NOLM"»
   «text (0,-500) 1 0 0 0x0 -1 -1 "Rp=<1m> ;Resistance of primary"»
   «text (0,-650) 1 0 0 0x0 -1 -1 "Rs=<1m> ;Resistance of secondary (referred to primary):Rs=Rs_real*(Np/Ns)²"»

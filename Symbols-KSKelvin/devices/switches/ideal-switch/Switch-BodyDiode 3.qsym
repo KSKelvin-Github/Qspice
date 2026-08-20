@@ -22,17 +22,17 @@
   «ellipse (30,-170) (-30,-230) 0 0 0 0x1000000 0xff0000 -1 -1»
   «triangle (-150,0) (-55,25) (-55,-25) 0 0 0x1000000 0x3000000 -1 -1»
   «triangle (100,50) (40,-50) (160,-50) 0 0 0x1000000 0x1000000 -1 -1»
-  «text (150,150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "XS1"»
   «text (0,300) 1 0 2 0x1000000 -1 -1 "SWITCH-BODYDIODE"»
-  «text (151,-150) 1 7 2 0x1000000 -1 -1 "Initial=<-1,(0),1> ;0:InitialOFF / 1:InitialON / -1:NotSet"»
-  «text (151,-300) 1 7 2 0x1000000 -1 -1 "swRon=<1m> ;switch - on resistance"»
-  «text (151,-450) 1 7 2 0x1000000 -1 -1 "swRoff=<20Meg> ;switch - off resistance"»
-  «text (151,-600) 1 7 2 0x1000000 -1 -1 "swVt=<0.5> ;switch - threshold"»
-  «text (151,-750) 1 7 2 0x1000000 -1 -1 "swVh=<0> ;switch - hysteresis"»
-  «text (151,-900) 1 7 2 0x1000000 -1 -1 "ttol=<1e-6> ;switch - TTOL"»
-  «text (151,-1050) 1 7 2 0x1000000 -1 -1 "dRon=<1m> ;diode - on resistance"»
-  «text (151,-1200) 1 7 2 0x1000000 -1 -1 "dRoff=<20Meg> ;diode - off resistance"»
-  «text (151,-1350) 1 7 2 0x1000000 -1 -1 "dVfwd=<0> ;diode forward voltage"»
+  «text (150,-150) 1 7 2 0x1000000 -1 -1 "Initial=<-1,(0),1> ;0:InitialOFF / 1:InitialON / -1:NotSet"»
+  «text (150,-300) 1 7 2 0x1000000 -1 -1 "swRon=<1m> ;switch - on resistance"»
+  «text (150,-450) 1 7 2 0x1000000 -1 -1 "swRoff=<20Meg> ;switch - off resistance"»
+  «text (150,-600) 1 7 2 0x1000000 -1 -1 "swVt=<0.5> ;switch - threshold"»
+  «text (150,-750) 1 7 2 0x1000000 -1 -1 "swVh=<0> ;switch - hysteresis"»
+  «text (150,-900) 1 7 2 0x1000000 -1 -1 "ttol=<1e-6> ;switch - TTOL"»
+  «text (150,-1050) 1 7 2 0x1000000 -1 -1 "dRon=<1m> ;diode - on resistance"»
+  «text (150,-1200) 1 7 2 0x1000000 -1 -1 "dRoff=<20Meg> ;diode - off resistance"»
+  «text (150,-1350) 1 7 2 0x1000000 -1 -1 "dVfwd=<0> ;diode forward voltage"»
   «pin (-300,0) (20,0) 1 15 0 0x0 -1 "G"»
   «pin (0,200) (-20,0) 1 15 0 0x0 -1 "sw+"»
   «pin (0,-200) (0,0) 1 15 0 0x0 -1 "sw-"»

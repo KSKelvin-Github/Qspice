@@ -3,15 +3,15 @@
   «description: Potentiometer / Variable Resistor»
   «library file: |.subckt Potentiometer + - m \n.param w = limit(1m,knob,0.999)\nR1 + m (1-w)*Rt\nR2 m - (w)*Rt\n.ends Potentiometer»
   «shorted pins: false»
-  «line (300,0) (150,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (170,0) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-180) (0,-200) 0 0 0x1000000 -1 -1»
   «line (130,190) (70,170) 0 0 0x1000000 -1 -1»
   «line (130,190) (140,130) 0 0 0x1000000 -1 -1»
   «line (130,190) (-100,-180) 0 0 0x1000000 -1 -1»
-  «triangle (100,0) (150,50) (150,-50) 0 0 0x1000000 0x2000000 -1 -1»
+  «triangle (100,0) (170,60) (170,-60) 0 0 0x1000000 0x2000000 -1 -1»
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
-  «text (100,-150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "XR1"»
   «text (0,300) 1 15 2 0x1000000 -1 -1 "Potentiometer"»
   «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<1k> ;total resistance"»
   «text (100,-450) 1 7 0 0x0 -1 -1 "knob=<0.5>"»

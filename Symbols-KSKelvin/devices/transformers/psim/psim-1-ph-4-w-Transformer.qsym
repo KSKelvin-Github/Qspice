@@ -28,7 +28,7 @@
   «coil (100,470) (20,130) 0 0 0 0x1000000 -1 -1»
   «coil (100,-130) (20,-470) 0 0 0 0x1000000 -1 -1»
   «coil (-100,-130) (-20,-470) 0 0 0 0x1000000 -1 -1»
-  «text (0,600) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,600) 1 15 0 0x1000000 -1 -1 "XT1"»
   «text (0,750) 1 15 2 0x1000000 -1 -1 "PSIM-1-PH-4-W-TRANSFORMER"»
   «text (0,-600) 1 0 0 0x0 -1 -1 "Rp_1=<1m> ;Resistance of 1st primary"»
   «text (0,-750) 1 0 0 0x0 -1 -1 "Rp_2=<1m> ;Resistance of 2nd primary (referred to 1st primary):Rp_2=Rp_2_real*(Np_1/Np_2)²"»

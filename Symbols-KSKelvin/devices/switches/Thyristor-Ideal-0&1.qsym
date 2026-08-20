@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol Thyristor-Ideal-0&1
+  «type: X»
+  «description: Thyristor / SCR Silicon Controlled Rectifier (Ideal) - 0&1 gate»
+  «library file: |.subckt Thyristor-Ideal-0&1 A G K\nD1 N01 K D\nS1 A N01 Q 0 SW\n¥1 N02 0 Q ¥ Set Reset ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nB1 Reset 0 V=if(V(A,K)<=Vfwd,1,0)\nE1 Set 0 G 0 1\nV1 N02 0 1\n.model D D Ron=1m Roff=10Meg Vfwd=Vfwd\n.model SW SW Ron=1m Roff=10Meg Vt=0.5 Vh=0\n.ends Thyristor-Ideal-0&1»
+  «shorted pins: false»
+  «line (-100,-80) (100,-80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,70) 0 0 0x1000000 -1 -1»
+  «line (-50,-80) (-100,-200) 0 0 0xff00ff -1 -1»
+  «line (-100,-200) (-200,-200) 0 0 0xff00ff -1 -1»
+  «triangle (0,-80) (-100,70) (100,70) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «text (175,0) 1 7 0 0x1000000 -1 -1 "XD1"»
+  «text (175,150) 1 7 2 0x1000000 -1 -1 "THYRISTOR-IDEAL-0&1"»
+  «text (175,-150) 1 7 0 0x0 -1 -1 "Vfwd=<0>"»
+  «pin (0,200) (0,0) 1 64 0 0x0 -1 "A"»
+  «pin (-200,-200) (0,0) 1 64 0 0x0 -1 "G"»
+  «pin (0,-200) (0,0) 1 64 0 0x0 -1 "K"»
+»

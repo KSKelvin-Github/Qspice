@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol RefPrimary-1-ph-Transformer
+ÿØÿÛ«symbol psim-RefPrimary-1-ph-Transformer
   «type: X»
   «description: (PSIM) 1-ph Transformer»
   «library file: |.subckt RefPrimary-1-ph-Transformer p+ p- s+ s-\nL3 N01 N02 Lp\nL4 N03 N04 Ls\nR2 p+ N01 Rp\nR3 N02 N03 Rs\nL1 N02 p- Lm\n×1 «N04 p- s+ s-» Turns=Np Ns\n.ends RefPrimary-1-ph-Transformer»
@@ -28,7 +28,7 @@
   «coil (-200,100) (-100,-100) 0 0 0 0x1000000 -1 -1»
   «zigzag (-650,350) (-450,250) 0 0 0 0x1000000 -1 -1»
   «zigzag (-100,350) (100,250) 0 0 0 0x1000000 -1 -1»
-  «text (600,350) 1 0 0 0x0 -1 -1 "X1"»
+  «text (600,350) 1 0 0 0x0 -1 -1 "XT1"»
   «text (0,500) 1 0 2 0x1000000 -1 -1 "RefPrimary-1-PH-TRANSFORMER"»
   «text (300,-450) 1 7 0 0x0 -1 -1 "Lm=<0.5>"»
   «text (300,-600) 1 7 0 0x0 -1 -1 "Np=<1>"»

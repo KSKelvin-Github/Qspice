@@ -3,7 +3,7 @@
   «description: Potentiometer / Variable Resistor with Knob Adjustment»
   «library file: |.subckt Potentiometer-Vctrl + - m knob\nR1 + m R=(1-V(w))*Rt\nR2 m - R=(V(w))*Rt\nB1 w 0 V=limit(1m,V(knob),0.999)\n.ends Potentiometer-Vctrl»
   «shorted pins: false»
-  «line (300,0) (150,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (170,0) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-200) (0,-180) 0 0 0x1000000 -1 -1»
   «line (-200,100) (-180,100) 0 0 0x1000000 -1 -1»
@@ -16,9 +16,9 @@
   «line (130,190) (140,130) 0 0 0x1000000 -1 -1»
   «ellipse (-240,75) (-210,125) 0 0 0 0x1000000 0x1000000 -1 -1»
   «ellipse (-200,40) (-120,-40) 0 0 0 0x1000000 0xffe6c8 -1 -1»
-  «triangle (100,0) (150,50) (150,-50) 0 0 0x1000000 0x2000000 -1 -1»
+  «triangle (100,0) (170,60) (170,-60) 0 0 0x1000000 0x2000000 -1 -1»
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
-  «text (100,-150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "XR1"»
   «text (0,300) 1 15 2 0x1000000 -1 -1 "Potentiometer-Vctrl"»
   «text (100,-300) 1 7 0 0x0 -1 -1 "Rt=<1k> ;total resistance"»
   «pin (0,200) (20,0) 1 15 0 0x0 -1 "+"»

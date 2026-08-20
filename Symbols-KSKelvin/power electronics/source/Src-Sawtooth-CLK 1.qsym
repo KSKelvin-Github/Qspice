@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Src-Sawtooth-CLK
+ÿØÿÛ«symbol Src-Sawtooth-CLK 1
   «type: X»
   «description: Source - Clock and Sawtooth»
   «library file: |.subckt Src-Sawtooth-CLK Sawtooth CLK\nB1 SawInt 0 V=idt(fsw,0,(V(SawInt)>1)||(time<Tdelay))\nVlogic1V p1v 0 1\n¥1 p1v 0 CLKint ¥ N01 SawInt ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 Sawtooth 0 V=V(SawInt)*(VHigh-VLow)+VLow\nB3 CLK 0 V=V(CLKint)*(VHigh-VLow)+VLow\nB4 N01 0 V=if(time>Tdelay,ClkDuty,-1)\n.ends Src-Sawtooth-CLK»
@@ -19,7 +19,7 @@
   «line (350,350) (400,300) 0 0 0x1000000 -1 -1»
   «line (400,300) (350,250) 0 0 0x1000000 -1 -1»
   «rect (-300,700) (400,200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
-  «text (-300,800) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-300,800) 1 7 0 0x1000000 -1 -1 "XSRC1"»
   «text (-300,950) 1 7 2 0x1000000 -1 -1 "SRC-SAWTOOTH-CLK"»
   «text (400,100) 1 11 0 0x0 -1 -1 "fsw=<100k>"»
   «text (400,-50) 1 11 0 0x0 -1 -1 "VHigh=<1>"»

@@ -1,0 +1,22 @@
+ÿØÿÛ«symbol SrcCurrent-Vlimit
+  «type: X»
+  «description: Machine generated symbol for SRCCURRENT-VLIMIT»
+  «library file: |.subckt SrcCurrent-Vlimit I+ I-\nI1 I- I+ abs(Idc)\nD1 I- I+ D\n.model D D Ron=1m Roff=10Meg Vrev=Vlimit Revepsilon=Revepsilon\n.ends SrcCurrent-Vlimit»
+  «shorted pins: false»
+  «line (0,200) (0,150) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (0,-90) (0,90) 0 0 0x1000000 -1 -1»
+  «rect (-105,177) (-55,173) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-82,150) (-78,200) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-105,-173) (-55,-177) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «ellipse (-100,-150) (100,50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-100,-50) (100,150) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «triangle (0,110) (-30,80) (30,80) 0 0 0x1000000 0xff0012 -1 -1»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "XI1"»
+  «text (0,300) 1 0 2 0x1000000 -1 -1 "SRCCURRENT-VLIMIT"»
+  «text (146,0) 1 7 0 0x0 -1 -1 "IDC=<val>"»
+  «text (146,-150) 1 7 0 0x0 -1 -1 "Vlimit=<val>"»
+  «text (146,-300) 1 7 2 0x1000000 -1 -1 "Revepsilon=<0>"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "I+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "I-"»
+»

@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol NMOS-subckt-4pins-(D G S K)
+ÿØÿÛ«symbol NMOS-Enhancement-subckt-4pins-(D G S K)
   «type: X»
   «description: MOSFET (.subckt D G S K)»
   «shorted pins: false»
@@ -16,7 +16,7 @@
   «line (50,-200) (100,-150) 0 0 0x1000000 -1 -1»
   «ellipse (75,-125) (125,-175) 0 0 0 0x1000000 0xff0012 -1 -1»
   «triangle (-50,0) (45,25) (45,-25) 0 0 0x1000000 0x3000000 -1 -1»
-  «text (150,150) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,150) 1 7 0 0x1000000 -1 -1 "XM1"»
   «text (150,-150) 1 7 0 0x1000000 -1 -1 "<model>"»
   «pin (100,200) (0,0) 1 0 0 0x0 -1 "D"»
   «pin (-200,0) (0,0) 1 0 0 0x0 -1 "G"»

@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol NMOS(Dual)-subckt
+ÿØÿÛ«symbol NMOS(Dual)-Enhancement-subckt
   «type: X»
   «description: MOSFET - Dual Package (.subckt D G S)»
   «shorted pins: false»
@@ -25,7 +25,7 @@
   «ellipse (75,25) (125,-25) 0 0 0 0x1000000 0xff0012 -1 -1»
   «triangle (-50,300) (45,325) (45,275) 0 0 0x1000000 0x3000000 -1 -1»
   «triangle (-50,-300) (45,-275) (45,-325) 0 0 0x1000000 0x3000000 -1 -1»
-  «text (150,400) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,400) 1 7 0 0x1000000 -1 -1 "XM1"»
   «text (150,-350) 1 7 0 0x1000000 -1 -1 "<model>"»
   «pin (100,500) (0,0) 1 0 0 0x0 -1 "D1"»
   «pin (100,-500) (0,0) 1 0 0 0x0 -1 "D2"»

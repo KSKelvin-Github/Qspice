@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Varistors-MOVs
+ÿØÿÛ«symbol Varistors-MOVs-subckt
   «type: X»
   «description: Varistors MOVs»
   «shorted pins: false»
@@ -8,7 +8,7 @@
   «line (-100,150) (100,-150) 0 0 0x1000000 -1 -1»
   «line (100,-150) (100,-200) 0 0 0x1000000 -1 -1»
   «zigzag (-80,180) (80,-180) 0 0 0 0x1000000 -1 -1»
-  «text (150,100) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (150,100) 1 7 0 0x1000000 -1 -1 "XR1"»
   «text (150,-100) 1 7 0 0x1000000 -1 -1 "<model>"»
   «pin (0,200) (0,0) 1 0 0 0x0 -1 "1"»
   «pin (0,-200) (0,0) 1 0 0 0x0 -1 "2"»

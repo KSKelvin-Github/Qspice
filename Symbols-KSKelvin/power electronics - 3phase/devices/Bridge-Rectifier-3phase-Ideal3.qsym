@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Bridge-Rectifier-3phase-Ideal2
+ÿØÿÛ«symbol Bridge-Rectifier-3phase-Ideal3
   «type: X»
   «description: Bridge Rectifier - 3 Phase (Ideal)»
   «library file: |.subckt Bridge-Rectifier-3phase-Ideal L1 L2 L3 DC+ DC-\nD1 L1 DC+ Db\nD2 L2 DC+ Db\nD3 DC- L1 Db\nD4 DC- L2 Db\nD5 L3 DC+ Db\nD6 DC- L3 Db\n.model Db D Ron=Ron Roff=Roff Vfwd=Vfwd\n.ends Bridge-Rectifier-3phase-Ideal»
@@ -45,7 +45,7 @@
   «triangle (0,-620) (100,-770) (-100,-770) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (300,180) (400,30) (200,30) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (300,-620) (400,-770) (200,-770) 0 0 0x1000000 0x1000000 -1 -1»
-  «text (0,600) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,600) 1 15 0 0x1000000 -1 -1 "XD1"»
   «text (0,750) 1 0 2 0x1000000 -1 -1 "BRIDGE-RECTIFIER-3PHASE-IDEAL"»
   «text (0,-1200) 1 15 0 0x0 -1 -1 "Vfwd=<0>"»
   «text (0,-1350) 1 15 2 0x1000000 -1 -1 "Ron=<1m>"»

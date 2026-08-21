@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol Type-I-OpampRR-KSK
+ÿØÿÛ«symbol Type-I-OpampRR-PZ
   «type: X»
-  «description: Type I Compensator (Opamp)»
-  «library file: |.subckt Type-I-OpampRR-KSK REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param C2=1/2/pi/fp0/R1\n.if (Verbose)\n.display Type-I: RB='RB' R1='R1',C2='C2'\n.option concise\n.endif\n.ends Type-I-OpampRR-KSK»
+  «description: Type I Compensator (Opamp, Poles-Zeros)»
+  «library file: |.subckt Type-I-OpampRR-PZ REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param C2=1/2/pi/fp0/R1\n.if (Verbose)\n.display Type-I: RB='RB',R1='R1',C2='C2',RB/(R1+RB)='RB/(R1+RB)'\n.option concise\n.endif\n.ends Type-I-OpampRR-PZ»
   «shorted pins: false»
   «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
   «line (100,-150) (100,-250) 0 0 0x1000000 -1 -1»
@@ -29,7 +29,7 @@
   «zigzag (-980,880) (-820,520) 0 0 0 0x1000000 -1 -1»
   «zigzag (-980,80) (-820,-280) 0 0 0 0x1000000 -1 -1»
   «text (900,1650) 1 11 0 0x1000000 -1 -1 "X1"»
-  «text (900,1500) 0.857 11 0 0x1000000 -1 -1 "TYPE-I-OPAMPRR-KSK"»
+  «text (900,1500) 0.857 11 0 0x1000000 -1 -1 "TYPE-I-OpAmpRR-PZ"»
   «text (950,1300) 1 7 0 0x0 -1 -1 "fp0=<1k>"»
   «text (950,1150) 1 7 0 0x0 -1 -1 "R1=<10k>"»
   «text (950,1000) 1 7 0 0x0 -1 -1 "RB=<1Meg>"»

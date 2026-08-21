@@ -16,7 +16,7 @@
       «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
   »
-  «component (2500,-1300) 0 0
+  «component (-700,1900) 0 0
     «symbol V
       «type: V»
       «description: Independent Voltage Source»
@@ -33,7 +33,7 @@
       «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
   »
-  «component (3100,-1300) 0 0
+  «component (-100,1900) 0 0
     «symbol V
       «type: V»
       «description: Independent Voltage Source»
@@ -122,7 +122,7 @@
       «pin (200,-300) (0,0) 1 0 0 0x0 -1 "Vss"»
     »
   »
-  «component (2400,3400) 2 0
+  «component (2400,2900) 2 0
     «symbol V
       «type: V»
       «description: Independent Voltage Source»
@@ -145,21 +145,21 @@
   «net (2900,700) 1 14 0 "Ctrl"»
   «net (2100,1100) 1 14 0 "Vdd"»
   «net (2100,300) 1 13 0 "Vss"»
-  «net (2500,-1500) 1 13 0 "GND"»
-  «net (3100,-1500) 1 13 0 "GND"»
-  «net (2500,-1100) 1 14 0 "Vdd"»
-  «net (3100,-1100) 1 14 0 "Vss"»
-  «wire (2200,3400) (1000,3400) "FB"»
+  «net (-700,1700) 1 13 0 "GND"»
+  «net (-100,1700) 1 13 0 "GND"»
+  «net (-700,2100) 1 14 0 "Vdd"»
+  «net (-100,2100) 1 14 0 "Vss"»
+  «wire (2200,2900) (1000,2900) "FB"»
   «wire (2800,700) (2900,700) "Ctrl"»
   «wire (1900,500) (1700,500) "REF"»
   «wire (2100,1000) (2100,1100) "Vdd"»
   «wire (2100,300) (2100,400) "Vss"»
   «wire (1700,-100) (1700,500) "REF"»
-  «wire (1000,2200) (1000,3400) "FB"»
+  «wire (1000,2200) (1000,2900) "FB"»
   «wire (1000,2200) (1000,2100) "FB"»
-  «wire (2600,3400) (3900,3400) "Ctrl"»
-  «wire (3900,3400) (3900,700) "Ctrl"»
+  «wire (2600,2900) (3900,2900) "Ctrl"»
+  «wire (3900,2900) (3900,700) "Ctrl"»
   «wire (3900,700) (2900,700) "Ctrl"»
-  «text (300,-1300) 1 7 0 0x1000000 -1 -1 "ï»¿.param fstart=1\n.param fstop=1Meg\n.ac dec 100 fstart fstop\n.plot V(Ctrl)/V(FB)"»
+  «text (-900,700) 1 7 0 0x1000000 -1 -1 "ï»¿.param fstart=1\n.param fstop=1Meg\n.ac dec 100 fstart fstop\n.plot V(Ctrl)/V(FB)"»
 »
 

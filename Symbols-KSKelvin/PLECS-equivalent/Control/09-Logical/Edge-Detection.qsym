@@ -15,7 +15,7 @@
   «triangle (-80,30) (-40,-30) (-120,-30) 0 0 0x1000000 0xff0012 -1 -1»
   «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 0 0 0x1000000 -1 -1 "Edge-Detection"»
-  «text (0,-300) 1 0 0 0x1000000 -1 -1 "Direction=<-1,(0),1> Edge direction: -1=failing, 0=either, 1=rising"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "Direction=<-1;[failing],(0;[either]),1;[rising]> Edge direction"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

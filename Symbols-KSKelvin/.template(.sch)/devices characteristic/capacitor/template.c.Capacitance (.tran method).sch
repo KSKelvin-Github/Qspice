@@ -11,7 +11,7 @@
       «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
       «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
       «text (100,150) 1 7 0 0x1000000 -1 -1 "Vmeas"»
-      «text (150,-200) 1 7 0 0x1000000 -1 -1 "PWL 0 0 Tstop Vbias_max"»
+      «text (150,-200) 1 7 0 0x1000000 -1 -1 "PWL 0 0 Tstart Vbias_max Tstop Vbias_min"»
       «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
       «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
@@ -33,7 +33,7 @@
       «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
   »
-  «component (2900,1000) 0 0
+  «component (3400,1000) 0 0
     «symbol B1
       «type: B»
       «description: Behavioral Voltage Source»
@@ -72,18 +72,18 @@
   «net (700,300) 1 14 0 "Vmeas"»
   «net (700,800) 1 13 0 "GND"»
   «net (700,1200) 1 14 0 "Charge"»
-  «net (2900,800) 1 13 0 "GND"»
-  «net (2900,1200) 1 14 0 "Capacitance"»
+  «net (3400,800) 1 13 0 "GND"»
+  «net (3400,1200) 1 14 0 "Capacitance"»
   «wire (700,200) (700,300) "Vmeas"»
   «wire (700,-300) (700,-200) "GND"»
   «wire (-500,-200) (-500,-300) "GND"»
   «wire (-500,300) (-500,200) "Vmeas"»
   «wire (700,300) (-500,300) "Vmeas"»
-  «rect (300,-600) (6200,4450) 0 0 2 0x4000000 0x1000000 -1 0 -1»
-  «text (450,2350) 1 7 0 0x1000000 -1 -1 "ï»¿.param Tstop=1\n.tran Tstop\n.func Capacitance()=V(Capacitance)/1V\n.func Charge()=V(Charge)/1V\n.func Vbias()=V(Vmeas)\n.plot Charge()\n.plot Capacitance()\n.abscissa Vbias()"»
-  «text (450,3400) 1 7 0 0x1000000 -1 -1 "ï»¿;user input parameters\n.param Vbias_max=100"»
-  «text (450,4000) 1 7 1 0x1000000 -1 -1 "ï»¿Calculate Capacitance and Charge from time domain\n - error free method in calculating Q for capacitance as a function of its voltage\n - Vmeas has to begin with 0V for correct initial condition of Q"»
+  «rect (300,-600) (6600,4900) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «text (500,2400) 1 7 0 0x1000000 -1 -1 "ï»¿.param Tstart=0.1\n.param Tstop=1.1\n.tran 0 Tstop Tstart (Tstop-Tstart)/1e5\n.func Capacitance()=V(Capacitance)/1V\n.func Charge()=V(Charge)/1V\n.func Vbias()=V(Vmeas)\n.plot Charge()\n.plot Capacitance()\n.abscissa Vbias()"»
+  «text (500,3700) 1 7 0 0x1000000 -1 -1 "ï»¿;user input parameters\n.param Vbias_min=-20\n.param Vbias_max=100"»
+  «text (500,4450) 1 7 1 0x1000000 -1 -1 "ï»¿Calculate Capacitance and Charge from time domain\n - error free method in calculating Q for capacitance as a function of its voltage\n - Vmeas has to begin with 0V for correct initial condition of Q"»
   «text (1100,1100) 1 7 1 0x1000000 -1 -1 "ï»¿Q=I*t (integral form)"»
-  «text (3400,1200) 1 7 1 0x1000000 -1 -1 "ï»¿By I=C dv/dt\n-> C = I / (dv/dt)"»
+  «text (3900,1200) 1 7 1 0x1000000 -1 -1 "ï»¿By I=C dv/dt\n-> C = I / (dv/dt)"»
 »
 

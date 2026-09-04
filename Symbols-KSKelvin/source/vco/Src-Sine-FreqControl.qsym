@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Src-Sine-FreqControl
   «type: X»
-  «description: Source - Sine with Frequency Control»
+  «description: Source - Sine with Frequency Control (VCO)»
   «library file: |.subckt Src-Sine-FreqControl f out\nB1 out 0 V=sin(2*pi*idt(V(f),0)+theta0*pi/180)\n.ends Src-Sine-FreqControl»
   «shorted pins: false»
   «line (100,-130) (100,-200) 0 0 0x1000000 -1 -1»
@@ -15,7 +15,7 @@
   «arc3p (100,0) (160,0) (130,0) 0 0 0x1000000 -1 -1»
   «arc3p (100,0) (40,0) (70,0) 0 0 0x1000000 -1 -1»
   «triangle (30,-200) (170,-200) (100,-270) 0 0 0x1000000 0xffe6c8 -1 -1»
-  «text (-200,400) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-200,400) 1 7 0 0x1000000 -1 -1 "XVCO1"»
   «text (-200,550) 1 7 2 0x1000000 -1 -1 "Src-Sine-FreqControl"»
   «text (-200,-400) 1 7 0 0x1000000 -1 -1 "theta0=<0>"»
   «pin (-200,0) (20,90) 1 7 0 0x0 -1 "f"»

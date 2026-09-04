@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol VCO-Sine
   «type: X»
   «description: VCO - Sine (eqn : freq = f0 + V(ctrl)*Kvco)»
-  «library file: |.subckt VCO-Sine ctrl vco\nB1 vco 0 V=sin(2*pi*f0*time+2*pi*Kvco*idt(V(ctrl),0)+theta0*pi/180)\n.ends VCO-Sine»
+  «library file: |.subckt VCO-Sine ctrl vco\nB1 vco 0 V=sin(2*pi*idt(f0+Kvco*V(ctrl),0)+theta0*pi/180)\n.ends VCO-Sine»
   «shorted pins: false»
   «line (100,-130) (100,-200) 0 0 0x1000000 -1 -1»
   «line (100,200) (100,130) 0 0 0x1000000 -1 -1»
@@ -17,7 +17,7 @@
   «arc3p (100,0) (40,0) (70,0) 0 0 0x1000000 -1 -1»
   «triangle (30,-200) (170,-200) (100,-270) 0 0 0x1000000 0xffe6c8 -1 -1»
   «triangle (-250,100) (-250,-100) (-100,0) 0 0 0x1000000 0xffe6c8 -1 -1»
-  «text (-500,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-500,650) 1 7 0 0x1000000 -1 -1 "XVCO1"»
   «text (-500,500) 1 7 0 0x1000000 -1 -1 "VCO-SINE"»
   «text (-500,-550) 1 7 0 0x0 -1 -1 "f0=<10k>"»
   «text (-500,-700) 1 7 0 0x0 -1 -1 "Kvco=<1>"»

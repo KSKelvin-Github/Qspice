@@ -13,9 +13,9 @@
   «triangle (-200,200) (-200,-200) (200,0) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-4,250) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (100,250) 1 7 2 0x1000000 -1 -1 "OP-AMP-WITH-LIMITED-OUTPUT"»
-  «text (100,-150) 1 7 0 0x1000000 -1 -1 "A=<1e6> ;Open-loop gain"»
-  «text (100,-300) 1 7 0 0x1000000 -1 -1 "Vmin=<-10> ;Output voltage limit - Vmin"»
-  «text (100,-450) 1 7 0 0x1000000 -1 -1 "Vmax=<10> ;Output votlage limit - Vmax"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "A=<1e6> Open-loop gain"»
+  «text (100,-300) 1 7 0 0x1000000 -1 -1 "Vmin=<-10> Output voltage limit - Vmin"»
+  «text (100,-450) 1 7 0 0x1000000 -1 -1 "Vmax=<10> Output votlage limit - Vmax"»
   «pin (-200,100) (20,0) 1 15 0 0x0 -1 "IN+"»
   «pin (-200,-100) (20,0) 1 15 0 0x0 -1 "IN-"»
   «pin (200,0) (-20,0) 1 15 0 0x0 -1 "OUT+"»

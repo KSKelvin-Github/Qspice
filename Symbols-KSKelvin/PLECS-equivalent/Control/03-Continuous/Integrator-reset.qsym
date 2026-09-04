@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Integrator-Reset
+ÿØÿÛ«symbol Integrator-reset - Copy
   «type: X»
   «description: (PLECS) Integrator with External Reset»
   «library file: |.subckt Integrator-Reset in out reset\nB1 out 0 V=idt(V(in),x0,V(latch))\nB4 latch 0 V=if(ExternalReset==1,V(rising), if(ExternalReset==2,V(falling), if(ExternalReset==3,V(rising)|V(falling), if(ExternalReset==4,V(reset)>thres,0)) ) )\nR1 reset 0 1G\nB2 rising 0 V=V(reset)>=thres & state(1,V(reset))<thres\nB3 falling 0 V=V(reset)<=thres & state(1,V(reset))>thres\n.ends Integrator-Reset»
@@ -14,7 +14,7 @@
   «triangle (-200,-50) (-200,-150) (-150,-100) 0 0 0x1000000 0x1000000 -1 -1»
   «text (0,300) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (0,450) 1 0 2 0x1000000 -1 -1 "INTEGRATOR-RESET"»
-  «text (0,-300) 1 15 0 0x1000000 -1 -1 "ExternalReset=<0,(1),2,3,4> 0:none|1:rising|2:falling|3:either|4:level"»
+  «text (0,-300) 1 15 0 0x1000000 -1 -1 "ExternalReset=<0;[none],(1;[rising]),2;[falling],3;[either],4;[level]> External Reset"»
   «text (0,-450) 1 15 0 0x1000000 -1 -1 "x0=<0> Initial condition"»
   «text (0,-600) 1 15 0 0x1000000 -1 -1 "thres=<0.5>"»
   «pin (-200,100) (0,0) 1 15 0 0x0 -1 "in"»

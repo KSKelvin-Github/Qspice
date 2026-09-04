@@ -14,9 +14,9 @@
   «triangle (-300,-50) (-300,50) (-220,0) 0 0 0x1000000 0xff12 -1 -1»
   «text (50,200) 1 7 0 0x1000000 -1 -1 "XM1"»
   «text (0,350) 1 0 2 0x1000000 -1 -1 "IGBT"»
-  «text (51,0) 1 7 0 0x1000000 -1 -1 "Vf=<0> ;Forward voltage Vf (V)"»
-  «text (51,-150) 1 7 0 0x1000000 -1 -1 "Ron=<0> ;On-ressistance Ron (ohms)"»
-  «text (51,-300) 1 7 0 0x1000000 -1 -1 "s_init=<(0),1> ;0:InitialOFF / 1:InitialON"»
+  «text (51,0) 1 7 0 0x1000000 -1 -1 "Vf=<0> Forward voltage Vf (V)"»
+  «text (51,-150) 1 7 0 0x1000000 -1 -1 "Ron=<0> On-ressistance Ron (ohms)"»
+  «text (51,-300) 1 7 0 0x1000000 -1 -1 "s_init=<(0),1> 0:InitialOFF / 1:InitialON"»
   «pin (0,200) (0,0) 1 15 0 0x0 -1 "C"»
   «pin (-300,0) (0,0) 1 15 0 0x0 -1 "G"»
   «pin (0,-200) (0,0) 1 15 0 0x0 -1 "E"»

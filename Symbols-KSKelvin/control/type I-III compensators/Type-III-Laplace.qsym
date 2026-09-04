@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Type-III-Laplace
   «type: X»
   «description: Type III Compensator (Laplace)»
-  «library file: |.subckt Type-III-Laplace Ref FB Ctrl\nE1 Ctrl 0 Ref FB 1 Laplace=2*pi*fp0/s*(s+2*pi*fz1)*(s+2*pi*fz2) /(s+2*pi*fp1)/(s+2*pi*fp2)\n.ends Type-III-Laplace»
+  «library file: |.subckt Type-III-Laplace Ref FB Ctrl\nB1 Ctrl 0 V=V(Ref)-V(FB) Laplace=2*pi*fp0/s*(s+2*pi*fz1)*(s+2*pi*fz2) /(s+2*pi*fp1)/(s+2*pi*fp2) IC=IC\n.ends Type-III-Laplace»
   «shorted pins: false»
   «line (450,200) (450,-200) 0 1 0x1000000 -1 -1»
   «line (450,0) (950,0) 0 1 0x1000000 -1 -1»
@@ -24,6 +24,7 @@
   «text (400,-650) 1 7 0 0x0 -1 -1 "fz2=<100>"»
   «text (400,-800) 1 7 0 0x0 -1 -1 "fp1=<5k>"»
   «text (400,-950) 1 7 0 0x0 -1 -1 "fp2=<5k>"»
+  «text (400,-1100) 1 7 2 0x1000000 -1 -1 "IC=0"»
   «pin (0,0) (20,0) 1 15 0 0x0 -1 "Ref"»
   «pin (200,-200) (0,0) 1 15 0 0x0 -1 "FB"»
   «pin (1100,0) (-20,0) 1 15 0 0x0 -1 "Ctrl"»

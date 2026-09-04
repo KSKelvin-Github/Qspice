@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol Variable-Frequency-PWM-Symmetrical
+  «type: X»
+  «description: (PLECS) Variable Frequency PWM - Symmetrical Carrier»
+  «library file: |.subckt Variable-Frequency-PWM-Symmetrical m df s\nV1 n1v 0 -1\nV2 p1v 0 1\n¥1 p1v n1v sign ¥ 0 master ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT VT=-0.5 VH=0.5 TTOL=TTOL\nB1 df-limit 0 V=limit(0.001,V(df),1000)\nB2 master 0 V=idt(V(sign)*V(f-setpoint)*2,0,0)\nB3 latch 0 V=V(sign)<=0.5 & state(1,V(sign))>0.5\nB4 df-zoh 0 V=idt(0,V(df-limit),V(latch))\nB5 f-setpoint 0 V=V(df-zoh)*f\nB6 saw 0 V=V(master)*(CarrierLimits_max-CarrierLimits_min)+CarrierLimits_min\nB7 s 0 V=if(V(m)>V(saw),OutputValues_max,OutputValues_min)\n.ends Variable-Frequency-PWM-Symmetrical»
+  «shorted pins: false»
+  «rect (-500,400) (500,-400) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «text (0,650) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 0 0 0x1000000 -1 -1 "Variable-Frequency-PWM-Symmetrical"»
+  «text (0,-650) 1 0 0 0x1000000 -1 -1 "f=<1000> Nominal Carrier frequency (Hz)"»
+  «text (0,-800) 1 0 0 0x1000000 -1 -1 "CarrierLimits_min=<-1> Carrier limits [min]"»
+  «text (0,-950) 1 0 0 0x1000000 -1 -1 "CarrierLimits_max=<1> Carrier limits [max]"»
+  «text (0,-1100) 1 0 0 0x1000000 -1 -1 "OutputValues_min=<-1> Output values [off]"»
+  «text (0,-1250) 1 0 0 0x1000000 -1 -1 "OutputValues_max=<1> Output values [on]"»
+  «text (0,-1400) 1 0 2 0x1000000 -1 -1 "TTOL=<1n>"»
+  «text (0,-500) 1 0 1 0x1000000 -1 -1 "df limit : [0.001 1000]"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "freq=f*df"»
+  «pin (-500,200) (20,0) 1 7 0 0x0 -1 "m"»
+  «pin (-500,-200) (30,0) 1 7 0 0x0 -1 "df"»
+  «pin (500,0) (-20,0) 1 11 0 0x0 -1 "s"»
+»

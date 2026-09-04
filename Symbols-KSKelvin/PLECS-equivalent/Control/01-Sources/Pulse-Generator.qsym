@@ -15,10 +15,10 @@
   «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
   «text (-200,300) 1 7 0 0x1000000 -1 -1 "Xsrc1"»
   «text (-200,450) 1 7 2 0x1000000 -1 -1 "Pulse-Generator"»
-  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "Hi=<1> ;High State Output"»
-  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "Lo=<0> ;Low State Output"»
-  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "f=<1> ;Frequency (Hz))"»
-  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "DutyCycle=<0.5> ;Duty Cycle (p.u.)"»
-  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "Delay=<0> ;Phase Delay (s)"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "Hi=<1> High State Output"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "Lo=<0> Low State Output"»
+  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "f=<1> Frequency (Hz))"»
+  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "DutyCycle=<0.5> Duty Cycle (p.u.)"»
+  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "Delay=<0> Phase Delay (s)"»
   «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

@@ -14,11 +14,11 @@
   «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
   «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 15 0 0x1000000 -1 -1 "RELAY"»
-  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "OnSwitchValue=<0.1> ;Upper Threshold"»
-  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "OffSwitchValue=<-0.1> ;LowerThreshold"»
-  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "OnOutputValue=<1> ;On State Output"»
-  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "OffOutputValue=<0> ;Off State Output"»
-  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "InitialState=<0,(1)> ;Initial State : 0=Off, 1=On"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "OnSwitchValue=<0.1> Upper Threshold"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "OffSwitchValue=<-0.1> LowerThreshold"»
+  «text (-200,-600) 1 7 0 0x1000000 -1 -1 "OnOutputValue=<1> On State Output"»
+  «text (-200,-750) 1 7 0 0x1000000 -1 -1 "OffOutputValue=<0> Off State Output"»
+  «text (-200,-900) 1 7 0 0x1000000 -1 -1 "InitialState=<0;Off,(1;On)> Initial State"»
   «text (-200,-1050) 1 7 2 0x1000000 -1 -1 "TTOL=<1µ>"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»

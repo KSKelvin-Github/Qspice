@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol Op-Amp(small)
+ÿØÿÛ«symbol Op-Amp (small)
   «type: X»
   «description: (PLECS) Op-Amp»
   «library file: |.subckt Op-Amp IN+ IN- OUT+ OUT-\nB1 OUT+ OUT- V=A*V(IN+,IN-)\nR1 IN+ IN- 1e15\n.ends Op-Amp»
@@ -10,7 +10,7 @@
   «triangle (-200,200) (-200,-200) (200,0) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-4,250) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (100,250) 1 7 2 0x1000000 -1 -1 "OP-AMP"»
-  «text (100,-150) 1 7 0 0x1000000 -1 -1 "A=<1e6> ;Open-loop gain"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "A=<1e6> Open-loop gain"»
   «pin (-200,100) (20,0) 1 15 0 0x0 -1 "IN+"»
   «pin (-200,-100) (20,0) 1 15 0 0x0 -1 "IN-"»
   «pin (200,0) (-20,0) 1 15 0 0x0 -1 "OUT+"»

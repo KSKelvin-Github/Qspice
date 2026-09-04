@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PWM-SymCompl-ISO
   «type: X»
   «description: PWM Duty Control (Isolation Output) - Symmetric Complementary»
-  «library file: |.subckt PWM-SymCompl-ISO duty HS+ HS- LS+ LS-\n¥1 p1v 0 Qb ¥ sawB dutyLimit ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥2 p1v 0 Qa ¥ sawA dutyLimit ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nV4 p1v 0 1\nB1 LS+ LS- V=V(Qb)*(Vhigh-Vlow)+Vlow\nB2 HS+ HS- V=V(Qa)*(Vhigh-Vlow)+Vlow\nB3 dutyLimit 0 V=limit((1-V(duty)),1,.01)\nV3 sawA 0 pulse 0 1 Tdelay .5/frq 1n 1n 1/frq DC 0\nV5 sawB 0 pulse 0 1 .5/frq+Tdelay .5/frq 1n 1n 1/frq DC 0\n.param frq=100K\n.param ttol=1n\n.param Tdelay=0\n.param Vhigh=15\n.param Vlow=0\n.ends PWM-SymCompl-ISO»
+  «library file: |.subckt PWM-SymCompl-ISO duty HS+ HS- LS+ LS-\nV1 p1v 0 1\nV2 sawA 0 pulse 0 1 Tdelay .5/frq 1n 1n 1/frq DC 0\nV3 sawB 0 pulse 0 1 .5/frq+Tdelay .5/frq 1n 1n 1/frq DC 0\nB1 dutyLimit 0 V=limit((1-V(duty)),.99,0)\n¥1 p1v 0 Qb ¥ sawB dutyLimit ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥2 p1v 0 Qa ¥ sawA dutyLimit ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\nB2 LS+ LS- V=V(Qb)*(Vhigh-Vlow)+Vlow\nB3 HS+ HS- V=V(Qa)*(Vhigh-Vlow)+Vlow\n.ends PWM-SymCompl-ISO»
   «shorted pins: false»
   «line (-600,700) (-50,700) 0 0 0x1000000 -1 -1»
   «line (-50,800) (-50,400) 0 0 0x1000000 -1 -1»
@@ -72,11 +72,11 @@
   «ellipse (160,-255) (210,-305) 0 0 0 0x1000000 0x1000000 -1 -1»
   «text (-600,1150) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-600,1000) 1 7 0 0x1000000 -1 -1 "PWM-SymCompl-ISO"»
-  «text (-600,-800) 1 7 0 0x0 -1 -1 "Frq=<100k>"»
-  «text (-600,-950) 1 7 0 0x0 -1 -1 "Tdelay=<0>"»
-  «text (-600,-1100) 1 7 0 0x1000000 -1 -1 "Vhigh=<15>"»
-  «text (-600,-1250) 1 7 0 0x1000000 -1 -1 "Vlow=<0>"»
-  «text (-600,-1400) 1 7 0 0x1000000 -1 -1 "ttol=<1n>"»
+  «text (-600,-800) 1 7 0 0x0 -1 -1 "Frq=<100k> Switching Frequency (Hz)"»
+  «text (-600,-950) 1 7 0 0x0 -1 -1 "Tdelay=<0> Delay in operation (s)"»
+  «text (-600,-1100) 1 7 0 0x1000000 -1 -1 "Vhigh=<15> Output High Level (V)"»
+  «text (-600,-1250) 1 7 0 0x1000000 -1 -1 "Vlow=<0> Output Low Level (V)"»
+  «text (-600,-1400) 1 7 0 0x1000000 -1 -1 "TTOL=<1n> Temporal tolerance (s)"»
   «text (-470,640) 0.794 7 1 0x1000000 -1 -1 "0-1V"»
   «pin (-600,700) (20,30) 1 6 0 0x0 -1 "duty"»
   «pin (600,700) (-20,0) 1 10 0 0x0 -1 "HS+"»

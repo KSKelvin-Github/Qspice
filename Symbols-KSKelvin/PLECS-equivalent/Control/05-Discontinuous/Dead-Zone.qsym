@@ -14,8 +14,8 @@
   «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
   «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 15 0 0x1000000 -1 -1 "DEAD-ZONE"»
-  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "lower=<-eps> ;Lower dead zone limit"»
-  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "upper=<eps> ;Upper dead zone limit"»
+  «text (-200,-300) 1 7 0 0x1000000 -1 -1 "lower=<-eps> Lower dead zone limit"»
+  «text (-200,-450) 1 7 0 0x1000000 -1 -1 "upper=<eps> Upper dead zone limit"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

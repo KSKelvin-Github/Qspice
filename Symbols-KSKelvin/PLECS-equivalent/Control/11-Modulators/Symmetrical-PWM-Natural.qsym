@@ -6,7 +6,7 @@
   «rect (-300,200) (300,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
   «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 0 0 0x1000000 -1 -1 "Symmetrical-PWM-Natural"»
-  «text (0,-300) 1 0 0 0x1000000 -1 -1 "sampling=<(-1),0,1> Natural -1:starts at min | 0:starts at center | 1:starts at max"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "sampling=<(-1;[starts at min]),0;[starts at center],1;[starts at max]> Natural"»
   «text (0,-450) 1 0 0 0x1000000 -1 -1 "fc=<1000> Carrier frequency (Hz)"»
   «text (0,-600) 1 0 0 0x1000000 -1 -1 "carrier_limits_min=<-1> Carrier limits min"»
   «text (0,-750) 1 0 0 0x1000000 -1 -1 "carrier_limits_max=<1> Carrier limits max"»

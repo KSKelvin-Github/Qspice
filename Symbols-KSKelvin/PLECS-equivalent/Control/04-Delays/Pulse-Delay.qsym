@@ -17,8 +17,8 @@
   «triangle (120,-60) (80,-40) (80,-80) 0 0 0x0 0x0 -1 -1»
   «text (0,300) 1 15 0 0x0 -1 -1 "X1"»
   «text (0,450) 1 15 2 0x1000000 -1 -1 "PULSE-DELAY"»
-  «text (-200,-300) 1 7 0 0x0 -1 -1 "T_d=<5e-3> ;Time delay(s)"»
-  «text (-200,-450) 1 7 0 0x0 -1 -1 "y_init=<0> ;Initial output"»
+  «text (-200,-300) 1 7 0 0x0 -1 -1 "T_d=<5e-3> Time delay(s)"»
+  «text (-200,-450) 1 7 0 0x0 -1 -1 "y_init=<0> Initial output"»
   «pin (-200,0) (0,0) 1 0 0 0x0 -1 "in"»
   «pin (200,0) (0,0) 1 0 0 0x0 -1 "out"»
 »

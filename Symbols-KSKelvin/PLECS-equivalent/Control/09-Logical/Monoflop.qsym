@@ -16,7 +16,7 @@
   «triangle (-20,10) (-20,70) (-80,40) 0 0 0x0 0x0 -1 -1»
   «text (0,450) 1 15 0 0x1000000 -1 -1 "X1"»
   «text (0,300) 1 0 0 0x1000000 -1 -1 "MONOFLOP"»
-  «text (0,-300) 1 0 0 0x1000000 -1 -1 "Trigger=<(0),1,2> Trigger Type - 0:rising, 1:falling, 2:level"»
+  «text (0,-300) 1 0 0 0x1000000 -1 -1 "Trigger=<(0;rising),1;falling,2;level> Trigger Type"»
   «text (0,-500) 1 0 0 0x1000000 -1 -1 "Duration=<1> Pulse duration source"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (200,0) (0,0) 1 15 0 0x0 -1 "out"»

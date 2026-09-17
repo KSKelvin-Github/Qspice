@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol DC-Machine
   «type: X»
   «description: (PLECS) DC Machine»
-  «library file: |.subckt DC-Machine a+ a- f+ f- wm Te\nRa a+ N01 Ra\nLa N01 N03 La IC=ia0\nB_Ea N02 a- V=Laf*I(If)*V(wm)\nRf N05 f+ Rf\nLf N04 N05 Lf IC=if0\nV´If N04 f- 0\nV´Ia N03 N02 0\nB_Te 0 N06 I=Laf*I(If)*I(Ia)\nC1 wm 0 J IC=wm0\nV´ITe N06 wm 0\nB1 Te 0 V=I(ITe)\nB_Friction wm 0 I=F*V(wm)\n.ends DC-Machine»
+  «library file: |.subckt DC-Machine a+ a- f+ f- wm Te\nRa a+ N01 Ra\nLa N01 N03 La IC=ia0\nB_Ea N02 a- V=Laf*I(If)*V(wm)\nRf N05 f+ Rf\nLf N04 N05 Lf IC=if0\nV´If N04 f- 0\nV´Ia N03 N02 0\nB_Te 0 wm I=Laf*I(If)*I(Ia)\nC1 wm 0 J IC=wm0\nB1 Te 0 V=Laf*I(If)*I(Ia)\nB_Friction wm 0 I=F*V(wm)\n.ends DC-Machine»
   «shorted pins: false»
   «line (-300,-400) (-180,-400) 0 0 0x1000000 -1 -1»
   «line (300,-400) (180,-400) 0 0 0x1000000 -1 -1»

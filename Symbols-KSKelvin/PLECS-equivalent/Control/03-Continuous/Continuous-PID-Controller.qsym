@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Continuous-PID-Controller
   «type: X»
   «description: (PLECS) Continuous PID Controller»
-  «library file: |.subckt Continuous-PID-Controller e u reset\nB1 ep 0 V=Kp*V(e)\nB3 ei 0 V=Ki*idt(V(e),x0,V(Reset))\nB2 ed 0 V=Kf*(Kd*V(e)-idt(V(ed)))\nB4 ud 0 V=V(ep)+V(ed)+V(ei)\nB5 u 0 V=limit(V(ud),up_limit,low_limit)\n.ends Continuous-PID-Controller»
+  «library file: |.subckt Continuous-PID-Controller e u reset\nB1 ep 0 V=Kp*V(e)\nB3 ei 0 V=if(aw_method==0,idt(Ki*V(e),x0,V(Reset)), if(aw_method==1,idt(Ki*V(e)+Kbc*V(u,ud),x0,V(Reset)), Ki * idt( if( (V(u) >= up_limit & V(e)>0 ) | (V(u) <= low_limit & V(e)<0), 0, V(e) ), x0, V(Reset) ) ) )\nB2 ed 0 V=Kf*(Kd*V(e)-idt(V(ed)))\nB4 ud 0 V=V(ep)+V(ed)+V(ei)\nB5 u 0 V=limit(V(ud),up_limit,low_limit)\n.ends Continuous-PID-Controller»
   «shorted pins: false»
   «line (-800,0) (-600,0) 0 0 0x1000000 -1 -1»
   «line (-700,-500) (-700,450) 0 0 0x1000000 -1 -1»
@@ -59,10 +59,12 @@
   «text (-550,600) 0.794 7 0 0x1000000 -1 -1 "Kp=<1> Proportional gain"»
   «text (-550,-350) 0.794 7 0 0x1000000 -1 -1 "Ki=<1> Integral gain"»
   «text (-550,150) 0.794 7 0 0x1000000 -1 -1 "Kd=<1> Derivative gain"»
-  «text (-50,150) 0.794 7 0 0x1000000 -1 -1 "Kf=<1> Derivative filter coefficient"»
-  «text (-800,-800) 1 7 0 0x1000000 -1 -1 "x0=<0> Initial condition"»
-  «text (-800,-950) 1 7 0 0x1000000 -1 -1 "up_limit=<1e12> Upper saturation limit"»
-  «text (-800,-1100) 1 7 0 0x1000000 -1 -1 "low_limit=<-1e12> Lower saturation limit"»
+  «text (0,150) 0.794 7 0 0x1000000 -1 -1 "Kf=<1> Derivative filter coefficient"»
+  «text (0,-800) 1 15 0 0x1000000 -1 -1 "x0=<0> Initial condition"»
+  «text (0,-950) 1 15 0 0x1000000 -1 -1 "up_limit=<1e12> Upper saturation limit"»
+  «text (0,-1100) 1 15 0 0x1000000 -1 -1 "low_limit=<-1e12> Lower saturation limit"»
+  «text (0,-1250) 1 15 0 0x1000000 -1 -1 "aw_method=<(0;[none]),1;[Back-Calculation],2;[Conditional Integration]> Anti-windup method 0: none, 1:Back-Calculation, 2: Conditional Integration"»
+  «text (0,-1400) 1 15 2 0x1000000 -1 -1 "Kbc=<1> Back-calculation gain Kbc"»
   «pin (-800,0) (20,0) 1 15 0 0x0 -1 "e"»
   «pin (900,0) (-20,0) 1 15 0 0x0 -1 "u"»
   «pin (0,-700) (120,0) 1 14 0 0x0 -1 "reset" "0"»

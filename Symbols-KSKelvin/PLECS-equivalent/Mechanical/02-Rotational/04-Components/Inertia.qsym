@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol Inertia
+  «type: X»
+  «description: (PLECS) Inertia»
+  «library file: |.subckt Inertia t1 t2\nC1 t1 0 J IC=w0\nV1 t1 t2 0\n.ends Inertia»
+  «shorted pins: false»
+  «line (-120,-130) (-120,130) 0 0 0xff0080 -1 -1»
+  «line (120,-130) (120,130) 0 0 0xff0080 -1 -1»
+  «line (200,0) (150,0) 0 0 0xff0080 -1 -1»
+  «line (-200,0) (-150,0) 0 0 0xff0080 -1 -1»
+  «rect (-150,-150) (150,150) 0 0 0 0xff0080 0x1000000 -1 0 -1»
+  «text (0,400) 1 15 0 0x1000000 -1 -1 "XME1"»
+  «text (0,250) 1 15 0 0x1000000 -1 -1 "Inertia"»
+  «text (0,-250) 1 15 0 0x1000000 -1 -1 "J=<1> Moment of inertia (kgm^2)"»
+  «text (0,-400) 1 15 0 0x1000000 -1 -1 "w0=<0> Initial speed (rad/s) "»
+  «pin (-200,0) (0,0) 1 47 0 0x0 -1 "t1"»
+  «pin (200,0) (0,0) 1 47 0 0x0 -1 "t2"»
+»

@@ -16,7 +16,8 @@
 * This will bundle and download everything, including the guidelines, projects, and the symbol library
 
 ## Guideline
-This section provides a quick start tutorial and an in-depth study of usage and device model guidelines for QSpice
+This section provides a quick start tutorial and an in-depth study of usage and device model guidelines for QSpice<br>
+This is direct download link
 * [Qspice - Entry User Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Entry%20User%20Guide%20by%20KSKelvin.pdf)<br> - Beginner tutorial for Qspice
 
 

@@ -35,6 +35,10 @@ Download KSKelvin symbols (.qsym) for QSpice—custom symbols designed to ease t
 
 ## Qspice forum
 * Qspice beginner tutorial - (https://forum.qorvo.com/t/beginner-tutorial-for-qspice-community-sharing/25421)
+* Delayed Pulse Train (Digital Delay .DLL) - (https://forum.qorvo.com/t/delayed-pulse-train-for-conceptual-logic-in-qspice/25996)
+* General Guide to Import Infineon SPICE model - (https://forum.qorvo.com/t/general-guide-to-import-an-infineon-spice-mosfet-model/25212)
+* General Guide to Import TI SPICE model - (https://forum.qorvo.com/t/general-guide-to-import-a-ti-spice-model/23993)
+* .net S-parameters simulation - (https://forum.qorvo.com/t/net-network-parameters-simulation-with-touchstone-s2p-file/24862)
 
 ## Other Recommended Sites
 * [QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)<br>- Resource for C++ blocks (DLL blocks) and mini-tools for QSpice (e.g., QColorPrefs for changing the waveform viewer color scheme)

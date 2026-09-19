@@ -81,22 +81,20 @@
   «ellipse (-550,150) (-450,50) 0 0 0 0x1000000 0xff0012 -1 -1»
   «text (1200,1050) 1 11 0 0x1000000 -1 -1 "X1"»
   «text (1200,900) 1 11 0 0x1000000 -1 -1 "PSM-PhaseShift"»
-  «text (-1100,-1300) 1 7 0 0x0 -1 -1 "mode=<0,(1)>; phase range"»
-  «text (-1100,-1450) 1 7 0 0x0 -1 -1 "fsw=<50k>; switching freq"»
-  «text (-1100,-1600) 1 7 2 0x1000000 -1 -1 "Tdelay=<0>; startup delay"»
-  «text (-1100,-1750) 1 7 2 0x1000000 -1 -1 "TTOL=<1n>"»
-  «text (-1100,-1900) 1 7 2 0x1000000 -1 -1 "InitA=<(0),1>; initial value of OutA"»
-  «text (-1100,-2050) 1 7 2 0x1000000 -1 -1 "InitB=<(0),1>; initial value of OutB"»
-  «text (-1100,-2200) 1 7 2 0x1000000 -1 -1 "InitC=<(0),1>; initial value of OutC"»
-  «text (-1100,-2350) 1 7 2 0x1000000 -1 -1 "InitD=<(0),1>; initial value of OutD"»
+  «text (-1100,-1000) 1 7 0 0x0 -1 -1 "mode=<0;[-90° to 90°],(1;[0° to 180°])> phase range"»
+  «text (-1100,-1150) 1 7 0 0x0 -1 -1 "fsw=<50k> switching freq"»
+  «text (-1100,-1300) 1 7 2 0x1000000 -1 -1 "Tdelay=<0> startup delay"»
+  «text (-1100,-1450) 1 7 2 0x1000000 -1 -1 "TTOL=<1n>"»
+  «text (-1100,-1600) 1 7 2 0x1000000 -1 -1 "InitA=<(0),1> initial value of OutA"»
+  «text (-1100,-1750) 1 7 2 0x1000000 -1 -1 "InitB=<(0),1> initial value of OutB"»
+  «text (-1100,-1900) 1 7 2 0x1000000 -1 -1 "InitC=<(0),1> initial value of OutC"»
+  «text (-1100,-2050) 1 7 2 0x1000000 -1 -1 "InitD=<(0),1> initial value of OutD"»
   «text (270,400) 1 0 1 0x1000000 -1 -1 "D"»
   «text (-800,0) 1 0 1 0x1000000 -1 -1 "OSC"»
   «text (270,-200) 1 0 1 0x1000000 -1 -1 "D"»
   «text (-700,300) 1 0 1 0x1000000 -1 -1 "LL"»
   «text (-1030,-720) 0.794 7 1 0x1000000 -1 -1 "0-1V (min° to max°) by mode"»
   «text (-1030,-820) 0.794 7 1 0x1000000 -1 -1 "Phase : OutA to OutC"»
-  «text (-1107,-1000) 1 7 1 0x1000000 -1 -1 "mode=0 from -90° to 90°"»
-  «text (-1100,-1150) 1 7 1 0x1000000 -1 -1 "mode=1 from  0° to 180°"»
   «pin (-1100,-500) (20,0) 1 5 0 0x0 -1 "Ctrl"»
   «pin (-300,800) (0,-10) 1 13 0 0x0 -1 "Sawtooth"»
   «pin (-900,800) (0,-10) 1 13 0 0x0 -1 "CLKo"»

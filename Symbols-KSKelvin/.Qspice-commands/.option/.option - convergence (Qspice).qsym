@@ -47,7 +47,7 @@
   «text (-700,-2200) 1 7 0 0x0 -1 -1 "Trtol=<2.5> ; Truncation error overestimation factor"»
   «text (-700,-2350) 1 7 0 0x0 -1 -1 "Trtol2=<0> ; Another dimensionless truncation error guidance"»
   «text (-700,-2700) 1 7 0 0x0 -1 -1 "Fastmath=<int[0:1](1)> ; Preferred 64 bits (1) or 80 bits solver"»
-  «text (-700,-2850) 1 7 0 0x0 -1 -1 "Method=<trap> ; Trapezoidal(trap) / Gear(gear)"»
+  «text (-700,-2850) 1 7 0 0x0 -1 -1 "Method=<(trap),gear> ; Trapezoidal(trap) / Gear(gear)"»
   «text (-700,-3000) 1 7 0 0x0 -1 -1 "MaxOrd=<int[1:2](2)> ; Integration order"»
   «text (-700,-3150) 1 7 0 0x0 -1 -1 "Feather=<0> ; Damping factor for Trapezoidal Integration"»
   «text (-700,-250) 1 7 1 0x1000000 -1 -1 "Convergence (Voltage/Current)"»

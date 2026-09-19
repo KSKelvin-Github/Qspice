@@ -1,0 +1,28 @@
+ÿØÿÛ«symbol PMDC
+  «type: X»
+  «description: Permanent Magnet DC Machine (PMDC) - motor/generator»
+  «library file: |.subckt PMDC a+ a- wm Te\nRa N02 N01 Ra\nLa N01 N03 La IC=0\nB_Ea N03 a- V=Ke*V(wm)\nB_Te 0 wm I=Ke*I(Ia)\nC1 wm 0 J IC=0\nV´Ia a+ N02 0\nB3 Te 0 V=Ke*I(Ia)\n.param Ke=Vt/(n*2*pi/60)\n.if (Verbose==1)\n.display PMDC Ke='Ke'\n.endif\n.ends PMDC»
+  «shorted pins: false»
+  «line (400,0) (-100,0) 0 0 0xff00ff -1 -1»
+  «line (400,-200) (100,-200) 0 0 0xff00ff -1 -1»
+  «line (-400,300) (-100,300) 0 0 0x1000000 -1 -1»
+  «line (-100,300) (-100,250) 0 0 0x1000000 -1 -1»
+  «line (-100,-250) (-100,-300) 0 0 0x1000000 -1 -1»
+  «line (-100,-300) (-400,-300) 0 0 0x1000000 -1 -1»
+  «line (100,-200) (45,-140) 0 0 0xff00ff -1 -1»
+  «rect (-200,250) (0,-250) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (-300,200) (100,-200) 0 0 0 0x1000000 0xffe6c8 -1 -1»
+  «ellipse (-370,380) (-320,330) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (0,600) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 15 0 0x1000000 -1 -1 "PMDC"»
+  «text (0,-400) 1 15 0 0x1000000 -1 -1 "Ra=<1.5> Armature resistance (ohms)"»
+  «text (0,-550) 1 15 0 0x1000000 -1 -1 "La=<0.01> Armature inductance (H)"»
+  «text (0,-700) 1 15 0 0x1000000 -1 -1 "J=<2u> Moment of Inertia (Nms^2)"»
+  «text (0,-850) 1 15 0 0x1000000 -1 -1 "Vt=<3> (no load) - terminal voltage"»
+  «text (0,-1000) 1 15 0 0x1000000 -1 -1 "n=<16000> (no load) - mechanical speed, in rpm"»
+  «text (0,-1150) 1 15 0 0x1000000 -1 -1 "Verbose=<1>"»
+  «pin (-400,300) (20,0) 1 15 0 0x0 -1 "a+"»
+  «pin (-400,-300) (20,0) 1 15 0 0x0 -1 "a-"»
+  «pin (400,0) (-20,100) 1 11 0 0x0 -1 "wm"»
+  «pin (400,-200) (-20,80) 1 11 0 0x0 -1 "Te"»
+»

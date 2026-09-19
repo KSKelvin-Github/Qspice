@@ -31,7 +31,7 @@
   «text (-700,-1300) 1 7 1 0x1000000 -1 -1 "maxstep=<value> ; Maximum timestep size"»
   «text (-700,-550) 1 7 1 0x1000000 -1 -1 "Trtol=<7> ; Truncation error overestimation factor"»
   «text (-700,-400) 1 7 0 0x0 -1 -1 "Fastmath=<int[0:1](0)> ; Preferred 64 bits (1) or 80 bits solver"»
-  «text (-700,-700) 1 7 1 0x1000000 -1 -1 "Method=<gear> ; Trapezoidal(trap) / Gear(gear)"»
+  «text (-700,-700) 1 7 1 0x1000000 -1 -1 "Method=<(gear),trap> ; Trapezoidal(trap) / Gear(gear)"»
   «text (-700,-250) 1 7 1 0x1000000 -1 -1 "Timestep too small verify sequence"»
   «text (50,50) 1.36 0 1 0x1000000 -1 -1 "Options"»
   «text (100,300) 0.857 15 1 0x1000000 -1 -1 "Convergence"»

@@ -1,0 +1,29 @@
+ÿØÿÛ«symbol CD4024-7-Stage-Ripple-Counter
+  «type: X»
+  «description: CD4024 7-Stage Ripple-Carry Binary Counter/Divider»
+  «library file: |.subckt CD4024 Vdd Vss CLK RESET Q1 Q2 Q3 Q4 Q5 Q6 Q7\n¥C Vdd Vss ¥ ¬C¬L¬K CLK ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\n¥R Vdd Vss R ¥ RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL TD=TD\n¥1 Vdd Vss Q1 ¥11 Vdd ¬C¬L¬K Vss R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL TD=TD\n¥2 Vdd Vss Q2 ¥12 Q1 ¬C¬L¬K Vss R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL TD=TD\n¥3 Vdd Vss Q3 ¥13 Q2 ¬C¬L¬K Vss R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL TD=TD\n¥4 Vdd Vss Q4 ¥14 Q3 ¬C¬L¬K Vss R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL TD=TD\n¥5 Vdd Vss Q5 ¥15 Q4 ¬C¬L¬K Vss R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL TD=TD\n¥6 Vdd Vss Q6 ¥16 Q5 ¬C¬L¬K Vss R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL TD=TD\n¥7 Vdd Vss Q7 ¥17 Q6 ¬C¬L¬K Vss R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP IC=0 TTOL=TTOL TD=TD\n.ends CD4024»
+  «shorted pins: false»
+  «line (-500,500) (-400,400) 0 0 0x1000000 -1 -1»
+  «line (-400,400) (-500,300) 0 0 0x1000000 -1 -1»
+  «line (-30,320) (-30,470) 0 0 0x1000000 -1 -1»
+  «line (-30,320) (20,320) 0 0 0x1000000 -1 -1»
+  «line (-80,420) (-30,370) 0 0 0x1000000 -1 -1»
+  «line (-30,370) (20,420) 0 0 0x1000000 -1 -1»
+  «line (-30,470) (-80,470) 0 0 0x1000000 -1 -1»
+  «rect (-500,-600) (500,800) 0 0 0 0xff0000 0xffe6c8 -1 0 -1»
+  «text (500,900) 1 11 0 0x1000000 -1 -1 "X1"»
+  «text (200,-700) 1 7 0 0x1000000 -1 -1 "CD4024"»
+  «text (200,-850) 1 7 0 0x1000000 -1 -1 "TD=<0> Propagation Delay (s)"»
+  «text (200,-1000) 1 7 0 0x1000000 -1 -1 "TTOL=<1u> Temporal tolerance (s)"»
+  «pin (0,800) (20,0) 1 15 0 0x0 -1 "Vdd"»
+  «pin (0,-600) (20,0) 1 15 0 0x0 -1 "Vss"»
+  «pin (-500,400) (120,0) 1 7 0 0x0 -1 "CLK"»
+  «pin (-500,-200) (20,0) 1 7 0 0x0 -1 "RESET"»
+  «pin (500,700) (-20,0) 1 11 0 0x0 -1 "Q1"»
+  «pin (500,500) (-20,0) 1 11 0 0x0 -1 "Q2"»
+  «pin (500,300) (-20,0) 1 11 0 0x0 -1 "Q3"»
+  «pin (500,100) (-20,0) 1 11 0 0x0 -1 "Q4"»
+  «pin (500,-100) (-20,0) 1 11 0 0x0 -1 "Q5"»
+  «pin (500,-300) (-20,0) 1 11 0 0x0 -1 "Q6"»
+  «pin (500,-500) (-20,0) 1 11 0 0x0 -1 "Q7"»
+»

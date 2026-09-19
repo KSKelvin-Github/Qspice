@@ -33,6 +33,9 @@ This section contains additional materials related to SPICE simulation
 ## Symbols-KSKelvin
 Download KSKelvin symbols (.qsym) for QSpice—custom symbols designed to ease the simulation process
 
+## Qspice forum
+* Qspice beginner tutorial - (https://forum.qorvo.com/t/subcircuit-schematic-designator/16930/8)
+
 ## Other Recommended Sites
 * [QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)<br>- Resource for C++ blocks (DLL blocks) and mini-tools for QSpice (e.g., QColorPrefs for changing the waveform viewer color scheme)
 * [QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE)<br>- Power electronics projects, with a focus on digital control using C++ blocks.

@@ -18,7 +18,7 @@
 ## Guideline
 Unofficial quick start tutorial and in-depth study of usage and device model guidelines for QSpice (direct pdf download link)<br>
 * [Qspice - Entry User Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Entry%20User%20Guide%20by%20KSKelvin.pdf)<br> - Beginner tutorial for Qspice
-* [Qspice - General Reference Guide by KSKelvin.pdf] (https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20General%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Explains hierarchical block and subcircuit symbols, how to create them<br> - About Qspice Schematic Viewer, Waveform Viewer, Symbol Editor
+* [Qspice - General Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20General%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Explains hierarchical block and subcircuit symbols, how to create them<br> - About Qspice Schematic Viewer, Waveform Viewer, Symbol Editor
 * [Qspice - Command Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Command%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Explains Qspice dot command<br> - About the use of Batch command
 
 ## Matlab2Qspice

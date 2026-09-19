@@ -18,8 +18,12 @@
 ## Guideline
 Unofficial quick start tutorial and in-depth study of usage and device model guidelines for QSpice (direct pdf download link)<br>
 * [Qspice - Entry User Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Entry%20User%20Guide%20by%20KSKelvin.pdf)<br> - Beginner tutorial for Qspice
-* [Qspice - General Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20General%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Explains hierarchical block and subcircuit symbols, how to create them<br> - About Qspice Schematic Viewer, Waveform Viewer, Symbol Editor
-* [Qspice - Command Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Command%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Explains Qspice dot command<br> - About the use of Batch command
+* [Qspice - General Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20General%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Hierarchical block and subcircuit symbols, how to create them<br> - Qspice Schematic Viewer, Waveform Viewer, Symbol Editor
+* [Qspice - Command Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Command%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Qspice dot(.) command<br> - Batch command
+* [Qspice - Device Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Device%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Qspice devices complete reference
+* [Qspice - Bode Frequency Response Analysis (.bode).pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Bode%20Frequency%20Response%20Analysis%20(.bode).pdf)<br> - .bode command for frequence response analysis (FRA)
+* [Qspice - Model Generators Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Model%20Generators%20Guide%20by%20KSKelvin.pdf)<br> - Diode and MOSFET model generators
+* [Qspice - How Time Step Works.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Advanced%20Topics/Qspice%20-%20How%20Time%20Step%20Works.pdf)<br> - How timestep work in Qspice: maxstep, TTOL
 
 ## Matlab2Qspice
 Use Matlab to create netlists and output data files for QSpice, as well as to simulate and plot the results

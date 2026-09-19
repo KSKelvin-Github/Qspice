@@ -1,55 +1,78 @@
-# Qspice
-* QSpice Installer Download [Qorvo Website]: (https://www.qorvo.com/design-hub/design-tools/interactive/qspice)
-* QSpice Installer Download [Direct URL - Official]: (https://getqspice.com/InstallQSPICE.exe)
-* QSpice Forum : (https://forum.qorvo.com/c/qspice/)
+# Qspice Resources & Guidelines
 
-## Cloning with Github Desktop
-* Download GitHub Desktop from GitHub : https://desktop.github.com/download/ , you may need to create a GitHub account (free)
-* To download a repository, follow this : https://www.youtube.com/watch?v=PoZNIbs_wx8
-* Use this URL path to clone KSKelvin-Github/Qspice: https://github.com/KSKelvin-Github/Qspice.git
-* Once cloning is finished, in GitHub Desktop, navigate to Repository > Show in Explorer to access the saved directory
-* In the future, to update files, open GitHub and click on Pull origin or go to Repository > Pull from the menu.
+Welcome to the comprehensive repository for **Qspice** tutorials, reference manuals, custom symbol libraries, and simulation examples curated by KSKelvin.
 
-## One Click Download Everything! (No Github Desktop is required)
-* Go to https://github.com/KSKelvin-Github/Qspice
-* Locate the green '<> Code' button, click it, and select 'Download ZIP'
-* This will bundle and download everything, including the guidelines, projects, and the symbol library
+---
 
-## Guideline
-Unofficial quick start tutorial and in-depth study of usage and device model guidelines for QSpice (direct pdf download link)<br>
-* [Qspice - Entry User Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Entry%20User%20Guide%20by%20KSKelvin.pdf)<br> - Beginner tutorial for Qspice
-* [Qspice - General Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20General%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Hierarchical block and subcircuit symbols, how to create them<br> - Qspice Schematic Viewer, Waveform Viewer, Symbol Editor
-* [Qspice - Command Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Command%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Qspice dot(.) command<br> - Batch command
-* [Qspice - Device Reference Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Device%20Reference%20Guide%20by%20KSKelvin.pdf)<br> - Qspice devices complete reference
-* [Qspice - Bode Frequency Response Analysis (.bode).pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Bode%20Frequency%20Response%20Analysis%20(.bode).pdf)<br> - .bode command for frequence response analysis (FRA)
-* [Qspice - Model Generators Guide by KSKelvin.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Model%20Generators%20Guide%20by%20KSKelvin.pdf)<br> - Diode and MOSFET model generators
-* [Qspice - How Time Step Works.pdf](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Advanced%20Topics/Qspice%20-%20How%20Time%20Step%20Works.pdf)<br> - How timestep work in Qspice: maxstep, TTOL
+## 🔗 Official Qspice Links
+* 📥 [Download Qspice (Official Qorvo Website)](https://www.qorvo.com/design-hub/design-tools/interactive/qspice)
+* ⚡ [Direct Installer Download (.exe)](https://getqspice.com/InstallQSPICE.exe)
+* 💬 [Official Qspice Forum](https://forum.qorvo.com/c/qspice/)
 
-## Matlab2Qspice
-Use Matlab to create netlists and output data files for QSpice, as well as to simulate and plot the results
+---
 
-## Projects
-My QSpice projects
+## 📂 Repository Contents
 
-## SPICE-library
-Libraries of BJT, Diode, JFET, and MOSFET models (among others) featuring .model statements collected from LTspice, LTwiki, VolVal, and other sources
+| Folder | Description |
+| :--- | :--- |
+| `Guideline/` | Comprehensive PDF guides covering Qspice basics to advanced topics. |
+| `Symbols-KSKelvin/` | Custom `.qsym` symbol files for Qspice. |
+| `SPICE-library/` | SPICE model collections (`.model`) for BJTs, Diodes, JFETs, and MOSFETs. |
+| `Projects/` | Example circuit designs and simulation projects. |
+| `Matlab2Qspice/` | Scripts for generating netlists, automating simulations, and plotting results via MATLAB. |
+| `Supplementary/` | Additional reference materials and notes on SPICE simulation. |
 
-## Supplementary
-This section contains additional materials related to SPICE simulation
+---
 
-## Symbols-KSKelvin
-Download KSKelvin symbols (.qsym) for QSpice—custom symbols designed to ease the simulation process
+## 📚 User Guidelines & Reference Manuals
 
-## Qspice forum
-* Qspice beginner tutorial<br> - (https://forum.qorvo.com/t/beginner-tutorial-for-qspice-community-sharing/25421)
-* Delayed Pulse Train (Digital Delay .DLL)<br> - (https://forum.qorvo.com/t/delayed-pulse-train-for-conceptual-logic-in-qspice/25996)
-* .net S-parameters simulation<br> - (https://forum.qorvo.com/t/net-network-parameters-simulation-with-touchstone-s2p-file/24862)
-* General Guide to Import Infineon SPICE model<br> - (https://forum.qorvo.com/t/general-guide-to-import-an-infineon-spice-mosfet-model/25212)
-* General Guide to Import TI SPICE model<br> - (https://forum.qorvo.com/t/general-guide-to-import-a-ti-spice-model/23993)
+Download these detailed PDF guides to learn Qspice usage and device modeling:
 
-## Other Recommended Sites
-* [QSpice Forum @RDunn's Github repo](https://github.com/robdunn4/QSpice)<br>- Resource for C++ blocks (DLL blocks) and mini-tools for QSpice (e.g., QColorPrefs for changing the waveform viewer color scheme)
-* [QSpice Forum @physicboy's Github repo](https://github.com/physicboy/QSPICE)<br>- Power electronics projects, with a focus on digital control using C++ blocks.
-* [QSpice Forum @MarcosAlonso's GitLab repo](https://github.com/marcosalonsoelectronics/website) | [MarcosAlonso youtube channel](https://www.youtube.com/@MarcosAlonsoElectronics)<br>- General resources and teaching materials for QSpice
-* [Qspice Forum @masashi.nogawa's Github repo](https://github.com/Qorvo/PyQSPICE) <br>- PyQSpice resources
-* [QSpice Forum @Mgyger's GitLab repo](https://gitlab.com/mgyger/qspice-symbols/) <br>- A collection of QSpice symbols
+| Guide Name | Description | Direct Download |
+| :--- | :--- | :---: |
+| **Entry User Guide** | Beginner tutorial for getting started with Qspice. | [Download PDF](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Entry%20User%20Guide%20by%20KSKelvin.pdf) |
+| **General Reference Guide** | Covers hierarchical blocks, subcircuits, Symbol Editor, and viewers. | [Download PDF](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20General%20Reference%20Guide%20by%20KSKelvin.pdf) |
+| **Command Reference Guide** | Guide to dot (`.`) commands and batch simulation scripting. | [Download PDF](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Command%20Reference%20Guide%20by%20KSKelvin.pdf) |
+| **Device Reference Guide** | Complete reference for Qspice built-in device models. | [Download PDF](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Device%20Reference%20Guide%20by%20KSKelvin.pdf) |
+| **Bode Analysis Guide** | Frequency response analysis using the `.bode` command. | [Download PDF](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Bode%20Frequency%20Response%20Analysis%20(.bode).pdf) |
+| **Model Generators Guide** | How to use built-in Diode and MOSFET model generators. | [Download PDF](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Qspice%20-%20Model%20Generators%20Guide%20by%20KSKelvin.pdf) |
+| **How Time Step Works** | Deep-dive into timesteps, `maxstep`, and `TTOL`. | [Download PDF](https://github.com/KSKelvin-Github/Qspice/raw/main/Guideline/Advanced%20Topics/Qspice%20-%20How%20Time%20Step%20Works.pdf) |
+
+---
+
+## ⚡ How to Download & Setup
+
+<details>
+<summary><b>Option 1: Quick Download (ZIP)</b></summary>
+
+1. Click the green **`<> Code`** button at the top of the repository page.
+2. Select **`Download ZIP`**.
+3. Extract the ZIP file to access all guidelines, symbol libraries, and project files.
+</details>
+
+<details>
+<summary><b>Option 2: Clone via GitHub Desktop</b></summary>
+
+1. Download and install [GitHub Desktop](https://desktop.github.com/download/).
+2. In GitHub Desktop, clone using the URL: `https://github.com/KSKelvin-Github/Qspice.git`
+3. Go to **Repository > Show in Explorer** to view your local files.
+4. Click **Pull origin** anytime to fetch the latest updates.
+</details>
+
+---
+
+## 💡 Recommended Community Resources
+
+* **Forum Topics:**
+  * [Qspice Beginner Tutorial](https://forum.qorvo.com/t/beginner-tutorial-for-qspice-community-sharing/25421)
+  * [Delayed Pulse Train (Digital Delay .DLL)](https://forum.qorvo.com/t/delayed-pulse-train-for-conceptual-logic-in-qspice/25996)
+  * [.net S-Parameters Simulation (Touchstone .s2p)](https://forum.qorvo.com/t/net-network-parameters-simulation-with-touchstone-s2p-file/24862)
+  * [Guide to Importing Infineon SPICE Models](https://forum.qorvo.com/t/general-guide-to-import-an-infineon-spice-mosfet-model/25212)
+  * [Guide to Importing TI SPICE Models](https://forum.qorvo.com/t/general-guide-to-import-a-ti-spice-model/23993)
+
+* **Community Repositories:**
+  * [RDunn's QSpice Repo](https://github.com/robdunn4/QSpice) – C++ / DLL blocks and custom utilities (e.g., QColorPrefs).
+  * [physicboy's QSPICE Repo](https://github.com/physicboy/QSPICE) – Power electronics & digital control examples using C++.
+  * [PyQSPICE (by masashi.nogawa)](https://github.com/Qorvo/PyQSPICE) – Official Python interface for Qspice.
+  * [Mgyger's Symbol Collection](https://gitlab.com/mgyger/qspice-symbols/) – Community symbol collection.
+  * [Marcos Alonso's GitHub Repo](https://github.com/marcosalonsoelectronics/website) & [YouTube Channel](https://www.youtube.com/@MarcosAlonsoElectronics) – Educational resources and tutorials.

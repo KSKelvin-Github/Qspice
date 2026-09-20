@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol TNY267
+  «type: X»
+  «description: TNY267 Tiny Switch II by Valentin Volodin (Qspice Version from KSKelvin)»
+  «library file: |.subckt TNY267 BP EN D S\n¥A2 Q5.8V 0 N021 ¥ N016 ¥ ¥ ¥ N024 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=75n\n¥A3 Q5.8V 0 ¥ N024 N025 N020 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=100n\n¥A4 Q5.8V 0 ¥ N025 N015 ¥ ¥ ¥ N017 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=50n\n¥A6 Q5.8V 0 N020 ¥ N002 ¥ ¥ N007 N023 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=50n\n¥A7 Q5.8V 0 N023 ¥ N002 ¥ ¥ ¥ N002 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=50n\nI1 S N011 PULSE(379u 403u 0 0.5m 0.5m 0 1m)\nC1 N011 S 1n\nR4 N011 N012 10\nC2 N012 S 10p\n¥A9 Q5.8V 0 N007 N014 N012 S Q5.8V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=50n Vt=1.6 Vh=1.4\nD1 N013 N014 Ideal\nR2 N011 N013 100\n¥A10 Q5.8V 0 ¥ N015 N012 S Q5.8V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=50n Vt=1.745 Vh=0.245\nI2 D N001 350u Vsat=0.5\nD2 S N001 5_85V\nD3 N001 BP Ideal\nD4 S BP 6_3V\n¥A11 Q5.8V 0 N016 ¥ BP S Q5.8V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=50n Vt=5.3 Vh=0.5\nG1 N019 S N021 S table=(0.5 0,5.3 720m)\nC3 D S 3.5p\nD5 S N019 700V\nR3 D N019 9\n¥A1 Q5.8V 0 ¥ N017 D N005 Q5.8V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=50n Vt=0 Vh=1m\nBH3 N002 S V={if(I(R1)<-230u,0,5.8)}\nBH2 N026 S V={if(I(R1)>50u,0,5.8)}\n¥A5 Q5.8V 0 ¥ N008 N002 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=50n\n¥A8 Q4.05V 0 N003 ¥ N002 ¥ ¥ ¥ N007 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=50n\n¥A12 Q5.8V 0 ¥ N009 N008 ¥ ¥ ¥ N007 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=50n\nD7 N003 N004 Ideal\nD8 N010 N009 Ideal\nR5 N004 N005 1k\nR6 N010 N005 7k\nV3 N006 0 2.63\nD9 N006 N005 Ideal\nC5 N005 0 645p\n¥A13 Q2.3V Q1V N022 ¥ N022 EN Q2.3V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=50n Vt=0 Vh=1m\nI3 N018 EN 240u\nD6 EN N018 Ideal\nR1 N018 N022 100\n.model Ideal D(Ron=1m Roff=1g Vfwd=0)\n.model 5_85V D(Ron=10 Roff=1g Vfwd=0 Vrev=5.85)\n.model 6_3V D(Ron=10 Roff=1g Vfwd=0 Vrev=6.3)\n.model 700V D(Ron=1m Roff=1g Vfwd=0 Vrev=700)\nVQ1 Q1V S 1\nVQ2 Q2.3V S 2.3\nVQ3 Q4.05V S 4.05\nVQ4 Q5.8V S 5.8\n.ends TNY267»
+  «shorted pins: false»
+  «rect (-300,-400) (300,400) 0 0 0 0xff0000 0xf5e5f3 -1 0 -1»
+  «text (0,650) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 7 0 0x1000000 -1 -1 "TNY267"»
+  «pin (300,-200) (-50,0) 1 11 0 0x0 -1 "BP"»
+  «pin (300,200) (-30,0) 1 11 0 0x0 -1 "EN"»
+  «pin (-100,400) (0,0) 1 13 0 0x0 -1 "D"»
+  «pin (-100,-400) (-20,0) 1 14 0 0x0 -1 "S"»
+»

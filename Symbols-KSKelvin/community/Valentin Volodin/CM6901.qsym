@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol CM6901
+  «type: X»
+  «description: CM6901 SLS Controller by Valentin Volodin (Qspice Version from KSKelvin)»
+  «library file: |.subckt CM6901 RSET VFB FEAO D_IN- D_IN+ DEAO CSS ILIM RTCT Z SDRVB SDRV PRIDRVB PRIDRV VCC VREF\nG1 Z FEAO VFB VCSSN table=(-2.5 -167u,2.5 167u)\nE1 N012 Z FEAO Z 1\nVirset N012 N013 0\nF1 Z RTCT Virset 4\nV1 N018 Z 2.5\nD1 N016 FEAO Ideal\nD2 FEAO N011 Ideal\nV2 N016 Z 0.1 Rser=500\nV3 N011 Z 6 Rser=500\n¥A1 Q1V2Z 0 T1 ¥ RTCT Z Q1V2Z ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=2.125 Vh=0.875\nG2 RTCT Z T1 Z 2.73m\nD3 Z RTCT Ideal\n¥A2 Q1V2Z 0 N007 N008 N008 T4 Z Z ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP Trise=10n\n¥A3 Q1V2Z 0 NPRIDRV PPRIDRV T4 ¥ shnt PWM N007 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A4 Q1V2Z 0 NPRIDRVB PPRIDRVB N008 ¥ shnt PWM T4 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\nT1 T1 Z T2 Z Td=200n Z0=10k\nR1 T2 Z 10k\nT2 N020 Z T3 Z Td=200n Z0=10k\nR2 T3 Z 10k\nE2 N020 Z T2 Z 1\n¥A5 Q1V2Z 0 T4 ¥ N009 ¥ ¥ ¥ N010 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A6 Q1V2Z 0 T5 ¥ N014 ¥ ¥ ¥ N015 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A7 Q1V2Z 0 N014 ¥ T1 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A8 Q1V2Z 0 N015 ¥ T3 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A9 Q1V2Z 0 N010 ¥ T2 ¥ ¥ ¥ T3 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=10n\n¥A10 Q1V2Z 0 N009 ¥ T1 ¥ ¥ ¥ T2 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=10n\n¥A11 Q1V2Z 0 NSDRV PSDRV T5 ¥ shnt N006 N007 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A12 Q1V2Z 0 NSDRVB PSDRVB N008 ¥ shnt N006 T5 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A13 Q1V2Z 0 N006 ¥ RTCT N017 Q1V2Z ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=0 Vh=0\nV4 N017 RSET 1.5\nG3 Z DEAO D_IN+ D_IN- table=(-1 -125u,1 125u)\nD4 N005 DEAO Ideal\nD5 DEAO N001 Ideal\nV6 N005 Z 0.1 Rser=500\nV7 N001 Z 3.5 Rser=500\n¥A14 Q1V2Z 0 PWM ¥ RTCT VCSS Q1V2Z ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=0 Vh=0\nR3 DEAO Z 8meg\nR4 FEAO Z 20meg\n¥A16 Q1V2Z 0 N025 N028 N024 N027 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=10n\nG4 Z CSS N028 Z table=(0 7.5u,1 -0.75u)\n¥A17 Q1V2Z 0 ¥ N024 CSS ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n Ref=(0.9-(0))\n¥A18 Q1V2Z 0 N026 ¥ ILIM ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n Ref=(1-(0))\nR5 ILIM Z 1meg\nD6 CSS N022 Ideal\nD7 Z CSS Ideal\nV5 N022 Z 6 Rser=500\nE3 N023 Z CSS Z 1\nV8 N023 N021 1.25 Rser=500\n¥A19 Q1V2Z 0 N027 ¥ N026 ¥ ¥ ¥ N031 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n\n¥A20 Q1V2Z 0 N030 N031 VCC Z Q1V2Z ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=10n Vt=10.5 Vh=0.5\nG5 Z VCC N030 Z 1m\nR6 VCC N003 33k\nD8 Z N003 7_5V\nE4 N004 Z N003 Z 1\nR7 VREF N004 2\nC1 CSS Z 1p ic=0\nD9 RTCT N019 Ideal\nV9 N019 Z 6 Rser=500\nR8 D_IN+ VREF 7.5meg\nR9 D_IN- VREF 7.5meg\nR10 VFB VREF 7.5meg\nR11 VCSSN VREF 7.5meg\nD11 VCSSN N021 Ideal\nE5 N002 Z DEAO Z 1\nD12 VCSS N023 Ideal\nR12 VCSS VREF 7.5meg\nD13 VCSS N002 Ideal\nS1 SDRV VCC PSDRV Z OUT\nS2 Z SDRV NSDRV Z OUT\nS3 SDRVB VCC PSDRVB Z OUT\nS4 Z SDRVB NSDRVB Z OUT\nS5 PRIDRV VCC PPRIDRV Z OUT\nS6 Z PRIDRV NPRIDRV Z OUT\nS7 PRIDRVB VCC PPRIDRVB Z OUT\nS8 Z PRIDRVB NPRIDRVB Z OUT\n¥A21 Q1V2Z 0 N029 ¥ CSS ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=10n Ref=(1-(0))\n¥A22 Q1V2Z 0 ¥ shnt N029 ¥ ¥ ¥ N025 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\nD19 N013 RSET Ideal\nD15 VCSSN N018 Ideal\nD16 Z VCSSN Ideal\n.model Ideal D(Ron=50 Roff=1g Vfwd=0)\n.model 7_5V D(Ron=66 Roff=1g Vrev=7.5 Vfwd=0)\n.model OUT SW(Ron=100 Roff=10meg Vt=0.5 Vh=-0.1)\nVQ1 Q1V2Z Z 1\n.ends CM6901»
+  «shorted pins: false»
+  «rect (-700,-1600) (800,1600) 0 0 0 0xff0000 0xf5e5f3 -1 0 -1»
+  «text (50,1850) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (50,1700) 1 15 0 0x1000000 -1 -1 "CM6901"»
+  «pin (-700,1400) (20,0) 1 7 0 0x0 -1 "RSET"»
+  «pin (-700,1000) (20,0) 1 7 0 0x0 -1 "VFB"»
+  «pin (-700,600) (20,0) 1 7 0 0x0 -1 "FEAO"»
+  «pin (-700,200) (20,0) 1 7 0 0x0 -1 "D_IN-"»
+  «pin (-700,-200) (20,0) 1 7 0 0x0 -1 "D_IN+"»
+  «pin (-700,-600) (20,0) 1 7 0 0x0 -1 "DEAO"»
+  «pin (-700,-1000) (20,0) 1 7 0 0x0 -1 "CSS"»
+  «pin (-700,-1400) (20,0) 1 7 0 0x0 -1 "ILIM"»
+  «pin (800,-1400) (-20,0) 1 11 0 0x0 -1 "RTCT"»
+  «pin (800,-1000) (-20,0) 1 11 0 0x0 -1 "Z"»
+  «pin (800,-600) (-20,0) 1 11 0 0x0 -1 "SDRVB"»
+  «pin (800,-200) (-20,0) 1 11 0 0x0 -1 "SDRV"»
+  «pin (800,200) (-20,0) 1 11 0 0x0 -1 "PRIDRVB"»
+  «pin (800,600) (-20,0) 1 11 0 0x0 -1 "PRIDRV"»
+  «pin (800,1000) (-20,0) 1 11 0 0x0 -1 "VCC"»
+  «pin (800,1400) (-20,0) 1 11 0 0x0 -1 "VREF"»
+»

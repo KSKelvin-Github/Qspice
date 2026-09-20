@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol STRL472
+  «type: X»
+  «description: STRL472 Quasi-resonant flyback controller by Valentin Volodin (Qspice Version from KSKelvin)»
+  «library file: |.subckt STRL472 D S GRD VCC OCPFB\nC1 N004 GRD 1n ic=0\n¥A2 Q5V2GRD 0 N010 N014 N009 N013 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Td=40n Trise=20n\nS1 GRD N004 N010 GRD osc\n¥A3 Q5V2GRD 0 N009 ¥ N005 N002 ¥ ¥ N012 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=40n Trise=20n\n¥A4 Q15V2GRD 0 N011 N006 N002 N003 N014 ¥ N012 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=40n Trise=20n Ref=(2.5-(0))\nS2 S D N008 S MS\nC2 N008 S 1n ic=0\nR2 N015 N008 25\nC3 D N008 10p ic=0\nD1 N006 N007 ideal\nD2 N015 N006 ideal\nD3 S D DMS\n¥A5 Q5V2GRD 0 N012 ¥ N016 N017 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Td=40n Trise=20n\n¥A6 Q5V2GRD 0 N016 ¥ OCPFB ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=100n Trise=20n Ref=(1.5-(0))\n¥A7 Q5V2GRD 0 N013 N017 OCPFB ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=100n Trise=20n Ref=(0.76-(0))\nG1 OCPFB GRD N011 GRD 90u\nD4 GRD OCPFB ideal\n¥A8 Q5V2GRD 0 N001 N002 VCC GRD Q5V2GRD ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Td=40n Trise=20n Vt=13.85 Vh=3.75\n¥A9 Q5V2GRD 0 N003 ¥ VCC GRD Q5V2GRD ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Td=40n Trise=20n Vt=17.35 Vh=8.15\nR1 VCC GRD 277k\nG2 VCC GRD N001 GRD 400u\nI1 GRD N004 50u\nF1 VCC GRD V2 1\nV2 N007 N008 0 Rser=0\n¥A1 Q5V2GRD 0 N005 ¥ N004 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=40n Trise=20n Ref=(2.5-(0))\n.model osc SW(Ron=50 Roff=10Meg Vt=2.5 Vh=0)\n.model MS SW(Ron=7.7 Roff=6Meg Vt=7 Vh=-3)\n.model ideal D(Ron=25 Roff=10meg Vfwd=0)\n.model DMS D(Ron=7.7 Roff=6meg Vfwd=0.6)\nVQ1 Q15V2GRD GRD 15\nVQ2 Q5V2GRD GRD 5\n.ends STRL472»
+  «shorted pins: false»
+  «rect (-600,-400) (500,400) 0 0 0 0xff0000 0xf5e5f3 -1 0 -1»
+  «text (0,650) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 15 0 0x1000000 -1 -1 "STRL472"»
+  «pin (-400,400) (20,0) 1 13 0 0x0 -1 "D"»
+  «pin (-400,-400) (20,0) 1 14 0 0x0 -1 "S"»
+  «pin (300,-400) (20,0) 1 14 0 0x0 -1 "GRD"»
+  «pin (300,400) (-20,0) 1 13 0 0x0 -1 "VCC"»
+  «pin (500,0) (-20,0) 1 11 0 0x0 -1 "OCPFB"»
+»

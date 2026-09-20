@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol TL494
+  «type: X»
+  «description: TL494 PWM Control by Valentin Volodin (Qspice Version from KSKelvin)»
+  «library file: |.subckt tl494 IN1 -IN1 IN2 -IN2 FB DTC Vref OCT CT1 ET1 CT2 ET2 Ct Rt GND Vcc\n¥A1 Q5V 0 N010 N005 N005 N006 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP Trise=50n\n¥A2 Q5V 0 N007 ¥ ¥ ¥ ¥ OCT N010 ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=50n\n¥A3 Q5V 0 N013 ¥ N005 OCT ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Trise=50n Rout=30\n¥A4 Q5V 0 ¥ N004 N006 N007 ¥ ¥ N011 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=300n\n¥A5 Q5V 0 ¥ N015 N006 N013 ¥ ¥ N011 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=300n\nG1 N002 ET1 N004 0 table=(1 0,4 250m)\nG3 N014 ET2 N015 0 table=(1 0,4 250m)\n¥A6 Q5V 0 N006 ¥ N008 N012 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=50n\n¥A7 Q5V 0 N008 ¥ N009 Ct Q5V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Vt=0 Vh=0.1m\n¥A8 Q5V 0 N012 ¥ FB N016 Q5V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Vt=0 Vh=0.1m\nV4 N016 Ct 0.7\nV5 N009 DTC 0.1\nD5 N020 FB IDEAL\nD6 N025 FB IDEAL\nR1 N017 N018 1meg\nR3 N022 N023 1meg\nC4 N019 0 15.9n ic=0\nC5 N024 0 15.9n ic=0\nD1 ET1 N002 IDEALZ\nE1 N020 0 N019 0 table=(0,0 5,5)\nE2 N025 0 N024 0 table=(0,0 5,5)\nR5 -IN1 0 5meg\nR6 IN1 0 5meg\nR7 -IN2 0 5meg\nR8 IN2 0 5meg\nI1 FB 0 0.7m\nV2 N001 0 3.65\nF1 0 Ct V2 -1\nXS1 0 Ct N003 0 OSC\nD3 CT1 N002 IDEAL1\nD7 CT1 N002 IDEAL2\nG2 ET1 N002 Vcc ET1 table=(0 250m,1.42 243m,1.46 150m,1.57 0)\nD2 ET2 N014 IDEALZ\nD4 CT2 N014 IDEAL1\nD8 CT2 N014 IDEAL2\nG4 ET2 N014 Vcc ET2 table=(0 250m,1.42 243m,1.46 150m,1.57 0)\nC7 N002 ET1 5p ic=0\nC8 N014 ET2 5p ic=0\nD9 N001 Rt IDEAL\nR14 Ct 0 5meg\nR15 ET2 0 5meg\nR16 ET1 0 5meg\nG5 Vcc 0 Vcc 0 TABLE=(1 0,5 4.5m,6.85 7.6m,40 8.4m)\nB1 Vcc 0 I=25m-I(VD10)\nR10 Ct N003 5k\nC1 N003 0 10p ic=0\nI3 N018 N019 10m Vsat=0.5\nI4 N019 N018 10m Vsat=0.5\nI5 N023 N024 10m Vsat=0.5\nI6 N024 N023 10m Vsat=0.5\nE3 N017 0 IN1 -IN1 100000\nE4 N022 0 IN2 -IN2 100000\nD11 0 N019 DAMP\nD12 0 N024 DAMP\nC2 N018 0 0.2p ic=0\nC3 N023 0 0.2p ic=0\nR2 DTC 0 5meg\nE5 N021 0 Vcc 0 table=(1 0,6 5)\nI2 0 Vref 25m\nD10 Vref N021T IDEAL\nVD10 N021T N021 0\nR4 OCT 0 5meg\n¥A9 Q5V 0 ¥ N011 Vcc ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=300n Ref=(7-(0))\n.MODEL IDEALZ D(Ron=1m Roff=20meg Vfwd=0 Vrev=41)\n.MODEL IDEAL D(Ron=1m Roff=1G Vfwd=0)\n.subckt OSC + - +C -C Ilimit=20m\nS1 + N001 +C -C SWq\nI1 N002 N001 Ilimit Vsat=100m\nI2 N001 N003 Ilimit Vsat=100m\nD1 - N002 Di\nD2 N003 - Di\n.model Di D Ron=1m Roff=10Meg Vfwd=0\n.model SWq SW Ron=10 Vt=1.51 Vh=1.49\n.ends OSC\n.MODEL IDEAL1 D(Ron=2 Roff=1G Vfwd=0.66)\n.MODEL IDEAL2 D(Ron=175 Roff=1G Vfwd=0)\n.model DAMP D(Ron=1m Rrev=500 Roff=1Meg Vfwd=0 Vrev=3.5 Revepsilon=1)\nVQ1 Q5V 0 5\n.ends tl494»
+  «shorted pins: false»
+  «rect (-800,-1800) (800,1800) 0 0 0 0xff0000 0xf5e5f3 -1 0 -1»
+  «text (0,733) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,-333) 1 15 0 0x1000000 -1 -1 "TL494"»
+  «pin (-800,0) (20,0) 1 7 0 0x0 -1 "IN1"»
+  «pin (-800,-400) (20,0) 1 7 0 0x0 -1 "-IN1"»
+  «pin (-800,-800) (20,0) 1 7 0 0x0 -1 "IN2"»
+  «pin (-800,-1200) (20,0) 1 7 0 0x0 -1 "-IN2"»
+  «pin (-800,1200) (20,0) 1 7 0 0x0 -1 "FB"»
+  «pin (-800,1600) (20,0) 1 7 0 0x0 -1 "DTC"»
+  «pin (800,-1200) (-30,0) 1 11 0 0x0 -1 "Vref"»
+  «pin (-800,-1600) (20,0) 1 7 0 0x0 -1 "OCT"»
+  «pin (800,1200) (-20,0) 1 11 0 0x0 -1 "CT1"»
+  «pin (800,800) (-20,0) 1 11 0 0x0 -1 "ET1"»
+  «pin (800,400) (-20,0) 1 11 0 0x0 -1 "CT2"»
+  «pin (800,0) (-20,0) 1 11 0 0x0 -1 "ET2"»
+  «pin (-800,400) (30,0) 1 7 0 0x0 -1 "Ct"»
+  «pin (-800,800) (30,0) 1 7 0 0x0 -1 "Rt"»
+  «pin (0,-1800) (-20,0) 1 14 0 0x0 -1 "GND"»
+  «pin (0,1800) (-20,0) 1 13 0 0x0 -1 "Vcc"»
+»

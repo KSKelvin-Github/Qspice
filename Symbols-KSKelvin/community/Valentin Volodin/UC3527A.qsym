@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol UC3527A
+  «type: X»
+  «description: SG3525A PWM Control by Valentin Volodin (Qspice Version from KSKelvin)»
+  «library file: |.subckt uc3527a INV NI SYN OSC CT RT DCH SS CMP SHD OUA GND VC OUB VIN VRF\n¥A2 Q5.1V 0 N020 N017 N017 N009 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP Trise=20n Rout=30\n¥A3 Q5.1V 0 N005 N011 N018 N019 N009 ¥ N020 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=400n Rout=30\n¥A4 Q5.1V 0 N022 N023 N017 N009 ¥ N019 N018 ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=400n Rout=30\nXS1 OUA N004 N005 0 HOUT\nXS2 N012 OUA N011 0 LOUT\nXS3 OUB N021 N022 0 HOUT\nXS4 N028 OUB N023 0 LOUT\nI1 N031 0 21m\nD1 0 N031 IDEAL\nR2 N029 N031 8.93\nR3 N029 0 22.6\nD3 N029 N032 D1_75\nD4 0 N032 IDEAL\nI2 N032 0 188m\nR4 N032 0 2.28\nD5 N028 N029 IDEAL\nI3 N014 0 21m\nD2 0 N014 IDEAL\nR1 N013 N014 8.93\nR5 N013 0 22.6\nD6 N013 N015 D1_75\nD7 0 N015 IDEAL\nI4 N015 0 188m\nR6 N015 0 2.28\nD8 N012 N013 IDEAL\nD9 VC N021 IDEAL\nD10 VC N004 IDEAL\nG2 0 N024 NI N027 table=(-70m -100u,0 0,70m 100u)\nR16 N024 0 4meg\nC3 N024 0 100p\nR17 N024 CMP 30\nR7 INV 0 1meg\nR11 NI 0 1meg\nI7 0 VRF 80m\nR19 VRF 0 170\nD19 0 VRF Z5_1\nD20 0 VC Z40\n¥A6 Q5.1V Q0.45V ¥ N001 VIN 0 Q5.1V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=20n Vt=7.25 Vh=0.25\nGI8 VIN 0 VIN 0 table(0 0 3 3.8m 7 19m 8 20m 40 24.1m)\nD21 N030 N024 Z5_6\nV1 N030 0 0.2\nR20 N036 0 5k\nR21 SHD N002 5k\nQ1 SS N002 N036 0 NPN\nD22 N002 0 D1_2\nR22 N001 N002 60k\nD23 0 SS Z5_1\nI9 0 SS 50u\n¥A7 Q5.1V 0 N019 ¥ N002 0 Q5.1V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=400n Vt=634m Vh=1m\n¥A8 Q5.1V 0 N018 ¥ N026 N009 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Trise=20n Rout=30\n¥A9 Q5.1V 0 N026 ¥ ¥ N025 N019 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=20n Rout=30\n¥A10 Q5.1V 0 N025 ¥ CT N034 Q5.1V ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT Trise=20n Vt=0 Vh=10m\nE1 N033 0 N024 0 1\nE2 N035 0 SS 0 1\nR23 N033 N034 500\nD24 N034 N035 IDEAL\nR24 INV N027 1k\nC1 NI N027 40p\nR8 SYN 0 2k\nR9 OSC N016 250\nV2 N003 0 3.64\nF1 0 CT V2 -1\nD11 N003 RT IDEAL\nR10 N016 0 3k\nD12 N009 N016 D1_6\nXS5 0 DCH N009 0 LSW\nD13 0 CT Z5_1\n¥A1 Q5.1V 0 N009 ¥ N008 N010 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP Ref=(0.9-(0)) Trise=150n Tfall=250n\n¥A5 Q5.1V 0 N008 ¥ N006 N007 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Trise=20n\n¥A11 Q5.1V 0 N006 ¥ CT ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Ref=(3.2-(0)) Trise=20n\n¥A12 Q5.1V 0 ¥ N010 CT ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Ref=(0.9-(0)) Trise=20n\n¥A13 Q5.1V 0 N007 ¥ SYN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Ref=(2-(0)) Trise=20n\n.model NPN NPN\n.model PNP PNP\n.subckt HOUT + - +C -C Vser=1.1 Ilimit=0.5\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nIS1 N003 N002 Ilimit Vsat=100m\nDS1 - N003 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW Ron=2.7 Roff=175k Vt=2.8 Vh=-2.1\n.ends HOUT\n.subckt LOUT + - +C -C Vser=0 Ilimit=0.5\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nIS1 N003 N002 Ilimit Vsat=100m\nDS1 - N003 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW Ron=10m Roff=175k Vt=2.8 Vh=-2.1\n.ends LOUT\n.model IDEAL D(Ron=1m Roff=1G Vfwd=0)\n.model D1_75 D(Ron=1.57 Roff=1G Vfwd=1.75)\n.model D1_6 D(Ron=1m Roff=1G Vfwd=1.6)\n.model Z5_1 D(Ron=1 Roff=1G Vrev=5.075)\n.model Z40 D(Ron=1m Roff=175k Vrev=40)\n.model Z5_6 D(Ron=1 Roff=1G Vrev=5.6)\n.model D1_2 D(Ron=1m Roff=1G Vfwd=1.2)\n.subckt LSW + - +C -C Vser=0.35 Ilimit=40ma\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nIS1 N003 N002 Ilimit Vsat=100m\nDS1 - N003 Di\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.model SWq SW Vt=2.55 Vh=-0.5 Ron=1 Roff=1meg\n.ends LSW\nVQ1 Q0.45V 0 0.45\nVQ2 Q5.1V 0 5.1\n.ends uc3527a»
+  «shorted pins: false»
+  «rect (-700,-1600) (700,1600) 0 0 0 0xff0000 0xf5e5f3 -1 0 -1»
+  «text (0,533) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,-433) 1 15 0 0x1000000 -1 -1 "UC3527A"»
+  «pin (-700,-600) (20,0) 1 7 0 0x0 -1 "INV"»
+  «pin (-700,-1000) (20,0) 1 7 0 0x0 -1 "NI"»
+  «pin (-700,1400) (20,0) 1 7 0 0x0 -1 "SYNC"»
+  «pin (700,-200) (-30,0) 1 11 0 0x0 -1 "OSC"»
+  «pin (-700,600) (20,0) 1 7 0 0x0 -1 "CT"»
+  «pin (-700,1000) (20,0) 1 7 0 0x0 -1 "RT"»
+  «pin (-700,200) (20,0) 1 7 0 0x0 -1 "DCH"»
+  «pin (700,-1000) (-30,0) 1 11 0 0x0 -1 "SS"»
+  «pin (-700,-200) (30,0) 1 7 0 0x0 -1 "CMP"»
+  «pin (-700,-1400) (30,0) 1 7 0 0x0 -1 "SHD"»
+  «pin (700,600) (-20,0) 1 11 0 0x0 -1 "OUA"»
+  «pin (0,-1600) (-20,0) 1 14 0 0x0 -1 "GND"»
+  «pin (700,1000) (-20,0) 1 11 0 0x0 -1 "VC"»
+  «pin (700,200) (-20,0) 1 11 0 0x0 -1 "OUB"»
+  «pin (0,1600) (-20,0) 1 13 0 0x0 -1 "VIN"»
+  «pin (700,-600) (-20,0) 1 11 0 0x0 -1 "VREF"»
+»

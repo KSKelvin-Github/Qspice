@@ -43,13 +43,11 @@
   «zigzag (-250,-850) (-50,-750) 0 0 0 0x1000000 -1 -1»
   «text (-1300,850) 1 7 0 0x1000000 -1 -1 "XSRC1"»
   «text (-1300,700) 1 7 0 0x1000000 -1 -1 "SRC-3PHASE-STAR"»
-  «text (-1300,-1850) 1 7 0 0x0 -1 -1 "LL=<1> ;0:line-neutral, 1:line-line"»
-  «text (-1300,-2000) 1 7 0 0x0 -1 -1 "Vrms=<208>; voltage in rms"»
-  «text (-1300,-2150) 1 7 0 0x0 -1 -1 "Freq=<60> ; frequency in Hz"»
-  «text (-1300,-2300) 1 7 0 0x0 -1 -1 "Rser=<0> ; series resistance"»
-  «text (-1300,-2450) 1 7 2 0x1000000 -1 -1 "InitialPhaseA=<0> ; Initial Phase of A"»
-  «text (-1300,-1650) 0.583 7 1 0x1000000 -1 -1 "LL=0 : Vrms is Line-Neutral"»
-  «text (-1300,-1740) 0.583 7 1 0x1000000 -1 -1 "LL=1 : Vrms is Line-Line"»
+  «text (-1300,-1700) 1 7 0 0x0 -1 -1 "LL=<0;[Line-Neutral],(1;[Line-Line])> Vrms representation"»
+  «text (-1300,-1850) 1 7 0 0x0 -1 -1 "Vrms=<208> Voltage in RMS"»
+  «text (-1300,-2000) 1 7 0 0x0 -1 -1 "Freq=<60> Frequency in Hz"»
+  «text (-1300,-2150) 1 7 0 0x0 -1 -1 "Rser=<0> Series resistance"»
+  «text (-1300,-2300) 1 7 2 0x1000000 -1 -1 "InitialPhaseA=<0> Initial Phase of A"»
   «pin (200,400) (-20,0) 1 10 0 0x0 -1 "VA"»
   «pin (200,-200) (-20,0) 1 10 0 0x0 -1 "VB"»
   «pin (200,-800) (-20,0) 1 10 0 0x0 -1 "VC"»

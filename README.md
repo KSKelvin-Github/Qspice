@@ -1,5 +1,6 @@
 # Qspice Resources & Guidelines
 
+[![QSpice](https://img.shields.io/badge/Simulator-QSpice-blue.svg)](https://www.qorvo.com/design-hub/calculators-simulation/qspice)
 [![Examples Library](https://img.shields.io/badge/Examples%20Library-QspiceCircuits-orange.svg)](https://github.com/QSpice-Circuits/Qspice-examples)
 
 Welcome to the comprehensive repository for **Qspice** tutorials, reference manuals, custom symbol libraries, and simulation examples curated by KSKelvin.

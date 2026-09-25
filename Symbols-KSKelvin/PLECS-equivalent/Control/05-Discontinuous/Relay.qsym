@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Relay
   «type: X»
   «description: (PLECS) Relay»
-  «library file: |.subckt Relay in out\n¥1 Vdd Vss Q ¥ in 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT VT=(OnSwitchValue+OffSwitchValue)/2 VH=(OnSwitchValue-OffSwitchValue)/2 TTOL=TTOL\nV2 Vss 0 OffOutputValue\nB1 out 0 V=if(time>0,V(Q),if(InitialState,OnOutputValue,OffOutputValue))\nV1 Vdd 0 OnOutputValue\n.ends Relay»
+  «library file: |.subckt Relay in out\nV2 Vss 0 min(OnOutputValue,OffOutputValue)\nV1 Vdd 0 max(OnOutputValue,OffOutputValue)\n¥2 Vdd Vss Q ¬Q in 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT VT=(OnSwitchValue+OffSwitchValue)/2 VH=(OnSwitchValue-OffSwitchValue)/2 TTOL=TTOL\nB1 out 0 V=if(time<=0,if(InitialState,OnOutputValue,OffOutputValue), if(OnOutputValue>OffOutputvalue,V(Q), V(¬Q)))\n.ends Relay»
   «shorted pins: false»
   «line (150,0) (-150,0) 0 0 0xffa0a1 -1 -1»
   «line (0,-160) (0,160) 0 0 0xffa0a1 -1 -1»

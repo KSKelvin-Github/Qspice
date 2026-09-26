@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Thyristor
+  «type: X»
+  «description: (PWL) Thyristor»
+  «library file: |.subckt Thyristor A G K\nD1 N01 K Dthy\nS1 A N01 Q 0 SWthy ON=s_init OFF=!s_init\n¥1 N02 0 Q ¥ Set Reset ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nB1 Reset 0 V=if(V(A,K)<=Vf,1,0)\nE1 Set 0 G K 1\nV1 N02 0 1\n.model Dthy D Ron=max(1m,Ron)/2 Roff=10Meg Vfwd=Vf\n.model SWthy SW Ron=max(1m,Ron)/2 Roff=10Meg Vt=0.5 Vh=0\n.ends Thyristor»
+  «shorted pins: false»
+  «line (-100,80) (100,80) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,80) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-70) 0 0 0x1000000 -1 -1»
+  «line (-50,80) (-100,200) 0 0 0x1000000 -1 -1»
+  «line (-100,200) (-200,200) 0 0 0x1000000 -1 -1»
+  «triangle (0,80) (-100,-70) (100,-70) 0 0 0x1000000 0xffe6c8 -1 -1»
+  «triangle (-200,150) (-200,250) (-120,200) 0 0 0x1000000 0xff12 -1 -1»
+  «text (175,250) 1 7 0 0x1000000 -1 -1 "XD1"»
+  «text (175,400) 1 7 2 0x1000000 -1 -1 "THYRISTOR"»
+  «text (175,100) 1 7 0 0x0 -1 -1 "Vf=<0> Forward voltage (V)"»
+  «text (175,-50) 1 7 0 0x0 -1 -1 "Ron=<0> On-ressistance Ron(ohms)"»
+  «text (175,-200) 1 7 0 0x0 -1 -1 "s_init=<(0),1> Initial Off (0) / Initial On (1)"»
+  «pin (0,-200) (0,0) 1 64 0 0x0 -1 "A"»
+  «pin (-200,200) (0,0) 1 64 0 0x0 -1 "G"»
+  «pin (0,200) (0,0) 1 64 0 0x0 -1 "K"»
+»

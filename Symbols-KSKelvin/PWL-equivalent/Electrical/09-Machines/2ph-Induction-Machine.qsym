@@ -1,0 +1,42 @@
+ÿØÿÛ«symbol 2ph-Induction-Machine
+  «type: X»
+  «description: (PWL) 2-phase Induction Machine»
+  «library file: |.subckt 2ph-Induction-Machine mains+ mains- aux+ aux- wm Te\nV´iqs mains+ N01 0\nR1 N01 N03 Rs_main\nL1 N03 N02 Lls_main IC=0\nL2 N02 mains- Lm IC=0\nL3 N02 N04 Llr IC=0\nR2 N04 N06 Rr\nV´iqr N05 N06 0\nV´ids aux+ N07 0\nR3 N07 N09 Rs_aux\nL4 N09 N08 Lls_aux IC=0\nL5 N08 aux- Lm*n^2 IC=0\nL6 N08 N10 Llr*n^2 IC=0\nR4 N10 N12 Rr*n^2\nV´idr N11 N12 0\nB3 0 N13 I=(I(iqs)*I(idr)-I(ids)*I(iqr))*Lm*p*n\nV´Te N13 wm 0\nB4 Te 0 V=I(Te)\nC1 wm 0 J IC=wm0\nB1 N05 mains- V=(Lm*n^2*(I(ids)+I(idr))+Llr*n^2*I(idr))*V(wm)*p/n\nB5 0 wm I=-F*V(wm)\nB2 aux- N11 V=(Lm*(I(iqs)+I(iqr))+Llr*I(iqr))*V(wm)*p*n\n.ends 2ph-Induction-Machine»
+  «shorted pins: false»
+  «line (400,-400) (300,-400) 0 0 0xff00ff -1 -1»
+  «line (400,-600) (300,-600) 0 0 0xff00ff -1 -1»
+  «line (-300,-300) (-250,-250) 0 0 0xff00ff -1 -1»
+  «line (250,-245) (300,-300) 0 0 0xff00ff -1 -1»
+  «line (-300,-300) (-300,-700) 0 0 0xff00ff -1 -1»
+  «line (-300,-700) (300,-700) 0 0 0xff00ff -1 -1»
+  «line (300,-700) (300,-300) 0 0 0xff00ff -1 -1»
+  «line (-400,200) (-285,200) 0 0 0x1000000 -1 -1»
+  «line (-400,-200) (-285,-200) 0 0 0x1000000 -1 -1»
+  «line (-200,400) (-200,285) 0 0 0x1000000 -1 -1»
+  «line (200,400) (200,285) 0 0 0x1000000 -1 -1»
+  «ellipse (-425,300) (-375,250) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «ellipse (-350,350) (350,-350) 0 0 0 0x1000000 0xc8ffe6 -1 -1»
+  «ellipse (-230,230) (230,-230) 0 0 0 0x1000000 0xc8ffe6 -1 -1»
+  «ellipse (250,425) (300,375) 0 0 0 0x1000000 0xff0012 -1 -1»
+  «text (0,0) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,-800) 1 15 0 0x1000000 -1 -1 "2PH-INDUCTION-MACHINE"»
+  «text (0,-950) 1 15 0 0x1000000 -1 -1 "Rs_main=<2.02> Stator resistance Rs [main]"»
+  «text (0,-1100) 1 15 0 0x1000000 -1 -1 "Rs_aux=<7.14> Stator resistance Rs [aux]"»
+  «text (0,-1250) 1 15 0 0x1000000 -1 -1 "Lls_main=<7.40e-3> Stator leakage inductance [main]"»
+  «text (0,-1400) 1 15 0 0x1000000 -1 -1 "Lls_aux=<8.54e-3> Stator leakage inductance [aux]"»
+  «text (0,-1550) 1 15 0 0x1000000 -1 -1 "n=<1.18> Stator aux vs main turns ratio"»
+  «text (0,-1700) 1 15 0 0x1000000 -1 -1 "Rr=<4.12> Rotor resistance"»
+  «text (0,-1850) 1 15 0 0x1000000 -1 -1 "Llr=<5.62e-3> Rotor leakage inductance"»
+  «text (0,-2000) 1 15 0 0x1000000 -1 -1 "Lm=<177.2e-3> Magnetizing inductance"»
+  «text (0,-2150) 1 15 0 0x1000000 -1 -1 "J=<1.46e-2> Inertia (Nms^2)"»
+  «text (0,-2300) 1 15 2 0x1000000 -1 -1 "F=<0> Friction coefficient (Nms)"»
+  «text (0,-2600) 1 15 2 0x1000000 -1 -1 "wm0=<0> Initial rotor speed (rad/s)"»
+  «text (0,-2450) 1 15 2 0x1000000 -1 -1 "p=<2> Number of pole pairs"»
+  «text (0,-2750) 1 15 2 0x1000000 -1 -1 "thm0=<0> Initial rotor position (rad/s)"»
+  «pin (-400,200) (20,0) 1 15 0 0x0 -1 "main+"»
+  «pin (-400,-200) (20,0) 1 15 0 0x0 -1 "main-"»
+  «pin (200,400) (20,0) 1 15 0 0x0 -1 "aux+"»
+  «pin (-200,400) (-20,0) 1 15 0 0x0 -1 "aux-"»
+  «pin (400,-400) (-120,10) 1 11 0 0x0 -1 "wm"»
+  «pin (400,-600) (-120,0) 1 11 0 0x0 -1 "Te"»
+»

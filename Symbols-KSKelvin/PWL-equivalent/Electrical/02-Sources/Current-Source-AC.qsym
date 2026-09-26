@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Current-Source-AC
+  «type: X»
+  «description: (PWL) Current Source AC»
+  «library file: |.subckt Current-Source-AC + -\nI1 - + SIN 0 I w/2/pi 0 0 phi/pi*180\n.ends Current-Source-AC»
+  «shorted pins: false»
+  «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+  «line (0,90) (-35,50) 0 0 0x1000000 -1 -1»
+  «line (0,90) (35,50) 0 0 0x1000000 -1 -1»
+  «line (0,85) (0,-85) 0 0 0x1000000 -1 -1»
+  «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «arc3p (0,0) (100,0) (50,25) 0 0 0x1000000 -1 -1»
+  «arc3p (0,0) (-100,0) (-50,-25) 0 0 0x1000000 -1 -1»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "XI1"»
+  «text (100,300) 1 7 2 0x1000000 -1 -1 "CURRENT-SOURCE-AC"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "I=<1> Amplitude (V)"»
+  «text (100,-300) 1 7 0 0x1000000 -1 -1 "w=<2*pi*50> Frequency (rad/s)"»
+  «text (100,-450) 1 7 0 0x1000000 -1 -1 "phi=<0> Phase (rad)"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+»

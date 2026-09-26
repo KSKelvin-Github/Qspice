@@ -1,0 +1,25 @@
+ÿØÿÛ«symbol DelayedPulseTrain-1&0
+  «type: X»
+  «description: Delayed Pulse Train / Pulse Delay (DLL in Qspice Demo - DelayedPulseTrain.cpp)»
+  «library file: |.subckt DelayedPulseTrain-1&0 in out\nØ´X1 «N01´d Vcc´d» «Q´d» «0» DelayedPulseTrain float delay=Tdelay float ttol=ttol\nV1 Vcc 0 1\nB1 out 0 V=if(time<=0,init,V(Q))\nB2 N01 0 V=if(time<=0,init,V(in))\n.ends DelayedPulseTrain-1&0»
+  «shorted pins: false»
+  «line (-170,-130) (170,-130) 0 0 0x1000000 -1 -1»
+  «line (30,-130) (30,130) 0 0 0x1000000 -1 -1»
+  «line (-120,130) (-30,130) 0 0 0xff0012 -1 -1»
+  «line (120,130) (120,-130) 0 0 0x1000000 -1 -1»
+  «line (-120,-130) (-120,130) 0 0 0xff0012 -1 -1»
+  «line (-120,60) (20,60) 5 0 0x0 -1 -1»
+  «line (-30,-130) (-30,130) 0 0 0xff0012 -1 -1»
+  «line (30,130) (120,130) 0 0 0x1000000 -1 -1»
+  «line (-30,-60) (120,-60) 5 0 0x0 -1 -1»
+  «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xffe6c8 -1 1 -1»
+  «triangle (30,60) (-10,80) (-10,40) 0 0 0x0 0x0 -1 -1»
+  «triangle (120,-60) (80,-40) (80,-80) 0 0 0x0 0x0 -1 -1»
+  «text (0,300) 1 15 0 0x0 -1 -1 "X1"»
+  «text (0,450) 1 15 2 0x1000000 -1 -1 "DELAYEDPULSETRAIN-1&0"»
+  «text (-200,-300) 1 7 0 0x0 -1 -1 "Tdelay=<1m> Time delay(s)"»
+  «text (-200,-450) 1 7 0 0x0 -1 -1 "ttol=<1n> Temporal timestep"»
+  «text (-200,-600) 1 7 2 0x1000000 -1 -1 "init=<0> Initial output"»
+  «pin (-200,0) (0,0) 1 0 0 0x0 -1 "in"»
+  «pin (200,0) (0,0) 1 0 0 0x0 -1 "out"»
+»

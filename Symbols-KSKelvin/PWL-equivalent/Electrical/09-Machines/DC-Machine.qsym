@@ -1,0 +1,38 @@
+ÿØÿÛ«symbol DC-Machine
+  «type: X»
+  «description: (PWL) DC Machine - motor/generator»
+  «library file: |.subckt DC-Machine a+ a- f+ f- wm Te\nRa a+ N01 Ra\nLa N01 N03 La IC=ia0\nB_Ea N02 a- V=Laf*I(If)*V(wm)\nRf N05 f+ Rf\nLf N04 N05 Lf IC=if0\nV´If N04 f- 0\nV´Ia N03 N02 0\nB_Te 0 wm I=Laf*I(If)*I(Ia)\nC1 wm 0 J IC=wm0\nB1 Te 0 V=Laf*I(If)*I(Ia)\nB_Friction wm 0 I=F*V(wm)\n.ends DC-Machine»
+  «shorted pins: false»
+  «line (-300,-400) (-180,-400) 0 0 0x1000000 -1 -1»
+  «line (300,-400) (180,-400) 0 0 0x1000000 -1 -1»
+  «line (400,-600) (300,-600) 0 0 0xff00ff -1 -1»
+  «line (400,-800) (300,-800) 0 0 0xff00ff -1 -1»
+  «line (-300,-300) (-180,-180) 0 0 0xff00ff -1 -1»
+  «line (175,-175) (300,-300) 0 0 0xff00ff -1 -1»
+  «line (-300,-300) (-300,-900) 0 0 0xff00ff -1 -1»
+  «line (-300,-900) (300,-900) 0 0 0xff00ff -1 -1»
+  «line (300,-900) (300,-300) 0 0 0xff00ff -1 -1»
+  «rect (-300,100) (300,-100) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»
+  «ellipse (-250,250) (250,-250) 0 0 0 0x1000000 0xc8ffe6 -1 -1»
+  «ellipse (-270,-320) (-220,-370) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-270,180) (-220,130) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «coil (180,-480) (-180,-320) 0 0 0 0x1000000 -1 -1»
+  «text (0,500) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 15 0 0x1000000 -1 -1 "DC-Machine"»
+  «text (0,-1000) 1 15 0 0x1000000 -1 -1 "Ra=<0.5> Armature resistance (ohms)"»
+  «text (0,-1150) 1 15 0 0x1000000 -1 -1 "La=<0.01> Armature inductance (H)"»
+  «text (0,-1300) 1 15 0 0x1000000 -1 -1 "Rf=<200> Field resistance (ohms)"»
+  «text (0,-1450) 1 15 0 0x1000000 -1 -1 "Lf=<100> Field inductance (H)"»
+  «text (0,-1600) 1 15 0 0x1000000 -1 -1 "Laf=<2> Field-armature mutual inductance (H)"»
+  «text (0,-1750) 1 15 0 0x1000000 -1 -1 "J=<2> Inertia (Nms^2)"»
+  «text (0,-1900) 1 15 2 0x1000000 -1 -1 "F=<0> Friction coefficient (Nms)"»
+  «text (0,-2050) 1 15 2 0x1000000 -1 -1 "wm0=<0> Initial rotor speed (rad/s)"»
+  «text (0,-2200) 1 15 2 0x1000000 -1 -1 "ia0=<0> Initial armature current (A)"»
+  «text (0,-2350) 1 15 2 0x1000000 -1 -1 "if0=<0> Initial field current (A)"»
+  «pin (-300,0) (20,0) 1 15 0 0x0 -1 "a+"»
+  «pin (300,0) (20,0) 1 15 0 0x0 -1 "a-"»
+  «pin (-300,-400) (20,0) 1 15 0 0x0 -1 "f+"»
+  «pin (300,-400) (-20,0) 1 15 0 0x0 -1 "f-"»
+  «pin (400,-600) (-120,0) 1 11 0 0x0 -1 "wm"»
+  «pin (400,-800) (-120,0) 1 11 0 0x0 -1 "Te"»
+»

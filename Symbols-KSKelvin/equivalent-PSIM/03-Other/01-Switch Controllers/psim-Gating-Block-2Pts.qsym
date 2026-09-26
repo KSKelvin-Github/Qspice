@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol psim-Gating-Block-2Pts
+  «type: X»
+  «description: (PSIM) Gating Block - 2 Points (Gate Input Degree)»
+  «library file: |.subckt Gating-Block gate\nV1 gate 0 PULSE lo hi theta1/360/fsw+Td trise tfall (theta2-theta1)/360/fsw 1/fsw\n.ends Gating-Block»
+  «shorted pins: false»
+  «line (-350,40) (-300,40) 0 0 0x1000000 -1 -1»
+  «line (-300,40) (-300,160) 0 0 0x1000000 -1 -1»
+  «line (-300,160) (-230,160) 0 0 0x1000000 -1 -1»
+  «line (-230,160) (-230,40) 0 0 0x1000000 -1 -1»
+  «line (-230,40) (-150,40) 0 0 0x1000000 -1 -1»
+  «line (-150,40) (-150,160) 0 0 0x1000000 -1 -1»
+  «line (-150,160) (-80,160) 0 0 0x1000000 -1 -1»
+  «line (-80,160) (-80,40) 0 0 0x1000000 -1 -1»
+  «line (-80,40) (-50,40) 0 0 0x1000000 -1 -1»
+  «rect (-400,200) (0,0) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (-400,300) 1 7 0 0x1000000 -1 -1 "XSRC1"»
+  «text (-400,450) 1 7 2 0x1000000 -1 -1 "GATING-BLOCK"»
+  «text (-400,-50) 0.681 7 0 0x0 -1 -1 "theta1=<0> turn ON - phase(°)"»
+  «text (-400,-150) 0.681 7 0 0x0 -1 -1 "theta2=<90> turn OFF - phase(°)"»
+  «text (-400,-250) 0.681 7 0 0x0 -1 -1 "fsw=<100k> switching frequency (Hz)"»
+  «text (-400,-350) 0.681 7 0 0x0 -1 -1 "Td=<0> delay time (s)"»
+  «text (-400,-450) 0.681 7 2 0x1000000 -1 -1 "hi=<1> high level output (V)"»
+  «text (-400,-550) 0.681 7 2 0x1000000 -1 -1 "lo=<0> low level output (V)"»
+  «text (-400,-650) 0.681 7 2 0x1000000 -1 -1 "trise=<1n> rise time (s)"»
+  «text (-400,-750) 0.681 7 2 0x1000000 -1 -1 "tfall=<1n> fall time(s)"»
+  «pin (0,100) (-20,20) 0.857 15 0 0x0 -1 "gate"»
+»

@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol Alpha-Controller-1
+ÿØÿÛ«symbol psim-Alpha-Controller-1
   «type: X»
-  «description: Alpha Controller (ACTRL)»
+  «description: (PSIM) Alpha Controller (ACTRL)»
   «library file: |.subckt Alpha-Controller sync alpha EN OUT\nB1 timer1 0 V=idt(1,0,V(sync)-state(1,V(sync)))\nB2 PulseWidth 0 V=1/frq*PulseWidthDeg/360\nB3 delay 0 V=1/frq*V(alpha)/360\nVlogic1V p1v 0 1\n¥1 p1v 0 trig ¥ timer1 delay ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB4 timer2 0 V=idt(1,0,V(trig)-state(1,V(trig)))\n¥2 p1v 0 N01 ¥ PulseWidth timer2 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nRpullup p1v EN 10K\n¥3 p1v 0 OUT ¥4 EN trig N01 N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\nV5 N02 0 PWL 0 0 1p 1 trigger=V(sync)>0.5\n.ends Alpha-Controller»
   «shorted pins: false»
   «line (0,300) (-300,-100) 0 0 0x1000000 -1 -1»

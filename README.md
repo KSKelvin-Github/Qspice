@@ -5,11 +5,8 @@
 
 Welcome to the comprehensive repository for **Qspice** tutorials, reference manuals, custom symbol libraries, and simulation examples curated by KSKelvin.
 
-> [!Examples]
-> Qspice examples circuit : (https://github.com/QSpice-Circuits/Qspice-examples)
-
-> [!NOTE]  
-> Custom symbols appearing in the example schematics rely on the **Symbols-KSKelvin** custom symbol library created by [@KSKelvin-Github](https://github.com/KSKelvin-Github/Qspice).
+> [!Qspice Examples]  
+> Look for Qspice examples, goto [@Qspice-examples](https://github.com/QSpice-Circuits/Qspice-examples).
 
 ---
 

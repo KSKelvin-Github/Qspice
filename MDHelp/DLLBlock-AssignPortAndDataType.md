@@ -1,39 +1,54 @@
-# Ø-Device Pin Definition in .qsch or .qsym
+# Assigning Port and Data Type for Ø-Devices (`.qsch` or `.qsym`)
 
-## Procedure to assign Port and Data Type of DLL-device from Text Editor
-Step 1: Use text editor[^1] to open .qsch or .qsym with Ø-Device
+This guide explains how to manually configure the port direction and data type of an Ø-Device by editing `.qsch` (schematic) or `.qsym` (symbol) files directly in a text editor (e.g., [Notepad++](https://notepad-plus-plus.org/)).
 
-Step 2: Pin is described as **«pin (-2300,1000) (0,0) 0.926 7 `17` 0x0 -1 "InputBoolean"»**
+---
 
-| Item | Description |
-| ----------- | ----------- |
-| (-2300,1000) | pin position |
-| (0,0) | pin label position offset |
-|0.926|font size|
-|7|pin label justification|
-|`17`|**port and data Type**|
-|0x0||
-|-1||
-|"InputBoolean"|pin label|
+## Step-by-Step Procedure
 
+### 1. Open File
+Open your `.qsch` or `.qsym` file containing the Ø-Device in a text editor.
 
-Step 3: Modify **port and data type** (`17`) with text editor by referring to table below
-- e.g. To assign an Output Port, Float, replace `17` by `146`
+### 2. Locate the Pin Definition Line
+Find the pin definition line, which follows this structure:
 
-|Data Type| Port : Input | Port : Output | Port : DLL's GND |
-| ----------- | ----------- | ----------- | ----------- |
-||1|2|3|
-|**Boolean**|**17**|**18**||
-|Char|33|34||
-|Unsigned Char|49|50||
-|Short|65|66||
-|Unsigned Short|81|82||
-|**Integer**|**97**|**98**||
-|Unsigned Integer|113|114||
-|Short Float32|129|130||
-|**Float**|**145**|**146**||
-|Integer64|161|162||
-|Unsigned Integer 64|177|178||
+```text
+pin (-2300,1000) (0,0) 0.926 7 17 0x0 -1 "InputBoolean"
+```
 
+#### Syntax Breakdown
 
-[^1]: Text Editor : [Notepad++ : https://notepad-plus-plus.org/](https://notepad-plus-plus.org/)
+| Parameter | Value | Description |
+| :--- | :--- | :--- |
+| **Position** | `(-2300,1000)` | Pin coordinates $(x, y)$ |
+| **Label Offset** | `(0,0)` | Offset for the pin label position $(x, y)$ |
+| **Font Size** | `0.926` | Text font size |
+| **Justification** | `7` | Pin label text alignment |
+| **Port & Data Type Code** | `17` | **Combined code for Direction + Data Type** |
+| **Reserved 1** | `0x0` | Internal flag/attribute |
+| **Reserved 2** | `-1` | Internal flag/attribute |
+| **Pin Label** | `"InputBoolean"` | Display name of the pin |
+
+### 3. Update the Port & Data Type Code
+Replace the **Port & Data Type Code** (e.g., `17`) with the corresponding value from the reference table below.
+
+> **Example:** To set a pin as an **Output Port** with a **Float** data type, replace `17` with `146`.
+
+---
+
+## Port & Data Type Code Lookup Table
+
+| Data Type | Input | Output | DLL's GND |
+| :--- | :---: | :---: | :---: |
+| *Direction Code Offset* | *1* | *2* | *3* |
+| **Boolean** | **17** | **18** | — |
+| **Char** | 33 | 34 | — |
+| **Unsigned Char** | 49 | 50 | — |
+| **Short** | 65 | 66 | — |
+| **Unsigned Short** | 81 | 82 | — |
+| **Integer** | **97** | **98** | — |
+| **Unsigned Integer** | 113 | 114 | — |
+| **Short Float (32-bit)** | 129 | 130 | — |
+| **Float** | **145** | **146** | — |
+| **Integer64** | 161 | 162 | — |
+| **Unsigned Integer 64** | 177 | 178 | — |

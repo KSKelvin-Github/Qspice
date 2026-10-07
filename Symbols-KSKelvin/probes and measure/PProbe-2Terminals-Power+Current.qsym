@@ -1,0 +1,30 @@
+ÿØÿÛ«symbol PProbe-2Terminals-Power+Current
+  «type: X»
+  «description: Power and Probe from V and I»
+  «library file: |.subckt PProbe-2Terminals-Power+Current 1 +ve -ve P I\nV´Imeas 1 +ve 0\nB1 P 0 V=I(Imeas)*V(+ve,-ve)\nB3 I 0 V=I(Imeas)\n.ends PProbe-2Terminals-Power+Current»
+  «shorted pins: false»
+  «line (-300,100) (-300,-100) 0 0 0xff00ff -1 -1»
+  «line (0,100) (0,300) 0 0 0xff00ff -1 -1»
+  «line (100,400) (500,400) 0 0 0xff00ff -1 -1»
+  «line (500,400) (500,-100) 0 0 0xff00ff -1 -1»
+  «line (500,-100) (0,-100) 0 0 0xff00ff -1 -1»
+  «line (0,-100) (-50,-50) 0 0 0xff00ff -1 -1»
+  «line (-50,-50) (-110,-50) 0 0 0xff00ff -1 -1»
+  «line (-50,50) (-110,50) 0 0 0xff00ff -1 -1»
+  «line (100,400) (0,300) 0 0 0xff00ff -1 -1»
+  «line (-50,50) (0,100) 0 0 0xff00ff -1 -1»
+  «line (200,-100) (200,-200) 0 0 0xff00ff -1 -1»
+  «line (70,150) (370,150) 0 0 0xff00ff -1 -1»
+  «line (220,150) (270,250) 0 0 0xff00ff -1 -1»
+  «ellipse (-250,50) (-150,-50) 0 0 0 0xff00ff 0xff00ff -1 -1»
+  «arc3p (-200,-100) (-200,100) (-200,0) 0 0 0xff0012 -1 -1»
+  «arc3p (370,150) (70,150) (220,150) 0 0 0xff00ff -1 -1»
+  «triangle (-300,-100) (-270,-30) (-330,-30) 0 0 0xff00ff 0x2000000 -1 -1»
+  «text (500,500) 1 11 0 0x1000000 -1 -1 "XSEN1"»
+  «text (0,650) 1 15 2 0x1000000 -1 -1 "PProbe-2Terminals-Power+Current"»
+  «pin (-200,100) (20,0) 1 15 0 0x0 -1 "1"»
+  «pin (-200,-100) (20,0) 1 15 0 0x0 -1 "+ve"»
+  «pin (200,-200) (0,90) 1 14 0 0x0 -1 "-ve"»
+  «pin (500,300) (-20,0) 1 11 0 0x0 -1 "P"»
+  «pin (500,100) (-20,0) 1 11 0 0x0 -1 "I"»
+»

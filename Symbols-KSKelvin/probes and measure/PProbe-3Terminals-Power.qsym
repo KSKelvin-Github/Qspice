@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol PowerProbe-3Terminals
+ÿØÿÛ«symbol PProbe-3Terminals-Power
   «type: X»
   «description: Instantaneous Power Probe - 3 Terminals Device»
-  «library file: |.subckt PowerProbe-3Terminals IN1 IN2 IN3 1 2 3 Power\nV´I1 IN1 1 0\nV´I2 IN2 2 0\nV´I3 IN3 3 0\nB1 Power 0 V=V(1)*I(I1)+V(2)*I(I2)+V(3)*I(I3)\n.ends PowerProbe-3Terminals»
+  «library file: |.subckt PProbe-3Terminals-Power IN1 IN2 IN3 1 2 3 Power\nV´I1 IN1 1 0\nV´I2 IN2 2 0\nV´I3 IN3 3 0\nB1 Power 0 V=V(1)*I(I1)+V(2)*I(I2)+V(3)*I(I3)\n.ends PProbe-3Terminals-Power»
   «shorted pins: false»
   «line (0,300) (0,400) 0 0 0x1000000 -1 -1»
   «line (-400,0) (-500,0) 0 0 0x1000000 -1 -1»
@@ -31,7 +31,7 @@
   «arc3p (-500,700) (-600,600) (-500,600) 0 0 0xff00ff -1 -1»
   «arc3p (-600,350) (-550,300) (-550,350) 0 0 0xff00ff -1 -1»
   «text (-600,800) 1 7 0 0x1000000 -1 -1 "XSEN1"»
-  «text (350,950) 1 15 2 0x1000000 -1 -1 "POWERPROBE-3TERMINALS"»
+  «text (350,950) 1 15 2 0x1000000 -1 -1 "PProbe-3Terminals-Power"»
   «pin (0,400) (20,0) 1 15 0 0x0 -1 "IN1"»
   «pin (-500,0) (20,0) 1 15 0 0x0 -1 "IN2"»
   «pin (0,-400) (20,0) 1 15 0 0x0 -1 "IN3"»

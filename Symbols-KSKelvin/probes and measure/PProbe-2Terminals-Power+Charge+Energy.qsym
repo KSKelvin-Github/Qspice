@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol Power&Charge&Energy-Probe
+ÿØÿÛ«symbol PProbe-2Terminals-Power+Charge+Energy
   «type: X»
   «description: Power Charge and Energy Probe from V and I»
-  «library file: |.subckt Power&Charge&Energy-Probe 1 +ve -ve reset P Q E\nV´Imeas 1 +ve 0\nB2 E 0 V=idt(V(P),0,V(reset)>0.5)\nB1 P 0 V=I(Imeas)*V(1,-ve)\nB3 Q 0 V=idt(I(Imeas),0,V(reset)>0.5)\nR1 reset 0 1G\n.ends Power&Charge&Energy-Probe»
+  «library file: |.subckt PProbe-2Terminals-Power+Charge+Energy 1 +ve -ve reset P Q E\nV´Imeas 1 +ve 0\nB2 E 0 V=idt(V(P),0,V(reset)>0.5)\nB1 P 0 V=I(Imeas)*V(1,-ve)\nB3 Q 0 V=idt(I(Imeas),0,V(reset)>0.5)\nR1 reset 0 1G\n.ends PProbe-2Terminals-Power+Charge+Energy»
   «shorted pins: false»
   «line (-300,100) (-300,-100) 0 0 0xff00ff -1 -1»
   «line (0,100) (0,400) 0 0 0xff00ff -1 -1»
@@ -9,8 +9,8 @@
   «line (600,500) (600,-100) 0 0 0xff00ff -1 -1»
   «line (600,-100) (0,-100) 0 0 0xff00ff -1 -1»
   «line (0,-100) (-50,-50) 0 0 0xff00ff -1 -1»
-  «line (-50,-50) (-100,-50) 0 0 0xff00ff -1 -1»
-  «line (-50,50) (-100,50) 0 0 0xff00ff -1 -1»
+  «line (-50,-50) (-110,-50) 0 0 0xff00ff -1 -1»
+  «line (-50,50) (-110,50) 0 0 0xff00ff -1 -1»
   «line (100,500) (0,400) 0 0 0xff00ff -1 -1»
   «line (-50,50) (0,100) 0 0 0xff00ff -1 -1»
   «line (200,-100) (200,-200) 0 0 0xff00ff -1 -1»
@@ -21,7 +21,7 @@
   «arc3p (400,100) (100,100) (250,100) 0 0 0xff00ff -1 -1»
   «triangle (-300,-100) (-270,-30) (-330,-30) 0 0 0xff00ff 0x2000000 -1 -1»
   «text (250,600) 1 7 0 0x1000000 -1 -1 "XSEN1"»
-  «text (450,750) 1 15 2 0x1000000 -1 -1 "POWER&CHARGE&ENERGY-PROBE"»
+  «text (450,750) 1 15 2 0x1000000 -1 -1 "PProbe-2Terminals-Power+Charge+Energy"»
   «pin (-200,100) (20,0) 1 15 0 0x0 -1 "1"»
   «pin (-200,-100) (20,0) 1 15 0 0x0 -1 "+ve"»
   «pin (200,-200) (0,90) 1 14 0 0x0 -1 "-ve"»

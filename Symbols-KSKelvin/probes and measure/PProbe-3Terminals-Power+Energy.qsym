@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol PowerEnergyProbe-3Terminals
+ÿØÿÛ«symbol PProbe-3Terminals-Power+Energy
   «type: X»
   «description: Instantaneous Power and Energy Probe - 3 Terminals Device»
-  «library file: |.subckt PowerEnergyProbe-3Terminals IN1 IN2 IN3 1 2 3 Power Energy Reset\nV´I1 IN1 1 0\nV´I2 IN2 2 0\nV´I3 IN3 3 0\nB1 Power 0 V=V(1)*I(I1)+V(2)*I(I2)+V(3)*I(I3)\nB2 Energy 0 V=idt(V(Power),0,V(Reset)>0.5)\nRdummy Reset 0 1G\n.ends PowerEnergyProbe-3Terminals»
+  «library file: |.subckt PProbe-3Terminals-Power+Energy IN1 IN2 IN3 1 2 3 Power Energy Reset\nV´I1 IN1 1 0\nV´I2 IN2 2 0\nV´I3 IN3 3 0\nB1 Power 0 V=V(1)*I(I1)+V(2)*I(I2)+V(3)*I(I3)\nB2 Energy 0 V=idt(V(Power),0,V(Reset)>0.5)\nRdummy Reset 0 1G\n.ends PProbe-3Terminals-Power+Energy»
   «shorted pins: false»
   «line (0,300) (0,400) 0 0 0x1000000 -1 -1»
   «line (-400,0) (-500,0) 0 0 0x1000000 -1 -1»
@@ -32,7 +32,7 @@
   «arc3p (-750,800) (-800,750) (-750,750) 0 0 0xff00ff -1 -1»
   «arc3p (-300,750) (-350,800) (-350,750) 0 0 0xff00ff -1 -1»
   «text (-546,900) 1 15 0 0x1000000 -1 -1 "XSEN1"»
-  «text (0,1050) 1 15 2 0x1000000 -1 -1 "POWERENERGYPROBE-3TERMINALS"»
+  «text (0,1050) 1 15 2 0x1000000 -1 -1 "PProbe-3Terminals-Power+Energy"»
   «pin (0,400) (20,0) 1 15 0 0x0 -1 "IN1"»
   «pin (-500,0) (20,0) 1 15 0 0x0 -1 "IN2"»
   «pin (0,-400) (20,0) 1 15 0 0x0 -1 "IN3"»

@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol DIODE-Varactor
+  «type: D»
+  «description: Varactor Diode»
+  «library file: SPICE-Diode-KSKelvin-varactor.lib»
+  «shorted pins: false»
+  «line (100,50) (-100,50) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,100) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (100,100) (-100,100) 0 0 0x1000000 -1 -1»
+  «triangle (0,50) (100,-100) (-100,-100) 0 0 0x1000000 0x2000000 -1 -1»
+  «text (100,200) 1 7 0 0x1000000 -1 -1 "D1"»
+  «text (100,-200) 1 7 0 0x1000000 -1 -1 "<model>"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "K"»
+»

@@ -1,0 +1,276 @@
+* SPICE model library – models WITH keyword "pchan" (word)
+* Source: SPICE-MOSFET-KSKelvin.lib
+*
+.model 2sj162c vdmos pchan vto=-0.08 kp=0.6 lambda=0.1 rs=0.55 rd=0.1 rds=1e7 cgdmax=215p cgdmin=10p a=0.25 cgs=900p cjo=1200p m=0.7 vj=2.5 is=4.0u n=2.4
+.model 2sj201c vdmos pchan vto=-1.5 kp=4.5 lambda=0.002 rs=0.04 rd=0.1 rds=1e7 cgdmax=3100p cgdmin=55p a=0.34 cgs=1500p cjo=2800p m=0.68 vj=2.5 is=4.0u n=2.4
+.model 2sj49c vdmos pchan vto=-0.08 kp=0.6 lambda=0.1 rs=0.55 rd=0.1 rds=1e7 cgdmax=215p cgdmin=10p a=0.25 cgs=900p cjo=1200p m=0.7 vj=2.5 is=4.0u n=2.4
+.model 3n163 vdmos pchan vto=-3.0 rd=10 rs=100 kp=4.0m lambda=21m cgdmin=0.2p cgdmax=1.9p a=0.26 cgs=1.9p n=1.02 m=0.68 cjo=3.5p is=0.05p vj=2.5 tt=24n ksubthres=150m mtriode=0.6 mfg=linear_systems vds=40 ron=400
+.model ao3423 vdmos pchan kp=6.8 rs=0.0584 rd=0.0043 rg=11.2 vto=-0.85 mtriode=.6 ksubthres=.1 lambda=0.001 cgdmax=287p cgdmin=13p cgs=288p tt=09n a=0.43 is=5.85e-07 n=1.856 rb=0.019095 m=1.379 vj=6.84 cjo=90.0pf mfg=aos vds=-20 ron=76m qg=3.2n
+.model ao4614b_p vdmos pchan kp=13.4564 rs=0.0004 rd=0.0259 rg=14.0 vto=-2.55 mtriode=.85 ksubthres=.1 lambda=0.11 cgdmax=572p cgdmin=28p cgs=868p tt=30n a=0.23 is=1.26e-10 n=1.276 rb=0.00823 m=1.322 vj=6.13 cjo=170.0pf mfg=aos vds=-40 ron=36m qg=7.9n
+.model ao4630_p vdmos kp=18.0859 rs=0.0092 rd=0.0244 rg=8.0 vto=-1.1 mtriode=.8 ksubthres=.1 lambda=0.024 cgdmax=465p cgdmin=46p cgs=640p tt=22n a=0.78 is=7.98e-10 n=1.291 rb=0.01468 m=0.621 vj=1.41 cjo=92.0pf pchan mfg=aos vds=-30 ron=40m qg=7n
+.model ao6407 vdmos pchan rg=3 rd=14m rs=10m vto=-.8 kp=32 cgdmax=.5n cgdmin=.07n cgs=.9n cjo=.26n is=26p rb=17m mfg=alpha_&_omega vds=-20 ron=34m qg=13n
+.model ao6407-ltspice vdmos pchan rg=3 rd=14m rs=10m vto=-.8 kp=32 cgdmax=.5n cgdmin=.07n cgs=.9n cjo=.26n is=26p rb=17m ksubthres=.1 mfg=alpha_&_omega vds=-20 ron=34m qg=13n
+.model ao6608_p vdmos kp=13 rs=0.0137 rd=0.032 rg=15.0 vto=-0.69 mtriode=.8 ksubthres=.01 lambda=0.03 cgdmax=632p cgdmin=28p cgs=460p tt=23n a=1.07 is=7.52n n=1.36 rb=0.029116 m=0.484 vj=0.48 cjo=89.0pf pchan mfg=aos vds=-20 ron=63m qg=6n
+.model aod4185 vdmos pchan kp=33.6973 rs=0.0001 rd=0.0086 rg=4.0 vto=-2.07 mtriode=0.5 ksubthres=0.0001 lambda=0.04 cgdmax=1307p cgdmin=3p cgs=2360p tt=55n a=0.13 is=3.18e-11 n=1.147 rb=0.003527 m=1.17 vj=4.92 cjo=600.0pf mfg=aos vds=-40 ron=12.5m qg=18.6n
+.model aon6667_p vdmos pchan kp=26.564 rs=0.0002 rd=0.0112 rg=4.0 vto=-2.68 mtriode=.5 ksubthres=.1 lambda=0.11 cgdmax=607p cgdmin=74p cgs=915p tt=17n a=0.27 is=6.95e-11 n=1.236 rb=0.002939 m=1.459 vj=6.83 cjo=300.0pf mfg=aos vds=-30 ron=16.5m qg=9.6n
+.model aon7407 vdmos pchan kp=91.0922 rs=0.0001 rd=0.0046 rg=2.8 vto=-0.65 mtriode=0.6 ksubthres=.001 lambda=0.01 cgdmax=6017p cgdmin=318p cgs=3070p tt=48n a=2.07 is=8.66e-08 n=1.228 rb=0.003877 mfg=aos vds=-20 ron=7.6m qg=44n
+.model aon7423 vdmos pchan kp=267.2604 rs=1.63m rd=2.317m rg=3.0 vto=-0.67 mtriode=1 ksubthres=.001 lambda=0.01969 cgdmax=9083p cgdmin=0p cgs=4910p tt=112n a=0.49 is=3.47e-08 n=1.108 rb=0.00823 m=3.59 vj=15.74 cjo=1240.0pf mfg=aos vds=-20 ron=3.95m qg=70n
+.model aonr21117 vdmos pchan kp=157.7038 rs=.1m rd=2.663m rg=3.0 vto=-0.9 vtotc=2m bex=-1.5 mtriode=.81 ksubthres=0.1 lambda=0.049 cgdmax=4020p cgdmin=652p cgs=5860p tt=55n a=0.59 is=8.33e-10 n=1 rb=0.008583 eg=.8 trb1=-5m m=0.313 vj=0.1 cjo=410.0pf mfg=aos vds=-20 ron=4m qg=63n
+.model aonr21305c vdmos pchan rs=2.27m rd=2.27m rg=2.7 vto=-2.19 kp=64.3 lambda=91.7m mtriode=2.23 ksubthres=.1 is=2.93p n=1.03691 rb=1.91m eg=1.11 xti=2.86353 trb1=4.4m vtotc=2m trd1=3.5m trs1=3.5m cgs=4n cgdmin=500p cgdmax=2n cjo=500p m=.6 tt=1.7n mfg=alpha_&_omega vds=-30 ron=7.7m qg=32n
+.model aonr21307 vdmos pchan kp=27.3039 rs=0.0001 rd=0.0044 rg=4.5 vto=-2.1 mtriode=.75 ksubthres=0.01 lambda=0.05 cgdmax=1189p cgdmin=137p cgs=1735p tt=19n a=0.22 is=6.95e-13 n=0.959 rb=0.005878 m=0.415 vj=0.14 cjo=280.0pf mfg=aos vds=-30 ron=9.2m qg=17n
+.model aonr21311c vdmos pchan rs=13.9m rd=13.9m rg=15 vto=-1.86 kp=9.33 lambda=129m mtriode=2.19 ksubthres=.1 is=4.38p n=1.08551 rb=15m eg=1.11 xti=1.50279 trb1=2.37m vtotc=2.5m trd1=5.2m trs1=5.2m cgs=.6n cgdmin=50p cgdmax=500p cjo=50p m=.5 tt=1.86n mfg=alpha_&_omega vds=-30 ron=48m qg=6n
+.model aonr21321 vdmos pchan kp=16.4601 rs=0.0033 rd=0.0025 rg=5.0 vto=-1.9 mtriode=0.85 ksubthres=0.01 lambda=0.05 cgdmax=657p cgdmin=125p cgs=1025p tt=14n a=0.46 is=3.49p n=1.048 rb=0.005291 m=1.585 vj=7.15 cjo=180.0pf mfg=aos vds=-30 ron=13.5m qg=11n
+.model aonr21357 vdmos pchan kp=50.9915 rs=0.0036 rd=0.0001 rg=14.0 vto=-2.32 mtriode=0.6 ksubthres=.01 lambda=0.15 cgdmax=1652p cgdmin=233p cgs=2465p tt=46n a=0.27 is=7.34e-11 n=1.156 rb=0.00235 m=0.192 vj=0.1 cjo=300.0pf mfg=aos vds=-30 ron=6.3m qg=25n
+.model aons21303c vdmos pchan rs=941u rd=941u rg=2.6 vto=-2.55 kp=344 lambda=95m mtriode=1.19 ksubthres=.1 is=20.1p n=1.06087 rb=1.31m eg=1.11 xti=0.304817 trb1=-5.71m vtotc=2m trd1=3.5m trs1=3.5m cgs=10n cgdmin=500p cgdmax=8n cjo=100p m=.5 tt=3.15n mfg=alpha_&_omega vds=-30 ron=3.2m qg=100n
+.model aons21309c vdmos pchan rs=1.32m rd=1.32m rg=2.3 vto=-2.59 kp=349 lambda=107m mtriode=851m ksubthres=.1 is=5.76p n=1.04426 rb=1.63m eg=1.11 xti=2.68552 trb1=-545u vtotc=1.5m trd1=4m trs1=4m cgs=7n cgdmin=250p cgdmax=4.5n cjo=50p m=.5 tt=2.4n mfg=alpha_&_omega vds=-30 ron=4.5m qg=60n
+.model bss84 vdmos pchan rg=3 vto=-2.1 rd=2.4 rs=1.8 rb=3 kp=.2 cgdmax=.04n cgdmin=.001n cgs=.02n cjo=.01n is=2p mfg=nxp vds=-50 ron=6000m qg=1n
+.model bss84-ltspice vdmos pchan rg=3 vto=-2.1 rd=2.4 rs=1.8 rb=3 kp=.2 cgdmax=.04n cgdmin=.001n cgs=.02n cjo=.01n is=2p ksubthres=.1 mfg=nxp vds=-50 ron=6000m qg=1n
+.model csd25401q3 vdmos kp=50 rs=0.001 rd=0.001 rg=0.5 vto=-0.85 lambda=0.001 cgdmax=492p cgdmin=127p cgs=1020p tt=25n a=0.13 is=1.00e-13 n=1 rb=0.002 m=0.212 vj=0.1 cjo=100p pchan
+.model fdc5614p vdmos pchan rg=3 vto=-1.85 rd=42m rs=10.5m rb=21m kp=8. lambda=.02 cgdmax=.34n cgdmin=.05n cgs=.96n cjo=.96n is=17p mfg=fairchild vds=-60 ron=105m qg=15n
+.model fdc5614p-ltspice vdmos pchan rg=3 vto=-1.85 rd=42m rs=10.5m rb=21m kp=8. lambda=.02 cgdmax=.34n cgdmin=.05n cgs=.96n cjo=.96n is=17p ksubthres=.1 mfg=fairchild vds=-60 ron=105m qg=15n
+.model fdc638p vdmos pchan rg=3 rd=14m rs=11m vto=-1.1 kp=22 cgdmax=1.1n cgdmin=.08n cgs=1n cjo=1n is=5pa rb=21m n=1 mfg=fairchild vds=-20 ron=39m qg=13n
+.model fdc638p-ltspice vdmos pchan rg=3 rd=14m rs=11m vto=-1.1 kp=22 cgdmax=1.1n cgdmin=.08n cgs=1n cjo=1n is=5pa rb=21m n=1 ksubthres=.1 mfg=fairchild vds=-20 ron=39m qg=13n
+.model fdd4141 vdmos rg=3 vto=-2.36 ksubthres=100m mtriode=1.6 rd=7m rs=1m rb=5m kp=60 lambda=.02 theta=80m a=.4 cgdmax=950p cgdmin=180p cgs=2.1n cjo=600p is=3p mfg=fairchild vds=-40 ron=10.1m qg=36n pchan
+.model fdr840p vdmos pchan rg=3 vto=-0.9 rd=4.8m rs=1.2m rb=6m kp=50 lambda=.02 cgdmax=3n cgdmin=.8n cgs=3.7n cjo=1.2n is=82p mfg=fairchild vds=-20 ron=12m qg=41n
+.model fdr840p-ltspice vdmos pchan rg=3 vto=-0.9 rd=4.8m rs=1.2m rb=6m kp=50 lambda=.02 cgdmax=3n cgdmin=.8n cgs=3.7n cjo=1.2n is=82p ksubthres=.1 mfg=fairchild vds=-20 ron=12m qg=41n
+.model fds4435a vdmos pchan rg=3 rd=10m rs=7.5m vto=-1 kp=60 cgdmax=.8n cgdmin=.11n cgs=1.4n cjo=.42n is=42p rb=12.5m mfg=fairchild vds=-30 ron=25m qg=21n
+.model fds4435a-ltspice vdmos pchan rg=3 rd=10m rs=7.5m vto=-1 kp=60 cgdmax=.8n cgdmin=.11n cgs=1.4n cjo=.42n is=42p rb=12.5m ksubthres=.1 mfg=fairchild vds=-30 ron=25m qg=21n
+.model fds4465 vdmos pchan rg=3 vto=-.7 rd=4m rs=1m rb=5m kp=100 lambda=.01 cgdmax=7n cgdmin=1.3n cgs=6.8n cjo=2n is=200p mfg=fairchild vds=-20 ron=10m qg=86n
+.model fds4465-ltspice vdmos pchan rg=3 vto=-.95 rd=4.8m rs=1m rb=10m kp=240 mtriode=1.2 a=1.5 lambda=.01 cgdmax=9n cgdmin=.8n cgs=7n cjo=2n m=.5 vj=.5 is=2n ksubthres=.1 mfg=fairchild vds=-20 ron=10m qg=86n
+.model fds4559_p vdmos pchan rg=3 vto=-2.5 rd=42m rs=10.5m rb=53m kp=9 lambda=.01 cgdmax=.5n cgdmin=.12n cgs=.8n cjo=.24n is=30p mfg=fairchild vds=-60 ron=105m qg=15n
+.model fds4559_p-ltspice vdmos pchan rg=3 vto=-2.5 rd=42m rs=10.5m rb=53m kp=9 lambda=.01 cgdmax=.5n cgdmin=.12n cgs=.8n cjo=.24n is=30p ksubthres=.1 mfg=fairchild vds=-60 ron=105m qg=15n
+.model fds4685 vdmos pchan rg=3 vto=-1.8 rd=10.8m rs=2.7m rb=14m kp=22 lambda=.005 cgdmax=1n cgdmin=.25n cgs=1.5n cjo=.5n is=50p mfg=fairchild vds=-40 ron=27m qg=19n
+.model fds4685-ltspice vdmos pchan rg=3 vto=-1.8 rd=10.8m rs=2.7m rb=14m kp=22 lambda=.005 cgdmax=1n cgdmin=.25n cgs=1.5n cjo=.5n is=50p ksubthres=.1 mfg=fairchild vds=-40 ron=27m qg=19n
+.model fds4885c_p vdmos pchan rg=2.5 vto=-2 rd=12.4m rs=3.1m rb=16m kp=19 lambda=.05 cgdmax=1.2n cgdmin=.2n cgs=1.7n cjo=.5n is=58p mfg=fairchild vds=-40 ron=31m qg=29n
+.model fds4885c_p-ltspice vdmos pchan rg=2.5 vto=-2 rd=12.4m rs=3.1m rb=16m kp=19 lambda=.05 cgdmax=1.2n cgdmin=.2n cgs=1.7n cjo=.5n is=58p ksubthres=.1 mfg=fairchild vds=-40 ron=31m qg=29n
+.model fds4953 vdmos pchan rg=3 rd=38m rs=28.5m vto=-1 kp=9 cgdmax=.3n cgdmin=.04n cgs=.5n cjo=.16n is=16p rb=47.5m mfg=fairchild vds=-30 ron=95m qg=8n
+.model fds4953-ltspice vdmos pchan rg=3 rd=38m rs=28.5m vto=-1 kp=9 cgdmax=.3n cgdmin=.04n cgs=.5n cjo=.16n is=16p rb=47.5m ksubthres=.1 mfg=fairchild vds=-30 ron=95m qg=8n
+.model fds6375 vdmos pchan rg=3 rd=8m rs=6m vto=-1.05 kp=52 cgdmax=1.5n cgdmin=.4n cgs=1.9n cjo=1n is=.48na rb=19.4m n=1.13 mfg=fairchild vds=-20 ron=19m qg=23n
+.model fds6375-ltspice vdmos pchan rg=3 rd=8m rs=6m vto=-1.05 kp=52 cgdmax=1.5n cgdmin=.4n cgs=1.9n cjo=1n is=.48na rb=19.4m n=1.13 ksubthres=.1 mfg=fairchild vds=-20 ron=19m qg=23n
+.model fds6575 vdmos pchan rg=3 rd=4m rs=2.4m vto=-1.08 kp=100 cgdmax=4.4n cgdmin=.5n cgs=3.6n cjo=1n is=.1na rb=10m n=1 mfg=fairchild vds=-20 ron=10m qg=50n
+.model fds6575-ltspice vdmos pchan rg=3 rd=4m rs=2.4m vto=-1.08 kp=100 cgdmax=4.4n cgdmin=.5n cgs=3.6n cjo=1n is=.1na rb=10m n=1 ksubthres=.1 mfg=fairchild vds=-20 ron=10m qg=50n
+.model fds6576 vdmos pchan rg=3 rd=5.6m rs=4.2m vto=-1 kp=82 cgdmax=1.8n cgdmin=.22n cgs=2.9n cjo=.88n is=88p rb=7m mfg=fairchild vds=-20 ron=14m qg=44n
+.model fds6576-ltspice vdmos pchan rg=3 rd=5.6m rs=4.2m vto=-1 kp=82 cgdmax=1.8n cgdmin=.22n cgs=2.9n cjo=.88n is=88p rb=7m ksubthres=.1 mfg=fairchild vds=-20 ron=14m qg=44n
+.model fds6675 vdmos pchan rg=3 rd=8m rs=6m vto=-1 kp=70 cgdmax=1.2n cgdmin=.15n cgs=2n cjo=.6n is=60p rb=10m mfg=fairchild vds=-30 ron=20m qg=30n
+.model fds6675-ltspice vdmos pchan rg=3 rd=8m rs=6m vto=-1 kp=70 cgdmax=1.2n cgdmin=.15n cgs=2n cjo=.6n is=60p rb=10m ksubthres=.1 mfg=fairchild vds=-30 ron=20m qg=30n
+.model fds6685 vdmos pchan rg=3 rd=14m rs=10.5m vto=-1 kp=40 cgdmax=.8n cgdmin=.1n cgs=1.3n cjo=.38n is=38p rb=17.5m mfg=fairchild vds=-30 ron=35m qg=19n
+.model fds6685-ltspice vdmos pchan rg=3 rd=14m rs=10.5m vto=-1 kp=40 cgdmax=.8n cgdmin=.1n cgs=1.3n cjo=.38n is=38p rb=17.5m ksubthres=.1 mfg=fairchild vds=-30 ron=35m qg=19n
+.model fds6875 vdmos pchan rg=3 rd=12m rs=9m vto=-1 kp=50 cgdmax=.9n cgdmin=.12n cgs=1.5n cjo=.46n is=46p rb=15m mfg=fairchild vds=-20 ron=30m qg=23n
+.model fds6875-ltspice vdmos pchan rg=3 rd=12m rs=9m vto=-1 kp=50 cgdmax=.9n cgdmin=.12n cgs=1.5n cjo=.46n is=46p rb=15m ksubthres=.1 mfg=fairchild vds=-20 ron=30m qg=23n
+.model fds6975 vdmos pchan rg=3 rd=18m rs=13.5m vto=-1 kp=20 cgdmax=.6n cgdmin=.08n cgs=1n cjo=.3n is=30p rb=22.5m mfg=fairchild vds=-30 ron=45m qg=15n
+.model fds6975-ltspice vdmos pchan rg=3 rd=18m rs=13.5m vto=-1 kp=20 cgdmax=.6n cgdmin=.08n cgs=1n cjo=.3n is=30p rb=22.5m ksubthres=.1 mfg=fairchild vds=-30 ron=45m qg=15n
+.model fds8962c_p vdmos pchan rg=3 vto=-2.2 rd=20.8m rs=5.2m rb=26m kp=10 lambda=.03 cgdmax=.32n cgdmin=.08n cgs=.6n cjo=.16n is=20p mfg=fairchild vds=-30 ron=52m qg=10n
+.model fds8962c_p-ltspice vdmos pchan rg=3 vto=-2.2 rd=20.8m rs=5.2m rb=26m kp=10 lambda=.03 cgdmax=.32n cgdmin=.08n cgs=.6n cjo=.16n is=20p ksubthres=.1 mfg=fairchild vds=-30 ron=52m qg=10n
+.model fds9933a vdmos pchan rg=3 rd=30m rs=22.5m vto=-1 kp=12 cgdmax=.3n cgdmin=.04n cgs=.5n cjo=.16n is=16p rb=37.5m mfg=fairchild vds=-20 ron=75m qg=8n
+.model fds9933a-ltspice vdmos pchan rg=3 rd=30m rs=22.5m vto=-1 kp=12 cgdmax=.3n cgdmin=.04n cgs=.5n cjo=.16n is=16p rb=37.5m ksubthres=.1 mfg=fairchild vds=-20 ron=75m qg=8n
+.model fds9934_p vdmos pchan rg=3 vto=-1.4 rd=30m rs=22.5m rb=38m kp=40 cgdmax=.7n cgdmin=.2n cgs=.8n cjo=.3n is=18p mfg=fairchild vds=-20 ron=75m qg=9n
+.model fds9934_p-ltspice vdmos pchan rg=3 vto=-1.4 rd=30m rs=22.5m rb=38m kp=40 cgdmax=.7n cgdmin=.2n cgs=.8n cjo=.3n is=18p ksubthres=.1 mfg=fairchild vds=-20 ron=75m qg=9n
+.model fqb11p06 vdmos pchan rg=3 rd=70m rs=52m vto=-4 lambda=.3 kp=6 cgdmax=.5n cgdmin=.07n cgs=.9n cjo=.26n is=26p rb=87m mfg=fairchild vds=-60 ron=175m qg=13n
+.model fqb11p06-ltspice vdmos pchan rg=3 rd=70m rs=52m vto=-4 lambda=.3 kp=6 cgdmax=.5n cgdmin=.07n cgs=.9n cjo=.26n is=26p rb=87m ksubthres=.1 mfg=fairchild vds=-60 ron=175m qg=13n
+.model hat1023r vdmos pchan rg=3 vto=-1.4 rd=12m rs=9m rb=15m kp=50 cgdmax=1.2n cgdmin=.3n cgs=2n cjo=.6n is=60p mfg=renesas vds=-20 ron=30m qg=30n
+.model hat1023r-ltspice vdmos pchan rg=3 vto=-1.4 rd=12m rs=9m rb=15m kp=50 cgdmax=1.2n cgdmin=.3n cgs=2n cjo=.6n is=60p ksubthres=.1 mfg=renesas vds=-20 ron=30m qg=30n
+.model hat1072h vdmos pchan rg=3 rd=1.4m rs=1.1m vto=-2 kp=103 lambda=.03 cgdmax=4.2n cgdmin=.5n cgs=4.3n cjo=3n is=310p rb=1.8m mfg=renesas vds=-30 ron=3.6m qg=155n
+.model hat1072h-ltspice vdmos pchan rg=3 rd=1.4m rs=1.1m vto=-2 kp=103 lambda=.03 cgdmax=4.2n cgdmin=.5n cgs=4.3n cjo=3n is=310p rb=1.8m ksubthres=.1 mfg=renesas vds=-30 ron=3.6m qg=155n
+.model irf7204 vdmos pchan rg=3 rd=24m rs=18m vto=-1 kp=15 cgdmax=1n cgdmin=.13n cgs=1.7n cjo=.5n is=50p rb=30m mfg=international_rectifier vds=-20 ron=60m qg=25n
+.model irf7204-ltspice vdmos pchan rg=3 rd=24m rs=18m vto=-1 kp=15 cgdmax=1n cgdmin=.13n cgs=1.7n cjo=.5n is=50p rb=30m ksubthres=.1 mfg=international_rectifier vds=-20 ron=60m qg=25n
+.model irf7205 vdmos pchan rg=3 rd=28m rs=21m vto=-1 kp=10 cgdmax=1.1n cgdmin=.14n cgs=1.8n cjo=.54n is=54p rb=35m mfg=international_rectifier vds=-30 ron=70m qg=27n
+.model irf7205-ltspice vdmos pchan rg=3 rd=28m rs=21m vto=-1 kp=10 cgdmax=1.1n cgdmin=.14n cgs=1.8n cjo=.54n is=54p rb=35m ksubthres=.1 mfg=international_rectifier vds=-30 ron=70m qg=27n
+.model irf7207 vdmos pchan rg=3 rd=32m rs=24m vto=-1 kp=8 cgdmax=.6n cgdmin=.08n cgs=1n cjo=.3n is=30p rb=40m mfg=international_rectifier vds=-20 ron=80m qg=15n
+.model irf7207-ltspice vdmos pchan rg=3 rd=32m rs=24m vto=-1 kp=8 cgdmax=.6n cgdmin=.08n cgs=1n cjo=.3n is=30p rb=40m ksubthres=.1 mfg=international_rectifier vds=-20 ron=80m qg=15n
+.model irf7210 vdmos pchan rg=3 rd=2m rs=1.5m vto=-1 kp=100 cgdmax=8.5n cgdmin=1.06n cgs=14.1n cjo=4.24n is=424p rb=2.5m mfg=international_rectifier vds=-12 ron=5m qg=212n
+.model irf7210-ltspice vdmos pchan rg=3 rd=2m rs=1.5m vto=-1 kp=100 cgdmax=8.5n cgdmin=1.06n cgs=14.1n cjo=4.24n is=424p rb=2.5m ksubthres=.1 mfg=international_rectifier vds=-12 ron=5m qg=212n
+.model irf7220 vdmos pchan rg=3 rd=4.8m rs=3.6m vto=-.75 kp=86 cgdmax=1.5n cgdmin=4.25n cgs=7n cjo=1n is=168p rb=6m mfg=international_rectifier vds=-12 ron=12m qg=84n
+.model irf7220-ltspice vdmos pchan rg=3 rd=4.8m rs=3.6m vto=-.75 kp=86 cgdmax=1.5n cgdmin=4.25n cgs=7n cjo=1n is=168p rb=6m ksubthres=.1 mfg=international_rectifier vds=-12 ron=12m qg=84n
+.model irf7233 vdmos pchan rg=3 rd=8m rs=6m vto=-1 kp=70 cgdmax=2n cgdmin=.25n cgs=3.3n cjo=.98n is=98p rb=10m mfg=international_rectifier vds=-12 ron=20m qg=49n
+.model irf7233-ltspice vdmos pchan rg=3 rd=8m rs=6m vto=-1 kp=70 cgdmax=2n cgdmin=.25n cgs=3.3n cjo=.98n is=98p rb=10m ksubthres=.1 mfg=international_rectifier vds=-12 ron=20m qg=49n
+.model irf7309p vdmos pchan rg=3 vto=-2.1 rd=12.3m rs=40m rb=22.5m kp=6.5 cgdmax=0.69n cgdmin=0.172n cgs=0.30n cjo=0.283n is=45p mfg=international_rectifier vds=-30 ron=72m qg=9.1n
+.model irf7309p-ltspice vdmos pchan rg=3 vto=-2.1 rd=12.3m rs=40m rb=22.5m kp=6.5 cgdmax=0.69n cgdmin=0.172n cgs=0.30n cjo=0.283n is=45p ksubthres=.1 mfg=international_rectifier vds=-30 ron=72m qg=9.1n
+.model irf7343p vdmos pchan rg=3 rd=42m rs=31m vto=-1 kp=1 cgdmax=1.5n cgdmin=.19n cgs=.83n cjo=.76n is=76p rb=52m mfg=international_rectifier vds=-55 ron=105m qg=38n
+.model irf7343p-ltspice vdmos pchan rg=3 rd=42m rs=31m vto=-1 kp=1 cgdmax=1.5n cgdmin=.19n cgs=.83n cjo=.76n is=76p rb=52m ksubthres=.1 mfg=international_rectifier vds=-55 ron=105m qg=38n
+.model irf7404 vdmos pchan rg=3 rd=16m rs=12m vto=-1 kp=30 cgdmax=1.6n cgdmin=.2n cgs=2.7n cjo=.8n is=80p rb=20m mfg=international_rectifier vds=-20 ron=40m qg=40n
+.model irf7404-ltspice vdmos pchan rg=3 rd=16m rs=12m vto=-1 kp=30 cgdmax=1.6n cgdmin=.2n cgs=2.7n cjo=.8n is=80p rb=20m ksubthres=.1 mfg=international_rectifier vds=-20 ron=40m qg=40n
+.model irf7406 vdmos pchan rg=3 rd=18m rs=13.5m vto=-1 kp=20 cgdmax=1.4n cgdmin=.18n cgs=2.4n cjo=.72n is=72p rb=22.5m mfg=international_rectifier vds=-30 ron=45m qg=36n
+.model irf7406-ltspice vdmos pchan rg=3 rd=18m rs=13.5m vto=-1 kp=20 cgdmax=1.4n cgdmin=.18n cgs=2.4n cjo=.72n is=72p rb=22.5m ksubthres=.1 mfg=international_rectifier vds=-30 ron=45m qg=36n
+.model irf9640 vdmos pchan rg=3 vto=-3.5 rd=.15 rs=.15 rb=.15 kp=8 lambda=.01 mtriode=.5 cgdmax=1.5n cgdmin=.07n cgs=1n cjo=1n is=38p mfg=international_rectifier vds=-200 ron=.5 qg=44n
+.model irf9640-ltspice vdmos pchan rg=3 vto=-3.5 rd=.15 rs=.15 rb=.15 kp=8 lambda=.01 mtriode=.5 cgdmax=1.5n cgdmin=.07n cgs=1n cjo=1n is=38p ksubthres=.1 mfg=international_rectifier vds=-200 ron=.5 qg=44n
+.model irf9z24s_l vdmos pchan rg=3 vto=-3.5 rd=112m rs=84m rb=140m kp=200 cgdmax=.2n cgdmin=.08n cgs=1n cjo=.1n is=38p mfg=international_rectifier vds=-60 ron=280m qg=19n
+.model irf9z24s_l-ltspice vdmos pchan rg=3 vto=-3.5 rd=112m rs=84m rb=140m kp=200 cgdmax=.2n cgdmin=.08n cgs=1n cjo=.1n is=38p ksubthres=.1 mfg=international_rectifier vds=-60 ron=280m qg=19n
+.model irfp9240 vdmos pchan rg=3 vto=-4 rd=200m rs=50m rb=100m kp=8.2 lambda=.10 cgdmax=1.8n cgdmin=.07n cgs=.77n cjo=.77n is=76p mfg=international_rectifier vds=-200 ron=500m qg=44n
+.model irfp9240-ltspice vdmos pchan rg=3 vto=-4 rd=200m rs=50m rb=100m kp=8.2 lambda=.10 cgdmax=1.8n cgdmin=.07n cgs=.77n cjo=.77n is=76p ksubthres=.1 mfg=international_rectifier vds=-200 ron=500m qg=44n
+.model irfp9240c vdmos pchan vto=-3.76 kp=9 lambda=0.004 rs=0.064 rd=0.1 rds=1e7 cgdmax=1200p cgdmin=15p a=0.26 cgs=1130p cjo=2070p m=0.68 vj=2.5 is=4.0u n=2.4
+.model irlml6402 vdmos pchan vto=-0.55 kp=12.79 lambda=11.14m bv=20 ibv=0.25m rd=0.1m rs=24.67m rg=29.22 rb=0 cjo=112p cgs=520p cgdmin=100p cgdmax=140p is=20.3n n=1.5 vj=0.5 m=0.3 mfg=infineon vds=-20 ron=65m qg=8n
+.model kp301b-ltwiki vdmos pchan kp=200u mtriode=2.5 rs=200 rd=100 rg=60 vto=-4 lambda=0.03 cgdmax=1.5p cgdmin=1p cgs=1.5p tt=720n is=10n n=1 rb=10 m=0.5 vj=1 cjo=10p mfg=ussr vds=-20 ron=1000
+.model kp301b-volval vdmos pchan kp=200u mtriode=2.5 rs=200 rd=100 rg=60 vto=-4 lambda=0.03 cgdmax=1.5p cgdmin=1p cgs=1.5p tt=720n is=10n n=1 rb=10 m=0.5 vj=1 cjo=10p mfg=ussr vds=20 ron=1000
+.model qs8j4-ltspice vdmos pchan rg=40 vto=-2.169 rd=14.1m rs=20m rb=25m kp=21.66 lambda=50m cgdmin=65p cgdmax=400p a=0.4 cgso=656p is=5.5256p n=1.075 cjo=90.936p m=856.68m vj=822.62m tt=18n ksubthres=.1 mfg=rohm vds=-30 ron=40m qg=13n
+.model qs8j4-mpkopec vdmos pchan rg=40 vto=-2.169 rd=14.1m rs=20m rb=25m kp=21.66 lambda=50m cgdmin=65p cgdmax=400p a=0.4 cgso=656p is=5.5256p n=1.075 cjo=90.936p m=856.68m vj=822.62m tt=18n mfg=rohm vds=-30 ron=40m qg=13n
+.model qs8m51_p vdmos pchan rg=24 vto=-2.138 rd=324.5m rs=10m rb=30m kp=8.239 lambda=30m cgdmin=8p cgdmax=190p a=0.43 cgso=930p is=2.3373p n=1.081 cjo=50.065p m=269.73m vj=2.062 tt=72n mfg=rohm vds=-100 ron=350m qg=17n
+.model rq1a070zp-ltspice vdmos pchan rg=13 vto=-0.90995 rd=1.92m rs=4m rb=35m kp=131.9 lambda=50m cgdmin=600p cgdmax=2.6n a=0.5 cgso=6622p is=5.1096n n=1.217 cjo=68.219p m=173.77m vj=914.58m tt=38n ksubthres=.1 mfg=rohm vds=-12 ron=8.0m qg=58n
+.model rq1a070zp-mpkopec vdmos pchan rg=13 vto=-0.90995 rd=1.92m rs=4m rb=35m kp=131.9 lambda=50m cgdmin=600p cgdmax=2.6n a=0.5 cgso=6622p is=5.1096n n=1.217 cjo=68.219p m=173.77m vj=914.58m tt=38n mfg=rohm vds=-12 ron=8.0m qg=58n
+.model rq1e050rp-ltspice vdmos pchan rg=27 vto=-2.282 rd=8.3m rs=10m rb=20m kp=33.63 lambda=50m cgdmin=120p cgdmax=500p a=0.5 cgso=1.14n is=24.996p n=1.132 cjo=116p m=662.09m vj=756.09m tt=25.5n ksubthres=.1 mfg=rohm vds=-30 ron=22m qg=28n
+.model rq1e050rp-mpkopec vdmos pchan rg=27 vto=-2.282 rd=8.3m rs=10m rb=20m kp=33.63 lambda=50m cgdmin=120p cgdmax=500p a=0.5 cgso=1.14n is=24.996p n=1.132 cjo=116p m=662.09m vj=756.09m tt=25.5n mfg=rohm vds=-30 ron=22m qg=28n
+.model rq1e070rp-ltspice vdmos pchan rg=11 vto=-2.1120 rd=8.5m rs=1m rb=10m kp=50 lambda=0.05 cgdmin=250p cgdmax=1700p a=0.7 cgso=2.35n is=36.639p n=1.113 cjo=201.58p m=613.91m vj=773.05m tt=23n ksubthres=.1 mfg=rohm vds=-30 ron=12m qg=26n
+.model rq1e070rp-mpkopec vdmos pchan rg=11 vto=-2.1120 rd=8.5m rs=1m rb=10m kp=50 lambda=0.05 cgdmin=250p cgdmax=1700p a=0.7 cgso=2.35n is=36.639p n=1.113 cjo=201.58p m=613.91m vj=773.05m tt=23n mfg=rohm vds=-30 ron=12m qg=26n
+.model rrl035p03-ltspice vdmos pchan rg=35 vto=-2.104 rd=19.3m rs=10m rb=20m kp=18.58 lambda=50m cgdmin=70p cgdmax=420p a=0.4 cgso=656p is=4.5168p n=1.098 cjo=80.656p m=903.84m vj=1.102 tt=21n ksubthres=.1 mfg=rohm vds=-30 ron=36m qg=8.0n
+.model rrl035p03-mpkopec vdmos pchan rg=35 vto=-2.104 rd=19.3m rs=10m rb=20m kp=18.58 lambda=50m cgdmin=70p cgdmax=420p a=0.4 cgso=656p is=4.5168p n=1.098 cjo=80.656p m=903.84m vj=1.102 tt=21n mfg=rohm vds=-30 ron=36m qg=8.0n
+.model rrq030p03-ltspice vdmos pchan rg=50 vto=-2.3235 rd=34.2m rs=10m rb=40m kp=12 lambda=0.05 cgdmin=50p cgdmax=180p a=0.5 cgso=410p is=41.481p n=1.106 cjo=40.57p m=1.166 vj=819.33m tt=16n ksubthres=.1 mfg=rohm vds=-30 ron=55m qg=5.2n
+.model rrq030p03-mpkopec vdmos pchan rg=50 vto=-2.3235 rd=34.2m rs=10m rb=40m kp=12 lambda=0.05 cgdmin=50p cgdmax=180p a=0.5 cgso=410p is=41.481p n=1.106 cjo=40.57p m=1.166 vj=819.33m tt=16n mfg=rohm vds=-30 ron=55m qg=5.2n
+.model rrq045p03-ltspice vdmos pchan rg=39 vto=-2.162 rd=11.4m rs=10m rb=15m kp=32.98 lambda=50m cgdmin=130p cgdmax=380p a=0.2 cgso=1.14n is=16.807p n=1.098 cjo=115.06p m=3.883 vj=4.177 tt=26n ksubthres=.1 mfg=rohm vds=-30 ron=25m qg=14n
+.model rrq045p03-mpkopec vdmos pchan rg=39 vto=-2.162 rd=11.4m rs=10m rb=15m kp=32.98 lambda=50m cgdmin=130p cgdmax=380p a=0.2 cgso=1.14n is=16.807p n=1.098 cjo=115.06p m=3.883 vj=4.177 tt=26n mfg=rohm vds=-30 ron=25m qg=14n
+.model rrr030p03-ltspice vdmos pchan rg=51 vto=-2.254 rd=23.8m rs=20m rb=50m kp=11.49 lambda=50m cgdmin=50p cgdmax=180p a=0.6 cgso=375p is=41.481p n=1.106 cjo=55.591p m=964.83m vj=897.79m tt=16n ksubthres=.1 mfg=rohm vds=-30 ron=55m qg=5.2n
+.model rrr030p03-mpkopec vdmos pchan rg=51 vto=-2.254 rd=23.8m rs=20m rb=50m kp=11.49 lambda=50m cgdmin=50p cgdmax=180p a=0.6 cgso=375p is=41.481p n=1.106 cjo=55.591p m=964.83m vj=897.79m tt=16n mfg=rohm vds=-30 ron=55m qg=5.2n
+.model rrr040p03-ltspice vdmos pchan rg=35 vto=-2.242 rd=16.6m rs=10m rb=20m kp=22.81 lambda=50m cgdmin=95p cgdmax=410p a=0.5 cgso=835p is=20.454p n=1.134 cjo=92.7p m=578.19m vj=758.2m tt=25.5n ksubthres=.1 mfg=rohm vds=-30 ron=32m qg=10.5n
+.model rrr040p03-mpkopec vdmos pchan rg=35 vto=-2.242 rd=16.6m rs=10m rb=20m kp=22.81 lambda=50m cgdmin=95p cgdmax=410p a=0.5 cgso=835p is=20.454p n=1.134 cjo=92.7p m=578.19m vj=758.2m tt=25.5n mfg=rohm vds=-30 ron=32m qg=10.5n
+.model rrs040p03-ltspice vdmos pchan rg=43 vto=-2.145 rd=33.6m rs=10m rb=25m kp=10.83 lambda=50m cgdmin=50p cgdmax=220p a=0.6 cgso=410p is=9.9952p n=1.136 cjo=16.452p m=1.333 vj=1.393 tt=23n ksubthres=.1 mfg=rohm vds=-30 ron=55m qg=5.2n
+.model rrs040p03-mpkopec vdmos pchan rg=43 vto=-2.145 rd=33.6m rs=10m rb=25m kp=10.83 lambda=50m cgdmin=50p cgdmax=220p a=0.6 cgso=410p is=9.9952p n=1.136 cjo=16.452p m=1.333 vj=1.393 tt=23n mfg=rohm vds=-30 ron=55m qg=5.2n
+.model rrs050p03-ltspice vdmos pchan rg=26 vto=-2.251 rd=20.1m rs=10m rb=25m kp=21.22 lambda=50m cgdmin=90p cgdmax=350p a=0.5 cgso=693p is=112.65f n=903.82m cjo=21.161p m=608.02m vj=1.028 tt=22n ksubthres=.1 mfg=rohm vds=-30 ron=36m qg=9.2n
+.model rrs050p03-mpkopec vdmos pchan rg=26 vto=-2.251 rd=20.1m rs=10m rb=25m kp=21.22 lambda=50m cgdmin=90p cgdmax=350p a=0.5 cgso=693p is=112.65f n=903.82m cjo=21.161p m=608.02m vj=1.028 tt=22n mfg=rohm vds=-30 ron=36m qg=9.2n
+.model rrs075p03-ltspice vdmos pchan rg=12.7 vto=-2.041 rd=1.97m rs=10m rb=10m kp=40.53 lambda=50m cgdmin=180p cgdmax=1.1n a=0.7 cgso=1.65n is=78.053p n=1.16 cjo=16.452p m=1.333 vj=1.393 tt=26n ksubthres=.1 mfg=rohm vds=-30 ron=15m qg=21n
+.model rrs075p03-mpkopec vdmos pchan rg=12.7 vto=-2.041 rd=1.97m rs=10m rb=10m kp=40.53 lambda=50m cgdmin=180p cgdmax=1.1n a=0.7 cgso=1.65n is=78.053p n=1.16 cjo=16.452p m=1.333 vj=1.393 tt=26n mfg=rohm vds=-30 ron=15m qg=21n
+.model rrs090p03-ltspice vdmos pchan rg=6.6 vto=-2.231 rd=8.21m rs=1m rb=10m kp=72.47 lambda=50m cgdmin=250p cgdmax=2.3n a=0.8 cgso=2.64n is=2.3625p n=976.43m cjo=1.7093p m=1.08 vj=777.53m tt=30n ksubthres=.1 mfg=rohm vds=-30 ron=11.0m qg=30n
+.model rrs090p03-mpkopec vdmos pchan rg=6.6 vto=-2.231 rd=8.21m rs=1m rb=10m kp=72.47 lambda=50m cgdmin=250p cgdmax=2.3n a=0.8 cgso=2.64n is=2.3625p n=976.43m cjo=1.7093p m=1.08 vj=777.53m tt=30n mfg=rohm vds=-30 ron=11.0m qg=30n
+.model rrs100p03-ltspice vdmos pchan rg=11 vto=-2.19 rd=2.45m rs=5m rb=6.6378m kp=84.56 lambda=50m cgdmin=280p cgdmax=1.5n a=0.5 cgso=3.15n is=77.24p n=1.119 cjo=50.066p m=1.889 vj=1.441 tt=60n ksubthres=.1 mfg=rohm vds=-30 ron=9.0m qg=39n
+.model rrs100p03-mpkopec vdmos pchan rg=11 vto=-2.19 rd=2.45m rs=5m rb=6.6378m kp=84.56 lambda=50m cgdmin=280p cgdmax=1.5n a=0.5 cgso=3.15n is=77.24p n=1.119 cjo=50.066p m=1.889 vj=1.441 tt=60n mfg=rohm vds=-30 ron=9.0m qg=39n
+.model rrs140p03-ltspice vdmos pchan rg=10 vto=-2.081 rd=3.31m rs=1m rb=6m kp=173.2 lambda=50m cgdmin=600p cgdmax=4n a=0.5 cgso=7n is=550.67f n=888.55m cjo=569.71p m=2.457 vj=817.26m tt=58n ksubthres=.1 mfg=rohm vds=-30 ron=5.0m qg=80n
+.model rrs140p03-mpkopec vdmos pchan rg=10 vto=-2.081 rd=3.31m rs=1m rb=6m kp=173.2 lambda=50m cgdmin=600p cgdmax=4n a=0.5 cgso=7n is=550.67f n=888.55m cjo=569.71p m=2.457 vj=817.26m tt=58n mfg=rohm vds=-30 ron=5.0m qg=80n
+.model rsj250p10-ltspice vdmos pchan rg=17.2 vto=-2.077 rd=23.6m rs=20m rb=5m kp=95 lambda=50m cgdmin=100p cgdmax=600p a=0.1 cgso=7.77n is=20.02p n=1.089 cjo=884p m=622.43m vj=777.43m tt=78n ksubthres=.1 mfg=rohm vds=-100 ron=45m qg=60n
+.model rsj250p10-mpkopec vdmos pchan rg=17.2 vto=-2.077 rd=23.6m rs=20m rb=5m kp=95 lambda=50m cgdmin=100p cgdmax=600p a=0.1 cgso=7.77n is=20.02p n=1.089 cjo=884p m=622.43m vj=777.43m tt=78n mfg=rohm vds=-100 ron=45m qg=60n
+.model rsl020p03-ltspice vdmos pchan rg=35 vto=-2.131 rd=52.3m rs=10m rb=181.78m kp=7.004 lambda=50m cgdmin=30p cgdmax=180p a=0.3 cgso=265p is=5.5007f n=891.87m cjo=107.91p m=422.02m vj=505.97m tt=33n ksubthres=.1 mfg=rohm vds=-30 ron=80m qg=3.9n
+.model rsl020p03-mpkopec vdmos pchan rg=35 vto=-2.131 rd=52.3m rs=10m rb=181.78m kp=7.004 lambda=50m cgdmin=30p cgdmax=180p a=0.3 cgso=265p is=5.5007f n=891.87m cjo=107.91p m=422.02m vj=505.97m tt=33n mfg=rohm vds=-30 ron=80m qg=3.9n
+.model rsq015p10-ltspice vdmos pchan rg=22.5 vto=-2.14 rd=324m rs=10m rb=20m kp=8 lambda=0.04 cgdmin=6p cgdmax=220p a=0.5 cgso=930p is=2.3373p n=1.081 cjo=50.065p m=269.73m vj=2.062 tt=72n ksubthres=.1 mfg=rohm vds=-100 ron=350m qg=17n
+.model rsq015p10-mpkopec vdmos pchan rg=22.5 vto=-2.14 rd=324m rs=10m rb=20m kp=8 lambda=0.04 cgdmin=6p cgdmax=220p a=0.5 cgso=930p is=2.3373p n=1.081 cjo=50.065p m=269.73m vj=2.062 tt=72n mfg=rohm vds=-100 ron=350m qg=17n
+.model rsq025p03-ltspice vdmos pchan rg=35 vto=-1.92 rd=49.1m rs=10m rb=111.73m kp=5.732 lambda=50m cgdmin=25p cgdmax=180p a=0.2 cgso=226p is=547.9p n=1.501 cjo=56.759p m=349.92m vj=1.062 tt=28n ksubthres=.1 mfg=rohm vds=-30 ron=80m qg=4.4n
+.model rsq025p03-mpkopec vdmos pchan rg=35 vto=-1.92 rd=49.1m rs=10m rb=111.73m kp=5.732 lambda=50m cgdmin=25p cgdmax=180p a=0.2 cgso=226p is=547.9p n=1.501 cjo=56.759p m=349.92m vj=1.062 tt=28n mfg=rohm vds=-30 ron=80m qg=4.4n
+.model rsq035p03 vdmos pchan rg=3 vto=-1.65 rd=26m rs=6.5m rb=13m kp=10.2 lambda=.01 cgdmax=.3n cgdmin=.12n cgs=.76n cjo=.76n is=15p mfg=rohm vds=-30 ron=65m qg=9.2n
+.model rsq035p03-ltspice vdmos pchan rg=18 vto=-2.0643 rd=26.8m rs=10m rb=74.06m kp=15.3 lambda=0.05 cgdmin=90p cgdmax=380p a=0.5 cgso=650p is=663.24p n=1.432 cjo=104.58p m=240.81m vj=489.77m tt=21n ksubthres=.1 mfg=rohm vds=-30 ron=45m qg=9.2n
+.model rsq035p03-mpkopec vdmos pchan rg=18 vto=-2.0643 rd=26.8m rs=10m rb=74.06m kp=15.3 lambda=0.05 cgdmin=90p cgdmax=380p a=0.5 cgso=650p is=663.24p n=1.432 cjo=104.58p m=240.81m vj=489.77m tt=21n mfg=rohm vds=-30 ron=45m qg=9.2n
+.model rsr015p06 vdmos pchan rg=39 vto=-2.072 rd=153.3m rs=30m rb=35m kp=7.507 lambda=50m cgdmin=18p cgdmax=75p a=0.2 cgso=470p is=716.43f n=1.039 cjo=129.74p m=445.93m vj=769.5m tt=43.5n mfg=rohm vds=-60 ron=200m qg=10n
+.model rsr020p05-ltspice vdmos pchan rg=33.7 vto=-2.2158 rd=109.4m rs=1m rb=32.104m kp=6.5 lambda=0.03 cgdmin=20p cgdmax=100p a=0.3 cgso=460p is=455.12f n=1.023 cjo=140.85p m=481.53m vj=790.12m tt=42n ksubthres=.1 mfg=rohm vds=-45 ron=130m qg=9.5n
+.model rsr020p05-mpkopec vdmos pchan rg=33.7 vto=-2.2158 rd=109.4m rs=1m rb=32.104m kp=6.5 lambda=0.03 cgdmin=20p cgdmax=100p a=0.3 cgso=460p is=455.12f n=1.023 cjo=140.85p m=481.53m vj=790.12m tt=42n mfg=rohm vds=-45 ron=130m qg=9.5n
+.model rsr025p03-ltspice vdmos pchan rg=34 vto=-2.1220 rd=46.3m rs=10m rb=90.131m kp=9.2 lambda=0.05 cgdmin=40p cgdmax=230p a=0.5 cgso=395p is=142.28p n=1.334 cjo=110.02p m=384.3m vj=774.53m tt=20n ksubthres=.1 mfg=rohm vds=-30 ron=70m qg=5.4n
+.model rsr025p03-mpkopec vdmos pchan rg=34 vto=-2.1220 rd=46.3m rs=10m rb=90.131m kp=9.2 lambda=0.05 cgdmin=40p cgdmax=230p a=0.5 cgso=395p is=142.28p n=1.334 cjo=110.02p m=384.3m vj=774.53m tt=20n mfg=rohm vds=-30 ron=70m qg=5.4n
+.model rss060p05-ltspice vdmos pchan rg=10.2 vto=-2.2750 rd=3m rs=20m rb=10m kp=42.3 lambda=0.02 cgdmin=130p cgdmax=750p a=0.7 cgso=2470p is=8.4599p n=1.073 cjo=445.26p m=464.46m vj=746.2m tt=49n ksubthres=.1 mfg=rohm vds=-45 ron=26m qg=23n
+.model rss060p05-mpkopec vdmos pchan rg=10.2 vto=-2.2750 rd=3m rs=20m rb=10m kp=42.3 lambda=0.02 cgdmin=130p cgdmax=750p a=0.7 cgso=2470p is=8.4599p n=1.073 cjo=445.26p m=464.46m vj=746.2m tt=49n mfg=rohm vds=-45 ron=26m qg=23n
+.model rss070p05-ltspice vdmos pchan rg=9 vto=-2.238 rd=6.3m rs=10m rb=7m kp=50.35 lambda=50m cgdmin=200p cgdmax=900p a=0.7 cgso=3.77n is=11.136p n=1.078 cjo=552.55p m=469.56m vj=1.01 tt=45n ksubthres=.1 mfg=rohm vds=-45 ron=19m qg=34n
+.model rss070p05-mpkopec vdmos pchan rg=9 vto=-2.238 rd=6.3m rs=10m rb=7m kp=50.35 lambda=50m cgdmin=200p cgdmax=900p a=0.7 cgso=3.77n is=11.136p n=1.078 cjo=552.55p m=469.56m vj=1.01 tt=45n mfg=rohm vds=-45 ron=19m qg=34n
+.model rtl020p02-ltspice vdmos pchan rg=28 vto=-1.681 rd=61m rs=10m rb=180m kp=12.05 lambda=50m cgdmin=40p cgdmax=180p a=0.5 cgso=375p is=411.86f n=1.025 cjo=79.276p m=1.235 vj=7.557 tt=33n ksubthres=.1 mfg=rohm vds=-20 ron=100m qg=4.9n
+.model rtl020p02-mpkopec vdmos pchan rg=28 vto=-1.681 rd=61m rs=10m rb=180m kp=12.05 lambda=50m cgdmin=40p cgdmax=180p a=0.5 cgso=375p is=411.86f n=1.025 cjo=79.276p m=1.235 vj=7.557 tt=33n mfg=rohm vds=-20 ron=100m qg=4.9n
+.model rtq025p02-ltspice vdmos pchan rg=29 vto=-1.624 rd=35m rs=10m rb=100.9m kp=12.89 lambda=50m cgdmin=45p cgdmax=250p a=0.3 cgso=500p is=1.9163n n=1.55 cjo=95.455p m=415.43m vj=657.1m tt=23n ksubthres=.1 mfg=rohm vds=-20 ron=72m qg=6.4n
+.model rtq025p02-mpkopec vdmos pchan rg=29 vto=-1.624 rd=35m rs=10m rb=100.9m kp=12.89 lambda=50m cgdmin=45p cgdmax=250p a=0.3 cgso=500p is=1.9163n n=1.55 cjo=95.455p m=415.43m vj=657.1m tt=23n mfg=rohm vds=-20 ron=72m qg=6.4n
+.model rtq035p02-ltspice vdmos pchan rg=27 vto=-1.487 rd=26.4m rs=10m rb=90m kp=23.85 lambda=50m cgdmin=80p cgdmax=450p a=0.35 cgso=1035p is=585.06f n=1.017 cjo=167.37p m=310.02m vj=639.38m tt=26n ksubthres=.1 mfg=rohm vds=-20 ron=50m qg=10.5n
+.model rtq035p02-mpkopec vdmos pchan rg=27 vto=-1.487 rd=26.4m rs=10m rb=90m kp=23.85 lambda=50m cgdmin=80p cgdmax=450p a=0.35 cgso=1035p is=585.06f n=1.017 cjo=167.37p m=310.02m vj=639.38m tt=26n mfg=rohm vds=-20 ron=50m qg=10.5n
+.model rtr020p02-ltspice vdmos pchan rg=26.7 vto=-1.5922 rd=56.8m rs=10m rb=147.77m kp=10.4 lambda=0.05 cgdmin=40p cgdmax=200p a=0.4 cgso=375p is=17.79f n=923.21m cjo=71.325p m=966.17m vj=5.103 tt=21n ksubthres=.1 mfg=rohm vds=-20 ron=100m qg=4.9n
+.model rtr020p02-mpkopec vdmos pchan rg=26.7 vto=-1.5922 rd=56.8m rs=10m rb=147.77m kp=10.4 lambda=0.05 cgdmin=40p cgdmax=200p a=0.4 cgso=375p is=17.79f n=923.21m cjo=71.325p m=966.17m vj=5.103 tt=21n mfg=rohm vds=-20 ron=100m qg=4.9n
+.model rtr025p02-ltspice vdmos pchan rg=35 vto=-1.541 rd=40.5m rs=10m rb=130m kp=16.98 lambda=50m cgdmin=55p cgdmax=250p a=0.5 cgso=555p is=1.3652p n=1.067 cjo=71.561p m=358.72m vj=1.577 tt=22n ksubthres=.1 mfg=rohm vds=-20 ron=70m qg=7.0n
+.model rtr025p02-mpkopec vdmos pchan rg=35 vto=-1.541 rd=40.5m rs=10m rb=130m kp=16.98 lambda=50m cgdmin=55p cgdmax=250p a=0.5 cgso=555p is=1.3652p n=1.067 cjo=71.561p m=358.72m vj=1.577 tt=22n mfg=rohm vds=-20 ron=70m qg=7.0n
+.model rtr030p02-ltspice vdmos pchan rg=25 vto=-1.448 rd=28.3m rs=10m rb=112.92m kp=19.22 lambda=50m cgdmin=70p cgdmax=300p a=0.4 cgso=705p is=10.618p n=1.14 cjo=110.02p m=384.3m vj=774.53m tt=20n ksubthres=.1 mfg=rohm vds=-20 ron=55m qg=9.3n
+.model rtr030p02-mpkopec vdmos pchan rg=25 vto=-1.448 rd=28.3m rs=10m rb=112.92m kp=19.22 lambda=50m cgdmin=70p cgdmax=300p a=0.4 cgso=705p is=10.618p n=1.14 cjo=110.02p m=384.3m vj=774.53m tt=20n mfg=rohm vds=-20 ron=55m qg=9.3n
+.model si1013 vdmos pchan rg=3 vto=-1.3 rd=480m rs=360m rb=600m kp=3 cgdmax=.2n cgdmin=.01n cgs=.05n cjo=.1n is=3p mfg=siliconix vds=-20 ron=1200m qg=1.5n
+.model si1013-ltspice vdmos pchan rg=3 vto=-1.3 rd=480m rs=360m rb=600m kp=3 cgdmax=.2n cgdmin=.01n cgs=.05n cjo=.1n is=3p ksubthres=.1 mfg=siliconix vds=-20 ron=1200m qg=1.5n
+.model si1555dl_p vdmos pchan rg=3 vto=-.9 rd=280m rs=210m rb=350m kp=3 cgdmax=.2n cgdmin=.01n cgs=.06n cjo=.03n is=3p mfg=siliconix vds=-8 ron=700m qg=1.5n
+.model si1555dl_p-ltspice vdmos pchan rg=3 vto=-.9 rd=280m rs=210m rb=350m kp=3 cgdmax=.2n cgdmin=.01n cgs=.06n cjo=.03n is=3p ksubthres=.1 mfg=siliconix vds=-8 ron=700m qg=1.5n
+.model si3443dv vdmos pchan rg=3 rd=22m rs=8m vto=-1.05 kp=12.2 cgdmax=.32n cgdmin=.16n cgs=1.1n cjo=1n is=.011na rb=.022 n=1.12 mfg=siliconix vds=-20 ron=58m qg=8.5n
+.model si3443dv-ltspice vdmos pchan rg=3 rd=22m rs=8m vto=-1.05 kp=12.2 cgdmax=.32n cgdmin=.16n cgs=1.1n cjo=1n is=.011na rb=.022 n=1.12 ksubthres=.1 mfg=siliconix vds=-20 ron=58m qg=8.5n
+.model si3445dv vdmos pchan rg=3 rd=15m rs=6m vto=-.85 kp=18 cgdmax=1n cgdmin=.44n cgs=1.2n cjo=.1n is=.045na rb=.026 n=1.127 mfg=siliconix vds=-8 ron=34m qg=15n
+.model si3445dv-ltspice vdmos pchan rg=3 rd=15m rs=6m vto=-.85 kp=18 cgdmax=1n cgdmin=.44n cgs=1.2n cjo=.1n is=.045na rb=.026 n=1.127 ksubthres=.1 mfg=siliconix vds=-8 ron=34m qg=15n
+.model si4401dy vdmos pchan rg=3 rd=8.8m rs=6.6m vto=-1 kp=66 cgdmax=1.5n cgdmin=.19n cgs=2.5n cjo=.74n is=74p rb=11m mfg=siliconix vds=-40 ron=22m qg=37n
+.model si4401dy-ltspice vdmos pchan rg=3 rd=8.8m rs=6.6m vto=-1 kp=66 cgdmax=1.5n cgdmin=.19n cgs=2.5n cjo=.74n is=74p rb=11m ksubthres=.1 mfg=siliconix vds=-40 ron=22m qg=37n
+.model si4403dy vdmos pchan rg=3 rd=6.8m rs=5.1m vto=-1 kp=76 cgdmax=1.2n cgdmin=.15n cgs=2n cjo=.61n is=61p rb=8.5m mfg=siliconix vds=-20 ron=17m qg=30.5n
+.model si4403dy-ltspice vdmos pchan rg=3 rd=6.8m rs=5.1m vto=-1 kp=76 cgdmax=1.2n cgdmin=.15n cgs=2n cjo=.61n is=61p rb=8.5m ksubthres=.1 mfg=siliconix vds=-20 ron=17m qg=30.5n
+.model si4425bdy vdmos pchan rg=3 vto=-2.5 rd=4.8m rs=1.2m rb=6m kp=29 lambda=.03 cgdmax=2.6n cgdmin=.64n cgs=2.8n cjo=1n is=120p mfg=siliconix vds=-30 ron=12m qg=64n
+.model si4425bdy-ltspice vdmos pchan rg=3 vto=-2.5 rd=4.8m rs=1.2m rb=6m kp=29 lambda=.03 cgdmax=2.6n cgdmin=.64n cgs=2.8n cjo=1n is=120p ksubthres=.1 mfg=siliconix vds=-30 ron=12m qg=64n
+.model si4425dy vdmos pchan rg=3 rd=9.2m rs=6.9m vto=-1 kp=64 cgdmax=3n cgdmin=.37n cgs=4.9n cjo=1.48n is=148p rb=11.5m mfg=siliconix vds=-30 ron=23m qg=74n
+.model si4425dy-ltspice vdmos pchan rg=3 rd=9.2m rs=6.9m vto=-1 kp=64 cgdmax=3n cgdmin=.37n cgs=4.9n cjo=1.48n is=148p rb=11.5m ksubthres=.1 mfg=siliconix vds=-30 ron=23m qg=74n
+.model si4427dy vdmos pchan rg=3 rd=4.8m rs=3.6m vto=-1 kp=86 cgdmax=1.9n cgdmin=.24n cgs=3.1n cjo=.94n is=94p rb=6m mfg=siliconix vds=-30 ron=12m qg=47n
+.model si4427dy-ltspice vdmos pchan rg=3 rd=4.8m rs=3.6m vto=-1 kp=86 cgdmax=1.9n cgdmin=.24n cgs=3.1n cjo=.94n is=94p rb=6m ksubthres=.1 mfg=siliconix vds=-30 ron=12m qg=47n
+.model si4431dy vdmos pchan rg=3 rd=28m rs=21m vto=-1 kp=10 cgdmax=.9n cgdmin=.11n cgs=1.5n cjo=.44n is=44p rb=35m mfg=siliconix vds=-30 ron=70m qg=22n
+.model si4431dy-ltspice vdmos pchan rg=3 rd=28m rs=21m vto=-1 kp=10 cgdmax=.9n cgdmin=.11n cgs=1.5n cjo=.44n is=44p rb=35m ksubthres=.1 mfg=siliconix vds=-30 ron=70m qg=22n
+.model si4433dy vdmos pchan rg=3 vto=-1.2 rd=44m rs=33m rb=55m kp=30 cgdmax=.2n cgdmin=.07n cgs=.6n cjo=.2n is=9p mfg=siliconix vds=-20 ron=110m qg=4.4n
+.model si4433dy-ltspice vdmos pchan rg=3 vto=-1.2 rd=44m rs=33m rb=55m kp=30 cgdmax=.2n cgdmin=.07n cgs=.6n cjo=.2n is=9p ksubthres=.1 mfg=siliconix vds=-20 ron=110m qg=4.4n
+.model si4451dy vdmos pchan rg=3 vto=-.8 rd=4m rs=3m rb=5m kp=90 cgdmax=5.2n cgdmin=1.3n cgs=9n cjo=2.6n is=260p mfg=siliconix vds=-12 ron=10m qg=81n
+.model si4451dy-ltspice vdmos pchan rg=3 vto=-.8 rd=4m rs=3m rb=5m kp=90 cgdmax=5.2n cgdmin=1.3n cgs=9n cjo=2.6n is=260p ksubthres=.1 mfg=siliconix vds=-12 ron=10m qg=81n
+.model si4463dy vdmos pchan rg=3 rd=5.6m rs=4.2m vto=-1 kp=82 cgdmax=1.9n cgdmin=.24n cgs=3.2n cjo=.96n is=96p rb=7m mfg=siliconix vds=-20 ron=14m qg=48n
+.model si4463dy-ltspice vdmos pchan rg=3 rd=5.6m rs=4.2m vto=-1 kp=82 cgdmax=1.9n cgdmin=.24n cgs=3.2n cjo=.96n is=96p rb=7m ksubthres=.1 mfg=siliconix vds=-20 ron=14m qg=48n
+.model si4465dy vdmos pchan rg=3 rd=3.6m rs=2.7m vto=-1 kp=92 cgdmax=3.2n cgdmin=.4n cgs=5.3n cjo=1.6n is=160p rb=4.5m mfg=siliconix vds=-8 ron=9m qg=80n
+.model si4465dy-ltspice vdmos pchan rg=3 rd=3.6m rs=2.7m vto=-1 kp=92 cgdmax=3.2n cgdmin=.4n cgs=5.3n cjo=1.6n is=160p rb=4.5m ksubthres=.1 mfg=siliconix vds=-8 ron=9m qg=80n
+.model si4467dy vdmos pchan rg=3 vto=-.7 rd=4m rs=3m rb=5m kp=90 cgdmax=3.4n cgdmin=1.5n cgs=10n cjo=3.72n is=172p mfg=fairchild vds=-20 ron=10m qg=86n
+.model si4467dy-ltspice vdmos pchan rg=3 vto=-.7 rd=4m rs=3m rb=5m kp=90 cgdmax=3.4n cgdmin=1.5n cgs=10n cjo=3.72n is=172p ksubthres=.1 mfg=fairchild vds=-20 ron=10m qg=86n
+.model si4542dy_p vdmos pchan rg=3 vto=-2.5 rd=12.8m rs=3.2m rb=16m kp=16 lambda=.01 cgdmax=1n cgdmin=.2n cgs=2.1n cjo=.64n is=64p mfg=siliconix vds=-30 ron=32m qg=32n
+.model si4542dy_p-ltspice vdmos pchan rg=3 vto=-2.5 rd=12.8m rs=3.2m rb=16m kp=16 lambda=.01 cgdmax=1n cgdmin=.2n cgs=2.1n cjo=.64n is=64p ksubthres=.1 mfg=siliconix vds=-30 ron=32m qg=32n
+.model si4825dy vdmos pchan rg=3 rd=8.8m rs=6.6m vto=-1 kp=66 cgdmax=2.2n cgdmin=.28n cgs=3.7n cjo=1.1n is=110p rb=11m mfg=siliconix vds=-30 ron=22m qg=55n
+.model si4825dy-ltspice vdmos pchan rg=3 rd=8.8m rs=6.6m vto=-1 kp=66 cgdmax=2.2n cgdmin=.28n cgs=3.7n cjo=1.1n is=110p rb=11m ksubthres=.1 mfg=siliconix vds=-30 ron=22m qg=55n
+.model si4835dy vdmos pchan rg=3 rd=13.2m rs=9.9m vto=-1 kp=44 cgdmax=.8n cgdmin=.11n cgs=1.4n cjo=.42n is=42p rb=16.5m mfg=siliconix vds=-30 ron=33m qg=21n
+.model si4835dy-ltspice vdmos pchan rg=3 rd=13.2m rs=9.9m vto=-1 kp=44 cgdmax=.8n cgdmin=.11n cgs=1.4n cjo=.42n is=42p rb=16.5m ksubthres=.1 mfg=siliconix vds=-30 ron=33m qg=21n
+.model si4913dy vdmos pchan rg=1 vto=-.9 rd=6m rs=6m rb=10m kp=100 lambda=.02 cgdmax=2n cgdmin=200p cgs=2n cjo=1n is=200p mfg=siliconix vds=-20 ron=15m qg=43n
+.model si4913dy-ltspice vdmos pchan rg=1 vto=-.9 rd=6m rs=6m rb=10m kp=100 lambda=.02 cgdmax=2n cgdmin=200p cgs=2n cjo=1n is=200p ksubthres=.1 mfg=siliconix vds=-20 ron=15m qg=43n
+.model si5515_p vdmos pchan rg=3 vto=-1 rd=34.4m rs=8.6m rb=43m kp=8 lambda=.01 cgdmax=.3n cgdmin=.06n cgs=.6n cjo=.15n is=11p mfg=siliconix vds=-20 ron=86m qg=5.5n
+.model si5515_p-ltspice vdmos pchan rg=3 vto=-1 rd=34.4m rs=8.6m rb=43m kp=8 lambda=.01 cgdmax=.3n cgdmin=.06n cgs=.6n cjo=.15n is=11p ksubthres=.1 mfg=siliconix vds=-20 ron=86m qg=5.5n
+.model si7113dn vdmos pchan rg=3 rd=30m rs=75m vto=-2.8 kp=150 mtriode=.4 lambda=.1 cgdmax=2n cgdmin=75p cgs=1.2n cjo=2n is=1p rb=8m mfg=siliconix vds=-100 ron=.145 qg=16.5n
+.model si7113dn-ltspice vdmos pchan rg=3 rd=30m rs=75m vto=-2.8 kp=150 mtriode=.4 lambda=.1 cgdmax=2n cgdmin=75p cgs=1.2n cjo=2n is=1p rb=8m ksubthres=.1 mfg=siliconix vds=-100 ron=.145 qg=16.5n
+.model si7137dp vdmos pchan rg=2 rd=1.4m rs=0 vto=-1.2 kp=160 lambda=.06 cgdmax=7n cgdmin=1n cgs=30n cjo=3n is=30p rb=1.5m mtriode=3.3 mfg=siliconix vds=-20 ron=2m qg=188n
+.model si7137dp-ltspice vdmos pchan rg=2 rd=1.4m rs=0 vto=-1.2 kp=160 lambda=.06 cgdmax=7n cgdmin=1n cgs=30n cjo=3n is=30p rb=1.5m mtriode=3.3 ksubthres=.1 mfg=siliconix vds=-20 ron=2m qg=188n
+.model si7143dp vdmos rg=3 vto=-2.6 ksubthres=100m mtriode=1.5 rd=2.5m rs=1.5m rb=2m kp=40 lambda=40m theta=120m a=1 cgdmax=2n cgdmin=300p cgs=2n cjo=200p is=3p mfg=vishay vds=-30 ron=8.3m qg=47.5n pchan
+.model si7409dn vdmos pchan rg=3 vto=-0.8 rd=7.6m rs=5.7m rb=10m kp=72 cgdmax=1n cgdmin=.25n cgs=1.7n cjo=.5n is=50p mfg=siliconix vds=-30 ron=19m qg=25n
+.model si7409dn-ltspice vdmos pchan rg=3 vto=-0.8 rd=7.6m rs=5.7m rb=10m kp=72 cgdmax=1n cgdmin=.25n cgs=1.7n cjo=.5n is=50p ksubthres=.1 mfg=siliconix vds=-30 ron=19m qg=25n
+.model si7461dp vdmos rg=3 vto=-2.62 ksubthres=.1 mtriode=1.4 theta=.2 rd=6.68m rs=3.1m rb=5m kp=140 lambda=.02 a=1 cgdmax=5n cgdmin=250p cgs=5.3n cjo=1n m=.5 is=250p n=1.2 mfg=siliconix vds=-60 ron=11.5m qg=121n pchan
+.model si7465dp vdmos pchan rg=3 vto=-2.4 rd=25.6m rs=6.4m rb=32m kp=16 lambda=.01 cgdmax=.8n cgdmin=.2n cgs=1.3n cjo=.41n is=40p mfg=siliconix vds=-60 ron=64m qg=26n
+.model si7465dp-ltspice vdmos pchan rg=3 vto=-2.4 rd=25.6m rs=6.4m rb=32m kp=16 lambda=.01 cgdmax=.8n cgdmin=.2n cgs=1.3n cjo=.41n is=40p ksubthres=.1 mfg=siliconix vds=-60 ron=64m qg=26n
+.model si7469dp vdmos pchan rg=3 vto=-2.5 rd=10m rs=2.5m rb=13m kp=50 lambda=.02 cgdmax=2.7n cgdmin=.6n cgs=5n cjo=1.4n is=130p mfg=siliconix vds=-80 ron=25m qg=55n
+.model si7469dp-ltspice vdmos pchan rg=3 vto=-2.5 rd=10m rs=2.5m rb=13m kp=50 lambda=.02 cgdmax=2.7n cgdmin=.6n cgs=5n cjo=1.4n is=130p ksubthres=.1 mfg=siliconix vds=-80 ron=25m qg=55n
+.model si7489dp-ltspice vdmos rg=3 rd=31.2m rs=1m vto=-2.4 mtriode=2.2 kp=35 lambda=0.1 cgdmax=6n cgdmin=10p a=1 cgs=4n cjo=200p m=.3 vj=.9 is=3.6p rb=5.5m mfg=siliconix ksubthres=.1 vds=-100 ron=34m qg=106n pchan
+.model si7489dp-ltwiki vdmos rg=3 rd=31.2m rs=1m vto=-2.4 subthres=.03 mtriode=2.2 kp=35 lambda=0.1 cgdmax=6n cgdmin=10p a=1 cgs=4n cjo=200p m=.3 vj=.9 is=3.6p rb=5.5m mfg=siliconix vds=-100 ron=3.3m qg=106n pchan
+.model si7489dp-mpkopec vdmos rg=3 rd=31.2m rs=1m vto=-2.4 subthres=.03 mtriode=2.2 kp=35 lambda=0.1 cgdmax=6n cgdmin=10p a=1 cgs=4n cjo=200p m=.3 vj=.9 is=3.6p rb=5.5m mfg=siliconix vds=-100 ron=34m qg=106n pchan
+.model si7489dp-volval vdmos rg=3 rd=31.2m rs=1m vto=-2.4 subthres=.03 mtriode=2.2 kp=35 lambda=0.1 cgdmax=6n cgdmin=10p a=1 cgs=4n cjo=200p m=.3 vj=.9 is=3.6p rb=5.5m mfg=siliconix vds=100 ron=3.3m qg=106n pchan
+.model si7540dp_p vdmos pchan rg=3 vto=-1.3 rd=16m rs=12m rb=20m kp=30 cgdmax=.6n cgdmin=.14n cgs=.9n cjo=.28n is=28p mfg=siliconix vds=-12 ron=40m qg=14n
+.model si7540dp_p-ltspice vdmos pchan rg=3 vto=-1.3 rd=16m rs=12m rb=20m kp=30 cgdmax=.6n cgdmin=.14n cgs=.9n cjo=.28n is=28p ksubthres=.1 mfg=siliconix vds=-12 ron=40m qg=14n
+.model si9400dy vdmos pchan rg=3 rd=160m rs=120m vto=-1 kp=5 cgdmax=.2n cgdmin=.03n cgs=.4n cjo=.11n is=10.8p rb=200m mfg=siliconix vds=-20 ron=400m qg=5.4n
+.model si9400dy-ltspice vdmos pchan rg=3 rd=160m rs=120m vto=-1 kp=5 cgdmax=.2n cgdmin=.03n cgs=.4n cjo=.11n is=10.8p rb=200m ksubthres=.1 mfg=siliconix vds=-20 ron=400m qg=5.4n
+.model si9407aey vdmos pchan rg=3 rd=60m rs=45m vto=-1 kp=5 cgdmax=.7n cgdmin=.09n cgs=1.2n cjo=.36n is=36p rb=75m mfg=siliconix vds=-60 ron=150m qg=18n
+.model si9407aey-ltspice vdmos pchan rg=3 rd=60m rs=45m vto=-1 kp=5 cgdmax=.7n cgdmin=.09n cgs=1.2n cjo=.36n is=36p rb=75m ksubthres=.1 mfg=siliconix vds=-60 ron=150m qg=18n
+.model si9424dy vdmos pchan rg=3 rd=10m rs=7.5m vto=-1 kp=60 cgdmax=1.8n cgdmin=.23n cgs=3.1n cjo=.92n is=92p rb=12.5m mfg=siliconix vds=-20 ron=25m qg=46n
+.model si9424dy-ltspice vdmos pchan rg=3 rd=10m rs=7.5m vto=-1 kp=60 cgdmax=1.8n cgdmin=.23n cgs=3.1n cjo=.92n is=92p rb=12.5m ksubthres=.1 mfg=siliconix vds=-20 ron=25m qg=46n
+.model si9433dy vdmos pchan rg=3 rd=18m rs=13.5m vto=-1 kp=20 cgdmax=.8n cgdmin=.1n cgs=1.3n cjo=.4n is=40p rb=22.5m mfg=siliconix vds=-20 ron=45m qg=20n
+.model si9433dy-ltspice vdmos pchan rg=3 rd=18m rs=13.5m vto=-1 kp=20 cgdmax=.8n cgdmin=.1n cgs=1.3n cjo=.4n is=40p rb=22.5m ksubthres=.1 mfg=siliconix vds=-20 ron=45m qg=20n
+.model si9434bdy vdmos pchan rg=3 vto=-.9 rd=16m rs=4m rb=20m kp=20 lambda=.01 cgdmax=1n cgdmin=.17n cgs=.8n cjo=.24n is=30p mfg=siliconix vds=-20 ron=40m qg=12n
+.model si9434bdy-ltspice vdmos pchan rg=3 vto=-.9 rd=16m rs=4m rb=20m kp=20 lambda=.01 cgdmax=1n cgdmin=.17n cgs=.8n cjo=.24n is=30p ksubthres=.1 mfg=siliconix vds=-20 ron=40m qg=12n
+.model si9434dy vdmos pchan rg=3 rd=16m rs=12m vto=-1 kp=30 cgdmax=1.2n cgdmin=.15n cgs=2n cjo=.6n is=60p rb=20m mfg=siliconix vds=-20 ron=40m qg=30n
+.model si9434dy-ltspice vdmos pchan rg=3 rd=16m rs=12m vto=-1 kp=30 cgdmax=1.2n cgdmin=.15n cgs=2n cjo=.6n is=60p rb=20m ksubthres=.1 mfg=siliconix vds=-20 ron=40m qg=30n
+.model si9435dy vdmos pchan rg=3 rd=28m rs=21m vto=-1 kp=10 cgdmax=1.1n cgdmin=.14n cgs=1.8n cjo=.54n is=54p rb=35m mfg=siliconix vds=-30 ron=70m qg=27n
+.model si9435dy-ltspice vdmos pchan rg=3 rd=28m rs=21m vto=-1 kp=10 cgdmax=1.1n cgdmin=.14n cgs=1.8n cjo=.54n is=54p rb=35m ksubthres=.1 mfg=siliconix vds=-30 ron=70m qg=27n
+.model si9803dy vdmos pchan rg=3 rd=16m rs=3m vto=-1.4 kp=22 cgdmax=1.4n cgdmin=.3n cgs=1.1n cjo=1n is=.023na rb=9.6m n=1.09 mfg=siliconix vds=-25 ron=33m qg=15.8n
+.model si9803dy-ltspice vdmos pchan rg=3 rd=16m rs=3m vto=-1.4 kp=22 cgdmax=1.4n cgdmin=.3n cgs=1.1n cjo=1n is=.023na rb=9.6m n=1.09 ksubthres=.1 mfg=siliconix vds=-25 ron=33m qg=15.8n
+.model sp8j5 vdmos pchan rg=11 vto=-2.043 rd=1.9m rs=15m rb=40m kp=40.19 lambda=50m cgdmin=250p cgdmax=1.1n a=0.4 cgso=2250p is=4.0821f n=798.72m cjo=378.83p m=569.6m vj=1.068 tt=28n mfg=rohm vds=-30 ron=20m qg=25n
+.model sp8j66-ltspice vdmos pchan rg=14 vto=-2.105 rd=1.9m rs=10m rb=12m kp=76.27 lambda=50m cgdmin=250p cgdmax=1.8n a=0.6 cgso=2.6n is=4.021p n=982.63m cjo=97.023p m=1.342 vj=810.61m tt=28n ksubthres=.1 mfg=rohm vds=-30 ron=13.5m qg=35n
+.model sp8j66-mpkopec vdmos pchan rg=14 vto=-2.105 rd=1.9m rs=10m rb=12m kp=76.27 lambda=50m cgdmin=250p cgdmax=1.8n a=0.6 cgso=2.6n is=4.021p n=982.63m cjo=97.023p m=1.342 vj=810.61m tt=28n mfg=rohm vds=-30 ron=13.5m qg=35n
+.model sp8m10_p vdmos pchan rg=26 vto=-2.049 rd=22.1m rs=10m rb=60m kp=15.87 lambda=50m cgdmin=75p cgdmax=380p a=0.3 cgso=730p is=260.37f n=969.92m cjo=186.4p m=439.86m vj=1.209 tt=20.7n mfg=rohm vds=-30 ron=40m qg=8.5n
+.model sp8m1_p vdmos pchan rg=26 vto=-2.049 rd=22.1m rs=10m rb=60m kp=15.87 lambda=50m cgdmin=75p cgdmax=380p a=0.3 cgso=730p is=260.37f n=969.92m cjo=186.4p m=439.86m vj=1.209 tt=20.7n mfg=rohm vds=-30 ron=40m qg=8.5n
+.model sp8m21_p vdmos pchan rg=12 vto=-2.314 rd=19.3m rs=10m rb=15m kp=34.55 lambda=50m cgdmin=130p cgdmax=550p a=0.4 cgso=2200p is=4.4091p n=1.043 cjo=426.65p m=455.22m vj=656.83m tt=44n mfg=rohm vds=-45 ron=33m qg=20n
+.model sp8m24_p vdmos pchan rg=15 vto=-2.286 rd=29.2m rs=10m rb=50m kp=22.42 lambda=50m cgdmin=70p cgdmax=370p a=0.3 cgso=1565p is=79.551f n=914.34m cjo=287.77p m=753m vj=1.61 tt=38n mfg=rohm vds=-45 ron=45m qg=13n
+.model sp8m3_p vdmos pchan rg=26 vto=-2.049 rd=22.1m rs=10m rb=60m kp=15.87 lambda=50m cgdmin=75p cgdmax=380p a=0.3 cgso=730p is=260.37f n=969.92m cjo=186.4p m=439.86m vj=1.209 tt=20.7n ksubthres=.1 mfg=rohm vds=-30 ron=40m qg=8.5n
+.model sp8m41_p vdmos pchan rg=33 vto=-2.247 rd=145.5m rs=1m rb=40m kp=6.951 lambda=50m cgdmin=23p cgdmax=75p a=0.1 cgso=960p is=1.664p n=1.064 cjo=199.2p m=558.06m vj=917m tt=46n mfg=rohm vds=-80 ron=165m qg=8.2n
+.model sp8m4_p vdmos pchan rg=11 vto=-2.043 rd=1.9m rs=15m rb=40m kp=40.19 lambda=50m cgdmin=250p cgdmax=1.1n a=0.4 cgso=2250p is=4.0821f n=798.72m cjo=378.83p m=569.6m vj=1.068 tt=28n mfg=rohm vds=-30 ron=20m qg=25n
+.model sp8m51_p vdmos pchan rg=22.3 vto=-2.12 rd=190.8m rs=10m rb=22.752m kp=13.67 lambda=40m cgdmin=28p cgdmax=100p a=0.1 cgso=1.48n is=2.0267p n=1.048 cjo=190.98p m=679.8m vj=1.322 tt=52n mfg=rohm vds=-100 ron=210m qg=12.5n
+.model sp8m5_p vdmos pchan rg=11 vto=-2.043 rd=1.9m rs=15m rb=40m kp=40.19 lambda=50m cgdmin=250p cgdmax=1.1n a=0.4 cgso=2250p is=4.0821f n=798.72m cjo=378.83p m=569.6m vj=1.068 tt=28n mfg=rohm vds=-30 ron=20m qg=25n
+.model sp8m6_p vdmos pchan rg=23 vto=-1.858 rd=45m rs=1m rb=55m kp=6.406 lambda=30m cgdmin=55p cgdmax=260p a=0.5 cgso=415p is=1.6846p n=1.081 cjo=125.2p m=602.29m vj=1.37 tt=34n ksubthres=.1 mfg=rohm vds=-30 ron=65m qg=5.5n
+.model sp8m8_p vdmos pchan rg=26 vto=-2.049 rd=22.1m rs=10m rb=60m kp=15.87 lambda=50m cgdmin=75p cgdmax=380p a=0.3 cgso=730p is=260.37f n=969.92m cjo=186.4p m=439.86m vj=1.209 tt=20.7n mfg=rohm vds=-30 ron=40m qg=8.5n
+.model sq4401ey vdmos pchan kp=9.7417 rs=0.0001 rd=0.001 rg=3.21 vto=-2.0 lambda=0.01 cgdmax=3851p cgdmin=250p cgs=3050p tt=96n is=7.98e-13 n=0.96 rb=0.004229 m=0.87 vj=1.11 cjo=689.34pf mfg=vishay vds=-40 ron=0.012 qg=74n
+.model sq4425ey vdmos pchan kp=25.6949 rs=0.004 rd=0.001 rg=2.04 vto=-2.0 lambda=0.01 cgdmax=3969p cgdmin=450p cgs=2482p tt=78n is=1.00f n=0.77 rb=0.005388 m=1.929 vj=9.87 cjo=1930.18pf mfg=vishay vds=-30 ron=0.009 qg=33.6n
+.model sq4431ey vdmos pchan kp=5.6947 rs=0.0002 rd=0.001 rg=3.36 vto=-2.0 lambda=0.01 cgdmax=1132p cgdmin=150p cgs=843p tt=48n is=3.14p n=1.087 rb=0.005798 m=0.512 vj=0.28 cjo=503.11pf mfg=vishay vds=-30 ron=0.03 qg=25n
+.model sq4435ey vdmos pchan kp=11.219 rs=0.0001 rd=0.0013 rg=4.5 vto=-2.26 lambda=0.01 cgdmax=1890p cgdmin=250p cgs=1400p tt=65n is=2.06e-13 n=0.954 rb=0.005664 m=0.937 vj=2.31 cjo=500.73pf mfg=vishay vds=-30 ron=0.018 qg=38.3n
+.model sq4917ey_q1 vdmos pchan kp=5.6533 rs=0.0004 rd=0.0175 rg=2.5 vto=-2.0 lambda=0.001 cgdmax=1573p cgdmin=100p cgs=1416p tt=50n is=3.64e-13 n=0.979 rb=0.018971 m=0.34 vj=0.1 cjo=1813.91pf mfg=vishay vds=-60 ron=0.048 qg=43.4n
+.model sq4917ey_q2 vdmos pchan kp=5.6533 rs=0.0004 rd=0.0175 rg=2.5 vto=-2.0 lambda=0.001 cgdmax=1573p cgdmin=100p cgs=1416p tt=50n is=3.64e-13 n=0.979 rb=0.018971 m=0.34 vj=0.1 cjo=1813.91pf mfg=vishay vds=-60 ron=0.048 qg=43.4n
+.model sq4937ey_q1 vdmos pchan kp=3.2705 rs=0.0176 rd=0.001 rg=7.0 vto=-2.0 lambda=0.01 cgdmax=462p cgdmin=45p cgs=328p tt=22n is=4.73p n=1.17 rb=0.011019 m=0.398 vj=0.1 cjo=243.31pf mfg=vishay vds=-30 ron=0.075 qg=9.5n
+.model sq4937ey_q2 vdmos pchan kp=3.2705 rs=0.0176 rd=0.001 rg=7.0 vto=-2.0 lambda=0.01 cgdmax=462p cgdmin=45p cgs=328p tt=22n is=4.73p n=1.17 rb=0.011019 m=0.398 vj=0.1 cjo=243.31pf mfg=vishay vds=-30 ron=0.075 qg=9.5n
+.model sq4949ey_q1 vdmos pchan kp=4.0012 rs=0.0045 rd=0.0001 rg=8.0 vto=-2.0 lambda=0.01 cgdmax=1051p cgdmin=100p cgs=700p tt=40n is=2.91p n=1.082 rb=0.008718 m=0.416 vj=0.1 cjo=371.21pf mfg=vishay vds=-30 ron=0.035 qg=19.5n
+.model sq4949ey_q2 vdmos pchan kp=4.0012 rs=0.0045 rd=0.0001 rg=8.0 vto=-2.0 lambda=0.01 cgdmax=1051p cgdmin=100p cgs=700p tt=40n is=2.91p n=1.082 rb=0.008718 m=0.416 vj=0.1 cjo=371.21pf mfg=vishay vds=-30 ron=0.035 qg=19.5n
+.model sq9407ey vdmos pchan kp=3.4106 rs=0.0007 rd=0.0296 rg=7.1 vto=-2.0 lambda=0.01 cgdmax=875p cgdmin=40p cgs=852p tt=52n is=2.22p n=1.068 rb=0.018832 m=0.714 vj=1.35 cjo=415.76pf mfg=vishay vds=-60 ron=0.085 qg=26.5n
+.model sqj469ep-ltspice vdmos rg=3 vto=-2.48 mtriode=1.6 rd=18.3m rs=1m rb=7m kp=50 lambda=.02 a=4 cgdmax=5n cgdmin=40p cgs=4.4n cjo=.4n is=3p mfg=siliconix ksubthres=.1 vds=-80 ron=21m qg=101n pchan
+.model sqj469ep-mpkopec vdmos rg=3 vto=-2.48 subthres=200m mtriode=1.6 rd=18.3m rs=1m rb=7m kp=50 lambda=.02 a=4 cgdmax=5n cgdmin=40p cgs=4.4n cjo=.4n is=3p mfg=siliconix vds=-80 ron=21m qg=101n pchan
+.model sqj951ep_q1 vdmos pchan kp=6.2385 rs=0.0001 rd=0.0001 rg=6.31 vto=-2.0 lambda=0.01 cgdmax=1773p cgdmin=300p cgs=1100p tt=56n is=8.66n n=1.825 rb=0.000001 m=2.007 vj=5.77 cjo=376.09pf mfg=vishay vds=-30 ron=0.017 qg=33n
+.model sqj951ep_q2 vdmos pchan kp=6.2385 rs=0.0001 rd=0.0001 rg=6.31 vto=-2.0 lambda=0.01 cgdmax=1773p cgdmin=300p cgs=1100p tt=56n is=8.66n n=1.825 rb=0.000001 m=2.007 vj=5.77 cjo=376.09pf mfg=vishay vds=-30 ron=0.017 qg=33n
+.model sqj963ep_q1 vdmos pchan kp=4.0048 rs=0.0007 rd=0.0351 rg=6.9 vto=-2.0 lambda=0.01 cgdmax=875p cgdmin=40p cgs=852p tt=52n is=2.22p n=1.068 rb=0.018832 m=0.714 vj=1.63 cjo=365.76pf mfg=vishay vds=-60 ron=0.085 qg=26.5n
+.model sqj963ep_q2 vdmos pchan kp=4.0048 rs=0.0007 rd=0.0351 rg=6.9 vto=-2.0 lambda=0.01 cgdmax=875p cgdmin=40p cgs=852p tt=52n is=2.22p n=1.068 rb=0.018832 m=0.714 vj=1.63 cjo=365.76pf mfg=vishay vds=-60 ron=0.085 qg=26.5n
+.model sqs405en vdmos pchan kp=45.4201 rs=0.0001 rd=0.0077 rg=2.37 vto=-0.92 lambda=0.01 cgdmax=4064p cgdmin=400p cgs=1500p tt=85n is=1.94e-08 n=0.998 rb=0.011799 m=0.37 vj=0.1 cjo=102.3pf mfg=vishay vds=-12 ron=0.02 qg=49.8n
+.model sum110p04-05 vdmos kp=80 rs=0.002 rd=0.001 rg=3.0 vto=-3.3 lambda=0.05 cgdmax=7n cgdmin=800p cgs=9n tt=100n a=0.55 is=1.5e-08 n=1.35 rb=0.001 m=0.774 vj=1.59 cjo=3nf pchan
+.model zxm62p02e6 vdmos pchan rg=2 vto=-1 rd=0 rs=0 rb=40m kp=2 lambda=0.01 cgs=300p cgdmin=10p cgdmax=500p cjo=500p is=3p mfg=zetex vds=-20 ron=.2 qg=5.8n
+.model zxm62p02e6-ltspice vdmos pchan rg=2 vto=-1 rd=0 rs=0 rb=40m kp=2 lambda=0.01 cgs=300p cgdmin=10p cgdmax=500p cjo=500p is=3p ksubthres=.1 mfg=zetex vds=-20 ron=.2 qg=5.8n
+.model zxmp10a18g vdmos pchan kp=3.7482 rs=0.0015 rd=0.1085 rg=6.0 vto=-3.32 lambda=0.001 cgdmax=775p cgdmin=68p cgs=1050p tt=71n is=3.35p n=1.051 rb=0.028631 m=1.152 vj=3.19 cjo=301.29pf mfg=zetex vds=-100 ron=150m qg=26.9n

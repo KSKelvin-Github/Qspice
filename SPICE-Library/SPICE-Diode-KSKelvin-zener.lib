@@ -1,0 +1,622 @@
+* SPICE model library – diode models – keyword "zener"
+* Source: SPICE-Diode-KSKelvin.lib
+*
+.model 1n4467 d is=84.5f n=1 rs=.1 ikf=0 xti=3 eg=1.11 cjo=930p m=.3333 vj=.75 fc=.5 isr=83.39n nr=2 bv=12.05 ibv=.1785 tt=144.3n type=zener
+.model 1n5355b d is=9.15e-16 rs=2.1 tt=5.01e-8 cjo=2.79e-10 m=0.33 bv=17.87 ibv=0.065 vpk=18v mfg=diodesinc type=zener
+.model 1n5369b d is=1.54e-17 n=1 xti=1 rs=.1 cjo=10p tt=10n bv=51 ibv=25m nbv=35 vpk=51 mfg=onsemi type=zener
+.model 1n5371b d is=1.54e-17 n=1 xti=1 rs=.1 cjo=10p tt=10n bv=60 ibv=20m nbv=30 vpk=60 mfg=onsemi type=zener
+.model 1n5373b d is=1.54e-17 n=1 xti=1 rs=.1 cjo=10p tt=10n bv=68 ibv=20m nbv=50 vpk=68 mfg=onsemi type=zener
+.model 1n5375b d is=1.54e-17 n=1 xti=1 rs=.1 cjo=10p tt=10n bv=82 ibv=15m nbv=35 vpk=82 mfg=onsemi type=zener
+.model 1n5378b d is=1.54e-17 n=1 xti=1 rs=.1 cjo=10p tt=10n bv=100 ibv=12m nbv=48 vpk=100 mfg=onsemi type=zener
+.model 1n746 d is=31.47f rs=9.494 ikf=0 n=1 xti=3 eg=1.11 cjo=220p m=.5959 vj=.75 fc=.5 isr=2.035n nr=2 bv=3.3 ibv=45.862m nbv=3.0477 ibvl=29.831m nbvl=11.606 tbv1=-636.4u vpk=3.3 mfg=motorola type=zener
+.model 1n747 d is=1.242f rs=1.137 ikf=0 n=1 xti=3 eg=1.11 cjo=210p m=.6063 vj=.75 fc=.5 isr=1.922n nr=2 bv=3.6 ibv=13.987m nbv=3.031 ibvl=10.212m nbvl=12.73 tbv1=-555.6u vpk=3.6 mfg=motorola type=zener
+.model 1n748 d is=1.252f rs=1.156 ikf=0 n=1 xti=3 eg=1.11 cjo=205p m=.6004 vj=.75 fc=.5 isr=1.867n nr=2 bv=3.9 ibv=17.244m nbv=2.4016 ibvl=8.619m nbvl=13.283 tbv1=-384.62u vpk=3.9 mfg=motorola type=zener
+.model 1n749 d is=880.5e-18 rs=.25 ikf=0 n=1 xti=3 eg=1.11 cjo=190p m=.6124 vj=.75 fc=.5 isr=1.743n nr=2 bv=4.3 ibv=16.748m nbv=1.7936 ibvl=5.0382m nbvl=12.554 tbv1=-232.56u vpk=4.3 mfg=motorola type=zener
+.model 1n750 d is=.88f rs=.25 cjo=175p m=.55 nbv=1.7 bv=4.7 vj=.75 isr=1.86n nr=2 ibv=20.245m ibvl=1.96m nbvl=15 tbv1=-21.3u vpk=4.7 mfg=onsemi type=zener
+.model 1n751 d is=1.004f rs=.5875 ikf=0 n=1 xti=3 eg=1.11 cjo=160p m=.5484 vj=.75 fc=.5 isr=1.8n nr=2 bv=5.1 ibv=27.721m nbv=1.1779 ibvl=1.1646m nbvl=21.894 tbv1=176.47u vpk=5.1 mfg=motorola type=zener
+.model 1n752 d is=1.154f rs=.9471 ikf=0 n=1 xti=3 eg=1.11 cjo=150p m=.5788 vj=.75 fc=.5 isr=1.625n nr=2 bv=5.6 ibv=62.583m nbv=.62382 ibvl=631.96u nbvl=50 tbv1=267.86u vpk=5.6 mfg=motorola type=zener
+.model 1n754 d is=1.616f rs=1.818 ikf=0 n=1 xti=3 eg=1.11 cjo=120p m=.5117 vj=.75 fc=.5 isr=1.698n nr=2 bv=6.8 ibv=2.8814 nbv=.28248 ibvl=1.9426u nbvl=.27168 tbv1=485.29u vpk=6.8 mfg=motorola type=zener
+.model 1n755 d is=2.077f rs=2.467 ikf=0 n=1 xti=3 eg=1.11 cjo=104p m=.5061 vj=.75 fc=.5 isr=1.645n nr=2 bv=7.5 ibv=2.5701 nbv=.39227 ibvl=4.0222e-5 nbvl=.25042 tbv1=533.33u vpk=7.5 mfg=motorola type=zener
+.model 1n757 d is=2.453f rs=2.9 ikf=0 n=1 xti=3 eg=1.11 cjo=78p m=.4399 vj=.75 fc=.5 isr=1.762n nr=2 bv=9.1 ibv=.48516 nbv=.7022 ibvl=1m nbvl=.13785 tbv1=604.396u vpk=9.1 mfg=motorola type=zener
+.model bzx384b10 d is=1.13e-14 n=1.103 bv=10 ibv=0.005 rs=0.4798 cjo=6.004e-11 vj=0.6305 m=0.3302 fc=0.5 iave=250m vpk=10 mfg=nxp type=zener
+.model bzx384b11 d is=1.13e-14 n=1.103 bv=11 ibv=0.005 rs=0.4798 cjo=5.404e-11 vj=0.5891 m=0.3295 fc=0.5 iave=250m vpk=11 mfg=nxp type=zener
+.model bzx384b12 d is=1.13e-14 n=1.103 bv=12 ibv=0.005 rs=0.4798 cjo=4.928e-11 vj=0.575 m=0.3292 fc=0.5 iave=250m vpk=12 mfg=nxp type=zener
+.model bzx384b13 d is=1.13e-14 n=1.103 bv=13 ibv=0.005 rs=0.4798 cjo=4.377e-11 vj=0.5656 m=0.3289 fc=0.5 iave=250m vpk=13 mfg=nxp type=zener
+.model bzx384b15 d is=1.13e-14 n=1.103 bv=15 ibv=0.005 rs=0.4798 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 iave=250m vpk=15 mfg=nxp type=zener
+.model bzx384b16 d is=1.13e-14 n=1.103 bv=16 ibv=0.005 rs=0.4798 cjo=3.509e-11 vj=0.6502 m=0.3378 fc=0.5 iave=250m vpk=16 mfg=nxp type=zener
+.model bzx384b18 d is=1.13e-14 n=1.103 bv=18 ibv=0.005 rs=0.4798 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 iave=250m vpk=18 mfg=nxp type=zener
+.model bzx384b20 d is=1.13e-14 n=1.103 bv=20 ibv=0.005 rs=0.4798 cjo=2.915e-11 vj=0.635 m=0.3362 fc=0.5 iave=250m vpk=20 mfg=nxp type=zener
+.model bzx384b22 d is=1.13e-14 n=1.103 bv=22 ibv=0.005 rs=0.4798 cjo=2.701e-11 vj=0.7087 m=0.3557 fc=0.5 iave=250m vpk=22 mfg=nxp type=zener
+.model bzx384b24 d is=1.13e-14 n=1.103 bv=24 ibv=0.002 rs=0.4798 cjo=2.48e-11 vj=0.7142 m=0.3513 fc=0.5 iave=250m vpk=24 mfg=nxp type=zener
+.model bzx384b27 d is=1.13e-14 n=1.103 bv=27 ibv=0.002 rs=0.4798 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 iave=250m vpk=27 mfg=nxp type=zener
+.model bzx384b2v4 d is=1.033f n=1.001 bv=2.4 ibv=0.005 rs=0.387 cjo=3.615e-10 vj=0.5762 m=0.2715 fc=0.5 iave=250m vpk=2.4 mfg=nxp type=zener
+.model bzx384b2v7 d is=1.033f n=1.001 bv=2.7 ibv=0.005 rs=0.387 cjo=3.518e-10 vj=0.6816 m=0.3174 fc=0.5 iave=250m vpk=2.7 mfg=nxp type=zener
+.model bzx384b30 d is=1.13e-14 n=1.103 bv=30 ibv=0.002 rs=0.4798 cjo=2.17e-011 vj=0.6718 m=0.3465 fc=0.5 iave=250m vpk=30 mfg=nxp type=zener
+.model bzx384b33 d is=1.13e-14 n=1.103 bv=33 ibv=0.002 rs=0.4798 cjo=2.019e-11 vj=0.7645 m=0.3782 fc=0.5 iave=250m vpk=33 mfg=nxp type=zener
+.model bzx384b36 d is=1.13e-14 n=1.103 bv=36 ibv=0.002 rs=0.4798 cjo=1.866e-11 vj=0.7591 m=0.3771 fc=0.5 iave=250m vpk=36 mfg=nxp type=zener
+.model bzx384b39 d is=1.13e-14 n=1.103 bv=39 ibv=0.002 rs=0.4798 cjo=1.772e-11 vj=0.7471 m=0.3751 fc=0.5 iave=250m vpk=39 mfg=nxp type=zener
+.model bzx384b3v0 d is=1.033f n=1.001 bv=3 ibv=0.005 rs=0.387 cjo=3.346e-10 vj=0.6722 m=0.3162 fc=0.5 iave=250m vpk=3 mfg=nxp type=zener
+.model bzx384b3v3 d is=1.033f n=1.001 bv=3.3 ibv=0.005 rs=0.387 cjo=3.162e-10 vj=0.6687 m=0.3164 fc=0.5 iave=250m vpk=3.3 mfg=nxp type=zener
+.model bzx384b3v6 d is=1.033f n=1.001 bv=3.6 ibv=0.005 rs=0.387 cjo=3.062e-10 vj=0.6643 m=0.3168 fc=0.5 iave=250m vpk=3.6 mfg=nxp type=zener
+.model bzx384b3v9 d is=1.033f n=1.001 bv=3.9 ibv=0.005 rs=0.387 cjo=2.82e-10 vj=0.6743 m=0.3219 fc=0.5 iave=250m vpk=3.9 mfg=nxp type=zener
+.model bzx384b43 d is=1.13e-14 n=1.103 bv=43 ibv=0.002 rs=0.4798 cjo=1.638e-11 vj=0.7517 m=0.3762 fc=0.5 iave=250m vpk=43 mfg=nxp type=zener
+.model bzx384b47 d is=1.13e-14 n=1.103 bv=47 ibv=0.002 rs=0.4798 cjo=1.707e-11 vj=0.888 m=0.4248 fc=0.5 iave=250m vpk=47 mfg=nxp type=zener
+.model bzx384b4v3 d is=1.033f n=1.001 bv=4.3 ibv=0.005 rs=0.387 cjo=2.715e-10 vj=0.7721 m=0.3557 fc=0.5 iave=250m vpk=4.3 mfg=nxp type=zener
+.model bzx384b4v7 d is=1.033f n=1.001 bv=4.7 ibv=0.005 rs=0.387 cjo=2.589e-10 vj=0.8029 m=0.3636 fc=0.5 iave=250m vpk=4.7 mfg=nxp type=zener
+.model bzx384b51 d is=1.13e-14 n=1.103 bv=51 ibv=0.002 rs=0.4798 cjo=1.602e-11 vj=0.8454 m=0.4154 fc=0.5 iave=250m vpk=51 mfg=nxp type=zener
+.model bzx384b56 d is=1.13e-14 n=1.103 bv=56 ibv=0.002 rs=0.4798 cjo=1.508e-11 vj=0.8856 m=0.4177 fc=0.5 iave=250m vpk=56 mfg=nxp type=zener
+.model bzx384b5v1 d is=1.033f n=1.001 bv=5.1 ibv=0.005 rs=0.387 cjo=2.402e-10 vj=0.7934 m=0.3578 fc=0.5 iave=250m vpk=5.1 mfg=nxp type=zener
+.model bzx384b5v6 d is=1.033f n=1.001 bv=5.6 ibv=0.005 rs=0.387 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 iave=250m vpk=5.6 mfg=nxp type=zener
+.model bzx384b62 d is=1.13e-14 n=1.103 bv=62 ibv=0.002 rs=0.4798 cjo=1.403e-11 vj=0.8053 m=0.4033 fc=0.5 iave=250m vpk=62 mfg=nxp type=zener
+.model bzx384b68 d is=1.13e-14 n=1.103 bv=68 ibv=0.002 rs=0.4798 cjo=1.321e-11 vj=0.7877 m=0.4021 fc=0.5 iave=250m vpk=68 mfg=nxp type=zener
+.model bzx384b6v2 d is=1.033f n=1.001 bv=6.2 ibv=0.005 rs=0.387 cjo=1.732e-10 vj=0.9334 m=0.4321 fc=0.5 iave=250m vpk=6.2 mfg=nxp type=zener
+.model bzx384b6v8 d is=1.033f n=1.001 bv=6.8 ibv=0.005 rs=0.387 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 iave=250m vpk=6.8 mfg=nxp type=zener
+.model bzx384b75 d is=1.13e-14 n=1.103 bv=75 ibv=0.002 rs=0.4798 cjo=1.246e-11 vj=0.822 m=0.4052 fc=0.5 iave=250m vpk=75 mfg=nxp type=zener
+.model bzx384b7v5 d is=1.13e-14 n=1.103 bv=7.5 ibv=0.005 rs=0.4798 cjo=8.767e-11 vj=0.5829 m=0.3299 fc=0.5 iave=250m vpk=7.5 mfg=nxp type=zener
+.model bzx384b8v2 d is=1.13e-14 n=1.103 bv=8.2 ibv=0.005 rs=0.4798 cjo=7.562e-11 vj=0.5765 m=0.3298 fc=0.5 iave=250m vpk=8.2 mfg=nxp type=zener
+.model bzx384b9v1 d is=1.13e-14 n=1.103 bv=9.1 ibv=0.005 rs=0.4798 cjo=7.316e-11 vj=0.5667 m=0.3295 fc=0.5 iave=250m vpk=9.1 mfg=nxp type=zener
+.model bzx79c6v8 d is=2.471n n=2.088 rs=1m ikf=6.51 cjo=95.65p m=.3487 vj=.7022 isr=10.010e-21 bv=6.948 ibv=.8623 tt=140n type=zener
+.model bzx84b10vly d is=47.316e-18 n=0.9886 rs=0.3032 ikf=10.116 eg=1.143 cjo=22.224p m=0.3135 vj=0.5509 isr=2.2625p nr=3.6 bv=10.04 ibv=5.0000m nbv=0.25 tbv1=0.6150m vpk=10 mfg=rohm type=zener
+.model bzx84b11vly d is=726.90e-18 n=1.0559 rs=0.3466 ikf=27.613 eg=1.143 cjo=20.317p m=0.3116 vj=0.5645 isr=1.8625p nr=3.55 bv=11 ibv=5.0000m nbv=0.19 tbv1=0.6550m nbvl=22.5 ibvl=80.000p vpk=11 mfg=rohm type=zener
+.model bzx84b12vly d is=831.63e-18 n=1.0547 rs=64.108m ikf=63.508m eg=1.12 cjo=18.081p m=0.3054 vj=0.5672 isr=4.7625p nr=4.9 bv=11.94 ibv=5.0000m nbv=0.26 tbv1=0.6900m nbvl=26 ibvl=14.000p vpk=12 mfg=rohm type=zener
+.model bzx84b13vly d is=3.3901f n=1.0957 rs=.20605 ikf=.13344 eg=1.09 cjo=16.259p m=.31466 vj=.58924 isr=5.9542p nr=4.5 bv=13.02 ibv=5.0000m nbv=0.47 tbv1=0.6900m vpk=13 mfg=rohm type=zener
+.model bzx84b15vly d is=2.2465f n=1.0876 rs=.25208 ikf=7.8615 cjo=17.614p m=.30986 vj=.51303 isr=6.0625p nr=3.900 bv=14.990 ibv=5.0000m nbv=0.4800 tbv1=0.7300m nbvl=20.00 ibvl=27.000p vpk=15 mfg=rohm type=zener
+.model bzx84b16vly d is=1.8240f n=1.0788 rs=67.418m ikf=87.437m cjo=16.466p m=0.3062 vj=0.5164 isr=5.4625p nr=3.9 bv=16.02 ibv=5.0000m nbv=0.48 tbv1=0.7300m nbvl=21 ibvl=25.000p vpk=16 mfg=rohm type=zener
+.model bzx84b18vly d is=2.9987f n=1.0764 rs=87.256m ikf=73.873m eg=1.07 cjo=14.904p m=0.2958 vj=0.5089 isr=2.8625p nr=4.95 bv=18.22 ibv=5.0000m nbv=0.64 tbv1=0.7400m vpk=18 mfg=rohm type=zener
+.model bzx84b20vly d is=4.2305f n=1.0911 rs=0.2097 ikf=2.8601 eg=1.09 cjo=13.451p m=0.3002 vj=0.5424 isr=1.9275p nr=4.93 bv=20.37 ibv=5.0000m nbv=0.85 tbv1=0.7700m vpk=20 mfg=rohm type=zener
+.model bzx84b22vly d is=1.5340f n=1.0468 rs=53.932m ikf=35.366m eg=1.13 cjo=12.433p m=0.2901 vj=0.5342 isr=1.9275p nr=4.95 bv=22.165 ibv=5.0000m nbv=0.95 tbv1=0.7950m vpk=22 mfg=rohm type=zener
+.model bzx84b24vly d is=1.0210f n=1.0286 rs=47.546m ikf=30.925m eg=1.13 cjo=10.998p m=0.3205 vj=0.5884 isr=1.6275p nr=4.95 bv=24.03 ibv=5.0000m nbv=0.95 tbv1=0.8150m vpk=24 mfg=rohm type=zener
+.model bzx84b27vly d is=1.0610f n=1.0160 rs=73.972m ikf=15.064m cjo=10.353p m=.29693 vj=.60687 isr=1.8637p nr=3.6000 bv=26.950 ibv=2.0000m nbv=0.4700 tbv1=0.8300m vpk=27 mfg=rohm type=zener
+.model bzx84b30vly d is=216.30e-18 n=0.9864 rs=0.1173 ikf=22.326m eg=1.14 cjo=9.3111p m=0.3196 vj=0.5839 isr=3.4637p nr=4.98 bv=29.95 ibv=2.0000m nbv=0.47 tbv1=0.8100m vpk=30 mfg=rohm type=zener
+.model bzx84b33vly d is=987.24e-18 n=.99429 rs=4.7638m ikf=7.5480m cjo=8.9958p m=.29061 vj=.53061 isr=4.6340p nr=4.000 bv=33.030 ibv=2.0000m nbv=0.7500 tbv1=0.8700m nbvl=230.00 ibvl=17.000p vpk=33 mfg=rohm type=zener
+.model bzx84b36vly d is=58.655e-18 n=.86934 rs=122.52m ikf=2.5385m eg=1.08 cjo=8.0788p m=.31777 vj=.57954 isr=3.6755p nr=3.4 bv=36.17 ibv=2.0000m nbv=0.86 tbv1=0.8300m vpk=36 mfg=rohm type=zener
+.model bzx84b6v8ly d is=2.4541f n=1.0782 rs=0.2235 ikf=7.6861 eg=1.07 cjo=28.415p m=0.3368 vj=0.6965 isr=2.3662p nr=4.9 bv=6.845 ibv=5.0000m nbv=0.3 tbv1=0.4400m nbvl=10.5 ibvl=3.0000u vpk=6.8 mfg=rohm type=zener
+.model bzx84b7v5ly d is=914.56e-18 n=1.0495 rs=0.2096 ikf=17.513 eg=1.09 cjo=32.475p m=0.3247 vj=0.5185 isr=26.400p nr=4.8 bv=7.485 ibv=5.0000m nbv=0.3 tbv1=0.4900m nbvl=12 ibvl=3.0000u vpk=7.5 mfg=rohm type=zener
+.model bzx84b8v2ly d is=662.41e-18 n=1.057 rs=0.2133 ikf=29.579 eg=1.15 cjo=28.841p m=0.3155 vj=0.5105 isr=6.8625p nr=3.8 bv=8.195 ibv=5.0000m nbv=0.21 tbv1=0.5370m nbvl=14 ibvl=100.00n vpk=8.2 mfg=rohm type=zener
+.model bzx84b9v1ly d is=836.41e-18 n=1.0613 rs=0.2949 ikf=28.681 eg=1.143 cjo=24.848p m=0.3196 vj=0.5309 isr=7.1625p nr=4.7 bv=9.095 ibv=5.0000m nbv=0.25 tbv1=0.5680m nbvl=11 ibvl=30.000n vpk=9.1 mfg=rohm type=zener
+.model bzx84c10l d is=.6n rs=.5 cjo=150p nbv=5 bv=10 ibv=1m vpk=10 mfg=onsemi type=zener
+.model bzx84c10vly d is=47.316e-18 n=0.9886 rs=0.3032 ikf=10.116 eg=1.143 cjo=22.224p m=0.3135 vj=0.5509 isr=2.2625p nr=3.6 bv=10.04 ibv=5.0000m nbv=0.25 tbv1=0.6150m vpk=10 mfg=rohm type=zener
+.model bzx84c11vly d is=726.90e-18 n=1.0559 rs=0.3466 ikf=27.613 eg=1.143 cjo=20.317p m=0.3116 vj=0.5645 isr=1.8625p nr=3.55 bv=11 ibv=5.0000m nbv=0.19 tbv1=0.6550m nbvl=22.5 ibvl=80.000p vpk=11 mfg=rohm type=zener
+.model bzx84c12l d is=.6n rs=.5 cjo=150p nbv=5 bv=12 ibv=1m vpk=12 mfg=onsemi type=zener
+.model bzx84c12vly d is=831.63e-18 n=1.0547 rs=64.108m ikf=63.508m eg=1.12 cjo=18.081p m=0.3054 vj=0.5672 isr=4.7625p nr=4.9 bv=11.94 ibv=5.0000m nbv=0.26 tbv1=0.6900m nbvl=26 ibvl=14.000p vpk=12 mfg=rohm type=zener
+.model bzx84c13vly d is=3.3901f n=1.0957 rs=.20605 ikf=.13344 eg=1.09 cjo=16.259p m=.31466 vj=.58924 isr=5.9542p nr=4.5 bv=13.02 ibv=5.0000m nbv=0.47 tbv1=0.6900m vpk=13 mfg=rohm type=zener
+.model bzx84c15l d is=.6n rs=.5 cjo=110p nbv=6 bv=15 ibv=1m vpk=15 mfg=onsemi type=zener
+.model bzx84c15vly d is=2.2465f n=1.0876 rs=.25208 ikf=7.8615 cjo=17.614p m=.30986 vj=.51303 isr=6.0625p nr=3.900 bv=14.990 ibv=5.0000m nbv=0.4800 tbv1=0.7300m nbvl=20.00 ibvl=27.000p vpk=15 mfg=rohm type=zener
+.model bzx84c16vly d is=1.8240f n=1.0788 rs=67.418m ikf=87.437m cjo=16.466p m=0.3062 vj=0.5164 isr=5.4625p nr=3.9 bv=16.02 ibv=5.0000m nbv=0.48 tbv1=0.7300m nbvl=21 ibvl=25.000p vpk=16 mfg=rohm type=zener
+.model bzx84c18v d is=110.88e-18 n=.92657 rs=.85899 ikf=149.75 cjo=24.981p m=.331 vj=.64091 isr=36.794p bv=18.118 ibv=.56589 tt=2.7700u mfg=nxp type=zener
+.model bzx84c18vly d is=2.9987f n=1.0764 rs=87.256m ikf=73.873m eg=1.07 cjo=14.904p m=0.2958 vj=0.5089 isr=2.8625p nr=4.95 bv=18.22 ibv=5.0000m nbv=0.64 tbv1=0.7400m vpk=18 mfg=rohm type=zener
+.model bzx84c20vly d is=4.2305f n=1.0911 rs=0.2097 ikf=2.8601 eg=1.09 cjo=13.451p m=0.3002 vj=0.5424 isr=1.9275p nr=4.93 bv=20.37 ibv=5.0000m nbv=0.85 tbv1=0.7700m vpk=20 mfg=rohm type=zener
+.model bzx84c22vly d is=1.5340f n=1.0468 rs=53.932m ikf=35.366m eg=1.13 cjo=12.433p m=0.2901 vj=0.5342 isr=1.9275p nr=4.95 bv=22.165 ibv=5.0000m nbv=0.95 tbv1=0.7950m vpk=22 mfg=rohm type=zener
+.model bzx84c24vly d is=1.0210f n=1.0286 rs=47.546m ikf=30.925m eg=1.13 cjo=10.998p m=0.3205 vj=0.5884 isr=1.6275p nr=4.95 bv=24.03 ibv=5.0000m nbv=0.95 tbv1=0.8150m vpk=24 mfg=rohm type=zener
+.model bzx84c27vly d is=1.0610f n=1.0160 rs=73.972m ikf=15.064m cjo=10.353p m=.29693 vj=.60687 isr=1.8637p nr=3.6000 bv=26.950 ibv=2.0000m nbv=0.4700 tbv1=0.8300m vpk=27 mfg=rohm type=zener
+.model bzx84c2v7 d is=3.677f n=1.059 rs=.12 ikf=1 xti=3 eg=1.11 cjo=312.1p m=.2052 vj=.3971 fc=.5 bv=2.766 ibv=64.76m tbv1=-.56m tt=57.71n vpk=2.7 mfg=nxp type=zener
+.model bzx84c30vly d is=216.30e-18 n=0.9864 rs=0.1173 ikf=22.326m eg=1.14 cjo=9.3111p m=0.3196 vj=0.5839 isr=3.4637p nr=4.98 bv=29.95 ibv=2.0000m nbv=0.47 tbv1=0.8100m vpk=30 mfg=rohm type=zener
+.model bzx84c33vly d is=987.24e-18 n=.99429 rs=4.7638m ikf=7.5480m cjo=8.9958p m=.29061 vj=.53061 isr=4.6340p nr=4.000 bv=33.030 ibv=2.0000m nbv=0.7500 tbv1=0.8700m nbvl=230.00 ibvl=17.000p vpk=33 mfg=rohm type=zener
+.model bzx84c36vly d is=58.655e-18 n=.86934 rs=122.52m ikf=2.5385m eg=1.08 cjo=8.0788p m=.31777 vj=.57954 isr=3.6755p nr=3.4 bv=36.17 ibv=2.0000m nbv=0.86 tbv1=0.8300m vpk=36 mfg=rohm type=zener
+.model bzx84c3v0 d is=4.311f n=1.057 rs=.12 ikf=1 xti=3 eg=1.11 cjo=291.5p m=.2719 vj=.5248 fc=.5 bv=3.066 ibv=64.76m tbv1=-.5m tt=64.92n vpk=3 mfg=nxp type=zener
+.model bzx84c3v3 d is=1.636f n=1.028 rs=.13 ikf=1 xti=3 eg=1.11 cjo=283.5p m=.2019 vj=.3905 fc=.5 bv=3.366 ibv=64.77m tbv1=-.46m tt=57.71n vpk=3.3 mfg=nxp type=zener
+.model bzx84c6v2l d is=1.5n rs=.5 cjo=185p nbv=3 bv=6.2 ibv=1m vpk=6.2 mfg=onsemi type=zener
+.model bzx84c6v8ly d is=2.4541f n=1.0782 rs=0.2235 ikf=7.6861 eg=1.07 cjo=28.415p m=0.3368 vj=0.6965 isr=2.3662p nr=4.9 bv=6.845 ibv=5.0000m nbv=0.3 tbv1=0.4400m nbvl=10.5 ibvl=3.0000u vpk=6.8 mfg=rohm type=zener
+.model bzx84c7v5ly d is=914.56e-18 n=1.0495 rs=0.2096 ikf=17.513 eg=1.09 cjo=32.475p m=0.3247 vj=0.5185 isr=26.400p nr=4.8 bv=7.485 ibv=5.0000m nbv=0.3 tbv1=0.4900m nbvl=12 ibvl=3.0000u vpk=7.5 mfg=rohm type=zener
+.model bzx84c8v2l d is=.8n rs=.5 cjo=135p nbv=3 bv=8.2 ibv=1m vpk=8.2 mfg=onsemi type=zener
+.model bzx84c8v2ly d is=662.41e-18 n=1.057 rs=0.2133 ikf=29.579 eg=1.15 cjo=28.841p m=0.3155 vj=0.5105 isr=6.8625p nr=3.8 bv=8.195 ibv=5.0000m nbv=0.21 tbv1=0.5370m nbvl=14 ibvl=100.00n vpk=8.2 mfg=rohm type=zener
+.model bzx84c9v1ly d is=836.41e-18 n=1.0613 rs=0.2949 ikf=28.681 eg=1.143 cjo=24.848p m=0.3196 vj=0.5309 isr=7.1625p nr=4.7 bv=9.095 ibv=5.0000m nbv=0.25 tbv1=0.5680m nbvl=11 ibvl=30.000n vpk=9.1 mfg=rohm type=zener
+.model bzy79c62 d is=113f n=1.195 rs=.197 ikf=24m xti=3 eg=1.11 cjo=35p bv=62 ibv=.16 iave=250m vpk=62 mfg=nxp type=zener
+.model cdzv10b d is=2.1786e-16 n=1.0288 rs=.29371 ikf=81.809 cjo=1.7400e-11 m=.37721 vj=.75462 isr=6.9376e-13 nr=2.8000 bv=9.9500 ibv=5.0000m tt=1.2800e-7 nbv=0.2000 tbv1=6.3000e-4 nbvl=18.000 ibvl=0.1200n vpk=10 mfg=rohm type=zener
+.model cdzv11b d is=2.6919e-16 n=1.0329 rs=.28166 ikf=1.2119 cjo=1.5000e-11 m=.35461 vj=.75858 isr=6.3129e-13 nr=2.8400 bv=11.000 ibv=1.0000m tt=163.00n nbv=0.5500 tbv1=0.6700m nbvl=22.500 ibvl=1.5000e-11 vpk=11 mfg=rohm type=zener
+.model cdzv12b d is=3.4990e-16 n=1.0420 rs=.26313 ikf=.87303 cjo=1.3700e-11 m=.35603 vj=.75124 isr=5.1535e-13 nr=2.8200 bv=11.930 ibv=1.0000m tt=1.8500e-7 nbv=0.4000 tbv1=0.7300m nbvl=26.200 ibvl=1.0000e-11 vpk=12 mfg=rohm type=zener
+.model cdzv13b d is=3.3892e-16 n=1.0385 rs=.24887 ikf=.82579 cjo=1.3400e-11 m=.45658 vj=.75643 isr=5.154e-13 nr=2.7000 bv=13.220 ibv=1.0000m tt=1.8500e-7 nbv=0.8800 tbv1=0.7400m nbvl=39.200 ibvl=5.000p vpk=13 mfg=rohm type=zener
+.model cdzv15b d is=2.6563e-16 n=1.0349 rs=.29514 ikf=35.137 cjo=1.4700e-11 m=.36513 vj=.75709 isr=6.4100e-13 nr=2.7200 bv=14.700 ibv=1.0000m tt=1.5100e-7 nbv=0.8600 tbv1=0.7600m nbvl=20.700 ibvl=1.8000e-10 vpk=15 mfg=rohm type=zener
+.model cdzv16b d is=2.9649e-16 n=1.0357 rs=.21510 ikf=55.214 cjo=1.3885e-11 m=.33221 vj=.53071 isr=5.2147e-13 nr=2.6867 bv=16.150 ibv=1.0000m tt=1.3700e-7 nbv=1.1000 tbv1=0.7800m nbvl=71.700 ibvl=7.0000p vpk=16 mfg=rohm type=zener
+.model cdzv18b d is=4.3893e-16 n=1.0456 rs=.23636 ikf=1.1133 cjo=1.2300e-11 m=.35741 vj=.77627 isr=4.6335e-13 nr=2.5000 bv=17.87 ibv=1.0000m tt=1.7100e-7 nbv=0.4600 tbv1=0.8210m nbvl=58.400 ibvl=3.0000e-11 vpk=18 mfg=rohm type=zener
+.model cdzv20b d is=5.4004e-16 n=1.0500 rs=.24711 ikf=1.0080 cjo=1.1200e-11 m=.32891 vj=.51639 isr=0.2831p nr=2.2500 bv=20.00 ibv=1.0000m tt=1.8200e-7 nbv=0.8000 tbv1=0.83m nbvl=58.400 ibvl=0.3000e-11 vpk=20 mfg=rohm type=zener
+.model cdzv22b d is=7.8804e-16 n=1.0605 rs=.26605 ikf=.81132 cjo=1.0100e-11 m=.34994 vj=.79255 isr=0.5348p nr=2.6500 bv=22.050 ibv=1.0000m tt=1.8700e-7 nbv=1.4000 tbv1=0.8300m nbvl=125.00 ibvl=3.5000p vpk=22 mfg=rohm type=zener
+.model cdzv24b d is=1.1267f n=1.0731 rs=.28474 ikf=.67038 cjo=9.2000p m=.34336 vj=.75563 isr=2.4424e-13 nr=2.1800 bv=24.350 ibv=1.0000m tt=2.0500e-7 nbv=0.8000 tbv1=0.8500m nbvl=72.00 ibvl=6.5000p vpk=24 mfg=rohm type=zener
+.model cdzv27b d is=1.2516f n=1.0723 rs=.24316 ikf=.52825 cjo=8.5000p m=.32197 vj=.76072 isr=4.5326e-13 nr=2.3500 bv=26.89 ibv=1.0000m tt=1.8400e-7 nbv=1.6500 tbv1=0.8500m nbvl=165.00 ibvl=4.8000p vpk=27 mfg=rohm type=zener
+.model cdzv30b d is=2.2137f n=1.0929 rs=.25495 ikf=.75706 cjo=8.0000p m=.30884 vj=.76074 isr=4.9426e-13 nr=2.8600 bv=29.98 ibv=1.0000m tt=1.9000e-7 nbv=2.4000 tbv1=0.87900m nbvl=155.00 ibvl=2.0000p vpk=30 mfg=rohm type=zener
+.model cdzv33b d is=4.3739f n=1.1094 rs=.26228 ikf=.62832 cjo=7.6000p m=.325085 vj=.77316 isr=6.0323e-13 nr=3.1000 bv=33.0 ibv=1.0000m tt=1.7000e-7 nbv=1.8200 tbv1=0.8400m nbvl=245.00 ibvl=1.1000p vpk=33 mfg=rohm type=zener
+.model cdzv36b d is=8.4106f n=1.1365 rs=.26630 ikf=.47397 cjo=6.8000p m=.31586 vj=.80868 isr=7.8934e-13 nr=2.6500 bv=35.96 ibv=1.0000m tt=2.0500e-7 nbv=3.0700 tbv1=0.8700m nbvl=225.00 ibvl=2.2000p vpk=36 mfg=rohm type=zener
+.model cdzv6_2b d is=149.54e-18 n=1.0155 rs=.21260 ikf=1.2516 cjo=23.000p m=.37190 vj=.75178 isr=0.5007p nr=4.6500 bv=6.1950 ibv=5.0000m tt=65.000n nbv=0.2000 tbv1=0.3500m nbvl=9.7000 ibvl=3.7000u vpk=6.2 mfg=rohm type=zener
+.model cdzv6_8b d is=1.7609e-16 n=1.0196 rs=.26014 ikf=.94002 cjo=1.9100e-11 m=.36585 vj=.76843 isr=0.3906p nr=3.2000 bv=6.7900 ibv=5.0000m tt=85.000n nbv=0.1000 tbv1=0.4600m nbvl=11.400 ibvl=100.00n vpk=6.8 mfg=rohm type=zener
+.model cdzv7_5b d is=2.6370e-16 n=1.0324 rs=.23141 ikf=1.1640 cjo=2.5200e-11 m=.39896 vj=.76788 isr=3.4986p nr=2.6800 bv=7.4400 ibv=5.0000m tt=65.000n nbv=0.3000 tbv1=0.4800m nbvl=14.000 ibvl=200.00n vpk=7.5 mfg=rohm type=zener
+.model cdzv8_2b d is=2.2428e-16 n=1.0295 rs=.26107 ikf=1.2319 cjo=2.2200e-11 m=.38384 vj=.75935 isr=2.7900p nr=3.3000 bv=8.1900 ibv=5.0000m tt=69.000n nbv=0.1000 tbv1=0.5500m nbvl=14.000 ibvl=10.000n vpk=8.2 mfg=rohm type=zener
+.model cdzv9_1b d is=2.0192e-16 n=1.0271 rs=.25962 ikf=1.1336 cjo=1.9400e-11 m=.37163 vj=.75692 isr=1.2130p nr=2.4700 bv=9.0400 ibv=5.0000m tt=102.00n nbv=0.2000 tbv1=0.6000m nbvl=19.800 ibvl=2.5000e-10 vpk=9.1 mfg=rohm type=zener
+.model dflz33 d is=12.5p rs=.6 n=1.1 cjo=220p vj=1 m=.33 tt=50n bv=29 ibv=1e-10 nbv=8 vpk=33 mfg=diodes_inc. type=zener
+.model edzv10b-ltspice d is=2.1786e-16 n=1.0288 rs=.29371 ikf=81.809 cjo=1.7400e-11 m=.37721 vj=.75462 isr=6.9376e-13 nr=2.8000 bv=9.9500 ibv=5.0000m tt=1.2800e-7 nbv=0.2000 tbv1=6.3000e-4 nbvl=18.000 ibvl=0.1200n vpk=10 mfg=rohm type=zener
+.model edzv10b-mpkopec d is=217.86e-18 n=1.0288 rs=.29371 ikf=81.809 cjo=17.400p m=.36121 vj=.75462 isr=1.2376p nr=2.8 bv=9.9900 ibv=5.0000m tt=128n nbv=0.2 tbv1=0.00063 vpk=10 mfg=rohm type=zener
+.model edzv11b-ltspice d is=2.6919e-16 n=1.0329 rs=.28166 ikf=1.2119 cjo=1.5000e-11 m=.35461 vj=.75858 isr=6.3129e-13 nr=2.8400 bv=11.000 ibv=1.0000m tt=163.00n nbv=0.5500 tbv1=0.6700m nbvl=22.500 ibvl=1.5000e-11 vpk=11 mfg=rohm type=zener
+.model edzv11b-mpkopec d is=269.19e-18 n=1.0329 rs=.28166 ikf=1.2119 cjo=15.000p m=.35461 vj=.75858 isr=808.29f nr=3.1 bv=10.990 ibv=5.0000m tt=163n nbv=0.25 tbv1=0.00068 vpk=11 mfg=rohm type=zener
+.model edzv12b-ltspice d is=3.4990e-16 n=1.0420 rs=.26313 ikf=.87303 cjo=1.3700e-11 m=.35603 vj=.75124 isr=5.1535e-13 nr=2.8200 bv=11.930 ibv=1.0000m tt=1.8500e-7 nbv=0.4000 tbv1=0.7300m nbvl=26.200 ibvl=1.0000e-11 vpk=12 mfg=rohm type=zener
+.model edzv12b-mpkopec d is=349.90e-18 n=1.0420 rs=.26313 ikf=.87303 cjo=13.700p m=.35603 vj=.75124 isr=775.35f nr=2.9 bv=11.990 ibv=5.0000m tt=185n nbv=0.3 tbv1=0.00070 vpk=12 mfg=rohm type=zener
+.model edzv13b-ltspice d is=3.3892e-16 n=1.0385 rs=.24887 ikf=.82579 cjo=1.3400e-11 m=.45658 vj=.75643 isr=5.154e-13 nr=2.7000 bv=13.220 ibv=1.0000m tt=1.8500e-7 nbv=0.8800 tbv1=0.7400m nbvl=39.200 ibvl=5.000p vpk=13 mfg=rohm type=zener
+.model edzv13b-mpkopec d is=338.92e-18 n=1.0385 rs=.24887 ikf=.82579 cjo=13.400p m=.35658 vj=.75643 isr=1.0954p nr=2.8 bv=13.200 ibv=5.0000m tt=185n nbv=0.3 tbv1=0.00074 vpk=13 mfg=rohm type=zener
+.model edzv15b-ltspice d is=2.6563e-16 n=1.0349 rs=.29514 ikf=35.137 cjo=1.4700e-11 m=.36513 vj=.75709 isr=6.4100e-13 nr=2.7200 bv=14.700 ibv=1.0000m tt=1.5100e-7 nbv=0.8600 tbv1=0.7600m nbvl=20.700 ibvl=1.8000e-10 vpk=15 mfg=rohm type=zener
+.model edzv15b-mpkopec d is=265.63e-18 n=1.0349 rs=.29514 ikf=35.137 cjo=14.700p m=.36513 vj=.75709 isr=8.2007p nr=3.3000 bv=14.660 ibv=5.0000m tt=151n nbv=0.4 tbv1=0.00076 vpk=15 mfg=rohm type=zener
+.model edzv16b-ltspice d is=2.9649e-16 n=1.0357 rs=.21510 ikf=55.214 cjo=1.3885e-11 m=.33221 vj=.53071 isr=5.2147e-13 nr=2.6867 bv=16.150 ibv=1.0000m tt=1.3700e-7 nbv=1.1000 tbv1=0.7800m nbvl=71.700 ibvl=7.0000p vpk=16 mfg=rohm type=zener
+.model edzv16b-mpkopec d is=296.49e-18 n=1.0357 rs=.2151 ikf=55.214 cjo=13.900p m=.36486 vj=.77507 isr=1.4438p nr=2.9000 bv=16.180 ibv=5.0000m tt=137n nbv=0.4 tbv1=0.00078 vpk=16 mfg=rohm type=zener
+.model edzv18b-ltspice d is=4.3893e-16 n=1.0456 rs=.23636 ikf=1.1133 cjo=1.2300e-11 m=.35741 vj=.77627 isr=4.6335e-13 nr=2.5000 bv=17.87 ibv=1.0000m tt=1.7100e-7 nbv=0.4600 tbv1=0.8210m nbvl=58.400 ibvl=3.0000e-11 vpk=18 mfg=rohm type=zener
+.model edzv18b-mpkopec d is=438.93e-18 n=1.0456 rs=.23636 ikf=1.1133 cjo=12.300p m=.35741 vj=.77627 isr=1.5335p nr=3 bv=17.955 ibv=5.0000m tt=171n nbv=0.4 tbv1=0.00081 vpk=18 mfg=rohm type=zener
+.model edzv20b-ltspice d is=5.4004e-16 n=1.0500 rs=.24711 ikf=1.0080 cjo=1.1200e-11 m=.32891 vj=.51639 isr=0.2831p nr=2.2500 bv=20.00 ibv=1.0000m tt=1.8200e-7 nbv=0.8000 tbv1=0.83m nbvl=58.400 ibvl=0.3000e-11 vpk=20 mfg=rohm type=zener
+.model edzv20b-mpkopec d is=540.04e-18 n=1.0500 rs=.24711 ikf=1.0080 cjo=11.200p m=.35891 vj=.77639 isr=1.6251p nr=3.4 bv=19.955 ibv=5.0000m tt=182n nbv=0.4 tbv1=0.00081 vpk=20 mfg=rohm type=zener
+.model edzv22b-ltspice d is=7.8804e-16 n=1.0605 rs=.26605 ikf=.81132 cjo=1.0100e-11 m=.34994 vj=.79255 isr=0.5348p nr=2.6500 bv=22.050 ibv=1.0000m tt=1.8700e-7 nbv=1.4000 tbv1=0.8300m nbvl=125.00 ibvl=3.5000p vpk=22 mfg=rohm type=zener
+.model edzv22b-mpkopec d is=788.04e-18 n=1.0605 rs=.26605 ikf=.81132 cjo=10.100p m=.34994 vj=.79255 isr=1.1348p nr=2.8000 bv=22.005 ibv=5.0000m tt=187n nbv=0.4 tbv1=0.00081 vpk=22 mfg=rohm type=zener
+.model edzv24b-ltspice d is=1.1267f n=1.0731 rs=.28474 ikf=.67038 cjo=9.2000p m=.34336 vj=.75563 isr=2.4424e-13 nr=2.1800 bv=24.350 ibv=1.0000m tt=2.0500e-7 nbv=0.8000 tbv1=0.8500m nbvl=72.00 ibvl=6.5000p vpk=24 mfg=rohm type=zener
+.model edzv24b-mpkopec d is=1.1267f n=1.0731 rs=.28474 ikf=.67038 cjo=9.2000p m=.34336 vj=.75563 isr=1.4424p nr=2.8 bv=24.250 ibv=5.0000m tt=205n nbv=0.4 tbv1=0.00082 vpk=24 mfg=rohm type=zener
+.model edzv27b-ltspice d is=1.2516f n=1.0723 rs=.24316 ikf=.52825 cjo=8.5000p m=.32197 vj=.76072 isr=4.5326e-13 nr=2.3500 bv=26.89 ibv=1.0000m tt=1.8400e-7 nbv=1.6500 tbv1=0.8500m nbvl=165.00 ibvl=4.8000p vpk=27 mfg=rohm type=zener
+.model edzv27b-mpkopec d is=1.2516f n=1.0723 rs=.24316 ikf=.52825 cjo=8.5000p m=.34197 vj=.76072 isr=1.2326p nr=3 bv=26.860 ibv=5.0000m tt=184n nbv=0.4 tbv1=0.00083 vpk=27 mfg=rohm type=zener
+.model edzv30b-ltspice d is=2.2137f n=1.0929 rs=.25495 ikf=.75706 cjo=8.0000p m=.30884 vj=.76074 isr=4.9426e-13 nr=2.8600 bv=29.98 ibv=1.0000m tt=1.9000e-7 nbv=2.4000 tbv1=0.87900m nbvl=155.00 ibvl=2.0000p vpk=30 mfg=rohm type=zener
+.model edzv30b-mpkopec d is=2.2137f n=1.0929 rs=.25495 ikf=.75706 cjo=8.0000p m=.34984 vj=.76074 isr=874.26f nr=3 bv=29.940 ibv=5.0000m tt=190n nbv=0.3 tbv1=0.00085 vpk=30 mfg=rohm type=zener
+.model edzv33b-ltspice d is=4.3739f n=1.1094 rs=.26228 ikf=.62832 cjo=7.6000p m=.325085 vj=.77316 isr=6.0323e-13 nr=3.1000 bv=33.0 ibv=1.0000m tt=1.7000e-7 nbv=1.8200 tbv1=0.8400m nbvl=245.00 ibvl=1.1000p vpk=33 mfg=rohm type=zener
+.model edzv33b-mpkopec d is=4.3739f n=1.1094 rs=.26228 ikf=.62832 cjo=7.6000p m=.34085 vj=.77316 isr=323.23f nr=2.5 bv=32.970 ibv=5.0000m tt=170n nbv=0.4 tbv1=0.00085 vpk=33 mfg=rohm type=zener
+.model edzv36b-ltspice d is=8.4106f n=1.1365 rs=.26630 ikf=.47397 cjo=6.8000p m=.31586 vj=.80868 isr=7.8934e-13 nr=2.6500 bv=35.96 ibv=1.0000m tt=2.0500e-7 nbv=3.0700 tbv1=0.8700m nbvl=225.00 ibvl=2.2000p vpk=36 mfg=rohm type=zener
+.model edzv36b-mpkopec d is=8.4106f n=1.1365 rs=.2663 ikf=.47397 cjo=6.8000p m=.35686 vj=.80868 isr=869.34f nr=3.0000 bv=35.970 ibv=5.0000m tt=205n nbv=0.5 tbv1=0.00086 vpk=36 mfg=rohm type=zener
+.model edzv6_2b-ltspice d is=149.54e-18 n=1.0155 rs=.21260 ikf=1.2516 cjo=23.000p m=.37190 vj=.75178 isr=0.5007p nr=4.6500 bv=6.1950 ibv=5.0000m tt=65.000n nbv=0.2000 tbv1=0.3500m nbvl=9.7000 ibvl=3.7000u vpk=6.2 mfg=rohm type=zener
+.model edzv6_2b-mpkopec d is=149.54e-18 n=1.0155 rs=.2126 ikf=1.2516 cjo=22.000p m=.3719 vj=.75178 isr=617.07f nr=2.3000 bv=6.1950 ibv=5.0000m tt=65n nbv=0.2 tbv1=0.00039 nbvl=11 ibvl=1u vpk=6.2 mfg=rohm type=zener
+.model edzv6_8b-ltspice d is=1.7609e-16 n=1.0196 rs=.26014 ikf=.94002 cjo=1.9100e-11 m=.36585 vj=.76843 isr=0.3906p nr=3.2000 bv=6.7900 ibv=5.0000m tt=85.000n nbv=0.1000 tbv1=0.4600m nbvl=11.400 ibvl=100.00n vpk=6.8 mfg=rohm type=zener
+.model edzv6_8b-mpkopec d is=176.09e-18 n=1.0196 rs=.26014 ikf=.94002 cjo=19.100p m=.36585 vj=.76843 isr=670.60f nr=3.2 bv=6.7900 ibv=5.0000m tt=85n nbv=0.1 tbv1=0.00046 nbvl=11 ibvl=100n vpk=6.8 mfg=rohm type=zener
+.model edzv7_5b-ltspice d is=2.6370e-16 n=1.0324 rs=.23141 ikf=1.1640 cjo=2.5200e-11 m=.39896 vj=.76788 isr=3.4986p nr=2.6800 bv=7.4400 ibv=5.0000m tt=65.000n nbv=0.3000 tbv1=0.4800m nbvl=14.000 ibvl=200.00n vpk=7.5 mfg=rohm type=zener
+.model edzv7_5b-mpkopec d is=263.70e-18 n=1.0324 rs=.23141 ikf=1.1640 cjo=25.900p m=.39896 vj=.76788 isr=1.4986p nr=2.5 bv=7.4400 ibv=5.0000m tt=65n nbv=0.3 tbv1=0.00048 nbvl=17 ibvl=100n vpk=7.5 mfg=rohm type=zener
+.model edzv8_2b-ltspice d is=2.2428e-16 n=1.0295 rs=.26107 ikf=1.2319 cjo=2.2200e-11 m=.38384 vj=.75935 isr=2.7900p nr=3.3000 bv=8.1900 ibv=5.0000m tt=69.000n nbv=0.1000 tbv1=0.5500m nbvl=14.000 ibvl=10.000n vpk=8.2 mfg=rohm type=zener
+.model edzv8_2b-mpkopec d is=224.28e-18 n=1.0295 rs=.26107 ikf=1.2319 cjo=22.200p m=.38384 vj=.75935 isr=1.4829p nr=2.5000 bv=8.1900 ibv=5.0000m tt=69n nbv=0.1 tbv1=0.00055 nbvl=15 ibvl=10n vpk=8.2 mfg=rohm type=zener
+.model edzv9_1b-ltspice d is=2.0192e-16 n=1.0271 rs=.25962 ikf=1.1336 cjo=1.9400e-11 m=.37163 vj=.75692 isr=1.2130p nr=2.4700 bv=9.0400 ibv=5.0000m tt=102.00n nbv=0.2000 tbv1=0.6000m nbvl=19.800 ibvl=2.5000e-10 vpk=9.1 mfg=rohm type=zener
+.model edzv9_1b-mpkopec d is=201.92e-18 n=1.0271 rs=.25962 ikf=1.1336 cjo=19.400p m=.37163 vj=.75692 isr=2.2164p nr=2.5000 bv=9.0400 ibv=5.0000m tt=102n nbv=0.2 tbv1=0.0006 nbvl=10 ibvl=3n vpk=9.1 mfg=rohm type=zener
+.model emz6_8e d is=303.96e-18 n=1.0270 rs=.66334 ikf=.14472 cjo=19.068p m=.32719 vj=.80786 isr=10.695p bv=6.9450 ibv=4.9900m tt=33.182n nbv=0.3 tbv1=0.00045 nbvl=1 ibvl=1.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model emz6_8n d is=303.96e-18 n=1.0270 rs=.66334 ikf=.14472 cjo=19.068p m=.32719 vj=.80786 isr=10.695p bv=6.9350 ibv=4.9900m tt=33.182n nbv=0.3 tbv1=0.00045 nbvl=1 ibvl=1.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model emzt6_8e d is=156.41e-18 n=1.0395 rs=.67858 ikf=61.182m cjo=7.0024p m=.27092 vj=.80496 isr=1.6068n nr=3.5000 bv=6.8050 ibv=4.9950m tt=43.281n nbv=0.5 tbv1=0.00047 nbvl=25 ibvl=5.0000u vpk=6.8 mfg=rohm type=zener
+.model ftz30e d is=517.48e-18 n=1.0424 rs=.19251 ikf=.13647 cjo=9.0937p m=.32393 vj=.8043 isr=27.367p bv=29.940 ibv=5.0000m tt=317.39n nbv=0.3 tbv1=0.00086 vpk=30 mfg=rohm type=zener
+.model ftz6_8e d is=153.73e-18 n=1.0159 rs=.1572 ikf=.15869 cjo=18.108p m=.35314 vj=.80037 isr=66.267p bv=6.7900 ibv=4.9900m tt=216.40n nbv=0.3 tbv1=0.00048 nbvl=1 ibvl=1.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model ftzu6_2e d is=230.74e-18 n=1.0458 rs=.41856 ikf=74.679m cjo=8.0230p m=.30255 vj=.80201 isr=8.6796n nr=1.5000 bv=6.1300 ibv=4.9995m tt=137.06n nbv=0.3 tbv1=0.0004 nbvl=35.000 ibvl=5.0000e-8 vpk=6.2 mfg=rohm type=zener
+.model kdz10b d is=3.4887f n=1.0201 rs=13.663m ikf=.63395 cjo=384.10p m=.36185 vj=.82234 isr=57.536p bv=10.310 ibv=39.985m tt=337.59n nbv=0.15 tbv1=0.00066 nbvl=1 ibvl=1.5000e-5 vpk=10 mfg=rohm type=zener
+.model kdz11b d is=3.5230f n=1.0199 rs=14.003m ikf=.57497 cjo=343.03p m=.34898 vj=.82469 isr=53.346p bv=11.510 ibv=19.985m tt=401.07n nbv=0.05 tbv1=0.00072 nbvl=0.5 ibvl=1.5000e-5 vpk=11 mfg=rohm type=zener
+.model kdz12b d is=6.1497f n=1.0456 rs=11.352m ikf=.87678 cjo=341.56p m=.37091 vj=.80255 isr=69.166p bv=12.500 ibv=19.985m tt=187.55n nbv=0.05 tbv1=0.00065 nbvl=0.6 ibvl=1.5000e-5 vpk=12 mfg=rohm type=zener
+.model kdz13b d is=4.4789f n=1.0330 rs=12.989m ikf=.78343 cjo=301.84p m=.37289 vj=.81299 isr=36.650p bv=13.820 ibv=19.985m tt=252.47n nbv=0.05 tbv1=0.00068 nbvl=0.4 ibvl=1.5000e-5 vpk=13 mfg=rohm type=zener
+.model kdz15b d is=3.8211f n=1.0248 rs=20.518m ikf=.76979 cjo=283.29p m=.38849 vj=.80937 isr=26.473p bv=15.350 ibv=19.985m tt=333.26n nbv=0.05 tbv1=0.00072 nbvl=0.4 ibvl=1.5000e-5 vpk=15 mfg=rohm type=zener
+.model kdz16b d is=3.9175f n=1.0252 rs=15.777m ikf=.75576 cjo=230.36p m=.339 vj=.80022 isr=44.928p bv=16.860 ibv=20.000m tt=377.99n nbv=0.05 tbv1=0.00075 vpk=16 mfg=rohm type=zener
+.model kdz18b d is=3.9180f n=1.0250 rs=16.124m ikf=.756 cjo=218.84p m=.35823 vj=.83364 isr=35.166p bv=19 ibv=20.000m tt=434.25n nbv=0.05 tbv1=0.00067 vpk=18 mfg=rohm type=zener
+.model kdz20b d is=4.7057f n=1.0322 rs=15.226m ikf=.64872 cjo=197.80p m=.34995 vj=.8302 isr=31.006p bv=20.820 ibv=20.000m tt=538.13n nbv=0.05 tbv1=0.00074 vpk=20 mfg=rohm type=zener
+.model kdz22b d is=6.3336f n=1.0394 rs=11.998m ikf=.62572 cjo=181.19p m=.37072 vj=.82527 isr=32.969p bv=23.850 ibv=10.000m tt=523.70n nbv=0.05 tbv1=0.00074 vpk=22 mfg=rohm type=zener
+.model kdz24b d is=5.6942f n=1.0353 rs=7.2332m ikf=.53216 cjo=158.28p m=.32594 vj=.81773 isr=38.915p bv=25.310 ibv=10.000m tt=509.27n nbv=0.05 tbv1=0.0008 vpk=24 mfg=rohm type=zener
+.model kdz27b d is=5.4090f n=1.0328 rs=8.4497m ikf=.54146 cjo=145.86p m=.35006 vj=.80706 isr=30.905p bv=28.700 ibv=10.000m tt=562.65n nbv=0.05 tbv1=0.00059 vpk=27 mfg=rohm type=zener
+.model kdz30b d is=5.3639f n=1.0321 rs=11.693m ikf=.50376 cjo=132.61p m=.35521 vj=.81557 isr=24.732p bv=31.570 ibv=10.000m tt=637.67n nbv=0.05 tbv1=0.00083 vpk=30 mfg=rohm type=zener
+.model kdz33b d is=11.150f n=1.0554 rs=9.5085m ikf=.49319 cjo=129.36p m=.34715 vj=.81627 isr=31.652p bv=34.950 ibv=10.000m tt=605.93n nbv=0.05 tbv1=0.00085 vpk=33 mfg=rohm type=zener
+.model kdz36b d is=22.137f n=1.0777 rs=4.7841m ikf=.4052 cjo=126.75p m=.38653 vj=.85698 isr=22.958p bv=39.240 ibv=10.000m tt=565.54n nbv=0.05 tbv1=0.00087 vpk=36 mfg=rohm type=zener
+.model kdz6_2b d is=7.7987f n=1.0266 rs=17.144m ikf=.79621 cjo=666.04p m=.33563 vj=.8407 isr=84.071p bv=6.5090 ibv=39.600m tt=239.49n nbv=0.3 tbv1=0.00038 nbvl=8.5 ibvl=4.0000e-4 vpk=6.2 mfg=rohm type=zener
+.model kdz6_8b d is=7.1020f n=1.0222 rs=11.115m ikf=1.0862 cjo=563.61p m=.35923 vj=.81761 isr=65.997p bv=7.2800 ibv=39.980m tt=341.92n nbv=0.3 tbv1=0.00045 nbvl=8.3 ibvl=2.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model kdz7_5b d is=3.4288f n=1.0206 rs=12.931m ikf=.61872 cjo=560.73p m=.34193 vj=.81058 isr=81.587p bv=7.8890 ibv=39.965m tt=131.29n nbv=0.3 tbv1=0.0005 nbvl=9 ibvl=3.5000e-5 vpk=7.5 mfg=rohm type=zener
+.model kdz8_2b d is=3.1583f n=1.0183 rs=16.062m ikf=.59571 cjo=519.55p m=.3635 vj=.82173 isr=36.317p bv=8.6550 ibv=39.985m tt=178.89n nbv=0.15 tbv1=0.0006 nbvl=3 ibvl=1.5000e-5 vpk=8.2 mfg=rohm type=zener
+.model kdz9_1b d is=3.4312f n=1.0205 rs=27.663m ikf=.59218 cjo=410.36p m=.35044 vj=.81548 isr=39.439p bv=9.7470 ibv=39.985m tt=271.23n nbv=0.15 tbv1=0.0006 nbvl=1 ibvl=1.5000e-5 vpk=9.1 mfg=rohm type=zener
+.model kdzlv100 d is=35.609f n=1.1025 rs=8.3590m ikf=26.541m eg=1.0600 cjo=51.797p m=.30134 vj=.50118 isr=11.419p nr=2.5000 bv=100.14 ibv=10.000m nbv=2.9120 tbv1=.00097 tikf=0.0120 trs1=-0.0260 vpk=100 mfg=rohm type=zener
+.model kdzlv110 d is=39.006f n=1.0900 rs=.11928 ikf=34.674m eg=1.0800 cjo=48.449p m=.29958 vj=.50634 isr=8.4662p nr=2.4000 bv=110.30 ibv=10.000m nbv=3.8000 tbv1=.00097 tikf=0.0160 trs1=-0.0080 vpk=110 mfg=rohm type=zener
+.model kdzlv120 d is=76.937f n=1.1142 rs=75.254m ikf=26.447m eg=1.0600 cjo=45.724p m=.30761 vj=.50341 isr=7.4303p nr=3.0000 bv=120.30 ibv=10.000m nbv=4.8000 tbv1=.00090 tikf=0.0160 trs1=-0.0120 vpk=120 mfg=rohm type=zener
+.model kdzlv130 d is=81.444f n=1.1171 rs=.10828 ikf=37.765m eg=1.0400 cjo=43.885p m=.30187 vj=.50655 isr=3.1217p nr=2.1000 bv=130.30 ibv=10.000m nbv=5.5000 tbv1=.00088 tikf=0.014 trs1=-0.0100 vpk=130 mfg=rohm type=zener
+.model kdzlv150 d is=141.52f n=1.1354 rs=3.8525m ikf=16.964m eg=1.0800 cjo=39.269p m=.31196 vj=.50377 isr=9.8581p nr=3.2000 bv=150.30 ibv=10.000m nbv=8.0000 tbv1=.00098 tikf=0.0160 trs1=-0.0600 vpk=150 mfg=rohm type=zener
+.model kdzlv51 d is=3.2632f n=1.0229 rs=0.095 ikf=38.689m eg=1.19 cjo=89.012p m=0.314 vj=0.5013 isr=4.7926p nr=2.35 bv=51.04 ibv=2.0000m nbv=1.17 tbv1=0.8300m tikf=0.012 trs1=-0.008 vpk=51 mfg=rohm type=zener
+.model kdzlv56 d is=6.6560f n=1.0295 rs=0.1246 ikf=34.267m eg=1.15 cjo=81.279p m=0.308 vj=0.5158 isr=13.985p nr=2.8 bv=56.577 ibv=2.0000m nbv=1.3130 tbv1=0.8200m tikf=0.0125 trs1=-0.0057 vpk=56 mfg=rohm type=zener
+.model kdzlv62 d is=8.0345f n=1.0436 rs=.131 ikf=24.020m eg=1.0900 cjo=73.682p m=.31054 vj=.52827 isr=6.0085p nr=3.5000 bv=62.130 ibv=10.000m nbv=1.9540 tbv1=.00091 tikf=0.0120 trs1=-0.0090 vpk=62 mfg=rohm type=zener
+.model kdzlv68 d is=11.897f n=1.0461 rs=79.543m ikf=27.321m eg=1.0600 cjo=69.068p m=.30915 vj=.5337 isr=12.797p nr=2.9000 bv=68.150 ibv=10.000m nbv=1.4540 tbv1=.00092 tikf=0.0160 trs1=-0.0100 vpk=68 mfg=rohm type=zener
+.model kdzlv75 d is=16.460f n=1.0650 rs=2.2310m ikf=50.883m eg=1.0700 cjo=63.966p m=.30835 vj=.53581 isr=6.1393p nr=2.3000 bv=74.680 ibv=10.000m nbv=3.4540 tbv1=.00094 tikf=0.0160 trs1=-0.0200 vpk=75 mfg=rohm type=zener
+.model kdzlv82 d is=83.986f n=1.1452 rs=.16403 ikf=87.427m eg=1.0700 cjo=59.644p m=.30583 vj=.50776 isr=4.7484p nr=2.6000 bv=82.300 ibv=10.000m nbv=1.9120 tbv1=.00096 tikf=0.0150 trs1=-0.0050 vpk=82 mfg=rohm type=zener
+.model kdzlv91 d is=23.251f n=1.0814 rs=.14751 ikf=.15042 eg=1.1200 cjo=55.509p m=.30789 vj=.50338 isr=9.9461p nr=3.5000 bv=90.820 ibv=10.000m nbv=2.9120 tbv1=.00076 tikf=0.0150 trs1=-0.0090 vpk=91 mfg=rohm type=zener
+.model kdzv10b d is=3.4887f n=1.0201 rs=1.3663e-2 ikf=.63395 cjo=3.8410e-10 m=.36185 vj=.82234 isr=3.8536p nr=3.5300 bv=10.580 ibv=4.0000e-2 tt=3.3759e-7 nbv=0.1500 tbv1=6.6000e-4 nbvl=35.0000 ibvl=0.800n vpk=10 mfg=rohm type=zener
+.model kdzv11b d is=3.5230f n=1.0199 rs=1.4003e-2 ikf=.57497 cjo=3.4303e-10 m=.36898 vj=.82469 isr=1.3346p nr=3.2700 bv=11.660 ibv=4.0000e-2 tt=4.0107e-7 nbv=0.3000 tbv1=7.2000e-4 nbvl=65.2000 ibvl=80.0000p vpk=11 mfg=rohm type=zener
+.model kdzv12b d is=6.1497f n=1.0456 rs=1.1352e-2 ikf=.87678 cjo=3.4156e-10 m=.36291 vj=.72255 isr=5.7166p nr=2.5200 bv=12.750 ibv=4.0000e-2 tt=1.8755e-7 nbv=0.5600 tbv1=7.0000e-4 nbvl=62.400 ibvl=0.6000n vpk=12 mfg=rohm type=zener
+.model kdzv13b d is=4.4789f n=1.0330 rs=1.2989e-2 ikf=.78343 cjo=3.0184e-10 m=.37289 vj=.81299 isr=8.6650p nr=2.8300 bv=14.170 ibv=4.0000e-2 tt=2.5247e-7 nbv=0.6300 tbv1=7.1000e-4 nbvl=38.400 ibvl=3.0000n vpk=13 mfg=rohm type=zener
+.model kdzv15b d is=3.8211f n=1.0248 rs=2.0518e-2 ikf=.76979 cjo=2.7529e-10 m=.36249 vj=.74937 isr=3.5323p nr=3.2000 bv=15.640 ibv=4.0000e-2 tt=3.3326e-7 nbv=0.4700 tbv1=7.2000e-4 nbvl=20.8000 ibvl=1.9000e-8 vpk=15 mfg=rohm type=zener
+.model kdzv16b d is=3.9175f n=1.0252 rs=1.5777e-2 ikf=.75576 cjo=2.4536e-10 m=.36000 vj=.80022 isr=3.1728p nr=2.8000 bv=17.270 ibv=4.0000e-2 tt=3.7799e-7 nbv=0.9000 tbv1=7.5000e-4 nbvl=30.2000 ibvl=0.3000e-8 vpk=16 mfg=rohm type=zener
+.model kdzv18b d is=3.9180f n=1.0250 rs=1.6124e-2 ikf=.756 cjo=2.1884e-10 m=.34623 vj=.73364 isr=1.0166p nr=2.8900 bv=19.200 ibv=4.0000e-2 tt=4.3425e-7 nbv=1.0700 tbv1=7.4000e-4 nbvl=48.4000 ibvl=0.0200e-8 vpk=18 mfg=rohm type=zener
+.model kdzv20b d is=4.7057f n=1.0322 rs=1.5226e-2 ikf=.64872 cjo=1.9710e-10 m=.36495 vj=.8102 isr=1.2200p nr=3.1800 bv=21.220 ibv=4.0000e-2 tt=5.3813e-7 nbv=0.5000 tbv1=8.0000e-4 nbvl=26.200 ibvl=9.0000n vpk=20 mfg=rohm type=zener
+.model kdzv22b d is=1.7548f n=1.0045 rs=.1631 ikf=.38131 cjo=1.8119e-10 m=.36072 vj=.82527 isr=1.46862p nr=3.6800 bv=23.270 ibv=4.0000e-2 tt=5.2370e-7 nbv=0.3000 tbv1=8.2000e-4 nbvl=54.200 ibvl=2.0000p vpk=22 mfg=rohm type=zener
+.model kdzv24b d is=5.6942f n=1.0353 rs=7.2332m ikf=.53216 cjo=1.6528e-10 m=.36194 vj=.81773 isr=0.8905p nr=3.2200 bv=25.840 ibv=4.0000e-2 tt=5.0927e-7 nbv=0.3000 tbv1=8.7000e-4 nbvl=81.300 ibvl=30.2000p vpk=24 mfg=rohm type=zener
+.model kdzv27b d is=5.4090f n=1.0328 rs=8.4497m ikf=.54146 cjo=1.4586e-10 m=.35006 vj=.80706 isr=2.0905p nr=4.1900 bv=29.000 ibv=4.0000e-2 tt=5.6265e-7 nbv=0.6000 tbv1=8.5000e-4 nbvl=98.800 ibvl=2.2000e-10 vpk=27 mfg=rohm type=zener
+.model kdzv30b d is=5.3639f n=1.0321 rs=1.1693e-2 ikf=.50376 cjo=1.3261e-10 m=.35521 vj=.81557 isr=0.4732p nr=3.2400 bv=32.060 ibv=4.0000e-2 tt=6.3767e-7 nbv=0.7000 tbv1=8.5000e-4 nbvl=231.80 ibvl=10.0000p vpk=30 mfg=rohm type=zener
+.model kdzv33b d is=2.5505f n=1.0142 rs=8.9846m ikf=1.1646 eg=1.15 cjo=125.88p m=.33003 vj=.61691 isr=385.95f nr=1.9000 bv=35.022 ibv=10.000m nbv=1.3000 tbv1=0.8700m nbvl=300.00 ibvl=7.0000p vpk=33 mfg=rohm type=zener
+.model kdzv36b d is=2.2393f n=1.0093 rs=.15077 ikf=.27407 cjo=1.2345e-10 m=.37243 vj=.75498 isr=0.4952p nr=2.8540 bv=38.040 ibv=4.0000e-2 tt=5.6554e-7 nbv=0.6000 tbv1=9.1000e-4 nbvl=151.80 ibvl=4.1000p vpk=36 mfg=rohm type=zener
+.model kdzv6_2b d is=7.7987f n=1.0266 rs=1.7144e-2 ikf=.79621 cjo=6.6604e-10 m=.37563 vj=.8407 isr=1.0071e-11 nr=5.8500 bv=6.6090 ibv=0.1000 tt=2.3949e-7 nbv=0.3000 tbv1=4.0000e-4 nbvl=9.4000 ibvl=2.7000e-4 vpk=6.2 mfg=rohm type=zener
+.model kdzv6_8b d is=7.1020f n=1.0222 rs=1.1115e-2 ikf=1.0862 cjo=5.6361e-10 m=.35923 vj=.81761 isr=3.5997p nr=6.8500 bv=7.2800 ibv=3.9980e-2 tt=3.4192e-7 nbv=0.3000 tbv1=4.5000e-4 nbvl=10.150 ibvl=5.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model kdzv7_5b d is=3.4288f n=1.0206 rs=1.2931e-2 ikf=.61872 cjo=5.6073e-10 m=.36753 vj=.81058 isr=0.7587e-10 nr=3.9500 bv=7.9290 ibv=3.9965e-2 tt=1.3129e-7 nbv=0.3000 tbv1=5.2000e-4 nbvl=12.300 ibvl=3.5000e-5 vpk=7.5 mfg=rohm type=zener
+.model kdzv8_2b d is=3.1583f n=1.0183 rs=1.6062e-2 ikf=.59571 cjo=4.9955e-10 m=.3835 vj=.82173 isr=3.69317p nr=2.0200 bv=8.7300 ibv=4.0000e-2 tt=1.2100e-7 nbv=0.1500 tbv1=6.0000e-4 nbvl=33.5000 ibvl=6.5000n vpk=8.2 mfg=rohm type=zener
+.model kdzv9_1b d is=3.4312f n=1.0205 rs=2.7663e-2 ikf=.59218 cjo=4.3436e-10 m=.37044 vj=.81548 isr=1.5536p nr=2.2200 bv=9.6300 ibv=4.0000e-2 tt=2.7123e-7 nbv=0.1500 tbv1=6.0000e-4 nbvl=44.0000 ibvl=0.800n vpk=9.1 mfg=rohm type=zener
+.model mmbz10valy d is=4.0445f n=1.0663 rs=38.322m ikf=.28778 eg=1.1200 cjo=105.32p m=.32862 vj=.64123 isr=6.2732p nr=3.1000 bv=10.010 ibv=1.0000m nbv=0.0900 tbv1=0.6200m nbvl=18.000 ibvl=6.0000n vpk=10 mfg=rohm type=zener
+.model mmbz12valy d is=1.2719f n=1.0242 rs=5.9759m ikf=.17981 eg=1.1200 cjo=84.855p m=.33202 vj=.68005 isr=2.8480p nr=3.3000 bv=12.010 ibv=1.0000m nbv=0.1000 tbv1=0.6800m nbvl=32.000 ibvl=0.2000n vpk=12 mfg=rohm type=zener
+.model mmbz15valy d is=1.9401f n=1.0476 rs=548.78u ikf=1.1348 eg=1.1400 cjo=73.598p m=.3269 vj=.56585 isr=4.2860p nr=3.7000 bv=15.014 ibv=1.0000m nbv=0.0900 tbv1=0.7300m nbvl=39.000 ibvl=0.1200n vpk=15 mfg=rohm type=zener
+.model mmbz16valy d is=1.1711f n=1.0351 rs=3.5159m ikf=1.1694 eg=1.1400 cjo=68.376p m=.32768 vj=.58294 isr=2.8760p nr=2.7300 bv=16.020 ibv=1.0000m nbv=0.1500 tbv1=0.7300m nbvl=28.000 ibvl=100.00p vpk=16 mfg=rohm type=zener
+.model mmbz18valy d is=1.2359f n=1.0323 rs=3.2410m ikf=.48399 eg=1.1300 cjo=61.032p m=.32591 vj=.59303 isr=1.1180p nr=2.6000 bv=18.020 ibv=1.0000m nbv=0.1500 tbv1=0.7500m nbvl=72.000 ibvl=25.000p vpk=18 mfg=rohm type=zener
+.model mmbz20valy d is=2.6484f n=1.0525 rs=2.1876m ikf=0.8658 eg=1.1300 cjo=54.460p m=.32607 vj=.60198 isr=1.1180p nr=3.9000 bv=20.028 ibv=1.0000m nbv=0.2000 tbv1=0.7650m nbvl=70.000 ibvl=9.0000p vpk=20 mfg=rohm type=zener
+.model mmbz24valy d is=1.0980f n=1.0166 rs=2.6375m ikf=.60563 eg=1.13 cjo=45.563p m=.32769 vj=.61377 isr=3.8180p nr=4.5 bv=24.028 ibv=1.0000m nbv=0.36 tbv1=0.7850m nbvl=25 ibvl=20.000p vpk=24 mfg=rohm type=zener
+.model mmbz27valy d is=594.00e-18 n=.99783 rs=2.8419m ikf=.11109 eg=1.12 cjo=41.262p m=.33107 vj=.51419 isr=2.9121p nr=4.8 bv=27.04 ibv=1.0000m nbv=0.6 tbv1=0.7900m nbvl=36 ibvl=100.00p vpk=27 mfg=rohm type=zener
+.model mmbz27vcly d is=8.8633f n=1.0704 rs=16.954m ikf=62.193 cjo=63.753p m=.32693 vj=.60687 isr=203.70f nr=1.7000 bv=27.006 ibv=1.0000m nbv=0.3900 tbv1=0.7700m nbvl=60 ibvl=1.2000p vpk=27 mfg=rohm type=zener
+.model mmbz30valy d is=594.00e-18 n=.99916 rs=19.535m ikf=77.346m eg=1.12 cjo=37.395p m=.3315 vj=.62952 isr=4.1121p nr=3.1 bv=30.03 ibv=1.0000m nbv=0.4 tbv1=0.8000m nbvl=100 ibvl=12.000p vpk=30 mfg=rohm type=zener
+.model mmbz33valy d is=394.00e-18 n=.98154 rs=34.583m ikf=55.061m eg=1.1200 cjo=34.027p m=.33248 vj=.62932 isr=2.6121p nr=3.4 bv=33.03 ibv=1.0000m nbv=0.6 tbv1=0.7900m nbvl=140 ibvl=16.000p vpk=33 mfg=rohm type=zener
+.model mmbz36valy d is=654.00e-18 n=.98154 rs=24.583m ikf=55.061m eg=1.1200 cjo=32.227p m=.33248 vj=.62932 isr=1.8121p nr=2.25 bv=36.03 ibv=1.0000m nbv=0.2 tbv1=0.7900m nbvl=118 ibvl=7.5000p vpk=36 mfg=rohm type=zener
+.model mmbz6v8aly d is=2.3173f n=1.0325 rs=16.827m ikf=.91441 cjo=164.97p m=.35123 vj=.79209 isr=3.4312p nr=5.0000 bv=6.8100 ibv=1.0000m nbv=0.2700 tbv1=0.4130m nbvl=14.400 ibvl=2.0000u vpk=6.8 mfg=rohm type=zener
+.model mmbz9v1aly d is=1.8480f n=1.0431 rs=3.0760m ikf=.36749 cjo=119.15p m=.32706 vj=.62344 isr=3.4312p nr=5.0000 bv=9.1100 ibv=1.0000m nbv=0.2700 tbv1=0.4130m nbvl=14.400 ibvl=2.0000u vpk=9.1 mfg=rohm type=zener
+.model pdzv10b d is=1.5196f n=.99074 rs=17.764m ikf=432.95 eg=1.15 cjo=388.79p m=.31496 vj=.50387 isr=16.517p nr=4.1 bv=10.716 ibv=40.000m nbv=0.37 tbv1=640.00u vpk=10 mfg=rohm type=zener
+.model pdzv11b d is=3.5230f n=1.0199 rs=1.4003e-2 ikf=.57497 cjo=3.4303e-10 m=.36898 vj=.82469 isr=1.3346p nr=3.2700 bv=11.660 ibv=4.0000e-2 tt=4.0107e-7 nbv=0.3000 tbv1=7.2000e-4 nbvl=65.2000 ibvl=80.0000p vpk=11 mfg=rohm type=zener
+.model pdzv12b d is=6.1497f n=1.0456 rs=1.1352e-2 ikf=.87678 cjo=3.4156e-10 m=.36291 vj=.72255 isr=5.7166p nr=2.5200 bv=12.750 ibv=4.0000e-2 tt=1.8755e-7 nbv=0.5600 tbv1=7.0000e-4 nbvl=62.400 ibvl=0.6000n vpk=12 mfg=rohm type=zener
+.model pdzv13b d is=23.513f n=1.0663 rs=13.887m ikf=221.14 cjo=304.30p m=.32852 vj=.54226 isr=19.918p nr=2.6300 bv=14.147 ibv=20.000m nbv=0.2770 tbv1=0.7190m nbvl=75.000 ibvl=300.00p vpk=13 mfg=rohm type=zener
+.model pdzv15b d is=1.8654f n=1.0093 rs=11.740m ikf=1.8976 eg=1.15 cjo=275.19p m=.32811 vj=.56071 isr=431.30f nr=1.7500 bv=15.740 ibv=20.000m nbv=0.5400 tbv1=0.7200m nbvl=100.00 ibvl=105.00p vpk=15 mfg=rohm type=zener
+.model pdzv16b d is=34.424f n=1.0753 rs=13.363m ikf=204.63 cjo=245.31p m=.32994 vj=.58504 isr=26.531p nr=3.8000 bv=17.2800 ibv=20.000m nbv=0.3200 tbv1=0.7700m vpk=16 mfg=rohm type=zener
+.model pdzv18b d is=3.9180f n=1.0250 rs=1.6124e-2 ikf=.756 cjo=2.1884e-10 m=.34623 vj=.73364 isr=1.0166p nr=2.8900 bv=19.200 ibv=4.0000e-2 tt=4.3425e-7 nbv=1.0700 tbv1=7.4000e-4 nbvl=48.4000 ibvl=0.0200e-8 vpk=18 mfg=rohm type=zener
+.model pdzv20b d is=4.7057f n=1.0322 rs=1.5226e-2 ikf=.64872 cjo=1.9710e-10 m=.36495 vj=.8102 isr=1.2200p nr=3.1800 bv=21.220 ibv=4.0000e-2 tt=5.3813e-7 nbv=0.5000 tbv1=8.0000e-4 nbvl=26.200 ibvl=9.0000n vpk=20 mfg=rohm type=zener
+.model pdzv22b d is=1.7548f n=1.0045 rs=.1631 ikf=.38131 cjo=1.8119e-10 m=.36072 vj=.82527 isr=1.46862p nr=3.6800 bv=23.270 ibv=4.0000e-2 tt=5.2370e-7 nbv=0.3000 tbv1=8.2000e-4 nbvl=54.200 ibvl=2.0000p vpk=22 mfg=rohm type=zener
+.model pdzv24b d is=5.6942f n=1.0353 rs=7.2332m ikf=.53216 cjo=1.6528e-10 m=.36194 vj=.81773 isr=0.8905p nr=3.2200 bv=25.840 ibv=4.0000e-2 tt=5.0927e-7 nbv=0.3000 tbv1=8.7000e-4 nbvl=81.300 ibvl=30.2000p vpk=24 mfg=rohm type=zener
+.model pdzv27b d is=2.8258f n=.9997 rs=16.701m ikf=561.52 eg=1.13 cjo=149.13p m=.33319 vj=.61784 isr=7.8392p nr=2.4 bv=29.293 ibv=10.000m nbv=0.8 tbv1=0.8200m vpk=27 mfg=rohm type=zener
+.model pdzv30b d is=5.3639f n=1.0321 rs=1.1693e-2 ikf=.50376 cjo=1.3261e-10 m=.35521 vj=.81557 isr=0.4732p nr=3.2400 bv=32.060 ibv=4.0000e-2 tt=6.3767e-7 nbv=0.7000 tbv1=8.5000e-4 nbvl=231.80 ibvl=10.0000p vpk=30 mfg=rohm type=zener
+.model pdzv33b d is=2.5505f n=1.0142 rs=8.9846m ikf=1.1646 eg=1.15 cjo=125.88p m=.33003 vj=.61691 isr=385.95f nr=1.9000 bv=35.022 ibv=10.000m nbv=1.3000 tbv1=0.8700m nbvl=300.00 ibvl=7.0000p vpk=33 mfg=rohm type=zener
+.model pdzv36b d is=2.2393f n=1.0093 rs=.15077 ikf=.27407 cjo=1.2345e-10 m=.37243 vj=.75498 isr=0.4952p nr=2.8540 bv=38.040 ibv=4.0000e-2 tt=5.6554e-7 nbv=0.6000 tbv1=9.1000e-4 nbvl=151.80 ibvl=4.1000p vpk=36 mfg=rohm type=zener
+.model pdzv6_2b d is=798.00e-18 n=0.9366 rs=87.150m ikf=29.650m cjo=655.00p m=0.3756 vj=0.8407 isr=3.4700p nr=5 bv=6.61 ibv=0.04 nbv=0.33 tbv1=0.4300m nbvl=9.7 ibvl=200.00u vpk=6.2 mfg=rohm type=zener
+.model pdzv6_8b d is=7.1020f n=1.0222 rs=1.1115e-2 ikf=1.0862 cjo=5.6361e-10 m=.35923 vj=.81761 isr=3.5997p nr=6.8500 bv=7.2800 ibv=3.9980e-2 tt=3.4192e-7 nbv=0.3000 tbv1=4.5000e-4 nbvl=10.150 ibvl=5.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model pdzv7_5b d is=3.4288f n=1.0206 rs=142.93m ikf=95.875m cjo=570.73p m=0.3475 vj=0.645 isr=45.765p nr=3.7 bv=7.95 ibv=0.04 nbv=0.35 tbv1=540.00u nbvl=13.7 ibvl=20.000u vpk=7.5 mfg=rohm type=zener
+.model pdzv8_2b d is=3.1583f n=1.0183 rs=1.6062e-2 ikf=.59571 cjo=4.9955e-10 m=.3835 vj=.82173 isr=3.69317p nr=2.0200 bv=8.7300 ibv=4.0000e-2 tt=1.2100e-7 nbv=0.1500 tbv1=6.0000e-4 nbvl=33.5000 ibvl=6.5000n vpk=8.2 mfg=rohm type=zener
+.model pdzv9_1b d is=3.4312f n=1.0205 rs=2.7663e-2 ikf=.59218 cjo=4.3436e-10 m=.37044 vj=.81548 isr=1.5536p nr=2.2200 bv=9.6300 ibv=4.0000e-2 tt=2.7123e-7 nbv=0.1500 tbv1=6.0000e-4 nbvl=44.0000 ibvl=0.800n vpk=9.1 mfg=rohm type=zener
+.model ph_bzx384-b10 d is=1.13e-14 n=1.103 bv=10 ibv=0.005 rs=0.4798 cjo=6.004e-11 vj=0.6305 m=0.3302 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b11 d is=1.13e-14 n=1.103 bv=11 ibv=0.005 rs=0.4798 cjo=5.404e-11 vj=0.5891 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b12 d is=1.13e-14 n=1.103 bv=12 ibv=0.005 rs=0.4798 cjo=4.928e-11 vj=0.575 m=0.3292 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b13 d is=1.13e-14 n=1.103 bv=13 ibv=0.005 rs=0.4798 cjo=4.377e-11 vj=0.5656 m=0.3289 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b15 d is=1.13e-14 n=1.103 bv=15 ibv=0.005 rs=0.4798 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b16 d is=1.13e-14 n=1.103 bv=16 ibv=0.005 rs=0.4798 cjo=3.509e-11 vj=0.6502 m=0.3378 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b18 d is=1.13e-14 n=1.103 bv=18 ibv=0.005 rs=0.4798 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b20 d is=1.13e-14 n=1.103 bv=20 ibv=0.005 rs=0.4798 cjo=2.915e-11 vj=0.635 m=0.3362 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b22 d is=1.13e-14 n=1.103 bv=22 ibv=0.005 rs=0.4798 cjo=2.701e-11 vj=0.7087 m=0.3557 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b24 d is=1.13e-14 n=1.103 bv=24 ibv=0.002 rs=0.4798 cjo=2.48e-11 vj=0.7142 m=0.3513 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b27 d is=1.13e-14 n=1.103 bv=27 ibv=0.002 rs=0.4798 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b2v4 d is=1.033f n=1.001 bv=2.4 ibv=0.005 rs=0.387 cjo=3.615e-10 vj=0.5762 m=0.2715 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b2v7 d is=1.033f n=1.001 bv=2.7 ibv=0.005 rs=0.387 cjo=3.518e-10 vj=0.6816 m=0.3174 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b30 d is=1.13e-14 n=1.103 bv=30 ibv=0.002 rs=0.4798 cjo=2.17e-011 vj=0.6718 m=0.3465 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b33 d is=1.13e-14 n=1.103 bv=33 ibv=0.002 rs=0.4798 cjo=2.019e-11 vj=0.7645 m=0.3782 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b36 d is=1.13e-14 n=1.103 bv=36 ibv=0.002 rs=0.4798 cjo=1.866e-11 vj=0.7591 m=0.3771 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b39 d is=1.13e-14 n=1.103 bv=39 ibv=0.002 rs=0.4798 cjo=1.772e-11 vj=0.7471 m=0.3751 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b3v0 d is=1.033f n=1.001 bv=3 ibv=0.005 rs=0.387 cjo=3.346e-10 vj=0.6722 m=0.3162 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b3v3 d is=1.033f n=1.001 bv=3.3 ibv=0.005 rs=0.387 cjo=3.162e-10 vj=0.6687 m=0.3164 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b3v6 d is=1.033f n=1.001 bv=3.6 ibv=0.005 rs=0.387 cjo=3.062e-10 vj=0.6643 m=0.3168 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b3v9 d is=1.033f n=1.001 bv=3.9 ibv=0.005 rs=0.387 cjo=2.82e-10 vj=0.6743 m=0.3219 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b43 d is=1.13e-14 n=1.103 bv=43 ibv=0.002 rs=0.4798 cjo=1.638e-11 vj=0.7517 m=0.3762 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b47 d is=1.13e-14 n=1.103 bv=47 ibv=0.002 rs=0.4798 cjo=1.707e-11 vj=0.888 m=0.4248 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b4v3 d is=1.033f n=1.001 bv=4.3 ibv=0.005 rs=0.387 cjo=2.715e-10 vj=0.7721 m=0.3557 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b4v7 d is=1.033f n=1.001 bv=4.7 ibv=0.005 rs=0.387 cjo=2.589e-10 vj=0.8029 m=0.3636 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b51 d is=1.13e-14 n=1.103 bv=51 ibv=0.002 rs=0.4798 cjo=1.602e-11 vj=0.8454 m=0.4154 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b56 d is=1.13e-14 n=1.103 bv=56 ibv=0.002 rs=0.4798 cjo=1.508e-11 vj=0.8856 m=0.4177 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b5v1 d is=1.033f n=1.001 bv=5.1 ibv=0.005 rs=0.387 cjo=2.402e-10 vj=0.7934 m=0.3578 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b5v6 d is=1.033f n=1.001 bv=5.6 ibv=0.005 rs=0.387 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b62 d is=1.13e-14 n=1.103 bv=62 ibv=0.002 rs=0.4798 cjo=1.403e-11 vj=0.8053 m=0.4033 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b68 d is=1.13e-14 n=1.103 bv=68 ibv=0.002 rs=0.4798 cjo=1.321e-11 vj=0.7877 m=0.4021 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b6v2 d is=1.033f n=1.001 bv=6.2 ibv=0.005 rs=0.387 cjo=1.732e-10 vj=0.9334 m=0.4321 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b6v8 d is=1.033f n=1.001 bv=6.8 ibv=0.005 rs=0.387 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b75 d is=1.13e-14 n=1.103 bv=75 ibv=0.002 rs=0.4798 cjo=1.246e-11 vj=0.822 m=0.4052 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b7v5 d is=1.13e-14 n=1.103 bv=7.5 ibv=0.005 rs=0.4798 cjo=8.767e-11 vj=0.5829 m=0.3299 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b8v2 d is=1.13e-14 n=1.103 bv=8.2 ibv=0.005 rs=0.4798 cjo=7.562e-11 vj=0.5765 m=0.3298 fc=0.5 mfg=nxp type=zener
+.model ph_bzx384-b9v1 d is=1.13e-14 n=1.103 bv=9.1 ibv=0.005 rs=0.4798 cjo=7.316e-11 vj=0.5667 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b10 d is=1.13e-14 n=1.103 bv=10 ibv=0.005 rs=0.4798 cjo=6.004e-11 vj=0.6305 m=0.3302 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b11 d is=1.13e-14 n=1.103 bv=11 ibv=0.005 rs=0.4798 cjo=5.404e-11 vj=0.5891 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b12 d is=1.13e-14 n=1.103 bv=12 ibv=0.005 rs=0.4798 cjo=4.928e-11 vj=0.575 m=0.3292 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b13 d is=1.13e-14 n=1.103 bv=13 ibv=0.005 rs=0.4798 cjo=4.377e-11 vj=0.5656 m=0.3289 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b15 d is=1.13e-14 n=1.103 bv=15 ibv=0.005 rs=0.4798 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b16 d is=1.13e-14 n=1.103 bv=16 ibv=0.005 rs=0.4798 cjo=3.509e-11 vj=0.6502 m=0.3378 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b18 d is=1.13e-14 n=1.103 bv=18 ibv=0.005 rs=0.4798 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b20 d is=1.13e-14 n=1.103 bv=20 ibv=0.005 rs=0.4798 cjo=2.915e-11 vj=0.635 m=0.3362 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b22 d is=1.13e-14 n=1.103 bv=22 ibv=0.005 rs=0.4798 cjo=2.701e-11 vj=0.7087 m=0.3557 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b24 d is=1.13e-14 n=1.103 bv=24 ibv=0.002 rs=0.4798 cjo=2.48e-11 vj=0.7142 m=0.3513 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b27 d is=1.13e-14 n=1.103 bv=27 ibv=0.002 rs=0.4798 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b2v4 d is=1.033f n=1.001 bv=2.4 ibv=0.005 rs=0.387 cjo=3.615e-10 vj=0.5762 m=0.2715 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b2v7 d is=1.033f n=1.001 bv=2.7 ibv=0.005 rs=0.387 cjo=3.518e-10 vj=0.6816 m=0.3174 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b30 d is=1.13e-14 n=1.103 bv=30 ibv=0.002 rs=0.4798 cjo=2.17e-011 vj=0.6718 m=0.3465 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b33 d is=1.13e-14 n=1.103 bv=33 ibv=0.002 rs=0.4798 cjo=2.019e-11 vj=0.7645 m=0.3782 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b36 d is=1.13e-14 n=1.103 bv=36 ibv=0.002 rs=0.4798 cjo=1.866e-11 vj=0.7591 m=0.3771 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b39 d is=1.13e-14 n=1.103 bv=39 ibv=0.002 rs=0.4798 cjo=1.772e-11 vj=0.7471 m=0.3751 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b3v0 d is=1.033f n=1.001 bv=3 ibv=0.005 rs=0.387 cjo=3.346e-10 vj=0.6722 m=0.3162 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b3v3 d is=1.033f n=1.001 bv=3.3 ibv=0.005 rs=0.387 cjo=3.162e-10 vj=0.6687 m=0.3164 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b3v6 d is=1.033f n=1.001 bv=3.6 ibv=0.005 rs=0.387 cjo=3.062e-10 vj=0.6643 m=0.3168 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b3v9 d is=1.033f n=1.001 bv=3.9 ibv=0.005 rs=0.387 cjo=2.82e-10 vj=0.6743 m=0.3219 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b43 d is=1.13e-14 n=1.103 bv=43 ibv=0.002 rs=0.4798 cjo=1.638e-11 vj=0.7517 m=0.3762 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b47 d is=1.13e-14 n=1.103 bv=47 ibv=0.002 rs=0.4798 cjo=1.707e-11 vj=0.888 m=0.4248 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b4v3 d is=1.033f n=1.001 bv=4.3 ibv=0.005 rs=0.387 cjo=2.715e-10 vj=0.7721 m=0.3557 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b4v7 d is=1.033f n=1.001 bv=4.7 ibv=0.005 rs=0.387 cjo=2.589e-10 vj=0.8029 m=0.3636 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b51 d is=1.13e-14 n=1.103 bv=51 ibv=0.002 rs=0.4798 cjo=1.602e-11 vj=0.8454 m=0.4154 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b56 d is=1.13e-14 n=1.103 bv=56 ibv=0.002 rs=0.4798 cjo=1.508e-11 vj=0.8856 m=0.4177 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b5v1 d is=1.033f n=1.001 bv=5.1 ibv=0.005 rs=0.387 cjo=2.402e-10 vj=0.7934 m=0.3578 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b5v6 d is=1.033f n=1.001 bv=5.6 ibv=0.005 rs=0.387 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b62 d is=1.13e-14 n=1.103 bv=62 ibv=0.002 rs=0.4798 cjo=1.403e-11 vj=0.8053 m=0.4033 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b68 d is=1.13e-14 n=1.103 bv=68 ibv=0.002 rs=0.4798 cjo=1.321e-11 vj=0.7877 m=0.4021 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b6v2 d is=1.033f n=1.001 bv=6.2 ibv=0.005 rs=0.387 cjo=1.732e-10 vj=0.9334 m=0.4321 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b6v8 d is=1.033f n=1.001 bv=6.8 ibv=0.005 rs=0.387 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b75 d is=1.13e-14 n=1.103 bv=75 ibv=0.002 rs=0.4798 cjo=1.246e-11 vj=0.822 m=0.4052 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b7v5 d is=1.13e-14 n=1.103 bv=7.5 ibv=0.005 rs=0.4798 cjo=8.767e-11 vj=0.5829 m=0.3299 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b8v2 d is=1.13e-14 n=1.103 bv=8.2 ibv=0.005 rs=0.4798 cjo=7.562e-11 vj=0.5765 m=0.3298 fc=0.5 mfg=nxp type=zener
+.model ph_bzx585-b9v1 d is=1.13e-14 n=1.103 bv=9.1 ibv=0.005 rs=0.4798 cjo=7.316e-11 vj=0.5667 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_bzx84c3v3 d is=7.035e-16 n=0.9809 bv=3.3 ibv=0.005 rs=0.3487 cjo=3.162e-10 vj=0.6687 m=0.3164 fc=0.5 mfg=nxp type=zener
+.model ph_bzx84c4v3 d is=7.035e-16 n=0.9809 bv=4.3 ibv=0.005 rs=0.3487 cjo=2.715e-10 vj=0.7721 m=0.3557 fc=0.5 mfg=nxp type=zener
+.model ph_bzx84c75 d is=9.794f n=1.101 bv=75 ibv=0.002 rs=0.3363 cjo=1.246e-11 vj=0.822 m=0.4052 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b10 d is=5.229f n=1.061 bv=10 ibv=0.005 rs=0.4467 cjo=6.004e-11 vj=0.6305 m=0.3302 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b11 d is=5.229f n=1.061 bv=11 ibv=0.005 rs=0.4467 cjo=5.404e-11 vj=0.5891 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b12 d is=5.229f n=1.061 bv=12 ibv=0.005 rs=0.4467 cjo=4.928e-11 vj=0.575 m=0.3292 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b13 d is=5.229f n=1.061 bv=13 ibv=0.005 rs=0.4467 cjo=4.377e-11 vj=0.5656 m=0.3289 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b15 d is=5.229f n=1.061 bv=15 ibv=0.005 rs=0.4467 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b16 d is=5.229f n=1.061 bv=16 ibv=0.005 rs=0.4467 cjo=3.509e-11 vj=0.6502 m=0.3378 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b18 d is=5.229f n=1.061 bv=18 ibv=0.005 rs=0.4467 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b20 d is=5.229f n=1.061 bv=20 ibv=0.005 rs=0.4467 cjo=2.915e-11 vj=0.635 m=0.3362 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b22 d is=5.229f n=1.061 bv=22 ibv=0.005 rs=0.4467 cjo=2.701e-11 vj=0.7087 m=0.3557 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b24 d is=5.229f n=1.061 bv=24 ibv=0.002 rs=0.4467 cjo=2.48e-11 vj=0.7142 m=0.3513 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b27 d is=5.229f n=1.061 bv=27 ibv=0.002 rs=0.4467 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b2v4 d is=7.066e-16 n=0.9643 bv=2.4 ibv=0.005 rs=0.2544 cjo=3.615e-10 vj=0.5762 m=0.2715 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b2v7 d is=7.066e-16 n=0.9643 bv=2.7 ibv=0.005 rs=0.2544 cjo=3.518e-10 vj=0.6816 m=0.3174 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b30 d is=5.229f n=1.061 bv=30 ibv=0.002 rs=0.4467 cjo=2.17e-011 vj=0.6718 m=0.3465 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b33 d is=5.229f n=1.061 bv=33 ibv=0.002 rs=0.4467 cjo=2.019e-11 vj=0.7645 m=0.3782 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b36 d is=5.229f n=1.061 bv=36 ibv=0.002 rs=0.4467 cjo=1.866e-11 vj=0.7591 m=0.3771 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b39 d is=5.229f n=1.061 bv=39 ibv=0.002 rs=0.4467 cjo=1.772e-11 vj=0.7471 m=0.3751 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b3v0 d is=7.066e-16 n=0.9643 bv=3 ibv=0.005 rs=0.2544 cjo=3.346e-10 vj=0.6722 m=0.3162 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b3v3 d is=7.066e-16 n=0.9643 bv=3.3 ibv=0.005 rs=0.2544 cjo=3.162e-10 vj=0.6687 m=0.3164 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b3v6 d is=7.066e-16 n=0.9643 bv=3.6 ibv=0.005 rs=0.2544 cjo=3.062e-10 vj=0.6643 m=0.3168 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b3v9 d is=7.066e-16 n=0.9643 bv=3.9 ibv=0.005 rs=0.2544 cjo=2.82e-10 vj=0.6743 m=0.3219 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b43 d is=5.229f n=1.061 bv=43 ibv=0.002 rs=0.4467 cjo=1.638e-11 vj=0.7517 m=0.3762 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b47 d is=5.229f n=1.061 bv=47 ibv=0.002 rs=0.4467 cjo=1.707e-11 vj=0.888 m=0.4248 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b4v3 d is=7.066e-16 n=0.9643 bv=4.3 ibv=0.005 rs=0.2544 cjo=2.715e-10 vj=0.7721 m=0.3557 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b4v7 d is=7.066e-16 n=0.9643 bv=4.7 ibv=0.005 rs=0.2544 cjo=2.589e-10 vj=0.8029 m=0.3636 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b51 d is=5.229f n=1.061 bv=51 ibv=0.002 rs=0.4467 cjo=1.602e-11 vj=0.8454 m=0.4154 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b56 d is=5.229f n=1.061 bv=56 ibv=0.002 rs=0.4467 cjo=1.508e-11 vj=0.8856 m=0.4177 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b5v1 d is=7.066e-16 n=0.9643 bv=5.1 ibv=0.005 rs=0.2544 cjo=2.402e-10 vj=0.7934 m=0.3578 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b5v6 d is=7.066e-16 n=0.9643 bv=5.6 ibv=0.005 rs=0.2544 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b62 d is=5.229f n=1.061 bv=62 ibv=0.002 rs=0.4467 cjo=1.403e-11 vj=0.8053 m=0.4033 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b68 d is=5.229f n=1.061 bv=68 ibv=0.002 rs=0.4467 cjo=1.321e-11 vj=0.7877 m=0.4021 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b6v2 d is=7.066e-16 n=0.9643 bv=6.2 ibv=0.005 rs=0.2544 cjo=1.732e-10 vj=0.9334 m=0.4321 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b6v8 d is=7.066e-16 n=0.9643 bv=6.8 ibv=0.005 rs=0.2544 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b75 d is=5.229f n=1.061 bv=75 ibv=0.002 rs=0.4467 cjo=1.246e-11 vj=0.822 m=0.4052 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b7v5 d is=5.229f n=1.061 bv=7.5 ibv=0.005 rs=0.4467 cjo=8.767e-11 vj=0.5829 m=0.3299 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b8v2 d is=5.229f n=1.061 bv=8.2 ibv=0.005 rs=0.4467 cjo=7.562e-11 vj=0.5765 m=0.3298 fc=0.5 mfg=nxp type=zener
+.model ph_bzx884-b9v1 d is=5.229f n=1.061 bv=9.1 ibv=0.005 rs=0.4467 cjo=7.316e-11 vj=0.5667 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_pdz10b d is=9.794f n=1.101 bv=10 ibv=0.005 rs=0.3363 cjo=6.004e-11 vj=0.6305 m=0.3302 fc=0.5 mfg=nxp type=zener
+.model ph_pdz11b d is=9.794f n=1.101 bv=11 ibv=0.005 rs=0.3363 cjo=5.404e-11 vj=0.5891 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_pdz4.7b d is=1.033f n=1.001 bv=4.7 ibv=0.005 rs=0.387 cjo=2.589e-10 vj=0.8029 m=0.3636 fc=0.5 mfg=nxp type=zener
+.model ph_pdz5.6b d is=1.777f n=1.015 bv=5.6 ibv=0.00025 rs=0.3502 cjo=1.298e-10 vj=0.6612 m=0.3228 fc=0.5 mfg=nxp type=zener
+.model ph_pdz9.1b d is=9.794f n=1.101 bv=9.1 ibv=0.005 rs=0.3363 cjo=7.316e-11 vj=0.5667 m=0.3295 fc=0.5 mfg=nxp type=zener
+.model ph_pesd12vl1ba d is=9.794f n=1.101 bv=15 ibv=0.005 rs=0.3363 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_pesd12vl2bt d is=9.794f n=1.101 bv=15 ibv=0.005 rs=0.3363 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_pesd12vs1ub d is=1.13e-14 n=1.103 bv=15 ibv=0.005 rs=0.4798 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_pesd12vs2uat d is=9.794f n=1.101 bv=15 ibv=0.005 rs=0.3363 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_pesd12vs2uq d is=9.72f n=1.088 bv=15.4 ibv=0.005 rs=0.2663 cjo=4.023e-11 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_pesd12vs2ut d is=9.794e-015 n=1.101 bv=15 ibv=0.005 rs=0.3363 cjo=4.023e-011 vj=0.6144 m=0.3297 fc=0.5 mfg=nxp type=zener
+.model ph_pesd15vl1ba d is=9.794f n=1.101 bv=18 ibv=0.005 rs=0.3363 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_pesd15vl2bt d is=9.794f n=1.101 bv=18 ibv=0.005 rs=0.3363 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_pesd15vs1ub d is=1.13e-14 n=1.103 bv=18 ibv=0.005 rs=0.4798 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_pesd15vs2uat d is=9.794f n=1.101 bv=18 ibv=0.005 rs=0.3363 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_pesd15vs2uq d is=9.794f n=1.101 bv=18 ibv=0.005 rs=0.3363 cjo=3.17e-11 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_pesd15vs2ut d is=9.794e-015 n=1.101 bv=18 ibv=0.005 rs=0.3363 cjo=3.17e-011 vj=0.6421 m=0.3327 fc=0.5 mfg=nxp type=zener
+.model ph_pesd1can d is=9.794f n=1.101 bv=27 ibv=0.002 rs=0.3363 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_pesd24vl1ba d is=9.794f n=1.101 bv=27 ibv=0.002 rs=0.3363 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_pesd24vl2bt d is=9.794f n=1.101 bv=27 ibv=0.002 rs=0.3363 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_pesd24vs1ub d is=1.13e-14 n=1.103 bv=27 ibv=0.002 rs=0.4798 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_pesd24vs2uat d is=9.794f n=1.101 bv=27 ibv=0.002 rs=0.3363 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_pesd24vs2uq d is=9.794f n=1.101 bv=27 ibv=0.002 rs=0.3363 cjo=2.233e-11 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_pesd24vs2ut d is=9.794e-015 n=1.101 bv=27 ibv=0.005 rs=0.3363 cjo=2.233e-011 vj=0.7107 m=0.3546 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3l1ba d is=7.035e-16 n=0.9809 bv=5.6 ibv=0.005 rs=0.3487 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3l2bt d is=7.035e-16 n=0.9809 bv=5.6 ibv=0.005 rs=0.3487 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3l2um d is=3.644e-17 n=0.9717 bv=5.6 ibv=0.001 rs=0.5003 cjo=2.136e-11 vj=0.7025 m=0.3242 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3l4ug d is=3.644e-17 n=0.9717 bv=5.6 ibv=0.001 rs=0.5003 cjo=2.136e-11 vj=0.7025 m=0.3242 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3l4uw d is=3.644e-17 n=0.9717 bv=5.6 ibv=0.001 rs=0.5003 cjo=2.136e-11 vj=0.7025 m=0.3242 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3l5uv d is=3.644e-17 n=0.9717 bv=5.6 ibv=0.001 rs=0.5003 cjo=2.136e-11 vj=0.7025 m=0.3242 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3l5uy d is=3.644e-17 n=0.9717 bv=5.6 ibv=0.001 rs=0.5003 cjo=2.136e-11 vj=0.7025 m=0.3242 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3s1ub d is=1.033f n=1.001 bv=5.6 ibv=0.005 rs=0.387 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3s2uat d is=7.035e-16 n=0.9809 bv=5.6 ibv=0.005 rs=0.3487 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3s2uq d is=3.134e-16 n=0.9403 bv=5.6 ibv=0.005 rs=0.2549 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3s2ut d is=7.035e-16 n=0.9809 bv=5.6 ibv=0.005 rs=0.3487 cjo=1.961e-10 vj=0.9187 m=0.423 fc=0.5 mfg=nxp type=zener
+.model ph_pesd3v3v4ug d is=2.497e-17 n=1.003 bv=5.6 ibv=0.001 rs=0.5053 cjo=1.561e-11 vj=0.6327 m=0.2904 mfg=nxp type=zener
+.model ph_pesd3v3v4uw d is=2.497e-17 n=1.003 bv=5.6 ibv=0.001 rs=0.5053 cjo=1.561e-11 vj=0.6327 m=0.2904 mfg=nxp type=zener
+.model ph_pesd5v0l1ba d is=7.035e-16 n=0.9809 bv=6.8 ibv=0.005 rs=0.3487 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l2bt d is=7.035e-16 n=0.9809 bv=6.8 ibv=0.005 rs=0.3487 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l2um d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l4ug d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l4uw d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l5uv d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l5uy d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l6uas d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l6us d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l7bas d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0l7bs d is=3.644e-17 n=0.9717 bv=6.8 ibv=0.001 rs=0.5003 cjo=1.641e-11 vj=0.8979 m=0.33 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0s1ub d is=1.033f n=1.001 bv=6.8 ibv=0.005 rs=0.387 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0s2uat d is=7.035e-16 n=0.9809 bv=6.8 ibv=0.005 rs=0.3487 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0s2uq d is=3.02e-16 n=0.9388 bv=5.6 ibv=0.005 rs=0.2559 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v0v4ug d is=3.997e-17 n=1.012 bv=6.8 ibv=0.001 rs=1.445 cjo=1.217e-11 vj=0.6509 m=0.2841 mfg=nxp type=zener
+.model ph_pesd5v2s18u d is=2.779e-16 n=0.9976 bv=6.7 ibv=0.001 rs=0.2888 cjo=1.025e-10 vj=0.7664 m=0.3438 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5v2s2ut d is=7.035e-16 n=0.9809 bv=6.8 ibv=0.005 rs=0.3487 cjo=1.519e-10 vj=0.9041 m=0.4027 fc=0.5 mfg=nxp type=zener
+.model ph_pesd5vov4uw d is=3.997e-17 n=1.012 bv=6.8 ibv=0.001 rs=1.445 cjo=1.217e-11 vj=0.6509 m=0.2841 mfg=nxp type=zener
+.model ptz10b d is=3.4887f n=1.0201 rs=13.663m ikf=.63395 cjo=384.10p m=.36185 vj=.82234 isr=57.536p bv=10.310 ibv=39.985m tt=337.59n nbv=0.15 tbv1=0.00066 nbvl=1 ibvl=1.5000e-5 vpk=10 mfg=rohm type=zener
+.model ptz11b d is=3.5230f n=1.0199 rs=14.003m ikf=.57497 cjo=343.03p m=.34898 vj=.82469 isr=53.346p bv=11.510 ibv=19.985m tt=401.07n nbv=0.05 tbv1=0.00072 nbvl=0.5 ibvl=1.5000e-5 vpk=11 mfg=rohm type=zener
+.model ptz12b d is=6.1497f n=1.0456 rs=11.352m ikf=.87678 cjo=341.56p m=.37091 vj=.80255 isr=69.166p bv=12.500 ibv=19.985m tt=187.55n nbv=0.05 tbv1=0.00065 nbvl=0.6 ibvl=1.5000e-5 vpk=12 mfg=rohm type=zener
+.model ptz13b d is=4.4789f n=1.0330 rs=12.989m ikf=.78343 cjo=301.84p m=.37289 vj=.81299 isr=36.650p bv=13.820 ibv=19.985m tt=252.47n nbv=0.05 tbv1=0.00068 nbvl=0.4 ibvl=1.5000e-5 vpk=13 mfg=rohm type=zener
+.model ptz15b d is=3.8211f n=1.0248 rs=20.518m ikf=.76979 cjo=283.29p m=.38849 vj=.80937 isr=26.473p bv=15.350 ibv=19.985m tt=333.26n nbv=0.05 tbv1=0.00072 nbvl=0.4 ibvl=1.5000e-5 vpk=15 mfg=rohm type=zener
+.model ptz16b d is=3.9175f n=1.0252 rs=15.777m ikf=.75576 cjo=230.36p m=.339 vj=.80022 isr=44.928p bv=16.860 ibv=20.000m tt=377.99n nbv=0.05 tbv1=0.00075 vpk=16 mfg=rohm type=zener
+.model ptz18b d is=4.5011f n=1.0308 rs=13.124m ikf=.69669 cjo=218.84p m=.35823 vj=.83364 isr=35.166p bv=19 ibv=20.000m tt=434.25n nbv=0.05 tbv1=0.00067 vpk=18 mfg=rohm type=zener
+.model ptz20b d is=4.7057f n=1.0322 rs=15.226m ikf=.64872 cjo=197.80p m=.34995 vj=.8302 isr=31.006p bv=20.820 ibv=20.000m tt=538.13n nbv=0.05 tbv1=0.00074 vpk=20 mfg=rohm type=zener
+.model ptz22b d is=6.3336f n=1.0394 rs=11.998m ikf=.62572 cjo=181.19p m=.37072 vj=.82527 isr=32.969p bv=23.850 ibv=10.000m tt=523.70n nbv=0.05 tbv1=0.00074 vpk=22 mfg=rohm type=zener
+.model ptz24b d is=5.6942f n=1.0353 rs=7.2332m ikf=.53216 cjo=158.28p m=.32594 vj=.81773 isr=38.915p bv=25.310 ibv=10.000m tt=509.27n nbv=0.05 tbv1=0.0008 vpk=24 mfg=rohm type=zener
+.model ptz27b d is=5.4090f n=1.0328 rs=8.4497m ikf=.54146 cjo=145.86p m=.35006 vj=.80706 isr=30.905p bv=28.700 ibv=10.000m tt=562.65n nbv=0.05 tbv1=0.00059 vpk=27 mfg=rohm type=zener
+.model ptz30b d is=5.3639f n=1.0321 rs=11.693m ikf=.50376 cjo=132.61p m=.35521 vj=.81557 isr=24.732p bv=31.570 ibv=10.000m tt=637.67n nbv=0.05 tbv1=0.00083 vpk=30 mfg=rohm type=zener
+.model ptz33b d is=11.155f n=1.0554 rs=9.5085m ikf=.49319 cjo=129.36p m=.34715 vj=.81627 isr=31.652p bv=34.950 ibv=10.000m tt=605.93n nbv=0.05 tbv1=0.00085 vpk=33 mfg=rohm type=zener
+.model ptz36b d is=22.137f n=1.0777 rs=4.7841m ikf=.4052 cjo=126.75p m=.38653 vj=.85698 isr=22.958p bv=39.240 ibv=10.000m tt=565.54n nbv=0.05 tbv1=0.00087 vpk=36 mfg=rohm type=zener
+.model ptz6_2b d is=7.7987f n=1.0266 rs=17.144m ikf=.79621 cjo=666.04p m=.33563 vj=.8407 isr=84.071p bv=6.5090 ibv=39.600m tt=239.49n nbv=0.3 tbv1=0.00038 nbvl=8.5 ibvl=4.0000e-4 vpk=6.2 mfg=rohm type=zener
+.model ptz6_8b d is=7.1020f n=1.0222 rs=11.115m ikf=1.0862 cjo=563.61p m=.35923 vj=.81761 isr=65.997p bv=7.2500 ibv=39.980m tt=341.92n nbv=0.3 tbv1=0.00045 nbvl=8.3 ibvl=2.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model ptz7_5b d is=3.4288f n=1.0206 rs=12.931m ikf=.61872 cjo=560.73p m=.34193 vj=.81058 isr=81.587p bv=7.8890 ibv=39.965m tt=131.29n nbv=0.3 tbv1=0.0005 nbvl=9 ibvl=3.5000e-5 vpk=7.5 mfg=rohm type=zener
+.model ptz8_2b d is=3.1583f n=1.0183 rs=16.062m ikf=.59571 cjo=519.55p m=.3635 vj=.82173 isr=36.317p bv=8.6550 ibv=39.985m tt=178.89n nbv=0.15 tbv1=0.0006 nbvl=3 ibvl=1.5000e-5 vpk=8.2 mfg=rohm type=zener
+.model ptz9_1b d is=3.4312f n=1.0205 rs=27.663m ikf=.59218 cjo=410.36p m=.35044 vj=.81548 isr=39.439p bv=9.7470 ibv=39.985m tt=271.23n nbv=0.15 tbv1=0.0006 nbvl=1 ibvl=1.5000e-5 vpk=9.1 mfg=rohm type=zener
+.model rsa6_1en d is=1.3826f n=1.0268 rs=.34389 ikf=25.038 cjo=99.842p m=.33763 vj=.80006 isr=2.9537p bv=6.6500 ibv=999.00u tt=30.297n nbv=0.3 tbv1=0.00045 nbvl=14 ibvl=1.0000u vpk=6.1 mfg=rohm type=zener
+.model rsa6_1j4 d is=588.57e-18 n=1.0333 rs=.37207 ikf=.1772 cjo=37.833p m=.59424 vj=1.7722 isr=2.7745p bv=6.6500 ibv=999.90u tt=36.067n nbv=0.3 tbv1=0.00045 nbvl=16 ibvl=1.0000e-7 vpk=6.1 mfg=rohm type=zener
+.model rsa6_1u5 d is=1.2814f n=1.0264 rs=.29963 ikf=57.676 cjo=91.137p m=.32416 vj=.80289 isr=3.0191p bv=6.6500 ibv=999.00u tt=30.297n nbv=0.3 tbv1=0.00043 nbvl=13 ibvl=1.0000u vpk=6.1 mfg=rohm type=zener
+.model rsb12w d is=38.231e-18 n=1.0294 rs=.51389 ikf=53.635m cjo=2.0077p m=.32743 vj=.84957 isr=4.4827p bv=11.140 ibv=5.0000m tt=173.12n nbv=0.2 tbv1=0.0007 vpk=12 mfg=rohm type=zener
+.model stz5_6n d is=122.12e-18 n=1.0166 rs=.21698 ikf=4.2967 cjo=15.647p m=.3377 vj=.80129 isr=29.593p nr=1.6500 bv=5.6100 ibv=4.9900m tt=93.775n nbv=0.3 tbv1=0.0005 nbvl=10 ibvl=1.0000e-5 vpk=5.6 mfg=rohm type=zener
+.model stz6_2n d is=235.19e-18 n=1.0349 rs=.20667 ikf=5.7211 cjo=21.599p m=.35129 vj=.80122 isr=79.860p bv=6.1950 ibv=4.9900m tt=180.34n nbv=0.3 tbv1=0.0004 nbvl=2 ibvl=1.0000e-5 vpk=6.2 mfg=rohm type=zener
+.model stz6_8n d is=153.73e-18 n=1.0159 rs=.1572 ikf=.15869 cjo=18.108p m=.35314 vj=.80037 isr=66.267p bv=6.7900 ibv=4.9900m tt=216.40n nbv=0.3 tbv1=0.00048 nbvl=1 ibvl=1.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model stz6_8t d is=121.28e-18 n=1.0086 rs=.21944 ikf=.13889 cjo=18.108p m=.3538 vj=.80345 isr=66.267p nr=3 bv=6.8050 ibv=4.9900m tt=274.11n nbv=0.3 tbv1=0.00048 nbvl=13 ibvl=1.0000e-7 vpk=6.8 mfg=rohm type=zener
+.model tdz10b d is=2.8220f n=1.0174 rs=75.945m ikf=13.673 cjo=324.73p m=.36608 vj=.82798 isr=54.921p bv=10 ibv=10.000m tt=258.24n nbv=0.2 tbv1=0.0007 vpk=10 mfg=rohm type=zener
+.model tdz11b d is=2.8221f n=1.0174 rs=75.949m ikf=13.733 cjo=297.31p m=.35399 vj=.81148 isr=113.05p bv=11 ibv=10.000m tt=232.27n nbv=0.1 tbv1=0.0007 vpk=11 mfg=rohm type=zener
+.model tdz12b d is=4.0298f n=1.0245 rs=.11087 ikf=14.028 cjo=268.66p m=.345 vj=.81161 isr=73.639p bv=12 ibv=10.000m tt=447.24n nbv=0.2 tbv1=0.0007 vpk=12 mfg=rohm type=zener
+.model tdz13b d is=4.1551f n=1.0247 rs=93.131m ikf=15.090 cjo=243.20p m=.36336 vj=.80357 isr=36.951p bv=13 ibv=10.000m tt=545.34n nbv=0.3 tbv1=0.0007 vpk=13 mfg=rohm type=zener
+.model tdz15b d is=3.1832f n=1.0254 rs=88.208m ikf=12.327 cjo=47.566p m=.38387 vj=.80945 isr=31.807p bv=15 ibv=10.000m tt=217.85n nbv=0.3 tbv1=0.0007 vpk=15 mfg=rohm type=zener
+.model tdz16b d is=3.4397f n=1.0276 rs=69.015m ikf=14.265 cjo=206.78p m=.36452 vj=.82991 isr=41.647p bv=16 ibv=10.000m tt=288.54n nbv=0.3 tbv1=0.00077 vpk=16 mfg=rohm type=zener
+.model tdz18b d is=4.9900f n=1.0354 rs=46.341m ikf=15.671 cjo=183.75p m=.34057 vj=.81213 isr=36.646p bv=18 ibv=10.000m tt=467.43n nbv=0.3 tbv1=0.0008 vpk=18 mfg=rohm type=zener
+.model tdz20b d is=8.5478f n=1.0499 rs=84.587m ikf=13.835 cjo=183.79p m=.3978 vj=.82925 isr=28.461p bv=20 ibv=10.000m tt=473.20n nbv=0.3 tbv1=0.00064 vpk=20 mfg=rohm type=zener
+.model tdz22b d is=3.7812f n=1.0265 rs=72.087m ikf=14.531 cjo=158.72p m=.38822 vj=.81441 isr=30.789p bv=22 ibv=10.000m tt=307.29n nbv=0.3 tbv1=0.00065 vpk=22 mfg=rohm type=zener
+.model tdz24b d is=3.5558f n=1.0231 rs=91.037m ikf=13.707 cjo=135.92p m=.34883 vj=.82339 isr=36.920p bv=24 ibv=10.000m tt=509.27n nbv=0.3 tbv1=0.00075 vpk=24 mfg=rohm type=zener
+.model tdz27b d is=4.6657f n=1.0321 rs=.14391 ikf=15.272 cjo=126.39p m=.34661 vj=.8257 isr=32.236p bv=27 ibv=10.000m tt=467.43n nbv=0.3 tbv1=0.00075 vpk=27 mfg=rohm type=zener
+.model tdz30b d is=4.5055f n=1.0301 rs=94.841m ikf=14.702 cjo=115.20p m=.33266 vj=.8018 isr=30.417p bv=30 ibv=10.000m tt=520.81n nbv=0.3 tbv1=0.00102 vpk=30 mfg=rohm type=zener
+.model tdz6_2b d is=4.9011f n=1.0147 rs=67.206m ikf=14.124 cjo=583.06p m=.35837 vj=.83781 isr=79.981p bv=6.2000 ibv=7.000m tt=199.09n nbv=0.7 tbv1=0.00025 nbvl=7 ibvl=3.0000m vpk=6.2 mfg=rohm type=zener
+.model tdz6_8b d is=4.7242f n=1.0113 rs=83.089m ikf=15.311 cjo=530.47p m=.36315 vj=.81876 isr=65.597p bv=6.8000 ibv=9.600m tt=242.37n nbv=0.7 tbv1=0.00035 nbvl=8 ibvl=4.0000e-4 vpk=6.8 mfg=rohm type=zener
+.model tdz7_5b d is=3.1414f n=1.0193 rs=44.588m ikf=14.882 cjo=513.99p m=.36568 vj=.8307 isr=77.741p bv=7.5000 ibv=9.850m tt=112.53n nbv=0.5 tbv1=0.00048 nbvl=9 ibvl=1.5000e-4 vpk=7.5 mfg=rohm type=zener
+.model tdz8_2b d is=2.9538f n=1.0187 rs=.10193 ikf=13.877 cjo=479.99p m=.3976 vj=.81773 isr=33.457p bv=8.2000 ibv=9.9300m tt=119.74n nbv=0.3 tbv1=0.00038 nbvl=8 ibvl=7.000e-5 vpk=8.2 mfg=rohm type=zener
+.model tdz9_1b d is=3.2239f n=1.0228 rs=69.504m ikf=13.669 cjo=372.45p m=.3824 vj=.81176 isr=36.838p bv=9.1000 ibv=9.990m tt=327.49n nbv=0.3 tbv1=0.00057 nbvl=1 ibvl=1.000e-5 vpk=9.1 mfg=rohm type=zener
+.model tdzv10 d is=2.9474f n=1.0200 rs=.21447 ikf=53.583m eg=1.1400 cjo=331.16p m=.3314 vj=.6198 isr=2.9545p nr=2.5000 bv=10.000 ibv=10.000m nbv=0.15 tbv1=0.00064 nbvl=43.000 ibvl=0.800n vpk=10 mfg=rohm type=zener
+.model tdzv11 d is=1.5896f n=1.0026 rs=.19523 ikf=23.390 eg=1.1200 cjo=292.82p m=.33418 vj=.64877 isr=2.7005p nr=2.6000 bv=11.005 ibv=10.000m nbv=0.18 tbv1=0.00066 nbvl=29.000 ibvl=0.800n vpk=11 mfg=rohm type=zener
+.model tdzv12 d is=1.6703f n=.99376 rs=.17861 ikf=39.792m eg=1.1300 cjo=270.49p m=.33387 vj=.64533 isr=2.939p nr=4.1000 bv=12.005 ibv=10.000m nbv=0.1800 tbv1=0.00068 nbvl=22.500 ibvl=0.800n vpk=12 mfg=rohm type=zener
+.model tdzv13 d is=617.20e-18 n=.95849 rs=.32843 ikf=.1516 cjo=242.64p m=.33675 vj=.66519 isr=1.639p nr=4.5000 bv=13.005 ibv=10.000m nbv=0.18 tbv1=0.0007 nbvl=23.0000 ibvl=0.500n vpk=13 mfg=rohm type=zener
+.model tdzv15 d is=2.2550f n=1.0151 rs=.25938 ikf=60.049 eg=1.1300 cjo=234.45p m=.32789 vj=.54274 isr=3.4015p nr=3.7000 bv=15.005 ibv=10.000m nbv=0.8000 tbv1=0.00075 nbvl=42.0000 ibvl=0.4000n vpk=15 mfg=rohm type=zener
+.model tdzv16 d is=3.4397f n=1.0447 rs=.29672 ikf=33.197 eg=1.1200 cjo=216.60p m=.32897 vj=.5569 isr=3.2415p nr=3.0000 bv=16.005 ibv=10.000m nbv=0.5000 tbv1=0.00075 nbvl=42.0000 ibvl=0.3000n vpk=16 mfg=rohm type=zener
+.model tdzv18 d is=9.8587f n=1.0625 rs=.30035 ikf=23.904 eg=1.1400 cjo=190.34p m=.32456 vj=.5789 isr=9.9953p nr=4.0000 bv=18.010 ibv=10.000m nbv=0.4000 tbv1=0.00078 vpk=18 mfg=rohm type=zener
+.model tdzv20 d is=1.7273f n=1.0059 rs=.16948 ikf=.55047 eg=1.1400 cjo=171.51p m=.33036 vj=.58896 isr=4.2197p nr=3.2000 bv=20.010 ibv=10.000m nbv=0.5000 tbv1=0.00082 vpk=20 mfg=rohm type=zener
+.model tdzv22 d is=1.4378f n=1.0028 rs=.18933 ikf=.39824 eg=1.1400 cjo=157.17p m=.33121 vj=.59891 isr=1.9754p nr=2.8000 bv=22.030 ibv=10.000m nbv=0.8000 tbv1=.00076 vpk=22 mfg=rohm type=zener
+.model tdzv24 d is=1.8298f n=1.0121 rs=.22904 ikf=36.546 eg=1.1400 cjo=144.56p m=.33223 vj=.60732 isr=1.2818p nr=2.5000 bv=24.032 ibv=10.000m nbv=0.9000 tbv1=.00076 vpk=24 mfg=rohm type=zener
+.model tdzv27 d is=172.57e-18 n=.91478 rs=.24722 ikf=19.009m eg=1.1400 cjo=130.95p m=.33089 vj=.60678 isr=1.1884p nr=4.1000 bv=27.015 ibv=10.000m nbv=1.1000 tbv1=.00085 vpk=27 mfg=rohm type=zener
+.model tdzv30 d is=1.5828f n=.99831 rs=.27398 ikf=.10565 eg=1.1400 cjo=119.37p m=.33405 vj=.61023 isr=1.2000p nr=2.5000 bv=30.053 ibv=10.000m nbv=1.1800 tbv1=.00084 vpk=30 mfg=rohm type=zener
+.model tdzv6_2 d is=43.210e-18 n=.86754 rs=.15314 ikf=32.880m eg=1.0900 cjo=604.96p m=.34813 vj=.74616 isr=2.7210p nr=4.4000 bv=6.2000 ibv=10.000m nbv=0.62 tbv1=0.3700m nbvl=10.200 ibvl=0.7000m vpk=6.2 mfg=rohm type=zener
+.model tdzv6_8 d is=103.8e-18 n=.88483 rs=.21591 ikf=43.222m eg=1.0900 cjo=514.65p m=.36443 vj=.78897 isr=3.8720p nr=4.1000 bv=6.8000 ibv=10.000m nbv=0.38 tbv1=0.4400m nbvl=9.4000 ibvl=200.00u vpk=6.8 mfg=rohm type=zener
+.model tdzv7_5 d is=1.2167f n=.99625 rs=.2322 ikf=45.171 eg=1.1400 cjo=508.59p m=.3281 vj=.55145 isr=42.872p nr=3.4000 bv=7.5600 ibv=10.000m nbv=0.38 tbv1=0.00051 nbvl=15.000 ibvl=15.000u vpk=7.5 mfg=rohm type=zener
+.model tdzv8_2 d is=2.5779f n=1.0164 rs=.31422 ikf=20.490 eg=1.1400 cjo=452.38p m=.32894 vj=.55981 isr=42.872p nr=4.4000 bv=8.2000 ibv=10.000m nbv=0.22 tbv1=0.00053 nbvl=14.200 ibvl=5.0000u vpk=8.2 mfg=rohm type=zener
+.model tdzv9_1 d is=1.2950f n=.99929 rs=.22316 ikf=38.014 eg=1.1300 cjo=376.32p m=.33024 vj=.59492 isr=8.9810p nr=2.8000 bv=9.1000 ibv=10.000m nbv=0.15 tbv1=0.0006 nbvl=30.000 ibvl=5.000n vpk=9.1 mfg=rohm type=zener
+.model tfz10b d is=824.32e-18 n=1.0124 rs=62.063m ikf=.53609 cjo=111.30p m=.34776 vj=.75942 isr=11.141p nr=3.0000 bv=9.6550 ibv=20.000m tt=53n nbv=0.15 tbv1=0.0006 nbvl=15 ibvl=30n vpk=10 mfg=rohm type=zener
+.model tfz11b d is=810.63e-18 n=1.0121 rs=62.795m ikf=.4655 cjo=95.700p m=.3469 vj=.76095 isr=10.710p nr=3.1000 bv=10.775 ibv=10.000m tt=77n nbv=0.2 tbv1=0.00066 vpk=11 mfg=rohm type=zener
+.model tfz12b d is=1.1556f n=1.0199 rs=59.074m ikf=.40548 cjo=86.000p m=.34662 vj=.76004 isr=9.0809p nr=2.8000 bv=11.735 ibv=10.000m tt=91n nbv=0.2 tbv1=0.00070 vpk=12 mfg=rohm type=zener
+.model tfz13b d is=894.48e-18 n=1.0197 rs=52.459m ikf=.78903 cjo=88.700p m=.36613 vj=.75915 isr=12.500p nr=3.1000 bv=12.880 ibv=10.000m tt=107n nbv=0.2 tbv1=0.00071 vpk=13 mfg=rohm type=zener
+.model tfz15b d is=856.98e-18 n=1.0189 rs=58.944m ikf=.73049 cjo=79.900p m=.36106 vj=.75106 isr=11.854p nr=3.1000 bv=14.255 ibv=10.000m tt=126n nbv=0.3 tbv1=0.00074 vpk=15 mfg=rohm type=zener
+.model tfz16b d is=954.34e-18 n=1.0205 rs=48.973m ikf=.79432 cjo=72.200p m=.35801 vj=.75995 isr=5.4636p nr=2.9000 bv=15.645 ibv=10.000m tt=137n nbv=0.2 tbv1=0.00075 vpk=16 mfg=rohm type=zener
+.model tfz18b d is=608.54e-18 n=1.0090 rs=54.041m ikf=.60117 cjo=65.300p m=.35764 vj=.77193 isr=3.5679p nr=2.4000 bv=17.260 ibv=10.000m tt=165n nbv=0.2 tbv1=0.00076 vpk=18 mfg=rohm type=zener
+.model tfz20b d is=834.38e-18 n=1.0164 rs=45.968m ikf=.67872 cjo=58.800p m=.35099 vj=.76145 isr=6.2140p nr=4.1 bv=19.110 ibv=10.000m tt=185n nbv=0.4 tbv1=0.00079 vpk=20 mfg=rohm type=zener
+.model tfz22b d is=1.2399f n=1.0240 rs=50.666m ikf=.48358 cjo=53.300p m=.34758 vj=.75688 isr=1.9699p nr=2.8000 bv=21.175 ibv=5.0000m tt=228n nbv=0.4 tbv1=0.00081 vpk=22 mfg=rohm type=zener
+.model tfz24b d is=1.6476f n=1.0306 rs=58.807m ikf=.47991 cjo=48.400p m=.34817 vj=.7649 isr=5.1565p nr=3.6000 bv=23.190 ibv=5.0000m tt=243n nbv=0.4 tbv1=0.00082 vpk=24 mfg=rohm type=zener
+.model tfz27b d is=1.6247f n=1.0309 rs=54.713m ikf=.45484 cjo=43.700p m=.34809 vj=.76092 isr=2.1780p nr=2.8000 bv=25.615 ibv=5.0000m tt=278n nbv=0.4 tbv1=0.00082 vpk=27 mfg=rohm type=zener
+.model tfz30b d is=1.4429f n=1.0276 rs=48.558m ikf=.4142 cjo=40.200p m=.34633 vj=.75949 isr=1.5170p nr=2.6 bv=28.415 ibv=5.0000m tt=278n nbv=0.3 tbv1=0.00084 vpk=30 mfg=rohm type=zener
+.model tfz33b d is=2.1434f n=1.0387 rs=58.125m ikf=.40128 cjo=36.600p m=.34613 vj=.75779 isr=2.5076p nr=2.7000 bv=31.100 ibv=5.0000m tt=336n nbv=0.4 tbv1=0.00084 vpk=33 mfg=rohm type=zener
+.model tfz36b d is=2.6929f n=1.0442 rs=54.412m ikf=.37899 cjo=34.700p m=.34754 vj=.75641 isr=2.0578p nr=2.7 bv=33.640 ibv=5.0000m tt=335n nbv=0.5 tbv1=0.00085 vpk=36 mfg=rohm type=zener
+.model tfz39b d is=4.2675f n=1.0582 rs=54.885m ikf=.34301 cjo=32.600p m=.34409 vj=.75393 isr=1.2494p nr=3 bv=36.275 ibv=5.0000m tt=370n nbv=0.5 tbv1=0.00095 vpk=39 mfg=rohm type=zener
+.model tfz6_2b d is=1.6177f n=1.0122 rs=57.479m ikf=.58149 cjo=185.10p m=.34913 vj=.77507 isr=6.5742p nr=3 bv=6.1150 ibv=20.000m tt=23n nbv=0.2 tbv1=0.00039 nbvl=10.8 ibvl=12u vpk=6.2 mfg=rohm type=zener
+.model tfz6_8b d is=1.9454f n=1.0150 rs=55.964m ikf=.44707 cjo=164.10p m=.37292 vj=.83682 isr=4.7747p nr=3 bv=6.66 ibv=20.000m tt=28n nbv=0.2 tbv1=0.00044 nbvl=11 ibvl=4u vpk=6.8 mfg=rohm type=zener
+.model tfz7_5b d is=1.5340f n=1.0259 rs=53.231m ikf=1.8105 cjo=171.70p m=.37075 vj=.75529 isr=24.753p nr=2.7000 bv=7.2600 ibv=20.000m tt=30n nbv=0.3 tbv1=0.00042 nbvl=15 ibvl=20u vpk=7.5 mfg=rohm type=zener
+.model tfz8_2b d is=1.2193f n=1.0218 rs=51.739m ikf=.8864 cjo=148.00p m=.35993 vj=.76018 isr=6.2857p nr=2.2000 bv=7.9850 ibv=20.000m tt=33n nbv=0.1 tbv1=0.00051 nbvl=15 ibvl=2u vpk=8.2 mfg=rohm type=zener
+.model tfz9_1b d is=1.1981f n=1.0216 rs=50.641m ikf=.66743 cjo=126.40p m=.3523 vj=.75881 isr=6.2837p nr=2.4000 bv=8.7900 ibv=20.000m tt=42n nbv=0.2 tbv1=0.00058 nbvl=17 ibvl=100n vpk=9.1 mfg=rohm type=zener
+.model tfzv10b d is=824.32e-18 n=1.0124 rs=62.063m ikf=.53609 cjo=111.30p m=.34776 vj=.75942 isr=2.341p nr=3.4000 bv=9.6550 ibv=20.000m tt=53.000n nbv=0.3000 tbv1=0.00056 nbvl=15.500 ibvl=30.000n vpk=10 mfg=rohm type=zener
+.model tfzv11b d is=810.63e-18 n=1.0121 rs=62.795m ikf=.4655 cjo=95.700p m=.3469 vj=.76095 isr=1.610p nr=2.3000 bv=11.065 ibv=10.000m tt=77.000n nbv=0.4000 tbv1=0.00066 ibvl=1.0000n nbvl=29.000 vpk=11 mfg=rohm type=zener
+.model tfzv12b d is=0.8556f n=1.0199 rs=35.074m ikf=41.548m xti=3.8 cjo=86.000p m=0.3466 vj=0.7225 isr=1.4809p nr=2.48 bv=11.75 ibv=10.000m nbv=0.4 tbv1=0.0007 nbvl=38 ibvl=450.00p vpk=12 mfg=rohm type=zener
+.model tfzv13b d is=894.48e-18 n=1.0197 rs=52.459m ikf=.78903 cjo=88.700p m=.36613 vj=.75915 isr=2.100p nr=2.3000 bv=12.940 ibv=10.000m tt=107.00n nbv=0.4000 tbv1=0.00071 nbvl=37.6000 ibvl=0.6000n vpk=13 mfg=rohm type=zener
+.model tfzv15b d is=856.98e-18 n=1.0189 rs=58.944m ikf=.73049 cjo=79.900p m=.36106 vj=.75106 isr=5.000p nr=3.1000 bv=14.335 ibv=10.000m tt=126.00n nbv=0.6000 tbv1=0.00070 nbvl=10.5000 ibvl=1.0000u vpk=15 mfg=rohm type=zener
+.model tfzv16b d is=954.34e-18 n=1.0205 rs=48.973m ikf=.79432 cjo=72.200p m=.35801 vj=.75995 isr=4.2636p nr=3.2000 bv=15.745 ibv=10.000m tt=137.00n nbv=0.9000 tbv1=0.00075 nbvl=11.5000 ibvl=1.0000u vpk=16 mfg=rohm type=zener
+.model tfzv18b d is=608.54e-18 n=1.0090 rs=54.041m ikf=.60117 cjo=65.300p m=.35764 vj=.77193 isr=3.5679p nr=3.0000 bv=17.400 ibv=10.000m tt=165.00n nbv=0.8000 tbv1=0.00076 nbvl=14.0000 ibvl=1.0000u vpk=18 mfg=rohm type=zener
+.model tfzv20b d is=834.38e-18 n=1.0164 rs=45.968m ikf=.67872 cjo=58.800p m=.35099 vj=.76145 isr=1.7140p nr=2.9000 bv=19.110 ibv=10.000m tt=185.00n nbv=0.5000 tbv1=0.00079 nbvl=11.0000 ibvl=1.0000u vpk=20 mfg=rohm type=zener
+.model tfzv22b d is=1.2399f n=1.0240 rs=50.666m ikf=.48358 cjo=53.300p m=.34758 vj=.75688 isr=1.8699p nr=2.9000 bv=21.275 ibv=5.0000m tt=228.00n nbv=0.4000 tbv1=0.00075 nbvl=12.0000 ibvl=2.2000u vpk=22 mfg=rohm type=zener
+.model tfzv24b d is=1.6476f n=1.0306 rs=58.807m ikf=.47991 cjo=48.400p m=.34817 vj=.7649 isr=1.3565p nr=2.5000 bv=23.190 ibv=5.0000m tt=243.00n nbv=0.4000 tbv1=0.00082 nbvl=11.5000 ibvl=1.2000u vpk=24 mfg=rohm type=zener
+.model tfzv27b d is=1.6247f n=1.0309 rs=54.713m ikf=.45484 cjo=43.700p m=.33809 vj=.64092 isr=1.3680p nr=3.2500 bv=25.645 ibv=5.0000m tt=278.00n nbv=0.4000 tbv1=0.000825 vpk=27 mfg=rohm type=zener
+.model tfzv30b d is=1.4429f n=1.0276 rs=48.558m ikf=.4142 cjo=40.200p m=.34633 vj=.75949 isr=1.26170p nr=3.2400 bv=28.415 ibv=5.0000m tt=278.00n nbv=0.3000 tbv1=0.00079 ibvl=1.1400n nbvl=34.000 vpk=30 mfg=rohm type=zener
+.model tfzv33b d is=2.1434f n=1.0387 rs=58.125m ikf=.40128 cjo=36.600p m=.34613 vj=.75779 isr=2.2076p nr=2.9000 bv=31.100 ibv=5.0000m tt=336.00n nbv=0.4000 tbv1=0.00084 ibvl=1.1500n nbvl=38.000 vpk=33 mfg=rohm type=zener
+.model tfzv36b d is=2.6929f n=1.0442 rs=54.412m ikf=.37899 cjo=34.700p m=.35254 vj=.75641 isr=2.0578p nr=3.1000 bv=33.740 ibv=5.0000m tt=335.00n nbv=0.5000 tbv1=0.00085 vpk=36 mfg=rohm type=zener
+.model tfzv39b d is=4.2675f n=1.0582 rs=54.885m ikf=.34301 cjo=32.600p m=.34409 vj=.75393 isr=2.7494p nr=2.5000 bv=36.275 ibv=5.0000m tt=370.00n nbv=0.5000 tbv1=0.00092 ibvl=1.0000n nbvl=49.000 vpk=39.98 mfg=rohm type=zener
+.model tfzv6_2b d is=1.6177f n=1.0122 rs=197.47m ikf=0.2814 cjo=185.10p m=0.3493 vj=0.7757 isr=3.6742p nr=5.9 bv=6.12 ibv=20.000m nbv=0.33 tbv1=0.3700m nbvl=11 ibvl=15.000u trs1=-0.0005 vpk=6.2 mfg=rohm type=zener
+.model tfzv6_8b d is=1.9454f n=1.0150 rs=55.964m ikf=.44707 cjo=164.10p m=.37292 vj=.83682 isr=8.7747p nr=3.0000 bv=6.6200 ibv=20.000m tt=28.000n nbv=0.2 tbv1=0.00044 nbvl=10.600 ibvl=4.0000u vpk=6.8 mfg=rohm type=zener
+.model tfzv7_5b d is=1.5340f n=1.0259 rs=53.231m ikf=1.8105 cjo=171.70p m=.37075 vj=.75529 isr=34.753p nr=3.1000 bv=7.2500 ibv=20.000m tt=30.000n nbv=0.3000 tbv1=0.00045 nbvl=13.600 ibvl=50.000u vpk=7.5 mfg=rohm type=zener
+.model tfzv8_2b d is=1.0892f n=1.0325 rs=0.3054 ikf=51.938 cjo=147.23p m=0.3279 vj=0.6068 isr=34.177p nr=4 bv=7.985 ibv=20.000m tt=33.000n nbv=0.36 tbv1=0.5100m nbvl=12.7 ibvl=10.000u vpk=8.2 mfg=rohm type=zener
+.model tfzv9_1b d is=1.1981f n=1.0216 rs=50.641m ikf=.66743 cjo=126.40p m=.3523 vj=.75881 isr=8.2837p nr=2.9000 bv=8.7800 ibv=20.000m tt=42.000n nbv=0.2000 tbv1=0.00058 nbvl=16.500 ibvl=100.00n vpk=9.1 mfg=rohm type=zener
+.model udzlv100 d is=73.755f n=1.1923 rs=.36528 ikf=54.240m eg=1.1300 cjo=9.3111p m=.28169 vj=.50321 isr=8.7568p nr=4.7000 bv=100.21 ibv=10.000m nbv=5.0210 tbv1=898.00u vpk=100 mfg=rohm type=zener
+.model udzlv110 d is=228.54f n=1.2504 rs=.37701 ikf=.14168 eg=1.0900 cjo=8.5248p m=.28889 vj=.50141 isr=7.3690p nr=4.7000 bv=110.51 ibv=10.000m nbv=12.321 tbv1=898.00u vpk=110 mfg=rohm type=zener
+.model udzlv120 d is=159.42f n=1.2181 rs=.39576 ikf=13.336m eg=1.0600 cjo=8.0826p m=.29872 vj=.50142 isr=7.9828p nr=3.1000 bv=123.50 ibv=10.000m nbv=12.6380 tbv1=858.00u vpk=120 mfg=rohm type=zener
+.model udzlv130 d is=305.38f n=1.2425 rs=.43862 ikf=4.1984m eg=1.0500 cjo=7.5990p m=.29452 vj=.50123 isr=6.1628p nr=3.2000 bv=133.90 ibv=10.000m nbv=12.6380 tbv1=858.00u vpk=130 mfg=rohm type=zener
+.model udzlv150 d is=1.0270p n=1.3177 rs=.45431 ikf=4.3118m eg=1.00 cjo=7.1829p m=.28309 vj=.5012 isr=4.5289p nr=4.7000 bv=152.70 ibv=10.000m nbv=12.6380 tbv1=958.00u vpk=150 mfg=rohm type=zener
+.model udzlv51 d is=5.9060f n=1.1071 rs=.4929 ikf=.2611 eg=1.1600 cjo=14.693p m=.30588 vj=.51395 isr=3.5777p nr=2.8000 bv=49.310 ibv=10.000m nbv=2.2140 tbv1=898.00u vpk=51 mfg=rohm type=zener
+.model udzlv56 d is=5.3195f n=1.1014 rs=.49 ikf=.21655 eg=1.1600 cjo=13.707p m=.29624 vj=.50263 isr=5.6467p nr=4.5000 bv=55.400 ibv=10.000m nbv=2.3410 tbv1=898.00u vpk=56 mfg=rohm type=zener
+.model udzlv62 d is=5.1050f n=1.0901 rs=.37466 ikf=45.677m eg=1.1600 cjo=12.645p m=.2962 vj=.51023 isr=6.5102p nr=4.0000 bv=61.500 ibv=10.000m nbv=2.3810 tbv1=898.00u vpk=62 mfg=rohm type=zener
+.model udzlv68 d is=6.9546f n=1.0952 rs=.40795 ikf=41.494m eg=1.1300 cjo=11.768p m=.2945 vj=.50665 isr=6.3716p nr=3.7000 bv=68.200 ibv=10.000m nbv=3.1810 tbv1=898.00u vpk=68 mfg=rohm type=zener
+.model udzlv75 d is=22.847f n=1.1439 rs=.38686 ikf=46.255m eg=1.1300 cjo=10.907p m=.30119 vj=.52425 isr=4.3267p nr=2.8600 bv=74.180 ibv=10.000m nbv=3.4110 tbv1=898.00u vpk=75 mfg=rohm type=zener
+.model udzlv82 d is=36.443f n=1.1613 rs=.36351 ikf=36.888m eg=1.1300 cjo=10.282p m=.29981 vj=.50125 isr=3.1536p nr=4.2000 bv=82.840 ibv=10.000m nbv=7.2110 tbv1=903.00u vpk=82 mfg=rohm type=zener
+.model udzlv91 d is=34.201f n=1.1584 rs=.36458 ikf=36.852m eg=1.1300 cjo=9.6423p m=.28929 vj=.50123 isr=5.4663p nr=3.8000 bv=91.040 ibv=10.000m nbv=6.3210 tbv1=875.00u vpk=91 mfg=rohm type=zener
+.model udzv10b-ltspice d is=2.1786e-16 n=1.0288 rs=.29371 ikf=81.809 cjo=1.7400e-11 m=.37721 vj=.75462 isr=6.9376e-13 nr=2.8000 bv=9.9500 ibv=5.0000m tt=1.2800e-7 nbv=0.2000 tbv1=6.3000e-4 nbvl=18.000 ibvl=0.1200n vpk=10 mfg=rohm type=zener
+.model udzv10b-mpkopec d is=217.86e-18 n=1.0288 rs=.29371 ikf=81.809 cjo=17.400p m=.36121 vj=.75462 isr=1.2376p nr=2.8 bv=9.9900 ibv=5.0000m tt=128n nbv=0.2 tbv1=0.00063 vpk=10 mfg=rohm type=zener
+.model udzv11b-ltspice d is=2.6919e-16 n=1.0329 rs=.28166 ikf=1.2119 cjo=1.5000e-11 m=.35461 vj=.75858 isr=6.3129e-13 nr=2.8400 bv=11.000 ibv=1.0000m tt=163.00n nbv=0.5500 tbv1=0.6700m nbvl=22.500 ibvl=1.5000e-11 vpk=11 mfg=rohm type=zener
+.model udzv11b-mpkopec d is=269.19e-18 n=1.0329 rs=.28166 ikf=1.2119 cjo=15.000p m=.35461 vj=.75858 isr=808.29f nr=3.1 bv=10.990 ibv=5.0000m tt=163n nbv=0.25 tbv1=0.00068 vpk=11 mfg=rohm type=zener
+.model udzv12b-ltspice d is=3.4990e-16 n=1.0420 rs=.26313 ikf=.87303 cjo=1.3700e-11 m=.35603 vj=.75124 isr=5.1535e-13 nr=2.8200 bv=11.930 ibv=1.0000m tt=1.8500e-7 nbv=0.4000 tbv1=0.7300m nbvl=26.200 ibvl=1.0000e-11 vpk=12 mfg=rohm type=zener
+.model udzv12b-mpkopec d is=349.90e-18 n=1.0420 rs=.26313 ikf=.87303 cjo=13.700p m=.35603 vj=.75124 isr=775.35f nr=2.9 bv=11.990 ibv=5.0000m tt=185n nbv=0.3 tbv1=0.00070 vpk=12 mfg=rohm type=zener
+.model udzv13b-ltspice d is=3.3892e-16 n=1.0385 rs=.24887 ikf=.82579 cjo=1.3400e-11 m=.45658 vj=.75643 isr=5.154e-13 nr=2.7000 bv=13.220 ibv=1.0000m tt=1.8500e-7 nbv=0.8800 tbv1=0.7400m nbvl=39.200 ibvl=5.000p vpk=13 mfg=rohm type=zener
+.model udzv13b-mpkopec d is=338.92e-18 n=1.0385 rs=.24887 ikf=.82579 cjo=13.400p m=.35658 vj=.75643 isr=1.0954p nr=2.8 bv=13.200 ibv=5.0000m tt=185n nbv=0.3 tbv1=0.00074 vpk=13 mfg=rohm type=zener
+.model udzv15b-ltspice d is=2.6563e-16 n=1.0349 rs=.29514 ikf=35.137 cjo=1.4700e-11 m=.36513 vj=.75709 isr=6.4100e-13 nr=2.7200 bv=14.700 ibv=1.0000m tt=1.5100e-7 nbv=0.8600 tbv1=0.7600m nbvl=20.700 ibvl=1.8000e-10 vpk=15 mfg=rohm type=zener
+.model udzv15b-mpkopec d is=265.63e-18 n=1.0349 rs=.29514 ikf=35.137 cjo=14.700p m=.36513 vj=.75709 isr=8.2007p nr=3.3000 bv=14.660 ibv=5.0000m tt=151n nbv=0.4 tbv1=0.00076 vpk=15 mfg=rohm type=zener
+.model udzv16b-ltspice d is=2.9649e-16 n=1.0357 rs=.21510 ikf=55.214 cjo=1.3885e-11 m=.33221 vj=.53071 isr=5.2147e-13 nr=2.6867 bv=16.150 ibv=1.0000m tt=1.3700e-7 nbv=1.1000 tbv1=0.7800m nbvl=71.700 ibvl=7.0000p vpk=16 mfg=rohm type=zener
+.model udzv16b-mpkopec d is=296.49e-18 n=1.0357 rs=.2151 ikf=55.214 cjo=13.900p m=.36486 vj=.77507 isr=1.4438p nr=2.9000 bv=16.180 ibv=5.0000m tt=137n nbv=0.4 tbv1=0.00078 vpk=16 mfg=rohm type=zener
+.model udzv18b-ltspice d is=4.3893e-16 n=1.0456 rs=.23636 ikf=1.1133 cjo=1.2300e-11 m=.35741 vj=.77627 isr=4.6335e-13 nr=2.5000 bv=17.87 ibv=1.0000m tt=1.7100e-7 nbv=0.4600 tbv1=0.8210m nbvl=58.400 ibvl=3.0000e-11 vpk=18 mfg=rohm type=zener
+.model udzv18b-mpkopec d is=438.93e-18 n=1.0456 rs=.23636 ikf=1.1133 cjo=12.300p m=.35741 vj=.77627 isr=1.5335p nr=3 bv=17.955 ibv=5.0000m tt=171n nbv=0.4 tbv1=0.00081 vpk=18 mfg=rohm type=zener
+.model udzv20b-ltspice d is=5.4004e-16 n=1.0500 rs=.24711 ikf=1.0080 cjo=1.1200e-11 m=.32891 vj=.51639 isr=0.2831p nr=2.2500 bv=20.00 ibv=1.0000m tt=1.8200e-7 nbv=0.8000 tbv1=0.83m nbvl=58.400 ibvl=0.3000e-11 vpk=20 mfg=rohm type=zener
+.model udzv20b-mpkopec d is=540.04e-18 n=1.0500 rs=.24711 ikf=1.0080 cjo=11.200p m=.35891 vj=.77639 isr=1.6251p nr=3.4 bv=19.955 ibv=5.0000m tt=182n nbv=0.4 tbv1=0.00081 vpk=20 mfg=rohm type=zener
+.model udzv22b-ltspice d is=151.47e-18 n=1.0038 rs=.55814 ikf=33.191 eg=1.15 cjo=9.9600p m=.33139 vj=.60838 isr=963.85f nr=3.8000 bv=22.000 ibv=1.0000m nbv=1.2000 tbv1=0.7800m vpk=22 mfg=rohm type=zener
+.model udzv22b-mpkopec d is=788.04e-18 n=1.0605 rs=.26605 ikf=.81132 cjo=10.100p m=.34994 vj=.79255 isr=1.1348p nr=2.8000 bv=22.005 ibv=5.0000m tt=187n nbv=0.4 tbv1=0.00081 vpk=22 mfg=rohm type=zener
+.model udzv24b-ltspice d is=1.1267f n=1.0731 rs=.28474 ikf=.67038 cjo=9.2000p m=.34336 vj=.75563 isr=2.4424e-13 nr=2.1800 bv=24.350 ibv=1.0000m tt=2.0500e-7 nbv=0.8000 tbv1=0.8500m nbvl=72.00 ibvl=6.5000p vpk=24 mfg=rohm type=zener
+.model udzv24b-mpkopec d is=1.1267f n=1.0731 rs=.28474 ikf=.67038 cjo=9.2000p m=.34336 vj=.75563 isr=1.4424p nr=2.8 bv=24.250 ibv=5.0000m tt=205n nbv=0.4 tbv1=0.00082 vpk=24 mfg=rohm type=zener
+.model udzv27b-ltspice d is=1.2516f n=1.0723 rs=.24316 ikf=.52825 cjo=8.5000p m=.32197 vj=.76072 isr=4.5326e-13 nr=2.3500 bv=26.89 ibv=1.0000m tt=1.8400e-7 nbv=1.6500 tbv1=0.8500m nbvl=165.00 ibvl=4.8000p vpk=27 mfg=rohm type=zener
+.model udzv27b-mpkopec d is=1.2516f n=1.0723 rs=.24316 ikf=.52825 cjo=8.5000p m=.34197 vj=.76072 isr=1.2326p nr=3 bv=26.860 ibv=5.0000m tt=184n nbv=0.4 tbv1=0.00083 vpk=27 mfg=rohm type=zener
+.model udzv30b-ltspice d is=2.2137f n=1.0929 rs=.25495 ikf=.75706 cjo=8.0000p m=.30884 vj=.76074 isr=4.9426e-13 nr=2.8600 bv=29.98 ibv=1.0000m tt=1.9000e-7 nbv=2.4000 tbv1=0.87900m nbvl=155.00 ibvl=2.0000p vpk=30 mfg=rohm type=zener
+.model udzv30b-mpkopec d is=2.2137f n=1.0929 rs=.25495 ikf=.75706 cjo=8.0000p m=.34984 vj=.76074 isr=874.26f nr=3 bv=29.940 ibv=5.0000m tt=190n nbv=0.3 tbv1=0.00085 vpk=30 mfg=rohm type=zener
+.model udzv33b-ltspice d is=4.3739f n=1.1094 rs=.26228 ikf=.62832 cjo=7.6000p m=.325085 vj=.77316 isr=6.0323e-13 nr=3.1000 bv=33.0 ibv=1.0000m tt=1.7000e-7 nbv=1.8200 tbv1=0.8400m nbvl=245.00 ibvl=1.1000p vpk=33 mfg=rohm type=zener
+.model udzv33b-mpkopec d is=4.3739f n=1.1094 rs=.26228 ikf=.62832 cjo=7.6000p m=.34085 vj=.77316 isr=323.23f nr=2.5 bv=32.970 ibv=5.0000m tt=170n nbv=0.4 tbv1=0.00085 vpk=33 mfg=rohm type=zener
+.model udzv36b-ltspice d is=8.4106f n=1.1365 rs=.26630 ikf=.47397 cjo=6.8000p m=.31586 vj=.80868 isr=7.8934e-13 nr=2.6500 bv=35.96 ibv=1.0000m tt=2.0500e-7 nbv=3.0700 tbv1=0.8700m nbvl=225.00 ibvl=2.2000p vpk=36 mfg=rohm type=zener
+.model udzv36b-mpkopec d is=8.4106f n=1.1365 rs=.2663 ikf=.47397 cjo=6.8000p m=.35686 vj=.80868 isr=869.34f nr=3.0000 bv=35.970 ibv=5.0000m tt=205n nbv=0.5 tbv1=0.00086 vpk=36 mfg=rohm type=zener
+.model udzv39b d is=8.4029f n=1.1328 rs=0.2293 ikf=0.1330 cjo=6.7000p m=0.2770 vj=0.6419 isr=2.7351p nr=4.8500 bv=38.920 ibv=1.0000m tt=226.00n nbv=3.0000 tbv1=0.9500m nbvl=225.00 ibvl=2.3000p vpk=39 mfg=rohm type=zener
+.model udzv43 d is=4.2960f n=1.1021 rs=.28518 ikf=35.138m cjo=6.5000p m=0.2781 vj=0.5045 isr=0.7506p nr=3.5000 bv=42.620 ibv=1.0000m tt=231.00n nbv=3.7000 tbv1=1.3100m nbvl=295.000 ibvl=4.0000p vpk=43 mfg=rohm type=zener
+.model udzv47 d is=15.330f n=1.1565 rs=.27594 ikf=45.862m cjo=5.7000p m=0.3178 vj=.50467 isr=0.4084p nr=3.2000 bv=46.480 ibv=1.0000m tt=246.00n nbv=4.8500 tbv1=958.00u nbvl=290.00 ibvl=1.4000p vpk=47 mfg=rohm type=zener
+.model udzv6_2b-ltspice d is=149.54e-18 n=1.0155 rs=.21260 ikf=1.2516 cjo=23.000p m=.37190 vj=.75178 isr=0.5007p nr=4.6500 bv=6.1950 ibv=5.0000m tt=65.000n nbv=0.2000 tbv1=0.3500m nbvl=9.7000 ibvl=3.7000u vpk=6.2 mfg=rohm type=zener
+.model udzv6_2b-mpkopec d is=149.54e-18 n=1.0155 rs=.2126 ikf=1.2516 cjo=22.000p m=.3719 vj=.75178 isr=617.07f nr=2.3000 bv=6.1950 ibv=5.0000m tt=65n nbv=0.2 tbv1=0.00039 nbvl=11 ibvl=1u vpk=6.2 mfg=rohm type=zener
+.model udzv6_8b-ltspice d is=1.7609e-16 n=1.0196 rs=.26014 ikf=.94002 cjo=1.9100e-11 m=.36585 vj=.76843 isr=0.3906p nr=3.2000 bv=6.7900 ibv=5.0000m tt=85.000n nbv=0.1000 tbv1=0.4600m nbvl=11.400 ibvl=100.00n vpk=6.8 mfg=rohm type=zener
+.model udzv6_8b-mpkopec d is=176.09e-18 n=1.0196 rs=.26014 ikf=.94002 cjo=19.100p m=.36585 vj=.76843 isr=670.60f nr=3.2 bv=6.7900 ibv=5.0000m tt=85n nbv=0.1 tbv1=0.00046 nbvl=11 ibvl=100n vpk=6.8 mfg=rohm type=zener
+.model udzv7_5b-ltspice d is=2.6370e-16 n=1.0324 rs=.23141 ikf=1.1640 cjo=2.5200e-11 m=.39896 vj=.76788 isr=3.4986p nr=2.6800 bv=7.4400 ibv=5.0000m tt=65.000n nbv=0.3000 tbv1=0.4800m nbvl=14.000 ibvl=200.00n vpk=7.5 mfg=rohm type=zener
+.model udzv7_5b-mpkopec d is=263.70e-18 n=1.0324 rs=.23141 ikf=1.1640 cjo=25.900p m=.39896 vj=.76788 isr=1.4986p nr=2.5 bv=7.4400 ibv=5.0000m tt=65n nbv=0.3 tbv1=0.00048 nbvl=17 ibvl=100n vpk=7.5 mfg=rohm type=zener
+.model udzv8_2b-ltspice d is=2.2428e-16 n=1.0295 rs=.26107 ikf=1.2319 cjo=2.2200e-11 m=.38384 vj=.75935 isr=2.7900p nr=3.3000 bv=8.1900 ibv=5.0000m tt=69.000n nbv=0.1000 tbv1=0.5500m nbvl=14.000 ibvl=10.000n vpk=8.2 mfg=rohm type=zener
+.model udzv8_2b-mpkopec d is=224.28e-18 n=1.0295 rs=.26107 ikf=1.2319 cjo=22.200p m=.38384 vj=.75935 isr=1.4829p nr=2.5000 bv=8.1900 ibv=5.0000m tt=69n nbv=0.1 tbv1=0.00055 nbvl=15 ibvl=10n vpk=8.2 mfg=rohm type=zener
+.model udzv9_1b-ltspice d is=2.0192e-16 n=1.0271 rs=.25962 ikf=1.1336 cjo=1.9400e-11 m=.37163 vj=.75692 isr=1.2130p nr=2.4700 bv=9.0400 ibv=5.0000m tt=102.00n nbv=0.2000 tbv1=0.6000m nbvl=19.800 ibvl=2.5000e-10 vpk=9.1 mfg=rohm type=zener
+.model udzv9_1b-mpkopec d is=201.92e-18 n=1.0271 rs=.25962 ikf=1.1336 cjo=19.400p m=.37163 vj=.75692 isr=2.2164p nr=2.5000 bv=9.0400 ibv=5.0000m tt=102n nbv=0.2 tbv1=0.0006 nbvl=10 ibvl=3n vpk=9.1 mfg=rohm type=zener
+.model ufzv10b d is=747.16e-18 n=1.0192 rs=0.2987 ikf=0.3482 eg=1.13 cjo=111.03p m=0.3293 vj=0.6605 isr=4.4756p nr=3.3 bv=9.77 ibv=20.000m nbv=0.34 tbv1=0.5600m nbvl=16.4 ibvl=40.000n trs1=0.001 vpk=10 mfg=rohm type=zener
+.model ufzv11b d is=1.9658f n=1.0512 rs=0.3146 ikf=19.589 eg=1.13 cjo=95.288p m=0.3305 vj=0.6673 isr=2.4825p nr=3 bv=10.856 ibv=10.000m nbv=0.3 tbv1=0.6600m nbvl=27.5 ibvl=1.0000n trs1=0.001 vpk=11 mfg=rohm type=zener
+.model ufzv12b d is=874.07e-18 n=1.0191 rs=0.3004 ikf=129.14 eg=1.13 cjo=86.067p m=0.3312 vj=0.6727 isr=2.4865p nr=2.7 bv=11.85 ibv=10.000m nbv=0.35 tbv1=0.6900m nbvl=31.1 ibvl=1.0000n trs1=-0.001 vpk=12 mfg=rohm type=zener
+.model ufzv13b d is=679.75e-18 n=1.0251 rs=0.2126 ikf=15.929 eg=1.13 cjo=90.000p m=0.3268 vj=0.5396 isr=4.6425p nr=2.9 bv=13.01 ibv=10.000m nbv=0.3 tbv1=0.6800m nbvl=31.1 ibvl=1.0000n vpk=13 mfg=rohm type=zener
+.model ufzv15b d is=346.72e-18 n=0.9997 rs=0.2621 ikf=111.34 eg=1.13 cjo=80.640p m=0.3269 vj=0.5515 isr=2.8386p nr=2.74 bv=14.42 ibv=10.000m nbv=0.38 tbv1=0.7000m nbvl=31.1 ibvl=1.0000n vpk=15 mfg=rohm type=zener
+.model ufzv16b d is=598.54e-18 n=1.0159 rs=0.217 ikf=0.7677 eg=1.14 cjo=71.550p m=0.3258 vj=0.5676 isr=1.8645p nr=2.85 bv=15.845 ibv=10.000m nbv=0.5 tbv1=0.7500m nbvl=48 ibvl=0.2000n vpk=16 mfg=rohm type=zener
+.model ufzv18b d is=598.54e-18 n=1.0159 rs=0.2275 ikf=0.7677 eg=1.14 cjo=64.796p m=0.3224 vj=0.5776 isr=2.3475p nr=2.85 bv=17.5 ibv=10.000m nbv=0.5 tbv1=0.7600m nbvl=35.5 ibvl=1.0000n trs1=0.002 vpk=18 mfg=rohm type=zener
+.model ufzv20b d is=931.76e-18 n=1.0317 rs=0.2269 ikf=14.645 eg=1.13 cjo=58.769p m=0.3112 vj=0.5334 isr=1.3940p nr=3 bv=19.4 ibv=10.000m nbv=0.45 tbv1=0.7700m nbvl=26.5 ibvl=1.0000n vpk=20 mfg=rohm type=zener
+.model ufzv22b d is=593.82e-18 n=1.0170 rs=0.2108 ikf=14.607 eg=1.13 cjo=52.899p m=0.3212 vj=0.5826 isr=1.4371p nr=2.85 bv=21.38 ibv=5.0000m nbv=0.3 tbv1=0.7700m nbvl=30 ibvl=1.0000n vpk=22 mfg=rohm type=zener
+.model ufzv24b d is=896.82e-18 n=1.0244 rs=.2447 ikf=4.4894 eg=1.14 cjo=48.379p m=0.3271 vj=0.6125 isr=1.5625p nr=2.6 bv=23.41 ibv=5.0000m nbv=0.4 tbv1=0.8200m vpk=24 mfg=rohm type=zener
+.model ufzv27b d is=627.69e-18 n=1.0114 rs=0.2008 ikf=0.3096 eg=1.14 cjo=43.068p m=0.3282 vj=0.6207 isr=1.4362p nr=3.8 bv=25.9 ibv=5.0000m nbv=0.7 tbv1=0.8350m vpk=27 mfg=rohm type=zener
+.model ufzv30b d is=544.50e-18 n=1.0055 rs=0.2237 ikf=0.1319 cjo=40.795p m=0.3257 vj=0.6153 isr=1.3508p nr=3.4 bv=28.78 ibv=5.0000m nbv=0.76 tbv1=0.8000m nbvl=36 ibvl=1.0000n vpk=30 mfg=rohm type=zener
+.model ufzv33b d is=3.5673f n=1.0706 rs=0.2203 ikf=198.15 eg=1.13 cjo=36.598p m=0.3284 vj=0.6165 isr=2.7998p nr=4.2 bv=31.5 ibv=5.0000m nbv=0.9 tbv1=0.8600m vpk=33 mfg=rohm type=zener
+.model ufzv36b d is=2.9793f n=1.0611 rs=0.1974 ikf=0.3284 eg=1.125 cjo=34.511p m=0.3294 vj=0.6145 isr=2.0578p nr=4 bv=34.175 ibv=5.0000m nbv=1.4 tbv1=0.8100m vpk=36 mfg=rohm type=zener
+.model ufzv39b d is=2.3020f n=1.0498 rs=0.1998 ikf=0.3088 eg=1.14 cjo=32.357p m=0.3315 vj=0.6233 isr=2.1494p nr=2.55 bv=36.89 ibv=5.0000m nbv=1.6 tbv1=0.9000m ibvl=200.00p nbvl=87 vpk=39 mfg=rohm type=zener
+.model ufzv6_2b d is=2.2663f n=1.0292 rs=0.2244 ikf=51.599 cjo=185.10p m=0.3491 vj=0.775 isr=2.8742p nr=4.9 bv=6.141 ibv=20.000m nbv=0.32 tbv1=0.3900m nbvl=10.4 ibvl=30.000u vpk=6.2 mfg=rohm type=zener
+.model ufzv6_8b d is=2.6519f n=1.0398 rs=0.3294 ikf=15.507 cjo=162.22p m=0.3757 vj=0.8478 isr=32.515p nr=4.2 bv=6.69 ibv=20.000m nbv=0.3 tbv1=0.4400m nbvl=5 ibvl=8.0000u vpk=6.8 mfg=rohm type=zener
+.model ufzv7_5b d is=668.94e-18 n=1.0068 rs=0.1826 ikf=124.53m eg=1.14 cjo=170.83p m=0.3277 vj=0.5765 isr=0.1769n nr=5 bv=7.31 ibv=20.000m nbv=0.6 tbv1=0.450m nbvl=12.6 ibvl=85.000u vpk=7.5 mfg=rohm type=zener
+.model ufzv8_2b d is=1.1485f n=1.0287 rs=0.2848 ikf=0.3976 eg=1.13 cjo=147.23p m=0.3274 vj=0.6073 isr=373.78p nr=7 bv=8.042 ibv=20.000m nbv=0.34 tbv1=0.5000m nbvl=10 ibvl=10.000u vpk=8.2 mfg=rohm type=zener
+.model ufzv9_1b d is=795.29e-18 n=1.0174 rs=0.3002 ikf=125.20 eg=1.13 cjo=126.57p m=0.3275 vj=0.6196 isr=76.914p nr=6 bv=8.87 ibv=20.000m nbv=0.34 tbv1=0.5600m nbvl=1.6 ibvl=30.000u vpk=9.1 mfg=rohm type=zener
+.model umz10k d is=83.654e-18 n=.99917 rs=.15635 ikf=.21122 cjo=19.359p m=.38193 vj=.82548 isr=54.217p bv=9.9900 ibv=5.0000m tt=194.76n nbv=0.2 tbv1=0.0007 vpk=10 mfg=rohm type=zener
+.model umz11k d is=173.67e-18 n=1.0168 rs=.13148 ikf=.2012 cjo=16.768p m=.36528 vj=.80574 isr=50.931p bv=10.990 ibv=5.0000m tt=232.27n nbv=0.3 tbv1=0.0005 vpk=11 mfg=rohm type=zener
+.model umz12k d is=112.28e-18 n=1.0073 rs=.15838 ikf=.18575 cjo=15.408p m=.42921 vj=.81687 isr=59.989p bv=11.990 ibv=5.0000m tt=238.04n nbv=0.3 tbv1=0.00065 vpk=12 mfg=rohm type=zener
+.model umz13k d is=187.47e-18 n=1.0159 rs=.12674 ikf=.16247 cjo=14.336p m=.35026 vj=.8167 isr=38.920p bv=13.200 ibv=5.0000m tt=245.26n nbv=0.3 tbv1=0.00065 vpk=13 mfg=rohm type=zener
+.model umz15k d is=157.00e-18 n=1.0165 rs=.16618 ikf=.22715 cjo=17.137p m=.35254 vj=.82377 isr=29.361p bv=14.660 ibv=5.0000m tt=187.55n nbv=0.3 tbv1=0.0007 vpk=15 mfg=rohm type=zener
+.model umz16k d is=178.09e-18 n=1.0167 rs=.14365 ikf=.19732 cjo=16.047p m=.35577 vj=.80638 isr=42.998p bv=16.180 ibv=5.0000m tt=201.98n nbv=0.3 tbv1=0.00078 vpk=16 mfg=rohm type=zener
+.model umz16n d is=178.09e-18 n=1.0167 rs=.14365 ikf=.19732 cjo=16.047p m=.35577 vj=.80638 isr=5.998p bv=16.180 ibv=5.0000m tt=201.98n nbv=0.3 tbv1=0.00078 vpk=16 mfg=rohm type=zener
+.model umz18k d is=147.56e-18 n=1.0123 rs=.20289 ikf=.16958 cjo=13.986p m=.3554 vj=.80787 isr=35.079p bv=17.955 ibv=5.0000m tt=266.90n nbv=0.3 tbv1=0.00073 vpk=18 mfg=rohm type=zener
+.model umz18n d is=147.56e-18 n=1.0123 rs=.20289 ikf=.16958 cjo=13.986p m=.3554 vj=.80787 isr=35.079p bv=17.955 ibv=5.0000m tt=266.90n nbv=0.3 tbv1=0.00073 vpk=18 mfg=rohm type=zener
+.model umz20k d is=244.09e-18 n=1.0261 rs=.1596 ikf=.19191 cjo=12.205p m=.31337 vj=.80441 isr=35.889p bv=19.955 ibv=5.0000m tt=249.59n nbv=0.3 tbv1=0.00065 vpk=20 mfg=rohm type=zener
+.model umz22k d is=142.50e-18 n=1.0079 rs=.15528 ikf=.15895 cjo=11.725p m=.3399 vj=.80928 isr=36.017p bv=22.005 ibv=5.0000m tt=274.11n nbv=0.3 tbv1=0.00067 vpk=22 mfg=rohm type=zener
+.model umz24k d is=219.14e-18 n=1.0173 rs=.14538 ikf=.15372 cjo=10.725p m=.34647 vj=.80059 isr=36.196p bv=24.250 ibv=5.0000m tt=255.36n nbv=0.3 tbv1=0.00095 vpk=24 mfg=rohm type=zener
+.model umz27k d is=280.99e-18 n=1.0259 rs=.1503 ikf=.14008 cjo=9.6438p m=.32672 vj=.81913 isr=33.534p bv=26.860 ibv=5.0000m tt=265.46n nbv=0.3 tbv1=0.00075 vpk=27 mfg=rohm type=zener
+.model umz27n d is=280.99e-18 n=1.0259 rs=.1503 ikf=.14008 cjo=9.6438p m=.32672 vj=.81913 isr=33.534p bv=26.860 ibv=5.0000m tt=265.46n nbv=0.3 tbv1=0.00075 vpk=27 mfg=rohm type=zener
+.model umz30k d is=517.48e-18 n=1.0424 rs=.19251 ikf=.13647 cjo=9.0937p m=.32393 vj=.8043 isr=27.367p bv=29.940 ibv=5.0000m tt=317.39n nbv=0.3 tbv1=0.00086 vpk=30 mfg=rohm type=zener
+.model umz30n d is=517.48e-18 n=1.0424 rs=.19251 ikf=.13647 cjo=9.0937p m=.32393 vj=.8043 isr=27.367p bv=29.940 ibv=5.0000m tt=317.39n nbv=0.3 tbv1=0.00086 vpk=30 mfg=rohm type=zener
+.model umz33k d is=433.51e-18 n=1.0379 rs=.15719 ikf=.11591 cjo=8.2934p m=.33272 vj=.80853 isr=33.171p bv=32.970 ibv=5.0000m tt=346.25n nbv=0.3 tbv1=0.00084 vpk=33 mfg=rohm type=zener
+.model umz36k d is=461.08e-18 n=1.0356 rs=.14319 ikf=.12695 cjo=8.4336p m=.34393 vj=.81062 isr=26.145p bv=35.970 ibv=5.0000m tt=317.39n nbv=0.3 tbv1=0.00084 vpk=36 mfg=rohm type=zener
+.model umz5_1n d is=195.31e-18 n=1.0202 rs=.18755 ikf=23.861 cjo=33.759p m=.46336 vj=.80698 isr=71.903p bv=5.0900 ibv=4.6000m tt=44.724n nbv=0.3 tbv1=0.00025 nbvl=8.5 ibvl=4.0000e-4 vpk=5.1 mfg=rohm type=zener
+.model umz6_2k d is=235.19e-18 n=1.0349 rs=.20667 ikf=5.7211 cjo=21.599p m=.35129 vj=.80122 isr=79.860p bv=6.1950 ibv=4.9900m tt=180.34n nbv=0.3 tbv1=0.0004 nbvl=2 ibvl=1.0000e-5 vpk=6.2 mfg=rohm type=zener
+.model umz6_8en d is=303.96e-18 n=1.0270 rs=.66334 ikf=.14472 cjo=19.068p m=.32719 vj=.80786 isr=10.695p bv=6.9450 ibv=4.9900m tt=33.182n nbv=0.3 tbv1=0.00045 nbvl=1 ibvl=1.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model umz6_8k d is=153.73e-18 n=1.0159 rs=.1572 ikf=.15869 cjo=18.108p m=.35314 vj=.80037 isr=66.267p bv=6.7900 ibv=4.9900m tt=216.40n nbv=0.3 tbv1=0.00048 nbvl=1 ibvl=1.0000e-5 vpk=6.8 mfg=rohm type=zener
+.model umz7_5k d is=274.56e-18 n=1.0340 rs=.20961 ikf=17.513 cjo=26.305p m=.46417 vj=.80887 isr=65.574p bv=7.4400 ibv=4.9900m tt=72.135n nbv=0.3 tbv1=0.00043 nbvl=1 ibvl=1.0000e-5 vpk=7.5 mfg=rohm type=zener
+.model umz8_2k d is=115.85e-18 n=1.0103 rs=.14382 ikf=.27485 cjo=24.763p m=.4108 vj=.80536 isr=32.871p bv=8.1900 ibv=4.9900m tt=105.32n nbv=0.2 tbv1=0.0006 nbvl=0.5 ibvl=1.0000e-5 vpk=8.2 mfg=rohm type=zener
+.model umz8_2n d is=115.85e-18 n=1.0103 rs=.14382 ikf=.27485 cjo=24.763p m=.4108 vj=.80536 isr=32.871p bv=8.1900 ibv=4.9900m tt=105.32n nbv=0.2 tbv1=0.0006 nbvl=0.5 ibvl=1.0000e-5 vpk=8.2 mfg=rohm type=zener
+.model umz8_2t d is=329.39e-18 n=1.0322 rs=.17059 ikf=.24996 cjo=24.763p m=.41063 vj=.80457 isr=32.871p nr=1.8000 bv=8.2000 ibv=4.9999m tt=100.99n nbv=0.2 tbv1=0.0006 nbvl=10 ibvl=1.0000e-7 vpk=8.2 mfg=rohm type=zener
+.model umz9_1k d is=164.04e-18 n=1.0167 rs=.16158 ikf=.23257 cjo=21.570p m=.38366 vj=.80243 isr=36.598p bv=9.0400 ibv=4.9900m tt=173.12n nbv=0.2 tbv1=0.0007 nbvl=0.5 ibvl=1.0000e-5 vpk=9.1 mfg=rohm type=zener
+.model umzc6_8n d is=52.612e-18 n=1.0352 rs=.44731 ikf=65.435m cjo=3.1013p m=.34153 vj=.80624 isr=25.0689p nr=1.8500 bv=6.7900 ibv=4.9999m tt=137.06n nbv=0.5 tbv1=0.00047 nbvl=10 ibvl=1.0000e-7 vpk=6.8 mfg=rohm type=zener

@@ -1,0 +1,178 @@
+* SPICE model library – diode models – keyword "led"
+* Source: SPICE-Diode-KSKelvin.lib
+*
+.model al307 d is=5.493858e-021 n=1.41399 rs=46.6023 tt=5u cjo=5p vj=750m eg=1.43 type=led mfg=ussr
+.model aot-2015 d is=5.961e-10 rs=1.07 n=6.222 cjo=.5n xti=200 iave=175ma vpk=5 mfg=aot type=led
+.model apt1608surck d is=2.01e-17 n=2.139 rs=2 m=0.431 vj=2.32 cjo=35pf ibv=10u bv=5 eg=2.26 xti=3 iave=30ma vpk=5 mfg=kingbright type=led
+.model hir5393c/l223 d is=36.4e-21 n=1.262 rs=778m cjo=100p bv=5 ibv=10u vpk=5 iave=350m mfg=everlight type=led
+.model hir5393cl223 d is=36.4e-21 n=1.262 rs=778m cjo=100p bv=5 ibv=10u vpk=5 iave=350m mfg=everlight type=led
+.model hlmp-6000 d is=93.2p rs=42m n=3.73 bv=4 ibv=10u cjo=2.97p vj=.75 m=.333 iave=0.04 mfg=avago type=led
+.model l128-drd1003500000 d is=2.7431e-14 rs=1.8181 n=2.5835 cj0=67.9p iave=120m mfg=lumileds type=led
+.model l128-frd1003500000 d is=1.5259e-08 rs=1.1932 n=4.9198 cj0=67.9p iave=120m mfg=lumileds type=led
+.model l128-pca1003500000 d is=1.0029e-28 rs=2.1139 n=1.7146 cj0=309p iave=120m mfg=lumileds type=led
+.model l128-pco1003500000 d is=2.2406e-25 rs=2.0775 n=1.9597 cj0=456p iave=120m mfg=lumileds type=led
+.model l128-red1003500000 d is=6.1149e-16 rs=1.0889 n=2.3293 cj0=81.7p iave=120m mfg=lumileds type=led
+.model l128-rng1003500000 d is=1.5726e-14 rs=1.7628 n=2.4781 cj0=64.8p iave=120m mfg=lumileds type=led
+.model l128-ryl1003500000 d is=3.5247e-21 rs=2.2575 n=2.3621 cj0=1.374n iave=120m mfg=lumileds type=led
+.model l128-xxyyca3500001 d is=9.8947e-23 rs=2.2451 n=2.1894 cj0=147p iave=120m mfg=lumileds type=led
+.model l128-xxyycb3500001 d is=1.1314e-22 rs=4.2825 n=4.4914 cj0=74.6p iave=120m mfg=lumileds type=led
+.model l150-xxyy502400000 d is=1.9664e-23 rs=17.5639 n=16.7349 cj0=522p iave=160m mfg=lumileds type=led
+.model l1c1-amb1000000000 d is=1.9538e-18 rs=0.4364 n=1.8590 cj0=340p iave=350m mfg=lumileds type=led
+.model l1c1-blu1000000000 d is=1.5907e-11 rs=0.2863 n=4.5764 cj0=1.14n iave=350m mfg=lumileds type=led
+.model l1c1-cyn1000000000 d is=8.5892e-18 rs=0.3185 n=2.4819 cj0=437p iave=350m mfg=lumileds type=led
+.model l1c1-drd1000000000 d is=4.8900e-20 rs=0.5700 n=1.5695 cj0=302p iave=350m mfg=lumileds type=led
+.model l1c1-frd1000000000 d is=2.6030f rs=0.3471 n=1.9246 cj0=254p iave=350m mfg=lumileds type=led
+.model l1c1-grn1000000000 d is=1.1583e-11 rs=0.3121 n=3.9371 cj0=440p iave=350m mfg=lumileds type=led
+.model l1c1-lme1000000000 d is=3.3507e-29 rs=0.1706 n=1.6232 cj0=1.406n iave=350m mfg=lumileds type=led
+.model l1c1-pca1000000000 d is=4.2069m8 rs=0.1403 n=1.2367 cj0=1.112n iave=350m mfg=lumileds type=led
+.model l1c1-red1000000000 d is=3.4489e-18 rs=0.7682 n=1.7208 cj0=310p iave=350m mfg=lumileds type=led
+.model l1c1-rng1000000000 d is=1.1978e-19 rs=0.5555 n=1.6988 cj0=241p iave=350m mfg=lumileds type=led
+.model l1c1-ryl1000000000 d is=1.0200e-28 rs=0.1387 n=1.6585 cj0=1.374n iave=350m mfg=lumileds type=led
+.model l1hz-5780100000000 d is=3.3766e-22 rs=0.2718 n=2.1758 cj0=82.2p iave=350m mfg=lumileds type=led
+.model led_gaalas d is=6.97f n=2.35 rs=1.3772 bv=15.0 ibv=0.5ua cjo=38pf vj=0.6323 m=0.323 type=led
+.model led_gap d is=7.33f n=2.645 rs=1.472 bv=15.0 ibv=0.5ua cjo=19pf vj=0.6323 m=0.322 type=led
+.model ledblue d is=93.2p rs=42m n=7.47 bv=5 ibv=10u cjo=2.97p vj=.75 m=.333 tt=4.32u iave=40m vpk=5 type=led
+.model ledgreen d is=93.2p rs=42m n=4.61 bv=4 ibv=10u cjo=2.97p vj=.75 m=.333 tt=4.32u iave=40m vpk=4 type=led
+.model ledred d is=93.2p rs=42m n=3.73 bv=4 ibv=10u cjo=2.97p vj=.75 m=.333 tt=4.32u iave=40m vpk=4 type=led
+.model ledwhite d is=0.27n rs=5.65 n=6.79 cjo=42p iave=30m vpk=5 type=led
+.model luw-w5ap d is=6.572e-8 rs=.147 n=7.267 cjo=5n xti=150 iave=2000ma mfg=osram type=led
+.model luxeon1 d is=2.27n rs=0.25 n=6.79 cjo=42p iave=350m mfg=lumileds type=led
+.model luxstarw1w d is=2.52144e-017 rs=0.769946 n=3.33836 cjo=100p iave=350m ipk=500m mfg=luxeon type=led
+.model luxstarw5w d is=3.2946e-017 rs=0.774809 n=6.5979 cjo=200p iave=700m ipk=1000m mfg=luxeon type=led
+.model lxhl-bw02 d is=4.5e-20 rs=.85 n=2.6 cjo=1.18n xti=200 iave=400ma vpk=5 mfg=lumileds type=led
+.model lxk2-pw14 d is=3.5e-17 rs=.725 n=3.12 cjo=1.2n xti=200 iave=1.6 vpk=5 mfg=lumileds type=led
+.model lxm2-pl01-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxm2-pl01-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxm2-pl01-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxm2-pl01-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxm2-pl01-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxm3-pw51-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxm3-pw51-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxm3-pw51-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxm3-pw51-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxm3-pw51-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxm3-pw61-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxm3-pw61-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxm3-pw61-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxm3-pw61-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxm3-pw61-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxm3-pw71-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxm3-pw71-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxm3-pw71-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxm3-pw71-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxm3-pw71-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxm3-pw81-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxm3-pw81-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxm3-pw81-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxm3-pw81-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxm3-pw81-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxm8-pw27-vfbin_r d is=2.5153e-16 rs=0.3584 n=3.1556 iave=350m mfg=lumileds type=led
+.model lxm8-pw27-vfbin_s d is=3.6124p rs=0.4539 n=4.5259 iave=350m mfg=lumileds type=led
+.model lxm8-pw27-vfbin_t d is=8.7087n rs=0.5964 n=6.9100 iave=350m mfg=lumileds type=led
+.model lxm8-pw30-vfbin_r d is=2.5153e-16 rs=0.3584 n=3.1556 iave=350m mfg=lumileds type=led
+.model lxm8-pw30-vfbin_s d is=3.6124p rs=0.4539 n=4.5259 iave=350m mfg=lumileds type=led
+.model lxm8-pw30-vfbin_t d is=8.7087n rs=0.5964 n=6.9100 iave=350m mfg=lumileds type=led
+.model lxma-pw01-vfbin_c d is=3.0749f rs=0.2797 n=3.4778 iave=350m mfg=lumileds type=led
+.model lxma-pw01-vfbin_d d is=3.4288e-11 rs=0.3057 n=5.2188 iave=350m mfg=lumileds type=led
+.model lxma-pw01-vfbin_e d is=1.1155n rs=0.3410 n=6.4431 iave=350m mfg=lumileds type=led
+.model lxma-pw01-vfbin_f d is=5.7680e-08 rs=0.4115 n=8.5775 iave=350m mfg=lumileds type=led
+.model lxma-pw01-vfbin_g d is=1.7159u rs=0.5122 n=11.4792 iave=350m mfg=lumileds type=led
+.model lxml-pb01-average d is=1.3869u rs=.3958 n=11.1953 iave=350m mfg=lumileds type=led
+.model lxml-pd01-average d is=3.5669e-7 rs=2.4444 n=6.5192 iave=350m mfg=lumileds type=led
+.model lxml-pe01-average d is=1.9474e-7 rs=.4891 n=8.1120 iave=350m mfg=lumileds type=led
+.model lxml-ph01-average d is=3.0677e-10 rs=2.1217 n=4.2190 iave=350m mfg=lumileds type=led
+.model lxml-pl01-average d is=7.7990f rs=1.5470 n=2.7626 iave=350m mfg=lumileds type=led
+.model lxml-pm01-average d is=8.0330e-8 rs=.4818 n=7.0005 iave=350m mfg=lumileds type=led
+.model lxml-pr01-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pr01-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pr01-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pr01-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pr01-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pw11-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pw11-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pw11-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pw11-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pw11-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pw21-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pw21-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pw21-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pw21-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pw21-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pw31-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pw31-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pw31-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pw31-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pw31-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pw51-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pw51-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pw51-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pw51-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pw51-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pw71-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pw71-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pw71-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pw71-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pw71-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pwc1-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pwc1-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pwc1-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pwc1-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pwc1-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pwc2-vfbin_r d is=5.6664e-17 rs=0.1919 n=2.9519 iave=700m mfg=lumileds type=led
+.model lxml-pwc2-vfbin_s d is=3.6528e-13 rs=0.2110 n=4.0323 iave=700m mfg=lumileds type=led
+.model lxml-pwc2-vfbin_t d is=1.6213e-10 rs=0.2426 n=5.4770 iave=700m mfg=lumileds type=led
+.model lxml-pwn1-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pwn1-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pwn1-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pwn1-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pwn1-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxml-pwn2-vfbin_r d is=5.6664e-17 rs=0.1919 n=2.9519 iave=700m mfg=lumileds type=led
+.model lxml-pwn2-vfbin_s d is=3.6528e-13 rs=0.2110 n=4.0323 iave=700m mfg=lumileds type=led
+.model lxml-pwn2-vfbin_t d is=1.6213e-10 rs=0.2426 n=5.4770 iave=700m mfg=lumileds type=led
+.model lxml-pww1-vfbin_c d is=9.9054e-16 rs=0.3672 n=3.2997 iave=350m mfg=lumileds type=led
+.model lxml-pww1-vfbin_d d is=1.5264e-11 rs=0.4785 n=4.8316 iave=350m mfg=lumileds type=led
+.model lxml-pww1-vfbin_e d is=1.2192e-08 rs=0.6093 n=7.0727 iave=350m mfg=lumileds type=led
+.model lxml-pww1-vfbin_f d is=7.7010e-07 rs=0.7860 n=10.1428 iave=350m mfg=lumileds type=led
+.model lxml-pww1-vfbin_g d is=1.6973u rs=0.7700 n=11.2454 iave=350m mfg=lumileds type=led
+.model lxz1-pb01 d is=2.1635u rs=0.0949 n=8.8328 cj0=1.67n iave=500m mfg=lumileds type=led
+.model lxz1-pd01 d is=8.1715n rs=0.3922 n=4.3506 cj0=232p iave=500m mfg=lumileds type=led
+.model lxz1-pe01 d is=2.0109e-13 rs=0.2133 n=4.3142 cj0=1.154n iave=500m mfg=lumileds type=led
+.model lxz1-ph02 d is=3.8163e-18 rs=0.7140 n=1.8202 cj0=398p iave=500m mfg=lumileds type=led
+.model lxz1-pl01 d is=2.4231e-17 rs=0.3391 n=2.0521 cj0=263.2p iave=500m mfg=lumileds type=led
+.model lxz1-pl02 d is=1.2032e-24 rs=0.2500 n=1.9504 cj0=1.759n iave=500m mfg=lumileds type=led
+.model lxz1-pm01 d is=2.4692e-11 rs=0.3091 n=5.1102 cj0=1.091n iave=500m mfg=lumileds type=led
+.model lxz1-pr01 d is=9.8360e-19 rs=0.0856 n=2.6802 cj0=1.351n iave=500m mfg=lumileds type=led
+.model lxz1-px01 d is=7.2217m0 rs=0.1643 n=1.6224 cj0=1.447n iave=500m mfg=lumileds type=led
+.model nscw100 d is=16.88n rs=8.163 n=9.626 cjo=42p xti=200 iave=30m vpk=5 mfg=nichia type=led
+.model nspw500bs d is=.27n rs=5.65 n=6.79 cjo=42p xti=200 iave=30m vpk=5 mfg=nichia type=led
+.model nssw008ct-p1 d is=.23f rs=17.6 n=3.43 cjo=42p xti=120 iave=35m vpk=5 mfg=nichia type=led
+.model nssws108t d is=1.13e-18 rs=14.9 n=3.02 cjo=42p xti=150 iave=35m vpk=5 mfg=nichia type=led
+.model oci-440_880 d is=1.19e-21 n=1.0812 rs=624m cjo=100p iave=350ma mfg=osaoptolight type=led
+.model pt-121-b d is=4.352e-7 rs=.032 n=8.37 cjo=5n xti=100 iave=20a vpk=5.3 mfg=luminus type=led
+.model qtlp690c d is=1e-22 rs=6 n=1.5 cjo=50p xti=100 iave=160m vpk=5 mfg=fairchild type=led
+.model sfh4235 d is=2.37e-21 n=2.28 rs=125m cjo=200p iave=1 bv=1 vpk=1 mfg=osram type=led
+.model sfh4240 d is=1.50099f n=1.570213683 rs=0.762136823 ikf=392.8188163 ibv=0.00000001 nbv=1 ibvl=0.000000001 nbvl=180 bv=24 cjo=1.46e-11 vj=0.56 m=0.055 fc=0.4 tt=0.000000008 eg=1.3 mfg=osram type=led
+.model sfh4248 d is=1.5f n=1.5702 rs=0.762 ikf=392.82 ibv=10n nbv=1 ibvl=1n nbvl=180 bv=24 cjo=14.6p vj=0.56 m=0.055 fc=0.4 tt=8n eg=1.3 mfg=osram type=led
+.model sfh4249 d is=1.50099f n=1.570213683 rs=0.762136823 ikf=392.8188163 ibv=0.00000001 nbv=1 ibvl=0.000000001 nbvl=180 bv=24 cjo=1.46e-11 vj=0.56 m=0.055 fc=0.4 tt=0.000000008 eg=1.3 mfg=osram type=led
+.model sfh4250 d is=7.06922e-19 n=1.381203754 rs=0.775721745 ikf=0.341537995 ibv=0.00000003 nbv=2 ibvl=0.000000003 nbvl=150 bv=14 cjo=4.19e-11 vj=0.23 m=0.07 fc=-0.33 tt=0.000000009 eg=1.46 mfg=osram type=led
+.model sfh4250s d is=4.27627e-18 n=2.891664337 rs=0.958461474 ikf=852.1916114 ibv=0.0000025 nbv=6 ibvl=0.00000025 nbvl=180 bv=30 cjo=2.16e-11 vj=2 m=0.1 fc=0.5 tt=0.00000001 eg=1.46 mfg=osram type=led
+.model sfh4258 d is=7.06922e-19 n=1.381203754 rs=0.775721745 ikf=0.341537995 ibv=0.00000003 nbv=2 ibvl=0.000000003 nbvl=150 bv=14 cjo=4.19e-11 vj=0.23 m=0.07 fc=-0.33 tt=0.000000009 eg=1.46 mfg=osram type=led
+.model sfh4258s d is=4.27627e-18 n=2.891664337 rs=0.958461474 ikf=852.1916114 ibv=0.0000025 nbv=6 ibvl=0.00000025 nbvl=180 bv=30 cjo=2.16e-11 vj=2 m=0.1 fc=0.5 tt=0.00000001 eg=1.46 mfg=osram type=led
+.model sfh4259 d is=7.06922e-19 n=1.381203754 rs=0.775721745 ikf=0.341537995 ibv=0.00000003 nbv=2 ibvl=0.000000003 nbvl=150 bv=14 cjo=4.19e-11 vj=0.23 m=0.07 fc=-0.33 tt=0.000000009 eg=1.46 mfg=osram type=led
+.model sfh4259s d is=4.27627e-18 n=2.891664337 rs=0.958461474 ikf=852.1916114 ibv=0.0000025 nbv=6 ibvl=0.00000025 nbvl=180 bv=30 cjo=2.16e-11 vj=2 m=0.1 fc=0.5 tt=0.00000001 eg=1.46 mfg=osram type=led
+.model stw8b12c d is=1e-23 rs=6 n=2 cjo=840p iave=120m vpk=5 mfg=seoul_semiconductor type=led
+.model tlsv5100green d is=1.7e-20 n=1.8 rs=8 ikf=2m eg=2.4 cjo=50p bv=6 ibv=10u mfg=vishay type=led
+.model tlsv5100red d is=2.1e-19 n=1.8 rs=10 ikf=1.1m eg=2.3 cjo=50p bv=6 ibv=10u mfg=vishay type=led
+.model upbled-470b d is=1m0 n=1.923 rs=32 ikf=42.04 eg=3.6 cjo=63.87p m=.1513 vj=2.02 fc=.5 isr=1.3m nr=3.4meg bv=12 ibv=369.5u tt=432.8n xti=5 iave=30m vpk=8 mfg=microsemi type=led
+.model upwledxx d is=1m0 n=1.923 rs=32.09 eg=3.6 cjo=63.87p m=.1513 vj=2.02 fc=.5 isr=1.304m nr=3.4meg bv=12 ibv=369.5u tt=432.8n xti=5 iave=30m vpk=8 mfg=microsemi type=led
+.model vsmy7852x01 d is=82.34p n=2.917 rs=703m cjo=100p bv=5 ibv=10u vpk=5 iave=250m mfg=vishay type=led
+.model w5ap-lzmz-5k8l d is=3.5e-17 rs=.25 n=3.12 cjo=2.75n xti=150 iave=2 vpk=5 mfg=lumileds type=led
+.model w724c0 d is=1.396n n=5.727 rs=43.6m ikf=.3128 xti=3 eg=3.4 ipk=2.8 diss=11.8 mfg=seoul_semi type=led
+.model xlampmx3 d is=2n n=6.4231 rs=2 xti=55 eg=2.5 iave=350m mfg=cree type=led
+.model xlampmx6 d is=4.3302n n=6.4231 rs=1.0062 xti=55 eg=2.5 iave=1 mfg=cree type=led
+.model xm-lblu d is=5.84635e-11 n=5.220712964 rs=0.228138464 xti=50.63276655 eg=2.5 mfg=cree type=led
+.model xm-lgrn d is=2.91045e-07 n=8.795766407 rs=0.386537629 xti=66.28627594 eg=2.5 mfg=cree type=led
+.model xm-lred d is=1.0659e-13 n=2.780597122 rs=0.545421573 xti=17.9643995 eg=2.1 mfg=cree type=led
+.model xm-lwht d is=1.52113e-11 n=4.936978564 rs=0.209217895 xti=50.86969482 eg=2.5 mfg=cree type=led
+.model xp-e2 d is=5.01824e-16 n=3.36413016 rs=0.244130334 xti=40.92995615 eg=2.5000 vpk=5 iave=1000m mfg=cree type=led
+.model xpe2 d is=5.01824e-16 n=3.36413016 rs=0.244130334 xti=40.92995615 eg=2.5000 vpk=5 iave=1000m mfg=cree type=led

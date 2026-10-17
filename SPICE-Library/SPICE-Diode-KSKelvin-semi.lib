@@ -1,0 +1,565 @@
+* SPICE model library – diode models – keyword "semi"
+* Source: SPICE-Diode-KSKelvin.lib
+*
+.model 10bq015 d is=1.66692e-05 rs=0.0549971 n=1.0339 eg=0.6 xti=0.5 bv=15 ibv=0.001 cjo=4.70891e-10 vj=1.5 m=0.699718 fc=0.5 tt=0
+.model 10bq040 d is=2.13126e-05 rs=0.123203 n=1.53952 eg=0.600841 xti=3.78803 bv=40 ibv=0.0001 cjo=1.53747e-10 vj=1.5 m=0.476132 fc=0.5 tt=0
+.model 10bq100 d is=3.8291n rs=100 n=2 eg=0.600259 xti=0.5 bv=100 ibv=0.0001 cjo=9.19104e-11 vj=1.5 m=0.527626 fc=0.5 tt=1n
+.model 10ctq150 d is=1.63362u rs=0.0221615 n=2 eg=0.6 xti=0.5 bv=150 ibv=5e-05 cjo=4.60092e-10 vj=0.759589 m=0.500823 fc=0.5 tt=1n
+.model 10mq100n d is=1e-07 rs=0.0807081 n=1.65612 eg=0.6 xti=0.5 bv=100 ibv=0.00025 cjo=8.62759e-11 vj=0.4 m=0.43322 fc=0.5 tt=1n
+.model 10tq045 d is=9.81804e-08 rs=0.00739225 n=0.993075 eg=0.6 xti=0.5 bv=45 ibv=0.0001 cjo=1.42434n vj=1.5 m=0.479175 fc=0.5 tt=0
+.model 120lq045 d is=5.90313n rs=0.00455345 n=0.737625 eg=1.3 xti=0.5 bv=45 ibv=0.0001 cjo=1.29866e-08 vj=0.462963 m=0.473356 fc=0.5 tt=1n
+.model 120lq100 d is=0.000544678 rs=0.00277937 n=1.83305 eg=0.6 xti=0.5 bv=100 ibv=0.0001 cjo=6.48813n vj=0.4 m=0.384061 fc=0.5 tt=1n
+.model 12cgq150 d is=2.4863e-05 rs=0.0252929 n=2 eg=1.3 xti=0.5 bv=150 ibv=0.0001 cjo=6.35956e-10 vj=1.5 m=0.562241 fc=0.5 tt=0
+.model 12ctq045 d is=5.30534n rs=0.014271 n=0.891364 eg=0.6 xti=0.5 bv=45 ibv=0.0001 cjo=7.11199e-10 vj=1.5 m=0.484798 fc=0.5 tt=0
+.model 12cwq04fn d is=1.05439u rs=0.0173547 n=1.07052 eg=0.6 xti=0.5 bv=40 ibv=0.0001 cjo=1.51803n vj=0.4 m=0.516518 fc=0.5 tt=1n
+.model 12tq045 d is=1.61329p rs=0.01 n=0.5 eg=0.600004 xti=0.5 bv=45 ibv=0.0001 cjo=1.59319n vj=1.5 m=0.52241 fc=0.5 tt=0
+.model 15cgq100 d is=8.74079e-05 rs=0.0180811 n=2 eg=1.3 xti=3.01057 bv=100 ibv=0.0001 cjo=1.08792n vj=0.846153 m=0.498115 fc=0.5 tt=0
+.model 15clq100 d is=6.44968e-05 rs=0.014091 n=2 eg=0.996757 xti=0.5 bv=100 ibv=0.005 cjo=1.38463n vj=0.4 m=0.466344 fc=0.5 tt=0
+.model 15eth06 d is=2.2756e-08 rs=0.0177161 n=2 eg=0.6 xti=0.500021 bv=600 ibv=0.0001 cjo=1.6387e-10 vj=0.71953 m=0.37991 fc=0.5 tt=1n
+.model 15ljq100 d is=6.15446e-05 rs=0.0153982 n=1.88088 eg=1.3 xti=3.60437 bv=100 ibv=0.0001 cjo=1.08848n vj=0.4 m=0.371667 fc=0.5 tt=1n
+.model 160cmq045 d is=1.34755e-11 rs=0.00275782 n=0.5 eg=0.6 xti=0.5 bv=1000 ibv=0.0001 cjo=4.75072n vj=1.5 m=0.542103 fc=0.5 tt=1n
+.model 16cyq150c d is=1.71508e-05 rs=0.0265393 n=2 eg=1.3 xti=2.78486 bv=150 ibv=0.0001 cjo=9.98822e-10 vj=0.4 m=0.484035 fc=0.5 tt=1n
+.model 16syq060c d is=1.66638e-08 rs=0.0183025 n=0.65508 eg=0.6 xti=0.5 bv=60 ibv=0.0001 cjo=6.83071n vj=0.4 m=0.497741 fc=0.5 tt=1n
+.model 16yq045c d is=4.98611e-07 rs=0.0130029 n=0.98534 eg=1.3 xti=2.9591 bv=45 ibv=0.0001 cjo=6.92544n vj=0.537519 m=0.490188 fc=0.5 tt=1n
+.model 16yq150c d is=2.63267e-05 rs=0.0169253 n=2 eg=1.3 xti=2.95537 bv=150 ibv=0.0001 cjo=1.74923n vj=0.4 m=0.470085 fc=0.5 tt=1n
+.model 18tq045 d is=1.97424e-13 rs=0.00628392 n=0.530234 eg=0.6 xti=0.05 bv=45 ibv=0.0001 cjo=8.24939n vj=1.5 m=0.462568 fc=0.5 tt=0
+.model 1n1200c d is=9.94u rs=0.00623 cjo=4.528e-10 vj=0.5189 tt=7.237e-07 m=0.4269 bv=100 n=2 eg=1.11 xti=3 fc=0.5 ibv=0.0001 vpk=100v mfg=motorola type=silicon
+.model 1n1206a d is=17.1n rs=3.5m n=1.7 bv=600 ibv=397u cjo=495p vj=0.75 m=0.333 tt=4.32u vpk=600v iave=12 mfg=irf type=silicon
+.model 1n1206c d is=9.94u rs=0.00653 cjo=4.528e-10 vj=0.5189 tt=7.237e-07 m=0.4269 bv=100 n=2 eg=1.11 xti=3 fc=0.5 ibv=0.0001
+.model 1n34a d is=2.6u rs=6.5 n=1.6 cjo=0.8p eg=0.67 bv=25 ibv=0.003 type=gepunctualcontact
+.model 1n4001 d is=14.11n n=1.984 rs=33.89m ikf=94.81 xti=3 eg=1.11 cjo=25.89p m=.44 vj=.3245 fc=.5 bv=75 ibv=10u tt=5.7u iave=1 vpk=50 mfg=gi type=silicon
+.model 1n4002 d is=14.11n n=1.984 rs=33.89m ikf=94.81 xti=3 eg=1.110 cjo=51.17p m=.2762 vj=.3905 fc=.5 isr=100.0p nr=2 bv=100.1 ibv=10 tt=4.761u iave=1 vpk=100 mfg=gi type=silicon
+.model 1n4007 d is=7.02767n rs=0.0341512 n=1.80803 eg=1.05743 xti=5 bv=1000 ibv=5e-08 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1e-07 mfg=onsemi type=silicon
+.model 1n4007-ltspice d is=90p rs=40m cjo=30p n=1.4 tt=5u iave=1 vpk=1000 mfg=diodes_inc. type=silicon
+.model 1n4106 d bv=12 cjo=107.101p ibv=50u is=5.72393f m=501.929m rs=100 vj=750m
+.model 1n4148 d is=2.52n rs=.568 n=1.752 cjo=4p m=.4 tt=20n iave=200m vpk=75 mfg=onsemi type=silicon
+.model 1n4448hwt d is=137f rs=0.168 bv=80 ibv=100n cjo=3.56p m=0.333 n=1.11 tt=5.76n vpk=80v iave=0.25 tt=4ns mfg=diodesinc type=silicon
+.model 1n5806 d is=23.3n rs=33.7m n=1.67 bv=150 ibv=1u cjo=66.3p vj=.75 m=.333 tt=43.2n iave=5 vpk=150 type=silicon
+.model 1n5806us d is=13.14n n=1.607 rs=28.6m ikf=.336 xti=3 eg=1.11 cjo=60.7p isr=168.5n bv=160 ibv=100u tt=36.1n vpk=150 iave=5 mfg=microsemi
+.model 1n6513 d is=0.0000005 n=7.2 rs=0.14 tt=70n cj0=56.64p vj=1.67 m=0.5 eg=1.11 xti=3 fc=0.5 bv=2200 ibv=100u iave=2 vpk=2000 mfg=vmi type=silicon
+.model 1n6515 d is=0.5u n=13.5 rs=0.18 tt=70n cj0=35.24p vj=3.29 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=1.5 vpk=3000 mfg=vmi type=silicon
+.model 1n6517 d is=0.5u n=19.2 rs=0.36 tt=70n cj0=22.76p vj=6.41 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=1 vpk=5000 mfg=vmi type=silicon
+.model 1n6519 d is=0.5u n=37 rs=0.75 tt=70n cj0=8.87p vj=14.03 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.5 vpk=10000 mfg=vmi type=silicon
+.model 1n6521 d is=0.25u n=6.8 rs=29 tt=70n cj0=11.94p vj=1.57 m=0.5 eg=1.11 xti=3 fc=0.5 bv=2200 ibv=100u iave=0.6 vpk=2000 mfg=vmi type=silicon
+.model 1n6523 d is=0.25u n=16 rs=0.48 tt=70n cj0=4.77p vj=3.81 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=0.25 vpk=3000 mfg=vmi type=silicon
+.model 1n6525 d is=0.25u n=20.4 rs=0.9 tt=70n cj0=3.1p vj=6.73 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.15 vpk=5000 mfg=vmi type=silicon
+.model 1n6527 d is=0.25u n=38.4 rs=1.8 tt=70n cj0=1.45p vj=17.06 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.15 vpk=10000 mfg=vmi type=silicon
+.model 1n6529 d is=0.1u n=8.4 rs=0.8 tt=70n cj0=4.77p vj=1.23 m=0.5 eg=1.11 xti=3 fc=0.5 bv=2200 ibv=100u iave=0.25 vpk=2000 mfg=vmi type=silicon
+.model 1n6531 d is=0.1u n=16.3 rs=1 tt=70n cj0=1.92p vj=6.21 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=0.15 vpk=3000 mfg=vmi type=silicon
+.model 1n6533 d is=0.1u n=22.8 rs=3.8 tt=70n cj0=1.44p vj=7.17 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.05 vpk=5000 mfg=vmi type=silicon
+.model 1n6535 d is=0.1u n=54 rs=14 tt=70n cj0=0.68p vj=16.15 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.025 vpk=10000 mfg=vmi type=silicon
+.model 1n914 d is=2.52n rs=.568 n=1.752 cjo=4p m=.4 tt=20n iave=200m vpk=75 mfg=onsemi type=silicon
+.model 1sr154-400 d is=534.77p n=1.6239 rs=50.532m ikf=4.0010 cjo=23.729p m=.31942 vj=.41083 isr=2.4181n nr=2.5000 bv=500 tt=4.1000u iave=1 vpk=500 mfg=rohm type=rectifier
+.model 1sr154-600 d is=1.1191n n=1.6862 rs=57.049m ikf=7.0701 cjo=17.770p m=.36215 vj=.43005 isr=1.6686n nr=2.5000 bv=750 tt=4.8000u iave=1 vpk=750 mfg=rohm type=rectifier
+.model 1sr156-400 d is=72.169n n=2.0427 rs=75.306m ikf=51.357m cjo=33.986p m=.51481 vj=.47751 isr=512.43f bv=500 tt=245.00n iave=1 vpk=500 mfg=rohm type=rectifier
+.model 1ss226 d is=5.157n n=1.903 rs=.7407 ikf=0 xti=3 eg=1.11 cjo=879.9f m=.1335 vj=11.85 fc=.5 isr=3.476n nr=1.945 bv=85 ibv=100u tt=2.308n iave=100m vpk=80 mfg=toshiba type=silicon
+.model 1ss355vm-ltspice d is=0.3971n n=1.7916 rs=1.2943 ikf=9.0759m cjo=659.70f m=0.1145 vj=2.3974 isr=6.1486n nr=1.91 bv=90 tt=4.5591n iave=0.1 vpk=90 mfg=rohm type=silicon
+.model 1ss355vm-mpkopec d is=1.7962n n=1.7555 rs=.55113 ikf=72.153m cjo=1.3304p m=.11174 vj=4.1020 isr=3.2239n nr=4.0000 bv=90 tt=11.542n iave=100m vpk=90 mfg=rohm type=switching
+.model 1ss380vm d is=1.2165p n=1.3497 rs=.13668 ikf=12.432m cjo=2.2716p m=.31833 vj=.50219 isr=4.2907p nr=4.6 bv=80 tt=3.6810u iave=0.1 vpk=80 mfg=rohm type=silicon
+.model 1ss390sm d is=12.658f n=1.1755 rs=102.16m ikf=33.250m eg=1.130 cjo=2.0600p m=0.3054 vj=0.5000 isr=967.35f nr=3.9715 bv=35 tt=152.95n iave=0.1 vpk=35 mfg=rohm type=silicon
+.model 1ss400sm-ltspice d is=1.7962n n=1.7555 rs=.55113 ikf=72.153m cjo=1.3304p m=.11174 vj=4.1020 isr=3.2239n nr=4.0000 bv=90 tt=11.542n iave=0.1 vpk=90 mfg=rohm type=silicon
+.model 1ss400sm-mpkopec d is=1.7962n n=1.7555 rs=.55113 ikf=72.153m cjo=1.3304p m=.11174 vj=4.1020 isr=3.2239n nr=4.0000 bv=90 tt=11.542n iave=100m vpk=90 mfg=rohm type=switching
+.model 200td120u d is=1.4976e-11 rs=0.007312 n=2 eg=0.6 xti=4 bv=1200 ibv=0.0001 cjo=1.8n vj=0.4 m=0.45418 fc=0.5 tt=1n
+.model 20cjq030 d is=7.45927n rs=0.0632601 n=0.89875 eg=1.3 xti=4 bv=30 ibv=0.0001 cjo=2.9346e-10 vj=0.4 m=0.427299 fc=0.5 tt=0
+.model 20clq045 d is=5.55194e-10 rs=0.01 n=0.736126 eg=0.6 xti=0.5 bv=45 ibv=0.005 cjo=2.42073n vj=0.470122 m=0.477502 fc=0.5 tt=0
+.model 20ets12 d is=8.28224n rs=0.00791517 n=1.61051 eg=1.12793 xti=0.5 bv=1000 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 20ets12a+3s d is=2.797e-10 rs=0.0113232 n=1.38813 eg=1.07556 xti=4 bv=1200 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 20ets12avg d is=3.14987e-10 rs=0.01 n=1.37516 eg=1.06967 xti=4 bv=1200 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 22gq100 d is=5.91885e-14 rs=0.0197462 n=0.527335 eg=0.6 xti=0.5 bv=100 ibv=0.0001 cjo=4.67713n vj=0.4 m=0.513011 fc=0.5 tt=0
+.model 30cljq045 d is=6.17168e-07 rs=0.0202821 n=1.08809 eg=1.3 xti=3.29182 bv=45 ibv=0.0001 cjo=1.24067n vj=0.408846 m=0.481835 fc=0.5 tt=0
+.model 30cljq150 d is=1.30646u rs=0.0239928 n=2 eg=1.3 xti=3.05712 bv=150 ibv=0.0001 cjo=3.73861e-10 vj=0.4 m=0.457852 fc=0.5 tt=0
+.model 30cth02 d is=1f rs=0.01 n=0.77819 eg=1.3 xti=4 bv=200 ibv=0.0001 cjo=4.06302e-10 vj=0.4 m=0.3385 fc=0.5 tt=1e-07
+.model 30ctq060s d is=0.001 rs=0.00753336 n=2.31312 eg=0.510131 xti=0.497683 bv=60 ibv=0.0001 cjo=1.18606n vj=1.5 m=0.494139 fc=0.5 tt=1n
+.model 30eph06 d is=3.75476e-10 rs=0.0182211 n=2 eg=0.626585 xti=0.500695 bv=600 ibv=0.0001 cjo=3.68339e-10 vj=1.27928 m=0.404368 fc=0.5 tt=1.23518e-08
+.model 30ljq045 d is=3.01029e-08 rs=0.00758833 n=0.877045 eg=0.6 xti=0.5 bv=45 ibv=0.0001 cjo=2.65012n vj=1.18451 m=0.511241 fc=0.5 tt=0
+.model 30ljq100 d is=2.8036e-05 rs=0.0100392 n=2 eg=0.6 xti=0.5 bv=100 ibv=0.0001 cjo=1.41531n vj=0.4 m=0.47998 fc=0.5 tt=0
+.model 30ljq150 d is=4.79361u rs=0.0108545 n=2 eg=1.3 xti=0.502388 bv=150 ibv=0.0001 cjo=9.09704e-10 vj=0.4 m=0.462283 fc=0.5 tt=0
+.model 30scljq030 d is=3.04923u rs=0.0123656 n=1.0506 eg=1.3 xti=2.9944 bv=30 ibv=0.0001 cjo=1.61571n vj=0.442068 m=0.472758 fc=0.5 tt=0
+.model 30sljq030 d is=2.08649e-07 rs=0.00676047 n=0.86202 eg=0.6 xti=0.5 bv=30 ibv=0.0001 cjo=5.85622n vj=0.4 m=0.485403 fc=0.5 tt=0
+.model 32ctq030 d is=2.21746e-11 rs=0.01 n=0.5 eg=0.6 xti=2.38672 bv=30 ibv=0.00175 cjo=2.11811n vj=1.5 m=0.499425 fc=0.5 tt=0
+.model 32ctq030h d is=1f rs=0.01 n=0.5 eg=1.07785 xti=4 bv=30 ibv=0.00175 cjo=2.11811n vj=1.5 m=0.499425 fc=0.5 tt=0
+.model 35cgq100 d is=1f rs=0.01681 n=0.5 eg=0.608064 xti=0.500208 bv=100 ibv=0.0001 cjo=2.00581n vj=1.24629 m=0.513186 fc=0.5 tt=1n
+.model 35clq045 d is=2.76847e-07 rs=0.00674255 n=1.0155 eg=1.3 xti=4 bv=45 ibv=0.0001 cjo=2.76301n vj=1.01389 m=0.489865 fc=0.5 tt=0
+.model 40cpq050 d is=2.4532e-11 rs=0.0071 n=0.5 eg=0.6 xti=0.5 bv=1000 ibv=0.0001 cjo=2.49633n vj=1.5 m=0.483473 fc=0.5 tt=1n
+.model 40ctq045 d is=3.357e-08 rs=0.01 n=0.5 eg=1.04653 xti=0.957426 bv=45 ibv=0.00025 cjo=1.51919e-08 vj=0.4 m=0.704417 fc=0.5 tt=1n
+.model 40eps08 d is=1f rs=0.00426912 n=0.926332 eg=0.6 xti=0.5 bv=800 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 40eps12 d is=1f rs=0.00426912 n=0.926332 eg=0.6 xti=0.5 bv=1200 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 40eps16 d is=1f rs=0.00426912 n=0.926332 eg=0.6 xti=0.5 bv=1600 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 50wq06fn d is=1f rs=0.0205874 n=0.5 eg=1.3 xti=0.5 bv=1000 ibv=0.0001 cjo=8.86241e-10 vj=0.899259 m=0.559144 fc=0.5 tt=1n
+.model 5eq100 d is=8.77154e-05 rs=0.0202145 n=2 eg=0.815312 xti=3.9995 bv=100 ibv=0.005 cjo=1.06148n vj=0.79108 m=0.475554 fc=0.5 tt=0
+.model 60lq045 d is=1e-07 rs=0.00252226 n=0.914851 eg=0.6 xti=0.5 bv=45 ibv=0.0001 cjo=6.87655n vj=0.4 m=0.408789 fc=0.5 tt=0
+.model 60lq100 d is=0.001 rs=0.0026041 n=1.79037 eg=0.6 xti=0.5 bv=100 ibv=0.0001 cjo=4.12278n vj=0.4 m=0.477205 fc=0.5 tt=0
+.model 6cwq04fn d is=7.48131e-13 rs=0.0287717 n=0.540086 eg=0.6 xti=0.5 bv=40 ibv=0.0001 cjo=5.09354e-10 vj=0.795245 m=0.513157 fc=0.5 tt=1n
+.model 6cwq10fn d is=1.92816u rs=0.0227346 n=2 eg=0.6 xti=0.5 bv=100 ibv=0.001 cjo=2.9028e-10 vj=0.4 m=0.453836 fc=0.5 tt=1n
+.model 6tq045 d is=1.1357e-08 rs=0.0148614 n=0.895316 eg=1.3 xti=4 bv=45 ibv=0.0001 cjo=7.53573e-10 vj=1.5 m=0.502931 fc=0.5 tt=0
+.model 75lq150 d is=6.47147e-05 rs=0.00457083 n=2 eg=0.6 xti=0.5 bv=150 ibv=0.0001 cjo=3.61923n vj=0.4 m=0.479638 fc=0.5 tt=0
+.model 75slq030 d is=1.05375e-05 rs=0.00235787 n=0.994404 eg=1.3 xti=0.5 bv=30 ibv=0.0001 cjo=1.14291e-08 vj=0.4 m=0.46991 fc=0.5 tt=0
+.model 80clq150 d is=3.00965e-05 rs=0.00595685 n=2 eg=1.3 xti=3.40773 bv=150 ibv=0.0001 cjo=1.45286n vj=0.4 m=0.415374 fc=0.5 tt=0
+.model 80ebu02 d is=6.10239u rs=0.00151476 n=2 eg=0.1 xti=0.0005 bv=200 ibv=50u cjo=1.77691n vj=0.4 m=0.495417 fc=0.5 tt=1n
+.model 8eq045 d is=1.8026e-05 rs=0.0138308 n=1.50131 eg=0.689509 xti=4 bv=45 ibv=0.005 cjo=1.98488n vj=0.711167 m=0.477336 fc=0.5 tt=0
+.model 8eth06 d is=6.92843e-10 rs=0.121017 n=2 eg=1.3 xti=0.528448 bv=600 ibv=0.0001 cjo=1.56732e-10 vj=0.4 m=0.404011 fc=0.5 tt=1n
+.model 8ews08 d is=1.04304e-07 rs=0.0103888 n=2 eg=1.28885 xti=3.00461 bv=800 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 8ews10 d is=1.17378e-07 rs=0.0104837 n=2 eg=1.29966 xti=3.06473 bv=1000 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 8ews12 d is=1e-07 rs=0.0115955 n=1.9747 eg=0.6 xti=0.5 bv=1200 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1n
+.model 90clq100 d is=0.00032603 rs=0.00931445 n=2 eg=1.3 xti=0.5 bv=100 ibv=0.0001 cjo=3.07785n vj=0.4 m=0.479989 fc=0.5 tt=0
+.model aa112 d is=1.2u n=1.4 rs=80 cjo=1.2p tt=18n eg=0.69 type=germanium
+.model aeg_aa112 d is=2.777779u rs=35.67365 bv=20 ibv=0.0022 cjo=1p tt=1p m=0.5 vj=1 n=2.172326 eg=0.67 fc=0.5 type=germanium
+.model aeg_aa117 d is=1.111111e-05 rs=46.02731 bv=115 ibv=0.006 cjo=1p tt=1p isr=1.581139u m=0.5 vj=0.5 n=3.542911 ikf=0.03 nr=29.56001 eg=0.67 fc=0.5 xti=3.012615 nbv=14.78 ibvl=0.00007 nbvl=22.17001 type=germanium
+.model bas116 d bv=75 cjo=1.83p eg=1.11 fc=0.5 ibv=100u is=1.48e-13 m=0.262 n=1.33 rs=8.48e-01 tt=8.66n vj=3.44e-01 xti=3 type=silicon
+.model bas116hy d is=1.2165p n=1.3497 rs=.13668 ikf=12.432m cjo=2.2716p m=.31833 vj=.50219 isr=4.2907p nr=4.6 bv=100 tt=3.6810u iave=0.215 vpk=100 mfg=rohm type=silicon
+.model bas16hy d is=10.825f n=0.9242 rs=896.25m ikf=1.7426u cjo=640.32f m=0.0662 vj=0.6504 isr=9.7471n bv=100 tt=4.5428n iave=0.215 vpk=100 mfg=rohm type=silicon
+.model bas21 d is=41.7n rs=0.270 bv=200 ibv=100n cjo=2.98p m=0.333 n=2.35 tt=72.0n vpk=200v iave=0.400a mfg=diodesinc type=silicon
+.model bas216 d is=6.0289n n=2.1283 rs=1.0000m ikf=37.638m cjo=593.63f m=.1 vj=.68774 isr=2.0646n nr=4.9950 bv=113.60 ibv=10 tt=4.5n mfg=nxp type=silicon
+.model bas21hy d is=83.537p n=1.2908 rs=.56205 ikf=860.47u eg=0.9100 cjo=2.4943p m=.2624 vj=.5035 isr=259.80p nr=3.8000 bv=250.00 tt=28.590n trs1=-1.5000m tikf=0.0120 iave=0.2 vpk=250 mfg=rohm type=silicon
+.model bas316 d is=6.0289n n=2.1283 rs=1m ikf=37.638m cjo=593.63f m=.1 vj=.68774 isr=2.0646n nr=4.995 bv=113.6 ibv=10 tt=4.5n iave=200m vpk=75 mfg=nxp type=silicon
+.model bas516 d is=2.9891n n=1.9303 rs=0.78115 ikf=0.085491m cjo=383.41f m=.1 vj=9.99 isr=6.8038n nr=4.9950 bv=130.38 ibv=10 tt=3.0297n
+.model bav170hy d is=1.2165p n=1.3497 rs=.13668 ikf=12.432m cjo=2.2716p m=.31833 vj=.50219 isr=4.2907p nr=4.6 bv=90 tt=3.6810u iave=0.215 vpk=90 mfg=rohm type=silicon
+.model bav199hy d is=1.2165p n=1.3497 rs=.13668 ikf=12.432m cjo=2.2716p m=.31833 vj=.50219 isr=4.2907p nr=4.6 bv=100 tt=3.6810u iave=0.215 vpk=100 mfg=rohm type=silicon
+.model bav199um d is=1.2165p n=1.3497 rs=.13668 ikf=12.432m cjo=2.2716p m=.31833 vj=.50219 isr=4.2907p nr=4.6 bv=100 tt=3.6810u iave=0.215 vpk=100 mfg=rohm type=silicon
+.model bav70hy d is=413.50p n=1.6925 rs=.82236 ikf=1.8661 cjo=564.00f m=.05352 vj=0.5705 isr=3.2850n nr=2.05 bv=90 tt=2.9419n trs1=-6.9700m iave=0.215 vpk=90 mfg=rohm type=silicon
+.model bav99hy d is=10.825f n=0.9242 rs=896.25m ikf=1.7426u cjo=640.32f m=0.0662 vj=0.6504 isr=9.7471n bv=100 tt=4.5428n iave=0.215 vpk=100 mfg=rohm type=silicon
+.model baw156hy d is=1.2165p n=1.3497 rs=.13668 ikf=12.432m cjo=2.2716p m=.31833 vj=.50219 isr=4.2907p nr=4.6 bv=100 tt=3.6810u iave=0.215 vpk=100 mfg=rohm type=silicon
+.model baw56hy d is=10.825f n=0.9242 rs=896.25m ikf=1.7426u cjo=640.32f m=0.0662 vj=0.6504 isr=9.7471n bv=100 tt=4.5428n iave=0.215 vpk=100 mfg=rohm type=silicon
+.model byw96e d is=59.77971u n=3.61403 rs=52.308m ikf=0.566356 cjo=27.010p m=.43978 vj=.81612 isr=447.9139n nr=2.54303 bv=1.2003e3 ibv=2.5910 tt=295.54n iave=3 vpk=1000 mfg=nxp type=silicon
+.model d18-ltwiki d is=4u n=2.15 rs=17 m=0.124 vj=0.1 cjo=0.67pf ibv=2u bv=20 tt=5n eg=0.67 xti=3 iave=16m vpk=20 mfg=ussr type=germanium
+.model d18-volval d is=4u n=2.15 rs=17 m=0.124 vj=0.1 cjo=0.67pf ibv=2u bv=20 tt=100n eg=0.67 xti=3 iave=16m vpk=20 mfg=ussr type=germanium
+.model d1n4007 d is=7.02767n rs=0.0341512 n=1.80803 eg=1.05743 xti=5 bv=1000 ibv=5e-08 cjo=1e-11 vj=0.7 m=0.5 fc=0.5 tt=1e-07 mfg=onsemi type=silicon
+.model d237a d is=31.69p n=1 rs=91.07m cjo=13p tt=721.3n m=0.25 vj=0.75 fc=0.5 bv=200 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model d237b d is=31.69p rs=91.07m n=1 xti=3 eg=1.11 bv=400.1 ibv=158.5u cjo=15p vj=.75 m=.3333 fc=.5 tt=721.3n mfg=ussr type=silicon
+.model d237e d is=28.72p rs=51.27m n=1 xti=3 eg=1.11 bv=200.1 ibv=158.5u cjo=15p vj=.75 m=.3333 fc=.5 tt=721.3n mfg=ussr type=silicon
+.model d237j d is=28.72p rs=51.27m n=1 xti=3 eg=1.11 bv=400.1 ibv=158.5u cjo=15p vj=.75 m=.3333 fc=.5 tt=721.3n mfg=ussr type=silicon
+.model d237v d is=76.09p rs=.4451 n=1 xti=3 eg=1.11 bv=600.1 ibv=158.5u cjo=15p vj=.75 m=.3333 fc=.5 tt=721.3n mfg=ussr type=silicon
+.model d310 d is=2.5u n=1.437 rs=0.07 m=0.314 vj=1.65 cjo=14pf ibv=5u bv=20 tt=130n eg=0.67 xti=3 iave=500m vpk=20 mfg=ussr type=germanium
+.model d311a-ltwiki d is=8u n=1.483 rs=1.85 m=0.22 vj=0.1 cjo=3.5pf ibv=1.00e-04 bv=30 tt=20n eg=0.67 xti=3 iave=80m vpk=30 mfg=ussr type=germanium
+.model d311a-volval d is=8u n=1.483 rs=1.85 m=0.22 vj=0.1 cjo=3.5pf ibv=1.00e-04 bv=30 tt=72n eg=0.67 xti=3 iave=80m vpk=30 mfg=ussr type=germanium
+.model d_njl1302 d is=5.17122e-08 rs=0.0324668 n=1.78236 eg=1.12011 xti=0.5 bv=200 ibv=2u cjo=5.59229e-11 vj=0.4 m=0.346657 fc=0.5 tt=2.59685e-08
+.model d_njl3281 d is=5.17122e-08 rs=0.0324668 n=1.78236 eg=1.12011 xti=0.5 bv=200 ibv=2u cjo=5.59229e-11 vj=0.4 m=0.346657 fc=0.5 tt=2.59685e-08
+.model da2jf81 d is=10.55e-10 n=1.85 rs=320.8e-2 ikf=98.0932u cjo=552.75f m=0.49251 vj=0.75 fc=0.5 isr=8.238205e-11 nr=1.7 bv=900 ibv=100u tt=22n eg=1.11 xti=2.5 trs1=0.001 vpk=800v iave=200ma mfg=panasonic type=silicon
+.model da2jf8100l d is=10.55e-10 n=1.85 rs=320.8e-2 ikf=98.0932u cjo=552.75f m=0.49251 vj=0.75 fc=0.5 isr=8.238205e-11 nr=1.7 bv=900 ibv=100u tt=22n eg=1.11 xti=2.5 trs1=0.001 vpk=800v iave=200ma mfg=panasonic type=silicon
+.model dan202k d is=936.79p n=1.7211 rs=1.0196 ikf=28.904 cjo=1.7934p m=.18986 vj=.86529 isr=2.0505n nr=2.4000 bv=80 tt=37.000n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dan202um-ltspice d is=1.0978n n=1.7176 rs=.32884 ikf=10.057m eg=1.09 cjo=740.00f m=.10237 vj=.5009 isr=3.7486n nr=2.6 bv=80 tt=37.000n tikf=0.005 iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dan202um-mpkopec d is=936.79p n=1.7211 rs=1.0196 ikf=28.904 cjo=1.7934p m=.18986 vj=.86529 isr=2.0505n nr=2.4000 bv=80 tt=37.000n iave=100m vpk=80 mfg=rohm type=switching
+.model dan217 d is=936.79p n=1.7211 rs=1.0196 ikf=28.904 cjo=1.7934p m=.18986 vj=.86529 isr=2.0505n nr=2.4000 bv=80 tt=37.000n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dan217um-ltspice d is=2.6342n n=1.8236 rs=.76118 ikf=.10618 cjo=661.82f m=.11919 vj=5.5076 isr=5.7268n bv=80 tt=15n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dan217um-mpkopec d is=2.6342n n=1.8236 rs=.76118 ikf=.10618 cjo=661.82f m=.11919 vj=5.5076 isr=5.7268n bv=80 tt=15n iave=100m vpk=80 mfg=rohm type=switching
+.model dan222m d is=936.79p n=1.7211 rs=1.0196 ikf=28.904 cjo=1.7934p m=.18986 vj=.86529 isr=2.0505n nr=2.4000 bv=80 tt=37.000n iave=100m vpk=80 mfg=rohm type=switching
+.model dan222wm-ltspice d is=1.2872n n=1.7918 rs=.90633 ikf=83.541m cjo=628.00f m=.12181 vj=7.4703 isr=3.4924n nr=2.3000 bv=80 tt=27.411n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dan222wm-mpkopec d is=1.2872n n=1.7918 rs=.90633 ikf=83.541m cjo=628.00f m=.12181 vj=7.4703 isr=3.4924n nr=2.3000 bv=80 tt=27.411n iave=100m vpk=80 mfg=rohm type=switching
+.model dan235e d is=23.796f n=1.2117 rs=.40149 ikf=19.882 cjo=1.9328p m=0.2918 vj=0.5005 isr=789.34f nr=4.95 bv=35 tt=72.000n iave=0.1 vpk=35 mfg=rohm type=silicon
+.model dan235u d is=23.796f n=1.2117 rs=.40149 ikf=19.882 cjo=1.9328p m=0.2918 vj=0.5005 isr=789.34f nr=4.95 bv=35 tt=72.000n iave=0.1 vpk=35 mfg=rohm type=silicon
+.model dap202k d is=12.022p n=1.2200 rs=.1833 ikf=1.4153m cjo=3.1126p m=.2257 vj=.82009 isr=5.3768n nr=2.3000 bv=80 tt=21.700n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dap202um-ltspice d is=199.70p n=1.4778 rs=372.25m ikf=3.7689m eg=0.95 cjo=4.9977p m=0.5422 vj=0.5005 isr=631.70p nr=1.8 bv=80 tt=27.500n tikf=0.015 iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dap202um-mpkopec d is=3.8311p n=1.1556 rs=.16041 ikf=1.0156m cjo=2.9921p m=.17376 vj=.80381 isr=1.0089n nr=2.5000 bv=80 tt=27.500n iave=100m vpk=80 mfg=rohm type=switching
+.model dap222m d is=3.8311p n=1.1556 rs=.16041 ikf=1.0156m cjo=2.9921p m=.17376 vj=.80381 isr=1.0089n nr=2.5000 bv=80 tt=27.500n iave=100m vpk=80 mfg=rohm type=switching
+.model dap222wm-ltspice d is=3.8311p n=1.1556 rs=.16041 ikf=1.0156m cjo=2.9921p m=.17376 vj=.80381 isr=1.0089n nr=2.5000 bv=80 tt=27.500n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model dap222wm-mpkopec d is=3.8311p n=1.1556 rs=.16041 ikf=1.0156m cjo=2.9921p m=.17376 vj=.80381 isr=1.0089n nr=2.5000 bv=80 tt=27.500n iave=100m vpk=80 mfg=rohm type=switching
+.model dap236u d is=12.772f n=1.1702 rs=27.753m ikf=.17303 cjo=1.6448p m=.27305 vj=.73153 isr=4.5345p bv=35 tt=65.000n iave=0.1 vpk=35 mfg=rohm type=silicon
+.model dfls160 d is=736n rs=63.0m vpk=60.0 ibv=100u cjo=163p m=0.333 n=1.01 tt=14.4n iave=1
+.model di_2w005g d is=28.4n rs=21.1m bv=50.0 ibv=5.00u cjo=29.6p m=0.333 n=1.95 tt=4.32u vpk=50.0v iave=2.00a mfg=diodesinc type=silicon
+.model di_2w01g d is=28.4n rs=21.1m bv=100 ibv=5.00u cjo=29.6p m=0.333 n=1.95 tt=4.32u vpk=100v iave=2.00a mfg=diodesinc type=silicon
+.model di_2w02g d is=28.4n rs=21.1m bv=200 ibv=5.00u cjo=29.6p m=0.333 n=1.95 tt=4.32u vpk=200v iave=2.00a mfg=diodesinc type=silicon
+.model di_2w04g d is=28.4n rs=21.1m bv=400 ibv=5.00u cjo=29.6p m=0.333 n=1.95 tt=4.32u vpk=400v iave=2.00a mfg=diodesinc type=silicon
+.model di_2w06g d is=28.4n rs=21.1m bv=600 ibv=5.00u cjo=29.6p m=0.333 n=1.95 tt=4.32u vpk=600v iave=2.00a mfg=diodesinc type=silicon
+.model di_2w08g d is=28.4n rs=21.1m bv=800 ibv=5.00u cjo=29.6p m=0.333 n=1.95 tt=4.32u vpk=800v iave=2.00a mfg=diodesinc type=silicon
+.model di_2w10g d is=28.4n rs=21.1m bv=1.00k ibv=5.00u cjo=29.6p m=0.333 n=1.95 tt=4.32u vpk=1.00kv iave=2.00a mfg=diodesinc type=silicon
+.model di_bas21 d is=41.7n rs=0.270 bv=200 ibv=100n cjo=2.98p m=0.333 n=2.35 tt=72n vpk=200v iave=0.4 mfg=diodesinc type=silicon
+.model di_bas21t d is=401n rs=0.105 bv=200 ibv=100n cjo=5.00p m=0.333 n=2.87 tt=72n vpk=200v iave=0.4 mfg=diodesinc type=silicon
+.model di_bas21w d is=114n rs=0.172 bv=200 ibv=100n cjo=2.98p m=0.333 n=2.58 tt=72n vpk=200v iave=0.4 mfg=diodesinc type=silicon
+.model di_df10m d is=4.42n rs=42.0m bv=1.00k ibv=10.0u cjo=65.0p m=0.333 n=1.70 tt=4.32u vpk=1.00kv iave=1.00a mfg=diodesinc type=silicon
+.model di_df10s d is=4.42n rs=42.0m bv=1.00k ibv=10.0u cjo=65.0p m=0.333 n=1.70 tt=4.32u vpk=1.00kv iave=1.00a mfg=diodesinc type=silicon
+.model di_rs3a d is=200n rs=25.4m bv=50.0 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=50.0v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3ab d is=200n rs=25.4m bv=50.0 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=50.0v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3b d is=200n rs=25.4m bv=100 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=100v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3bb d is=200n rs=25.4m bv=100 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=100v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3d d is=200n rs=25.4m bv=200 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=200v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3db d is=200n rs=25.4m bv=200 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=200v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3g d is=200n rs=25.4m bv=400 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=400v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3gb d is=200n rs=25.4m bv=400 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=216n vpk=400v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3j d is=200n rs=25.4m bv=600 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=360n vpk=600v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3jb d is=200n rs=25.4m bv=600 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=360n vpk=600v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3k d is=200n rs=25.4m bv=800 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=720n vpk=800v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3kb d is=200n rs=25.4m bv=800 ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=720n vpk=800v iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3m d is=200n rs=25.4m bv=1.00k ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=720n vpk=1.00kv iave=3.00a mfg=diodesinc type=silicon
+.model di_rs3mb d is=200n rs=25.4m bv=1.00k ibv=5.00u cjo=92.5p m=0.333 n=2.23 tt=720n vpk=1.00kv iave=3.00a mfg=diodesinc type=silicon
+.model di_us1a d is=667n rs=72.0m bv=50.0 ibv=5.00u cjo=37.0p m=0.333 n=2.41 tt=72.0n vpk=50.0v iave=1.00a mfg=diodesinc type=silicon
+.model di_us1b d is=667n rs=72.0m bv=100 ibv=5.00u cjo=37.0p m=0.333 n=2.41 tt=72.0n vpk=100v iave=1.00a mfg=diodesinc type=silicon
+.model di_us1d d is=667n rs=72.0m bv=200 ibv=5.00u cjo=37.0p m=0.333 n=2.41 tt=72.0n vpk=200v iave=1.00a mfg=diodesinc type=silicon
+.model di_us1g d is=540p rs=0.116 bv=400 ibv=5.00u cjo=37.0p m=0.333 n=1.70 tt=72.0n vpk=400v iave=1.00a mfg=diodesinc type=silicon
+.model di_us1j d is=709n rs=82.3m bv=600 ibv=5.00u cjo=18.5p m=0.333 n=3.23 tt=108n vpk=600v iave=1.00a mfg=diodesinc type=silicon
+.model di_us1k d is=709n rs=82.3m bv=800 ibv=5.00u cjo=18.5p m=0.333 n=3.23 tt=108n vpk=800v iave=1.00a mfg=diodesinc type=silicon
+.model di_us1m d is=709n rs=82.3m bv=1.00k ibv=5.00u cjo=18.5p m=0.333 n=3.23 tt=108n vpk=1.00kv iave=1.00a mfg=diodesinc type=silicon
+.model dsei60-06a d is=148.21u n=1.8882 rs=3.0622m ikf=811.78n cjo=1.0000p m=.3333 vj=.75 isr=406.73n nr=4.9950 bv=600.05 ibv=1.2932m tt=26.602n vpk=600 iave=60a mfg=ixys type=silicon vpk=600.0v iave=60.0a
+.model dsep29-12a d is=2.6918u n=4.9950 rs=18.105m ikf=999 cjo=1.0000p m=.3333 vj=.75 isr=21.145u bv=1.2001e3 ibv=2.1553m tt=16.681n mfg=ixys type=silicon vpk=1200.0v iave=29.0a
+.model dsep8-12a d is=3.7288u n=4.9950 rs=72.502m ikf=999 cjo=1.0000p m=.3333 vj=.75 isr=4.8113u bv=1.2002e3 ibv=21.554m tt=31.929n mfg=ixys type=silicon vpk=1200.0v iave=8.0a
+.model dx_b520c d is=0.3m rs=10m bv=20 ibv=500u ikf=1 cjo=500p m=0.333 n=1.5 tt=7.20n
+.model emn11 d is=936.79p n=1.7211 rs=1.0196 ikf=28.904 cjo=1.7934p m=.18986 vj=.86529 isr=2.0505n nr=2.4000 bv=80 tt=37.000n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model emp11 d is=3.8311p n=1.1556 rs=.16041 ikf=1.0156m cjo=2.9921p m=.17376 vj=.80381 isr=1.0089n nr=2.5000 bv=80 tt=27.500n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model es1c d is=123n rs=42.0m bv=150 ibv=5.00u cjo=18.5p m=0.333 n=2.12 tt=28.8n vpk=150v iave=1 mfg=diodesinc type=silicon
+.model es1d d is=.5u rs=25m n=2 cjo=10.5p m=.4 tt=15n iave=1 vpk=200 mfg=vishay type=silicon
+.model fes16gt d is=9.18249e-006 n=2.87442 rs=0.00352225 eg=1.29002 xti=3.87546 cjo=3.75068e-010 vj=0.700001 m=0.406785 fc=0.5 tt=4.93261e-008 bv=440 ibv=15 mfg=vishay type=silicon
+.model fmn1 d is=2.0235n n=1.7300 rs=1.6409 ikf=17.788 eg=1.1500 cjo=1.8691p m=.19217 vj=.80284 isr=1.7281n nr=2.6000 bv=80 tt=28.300n iave=0.025 vpk=80 mfg=rohm type=silicon
+.model fmp1 d is=515.75p n=1.7369 rs=1.1050 ikf=10.763 cjo=2.9996p m=.24112 vj=.88581 isr=986.10p nr=2.4000 bv=80 tt=22.500n iave=0.025 vpk=80 mfg=rohm type=silicon
+.model gi250-4 d is=5u rs=3 n=1.2 eg=1.11 xti=3 bv=4200 ibv=1e-04 cjo=3p vj=3.5 m=.5 tt=30n iave=.25 vpk=4200 mfg=vishay type=silicon
+.model gl34g d is=1e-007 n=2.32276 rs=0.0734855 eg=1.11 xti=3 cjo=7.42627p vj=1.5489 m=0.393575 fc=0.5 tt=3.51448u bv=440 ibv=0.5 vpk=400v iave=500ma mfg=vishay type=silicon
+.model gl34m d is=1e-007 n=2.32276 rs=0.075 eg=1.11 xti=3 cjo=7.42627p vj=1.5489 m=0.393575 fc=0.5 tt=3.51448u bv=1040 ibv=0.5 vpk=1000v iave=500ma mfg=vishay type=silicon
+.model gsd2004w-v d is=.01p rs=1.6 n=1 cjo=5p tt=50n iave=225m vpk=300 mfg=vishay type=silicon
+.model hfa06tb120 d is=0.001 rs=0.110401 n=13.6537 eg=0.6 xti=0.5 bv=1200 ibv=0.0001 cjo=1.1896e-10 vj=0.4 m=0.430052 fc=0.5 tt=5.54521e-08
+.model hfa08tb60 d is=2.88464p rs=0.0305193 n=2 eg=1.29955 xti=0.521907 bv=600 ibv=0.0001 cjo=1.37419e-10 vj=0.4 m=0.418241 fc=0.5 tt=1n
+.model hfa140nh60r d is=2.34895u rs=0.0025 n=2 eg=1.3 xti=0.5 bv=1000 ibv=0.0001 cjo=4.67077n vj=0.4 m=0.467713 fc=0.5 tt=1n
+.model hfa15pb60 d is=7.68701e-11 rs=0.020004 n=2 eg=0.6 xti=0.5 bv=600 ibv=0.0001 cjo=2.94798e-10 vj=0.7742 m=0.447397 fc=0.5 tt=1n
+.model hfa30pa60c d is=0.000690394 rs=0.0117897 n=6.00599 eg=0.6 xti=0.5 bv=600 ibv=0.0001 cjo=4.84089e-11 vj=4720.92 m=0.9 fc=0.5 tt=1n
+.model hfa30ta60cs d is=0.001 rs=0.0395 n=2 eg=1.282 xti=3.02161 bv=600 ibv=0.0001 cjo=2.73039e-10 vj=1.5 m=0.451856 fc=0.5 tt=2.42596e-08
+.model hfa80nc40csl d is=2.37825e-07 rs=0.01 n=2 eg=1.04775 xti=2.97132 bv=400 ibv=0.0001 cjo=1.50848n vj=0.4 m=0.453789 fc=0.5 tt=1n
+.model hfb16hy20c d is=3.69563u rs=0.0218406 n=2 eg=0.6 xti=0.500087 bv=200 ibv=0.0001 cjo=1.17122n vj=0.4 m=0.337217 fc=0.5 tt=1n
+.model hfb20hj20c d is=2.31797e-07 rs=0.0180424 n=2 eg=1.3 xti=3.00177 bv=200 ibv=0.0001 cjo=1.25047e-10 vj=0.4 m=0.329663 fc=0.5 tt=1n
+.model hfb25hj20 d is=5.77437e-07 rs=0.00510648 n=2 eg=1.3 xti=2.94572 bv=200 ibv=0.0001 cjo=4.64754e-10 vj=0.4 m=0.332685 fc=0.5 tt=1n
+.model hfb35hb20c d is=3.09007e-07 rs=0.012861 n=2 eg=1.3 xti=3.0157 bv=200 ibv=0.0001 cjo=1.14597n vj=0.4 m=0.389409 fc=0.5 tt=1n
+.model hfb50hc20 d is=7.18041u rs=0.00862324 n=2 eg=1.3 xti=2.22389 bv=200 ibv=0.0001 cjo=2.80175n vj=0.4 m=0.361761 fc=0.5 tt=1n
+.model hfb60hf20 d is=1.33655e-05 rs=0.00424093 n=2 eg=0.6 xti=0.5 bv=200 ibv=0.0001 cjo=1.42712n vj=0.4 m=0.358042 fc=0.5 tt=1n
+.model hfb60hf20c d is=8.824e-07 rs=0.0053362 n=2 eg=1.3 xti=2.93114 bv=200 ibv=0.0001 cjo=9.80264e-10 vj=0.4 m=0.349795 fc=0.5 tt=1n
+.model imn10 d is=936.79p n=1.7211 rs=1.0196 ikf=28.904 cjo=1.7934p m=.18986 vj=.86529 isr=2.0505n nr=2.4000 bv=80 tt=37.000n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model k100uf d is=1u n=35 rs=0.1 tt=100n cj0=34.76p vj=8.75 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=1.5 vpk=10000 mfg=vmi type=silicon
+.model k25s d is=1u n=8.2 rs=0.002 tt=3000n cj0=103.9p vj=3.51 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=3 vpk=2500 mfg=vmi type=silicon
+.model k25uf d is=1u n=11 rs=0.08 tt=100n cj0=102.5p vj=3.27 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=3 vpk=2500 mfg=vmi type=silicon
+.model k50uf d is=1u n=16 rs=0.15 tt=100n cj0=68.46p vj=4.27 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=2.2 vpk=5000 mfg=vmi type=silicon
+.model kd102a d is=21.66p n=1.28 rs=1.79 cjo=3.27p tt=6.12n m=0.32 vj=0.71 fc=0.5 bv=250 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd102b d is=910.8f rs=6.325 n=1 xti=3 eg=1.11 bv=300.2 ibv=1.521m cjo=3.27p vj=.71 m=.32 fc=.5 tt=6.12n mfg=ussr type=silicon
+.model kd103a d is=67.08p n=1.21 rs=1.43 cjo=8.58p tt=4.15n m=0.31 vj=0.72 fc=0.5 bv=75 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd104a d is=5.812p n=1.15 rs=8.1 cjo=41.2p tt=8.28n m=0.33 vj=0.71 fc=0.5 bv=300 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd105b d is=84.26p n=1.11 rs=0.12 cjo=120p tt=1.08e-8 m=0.33 vj=0.71 fc=0.5 bv=400 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd106a d is=114.3p n=1.23 rs=6.3e-2 cjo=130p tt=3.85e-8 m=0.33 vj=0.71 fc=0.5 bv=100 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd202d d is=4.012n n=1.56 rs=4.7e-2 cjo=82p tt=3.19e-7 m=0.38 vj=0.75 fc=0.5 bv=200 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd202j d is=4.012n rs=4.7e-2 n=1.56 xti=3 eg=1.11 bv=300 ibv=1e-10 cjo=82p vj=.75 m=.38 fc=.5 tt=3.12e-7 mfg=ussr type=silicon
+.model kd202k d is=4.012n rs=4.7e-2 n=1.56 xti=3 eg=1.11 bv=400 ibv=1e-10 cjo=82p vj=.75 m=.38 fc=.5 tt=3.12e-7 mfg=ussr type=silicon
+.model kd202m d is=4.012n rs=4.7e-2 n=1.56 xti=3 eg=1.11 bv=500 ibv=1e-10 cjo=82p vj=.75 m=.38 fc=.5 tt=3.12e-7 mfg=ussr type=silicon
+.model kd202p d is=4.012n rs=4.7e-2 n=1.56 xti=3 eg=1.11 bv=600 ibv=1e-10 cjo=82p vj=.75 m=.38 fc=.5 tt=3.12e-7 mfg=ussr type=silicon
+.model kd202v d is=4.012n rs=4.7e-2 n=1.56 xti=3 eg=1.11 bv=100 ibv=1e-10 cjo=82p vj=.75 m=.38 fc=.5 tt=3.12e-7 mfg=ussr type=silicon
+.model kd203a d is=2.98n n=1.52 rs=9.3m cjo=21.2p tt=9.09e-7 m=0.28 vj=0.73 fc=0.5 bv=600 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd203b d is=303.3f rs=30.57m n=1 xti=3 eg=1.11 bv=799.9 ibv=7.607u cjo=21.2p vj=.73 m=.28 fc=.5 tt=9.09e-7 mfg=ussr type=silicon
+.model kd203d d is=268.8f rs=14.95m n=1 xti=3 eg=1.11 bv=999.9 ibv=7.607u cjo=21.2p vj=.73 m=.28 fc=.5 tt=9.09e-7 mfg=ussr type=silicon
+.model kd203g d is=303.3f rs=30.57m n=1 xti=3 eg=1.11 bv=999.9 ibv=7.607u cjo=21.2p vj=.73 m=.28 fc=.5 tt=9.09e-7 mfg=ussr type=silicon
+.model kd203v d is=268.8f rs=14.95m n=1 xti=3 eg=1.11 bv=799.9 ibv=7.607u cjo=21.2p vj=.73 m=.28 fc=.5 tt=9.09e-7 mfg=ussr type=silicon
+.model kd204a d is=4.110n n=1.52 rs=7.5e-2 cjo=31.5p tt=1.16e-7 m=0.35 vj=0.68 fc=0.5 bv=400 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd204b d is=6.335f rs=64.96m n=1 xti=3 eg=1.11 bv=200.1 ibv=161.7u cjo=35p vj=.75 m=.3333 fc=.5 tt=1.16e-7 mfg=ussr type=silicon
+.model kd204v d is=5.849f rs=23.7m n=1 xti=3 eg=1.11 bv=50.12 ibv=517.3u cjo=35p vj=.75 m=.3333 fc=.5 tt=1.16e-7 mfg=ussr type=silicon
+.model kd208a d is=181p n=1.31 rs=0.12 cjo=96.3p tt=2.23e-7 m=0.38 vj=0.68 fc=0.5 bv=100 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd209a d is=62.2p n=1.23 rs=0.17 cjo=16.2 tt=7.21e-7 m=0.35 vj=0.68 fc=0.5 bv=600 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd212a d is=1.26p n=1.1 rs=0.11 cjo=140.7p tt=1.27e-8 m=0.26 vj=0.73 fc=0.5 bv=200 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd212b d is=8.272p rs=.107 n=1 xti=3 eg=1.11 bv=100.2 ibv=783.8u cjo=150p vj=.75 m=.25 fc=.5 tt=360.7n mfg=ussr type=silicon
+.model kd213a d is=57.90p n=1.12 rs=17m cjo=275.1p tt=224n m=0.321 vj=0.72 fc=0.5 bv=200 ibv=1e-10 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd213b d is=124.72p rs=25.34m n=1 xti=3 eg=1.11 bv=200.1 ibv=258.6u cjo=249.6p vj=.75 m=.33 fc=.5 tt=173.1n mfg=ussr type=silicon
+.model kd213g d is=64.72p rs=25.34m n=1 xti=3 eg=1.11 bv=200.1 ibv=258.6u cjo=2.496n vj=.75 m=.3333 fc=.5 tt=173.1n mfg=ussr type=silicon
+.model kd213v d is=20.83p rs=19.59m n=1 xti=3 eg=1.11 bv=100.1 ibv=258.6u cjo=2.496n vj=.75 m=.3333 fc=.5 tt=252.5n mfg=ussr type=silicon
+.model kd219a d is=57.60n n=1.12 rs=3m cjo=63.1p tt=1.23n m=0.33 vj=0.54 fc=0.5 bv=15 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd220a d is=11.20n n=1.25 rs=7.1e-2 cjo=164.5p tt=1.23n m=0.33 vj=0.65 fc=0.5 bv=400 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd2997a d is=3.28e-07 n=1.544 rs=0.003938 m=0.552 vj=25.06 cjo=1007.45pf ibv=2.00e-04 bv=250.0 tt=158.4n eg=1.11 xti=3 iave=30 vpk=250 mfg=ussr type=silicon
+.model kd2999a d is=2.19e-07 n=1.544 rs=0.006 m=0.552 vj=25.06 cjo=700pf ibv=2.00e-04 bv=250.0 tt=158.4n eg=1.11 xti=3 iave=20 vpk=250 mfg=ussr type=silicon
+.model kd503a d is=7.920e-13 n=1.11 rs=2.3 cjo=1.45p tt=2.19n m=0.27 vj=0.71 fc=0.5 bv=30 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd509a d is=1.14p n=1.12 rs=2.1 cjo=2.15p tt=3.25n m=0.33 vj=0.71 fc=0.5 bv=50 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd510a d is=528.2f rs=1.302 n=1 xti=3 eg=1.11 bv=70.23 ibv=3.233m cjo=3p vj=.75 m=.25 fc=.5 tt=1.443n mfg=ussr type=silicon
+.model kd512a d is=2.120f n=1.0 rs=9.2 cjo=0.85p tt=.961n m=0.25 vj=0.69 fc=0.5 bv=15 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd513a d is=568.0f n=1.11 rs=1.6 cjo=1.81p tt=.850n m=0.31 vj=0.69 fc=0.5 bv=50 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd520a d is=618.0f n=1.12 rs=6.3 cjo=2.35p tt=1.44n m=0.33 vj=0.68 fc=0.5 bv=15 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd521a d is=115f n=1.0 rs=3.21 cjo=2.25p tt=3.12n m=0.26 vj=0.68 fc=0.5 bv=75 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd522a d is=227f n=1.1 rs=1.17 cjo=1.83p tt=2.38n m=0.25 vj=0.68 fc=0.5 bv=50 ibv=1e-11 eg=1.11 xti=3 mfg=ussr type=silicon
+.model kd522b d is=72.71f rs=2.662 n=1 xti=3 eg=1.11 bv=50.23 ibv=862.1u cjo=2.6p vj=.75 m=.15 fc=.5 tt=1.443n mfg=ussr type=silicon
+.model kd906a d is=718.1f rs=2.763 n=1 xti=3 eg=1.11 bv=140.3 ibv=1.847m cjo=27.15p vj=.75 m=.15 fc=.5 tt=179.8n mfg=ussr type=silicon
+.model ll4148 d is=3.6n rs=0.03622 n=2.0 isr=7.208n nr=2.0 cjo=8.68e-13 m=0.021 vj=0.6506 fc=0.5 tt=3.812n bv=100.5 ibv=1.0e-4 eg=1.02 xti=3
+.model m100ff3 d is=0.1u n=70 rs=30 tt=30n cj0=0.66p vj=15.52 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.025 vpk=10000 mfg=vmi type=silicon
+.model m100sg d is=0.1u n=28.8 rs=0.3 tt=3000n cj0=0.77p vj=15.92 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.025 vpk=10000 mfg=vmi type=silicon
+.model m160ff3 d is=0.1u n=4.4 rs=13.8 tt=30n cj0=0.43p vj=19.22 m=0.5 eg=1.11 xti=3 fc=0.5 bv=20000 ibv=100u iave=0.01 vpk=16000 mfg=vmi type=silicon
+.model m160sg d is=0.1u n=46.25 rs=2.5 tt=3000n cj0=0.45p vj=28.44 m=0.5 eg=1.11 xti=3 fc=0.5 bv=20000 ibv=100u iave=0.01 vpk=16000 mfg=vmi type=silicon
+.model m160ufg d is=0.1u n=65 rs=40 tt=70n cj0=0.43p vj=19.22 m=0.5 eg=1.11 xti=3 fc=0.5 bv=20000 ibv=100u iave=0.01 vpk=16000 mfg=vmi type=silicon
+.model m25sg d is=0.1u n=9.5 rs=0.3 tt=3000n cj0=2.22p vj=6.76 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=0.1 vpk=2500 mfg=vmi type=silicon
+.model m50ff3 d is=0.1u n=40 rs=20 tt=30n cj0=1.25p vj=9.64 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.04 vpk=5000 mfg=vmi type=silicon
+.model m50sg d is=0.1u n=14.4 rs=1 tt=3000n cj0=1.45p vj=7.31 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.05 vpk=5000 mfg=vmi type=silicon
+.model mbr20100 d is=0.000210108 rs=0.0123882 n=2 eg=0.817576 xti=0.500001 bv=1000 ibv=0.0001 cjo=1e-11 vj=0.7 m=0.5 fc=0.5
+.model mbr40250 d is=3u rs=0.00398945 n=1.75864 eg=0.999094 xti=5 bv=250 ibv=0.00025 cjo=9.00035e-10 vj=0.557029 m=0.428275 fc=0.5 tt=3.47959e-08
+.model mbr4045pt d is=56.8n rs=1.05m n=1.7 bv=45 ibv=70m cjo=1.65n vj=0.75 m=0.333 tt=4.32u eg=.69 xti=2 vpk=45v iave=40
+.model mbr845 d is=6.50276e-05 rs=0.0119924 n=1.33205 eg=0.6 xti=3.09376 bv=45 ibv=0.0001 cjo=1.3657n vj=0.4 m=0.478505 fc=0.5 tt=1n
+.model mbra210et3 d is=1.58646n rs=0.01 n=0.797738 eg=0.71104 xti=4 bv=10 ibv=8e-07 cjo=1.5593n vj=0.570707 m=0.478061 fc=0.5
+.model mbrf2060ct d is=1f rs=0.0238648 n=0.510622 eg=0.947814 xti=0.5 bv=60 ibv=0.00015 cjo=1e-11 vj=0.7 m=0.5 fc=0.5
+.model mbrp30045ct d is=0.001 rs=0.000431628 n=1.97975 eg=1.3 xti=2.80944 bv=45 ibv=0.0008 cjo=1e-11 vj=0.7 m=0.5 fc=0.5
+.model md90ff25 d is=1u n=16.5 rs=1.9 tt=30n cj0=8.23p vj=1.41 m=0.5 eg=1.11 xti=3 fc=0.5 bv=2500 ibv=100u iave=0.35 vpk=2500 mfg=vmi type=silicon
+.model mmsd4148 d is=2.52n rs=.568 n=1.752 cjo=.64p m=.4 tt=5n iave=200m vpk=100 mfg=onsemi type=silicon
+.model mr760 d is=5.86764e-08 rs=0.00170261 n=1.7374 eg=0.6 xti=0.5 bv=1000 ibv=2.5e-05 cjo=1.33832n vj=0.4 m=0.708966 fc=0.5 tt=5.45339u iave=6 vpk=1000 mfg=gi type=silicon
+.model mur1560 d is=95.51p rs=46.69m ikf=8.883m n=1 xti=6 eg=1.11 cjo=525.4p m=.414 vj=.75 fc=.5 isr=251.2n nr=2 tt=148n type=silicon
+.model mur160 d is=1.043p rs=74.44m ikf=2.705m n=1 xti=2 eg=1.11 cjo=28.43p m=.6225 vj=.75 fc=.5 isr=7.011n nr=2 tt=123.3n iave=1.0a vpk=600.0v mfg=motorola type=silicon
+.model mur160-m d is=1.043p rs=74.44m ikf=2.705m n=1 xti=2 eg=1.11 cjo=28.43p m=.6225 vj=.75 fc=.5 isr=7.011n nr=2 tt=123.3n iave=1.0a vpk=600.0v mfg=motorola type=silicon
+.model mur3060 d bv=600 cjo=517p ibv=10u is=235u m=.333 n=3.68 rs=35m tt=86.4n vj=.75
+.model mur460-gi d is=149n rs=0.0384 n=2 eg=1.285 xti=0.5 bv=800 ibv=1e-05 cjo=126.4p vj=1.34 m=0.52 tt=44.4n iave=4.0a vpk=600.0v mfg=gi type=silicon
+.model mur460 d is=149n rs=.0384 n=2 eg=1.285 xti=.5 bv=800 ibv=1e-05 cjo=126.4p vj=1.34 m=.52 tt=44.4n iave=4 vpk=600 mfg=gi type=silicon
+.model mur460-m d is=289.1f rs=33.23m ikf=5.678m n=1 xti=5 eg=1.11 cjo=70.72p m=.5733 vj=.75 fc=.5 isr=6.495n nr=2 tt=123.3n iave=4.0a vpk=600.0v mfg=motorola type=silicon
+.model murs120 d is=33.8n rs=.0236 n=1.718 cjo=45p m=.6 tt=45n iave=1 vpk=200 mfg=onsemi type=silicon
+.model murs160 d is=17.1n rs=20.6m bv=600 ibv=2.00u cjo=45.0p m=0.333 n=1.73 tt=72.0n vpk=600v iave=1.00a mfg=diodesinc type=silicon
+.model murs320 d is=1.06n rs=.0111 n=1.367 cjo=135p m=.45 tt=45n iave=3 vpk=200 mfg=onsemi type=silicon
+.model njl0281dg_diode d is=5.17122e-08 rs=0.0324668 n=1.78236 eg=1.12011 xti=0.5 bv=200 ibv=2u cjo=5.59229e-11 vj=0.4 m=0.346657 fc=0.5 tt=2.59685e-08
+.model njl0302dg_diode d is=5.17122e-08 rs=0.0324668 n=1.78236 eg=1.12011 xti=0.5 bv=200 ibv=2u cjo=5.59229e-11 vj=0.4 m=0.346657 fc=0.5 tt=2.59685e-08
+.model njl21193dg_diode d is=5.17122e-08 rs=0.0324668 n=1.78236 eg=1.12011 xti=0.5 bv=200 ibv=2u cjo=5.59229e-11 vj=0.4 m=0.346657 fc=0.5 tt=2.59685e-08
+.model njl21194dg_diode d is=5.17122e-08 rs=0.0324668 n=1.78236 eg=1.12011 xti=0.5 bv=200 ibv=2u cjo=5.59229e-11 vj=0.4 m=0.346657 fc=0.5 tt=2.59685e-08
+.model njl4281dg_diode d is=3.44393e-08 rs=0.179036 n=2 eg=1.3 xti=2.33354 bv=400 ibv=1e-05 cjo=2.08272e-11 vj=1.5 m=0.653713 fc=0.5 tt=5.1937e-08
+.model njl4302dg_diode d is=3.44393e-08 rs=0.179036 n=2 eg=1.3 xti=2.33354 bv=400 ibv=1e-05 cjo=2.08272e-11 vj=1.5 m=0.653713 fc=0.5 tt=5.1937e-08
+.model oa90-g d is=54.12u n=4.209 rs=42.72 ikf=0 xti=3 eg=1.11 cjo=1p m=.3333 vj=.75 fc=.5 isr=13.54e-21 nr=4.62 bv=22.5 ibv=100u tt=5n type=germanium
+.model oa90-m d is=120.5u n=7.405 rs=48.89 ikf=0 xti=3 eg=1.11 cjo=1p m=.3333 vj=.75 fc=.5 isr=10.36e-21 nr=4.99 bv=40 ibv=100u tt=5n type=germanium
+.model oa91 d is=19.43u n=2.986 rs=65.98 ikf=0 xti=3 eg=1.11 cjo=1.326p m=.3333 vj=.75 fc=.5 isr=2.787u nr=1.954 bv=100 ibv=100u tt=5n type=germanium
+.model oa95 d is=68.06u n=4.056 rs=45.41 ikf=78.67 xti=3 cjo=1.326p m=.3333 vj=.75 fc=.5 isr=10.42e-21 nr=4.612 bv=100 ibv=100u tt=5n type=germanium
+.model rf01vm2s d is=17.807p n=1.4353 rs=.64944 ikf=13.145m eg=1.0500 cjo=1.5500p m=.35328 vj=.61608 isr=117.59p nr=2.8000 bv=250 tt=82.000n iave=0.1 vpk=250 mfg=rohm type=fastrecovery
+.model rf04ua2d-ltspice d is=4.0404p n=1.1718 rs=.13276 ikf=15.291m eg=1.0100 cjo=10.245p m=.49346 vj=.85916 isr=140.45p nr=3 bv=200 tt=24.8n tikf=0.01 iave=0.4 vpk=200 mfg=rohm type=silicon
+.model rf04ua2d-mpkopec d is=4.0404p n=1.1718 rs=.13276 ikf=15.291m eg=1.0100 cjo=10.245p m=.49346 vj=.85916 isr=140.45p nr=3 bv=200 tt=24.8n tikf=0.01 iave=0.2 vpk=200 mfg=rohm type=fastrecovery
+.model rf05va1s d is=1.1825p n=1.0061 rs=52.469m ikf=12.140m eg=.9 cjo=28.100p m=.47776 vj=.76142 isr=91.946p nr=2.2000 bv=100 tt=28.8n tikf=0.01 iave=0.5 vpk=100 mfg=rohm type=fastrecovery
+.model rf05va2s d is=10.045p n=1.1284 rs=61.271m ikf=17.146m eg=.98 cjo=21.422p m=.50302 vj=.99572 isr=111.54p nr=2.7000 bv=200 tt=24.2n tikf=0.01 iave=0.5 vpk=200 mfg=rohm type=fastrecovery
+.model rf05vam1s-ltspice d is=1.1825p n=1.0061 rs=52.469m ikf=12.140m eg=.9 cjo=28.100p m=.47776 vj=.76142 isr=91.946p nr=2.2000 bv=100 tt=28.8n tikf=0.01 iave=0.5 vpk=100 mfg=rohm type=silicon
+.model rf05vam1s-mpkopec d is=1.1825p n=1.0061 rs=52.469m ikf=12.140m eg=.9 cjo=28.100p m=.47776 vj=.76142 isr=91.946p nr=2.2000 bv=100 tt=28.8n tikf=0.01 iave=0.5 vpk=100 mfg=rohm type=fastrecovery
+.model rf05vam2s-ltspice d is=10.045p n=1.1284 rs=61.271m ikf=17.146m eg=.98 cjo=21.422p m=.50302 vj=.99572 isr=111.54p nr=2.7000 bv=200 tt=24.2n tikf=0.01 iave=0.5 vpk=200 mfg=rohm type=silicon
+.model rf05vam2s-mpkopec d is=10.045p n=1.1284 rs=61.271m ikf=17.146m eg=.98 cjo=21.422p m=.50302 vj=.99572 isr=111.54p nr=2.7000 bv=200 tt=24.2n tikf=0.01 iave=0.5 vpk=200 mfg=rohm type=fastrecovery
+.model rf071l4s d is=60.405p n=1.3717 rs=88.603m ikf=43.611m eg=.95 cjo=29.000p m=.46212 vj=.51566 isr=135.72p nr=3.5000 bv=400 tt=48n tikf=0.01 iave=1 vpk=400 mfg=rohm type=fastrecovery
+.model rf071m2s d is=30.548p n=1.0916 rs=17.205m ikf=18.602m eg=.95 cjo=37.745p m=.4084 vj=.49252 isr=770.05p nr=2.2000 bv=200 tt=28.4n tikf=0.01 iave=0.7 vpk=200 mfg=rohm type=fastrecovery
+.model rf071mm2s d is=30.548p n=1.0916 rs=17.205m ikf=18.602m eg=.95 cjo=37.745p m=.4084 vj=.49252 isr=770.05p nr=2.2000 bv=200 tt=28.4n tikf=0.01 iave=0.7 vpk=200 mfg=rohm type=silicon
+.model rf081l2s d is=6.5755p n=1.0439 rs=37.091m ikf=28.493m eg=.98 cjo=58.872p m=.51102 vj=.5064 isr=602.20p nr=3.4000 bv=200 tt=32.1n tikf=0.01 iave=1.1 vpk=200 mfg=rohm type=fastrecovery
+.model rf081lam2s d is=1.4047n n=1.4135 rs=14.738m ikf=.17406 eg=.91 cjo=50.501p m=.45366 vj=.63588 isr=21.705p nr=4.8000 bv=200 tt=27.376n tikf=0.0120 trs1=-1.2000m iave=1.1 vpk=200 mfg=rohm type=silicon
+.model rf081m2s d is=6.5755p n=1.0439 rs=37.091m ikf=28.493m eg=.98 cjo=58.872p m=.51102 vj=.5064 isr=602.20p nr=3.4000 bv=200 tt=32.1n tikf=0.01 iave=0.8 vpk=200 mfg=rohm type=fastrecovery
+.model rf081mm2s d is=6.5755p n=1.0439 rs=37.091m ikf=28.493m eg=.98 cjo=58.872p m=.51102 vj=.5064 isr=602.20p nr=3.4000 bv=200 tt=32.1n tikf=0.01 iave=0.8 vpk=200 mfg=rohm type=silicon
+.model rf1001ns2d-ltspice d is=58.151p n=1.0482 rs=7.1487m ikf=39.496m eg=.9 cjo=186.24p m=.42565 vj=.48647 isr=1.0282n nr=3.2000 bv=200 tt=30.089n tikf=0.01 iave=10 vpk=200 mfg=rohm type=silicon
+.model rf1001ns2d-mpkopec d is=58.151p n=1.0482 rs=7.1487m ikf=39.496m eg=.9 cjo=186.24p m=.42565 vj=.48647 isr=1.0282n nr=3.2000 bv=200 tt=30.089n tikf=0.01 iave=5 vpk=200 mfg=rohm type=fastrecovery
+.model rf1001t2d d is=58.151p n=1.0482 rs=7.1487m ikf=39.496m eg=.9 cjo=186.24p m=.42565 vj=.48647 isr=1.0282n nr=3.2000 bv=200 tt=30.089n tikf=0.01 iave=5 vpk=200 mfg=rohm type=fastrecovery
+.model rf1005tf6s-ltspice d is=14.956n n=1.8393 rs=18.550m ikf=.19576 cjo=270.00p m=.47268 vj=.51459 isr=534.12p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=silicon
+.model rf1005tf6s-mpkopec d is=14.956n n=1.8393 rs=18.550m ikf=.19576 cjo=270.00p m=.47268 vj=.51459 isr=534.12p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rf101l2s d is=30.548p n=1.0916 rs=17.205m ikf=18.602m eg=.95 cjo=37.745p m=.4084 vj=.49252 isr=770.05p nr=2.2000 bv=200 tt=28.4n tikf=0.01 iave=1 vpk=200 mfg=rohm type=fastrecovery
+.model rf101l4s d is=44.942p n=1.2044 rs=84.363m ikf=5.8327m eg=.95 cjo=40.361p m=.4473 vj=.46229 isr=1.0552n nr=3.3 bv=400 tt=44n tikf=0.01 iave=1 vpk=400 mfg=rohm type=fastrecovery
+.model rf101lam2s d is=182.53p n=1.2468 rs=9.0859m ikf=.12922 eg=.98 cjo=69.022p m=.4385 vj=.53016 isr=147.65p nr=3.7000 bv=200 tt=26.959n tikf=0.035 trs1=0.002 iave=1 vpk=200 mfg=rohm type=silicon
+.model rf101lam4s d is=164.94p n=1.2044 rs=74.363m ikf=5.8327m eg=.90 cjo=40.341p m=.4383 vj=.50129 isr=57.320p nr=2.7 bv=400 tt=47.2n tikf=16.500m trs1=-0.9200m iave=1 vpk=400 mfg=rohm type=silicon
+.model rf1501ns3s d is=628.31p n=1.3228 rs=10.517m ikf=.25333 eg=1.1000 cjo=354.00p m=.43343 vj=.50807 isr=1.0770n nr=3.2000 bv=350 tt=33.4n tikf=0.01 iave=20 vpk=350 mfg=rohm type=fastrecovery
+.model rf1501tf3s-ltspice d is=628.31p n=1.3228 rs=10.517m ikf=.25333 eg=1.1000 cjo=354.00p m=.43343 vj=.50807 isr=1.0770n nr=3.2000 bv=350 tt=33.4n tikf=0.01 iave=20 vpk=350 mfg=rohm type=silicon
+.model rf1501tf3s-mpkopec d is=628.31p n=1.3228 rs=10.517m ikf=.25333 eg=1.1000 cjo=354.00p m=.43343 vj=.50807 isr=1.0770n nr=3.2000 bv=350 tt=33.4n tikf=0.01 iave=20 vpk=350 mfg=rohm type=fastrecovery
+.model rf1601ns2d-ltspice d is=14.351p n=.96481 rs=6.7789m ikf=42.397m eg=.92 cjo=271.16p m=.39883 vj=.58603 isr=1.5397n nr=2.4000 bv=200 tt=34n tikf=0.01 iave=16 vpk=200 mfg=rohm type=silicon
+.model rf1601ns2d-mpkopec d is=14.351p n=.96481 rs=6.7789m ikf=42.397m eg=.92 cjo=271.16p m=.39883 vj=.58603 isr=1.5397n nr=2.4000 bv=200 tt=34n tikf=0.01 iave=8 vpk=200 mfg=rohm type=fastrecovery
+.model rf1601t2d d is=14.351p n=.96481 rs=6.7789m ikf=42.397m eg=.92 cjo=271.16p m=.39883 vj=.58603 isr=1.5397n nr=2.4000 bv=200 tt=34n tikf=0.01 iave=8 vpk=200 mfg=rohm type=fastrecovery
+.model rf2001ns2d-ltspice d is=181.15p n=1.0508 rs=5.7833m ikf=76.666m eg=.83 cjo=368.36p m=.4201 vj=.48168 isr=1.0416n nr=2.3000 bv=200 tt=36.748n tikf=0.01 iave=20 vpk=200 mfg=rohm type=silicon
+.model rf2001ns2d-mpkopec d is=181.15p n=1.0508 rs=5.7833m ikf=76.666m eg=.83 cjo=368.36p m=.4201 vj=.48168 isr=1.0416n nr=2.3000 bv=200 tt=36.748n tikf=0.01 iave=10 vpk=200 mfg=rohm type=fastrecovery
+.model rf2001ns3d-ltspice d is=2.7996n n=1.4787 rs=18.383m ikf=.28843 eg=1.1000 cjo=207.00p m=.42954 vj=.53732 isr=1.3513n nr=3.2000 bv=350 tt=33n tikf=0.01 iave=20 vpk=350 mfg=rohm type=silicon
+.model rf2001ns3d-mpkopec d is=2.7996n n=1.4787 rs=18.383m ikf=.28843 eg=1.1000 cjo=207.00p m=.42954 vj=.53732 isr=1.3513n nr=3.2000 bv=350 tt=33n tikf=0.01 iave=10 vpk=350 mfg=rohm type=fastrecovery
+.model rf2001t2d d is=181.15p n=1.0508 rs=5.7833m ikf=76.666m eg=.83 cjo=368.36p m=.4201 vj=.48168 isr=1.0416n nr=2.3000 bv=200 tt=36.748n tikf=0.01 iave=10 vpk=200 mfg=rohm type=fastrecovery
+.model rf2001t3d d is=2.7996n n=1.4787 rs=18.383m ikf=.28843 eg=1.1000 cjo=207.00p m=.42954 vj=.53732 isr=1.3513n nr=3.2000 bv=350 tt=33n tikf=0.01 iave=10 vpk=350 mfg=rohm type=fastrecovery
+.model rf2001t4s d is=15.439n n=1.3556 rs=18.149m ikf=32.762m eg=.87 cjo=417.94p m=.39034 vj=.42637 isr=2.2243n nr=2.5000 bv=430 tt=40.3n tikf=0.01 trs1=-0.003 iave=20 vpk=430 mfg=rohm type=fastrecovery
+.model rf201l2s d is=35.093p n=1.0494 rs=9.0796m ikf=24.697m eg=.9 cjo=95.449p m=.46277 vj=.58536 isr=1.1055n nr=2.2000 bv=200 tt=34.035n tikf=0.01 iave=2 vpk=200 mfg=rohm type=fastrecovery
+.model rf201l4s d is=873.69p n=1.5124 rs=27.069m ikf=.14468 eg=1 cjo=116.40p m=.46899 vj=.57805 isr=204.39p nr=2.5000 bv=400 tt=47n tikf=0.01 iave=1.5 vpk=400 mfg=rohm type=fastrecovery
+.model rf201lam2s d is=187.46p n=1.1615 rs=5.9450m ikf=.10132 eg=.89 cjo=117.01p m=.43604 vj=.56258 isr=117.16p nr=2.4000 bv=200 tt=27.363n tikf=0.010 trs1=-0.002 iave=2 vpk=200 mfg=rohm type=silicon
+.model rf201lam4s d is=79.433p n=1.0591 rs=35.539m ikf=1.5838m eg=0.941 cjo=122.00p m=0.4705 vj=0.5607 isr=481.86p nr=1.8587 bv=400 tt=44.887n trs1=-1.2355m tikf=17.399m iave=1.5 vpk=400 mfg=rohm type=silicon
+.model rf301bm2s d is=62.820p n=1.0915 rs=18.739m ikf=31.776m eg=0.9 cjo=91.737p m=.41721 vj=.53716 isr=500.15p nr=2.9000 bv=200 tt=30n tikf=0.01 iave=3 vpk=200 mfg=rohm type=fastrecovery
+.model rf302lam2s d is=187.46p n=1.1615 rs=5.9450m ikf=.10132 eg=.89 cjo=117.01p m=.43604 vj=.56258 isr=117.16p nr=2.4000 bv=200 tt=27.363n tikf=0.010 trs1=-0.002 iave=3 vpk=200 mfg=rohm type=silicon
+.model rf305bge6s d is=2.7577n n=1.8886 rs=36.869m ikf=75.644m eg=1.2500 cjo=101.00p m=.47282 vj=.51797 isr=505.52p nr=3.2000 bv=600 tt=45.5n tikf=0.01 iave=3 vpk=600 mfg=rohm type=silicon
+.model rf305bm6s-ltspice d is=2.7577n n=1.8886 rs=36.869m ikf=75.644m eg=1.2500 cjo=101.00p m=.47282 vj=.51797 isr=505.52p nr=3.2000 bv=600 tt=45.5n tikf=0.01 iave=3 vpk=600 mfg=rohm type=silicon
+.model rf305bm6s-mpkopec d is=2.7577n n=1.8886 rs=36.869m ikf=75.644m eg=1.2500 cjo=101.00p m=.47282 vj=.51797 isr=505.52p nr=3.2000 bv=600 tt=45.5n tikf=0.01 iave=3 vpk=600 mfg=rohm type=fastrecovery
+.model rf501bge2s d is=29.875p n=1.0196 rs=6.7508m ikf=74.606m eg=0.91 cjo=203.53p m=0.4286 vj=0.5153 isr=397.65p bv=200 tt=28.7n trs1=0.0012 tikf=0.014 iave=5 vpk=200 mfg=rohm type=silicon
+.model rf501bm2s-ltspice d is=29.875p n=1.0196 rs=6.7508m ikf=74.606m eg=0.91 cjo=203.53p m=0.4286 vj=0.5153 isr=397.65p bv=200 tt=28.7n trs1=0.0012 tikf=0.014 iave=5 vpk=200 mfg=rohm type=silicon
+.model rf501bm2s-mpkopec d is=12.411p n=.98961 rs=7.2508m ikf=31.606m eg=.95 cjo=193.53p m=.44869 vj=.51503 isr=937.11p nr=2.7000 bv=200 tt=28.3n tikf=0.01 iave=5 vpk=200 mfg=rohm type=fastrecovery
+.model rf505bge6s d is=14.418n n=1.8209 rs=24.737m ikf=.13898 eg=1.0200 cjo=150.00p m=.54835 vj=.70933 isr=18.025p bv=600 tt=49n tikf=0.01 iave=5 vpk=600 mfg=rohm type=silicon
+.model rf505bm6s-ltspice d is=14.418n n=1.8209 rs=24.737m ikf=.13898 eg=1.0200 cjo=150.00p m=.54835 vj=.70933 isr=18.025p bv=600 tt=49n tikf=0.01 iave=5 vpk=600 mfg=rohm type=silicon
+.model rf505bm6s-mpkopec d is=14.418n n=1.8209 rs=24.737m ikf=.13898 eg=1.0200 cjo=150.00p m=.54835 vj=.70933 isr=18.025p bv=600 tt=49n tikf=0.01 iave=5 vpk=600 mfg=rohm type=fastrecovery
+.model rf505tf6s-ltspice d is=14.418n n=1.8209 rs=24.737m ikf=.13898 eg=1.0200 cjo=150.00p m=.54835 vj=.70933 isr=18.025p bv=600 tt=49n tikf=0.01 iave=5 vpk=600 mfg=rohm type=silicon
+.model rf505tf6s-mpkopec d is=14.418n n=1.8209 rs=24.737m ikf=.13898 eg=1.0200 cjo=150.00p m=.54835 vj=.70933 isr=18.025p bv=600 tt=49n tikf=0.01 iave=5 vpk=600 mfg=rohm type=fastrecovery
+.model rf601bge2d d is=85.433p n=1.0869 rs=9.7532m ikf=30.488m eg=.9 cjo=99.780p m=.41038 vj=.43155 isr=418.21p nr=3.2000 bv=200 tt=31.865n tikf=0.01 iave=6 vpk=200 mfg=rohm type=silicon
+.model rf601bm2d-ltspice d is=85.433p n=1.0869 rs=9.7532m ikf=30.488m eg=.9 cjo=99.780p m=.41038 vj=.43155 isr=418.21p nr=3.2000 bv=200 tt=31.865n tikf=0.01 iave=6 vpk=200 mfg=rohm type=silicon
+.model rf601bm2d-mpkopec d is=85.433p n=1.0869 rs=9.7532m ikf=30.488m eg=.9 cjo=99.780p m=.41038 vj=.43155 isr=418.21p nr=3.2000 bv=200 tt=31.865n tikf=0.01 iave=3 vpk=200 mfg=rohm type=fastrecovery
+.model rf601t2d d is=85.433p n=1.0869 rs=9.7532m ikf=30.488m eg=.9 cjo=99.780p m=.41038 vj=.43155 isr=418.21p nr=3.2000 bv=200 tt=31.865n tikf=0.01 iave=3 vpk=200 mfg=rohm type=fastrecovery
+.model rfc02mm2s d is=21.556p n=1.1821 rs=69.396m ikf=8.9028m eg=1.0000 cjo=12.289p m=.32225 vj=.50152 isr=1.1879n nr=1.8500 bv=200 tt=42.420n tikf=0.011 iave=0.5 vpk=200 mfg=rohm type=silicon
+.model rfl30tz6s d is=6.0082n n=1.2397 rs=7.2565m ikf=36.266m eg=0.9 cjo=263.14p m=0.3164 vj=0.5005 isr=2.7970n nr=2.8 bv=650 tt=88.285n trs1=-0.001 tikf=0.012 iave=30 vpk=650 mfg=rohm type=silicon
+.model rfl60tz6s d is=3.1582n n=1.1597 rs=4.8565m ikf=46.266m eg=0.88 cjo=393.14p m=0.2764 vj=0.5005 isr=5.1970n nr=1.8 bv=650 tt=121.28n trs1=-0.0025 tikf=0.014 iave=60 vpk=650 mfg=rohm type=silicon
+.model rfn10bge3s d is=1.3720n n=1.4021 rs=12.832m ikf=.21247 eg=1 cjo=165.90p m=.47692 vj=.59813 isr=552.10p nr=2.5000 bv=350 tt=42.3n tikf=0.01 iave=10 vpk=350 mfg=rohm type=silicon
+.model rfn10bge6s d is=13.436n n=1.7555 rs=13.156m ikf=.15702 eg=1 cjo=168.00p m=.46459 vj=.51864 isr=212.37p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=silicon
+.model rfn10bm3s-ltspice d is=1.3720n n=1.4021 rs=12.832m ikf=.21247 eg=1 cjo=165.90p m=.47692 vj=.59813 isr=552.10p nr=2.5000 bv=350 tt=42.3n tikf=0.01 iave=10 vpk=350 mfg=rohm type=silicon
+.model rfn10bm3s-mpkopec d is=1.3720n n=1.4021 rs=12.832m ikf=.21247 eg=1 cjo=165.90p m=.47692 vj=.59813 isr=552.10p nr=2.5000 bv=350 tt=42.3n tikf=0.01 iave=10 vpk=350 mfg=rohm type=fastrecovery
+.model rfn10bm6s-ltspice d is=13.436n n=1.7555 rs=13.156m ikf=.15702 eg=1 cjo=168.00p m=.46459 vj=.51864 isr=212.37p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=silicon
+.model rfn10bm6s-mpkopec d is=13.436n n=1.7555 rs=13.156m ikf=.15702 eg=1 cjo=168.00p m=.46459 vj=.51864 isr=212.37p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rfn10ns3s-ltspice d is=1.3720n n=1.4021 rs=12.832m ikf=.21247 eg=1 cjo=165.90p m=.47692 vj=.59813 isr=552.10p nr=2.5000 bv=350 tt=42.3n tikf=0.01 iave=10 vpk=350 mfg=rohm type=silicon
+.model rfn10ns3s-mpkopec d is=1.3720n n=1.4021 rs=12.832m ikf=.21247 eg=1 cjo=165.90p m=.47692 vj=.59813 isr=552.10p nr=2.5000 bv=350 tt=42.3n tikf=0.01 iave=10 vpk=350 mfg=rohm type=fastrecovery
+.model rfn10ns4s-ltspice d is=3.6343n n=1.5946 rs=11.302m ikf=.19239 eg=1 cjo=156.20p m=.46967 vj=.55634 isr=289.64p bv=430 tt=39n tikf=0.01 iave=10 vpk=430 mfg=rohm type=silicon
+.model rfn10ns4s-mpkopec d is=3.6343n n=1.5946 rs=11.302m ikf=.19239 eg=1 cjo=156.20p m=.46967 vj=.55634 isr=289.64p bv=430 tt=39n tikf=0.01 iave=10 vpk=430 mfg=rohm type=fastrecovery
+.model rfn10ns6s-ltspice d is=13.436n n=1.7555 rs=13.156m ikf=.15702 eg=1 cjo=168.00p m=.46459 vj=.51864 isr=212.37p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=silicon
+.model rfn10ns6s-mpkopec d is=13.436n n=1.7555 rs=13.156m ikf=.15702 eg=1 cjo=168.00p m=.46459 vj=.51864 isr=212.37p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rfn10ns8d d is=3.8970n n=1.4986 rs=121.90m ikf=15.531m eg=1.02 cjo=131.99p m=.4617 vj=.62875 isr=1.5405n nr=2.4000 bv=800 tt=43.974n tikf=0.0800 trs1=-0.002 iave=10 vpk=800 mfg=rohm type=silicon
+.model rfn10t2d d is=216.60p n=1.1476 rs=9.3813m ikf=57.903m eg=.9 cjo=130.00p m=.44075 vj=.5145 isr=473.38p nr=2.5000 bv=200 tt=29.5n tikf=0.01 iave=5 vpk=200 mfg=rohm type=fastrecovery
+.model rfn10tb4s d is=3.6343n n=1.5946 rs=11.302m ikf=.19239 eg=1 cjo=156.20p m=.46967 vj=.55634 isr=289.64p bv=430 tt=39n tikf=0.01 iave=10 vpk=430 mfg=rohm type=fastrecovery
+.model rfn10tf6s-ltspice d is=13.436n n=1.7555 rs=13.156m ikf=.15702 eg=1 cjo=168.00p m=.46459 vj=.51864 isr=212.37p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=silicon
+.model rfn10tf6s-mpkopec d is=13.436n n=1.7555 rs=13.156m ikf=.15702 eg=1 cjo=168.00p m=.46459 vj=.51864 isr=212.37p nr=3 bv=600 tt=61n tikf=0.01 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rfn16t2d d is=260.52p n=1.1335 rs=7.4727m ikf=91.738m eg=.9 cjo=223.00p m=.44583 vj=.52352 isr=419.89p nr=2.5000 bv=200 tt=27.5n tikf=0.01 iave=8 vpk=200 mfg=rohm type=fastrecovery
+.model rfn1l6s d is=429.12p n=1.6222 rs=.12869 ikf=37.865m eg=1 cjo=28.500p m=.4519 vj=.51356 isr=472.10p nr=3.8000 bv=600 tt=57.5n tikf=0.01 iave=0.8 vpk=600 mfg=rohm type=fastrecovery
+.model rfn1l7s d is=2.4108n n=1.6931 rs=.10912 ikf=35.752m eg=.95 cjo=26.400p m=.45233 vj=.5244 isr=518.63p nr=2.3000 bv=700 tt=108n tikf=0.01 iave=0.8 vpk=700 mfg=rohm type=fastrecovery
+.model rfn1lam6s d is=5.2996n n=1.6014 rs=.13712 ikf=2.9349m eg=.9 cjo=13.995p m=.37975 vj=.50305 isr=405.68p nr=3.8000 bv=600 tt=60.7n tikf=0.0100 trs1=-2.7000m iave=0.8 vpk=600 mfg=rohm type=silicon
+.model rfn1lam7s d is=9.829n n=1.7851 rs=.11439 ikf=11.388m eg=.93 cjo=11.974p m=.37429 vj=.50105 isr=12.015p nr=1.9000 bv=700 tt=110.11n tikf=0.017 trs1=-1.3000m iave=0.8 vpk=700 mfg=rohm type=silicon
+.model rfn20ns3s-ltspice d is=2.2110n n=1.3471 rs=5.2059m ikf=.23497 eg=.95 cjo=415.00p m=.45078 vj=.59386 isr=687.78p nr=2.5000 bv=350 tt=44n tikf=0.01 iave=20 vpk=350 mfg=rohm type=silicon
+.model rfn20ns3s-mpkopec d is=2.2110n n=1.3471 rs=5.2059m ikf=.23497 eg=.95 cjo=415.00p m=.45078 vj=.59386 isr=687.78p nr=2.5000 bv=350 tt=44n tikf=0.01 iave=20 vpk=350 mfg=rohm type=fastrecovery
+.model rfn20ns4s-ltspice d is=7.7008n n=1.6045 rs=8.6697m ikf=.34432 eg=1 cjo=268.00p m=.45951 vj=.51295 isr=107.76p bv=430 tt=43n tikf=0.01 iave=20 vpk=430 mfg=rohm type=silicon
+.model rfn20ns4s-mpkopec d is=7.7008n n=1.6045 rs=8.6697m ikf=.34432 eg=1 cjo=268.00p m=.45951 vj=.51295 isr=107.76p bv=430 tt=43n tikf=0.01 iave=20 vpk=430 mfg=rohm type=fastrecovery
+.model rfn20ns6s-ltspice d is=22.550n n=1.6626 rs=8.7129m ikf=.16879 eg=.93 cjo=322.00p m=.47017 vj=.55476 isr=303.85p nr=3 bv=600 tt=72n tikf=0.01 iave=20 vpk=600 mfg=rohm type=silicon
+.model rfn20ns6s-mpkopec d is=22.550n n=1.6626 rs=8.7129m ikf=.16879 eg=.93 cjo=322.00p m=.47017 vj=.55476 isr=303.85p nr=3 bv=600 tt=72n tikf=0.01 iave=20 vpk=600 mfg=rohm type=fastrecovery
+.model rfn20t2d d is=104.32p n=1.0508 rs=6.3095m ikf=49.028m eg=.85 cjo=258.00p m=.43957 vj=.5152 isr=733.44p nr=2.0000 bv=200 tt=28.2n tikf=0.01 iave=10 vpk=200 mfg=rohm type=fastrecovery
+.model rfn20tb4s d is=7.7008n n=1.6045 rs=8.6697m ikf=.34432 eg=1 cjo=268.00p m=.45951 vj=.51295 isr=107.76p bv=430 tt=43n tikf=0.01 iave=20 vpk=430 mfg=rohm type=fastrecovery
+.model rfn20tf6s-ltspice d is=22.550n n=1.6626 rs=8.7129m ikf=.16879 eg=.93 cjo=322.00p m=.47017 vj=.55476 isr=303.85p nr=3 bv=600 tt=72n tikf=0.01 iave=20 vpk=600 mfg=rohm type=silicon
+.model rfn20tf6s-mpkopec d is=22.550n n=1.6626 rs=8.7129m ikf=.16879 eg=.93 cjo=322.00p m=.47017 vj=.55476 isr=303.85p nr=3 bv=600 tt=72n tikf=0.01 iave=20 vpk=600 mfg=rohm type=fastrecovery
+.model rfn20tj6s d is=14.427n n=1.4253 rs=12.734m ikf=45.997m eg=0.85 cjo=321.97p m=.45642 vj=.50854 isr=806.58p nr=2.8000 bv=600 tt=86.321n tikf=0.1000 trs1=-0.0008 iave=20 vpk=600 mfg=rohm type=silicon
+.model rfn2l4s d is=2.6699n n=1.5366 rs=11.602m ikf=.24034 eg=.9 cjo=67.400p m=.42442 vj=.5129 isr=960.40p nr=2.5000 bv=400 tt=52n tikf=0.01 iave=1.5 vpk=400 mfg=rohm type=fastrecovery
+.model rfn2l6s d is=867.59p n=1.7217 rs=52.431m ikf=61.897m cjo=43.000p m=.47106 vj=.75496 isr=1.2591n nr=2.4000 bv=600 tt=36.501n iave=1.5 vpk=600 mfg=rohm type=fastrecovery
+.model rfn2lam6s d is=4.9611n n=1.5448 rs=99.753m ikf=3.3881m eg=.99 cjo=44.975p m=.43532 vj=.50015 isr=632.96p nr=4.2000 bv=600 tt=37.172n tikf=0.0120 trs1=-4.1000m iave=1.5 vpk=600 mfg=rohm type=silicon
+.model rfn30ts6d d is=1.6031n n=1.5514 rs=9.8819m ikf=.2024 cjo=212.00p m=.44625 vj=.50489 isr=680.97p nr=3 bv=600 tt=63.877n tikf=0.018 trs1=0.001 iave=30 vpk=600 mfg=rohm type=fastrecovery
+.model rfn3bge2s d is=124.78p n=1.1947 rs=15.799m ikf=97.168m eg=.95 cjo=87.740p m=.44455 vj=.48313 isr=202.78p nr=3 bv=200 tt=25.304n tikf=0.018 trs1=0.0005 iave=3 vpk=200 mfg=rohm type=silicon
+.model rfn3bge6s d is=794.33p n=1.4592 rs=57.11m ikf=5.5776m eg=1.252 cjo=91.000p m=0.5109 vj=0.7392 isr=592.99p nr=3.6388 bv=600 tt=40.326n trs1=-0.4500m iave=3 vpk=600 mfg=rohm type=silicon
+.model rfn3bm2s-ltspice d is=124.78p n=1.1947 rs=15.799m ikf=97.168m eg=.95 cjo=87.740p m=.44455 vj=.48313 isr=202.78p nr=3 bv=200 tt=25.304n tikf=0.018 trs1=0.0005 iave=3 vpk=200 mfg=rohm type=silicon
+.model rfn3bm2s-mpkopec d is=124.78p n=1.1947 rs=15.799m ikf=97.168m eg=.95 cjo=87.740p m=.44455 vj=.48313 isr=202.78p nr=3 bv=200 tt=25.304n tikf=0.018 trs1=0.0005 iave=3 vpk=200 mfg=rohm type=fastrecovery
+.model rfn3bm6s-ltspice d is=794.33p n=1.4592 rs=57.11m ikf=5.5776m eg=1.252 cjo=91.000p m=0.5109 vj=0.7392 isr=592.99p nr=3.6388 bv=600 tt=40.326n trs1=-0.4500m iave=3 vpk=600 mfg=rohm type=silicon
+.model rfn3bm6s-mpkopec d is=14.927n n=2.1466 rs=42.575m ikf=.10213 eg=1.2500 cjo=54.500p m=.51108 vj=.73744 isr=165.03p nr=3.2000 bv=600 tt=42.600n tikf=0.01 iave=3 vpk=600 mfg=rohm type=fastrecovery
+.model rfn5bge2s d is=457.90p n=1.2127 rs=11.859m ikf=.10931 eg=.9 cjo=135.60p m=.45251 vj=.56028 isr=247.52p nr=2.3000 bv=200 tt=26n tikf=0.01 iave=5 vpk=200 mfg=rohm type=silicon
+.model rfn5bge3s d is=1.8236n n=1.3647 rs=19.816m ikf=95.307m eg=0.91 cjo=90.700p m=.47124 vj=.58267 isr=232.66p nr=2.6 bv=350 tt=43n trs1=-0.0008 tikf=0.01 iave=5 vpk=350 mfg=rohm type=silicon
+.model rfn5bge6s d is=1.1861n n=1.7549 rs=30.639m ikf=.14756 eg=1.2500 cjo=90.000p m=.47647 vj=.59779 isr=454.99p nr=3.2000 bv=600 tt=47.4n tikf=0.01 iave=5 vpk=600 mfg=rohm type=silicon
+.model rfn5bm2s-ltspice d is=457.90p n=1.2127 rs=11.859m ikf=.10931 eg=.9 cjo=135.60p m=.45251 vj=.56028 isr=247.52p nr=2.3000 bv=200 tt=26n tikf=0.01 iave=5 vpk=200 mfg=rohm type=silicon
+.model rfn5bm2s-mpkopec d is=457.90p n=1.2127 rs=11.859m ikf=.10931 eg=.9 cjo=135.60p m=.45251 vj=.56028 isr=247.52p nr=2.3000 bv=200 tt=26n tikf=0.01 iave=5 vpk=200 mfg=rohm type=fastrecovery
+.model rfn5bm3s-ltspice d is=1.8236n n=1.3647 rs=19.816m ikf=95.307m eg=0.91 cjo=90.700p m=.47124 vj=.58267 isr=232.66p nr=2.6 bv=350 tt=43n trs1=-0.0008 tikf=0.01 iave=5 vpk=350 mfg=rohm type=silicon
+.model rfn5bm3s-mpkopec d is=1.8636n n=1.4947 rs=16.816m ikf=.15307 eg=1 cjo=90.700p m=.47124 vj=.58267 isr=270.66p nr=2.3000 bv=350 tt=38n tikf=0.01 iave=5 vpk=350 mfg=rohm type=fastrecovery
+.model rfn5bm6s-ltspice d is=1.1861n n=1.7549 rs=30.639m ikf=.14756 eg=1.2500 cjo=90.000p m=.47647 vj=.59779 isr=454.99p nr=3.2000 bv=600 tt=47.4n tikf=0.01 iave=5 vpk=600 mfg=rohm type=silicon
+.model rfn5bm6s-mpkopec d is=1.1861n n=1.7549 rs=30.639m ikf=.14756 eg=1.2500 cjo=90.000p m=.47647 vj=.59779 isr=454.99p nr=3.2000 bv=600 tt=47.4n tikf=0.01 iave=5 vpk=600 mfg=rohm type=fastrecovery
+.model rfn5tf6s d is=1.1861n n=1.7549 rs=30.639m ikf=.14756 eg=1.2500 cjo=90.000p m=.47647 vj=.59779 isr=454.99p nr=3.2000 bv=600 tt=47.4n tikf=0.01 iave=5 vpk=600 mfg=rohm type=fastrecovery
+.model rfn5tf8s-ltspice d is=25.640n n=2.2001 rs=35.046m ikf=.15787 eg=1.1500 cjo=141.10p m=.47876 vj=.63758 isr=164.31p nr=3.2000 bv=800 tt=44.5n tikf=0.01 iave=5 vpk=800 mfg=rohm type=silicon
+.model rfn5tf8s-mpkopec d is=25.640n n=2.2001 rs=35.046m ikf=.15787 eg=1.1500 cjo=141.10p m=.47876 vj=.63758 isr=164.31p nr=3.2000 bv=800 tt=44.5n tikf=0.01 iave=5 vpk=800 mfg=rohm type=fastrecovery
+.model rfn60ts6d d is=2.5393n n=1.4813 rs=7.6933m ikf=.2334 cjo=450.00p m=.4567 vj=.55254 isr=1.3614n nr=3 bv=600 tt=71.030n tikf=0.018 trs1=0.0005 iave=30 vpk=600 mfg=rohm type=fastrecovery
+.model rfn6bge2d d is=124.78p n=1.1947 rs=15.799m ikf=97.168m eg=.95 cjo=87.740p m=.45016 vj=.50918 isr=201.48p nr=3 bv=200 tt=25.304n tikf=0.018 trs1=0.0005 iave=6 vpk=200 mfg=rohm type=silicon
+.model rfn6bm2d-ltspice d is=124.78p n=1.1947 rs=15.799m ikf=97.168m eg=.95 cjo=87.740p m=.45016 vj=.50918 isr=201.48p nr=3 bv=200 tt=25.304n tikf=0.018 trs1=0.0005 iave=6 vpk=200 mfg=rohm type=silicon
+.model rfn6bm2d-mpkopec d is=124.78p n=1.1947 rs=15.799m ikf=97.168m eg=.95 cjo=87.740p m=.45016 vj=.50918 isr=201.48p nr=3 bv=200 tt=25.304n tikf=0.018 trs1=0.0005 iave=3 vpk=200 mfg=rohm type=fastrecovery
+.model rfn6t2d d is=124.78p n=1.1947 rs=15.799m ikf=97.168m eg=.95 cjo=87.740p m=.45016 vj=.50918 isr=201.48p nr=3 bv=200 tt=25.304n tikf=0.018 trs1=0.0005 iave=3 vpk=200 mfg=rohm type=fastrecovery
+.model rfnl10tj6s d is=2.6776n n=1.3110 rs=1.2252e-2 ikf=2.4043e-2 eg=0.8900 cjo=2.1500e-10 m=.48594 vj=.60725 isr=4.8248e-10 nr=3.9000 bv=600.00 tt=1.068e-7 tikf=8.0000e-2 iave=10 vpk=600 mfg=rohm type=silicon
+.model rfnl15tj6s d is=2.8451n n=1.3089 rs=9.4513m ikf=49.108m eg=0.90 cjo=314.89p m=.48567 vj=.60115 isr=1.2010n nr=2.3000 bv=600 tt=107.12n tikf=0.1000 iave=15 vpk=600 mfg=rohm type=silicon
+.model rfnl20tj6s d is=6.7003n n=1.3376 rs=6.3646m ikf=72.444m eg=0.88 cjo=464.91p m=.47406 vj=.54434 isr=1.5641n nr=3.8000 bv=600 tt=116.42n tikf=0.1000 iave=20 vpk=600 mfg=rohm type=silicon
+.model rfnl5bge6s d is=1.3834n n=1.3521 rs=27.343m ikf=24.022m eg=0.91 cjo=93.000p m=0.5083 vj=0.6782 isr=269.93p nr=2.1 bv=600 tt=90.038n trs1=-1.1950m tikf=16.372m iave=5 vpk=600 mfg=rohm type=silicon
+.model rfs30tz6s d is=1.5835n n=1.0152 rs=17.480m ikf=0.1820m eg=0.84 cjo=252.44p m=0.3015 vj=0.5 isr=5.9890n nr=1.8 bv=650 tt=51.251n trs1=-2.4000m tikf=0.013 iave=30 vpk=650 mfg=rohm type=silicon
+.model rfs60tz6s d is=2.5835n n=1.0152 rs=14.480m ikf=0.1820m eg=0.8 cjo=393.85p m=0.2715 vj=0.5 isr=10.590n nr=1.45 bv=650 tt=76.8885n trs1=-3.0000m tikf=0.012 iave=60 vpk=650 mfg=rohm type=silicon
+.model rfu01sm4s-ltspice d is=294.35p n=2.0137 rs=1.5143 ikf=11.685m eg=1.2000 cjo=1.6000p m=.1889 vj=.55345 isr=975.68p nr=4 bv=450 tt=33.182n tikf=0.018 trs1=0.0005 iave=0.1 vpk=450 mfg=rohm type=silicon
+.model rfu01sm4s-mpkopec d is=294.35p n=2.0137 rs=1.5143 ikf=11.685m eg=1.2000 cjo=1.6000p m=.1889 vj=.55345 isr=975.68p nr=4 bv=450 tt=33.182n tikf=0.018 trs1=0.0005 iave=0.1 vpk=450 mfg=rohm type=fastrecovery
+.model rfu02vs6s-ltspice d is=4.9427n n=2.3572 rs=1.2300 ikf=9.5772m eg=1.2000 cjo=5.0000p m=.40785 vj=.75082 isr=134.67p nr=3 bv=600 tt=34n tikf=0.01 iave=0.2 vpk=600 mfg=rohm type=silicon
+.model rfu02vs6s-mpkopec d is=4.9427n n=2.3572 rs=1.2300 ikf=9.5772m eg=1.2000 cjo=5.0000p m=.40785 vj=.75082 isr=134.67p nr=3 bv=600 tt=34n tikf=0.01 iave=0.2 vpk=600 mfg=rohm type=fastrecovery
+.model rfu02vs8s-ltspice d is=20.057n n=2.9921 rs=1.9320 ikf=1.7685m eg=1.4000 cjo=4.1000p m=.33142 vj=.7549 isr=193.07p nr=3.5000 bv=800 tt=35.346n tikf=0.01 trs1=-0.0015 iave=0.2 vpk=800 mfg=rohm type=silicon
+.model rfu02vs8s-mpkopec d is=20.057n n=2.9921 rs=1.9320 ikf=1.7685m eg=1.4000 cjo=4.1000p m=.33142 vj=.7549 isr=193.07p nr=3.5000 bv=800 tt=35.346n tikf=0.01 trs1=-0.0015 iave=0.2 vpk=800 mfg=rohm type=fastrecovery
+.model rfu10tf6s d is=20.000n n=2.4066 rs=37.614m ikf=51.241m eg=1.4000 cjo=223.03p m=.44903 vj=.57571 isr=441.24p nr=3 bv=600 tt=30n tikf=0.01 trs1=-0.0015 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rfu20tm5s d is=26.628n n=2.0290 rs=12.980m ikf=1.0074 cjo=415.00p m=.44741 vj=.52693 isr=1.0596n nr=2.3000 bv=530 tt=39n tikf=0.01 iave=20 vpk=530 mfg=rohm type=fastrecovery
+.model rfu5tf6s d is=5.0000n n=2.2999 rs=64.096m ikf=9.1822m eg=1.4000 cjo=125.00p m=.46874 vj=.75563 isr=483.52p nr=3.5000 bv=600 tt=29.4n tikf=0.01 trs1=-0.001 iave=5 vpk=600 mfg=rohm type=fastrecovery
+.model rfuh10ns4s-ltspice d is=15.309n n=1.8022 rs=12.779m ikf=.44057 eg=.93 cjo=150.30p m=.46411 vj=.51969 isr=123.04p bv=430 tt=31n tikf=0.01 iave=10 vpk=430 mfg=rohm type=silicon
+.model rfuh10ns4s-mpkopec d is=15.309n n=1.8022 rs=12.779m ikf=.44057 eg=.93 cjo=150.30p m=.46411 vj=.51969 isr=123.04p bv=430 tt=31n tikf=0.01 iave=10 vpk=430 mfg=rohm type=fastrecovery
+.model rfuh10ns6s-ltspice d is=17.288n n=2.4086 rs=20.868m ikf=.33206 eg=1.3000 cjo=158.20p m=.45903 vj=.54883 isr=131.51p nr=3 bv=600 tt=28n tikf=0.01 trs1=-0.001 iave=10 vpk=600 mfg=rohm type=silicon
+.model rfuh10ns6s-mpkopec d is=17.288n n=2.4086 rs=20.868m ikf=.33206 eg=1.3000 cjo=158.20p m=.45903 vj=.54883 isr=131.51p nr=3 bv=600 tt=28n tikf=0.01 trs1=-0.001 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rfuh10tb4s d is=15.309n n=1.8022 rs=12.779m ikf=.44057 eg=.93 cjo=150.30p m=.46411 vj=.51969 isr=123.04p bv=430 tt=31n tikf=0.01 iave=10 vpk=430 mfg=rohm type=fastrecovery
+.model rfuh10tf6s-ltspice d is=17.288n n=2.4086 rs=20.868m ikf=.33206 eg=1.3000 cjo=158.20p m=.45903 vj=.54883 isr=131.51p nr=3 bv=600 tt=28n tikf=0.01 trs1=-0.001 iave=10 vpk=600 mfg=rohm type=silicon
+.model rfuh10tf6s-mpkopec d is=17.288n n=2.4086 rs=20.868m ikf=.33206 eg=1.3000 cjo=158.20p m=.45903 vj=.54883 isr=131.51p nr=3 bv=600 tt=28n tikf=0.01 trs1=-0.001 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rfuh20ns3s-ltspice d is=7.3862n n=1.6058 rs=9.5725m ikf=.345 eg=1 cjo=330.00p m=.45903 vj=.59546 isr=288.07p nr=1.9000 bv=350 tt=25n tikf=0.01 iave=20 vpk=350 mfg=rohm type=silicon
+.model rfuh20ns3s-mpkopec d is=7.3862n n=1.6058 rs=9.5725m ikf=.345 eg=1 cjo=330.00p m=.45903 vj=.59546 isr=288.07p nr=1.9000 bv=350 tt=25n tikf=0.01 iave=20 vpk=350 mfg=rohm type=fastrecovery
+.model rfuh20ns4s-ltspice d is=16.259n n=1.9942 rs=8.5699m ikf=.54992 eg=1.0700 cjo=266.00p m=.45918 vj=.51161 isr=175.51p bv=430 tt=34n tikf=0.01 iave=20 vpk=430 mfg=rohm type=silicon
+.model rfuh20ns4s-mpkopec d is=16.259n n=1.9942 rs=8.5699m ikf=.54992 eg=1.0700 cjo=266.00p m=.45918 vj=.51161 isr=175.51p bv=430 tt=34n tikf=0.01 iave=20 vpk=430 mfg=rohm type=fastrecovery
+.model rfuh20ns6s-ltspice d is=21.421n n=1.9253 rs=19.231m ikf=.25578 eg=1.0700 cjo=315.00p m=.4461 vj=.51056 isr=628.68p bv=600 tt=30n tikf=0.01 iave=20 vpk=600 mfg=rohm type=silicon
+.model rfuh20ns6s-mpkopec d is=21.421n n=1.9253 rs=19.231m ikf=.25578 eg=1.0700 cjo=315.00p m=.4461 vj=.51056 isr=628.68p bv=600 tt=30n tikf=0.01 iave=20 vpk=600 mfg=rohm type=fastrecovery
+.model rfuh20tb3s d is=7.3862n n=1.6058 rs=9.5725m ikf=.345 eg=1 cjo=330.00p m=.45903 vj=.59546 isr=288.07p nr=1.9000 bv=350 tt=25n tikf=0.01 iave=20 vpk=350 mfg=rohm type=fastrecovery
+.model rfuh20tb4s d is=16.259n n=1.9942 rs=8.5699m ikf=.54992 eg=1.0700 cjo=266.00p m=.45918 vj=.51161 isr=175.51p bv=430 tt=34n tikf=0.01 iave=20 vpk=430 mfg=rohm type=fastrecovery
+.model rfuh20tf6s-ltspice d is=21.421n n=1.9253 rs=19.231m ikf=.25578 eg=1.0700 cjo=315.00p m=.4461 vj=.51056 isr=628.68p bv=600 tt=30n tikf=0.01 iave=20 vpk=600 mfg=rohm type=silicon
+.model rfuh20tf6s-mpkopec d is=21.421n n=1.9253 rs=19.231m ikf=.25578 eg=1.0700 cjo=315.00p m=.4461 vj=.51056 isr=628.68p bv=600 tt=30n tikf=0.01 iave=20 vpk=600 mfg=rohm type=fastrecovery
+.model rfuh20tj6s d is=19.858n n=1.4042 rs=45.176m ikf=26.821m eg=0.85 cjo=315.00p m=.44787 vj=.50154 isr=2.8771n nr=2.8000 bv=600 tt=32.275n tikf=0.1 trs1=-0.0035 iave=20 vpk=600 mfg=rohm type=silicon
+.model rfuh25ns3s-ltspice d is=6.6726n n=1.5628 rs=8.4063m ikf=.42612 eg=1 cjo=386.30p m=.43719 vj=.51591 isr=885.54p nr=1.9000 bv=350 tt=27n tikf=0.01 iave=20 vpk=350 mfg=rohm type=silicon
+.model rfuh25ns3s-mpkopec d is=6.6726n n=1.5628 rs=8.4063m ikf=.42612 eg=1 cjo=386.30p m=.43719 vj=.51591 isr=885.54p nr=1.9000 bv=350 tt=27n tikf=0.01 iave=20 vpk=350 mfg=rohm type=fastrecovery
+.model rfuh25tb3s d is=6.6726n n=1.5628 rs=8.4063m ikf=.42612 eg=1 cjo=386.30p m=.43719 vj=.51591 isr=885.54p nr=1.9000 bv=350 tt=27n tikf=0.01 iave=20 vpk=350 mfg=rohm type=fastrecovery
+.model rfuh30ts6d d is=45.685n n=2.2776 rs=16.675m ikf=68.790m cjo=211.00p m=.44651 vj=.51159 isr=609.79p nr=4 bv=600 tt=27.500n tikf=0.03 trs1=-0.0005 iave=15 vpk=600 mfg=rohm type=fastrecovery
+.model rfuh30ts6s d is=56.127n n=2.1381 rs=15.874m ikf=82.271m cjo=435.00p m=.45459 vj=.51464 isr=156.24p nr=4 bv=600 tt=45.200n tikf=0.03 trs1=-0.0005 iave=30 vpk=600 mfg=rohm type=fastrecovery
+.model rfuh5tf6s d is=3.3149n n=1.4484 rs=.184573 ikf=68.978m eg=1.030 cjo=1.0000e-10 m=.48169 vj=.59596 isr=7.2384e-10 nr=6.5000 bv=600.00 tt=2.5670e-8 trs1=-3.1300m iave=5 vpk=600 mfg=rohm type=silicon
+.model rfuh60ts6d d is=14.328n n=2.0004 rs=15.412m ikf=92.810m cjo=435.53p m=.4393 vj=.47362 isr=2.4124n nr=4 bv=600 tt=44.200n tikf=0.03 trs1=-0.0005 iave=30 vpk=600 mfg=rohm type=fastrecovery
+.model rfus10tf4s d is=5.2226n n=1.6434 rs=25.211m ikf=.10897 eg=1 cjo=181.80p m=.46487 vj=.56555 isr=96.115p nr=3 bv=430 tt=39.7n tikf=0.01 iave=10 vpk=430 mfg=rohm type=fastrecovery
+.model rfus20ns4s d is=10.268n n=1.6263 rs=11.968m ikf=.60932 eg=1 cjo=375.00p m=.44951 vj=.55345 isr=622.81p nr=3.2000 bv=430 tt=41.4n tikf=0.01 iave=20 vpk=430 mfg=rohm type=fastrecovery
+.model rfus20ns6s d is=18.303n n=1.9567 rs=21.319m ikf=.28796 eg=1.2000 cjo=415.00p m=.43803 vj=.52487 isr=992.39p nr=3 bv=600 tt=47n tikf=0.01 trs1=-0.001 iave=20 vpk=600 mfg=rohm type=fastrecovery
+.model rfus20tf6s d is=18.303n n=1.9567 rs=21.319m ikf=.28796 eg=1.2000 cjo=415.00p m=.43803 vj=.52487 isr=992.39p nr=3 bv=600 tt=47n tikf=0.01 trs1=-0.001 iave=20 vpk=600 mfg=rohm type=fastrecovery
+.model rfus20tm4s d is=10.268n n=1.6263 rs=11.968m ikf=.60932 eg=1 cjo=375.00p m=.44951 vj=.55345 isr=622.81p nr=3.2000 bv=430 tt=41.4n tikf=0.01 iave=20 vpk=430 mfg=rohm type=fastrecovery
+.model rfus20tm6s d is=18.303n n=1.9567 rs=21.319m ikf=.28796 eg=1.2000 cjo=415.00p m=.43803 vj=.52487 isr=992.39p nr=3 bv=600 tt=47n tikf=0.01 trs1=-0.001 iave=20 vpk=600 mfg=rohm type=fastrecovery
+.model rfv12tg6s d is=5.8156n n=1.2192 rs=.11590 ikf=6.9496m eg=0.9200 cjo=1.4500e-10 m=.40055 vj=.50266 isr=1.6946n nr=5.4500 bv=600.00 tt=3.8949e-8 trs1=-5.300m iave=12 vpk=600 mfg=rohm type=silicon
+.model rfv12tj6s d is=5.8156n n=1.2192 rs=.11590 ikf=6.9496m eg=0.9200 cjo=1.4500e-10 m=.40055 vj=.50266 isr=1.6946n nr=5.4500 bv=600.00 tt=3.8949e-8 trs1=-5.300m iave=12 vpk=600 mfg=rohm type=silicon
+.model rfv15tg6s d is=9.6250n n=1.3140 rs=9.87610e-2 ikf=4.6480e-2 eg=.88000 cjo=1.8000e-10 m=.38552 vj=.50369 isr=1.6160n nr=2.4000 bv=600.00 tt=4.1720e-8 trs1=-5.2000m iave=15 vpk=600 mfg=rohm type=silicon
+.model rfv15tj6s d is=9.6250n n=1.3140 rs=9.87610e-2 ikf=4.6480e-2 eg=.88000 cjo=1.8000e-10 m=.38552 vj=.50369 isr=1.6160n nr=2.4000 bv=600.00 tt=4.1720e-8 trs1=-5.2000m iave=15 vpk=600 mfg=rohm type=silicon
+.model rfv8tg6s d is=3.2417n n=1.2120 rs=.17177 ikf=2.3516m eg=0.9000 cjo=1.1000e-10 m=.41654 vj=.50938 isr=1.3946n nr=2.1000 bv=600.00 tt=3.2802e-8 tikf=0.0130 trs1=-4.9000m iave=8 vpk=600 mfg=rohm type=silicon
+.model rfv8tj6s d is=2.2857n n=1.1940 rs=.16677 ikf=2.3516m eg=0.8100 cjo=1.1000e-10 m=.41654 vj=.50938 isr=1.3946n nr=2.1000 bv=600.00 tt=3.2802e-8 tikf=0.4000 trs1=-5.0000m iave=8 vpk=600 mfg=rohm type=silicon
+.model rfvs8tg6s d is=1.8720n n=1.3051 rs=0.20178 ikf=4.7129m eg=1.0050 cjo=6.9000e-11 m=.39100 vj=.50319 isr=1.3515n nr=7.9000 bv=600.00 tt=2.7815e-8 tikf=0.01000 trs1=-4.8000m iave=8 vpk=600 mfg=rohm type=silicon
+.model rfvs8tj6s d is=1.8720n n=1.3051 rs=0.20178 ikf=4.7129m eg=1.0050 cjo=6.9000e-11 m=.39100 vj=.50319 isr=1.3515n nr=7.9000 bv=600.00 tt=2.7815e-8 tikf=0.01000 trs1=-4.8000m iave=8 vpk=600 mfg=rohm type=silicon
+.model rfx10tf6s d is=20.000n n=2.1954 rs=33.646m ikf=17.752m eg=1.4000 cjo=222.00p m=.42921 vj=.52767 isr=2.6375n nr=3 bv=600 tt=29n tikf=0.01 trs1=-0.0015 iave=10 vpk=600 mfg=rohm type=fastrecovery
+.model rn142sm d is=168.42f n=.90872 rs=76.753m ikf=124.73n eg=1.14 cjo=392.00f m=0.1169 vj=0.5000 isr=6.1190p nr=2.2000 bv=60 tt=358.84n trs1=-4.2000m tikf=3.2896m iave=0.1 vpk=60 mfg=rohm type=silicon
+.model rn731v d is=5.9223p n=1.4915 rs=.18911 ikf=43.071m cjo=417.41f m=.18127 vj=.79242 isr=4.1607p nr=1.7000 bv=50 tt=1.8000u iave=0.05 vpk=50 mfg=rohm type=silicon
+.model rn739f d is=5.9223p n=1.4915 rs=.18911 ikf=43.071m cjo=417.41f m=.18127 vj=.79242 isr=4.1607p nr=1.7000 bv=50 tt=1.8000u iave=0.05 vpk=50 mfg=rohm type=silicon
+.model rn771v d is=134.37p n=1.6045 rs=.91991 ikf=13.708 cjo=1.2496p m=.283 vj=.83507 isr=2.4724n nr=2.5000 bv=50 tt=2.1500u iave=0.05 vpk=50 mfg=rohm type=silicon
+.model rn779d d is=134.37p n=1.6045 rs=.91991 ikf=13.708 cjo=1.2496p m=.283 vj=.83507 isr=2.4724n nr=2.5000 bv=50 tt=2.1500u iave=0.05 vpk=50 mfg=rohm type=silicon
+.model rn779f d is=134.37p n=1.6045 rs=.91991 ikf=13.708 cjo=1.2496p m=.283 vj=.83507 isr=2.4724n nr=2.5000 bv=50 tt=2.1500u iave=0.05 vpk=50 mfg=rohm type=silicon
+.model rr1lam4s d is=12.747n n=1.8735 rs=40.229m ikf=96.237 eg=0.9700 cjo=23.000p m=.36429 vj=.50289 isr=200.19p nr=2.1000 bv=500.00 tt=3.9138u trs1=-0.5000m iave=1 vpk=500 mfg=rohm type=silicon
+.model rr1lam6s d is=7.1097n n=1.8283 rs=38.553m ikf=4.7338 eg=1.0200 cjo=17.950p m=.37984 vj=.50367 isr=676.14p nr=2.1000 bv=750.00 tt=3.9298u trs1=-0.0100m tikf=0.0100 iave=1 vpk=750 mfg=rohm type=silicon
+.model rr1vwm4s d is=5.3269n n=1.9284 rs=.10815 ikf=.84447 eg=1.0900 cjo=6.6189p m=.3765 vj=.50121 isr=262.70p nr=4.3000 bv=400.00 tt=2.0802u trs1=1.2000m tikf=0.0060 iave=1 vpk=400 mfg=rohm type=silicon
+.model rr1vwm6s d is=7.7154n n=1.9953 rs=111.30m ikf=913.91m xti=3.0 eg=1.08 cjo=5.9000p m=0.4068 vj=0.5000 isr=361.18p nr=1.9366 bv=600 tt=2.0452u trs1=2.1060m tikf=7.1123m iave=1 vpk=600 mfg=rohm type=silicon
+.model rr264m-400 d is=599.20p n=1.6555 rs=62.086m ikf=5.5206 cjo=106.14p m=.43343 vj=.47628 isr=1.4138n nr=3 bv=400 tt=6.9000u iave=0.7 vpk=400 mfg=rohm type=rectifier
+.model rr264mm-400 d is=1.5648n n=1.7245 rs=58.748m ikf=51.356 eg=0.9600 cjo=14.823p m=.35638 vj=.50461 isr=1.4194n nr=3.2 bv=400 tt=6.9000u trs1=-0.0026 iave=0.7 vpk=400 mfg=rohm type=silicon
+.model rr268mm-600 d is=5.5747n n=1.8375 rs=42.539m ikf=1.1683 eg=1.02 cjo=16.000p m=.35808 vj=.50249 isr=1.6725n nr=2.4000 bv=600 tt=3.1203u trs1=-1.0000m tikf=0.0300 iave=1 vpk=600 mfg=rohm type=silicon
+.model rr274ea-400-ltspice d is=10.035p n=1.3983 rs=.13369 ikf=.39883 cjo=14.091p m=.38358 vj=.4509 isr=1.4458n nr=2.5000 bv=400 tt=3.5500u iave=0.5 vpk=400 mfg=rohm type=silicon
+.model rr274ea-400-mpkopec d is=10.035p n=1.3983 rs=.13369 ikf=.39883 cjo=14.091p m=.38358 vj=.4509 isr=1.4458n nr=2.5000 bv=400 tt=3.5500u iave=0.5 vpk=400 mfg=rohm type=rectifier
+.model rr2l4s d is=201.70p n=1.4797 rs=16.071m ikf=11.643 eg=1.0500 cjo=49.000p m=.37648 vj=.50987 isr=1.3403n nr=3.3000 bv=400 tt=5.2u trs1=0.0025 iave=2 vpk=400 mfg=rohm type=rectifier
+.model rr2l6s d is=1.5392n n=1.6310 rs=16.849m ikf=17.962 eg=.97 cjo=44.000p m=.40234 vj=.51261 isr=1.4208n nr=3.3000 bv=600 tt=5.9300u trs1=0.001 iave=2 vpk=600 mfg=rohm type=rectifier
+.model rr2lam4s d is=3.8764n n=1.6768 rs=18.623m ikf=167.33 eg=1.0000 cjo=49.317p m=.37873 vj=.50045 isr=1.1159n nr=2.3000 bv=400 tt=6.3691u iave=2 vpk=400 mfg=rohm type=silicon
+.model rr2lam6s d is=3.4722n n=1.6773 rs=19.675m ikf=15.962 eg=0.989 cjo=42.989p m=.38222 vj=.43692 isr=1.0575n nr=2.3 bv=600 tt=5.6421u tikf=11.260m iave=2 vpk=600 mfg=rohm type=silicon
+.model rr601bge4s d is=992.18p n=1.5103 rs=18.496m ikf=999.24 eg=1.1 cjo=132.94p m=.43093 vj=.50219 isr=1.0218n nr=2.3000 bv=400 tt=2.5379u trs1=0.001 iave=6 vpk=400 mfg=rohm type=silicon
+.model rr601bm4s d is=992.18p n=1.5103 rs=18.496m ikf=999.24 eg=1.1 cjo=132.94p m=.43093 vj=.50219 isr=1.0218n nr=2.3000 bv=400 tt=2.5379u trs1=0.001 iave=6 vpk=400 mfg=rohm type=silicon
+.model rrd20tj10s d is=614.99p n=1.4312 rs=3.4623m ikf=67.94 eg=1.09 cjo=372.48p m=0.4583 vj=0.5126 isr=319.69p nr=2.45 bv=1000 tt=14.840u trs1=2.3853m tikf=11.853m iave=20 vpk=1000 mfg=rohm type=silicon
+.model rre02vs4s d is=24.195p n=1.5366 rs=.23596 ikf=.62542 cjo=3.4000p m=.31934 vj=.50899 isr=218.42p nr=3.6000 bv=400 tt=810.00n trs1=0.001 iave=0.2 vpk=400 mfg=rohm type=rectifier
+.model rre02vs6s d is=865.57p n=1.8532 rs=.22784 ikf=81.233 eg=1.0800 cjo=2.6000p m=.29056 vj=.52841 isr=654.57p nr=3.6000 bv=600 tt=930.00n trs1=0.001 iave=0.2 vpk=600 mfg=rohm type=rectifier
+.model rre02vsm4s d is=24.195p n=1.5366 rs=.23596 ikf=.62542 cjo=3.4000p m=.31934 vj=.50899 isr=218.42p nr=3.6000 bv=400 tt=810.00n trs1=0.001 iave=0.2 vpk=400 mfg=rohm type=silicon
+.model rre02vsm6s d is=865.57p n=1.8532 rs=.22784 ikf=81.233 eg=1.0800 cjo=2.6000p m=.29056 vj=.52841 isr=654.57p nr=3.6000 bv=600 tt=930.00n trs1=0.001 iave=0.2 vpk=600 mfg=rohm type=silicon
+.model rre04ea4d-ltspice d is=946.50p n=1.8158 rs=.18161 ikf=286.43 eg=1.0500 cjo=3.4000p m=.35303 vj=.75844 isr=77.233p bv=400 tt=737.42n trs1=0.0015 iave=0.4 vpk=400 mfg=rohm type=silicon
+.model rre04ea4d-mpkopec d is=946.50p n=1.8158 rs=.18161 ikf=286.43 eg=1.0500 cjo=3.4000p m=.35303 vj=.75844 isr=77.233p bv=400 tt=737.42n trs1=0.0015 iave=0.2 vpk=400 mfg=rohm type=rectifier
+.model rre07vs4s d is=689.77p n=1.6610 rs=90.691m ikf=507.97 eg=1.0500 cjo=12.500p m=.38273 vj=.50419 isr=102.21p nr=3 bv=400 tt=1.1300u trs1=0.001 iave=0.7 vpk=400 mfg=rohm type=rectifier
+.model rre07vsm4s d is=689.77p n=1.6610 rs=90.691m ikf=507.97 eg=1.0500 cjo=12.500p m=.38273 vj=.50419 isr=102.21p nr=3 bv=400 tt=1.1300u trs1=0.001 iave=0.7 vpk=400 mfg=rohm type=silicon
+.model rre07vsm6s d is=571.97p n=1.7013 rs=.10908 ikf=456.13 cjo=6.4000p m=.40864 vj=.50737 isr=93.497p nr=3 bv=600 tt=1.3600u trs1=0.0035 iave=0.7 vpk=600 mfg=rohm type=silicon
+.model rru1lam4s d is=816.25p n=1.1424 rs=88.845m ikf=807.25n eg=1.04 cjo=11.979p m=.25913 vj=.89306 isr=15.216n bv=500 tt=275.80n trs1=0.0005 tikf=0.0142 iave=1 vpk=500 mfg=rohm type=silicon
+.model smbj24ca d ron=.65 roff=50meg vfwd=25 epsilon=6 vrev=25 revepsilon=6 vpk=24 mfg=littlefuse type=tvs
+.model smcj33a d ron=.4 roff=8meg vfwd=.7 epsilon=100m vrev=38.65 vpk=33 revepsilon=4 mfg=littlefuse type=tvs
+.model stth3r06 d is=8.5465u n=3.0516 rs=29.4m ikf=.13432 cjo=74.985p m=.43409 vj=.68625 isr=10.010e-21 nr=4.995 fc=0.5 tt=14.5n
+.model uf4007 d n=3.97671 is=3.28772u rs=0.149734 eg=1.11 xti=3 cjo=2.92655e-011 vj=0.851862 m=0.334552 fc=0.5 tt=1.84973e-007 bv=1000 ibv=0.2 iave=1 vpk=1000 type=silicon
+.model umn10n d is=4.4304n n=1.8629 rs=1.1670 ikf=26.544 cjo=728.25f m=.13936 vj=.79317 isr=2.3501n bv=90 tt=12.000n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model umn11n d is=936.79p n=1.7211 rs=1.0196 ikf=28.904 cjo=1.7934p m=.18986 vj=.86529 isr=2.0505n nr=2.4000 bv=80 tt=37.000n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model umn1n d is=2.0235n n=1.7300 rs=1.6409 ikf=17.788 eg=1.1500 cjo=1.8691p m=.19217 vj=.80284 isr=1.7281n nr=2.6000 bv=80 tt=28.300n iave=0.025 vpk=80 mfg=rohm type=silicon
+.model umn20n d is=630.74f n=1.3208 rs=.34914 ikf=22.806m cjo=2.2100p m=.36689 vj=.80373 isr=4.0521p nr=2.5000 bv=80 tt=310.00n iave=0.1 vpk=40 mfg=rohm type=silicon
+.model ump11n d is=3.8311p n=1.1556 rs=.16041 ikf=1.0156m cjo=2.9921p m=.17376 vj=.80381 isr=1.0089n nr=2.5000 bv=80 tt=27.500n iave=0.1 vpk=80 mfg=rohm type=silicon
+.model ump1n d is=515.75p n=1.7369 rs=1.1050 ikf=10.763 cjo=2.9996p m=.24112 vj=.88581 isr=986.10p nr=2.4000 bv=80 tt=22.500n iave=0.025 vpk=80 mfg=rohm type=silicon
+.model vs-e5ph3006 d is=19.744u n=2.5801 rs=2.7042m ikf=.5589 cjo=415.53p m=.41414 vj=.3905 isr=10.010e-21 nr=4.9950 bv=712.26 ibv=25.865m tt=26.586n vp=0.18 xti=4 tikf=0.05 trs1=0.001 iave=30 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5ph3012 d is=250.00u n=4.2675 rs=7.6123m ikf=.69493 cjo=203.71p m=.4044 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.3555e3 ibv=25.866m tt=57.625n vp=0.41 xti=14.5 tikf=0.054 trs1=0.0012 iave=30 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5ph6006 d is=25.000u n=2.4883 rs=2.0218m ikf=.76207 cjo=712.37p m=.4152 vj=.3905 isr=10.010e-21 nr=4.9950 bv=715.83 ibv=25.865m tt=24.567n vp=0.18 xti=2.5 tikf=0.062 trs1=0.0005 iave=60 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5ph6012 d is=250.00u n=3.8288 rs=4.0787m ikf=1.1510 cjo=396.36p m=.41312 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.3609e3 ibv=25.865m tt=57.543n vp=0.445 xti=9 tikf=0.065 trs1=0.0006 iave=60 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5ph7506 d is=25.000u n=2.3886 rs=1.6994m ikf=1.1951 cjo=1.0825n m=.42515 vj=.3905 isr=10.010e-21 nr=4.9950 bv=711.79 ibv=25.865m tt=31.625n vp=0.21 xti=3 tikf=0.046 trs1=0.0018 iave=75 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5px3006 d is=200.00u n=3.5790 rs=3.1860m ikf=.72534 cjo=407.26p m=.40937 vj=.3905 isr=10.010e-21 nr=4.9950 bv=711.72 ibv=25.865m tt=18.189n vp=0.13 xti=11 tikf=0.06 trs1=0.0002 iave=30 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5px3012 d is=800.00u n=5.6551 rs=10.172m ikf=.71976 cjo=199.46p m=.39728 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.3425e3 ibv=25.867m tt=40.208n vp=0.62 xti=28 tikf=0.06 trs1=0.0001 iave=30 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5px6006 d is=500.00u n=3.7238 rs=2.4186m ikf=1.3414 cjo=710.54p m=.41568 vj=.3905 isr=10.010e-21 nr=4.9950 bv=717.81 ibv=25.865m tt=18.020n vp=0.12 xti=10 tikf=0.082 trs1=0.0001 iave=60 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5px6012 d is=800.00u n=5.1114 rs=6.0743m ikf=1.1158 cjo=382.03p m=.40954 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.3798e3 ibv=25.866m tt=43.586n vp=0.565 xti=26 tikf=0.072 trs1=0.0001 iave=60 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5px7506 d is=500.00u n=3.5331 rs=2.0777m ikf=1.8791 cjo=1.0636n m=.42417 vj=.3905 isr=10.010e-21 nr=4.9950 bv=716.40 ibv=1 tt=22.967n vp=0.13 xti=10 tikf=0.062 trs1=0.001 iave=75 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5th0812 d is=50.000u n=4.4303 rs=24.377m ikf=.29781 cjo=54.973p m=.35718 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.4095e3 ibv=25.870m tt=46.645n vp=0.33 xti=16 tikf=0.032 trs1=0.0005 iave=8 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5th1506 d is=19.164u n=2.7427 rs=4.6018m ikf=.33429 cjo=224.32p m=.41178 vj=.3905 isr=10.010e-21 nr=4.9950 bv=720.58 ibv=25.865m tt=22.430n vp=0.19 xti=4 tikf=0.054 trs1=0.0005 iave=15 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5th1512 d is=397.95u n=5.1488 rs=12.022m ikf=1.7072 cjo=124.74p m=.40291 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.4001e3 ibv=25.867m tt=64.723n vp=0.33 xti=15 tikf=0.036 trs1=0.0005 iave=15 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5th3006 d is=29.784u n=2.7020 rs=2.9820m ikf=.66913 cjo=431.94p m=.42079 vj=.3905 isr=10.010e-21 nr=4.9950 bv=717.66 ibv=25.865m tt=25.489n vp=0.19 xti=4.5 tikf=0.06 trs1=0.001 iave=30 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5tx0812 d is=600.00u n=7.2620 rs=25.638m ikf=.50151 cjo=61.668p m=.38278 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.4102e3 ibv=25.871m tt=47.528n vp=0.37 xti=34 tikf=0.054 trs1=0.0004 iave=8 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5tx1506 d is=476.13u n=4.4507 rs=4.4171m ikf=.92778 cjo=220.63p m=.40833 vj=.3925 isr=10.010e-21 nr=4.9950 bv=716.57 ibv=25.865m tt=16.371n vp=0.11 xti=13 tikf=0.08 trs1=0.0005 iave=15 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e5tx1512 d is=700.00u n=6.1854 rs=13.659m ikf=.52346 cjo=112.11p m=.40001 vj=.3905 isr=10.010e-21 nr=4.9950 bv=1.5221e3 ibv=.25868 tt=59.567n vp=0.39 xti=32 tikf=0.044 trs1=0.0005 iave=15 vpk=1200 mfg=vishay type=fastrecovery
+.model vs-e5tx3006 d is=729.25u n=4.2768 rs=2.9552m ikf=1.5146 cjo=427.23p m=.41993 vj=.3905 isr=10.010e-21 nr=4.9950 bv=719.12 ibv=25.865m tt=18.130n vp=0.11 xti=12 tikf=0.072 trs1=0.0002 iave=30 vpk=600 mfg=vishay type=fastrecovery
+.model vs-e7mh0112 d is=5.0000u n=3.7808 rs=65.513m ikf=.40226 cjo=14.055p m=.19493 vj=.2 isr=10.010e-21 nr=4.9950 bv=1.345e3 ibv=0.01 tt=145.658n vp=0.18 xti=16 tikf=0.066 trs1=0.0025 iave=1 vpk=1200 mfg=vishay type=fastrecovery
+.model x100sg d is=0.25u n=28 rs=0.8 tt=3000n cj0=1.5p vj=19.79 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.1 vpk=10000 mfg=vmi type=silicon
+.model x150ff3 d is=0.25u n=90 rs=8 tt=30n cj0=0.98p vj=16.83 m=0.5 eg=1.11 xti=3 fc=0.5 bv=17000 ibv=100u iave=0.05 vpk=15000 mfg=vmi type=silicon
+.model x150sg d is=0.25u n=39.5 rs=0.9 tt=3000n cj0=1.19p vj=26.18 m=0.5 eg=1.11 xti=3 fc=0.5 bv=17000 ibv=100u iave=0.05 vpk=15000 mfg=vmi type=silicon
+.model x150ufg d is=0.25u n=46 rs=8 tt=100n cj0=1.23p vj=19.17 m=0.5 eg=1.11 xti=3 fc=0.5 bv=18000 ibv=100u iave=0.05 vpk=15000 mfg=vmi type=silicon
+.model x200ufg d is=0.25u n=62 rs=9 tt=100n cj0=1.01p vj=23.44 m=0.5 eg=1.11 xti=3 fc=0.5 bv=22000 ibv=100u iave=0.025 vpk=20000 mfg=vmi type=silicon
+.model x20ff3 d is=0.25u n=9 rs=0.8 tt=30n cj0=8.43p vj=3.11 m=0.5 eg=1.11 xti=3 fc=0.5 bv=2200 ibv=100u iave=0.42 vpk=2000 mfg=vmi type=silicon
+.model x25sg d is=0.25u n=9 rs=0.3 tt=3000n cj0=6.5p vj=4.25 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=0.25 vpk=2500 mfg=vmi type=silicon
+.model x50ff3 d is=0.25u n=38 rs=2.2 tt=30n cj0=3.1p vj=8.66 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.15 vpk=5000 mfg=vmi type=silicon
+.model x50sg d is=0.25u n=14.5 rs=1.4 tt=3000n cj0=3.87p vj=6.41 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.15 vpk=5000 mfg=vmi type=silicon
+.model xp-e2-wht d is=5.01824e-16 n=3.36413016 rs=0.244130334 xti=40.92995615 ikf=0 eg=2.5000 mfg=cree vpk=5
+.model z100ff3 d is=0.5u n=70 rs=2.6 tt=30n cj0=8.49p vj=20.3 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.18 vpk=10000 mfg=vmi type=silicon
+.model z100sg d is=0.5u n=26 rs=0.005 tt=3000n cj0=10.41p vj=13.55 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.5 vpk=10000 mfg=vmi type=silicon
+.model z100uf d is=0.5u n=35 rs=0.25 tt=100n cj0=9.75p vj=7.77 m=0.5 eg=1.11 xti=3 fc=0.5 bv=12000 ibv=100u iave=0.4 vpk=10000 mfg=vmi type=silicon
+.model z10ff3 d is=0.5u n=7.6 rs=0.5 tt=30n cj0=74.77p vj=1.53 m=0.5 eg=1.11 xti=3 fc=0.5 bv=1500 ibv=100u iave=1.2 vpk=1000 mfg=vmi type=silicon
+.model z10ff5 d is=0.5u n=4 rs=0.13 tt=50n cj0=260.2p vj=0.35 m=0.5 eg=1.11 xti=3 fc=0.5 bv=1100 ibv=100u iave=2 vpk=1000 mfg=vmi type=silicon
+.model z150ufg d is=0.5u n=52 rs=1.5 tt=100n cj0=5.99p vj=21.33 m=0.5 eg=1.11 xti=3 fc=0.5 bv=18000 ibv=100u iave=0.3 vpk=15000 mfg=vmi type=silicon
+.model z20ff3 d is=0.5u n=10 rs=0.36 tt=30n cj0=57.79p vj=2.16 m=0.5 eg=1.11 xti=3 fc=0.5 bv=2200 ibv=100u iave=1 vpk=2000 mfg=vmi type=silicon
+.model z25sg d is=0.5u n=8.6 rs=0.005 tt=3000n cj0=33.69p vj=4.47 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=1.5 vpk=2500 mfg=vmi type=silicon
+.model z25uf d is=0.5u n=11 rs=0.12 tt=100n cj0=29.26p vj=2.53 m=0.5 eg=1.11 xti=3 fc=0.5 bv=3600 ibv=100u iave=1 vpk=2500 mfg=vmi type=silicon
+.model z50ff3 d is=0.5u n=35 rs=1.5 tt=30n cj0=18.8p vj=8.7 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.36 vpk=5000 mfg=vmi type=silicon
+.model z50ff5 d is=0.5u n=22.3 rs=0.7 tt=50n cj0=22.76p vj=6.41 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=0.36 vpk=5000 mfg=vmi type=silicon
+.model z50sg d is=0.5u n=13.2 rs=0.005 tt=3000n cj0=20.55p vj=8.09 m=0.5 eg=1.11 xti=3 fc=0.5 bv=6000 ibv=100u iave=1 vpk=5000 mfg=vmi type=silicon

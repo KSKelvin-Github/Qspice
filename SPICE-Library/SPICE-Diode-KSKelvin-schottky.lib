@@ -1,0 +1,700 @@
+* SPICE model library – diode models – keyword "schottky"
+* Source: SPICE-Diode-KSKelvin.lib
+*
+.model 10mq060n d is=.1u rs=.14 cjo=102p n=1 m=.3 eg=.69 xti=2 iave=1.5 vpk=60 mfg=international_rectifier type=schottky
+.model 1n5711 d is=19.7n n=1.51 bv=93.3 ibv=50n rs=6.27 cjo=1.8p vj=.75 m=.333 xti=2 eg=.69 tt=10.8p type=schottky
+.model 1n5817 d is=31.7u rs=.051 n=1.373 cjo=190p m=.3 eg=.69 xti=2 iave=1 vpk=20 mfg=onsemi type=schottky
+.model 1n5818 d is=31.7u rs=.051 n=1.373 cjo=160p m=.38 eg=.69 xti=2 iave=1 vpk=30 mfg=onsemi type=schottky
+.model 1n5819 d is=31.7u rs=.051 n=1.373 cjo=110p m=.35 eg=.69 xti=2 iave=1 vpk=40 mfg=onsemi type=schottky
+.model 1n5822 d is=2.5069u n=1.0281 rs=11.15m ikf=403 cjo=980p m=.47978 vj=.3905 isr=5.226u nr=4.995 eg=.69 xti=2 tt=0 fc=0.5 bv=40 ibv=100u iave=3 vpk=40 mfg=st type=schottky
+.model 1n6823 d is=4.258u n=1.265 rs=1.038m ikf=3.295 xti=2 eg=.69 cjo=11.7n m=.564 isr=362n nr=2 bv=120 ibv=5m iave=150 vpk=100 mfg=microsemi type=schottky
+.model 30bq015 d is=50u rs=18m n=1.0339 cjo=1400p vj=1.5 m=0.699718 eg=0.6 xti=0.5 fc=0.5 bv=15 ibv=3m iave=3 vpk=15 mfg=international_rectifier type=schottky
+.model 30bq060 d is=10u rs=.04 n=1.4 cjo=180p eg=.69 xti=2 iave=3 vpk=60 mfg=international_rectifier type=schottky
+.model b0520ws d is=1.96u rs=0.131 bv=20.0 ibv=250u cjo=170p m=0.333 n=0.907 tt=7.2n vpk=20v iave=0.5a mfg=diodes_inc type=schottky
+.model b520c d is=200u rs=8m cjo=300p n=1.7 ikf=2 isr=200u nr=2 iave=5 vpk=20 mfg=diodes_inc. type=schottky
+.model b530c d is=200u rs=8m cjo=300p n=1.7 ikf=2 isr=200u nr=2 iave=5 vpk=30 mfg=diodes_inc. type=schottky
+.model b540c d is=200u rs=8m cjo=300p n=1.7 ikf=2 isr=200u nr=2 iave=5 vpk=40 mfg=diodes_inc. type=schottky
+.model b550c d is=20u rs=25m cjo=300p n=1.7 ikf=10 isr=100u nr=2 iave=5 vpk=50 mfg=diodes_inc. type=schottky
+.model b560c d is=20u rs=25m cjo=300p n=1.7 ikf=10 isr=100u nr=2 iave=5 vpk=60 mfg=diodes_inc. type=schottky
+.model bas40-04hy d is=81.057n n=1.3591 rs=1.4757 ikf=1.1850m xti=2 eg=.68 cjo=6.1909p m=.35121 vj=.5005 isr=9.8518n nr=1.1500 bv=40 trs1=-950.70u iave=0.12 vpk=40 mfg=rohm type=schottky
+.model bas40-05hy d is=81.057n n=1.3591 rs=1.4757 ikf=1.1850m xti=2 eg=.68 cjo=6.1909p m=.35121 vj=.5005 isr=9.8518n nr=1.1500 bv=40 trs1=-950.70u iave=0.12 vpk=40 mfg=rohm type=schottky
+.model bas40-06hy d is=81.057n n=1.3591 rs=1.4757 ikf=1.1850m xti=2 eg=.68 cjo=6.1909p m=.35121 vj=.5005 isr=9.8518n nr=1.1500 bv=40 trs1=-950.70u iave=0.12 vpk=40 mfg=rohm type=schottky
+.model bas40hy d is=81.057n n=1.3591 rs=1.4757 ikf=1.1850m xti=2 eg=.68 cjo=6.1909p m=.35121 vj=.5005 isr=9.8518n nr=1.1500 bv=40 trs1=-950.70u iave=0.12 vpk=40 mfg=rohm type=schottky
+.model bas70 d is=3n rs=29 n=1.06 tt=25p cjo=1.55p vj=.36 m=.29 eg=.68 xti=1.8 fc=.5 bv=70 ibv=100n vpk=70 type=schottky
+.model bas81 d is=86.03n n=1.678 rs=11.45 ikf=914.9u xti=3 eg=1.11 cjo=1.8p m=.3333 vj=.75 fc=.5 isr=15.8m0 nr=6.116 bv=100 ibv=100u tt=5n type=schottky
+.model bat46wj d is=.1703u n=1.06 rs=1.3 cjo=35p vj=.4 m=.5 eg=.69 xti=2 iave=.25 vpk=100 mfg=nxp type=schottky
+.model bat46wj-ltwiki d is=.1703u n=1.06 bv=75 ibv=1.055u rs=1.3 cjo=35p vj=.4 m=.5 eg=.69 xti=2 iave=.25 vpk=100 mfg=nxp type=schottky
+.model bat46wj-volval d is=.1703u n=1.06 bv=75 ibv=1.055u rs=1.3 cjo=35p vj=.4 m=.5 eg=.69 xti=2 iave=.25 vpk=100 mfg=nxp type=schottky
+.model bat54 d is=.1u rs=2.2 n=1 cjo=12p m=.3 eg=.69 xti=2 iave=300m vpk=30 mfg=vishay type=schottky
+.model bat54ahy d is=30.411n n=1.0541 rs=.63327 ikf=31.993 xti=2 eg=.7 cjo=18.076p m=.40571 vj=.3905 isr=52.643n nr=1.3500 bv=30 trs1=0.006 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model bat54chy d is=30.411n n=1.0541 rs=.63327 ikf=31.993 xti=2 eg=.7 cjo=18.076p m=.40571 vj=.3905 isr=52.643n nr=1.3500 bv=30 trs1=0.006 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model bat54hy d is=30.411n n=1.0541 rs=.63327 ikf=31.993 xti=2 eg=.7 cjo=18.076p m=.40571 vj=.3905 isr=52.643n nr=1.3500 bv=30 trs1=0.006 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model bat54shy d is=30.411n n=1.0541 rs=.63327 ikf=31.993 xti=2 eg=.7 cjo=18.076p m=.40571 vj=.3905 isr=52.643n nr=1.3500 bv=30 trs1=0.006 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model cmdsh-4e d is=82.9n rs=2.02 n=1.04 cjo=12.802p m=.47462 eg=0.69 xti=2 iave=200m vpk=40 mfg= central type=schottky
+.model cmdsh2-3 d is=210na rs=.5 n=1.09 cjo=50p m=.5 eg=.69 xti=2 iave=200m vpk=30 mfg=central type=schottky
+.model csd06060 d is=479.17u rs=70.317m n=4.9950 cjo=537.33p m=.40753 bv=800.13 ikf=1.0000e3 vj=.3905 isr=10.010e-21 nr=4.9950 ibv=.12937 tt=15.628p iave=6a vpk=600v mfg=cree type=schottky
+.model dfls220l d is=25u rs=.047 n=1 cjo=252p m=.33 eg=.69 xti=2 iave=2 vpk=20 mfg=diodes_inc. type=schottky
+.model hsms-2820 d bv=15 cjo=.7p eg=.69 ibv=100u is=22n n=1.08 rs=6 vj=.65 xti=2 m=.5 vpk=15 type=schottky mfg=agilent
+.model hsms-285x d is=3u rs=25 n=1.06 bv=3.8 ibv=300u cjo=.18p vj=.35 m=.5 eg=.69 xti=2 tt=72p type=schottky mfg=agilent
+.model hsms-8202 d is=46n rs=6 n=1.08 bv=7.3 ibv=10u cjo=.18p vj=.5 m=.5 eg=.69 tt=72p vpk=4 mfg=avago type=schottky
+.model hsms_2820 d bv=15 cjo=.7p eg=.69 ibv=100u is=22n n=1.08 rs=6 vj=.65 xti=2 m=.5 vpk=15 type=schottky mfg=agilent
+.model hsms_285x d is=3u rs=25 n=1.06 bv=3.8 ibv=300u cjo=.18p vj=.35 m=.5 eg=.69 xti=2 tt=72p type=schottky mfg=agilent
+.model mbr0520l d is=82.5n rs=.115 n=.7228 cjo=180p m=.63 eg=.69 xti=2 iave=.5 vpk=20 mfg=onsemi type=schottky
+.model mbr0530l d is=1.55u rs=.0858 n=1.079 cjo=180p eg=.69 xti=2 iave=.5 vpk=30 mfg=onsemi type=schottky
+.model mbr0540 d is=9.11u rs=.121 n=1.33753 eg=.69 xti=2 cjo=194p vj=.25 m=.4 iave=.5 vpk=40 mfg=gi type=schottky
+.model mbr120lsft1 d is=2.31117u rs=0.0172896 n=1.08118 eg=0.604937 xti=5 bv=20 ibv=0.00025 cjo=3.23747e-10 vj=0.401691 m=0.398428 fc=0.5 tt=1n iave=1 vpk=20 mfg=onsemi type=schottky
+.model mbr1635 d is=138u rs=2.62m bv=35 ibv=31u cjo=862p m=0.333 n=1.53 tt=7.20n vpk=35v iave=16a mfg=diodesinc type=schottky
+.model mbr20100ct d is=10u rs=.005 n=1.5 ikf=.3 isr=10u nr=3 cjo=1e-11 vj=.7 iave=10 vpk=100 mfg=onsemi type=schottky
+.model mbr735 d is=159u rs=.02 n=1.76 cjo=740p m=.6 eg=.69 xti=2 iave=7.5 vpk=35 mfg=onsemi type=schottky
+.model mbr745 d is=159u rs=.02 n=1.76 cjo=740p m=.6 eg=.69 xti=2 iave=7.5 vpk=45 mfg=onsemi type=schottky
+.model mbrb2545ct d is=19.4n rs=.01 n=.733 eg=.718 xti=.535 cjo=2.05n vj=.4 m=.41 iave=25 vpk=45 mfg=gi type=schottky
+.model mbrs1100 d is=20.6u rs=.0079 n=2.303 cjo=270p m=.575 eg=.69 xti=2 iave=1 vpk=100 mfg=onsemi type=schottky
+.model mbrs130l d is=772n rs=.0299 n=.8442 cjo=290p m=.7 eg=.69 xti=2 iave=1 vpk=30 mfg=onsemi type=schottky
+.model mbrs140 d is=235n rs=.109 n=.7760 cjo=160p m=.6 eg=.69 xti=2 iave=1 vpk=40 mfg=onsemi type=schottky
+.model mbrs340 d is=22.6u rs=.042 n=1.094 cjo=480p m=.61 eg=.69 xti=2 iave=3 vpk=40 mfg=onsemi type=schottky
+.model mbrs360 d is=22.6u rs=.042 n=1.094 cjo=480p m=.61 eg=.69 xti=2 iave=3 vpk=60 mfg=onsemi type=schottky
+.model nsr20f30nxt5g-ltspice d is=1e-07 rs=0.0685826 n=0.776978 eg=0.6 xti=3.94234 bv=35 ibv=0.665074 cjo=3.78999e-10 vj=0.484208 m=0.480643 fc=0.5 tt=0 kf=0 af=1 vpk=30 mfg=onsemi type=schottky iave=2
+.model nsr20f30nxt5g-mpkopec d is=1e-07 rs=0.0685826 n=0.776978 eg=0.6 xti=3.94234 bv=35 ibv=0.665074 cjo=3.78999e-10 vj=0.484208 m=0.480643 fc=0.5 tt=0 kf=0 af=1 vpk=30 mfg=onsemi type=schottky
+.model pds5100 d is=49.0u rs=7.63m bv=100 ibv=200u cjo=375p m=0.333 n=1.84 tt=21.6n iave=5 vpk=100 mfg=diodes_inc. type=schottky
+.model pds760 d is=360n rs=.016 n=1.04 cjo=1200p m=.33 eg=.69 xti=2 iave=7 vpk=60 mfg=diodes_inc. type=schottky
+.model pmeg2005aea d is=3.334u rs=.08222 n=.9791 cjo=.1266n m=.5 eg=.69 xti=2 bv=22 ibv=.0001 vj=.3619 iave=.5 vpk=20 mfg=nxp type=schottky
+.model pmeg2005eb d is=.9985u rs=.2146 n=.9283 cjo=61.05p m=.4159 eg=.69 xti=2 bv=32 ibv=.001 vj=.1 iave=.5 vpk=20 mfg=nxp type=schottky
+.model pmeg2010aeb d is=87.24u rs=.2728 n=.9699 cjo=29.99p m=.3755 eg=.69 xti=2 bv=22 ibv=.0004 vj=.2604 iave=1 vpk=20 mfg=nxp type=schottky
+.model pmeg2010bea d is=3.334u rs=.08222 n=.9791 cjo=.1266n m=.5 eg=.69 xti=2 bv=22 ibv=.0001 vj=.3619 iave=1 vpk=20 mfg=nxp type=schottky
+.model pmeg2010ea d is=1.686u rs=.1249 n=1.015 cjo=90.86p m=.4542 eg=.69 xti=2 bv=21 ibv=1u vj=.1939 iave=1 vpk=20 mfg=nxp type=schottky
+.model pmeg2020aea d is=5.409u rs=.05676 n=1.02 cjo=.1908n m=.4863 eg=.69 xti=2 bv=22 ibv=50u vj=.3408 iave=2 vpk=20 mfg=nxp type=schottky
+.model pmeg3005aea d is=2.936u rs=.1166 n=.9839 cjo=.1068n m=.4948 eg=.69 xti=2 bv=33 ibv=75u vj=.3459 iave=.5 vpk=30 mfg=nxp type=schottky
+.model pmeg3010bea d is=2.936u rs=.1166 n=.9839 cjo=.1068n m=.4948 eg=.69 xti=2 bv=33 ibv=75u vj=.3459 iave=1 vpk=30 mfg=nxp type=schottky
+.model pmeg4005aea d is=2.831u rs=.1975 n=.9816 cjo=84.37p m=.4789 eg=.69 xti=2 bv=44 ibv=50u vj=.3116 iave=.5 vpk=40 mfg=nxp type=schottky
+.model pmeg4010bea d is=2.831u rs=.1975 n=.9816 cjo=84.37p m=.4789 eg=.69 xti=2 bv=44 ibv=50u vj=.3116 iave=1 vpk=40 mfg=nxp type=schottky
+.model pmeg6010aed d is=.5u rs=.3422 n=.9751 cjo=.175n m=.4725 eg=.69 xti=2 bv=66 ibv=.0004 vj=.3761 iave=1 vpk=60 mfg=nxp type=schottky
+.model prll5817 d is=2.119u rs=.0419 n=1.02 cjo=.252n m=.5104 eg=.69 xti=2 bv=1000 ibv=.001 vj=.4792 iave=1 vpk=20 mfg=nxp type=schottky
+.model prll5819 d is=6.678u n=1.04 bv=44 ibv=0.01 rs=0.1936 cjo=1.83e-10 vj=0.3235 m=0.4694 fc=0.5 eg=0.69 xti=2 vpk=40v iave=1a mfg=nxp type=schottky
+.model rb021vam90 d is=147.49n n=.5455 rs=.69346 ikf=138.28u xti=2 eg=.52 cjo=62.000p m=.52175 vj=.51906 isr=2.4078u nr=1.1000 bv=90 trs1=0.002 iave=0.2 vpk=90 mfg=rohm type=schottky
+.model rb050l-40 d is=1.2695u n=1.076 rs=20.664m ikf=1.175 xti=2 eg=.69 cjo=648.17p m=537.64m vj=471.26m isr=425.28n bv=40 tt=5.5n iave=3 vpk=40 mfg=rohm type=schottky
+.model rb050l-60 d is=1.0228u n=1.011 rs=48.012m ikf=2.526 xti=2 eg=.69 cjo=600p m=599.21m vj=753.42m isr=539.19n nr=1.3 bv=60 tt=8.6562n trs1=3m iave=3 vpk=60 mfg=rohm type=schottky
+.model rb050lam-30 d is=957.78n n=0.9340 rs=4.8265m ikf=141.25m xti=2.0 eg=0.700 cjo=1.2667n m=0.5574 vj=0.5000 isr=3.4880u nr=1.2143 bv=30 trs1=2.7980m tikf=15.384m iave=3 vpk=30 mfg=rohm type=schottky
+.model rb050lam-40 d is=1.1658u n=0.9829 rs=18.124m ikf=141.25m xti=2.0 eg=0.664 cjo=703.60p m=0.5482 vj=0.5000 isr=2.5157u nr=1.2765 bv=40 trs1=-399.11u iave=3 vpk=40 mfg=rohm type=schottky
+.model rb050lam-60 d is=954.59n n=0.9584 rs=21.970m ikf=141.25m xti=2.0 eg=0.685 cjo=608.90p m=0.5394 vj=0.5000 isr=1.8219u nr=1.1485 bv=60 trs1=708.07u tikf=622.10u iave=3 vpk=60 mfg=rohm type=schottky
+.model rb051lam-40 d is=8.0917u n=0.9677 rs=7.4856m ikf=141.25m xti=2.0 eg=0.589 cjo=762.33p m=0.5349 vj=0.5000 isr=29.374u nr=1.1740 bv=40 trs1=4.5653m tikf=3.6336m iave=3 vpk=40 mfg=rohm type=schottky
+.model rb051mm-2y d is=1.0067e-5 n=1.4545 rs=2.5236e-2 ikf=1.0487 xti=2 eg=.55 cjo=4.5400e-10 m=.55987 vj=.50374 isr=4.1794e-5 nr=1.0000 bv=20.000 trs1=3.2900m iave=3 vpk=20 mfg=rohm type=schottky
+.model rb055l-30 d is=684.81n n=1.024 rs=44.953m ikf=25.76 xti=2 eg=.69 cjo=400.26p m=530.71m vj=453.2m isr=386.49n bv=30 tt=13.5n iave=3 vpk=30 mfg=rohm type=schottky
+.model rb055l-40 d is=676.6n n=1.025 rs=51m ikf=39.34 xti=2 eg=.69 cjo=334.8p m=527m vj=460m isr=287.38n bv=40 tt=11.3n iave=3 vpk=40 mfg=rohm type=schottky
+.model rb055l-60 d is=1.5832u n=1.153 rs=29.381m ikf=136.06m xti=2 eg=.55 cjo=270p m=516.26m vj=552.01m isr=304.34n nr=1.2 bv=60 tt=11.3n iave=3 vpk=60 mfg=rohm type=schottky
+.model rb055lam-30 d is=684.81n n=0.9644 rs=19.953m ikf=59.757m xti=2 eg=.69 cjo=400.26p m=.50291 vj=.5032 isr=986.49n nr=1.2000 bv=30 iave=3 vpk=30 mfg=rohm type=schottky
+.model rb055lam-40 d is=676.60n n=0.9950 rs=31.000m ikf=89.341m xti=2 eg=.69 cjo=334.80p m=.507 vj=.5026 isr=987.38n nr=1.2000 bv=40 iave=3 vpk=40 mfg=rohm type=schottky
+.model rb055lam-60 d is=983.12n n=1.0725 rs=46.381m ikf=119.106m xti=2 eg=.69 cjo=270.00p m=.50426 vj=.50201 isr=824.34n nr=1.1500 bv=60 trs1=-1.2857m iave=3 vpk=60 mfg=rohm type=schottky
+.model rb056l-40 d is=457.77n n=1.012 rs=61.964m ikf=781.58m xti=2 eg=.56 cjo=282p m=612.64m vj=750.58m isr=332.67n nr=1.3 bv=40 tt=13.565n iave=3 vpk=40 mfg=rohm type=schottky
+.model rb056lam-40 d is=401.77n n=1.0123 rs=37.264m ikf=.78158 xti=2 eg=.69 cjo=282.00p m=.56264 vj=.75058 isr=901.07n nr=1.1500 bv=40 trs1=0.0008 iave=3 vpk=40 mfg=rohm type=schottky
+.model rb058l-30 d is=10.614n n=1.038 rs=8.2723m ikf=2.195 xti=2 eg=.83 cjo=610p m=496.63m vj=592.12m isr=12.707n nr=1.25 bv=30 tt=13.22n trs1=-0.00011 iave=3 vpk=30 mfg=rohm type=schottky
+.model rb058l-40 d is=7.4432n n=987.67m rs=12.11m ikf=330.32m xti=2 eg=.75 cjo=800p m=564.13m vj=515.09m isr=6.7557n nr=1.2 bv=40 tt=6n iave=3 vpk=40 mfg=rohm type=schottky
+.model rb058l-60 d is=29.242n n=1.069 rs=8.9223m ikf=424.44m xti=2 eg=.75 cjo=683.5p m=506.68m vj=501.02m isr=8.8232n nr=1.25 bv=60 tt=13n iave=3 vpk=60 mfg=rohm type=schottky
+.model rb058l150 d is=31.521n n=1.276 rs=8.398m ikf=53.566m xti=2 eg=.67 cjo=217p m=487.36m vj=526.51m isr=4.848n nr=1.5 bv=150 tt=15.168n trs1=-0.002 tikf=10m iave=3 vpk=150 mfg=rohm type=schottky
+.model rb058lam-30 d is=2.1531n n=0.9533 rs=5.3925m ikf=141.25m xti=2.0 eg=0.843 cjo=628.07p m=0.4898 vj=0.5399 isr=17.206n nr=1.1816 bv=30 trs1=868.13u iave=3 vpk=30 mfg=rohm type=schottky
+.model rb058lam-40 d is=7.4432n n=0.9879 rs=9.2531m ikf=0.3303 xti=2.0 eg=0.791 cjo=669.00p m=0.5123 vj=0.5198 isr=14.527n nr=1.2101 bv=40 trs1=-1.0000m iave=3 vpk=40 mfg=rohm type=schottky
+.model rb058lam-60 d is=7.4904n n=1.0303 rs=15.466m ikf=761.61m xti=2.0 eg=0.863 cjo=669.50p m=0.5104 vj=0.5367 isr=12.327n nr=1.1771 bv=60 trs1=-1.3680m iave=3 vpk=60 mfg=rohm type=schottky
+.model rb058lam100 d is=14.177n n=1.1055 rs=19.481m ikf=65.966m xti=2.0 eg=0.868 cjo=385.43p m=0.5128 vj=0.5658 isr=4.5921n nr=1.1798 bv=100 trs1=-4.2000m tikf=7.0186m iave=3 vpk=100 mfg=rohm type=schottky
+.model rb058lam150 d is=17.821n n=1.1099 rs=14.223m ikf=41.417m xti=2.0 eg=0.851 cjo=200.10p m=0.4473 vj=0.5015 isr=9.6164n nr=1.17 bv=150 trs1=-2.2000m iave=3 vpk=150 mfg=rohm type=schottky
+.model rb060l-40 d is=388.99n n=957.11m rs=31.245m ikf=826.05m xti=2 eg=.69 cjo=542.24p m=555.4m vj=833.72m isr=604.4n bv=40 tt=4.9n iave=2 vpk=40 mfg=rohm type=schottky
+.model rb060lam-40 d is=1.0841u n=0.9864 rs=19.040m ikf=1.0000 xti=2.0 eg=0.68 cjo=703.60p m=0.5482 vj=0.5000 isr=2.5415u nr=1.2547 bv=40 trs1=3.0318m tikf=10.000n iave=2 vpk=40 mfg=rohm type=schottky
+.model rb060m-30 d is=684.81n n=1.024 rs=44.953m ikf=25.76 xti=2 eg=.69 cjo=400.26p m=530.71m vj=453.2m isr=386.49n bv=30 tt=13.5n iave=2 vpk=30 mfg=rohm type=schottky
+.model rb060m-40 d is=676.58n n=1.025 rs=51.041m ikf=39.34 xti=2 eg=.67 cjo=330p m=524.91m vj=514.32m isr=354.57n nr=1.3 bv=40 tt=10.358n iave=2 vpk=40 mfg=rohm type=schottky
+.model rb060m-60 d is=464.87n n=1.008 rs=58.719m ikf=181.22m xti=2 eg=.69 cjo=290.25p m=595.92m vj=760.36m isr=279.5n nr=1.1 bv=60 tt=12n trs1=2m iave=2 vpk=60 mfg=rohm type=schottky
+.model rb060mm-30-ltspice d is=684.81n n=1.0244 rs=44.953m ikf=25.757 xti=2 eg=.69 cjo=400.26p m=.53071 vj=.4532 isr=386.49n bv=30 iave=2 vpk=30 mfg=rohm type=schottky
+.model rb060mm-30-mpkopec d is=684.81n n=1.024 rs=44.953m ikf=25.76 xti=2 eg=.69 cjo=400.26p m=530.71m vj=453.2m isr=386.49n bv=30 tt=13.5n iave=2 vpk=30 mfg=rohm type=schottky
+.model rb060mm-40-ltspice d is=6.0287e-7 n=1.0068 rs=5.2387e-2 ikf=101.65 xti=2 eg=.64 cjo=3.1470e-10 m=.51289 vj=.51236 isr=4.7586e-7 nr=1.2500 bv=40.000 trs1=4.8900m iave=2 vpk=40 mfg=rohm type=schottky
+.model rb060mm-40-mpkopec d is=602.87n n=1.007 rs=52.387m ikf=101.7 xti=2 eg=.64 cjo=314.7p m=512.89m vj=512.36m isr=475.86n nr=1.25 bv=40 tt=10.2n trs1=4.89m iave=2 vpk=40 mfg=rohm type=schottky
+.model rb060mm-60-ltspice d is=464.87n n=1.0077 rs=58.719m ikf=.18122 xti=2 eg=.69 cjo=290.25p m=.59592 vj=.76036 fc=1.0000m isr=279.50n nr=1.1000 bv=60 trs1=0.002 iave=2 vpk=60 mfg=rohm type=schottky
+.model rb060mm-60-mpkopec d is=464.87n n=1.008 rs=58.719m ikf=181.22m xti=2 eg=.69 cjo=290.25p m=595.92m vj=760.36m isr=279.5n nr=1.1 bv=60 tt=12n trs1=2m iave=2 vpk=60 mfg=rohm type=schottky
+.model rb061qs-20 d is=3.9620u n=1.231 rs=64.510m ikf=98.150m xti=2 eg=0.6 cjo=143.12p m=0.4014 vj=0.5 isr=51.480u nr=1.1 bv=20 trs1=3.2845m iave=2 vpk=20 mfg=rohm type=schottky
+.model rb061us-30 d is=18.951u n=.98416 rs=27.965m ikf=6.9225 xti=2 eg=.6 cjo=500.00p m=.61602 vj=.52656 isr=28.733u nr=1.4000 bv=30 trs1=0.005 iave=2 vpk=30 mfg=rohm type=schottky
+.model rb068l-40 d is=7.8575n n=1.047 rs=19.393m ikf=308.26m xti=2 eg=.82 cjo=327p m=516.58m vj=509.86m isr=2.5423n nr=1.2 bv=40 tt=8.0n trs1=8m iave=2 vpk=40 mfg=rohm type=schottky
+.model rb068l-60 d is=27.489n n=1.11 rs=10.429m ikf=175.32m xti=2 eg=.74 cjo=340p m=504.64m vj=673.6m isr=4.7333n nr=1.2 bv=60 tt=8n iave=2 vpk=60 mfg=rohm type=schottky
+.model rb068l100 d is=13.893n n=1.013 rs=12.895m ikf=114.01m xti=2 eg=.8 cjo=403p m=548.4m vj=766.98m isr=21.684n nr=1.4 bv=100 tt=18n iave=2 vpk=100 mfg=rohm type=schottky
+.model rb068l150 d is=31.521n n=1.276 rs=8.398m ikf=53.566m xti=2 eg=.67 cjo=217p m=487.36m vj=526.51m isr=4.848n nr=1.5 bv=150 tt=15.168n trs1=-0.002 tikf=10m iave=2 vpk=150 mfg=rohm type=schottky
+.model rb068lam-30 d is=3.1575n n=1.0585 rs=15.246m ikf=.66466 xti=2 eg=.83 cjo=364.05p m=.50242 vj=.60365 isr=5.3245n nr=1.2300 bv=30 trs1=-0.3000m iave=2 vpk=30 mfg=rohm type=schottky
+.model rb068lam-40 d is=3.4618n n=1.0089 rs=22.590m ikf=141.25m xti=2.0 eg=0.830 cjo=301.37p m=0.4955 vj=0.5432 isr=6.5693n nr=1.1560 bv=40 trs1=-3.5185m iave=2 vpk=40 mfg=rohm type=schottky
+.model rb068lam-60 d is=4.3511n n=1.0069 rs=20.407m ikf=141.25m xti=2.0 eg=0.838 cjo=380.73p m=0.4990 vj=0.5110 isr=10.953n nr=1.2211 bv=60 trs1=-4.2000m iave=2 vpk=60 mfg=rohm type=schottky
+.model rb068lam100 d is=6.2345n n=1.1199 rs=15.270m ikf=44.721m xti=2.0 eg=0.912 cjo=287.30p m=0.5127 vj=0.5812 isr=3.1623n nr=1.3467 bv=100 trs1=-2.9503m tikf=9.9475m iave=2 vpk=100 mfg=rohm type=schottky
+.model rb068lam150 d is=6.1589n n=1.0972 rs=59.841m ikf=27.767m xti=2.0 eg=0.890 cjo=230.77p m=0.4869 vj=0.5000 isr=4.8017n nr=1.2087 bv=150 trs1=-4.2000m tikf=6.4247m iave=2 vpk=150 mfg=rohm type=schottky
+.model rb068m-40-ltspice d is=16.708n n=1.0779 rs=15.272m ikf=.11125 xti=2 eg=.74 cjo=246.00p m=.48639 vj=.50286 isr=1.1258n nr=1.2000 bv=40 iave=2 vpk=40 mfg=rohm type=schottky
+.model rb068m-40-mpkopec d is=16.708n n=1.078 rs=20.272m ikf=111.25m xti=2 eg=.74 cjo=246p m=486.39m vj=502.86m isr=1.1258n nr=1.2 bv=40 tt=11.592n trs1=-0.002 iave=2 vpk=40 mfg=rohm type=schottky
+.model rb068m-60-ltspice d is=6.9603n n=1.0258 rs=14.447m ikf=67.536m xti=2 eg=.69 cjo=206.00p m=.50548 vj=.56077 isr=2.3017n nr=1.2500 bv=60 iave=2 vpk=60 mfg=rohm type=schottky
+.model rb068m-60-mpkopec d is=6.9603n n=1.026 rs=20.447m ikf=67.536m xti=2 eg=.69 cjo=206p m=505.48m vj=560.77m isr=2.3017n nr=1.25 bv=60 tt=10.482n trs1=-0.002 iave=2 vpk=60 mfg=rohm type=schottky
+.model rb068mm-30 d is=3.1575n n=1.0585 rs=15.246m ikf=.66466 xti=2 eg=.83 cjo=364.05p m=.50242 vj=.60365 isr=5.3245n nr=1.2300 bv=30 trs1=-0.3000m iave=2 vpk=30 mfg=rohm type=schottky
+.model rb068mm-40 d is=16.708n n=1.078 rs=20.272m ikf=111.25m xti=2 eg=.74 cjo=246p m=486.39m vj=502.86m isr=1.1258n nr=1.2 bv=40 tt=11.592n trs1=-0.002 iave=2 vpk=40 mfg=rohm type=schottky
+.model rb068mm-60 d is=12.325n n=1.043 rs=70.61m ikf=648.56m xti=2 eg=.69 cjo=206p m=506.11m vj=563.61m isr=3.5427n nr=1.45 bv=60 tt=10.284n trs1=-0.001 iave=2 vpk=60 mfg=rohm type=schottky
+.model rb068mm100 d is=14.601n n=1.2478 rs=15.400m ikf=33.987m xti=2 eg=.90 cjo=140.00p m=.51030 vj=.59353 isr=1.6332n nr=1.3000 bv=100.00 tikf=10.000m trs1=-1.5300m iave=2 vpk=100 mfg=rohm type=schottky
+.model rb070m-30 d is=528.86n n=1.023 rs=21.177m ikf=653.01m xti=2 eg=.69 cjo=333.11p m=542.37m vj=458.94m isr=470.75n bv=30 tt=14.5n iave=1.5 vpk=30 mfg=rohm type=schottky
+.model rb070mm-30-ltspice d is=528.86n n=1.0226 rs=21.177m ikf=.65301 xti=2 eg=.69 cjo=333.11p m=.54237 vj=.45894 isr=470.75n bv=30 iave=1.5 vpk=30 mfg=rohm type=schottky
+.model rb070mm-30-mpkopec d is=528.86n n=1.023 rs=21.177m ikf=653.01m xti=2 eg=.69 cjo=333.11p m=542.37m vj=458.94m isr=470.75n bv=30 tt=14.5n iave=1.5 vpk=30 mfg=rohm type=schottky
+.model rb075bge40s d is=13.735n n=1.0446 rs=23.202m ikf=1.7341 xti=2 eg=.83 cjo=622.51p m=.47333 vj=.45365 isr=4.7559n bv=40 iave=5 vpk=40 mfg=rohm type=schottky
+.model rb075bm40s d is=13.735n n=1.0446 rs=23.202m ikf=1.7341 xti=2 eg=.83 cjo=622.51p m=.47333 vj=.45365 isr=4.7559n bv=40 iave=5 vpk=40 mfg=rohm type=schottky
+.model rb078bge30s d is=9.1781n n=1.0260 rs=12.205m ikf=1.7138 xti=2 eg=.81 cjo=723.99p m=.52488 vj=.86675 isr=12.136n nr=1.2500 bv=35 trs1=0.002 iave=5 vpk=35 mfg=rohm type=schottky
+.model rb078bm30s d is=9.1781n n=1.0260 rs=12.205m ikf=1.7138 xti=2 eg=.81 cjo=723.99p m=.52488 vj=.86675 isr=12.136n nr=1.2500 bv=35 trs1=0.002 iave=5 vpk=30 mfg=rohm type=schottky
+.model rb080l-30 d is=1.1561u n=992.52m rs=611.84u ikf=897.58m xti=2 eg=.69 cjo=1.1025n m=587.36m vj=617.67m isr=651.47n nr=1.6 bv=30 tt=1.2n iave=5 vpk=30 mfg=rohm type=schottky
+.model rb080lam-30 d is=1.1561u n=.95252 rs=9.1840m ikf=1.2975 xti=2 eg=.65 cjo=1.3425n m=.56736 vj=.50067 isr=3.8514u nr=1.2000 bv=30 trs1=-835.70u iave=5 vpk=30 mfg=rohm type=schottky
+.model rb081lam-20 d is=27.732u n=0.9439 rs=10.000m ikf=141.25m xti=2.0 eg=0.581 cjo=851.90p m=0.5704 vj=0.5000 isr=42.172u nr=0.9859 bv=25 trs1=4.1107m iave=5 vpk=25 mfg=rohm type=schottky
+.model rb085bge-40 d is=862.92n n=.96991 rs=16.333m ikf=1.4671 xti=2 eg=.69 cjo=827.17p m=.52639 vj=.55189 isr=1.3610u bv=45 iave=10 vpk=45 mfg=rohm type=schottky
+.model rb085bgm0 d is=3.0956u n=1.0246 rs=13.858m ikf=10.939 xti=2 eg=.69 cjo=1.6007n m=.55825 vj=.46333 isr=2.1031u bv=35 iave=10 vpk=35 mfg=rohm type=schottky
+.model rb085bm-60 d is=1.6854u n=1.0232 rs=23.365m ikf=.79719 xti=2 eg=.64 cjo=739.70p m=.57484 vj=.91504 isr=2.7546u nr=1.1500 bv=60 trs1=2.5000m tikf=-0.0060 iave=10 vpk=60 mfg=rohm type=schottky
+.model rb085bm-90 d is=2.0267u n=1.0611 rs=60.345m ikf=.48399 xti=2 eg=.69 cjo=430.18p m=.47528 vj=.42493 isr=565.41n bv=90 iave=10 vpk=90 mfg=rohm type=schottky
+.model rb085t-40nz d is=607.87n n=.95555 rs=15.210m ikf=1.1017 xti=2 eg=.69 cjo=947.00p m=.56436 vj=.5091 isr=1.1665u nr=1.7000 bv=45 iave=10 vpk=45 mfg=rohm type=schottky
+.model rb085t-60nz d is=1.0632u n=.98197 rs=22.554m ikf=1.7804 xti=2 eg=.69 cjo=804.88p m=.5316 vj=.47394 isr=1.3051u bv=60 iave=10 vpk=60 mfg=rohm type=schottky
+.model rb085t-90nz d is=1.7554u n=1.0525 rs=66.179m ikf=1.0122 xti=2 eg=.69 cjo=484.17p m=.51041 vj=.42908 isr=439.27n bv=90 iave=10 vpk=90 mfg=rohm type=schottky
+.model rb088bge150 d is=19.607n n=1.0942 rs=9.9220m ikf=45.393m xti=2 eg=.8 cjo=440.00p m=.49855 vj=.52417 isr=5.8497n nr=1.4000 bv=150 iave=10 vpk=150 mfg=rohm type=schottky
+.model rb088bm-30 d is=25.048n n=1.0524 rs=10.513m ikf=1.2905 xti=2 eg=.78 cjo=712.68p m=.49416 vj=.57171 isr=43.580n nr=1.2300 bv=35.000 trs1=1.0000m iave=10 vpk=35 mfg=rohm type=schottky
+.model rb088bm-40 d is=22.253n n=1.0534 rs=23.921m ikf=3.4856 xti=2 eg=.81 cjo=594.54p m=.5062 vj=.60005 isr=19.859n nr=1.2000 bv=45.000 trs1=-0.1000m tikf=-0.0060 iave=10 vpk=45 mfg=rohm type=schottky
+.model rb088bm-60 d is=16.654n n=1.0360 rs=12.815m ikf=46.616m xti=2 eg=.83 cjo=470.00p m=.47428 vj=.50213 isr=19.593n nr=1.3000 bv=60.000 trs1=220.0u iave=10 vpk=60 mfg=rohm type=schottky
+.model rb088bm100 d is=14.683n n=1.1561 rs=5.4852m ikf=.26541 xti=2 eg=.73 cjo=516.00p m=.54424 vj=.5157 isr=5.3880n nr=1.5000 bv=110 iave=10 vpk=100 mfg=rohm type=schottky
+.model rb088lam-30 d is=1.4621n n=0.9268 rs=8.3626m ikf=138.04m xti=2.0 eg=0.826 cjo=628.07p m=0.4898 vj=0.5399 isr=17.326n nr=1.1698 bv=30 trs1=-412.79u tikf=4.2182m iave=5 vpk=30 mfg=rohm type=schottky
+.model rb088lam-40 d is=11.310n n=1.0124 rs=8.7433m ikf=138.04m xti=2.0 eg=0.801 cjo=798.00p m=0.5093 vj=0.5000 isr=17.509n nr=1.1607 bv=40 trs1=-2.2507m tikf=3.0353m iave=5 vpk=40 mfg=rohm type=schottky
+.model rb088lam-60 d is=6.7488n n=1.0111 rs=9.3065m ikf=138.04m xti=2.0 eg=0.857 cjo=670.00p m=0.5086 vj=0.5303 isr=12.425n nr=1.1867 bv=60 trs1=-2.5240m tikf=3.5914m iave=5 vpk=60 mfg=rohm type=schottky
+.model rb088lam100 d is=9.0124n n=1.0713 rs=20.911m ikf=66.584m xti=2.0 eg=0.865 cjo=385.43p m=0.5128 vj=0.5658 isr=4.9546n nr=1.1793 bv=100 trs1=-1.865m iave=5 vpk=100 mfg=rohm type=schottky
+.model rb088lam150 d is=17.821n n=1.1099 rs=14.223m ikf=41.417m xti=2.0 eg=0.851 cjo=200.10p m=0.4473 vj=0.5015 isr=9.6164n nr=1.17 bv=150 trs1=-2.2000m iave=5 vpk=150 mfg=rohm type=schottky
+.model rb088ns-30 d is=25.048n n=1.0524 rs=10.513m ikf=1.2905 xti=2 eg=.78 cjo=712.68p m=.49416 vj=.57171 isr=43.580n nr=1.2300 bv=35.000 trs1=1.0000m iave=10 vpk=35 mfg=rohm type=schottky
+.model rb088ns-40 d is=22.253n n=1.0534 rs=23.921m ikf=3.4856 xti=2 eg=.81 cjo=594.54p m=.5062 vj=.60005 isr=19.859n nr=1.2000 bv=45.000 trs1=-0.1000m tikf=-0.0060 iave=10 vpk=45 mfg=rohm type=schottky
+.model rb088ns-60 d is=16.654n n=1.0360 rs=12.815m ikf=46.616m xti=2 eg=.83 cjo=470.00p m=.47428 vj=.50213 isr=19.593n nr=1.3000 bv=60.000 trs1=220.0u iave=10 vpk=60 mfg=rohm type=schottky
+.model rb088ns100 d is=8.0702e-8 n=1.2024 rs=1.5540e-2 ikf=8.8379e-2 xti=2 eg=.78 cjo=5.1574e-10 m=.55286 vj=.50685 isr=2.8607n nr=1.1000 bv=110.00 trs1=-3.2500e-4 iave=10 vpk=110 mfg=rohm type=schottky
+.model rb088ns150 d is=19.607n n=1.0942 rs=9.9220m ikf=45.393m xti=2 eg=.8 cjo=440.00p m=.49855 vj=.52417 isr=5.8497n nr=1.4000 bv=150 iave=10 vpk=150 mfg=rohm type=schottky
+.model rb088t-30nz d is=25.048n n=1.0524 rs=10.513m ikf=1.2905 xti=2 eg=.78 cjo=712.68p m=.49416 vj=.57171 isr=43.580n nr=1.2300 bv=35.000 trs1=1.0000m iave=10 vpk=35 mfg=rohm type=schottky
+.model rb088t-40nz d is=22.253n n=1.0534 rs=23.921m ikf=3.4856 xti=2 eg=.81 cjo=594.54p m=.5062 vj=.60005 isr=19.859n nr=1.2000 bv=45.000 trs1=-0.1000m tikf=-0.0060 iave=10 vpk=45 mfg=rohm type=schottky
+.model rb088t-60nz d is=16.654n n=1.0360 rs=12.815m ikf=46.616m xti=2 eg=.83 cjo=470.00p m=.47428 vj=.50213 isr=19.593n nr=1.3000 bv=60.000 trs1=220.0u iave=10 vpk=60 mfg=rohm type=schottky
+.model rb088t100nz d is=8.0702e-8 n=1.2024 rs=1.5540e-2 ikf=8.8379e-2 xti=2 eg=.78 cjo=5.1574e-10 m=.55286 vj=.50685 isr=2.8607n nr=1.1000 bv=110.00 trs1=-3.2500e-4 iave=10 vpk=110 mfg=rohm type=schottky
+.model rb088t150nz d is=19.607n n=1.0942 rs=9.9220m ikf=45.393m xti=2 eg=.8 cjo=440.00p m=.49855 vj=.52417 isr=5.8497n nr=1.4000 bv=150 iave=10 vpk=150 mfg=rohm type=schottky
+.model rb095bge-40 d is=2.2192u n=1.1017 rs=18.965m ikf=.97887 xti=2 eg=.72 cjo=644.50p m=.51465 vj=.50077 isr=1.4128u nr=1.2 bv=45 trs1=-0.4000m iave=6 vpk=45 mfg=rohm type=schottky
+.model rb095bgm0 d is=523.40n n=.93402 rs=9.1560m ikf=3.3891 xti=2 eg=.67 cjo=1.6343n m=.53795 vj=.50356 isr=8.9470u nr=1.21 bv=35 trs1=1.1500m iave=6 vpk=35 mfg=rohm type=schottky
+.model rb095bgn0 d is=686.82n n=0.9883 rs=81.268m ikf=140.28m xti=2.0 eg=0.684 cjo=342.00p m=0.5100 vj=0.5000 isr=467.84n nr=1.1077 bv=90 trs1=-2.1378m iave=6 vpk=90 mfg=rohm type=schottky
+.model rb095bgu0 d is=733.17n n=.97285 rs=20.785m ikf=183.47m xti=2 eg=.69 cjo=507.98p m=.49512 vj=.50318 isr=1.8925u nr=1.2 bv=60 trs1=-1.2000m iave=6 vpk=60 mfg=rohm type=schottky
+.model rb095t-40nz d is=2.2192u n=1.1017 rs=12.065m ikf=.97887 xti=2 eg=.69 cjo=644.50p m=.53465 vj=.42877 isr=605.81n bv=45 iave=6 vpk=45 mfg=rohm type=schottky
+.model rb095t-60nz d is=914.84n n=1.0166 rs=40.724m ikf=1.4849 xti=2 eg=.69 cjo=507.98p m=.52 vj=.42318 isr=550.58n bv=60 iave=6 vpk=60 mfg=rohm type=schottky
+.model rb095t-90nz d is=379.10n n=.92937 rs=83.553m ikf=92.784m xti=2 eg=.69 cjo=362.74p m=.50014 vj=.40817 isr=464.11n bv=90 iave=6 vpk=90 mfg=rohm type=schottky
+.model rb098bge-40 d is=9.1370n n=1.0543 rs=33.071m ikf=1.6117 xti=2 eg=.80 cjo=363.43p m=.50823 vj=.59962 isr=15.197n nr=1.2000 bv=45 trs1=-1.5000m tikf=-0.0060 iave=6 vpk=45 mfg=rohm type=schottky
+.model rb098bgm0 d is=10.310n n=1.0549 rs=22.945m ikf=3.0428 xti=2 eg=.82 cjo=434.35p m=.48795 vj=.56856 isr=15.610n nr=1.2300 bv=35 trs1=-0.5000m tikf=-0.0070 iave=6 vpk=35 mfg=rohm type=schottky
+.model rb098bgu0 d is=8.0920n n=1.0454 rs=43.658m ikf=.39457 xti=2 eg=.81 cjo=293.31p m=.4971 vj=.56346 isr=14.109n nr=1.2300 bv=60 trs1=-1.5000m tikf=-0.0060 iave=6 vpk=60 mfg=rohm type=schottky
+.model rb098bm-30 d is=10.310n n=1.0549 rs=22.945m ikf=3.0428 xti=2 eg=.82 cjo=434.35p m=.48795 vj=.56856 isr=15.610n nr=1.2300 bv=35 trs1=-0.5000m tikf=-0.0070 iave=6 vpk=35 mfg=rohm type=schottky
+.model rb098bm-40 d is=9.1370n n=1.0543 rs=33.071m ikf=1.6117 xti=2 eg=.80 cjo=363.43p m=.50823 vj=.59962 isr=15.197n nr=1.2000 bv=45 trs1=-1.5000m tikf=-0.0060 iave=6 vpk=45 mfg=rohm type=schottky
+.model rb098bm-60 d is=8.0920n n=1.0454 rs=43.658m ikf=.39457 xti=2 eg=.81 cjo=293.31p m=.4971 vj=.56346 isr=14.109n nr=1.2300 bv=60.000 trs1=-1.5000m tikf=-0.0060 iave=6 vpk=60 mfg=rohm type=schottky
+.model rb098bm100 d is=11.469n n=1.0100 rs=18.277m ikf=32.277m xti=2 eg=.82 cjo=538.07p m=.51640 vj=.60494 isr=7.8650n nr=1.1500 bv=100.00 trs1=-340.00u iave=6 vpk=110 mfg=rohm type=schottky
+.model rb098bm150 d is=23.284n n=1.1457 rs=16.3504m ikf=20.596m xti=2 eg=.85 cjo=301.01p m=.49656 vj=.54728 isr=12.695n nr=1.3000 bv=150.00 iave=6 vpk=150 mfg=rohm type=schottky
+.model rb10l-40 d is=2.6u rs=.0674 n=1.163 cjo=180p m=.6 eg=.69 xti=2 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160l-40 d is=326.48n n=1.015 rs=73.896m ikf=479.33m xti=2 eg=.69 cjo=184.1p m=482.71m vj=404.89m isr=131.68n bv=40 tt=16n iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160l-60 d is=180.92n n=1.03 rs=69.951m ikf=182.04m xti=2 eg=.69 cjo=185.1p m=493.32m vj=439.84m isr=150.75n bv=60 tt=24n iave=1 vpk=60 mfg=rohm type=schottky
+.model rb160l-90 d is=233.4n n=922.01m rs=193.64m ikf=31.868m xti=2 eg=.65 cjo=140.9p m=581.66m vj=898.59m isr=118.39n bv=95 tt=14.058n iave=1 vpk=95 mfg=rohm type=schottky
+.model rb160lam-40 d is=133.65n n=.95277 rs=63.592m ikf=5.1394 xti=2 eg=.51 cjo=280.52p m=.62835 vj=.71137 isr=164.28n nr=1.2000 bv=40 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160lam-90 d is=1.8947u n=1.2375 rs=.12821 ikf=.12466 xti=2 eg=.65 cjo=155.96p m=.51881 vj=.50104 isr=292.99n nr=1.2000 bv=95 trs1=-0.006 iave=1 vpk=95 mfg=rohm type=schottky
+.model rb160m-30 d is=1.6002u n=1.036 rs=42.605m ikf=442.2m xti=2 eg=.69 cjo=294.15p m=514.09m vj=414.65m isr=374.04n bv=30 tt=21.3n iave=1 vpk=30 mfg=rohm type=schottky
+.model rb160m-40 d is=457.77n n=1.012 rs=61.964m ikf=781.58m xti=2 eg=.56 cjo=282p m=612.64m vj=750.58m isr=332.67n nr=1.3 bv=40 tt=13.565n iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160m-60 d is=245.71n n=938.92m rs=56.215m ikf=46.87m xti=2 eg=.65 cjo=209.47p m=516.6m vj=422.73m isr=214.58n nr=1.7 bv=60 tt=23.8n iave=1 vpk=60 mfg=rohm type=schottky
+.model rb160m-90 d is=233.4n n=922.01m rs=193.64m ikf=31.868m xti=2 eg=.65 cjo=141.32p m=511.03m vj=541.63m isr=121.15n bv=90 tt=14.058n iave=1 vpk=90 mfg=rohm type=schottky
+.model rb160mm-30-ltspice d is=1.6002u n=1.0362 rs=42.605m ikf=.4422 xti=2 eg=.69 cjo=294.15p m=.51409 vj=.41465 isr=374.04n bv=30 iave=1 vpk=30 mfg=rohm type=schottky
+.model rb160mm-30-mpkopec d is=1.6002u n=1.036 rs=42.605m ikf=442.2m xti=2 eg=.69 cjo=294.15p m=514.09m vj=414.65m isr=374.04n bv=30 tt=21.3n iave=1 vpk=30 mfg=rohm type=schottky
+.model rb160mm-40-ltspice d is=133.65n n=.95277 rs=63.592m ikf=5.1394 xti=2 eg=.51 cjo=280.52p m=.62835 vj=.71137 isr=164.28n nr=1.2000 bv=40 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160mm-40-mpkopec d is=133.65n n=952.77m rs=63.592m ikf=5.139 xti=2 eg=.51 cjo=280.52p m=628.35m vj=711.37m isr=164.28n nr=1.2 bv=40 tt=19n iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160mm-50 d is=483.16n n=1.0582 rs=37.339m ikf=.53177 xti=2 eg=.68 cjo=280.00p m=.54836 vj=.51951 isr=597.73n nr=1.2500 bv=50 iave=1 vpk=50 mfg=rohm type=schottky
+.model rb160mm-60-ltspice d is=245.71n n=.93892 rs=56.215m ikf=46.870m xti=2 eg=.65 cjo=209.47p m=.5166 vj=.42273 isr=214.58n nr=1.7000 bv=60 iave=1 vpk=60 mfg=rohm type=schottky
+.model rb160mm-60-mpkopec d is=245.71n n=938.92m rs=56.215m ikf=46.87m xti=2 eg=.65 cjo=209.47p m=516.6m vj=422.73m isr=214.58n nr=1.7 bv=60 tt=23.8n iave=1 vpk=60 mfg=rohm type=schottky
+.model rb160mm-90-ltspice d is=233.40n n=.92201 rs=.19364 ikf=31.868m xti=2 eg=.65 cjo=141.32p m=.51103 vj=.54163 isr=121.15n bv=90 iave=1 vpk=90 mfg=rohm type=schottky
+.model rb160mm-90-mpkopec d is=233.4n n=922.01m rs=193.64m ikf=31.868m xti=2 eg=.65 cjo=141.32p m=511.03m vj=541.63m isr=121.15n bv=90 tt=14.058n iave=1 vpk=90 mfg=rohm type=schottky
+.model rb160va-40 d is=106.6n n=999.22m rs=99.978m ikf=79.879m xti=2 eg=.52 cjo=130p m=569.72m vj=693.22m isr=148.23n nr=1.1 bv=40 tt=12.69n trs1=-0.00289 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160va-60 d is=325.7n n=1.091 rs=196.88m ikf=43.68 xti=2 eg=.50 cjo=114p m=478.22m vj=502.46m isr=275.81n nr=1.1 bv=60 tt=10.581n trs1=2.39m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb160vam-40 d is=271.63n n=1.0878 rs=79.950m ikf=.21125 xti=2 eg=.69 cjo=134.06p m=.49975 vj=.50021 isr=497.66n nr=1.16 bv=40 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160vam-60 d is=3.2570e-7 n=1.0906 rs=.19688 ikf=43.677 xti=2 eg=.50 cjo=1.1400e-10 m=.47822 vj=.50246 isr=2.7581e-7 nr=1.1000 bv=60.000 trs1=2.3900m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb160vym-40 d is=106.6n n=999.22m rs=99.978m ikf=79.879m xti=2 eg=.52 cjo=130p m=569.72m vj=693.22m isr=148.23n nr=1.1 bv=40 tt=12.69n trs1=-0.00289 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb160vym-60 d is=325.7n n=1.091 rs=196.88m ikf=43.68 xti=2 eg=.50 cjo=114p m=478.22m vj=502.46m isr=275.81n nr=1.1 bv=60 tt=10.581n trs1=2.39m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb161mm-20-ltspice d is=47.873u n=1.0674 rs=12.756m ikf=.47478 xti=2 eg=.55 cjo=350.27p m=.60349 vj=.64083 isr=18.739u bv=25 iave=1 vpk=25 mfg=rohm type=schottky
+.model rb161mm-20-mpkopec d is=47.873u n=1.067 rs=12.756m ikf=474.78m xti=2 eg=.55 cjo=350.27p m=603.49m vj=640.83m isr=18.739u bv=25 tt=20.2n iave=1 vpk=25 mfg=rohm type=schottky
+.model rb161qs-40 d is=195.48n n=0.7858 rs=.20822 ikf=122.73m xti=2 eg=.58 cjo=53.874p m=.30288 vj=.50015 isr=18.920u nr=1.2000 bv=40 trs1=1.1950m iave=1 vpk=40 mfg=rohm type=schottky
+.model rb161vam-20 d is=40.337u n=1.0742 rs=.10016 ikf=23.579 xti=2 eg=.5 cjo=160.04p m=.56976 vj=.50517 isr=15.589u bv=30 iave=1 vpk=30 mfg=rohm type=schottky
+.model rb162l-40 d is=147.83n n=1.021 rs=67.282m ikf=275.95m xti=2 eg=.69 cjo=170p m=560.04m vj=783.67m isr=119.96n nr=1.3 bv=40 tt=14.058n trs1=3m iave=1 vpk=40 mfg=rohm type=schottky
+.model rb162l-60 d is=239.63n n=988.85m rs=79.949m ikf=116.77m xti=2 eg=.69 cjo=160p m=571.38m vj=752.16m isr=211.24n nr=1.5 bv=60 tt=13.811n trs1=3m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb162lam-40 d is=246.35n n=1.0001 rs=74.598m ikf=.16687 xti=2 eg=.69 cjo=150.00p m=.55243 vj=.77313 isr=203.53n nr=1.6000 bv=40 trs1=0.003 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb162lam-60 d is=239.63n n=.98885 rs=79.949m ikf=.11677 xti=2 eg=.69 cjo=160.00p m=.57138 vj=.75216 isr=211.24n nr=1.5000 bv=60 trs1=0.003 iave=1 vpk=60 mfg=rohm type=schottky
+.model rb162m-30 d is=465.99n n=1.016 rs=51.019m ikf=22.31 xti=2 eg=.58 cjo=237p m=529.25m vj=504.5m isr=476.86n nr=1.34 bv=30 tt=535p iave=1 vpk=30 mfg=rohm type=schottky
+.model rb162m-40 d is=147.83n n=1.021 rs=67.282m ikf=275.95m xti=2 eg=.69 cjo=170p m=560.04m vj=783.67m isr=119.96n nr=1.3 bv=40 tt=14.058n trs1=3m iave=1 vpk=40 mfg=rohm type=schottky
+.model rb162m-60 d is=239.63n n=988.85m rs=79.949m ikf=116.77m xti=2 eg=.69 cjo=160p m=571.38m vj=752.16m isr=211.24n nr=1.5 bv=60 tt=13.811n trs1=3m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb162mm-30-ltspice d is=4.6599e-7 n=1.0163 rs=5.1019e-2 ikf=22.312 xti=2 eg=.58 cjo=2.3700e-10 m=.52925 vj=.5045 isr=4.7686e-7 nr=1.3400 bv=30.000 trs1=2.7900m iave=1 vpk=30 mfg=rohm type=schottky
+.model rb162mm-30-mpkopec d is=465.99n n=1.016 rs=51.019m ikf=22.31 xti=2 eg=.58 cjo=237p m=529.25m vj=504.5m isr=476.86n nr=1.34 bv=30 tt=535p iave=1 vpk=30 mfg=rohm type=schottky
+.model rb162mm-40-ltspice d is=246.35n n=1.0001 rs=74.598m ikf=.16687 xti=2 eg=.69 cjo=150.00p m=.55243 vj=.77313 isr=203.53n nr=1.6000 bv=40 trs1=0.003 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb162mm-40-mpkopec d is=246.35n n=1 rs=74.598m ikf=166.87m xti=2 eg=.69 cjo=150p m=552.43m vj=773.13m isr=203.53n nr=1.6 bv=40 tt=13.565n trs1=3m iave=1 vpk=40 mfg=rohm type=schottky
+.model rb162mm-60-ltspice d is=239.63n n=.98885 rs=79.949m ikf=.11677 xti=2 eg=.69 cjo=160.00p m=.57138 vj=.75216 isr=211.24n nr=1.5000 bv=60 trs1=0.003 iave=1 vpk=60 mfg=rohm type=schottky
+.model rb162mm-60-mpkopec d is=239.63n n=988.85m rs=79.949m ikf=116.77m xti=2 eg=.69 cjo=160p m=571.38m vj=752.16m isr=211.24n nr=1.5 bv=60 tt=13.811n trs1=3m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb162vam-20 d is=34.907u n=.9947 rs=4.3098m ikf=.35077 xti=2 eg=.59 cjo=178.07p m=.5229 vj=.44257 isr=27.785u nr=1.2000 bv=25 iave=1 vpk=25 mfg=rohm type=schottky
+.model rb168l-40 d is=16.708n n=1.078 rs=20.272m ikf=111.25m xti=2 eg=.74 cjo=246p m=486.39m vj=502.86m isr=1.1258n nr=1.2 bv=40 tt=11.592n trs1=-0.002 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb168l-60 d is=6.9603n n=1.026 rs=20.447m ikf=67.536m xti=2 eg=.69 cjo=206p m=505.48m vj=560.77m isr=2.3017n nr=1.25 bv=60 tt=10.482n trs1=-0.002 iave=1 vpk=60 mfg=rohm type=schottky
+.model rb168l100 d is=14.601n n=1.248 rs=22.4m ikf=33.987m xti=2 eg=.90 cjo=140p m=510.3m vj=593.53m isr=1.6332n nr=1.3 bv=100 tt=13.071n tikf=10m trs1=-0.00153 iave=1 vpk=100 mfg=rohm type=schottky
+.model rb168l150 d is=30.319n n=1.286 rs=24.514m ikf=12.783m xti=2 eg=.71 cjo=95.3p m=485.85m vj=530.18m isr=876.31p nr=1.1 bv=150 tt=16.092n iave=1 vpk=150 mfg=rohm type=schottky
+.model rb168lam-30 d is=4.8705n n=1.0667 rs=29.951m ikf=.8971 xti=2 eg=.81 cjo=210.08p m=.48936 vj=.54046 isr=5.8132n nr=1.2200 bv=30 trs1=-1.5000m tikf=-0.006 iave=1 vpk=30 mfg=rohm type=schottky
+.model rb168lam-40 d is=558.18p n=.87492 rs=23.087m ikf=32.716m xti=2 eg=.75 cjo=246.00p m=.53886 vj=.75619 isr=4.8627n nr=1.200 bv=40 trs1=-2.0000m iave=1 vpk=40 mfg=rohm type=schottky
+.model rb168lam-60 d is=21.039n n=1.0854 rs=84.056m ikf=69.901 xti=2 eg=.69 cjo=206.00p m=.50611 vj=.56361 isr=2.2505n nr=2.1000 bv=60 trs1=0.1200m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb168lam100 d is=14.601n n=1.2478 rs=15.400m ikf=33.987m xti=2 eg=.90 cjo=140.00p m=.51030 vj=.59353 isr=1.6332n nr=1.3000 bv=100 tikf=10.000m trs1=-1.5300m iave=1 vpk=100 mfg=rohm type=schottky
+.model rb168lam150 d is=10.853n n=1.1579 rs=62.25m ikf=20.220m xti=2.0 eg=0.848 cjo=100.08p m=0.4796 vj=0.5000 isr=6.0977n nr=1.2935 bv=150 trs1=-2.8000m iave=1 vpk=150 mfg=rohm type=schottky
+.model rb168m-40 d is=16.708n n=1.078 rs=20.272m ikf=111.25m xti=2 eg=.74 cjo=246p m=486.39m vj=502.86m isr=1.1258n nr=1.2 bv=40 tt=11.592n trs1=-0.002 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb168m-60 d is=6.9603n n=1.026 rs=20.447m ikf=67.536m xti=2 eg=.69 cjo=206p m=505.48m vj=560.77m isr=2.3017n nr=1.25 bv=60 tt=10.482n trs1=-0.002 iave=1 vpk=60 mfg=rohm type=schottky
+.model rb168m150 d is=30.319n n=1.286 rs=24.514m ikf=12.783m xti=2 eg=.71 cjo=95.3p m=485.85m vj=530.18m isr=876.31p nr=1.1 bv=150 tt=16.092n iave=1 vpk=150 mfg=rohm type=schottky
+.model rb168mm-30 d is=4.8705n n=1.0667 rs=29.951m ikf=.8971 xti=2 eg=.81 cjo=210.08p m=.48936 vj=.54046 isr=5.8132n nr=1.2200 bv=30 trs1=-1.5000m tikf=-0.006 iave=1 vpk=30 mfg=rohm type=schottky
+.model rb168mm-40-ltspice d is=558.18p n=.87492 rs=23.087m ikf=32.716m xti=2 eg=.75 cjo=246.00p m=.53886 vj=.75619 isr=4.8627n nr=1.200 bv=40 trs1=-2.0000m iave=1 vpk=40 mfg=rohm type=schottky
+.model rb168mm-40-mpkopec d is=16.708n n=1.078 rs=20.272m ikf=111.25m xti=2 eg=.74 cjo=246p m=486.39m vj=502.86m isr=1.1258n nr=1.2 bv=40 tt=11.592n trs1=-0.002 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb168mm-60-ltspice d is=21.039n n=1.0854 rs=84.056m ikf=69.901 xti=2 eg=.69 cjo=206.00p m=.50611 vj=.56361 isr=2.2505n nr=2.1000 bv=60 trs1=0.1200m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb168mm-60-mpkopec d is=12.325n n=1.043 rs=70.61m ikf=648.56m xti=2 eg=.69 cjo=206p m=506.11m vj=563.61m isr=3.5427n nr=1.45 bv=60 tt=10.284n trs1=-0.001 iave=1 vpk=60 mfg=rohm type=schottky
+.model rb168mm100-ltspice d is=14.601n n=1.2478 rs=15.400m ikf=33.987m xti=2 eg=.90 cjo=140.00p m=.51030 vj=.59353 isr=1.6332n nr=1.3000 bv=100 tikf=10.000m trs1=-1.5300m iave=1 vpk=100 mfg=rohm type=schottky
+.model rb168mm100-mpkopec d is=14.601n n=1.248 rs=22.4m ikf=33.987m xti=2 eg=.90 cjo=140p m=510.3m vj=593.53m isr=1.6332n nr=1.3 bv=100 tt=13.071n tikf=10m trs1=-0.00153 iave=1 vpk=100 mfg=rohm type=schottky
+.model rb168mm150-ltspice d is=36.019n n=1.2544 rs=124.249m ikf=8.3792m xti=2 eg=.71 cjo=95.300p m=.48585 vj=.53018 isr=817.07p nr=1.1000 bv=150 trs1=-2.2500m iave=1 vpk=150 mfg=rohm type=schottky
+.model rb168mm150-mpkopec d is=30.019n n=1.304 rs=34.249m ikf=8.3792m xti=2 eg=.71 cjo=95.3p m=485.85m vj=530.18m isr=817.07p nr=1.1 bv=150 tt=16.072n trs1=-0.00225 iave=1 vpk=150 mfg=rohm type=schottky
+.model rb168vam-30 d is=7.4036n n=1.1779 rs=37.360m ikf=.30996 xti=2 eg=.84 cjo=115.00p m=.44797 vj=.51027 isr=722.97p nr=1.2000 bv=30.000 trs1=220.00u iave=1 vpk=30 mfg=rohm type=schottky
+.model rb168vam-40 d is=2.3475n n=1.0555 rs=.11406 ikf=.24882 xti=2 eg=.82 cjo=101.94p m=.49597 vj=.55478 isr=1.9864n nr=1.2000 bv=40.000 trs1=-1.000m tikf=-0.004 iave=1 vpk=40 mfg=rohm type=schottky
+.model rb168vam-60 d is=2.2661p n=.6818 rs=118.749m ikf=222.49u xti=2 eg=.88 cjo=75.000p m=.44667 vj=.50413 isr=830.28p nr=1.2000 bv=60.000 trs1=1.2300m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb168vam100 d is=3.8500n n=1.1463 rs=19.970m ikf=8.9289m xti=2 eg=.90 cjo=90.000p m=.45304 vj=.50184 isr=616.33p nr=1.5000 bv=100 tikf=10.000m trs1=-253.00u iave=1 vpk=100 mfg=rohm type=schottky
+.model rb168vam150 d is=15.348n n=1.2624 rs=86.539m ikf=5.7769m xti=2 eg=.84 cjo=52.000p m=.46892 vj=.94236 isr=1.1980n nr=1.3000 bv=150.00 tikf=10.000m trs1=-3.0230m iave=1 vpk=150 mfg=rohm type=schottky
+.model rb168vym-30-ltspice d is=7.404n n=1.178 rs=37.36m ikf=310m xti=2 eg=840m cjo=115p m=448m vj=510.3m isr=723p nr=1.2 bv=30 trs1=220u iave=0.001 vpk=40 mfg=rohm type=schottky
+.model rb168vym-30-mpkopec d is=7.4036n n=1.178 rs=37.36m ikf=309.96m xti=2 eg=.84 cjo=115p m=447.97m vj=510.27m isr=722.97p nr=1.2 bv=30 tt=3.9567n trs1=220u iave=1 vpk=30 mfg=rohm type=schottky
+.model rb168vym-60 d is=2.2661p n=681.8m rs=54.749m ikf=222.49u xti=2 eg=.88 cjo=75p m=446.67m vj=504.13m isr=830.28p nr=1.2 bv=60 tt=6.262n trs1=1.23m iave=1 vpk=60 mfg=rohm type=schottky
+.model rb168vym100 d is=3.85n n=1.146 rs=19.97m ikf=8.9289m xti=2 eg=.90 cjo=90p m=453.04m vj=501.84m isr=616.33p nr=1.5 bv=100 tt=2.6454n tikf=10m trs1=-0.000253 iave=1 vpk=100 mfg=rohm type=schottky
+.model rb168vym150 d is=15.348n n=1.262 rs=46.539m ikf=5.7769m xti=2 eg=.84 cjo=52p m=468.92m vj=942.36m isr=1.198n nr=1.3 bv=150 tt=26.53n tikf=10m trs1=-0.003023 iave=1 vpk=150 mfg=rohm type=schottky
+.model rb205t-40nz d is=3.7926u n=1.0395 rs=11.826m ikf=5.4095 xti=2 eg=.69 cjo=1.6200n m=.53717 vj=.40518 isr=1.7306u bv=45 iave=15 vpk=45 mfg=rohm type=schottky
+.model rb205t-60nz d is=2.1645u n=.99882 rs=13.506m ikf=1.8409 xti=2 eg=.69 cjo=1.3505n m=.53006 vj=.42567 isr=1.0232u bv=60 iave=15 vpk=60 mfg=rohm type=schottky
+.model rb205t-90nz d is=1.4313u n=.94232 rs=38.306m ikf=.41471 xti=2 eg=.69 cjo=846.71p m=.53879 vj=.47549 isr=734.12n bv=90 iave=15 vpk=90 mfg=rohm type=schottky
+.model rb215t-40nz d is=5.2387u n=1.0184 rs=7.5884m ikf=3.3316 xti=2 eg=.69 cjo=2.2758n m=.53102 vj=.4616 isr=4.6417u bv=45 iave=20 vpk=45 mfg=rohm type=schottky
+.model rb215t-60nz d is=3.8899u n=1.0042 rs=10.132m ikf=4.3574 xti=2 eg=.69 cjo=1.7014n m=.54163 vj=.6187 isr=4.3635u bv=60 iave=20 vpk=60 mfg=rohm type=schottky
+.model rb215t-90nz d is=796.83n n=.88237 rs=24.454m ikf=.47192 xti=2 eg=.69 cjo=1.6298n m=.61003 vj=.45237 isr=1.6342u nr=1.7000 bv=90 iave=20 vpk=90 mfg=rohm type=schottky
+.model rb218ns-30 d is=28.153n n=1.0338 rs=7.5203m ikf=11.195 xti=2 eg=.81 cjo=1.4466n m=.50449 vj=.59736 isr=58.557n nr=1.2300 bv=35 trs1=0.5000m tikf=-0.0060 iave=20 vpk=35 mfg=rohm type=schottky
+.model rb218ns-40 d is=35.837n n=1.0526 rs=11.321m ikf=4.3955 xti=2 eg=.81 cjo=1.1923n m=.51764 vj=.62426 isr=42.188n nr=1.2000 bv=45 trs1=-0.3000m tikf=-0.0060 iave=20 vpk=45 mfg=rohm type=schottky
+.model rb218ns-60 d is=34.050n n=1.0844 rs=8.2837m ikf=.84978 xti=2 eg=.85 cjo=966.01p m=.49824 vj=.50757 isr=26.150n nr=1.3500 bv=60 trs1=-1.1200m iave=20 vpk=60 mfg=rohm type=schottky
+.model rb218ns100 d is=49.989n n=1.1000 rs=7.5419m ikf=12.834e-2 xti=2 eg=.83 cjo=842.04p m=.52751 vj=.59632 isr=14.320n nr=1.2500 bv=110 trs1=620.00u iave=20 vpk=110 mfg=rohm type=schottky
+.model rb218ns150 d is=117.01n n=1.2404 rs=5.2684m ikf=.15455 xti=2 eg=.84 cjo=756.00p m=.50609 vj=.55804 isr=16.519n nr=1.3500 bv=150 tikf=15.000m trs1=-520.00u iave=20 vpk=150 mfg=rohm type=schottky
+.model rb218t-30nz d is=28.153n n=1.0338 rs=7.5203m ikf=11.195 xti=2 eg=.81 cjo=1.4466n m=.50449 vj=.59736 isr=58.557n nr=1.2300 bv=35 trs1=0.5000m tikf=-0.0060 iave=20 vpk=35 mfg=rohm type=schottky
+.model rb218t-40nz d is=35.837n n=1.0526 rs=11.321m ikf=4.3955 xti=2 eg=.81 cjo=1.1923n m=.51764 vj=.62426 isr=42.188n nr=1.2000 bv=45 trs1=-0.3000m tikf=-0.0060 iave=20 vpk=45 mfg=rohm type=schottky
+.model rb218t-60nz d is=34.050n n=1.0844 rs=8.0837m ikf=.84978 xti=2 eg=.85 cjo=966.01p m=.49824 vj=.50757 isr=26.150n nr=1.3500 bv=60 trs1=-620.00u iave=20 vpk=60 mfg=rohm type=schottky
+.model rb218t100nz d is=49.989n n=1.1000 rs=7.5419m ikf=12.834e-2 xti=2 eg=.83 cjo=842.04p m=.52751 vj=.59632 isr=14.320n nr=1.2500 bv=110 trs1=620.00u iave=20 vpk=110 mfg=rohm type=schottky
+.model rb218t150nz d is=117.01n n=1.2404 rs=5.2684m ikf=.15455 xti=2 eg=.84 cjo=756.00p m=.50609 vj=.55804 isr=16.519n nr=1.3500 bv=150 tikf=15.000m trs1=-520.00u iave=20 vpk=150 mfg=rohm type=schottky
+.model rb225ns-40 d is=4.2723u n=1.0169 rs=6.2330m ikf=3.4231 xti=2 eg=.69 cjo=2.4503n m=.54397 vj=.43491 isr=2.3066u bv=40 iave=30 vpk=40 mfg=rohm type=schottky
+.model rb225t-40nz d is=4.2723u n=1.0169 rs=6.2330m ikf=3.4231 xti=2 eg=.69 cjo=2.4503n m=.54397 vj=.43491 isr=2.3066u bv=40 iave=30 vpk=40 mfg=rohm type=schottky
+.model rb225t-60nz d is=4.7471u n=1.0263 rs=8.3152m ikf=2.5528 xti=2 eg=.69 cjo=2.0558n m=.55633 vj=.50523 isr=3.6011u bv=60 iave=30 vpk=60 mfg=rohm type=schottky
+.model rb228ns-30 d is=57.656n n=1.0445 rs=5.5153m ikf=11.966 xti=2 eg=.81 cjo=2.1966n m=.50654 vj=.55267 isr=79.984n nr=1.2300 bv=35 trs1=1.8000m tikf=-0.0060 iave=30 vpk=35 mfg=rohm type=schottky
+.model rb228ns-40 d is=53.700n n=1.0399 rs=6.7658m ikf=2.5400 xti=2 eg=.81 cjo=1.8764n m=.51834 vj=.54781 isr=62.201n nr=1.2300 bv=45 trs1=1.2000m tikf=-0.0040 iave=30 vpk=45 mfg=rohm type=schottky
+.model rb228ns-60 d is=31.667n n=1.0244 rs=8.7423m ikf=1.0498 xti=2 eg=.81 cjo=1.4615n m=.51699 vj=.57407 isr=44.287n nr=1.2000 bv=60 trs1=-0.0010 tikf=-0.0040 iave=30 vpk=60 mfg=rohm type=schottky
+.model rb228ns100 d is=14.683n n=1.1561 rs=5.4852m ikf=.26541 xti=2 eg=.73 cjo=516.00p m=.54424 vj=.5157 isr=5.3880n nr=1.5000 bv=110 iave=30 vpk=110 mfg=rohm type=schottky
+.model rb228ns150 d is=491.65n n=1.2790 rs=3.4079m ikf=.2417 xti=2 eg=.78 cjo=1.0000n m=.49818 vj=.50794 isr=6.3603n nr=1.5000 bv=150 tikf=0.01 iave=30 vpk=150 mfg=rohm type=schottky
+.model rb228t-30nz d is=57.656n n=1.0445 rs=5.5153m ikf=11.966 xti=2 eg=.81 cjo=2.1966n m=.50654 vj=.55267 isr=79.984n nr=1.2300 bv=35 trs1=1.8000m tikf=-0.0060 iave=30 vpk=35 mfg=rohm type=schottky
+.model rb228t-40nz d is=53.700n n=1.0399 rs=6.7658m ikf=2.5400 xti=2 eg=.81 cjo=1.8764n m=.51834 vj=.54781 isr=62.201n nr=1.2300 bv=45 trs1=1.2000m tikf=-0.0040 iave=30 vpk=45 mfg=rohm type=schottky
+.model rb228t-60nz d is=31.667n n=1.0244 rs=8.7423m ikf=1.0498 xti=2 eg=.81 cjo=1.4615n m=.51699 vj=.57407 isr=44.287n nr=1.2000 bv=60 trs1=-0.0010 tikf=-0.0040 iave=30 vpk=60 mfg=rohm type=schottky
+.model rb228t100nz d is=14.683n n=1.1561 rs=5.4852m ikf=.26541 xti=2 eg=.73 cjo=516.00p m=.54424 vj=.5157 isr=5.3880n nr=1.5000 bv=110 iave=30 vpk=110 mfg=rohm type=schottky
+.model rb228t150nz d is=8.4135e-8 n=1.1833 rs=8.3621m ikf=.15067 xti=2 eg=.77 cjo=1.0140n m=.51123 vj=.56164 isr=1.40474e-8 nr=1.1500 bv=150 trs1=4.2500e-4 iave=30 vpk=150 mfg=rohm type=schottky
+.model rb238ns-30 d is=60.109n n=1.0463 rs=4.0565m ikf=13.881 xti=2 eg=.81 cjo=2.7967n m=.51231 vj=.57579 isr=84.370n nr=1.2300 bv=35.000 trs1=1.4000m tikf=-0.0055 iave=40 vpk=35 mfg=rohm type=schottky
+.model rb238ns-40 d is=62.146n n=1.0403 rs=5.9236m ikf=8.3257 xti=2 eg=.8 cjo=2.3005n m=.51694 vj=.6186 isr=110.98n nr=1.2300 bv=45.000 trs1=0.5000m tikf=-0.0050 iave=40 vpk=45 mfg=rohm type=schottky
+.model rb238ns-60 d is=41.454n n=1.0327 rs=6.6479m ikf=1.8261 xti=2 eg=.79 cjo=1.8265n m=.51276 vj=.57227 isr=53.361n nr=1.2000 bv=60.000 trs1=-0.0025 tikf=-0.0040 iave=40 vpk=60 mfg=rohm type=schottky
+.model rb238ns100 d is=33.003n n=1.0468 rs=6.8527m ikf=1.0938 xti=2 eg=.84 cjo=1.7996n m=.53824 vj=.67337 isr=3.6589e-8 nr=1.2200 bv=100 tikf=9.0000m trs1=3.1500m iave=40 vpk=100 mfg=rohm type=schottky
+.model rb238ns150 d is=144.70n n=1.0971 rs=6.1242m ikf=.25422 xti=2 eg=.78 cjo=1.6245n m=.51776 vj=.53433 isr=13.637n nr=1.2200 bv=150 iave=40 vpk=150 mfg=rohm type=schottky
+.model rb238t-30nz d is=60.109n n=1.0463 rs=4.0565m ikf=13.881 xti=2 eg=.81 cjo=2.7967n m=.51231 vj=.57579 isr=84.370n nr=1.2300 bv=35 trs1=1.4000m tikf=-0.0055 iave=40 vpk=35 mfg=rohm type=schottky
+.model rb238t-40nz d is=62.146n n=1.0403 rs=6.3236m ikf=8.3257 xti=2 eg=.8 cjo=2.3005n m=.51694 vj=.6186 isr=110.98n nr=1.2300 bv=45 trs1=0.5000m tikf=-0.0050 iave=40 vpk=45 mfg=rohm type=schottky
+.model rb238t-60nz d is=41.454n n=1.0327 rs=6.6479m ikf=1.8261 xti=2 eg=.79 cjo=1.8265n m=.51276 vj=.57227 isr=53.361n nr=1.2000 bv=60 trs1=-0.0025 tikf=-0.0040 iave=40 vpk=60 mfg=rohm type=schottky
+.model rb238t100nz d is=33.003n n=1.0468 rs=6.8527m ikf=1.0938 xti=2 eg=.84 cjo=1.7996n m=.53824 vj=.67337 isr=3.6589e-8 nr=1.2200 bv=110 tikf=9.0000m trs1=3.1500m iave=40 vpk=110 mfg=rohm type=schottky
+.model rb238t150nz d is=2.9433e-7 n=1.1583 rs=4.9695m ikf=.28076 xti=2 eg=.77 cjo=1.6090n m=.50566 vj=.50865 isr=1.0470e-8 nr=1.1700 bv=150 trs1=4.2500e-4 iave=40 vpk=150 mfg=rohm type=schottky
+.model rb298ns100 d is=27.665n n=1.0136 rs=10.4231m ikf=.33927 xti=2 eg=.81 cjo=1.2121n m=.53051 vj=.59122 isr=28.587n nr=1.1700 bv=110 trs1=-0.0025 tikf=-0.0028 iave=30 vpk=110 mfg=rohm type=schottky
+.model rb298t100nz d is=27.665n n=1.0136 rs=10.4231m ikf=.33927 xti=2 eg=.81 cjo=1.2121n m=.53051 vj=.59122 isr=28.587n nr=1.1700 bv=110 trs1=-0.0025 tikf=-0.0028 iave=30 vpk=110 mfg=rohm type=schottky
+.model rb400d-ltspice d is=342.65n n=1.0902 rs=.20871 ikf=23.924 xti=2 eg=.69 cjo=126.05p m=.48139 vj=.41776 isr=78.020n bv=40 iave=0.5 vpk=40 mfg=rohm type=schottky
+.model rb400d-mpkopec d is=328.6n n=1.082 rs=202.14m ikf=18.6 xti=2 eg=.65 cjo=120p m=490.94m vj=503.43m isr=151.9n nr=1.2 bv=50 tt=19.13n trs1=4.8m iave=0.5 vpk=40 mfg=rohm type=schottky
+.model rb400va-50 d is=328.6n n=1.082 rs=202.14m ikf=18.6 xti=2 eg=.65 cjo=120p m=490.94m vj=503.43m isr=151.9n nr=1.2 bv=50 tt=19.13n trs1=4.8m iave=0.5 vpk=50 mfg=rohm type=schottky
+.model rb400vam-50 d is=3.2860e-7 n=1.0823 rs=.20214 ikf=18.599 xti=2 eg=.65 cjo=1.2000e-10 m=.49094 vj=.50343 isr=1.5190e-7 nr=1.2000 bv=50 trs1=4.800m iave=0.5 vpk=50 mfg=rohm type=schottky
+.model rb400vym-50 d is=328.6n n=1.082 rs=202.14m ikf=18.6 xti=2 eg=.65 cjo=120p m=490.94m vj=503.43m isr=151.9n nr=1.2 bv=50 tt=19.13n trs1=4.8m iave=0.5 vpk=50 mfg=rohm type=schottky
+.model rb411d-ltspice d is=1.3982u n=.86378 rs=30.244m ikf=4.7477m xti=2 eg=.62 cjo=71.872p m=.44153 vj=.52973 isr=1.2606u bv=40 iave=0.5 vpk=40 mfg=rohm type=schottky
+.model rb411d-mpkopec d is=1.3982u n=863.78m rs=30.244m ikf=4.7477m xti=2 eg=.62 cjo=71.872p m=441.53m vj=529.73m isr=1.2606u bv=40 tt=12.578n iave=0.5 vpk=40 mfg=rohm type=schottky
+.model rb411va-50 d is=3.7074u n=1.013 rs=185.65m ikf=154.91m xti=2 eg=.6 cjo=95.043p m=566.62m vj=682.44m isr=1.0615u bv=50 tt=12.6n iave=0.5 vpk=50 mfg=rohm type=schottky
+.model rb411vam-50 d is=2.7074u n=1.0630 rs=178.60m ikf=.15491 xti=2 eg=.6 cjo=95.043p m=.47662 vj=.50044 isr=16.361u nr=1.2000 bv=50 trs1=1.9740m iave=0.5 vpk=50 mfg=rohm type=schottky
+.model rb420d-ltspice d is=40.936n n=1.0726 rs=.59846 ikf=13.557m xti=2 eg=.69 cjo=22.398p m=.4428 vj=.5094 isr=0.510e-7 nr=1.3000 bv=40 trs1=0.0061 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb420d-mpkopec d is=20.467n n=1.047 rs=739.19m ikf=21.59 xti=2 eg=.69 cjo=19.707p m=424.35m vj=519.83m isr=18.82n nr=1.7 bv=40 tt=7.8n iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb421d-ltspice d is=1.8328u n=1.1427 rs=.89254 ikf=12.564 xti=2 eg=.6100 cjo=23.035p m=.42022 vj=.3905 isr=2.110u nr=1.3000 bv=40 trs1=0.0070 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb421d-mpkopec d is=825.5n n=1.059 rs=1.187 ikf=13.61 xti=2 eg=.55 cjo=20.268p m=442.8m vj=579.28m isr=200.54n nr=1.1 bv=40 tt=14.7n iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb425d-ltspice d is=0.8102u n=1.0537 rs=1.1284 ikf=24.487 xti=2 eg=.58 cjo=23.253p m=.430 vj=.5012 isr=1.6012u nr=1.3000 bv=40 trs1=0.00544 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb425d-mpkopec d is=258.65n n=945.32m rs=1.159 ikf=2.619 xti=2 eg=.55 cjo=20.268p m=442.8m vj=579.28m isr=317.19n nr=1.1 bv=40 tt=14.7n iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb450f-ltspice d is=40.936n n=1.0726 rs=.59846 ikf=13.557m xti=2 eg=.69 cjo=22.398p m=.4428 vj=.5094 isr=0.0510u nr=1.3000 bv=45 trs1=0.0061 iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb450f-mpkopec d is=20.467n n=1.047 rs=739.19m ikf=21.59 xti=2 eg=.69 cjo=19.707p m=424.35m vj=519.83m isr=18.82n nr=1.7 bv=45 tt=7.8n iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb450um d is=26.936n n=1.0226 rs=428.46m ikf=8.5570m xti=2 eg=.74 cjo=23.398p m=.4428 vj=.5014 isr=71.000n nr=1.2500 bv=45 trs1=1.1340m iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb451f d is=825.5n n=1.059 rs=1.187 ikf=13.61 xti=2 eg=.55 cjo=20.268p m=442.8m vj=579.28m isr=200.54n nr=1.1 bv=40 tt=14.7n iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb451um d is=154.80n n=0.9247 rs=.61254 ikf=94.564m xti=2 eg=.61 cjo=23.035p m=.42022 vj=.50025 isr=3.0780u nr=1.1700 bv=40 trs1=413.40u iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb461f d is=3.1358u n=0.9968 rs=0.1907 ikf=157.01 xti=4.7 eg=0.53 cjo=85.871p m=0.5075 vj=0.5083 isr=7.2835u nr=1.2 bv=25 trs1=0.002 iave=0.7 vpk=25 mfg=rohm type=schottky
+.model rb471e-ltspice d is=1.8328u n=1.1427 rs=.89254 ikf=12.564 xti=2 eg=.6100 cjo=23.035p m=.42022 vj=.3905 isr=2.110u nr=1.3000 bv=40.000 trs1=0.007 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb471e-mpkopec d is=825.5n n=1.059 rs=1.187 ikf=13.61 xti=2 eg=.55 cjo=20.268p m=442.8m vj=579.28m isr=200.54n nr=1.1 bv=40 tt=14.7n iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb480k d is=20.467n n=1.047 rs=739.19m ikf=21.59 xti=2 eg=.69 cjo=19.707p m=424.35m vj=519.83m isr=18.82n nr=1.7 bv=45 tt=7.8n iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb480y-40 d is=34.245n n=1.021 rs=826.36m ikf=26.13 xti=2 eg=.63 cjo=23.859p m=490.97m vj=509.75m isr=49.827n nr=1.25 bv=40 tt=8.911n trs1=3.6m iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb480y-90 d is=20.249n n=986.38m rs=2.499 ikf=1.37 xti=2 eg=.69 cjo=18.094p m=473.75m vj=537.89m isr=15.845n nr=1.2 bv=90 tt=7.93n iave=0.1 vpk=90 mfg=rohm type=schottky
+.model rb480y d is=33.23n n=1.02 rs=443m ikf=34.23 xti=2 eg=.65 cjo=28.151p m=485.04m vj=546.8m isr=48.347n nr=1.3 bv=30 tt=7.15n trs1=2.0m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb481k d is=1.021u n=975m rs=527m ikf=30.12 xti=2 eg=.6 cjo=20.033p m=528.97m vj=462.96m isr=1.0909u nr=1.2 bv=30 tt=7.93n iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb481y-40 d is=494.28n n=1.006 rs=845.62m ikf=18.58 xti=2 eg=.52 cjo=26.67p m=482.8m vj=511.94m isr=898.81n nr=1.1 bv=40 tt=7.25n trs1=3.7m iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb481y-90 d is=1.6286u n=1.023 rs=2.604 ikf=1.069 xti=2 eg=.56 cjo=18.094p m=473.75m vj=537.89m isr=778.04n nr=1.3 bv=90 tt=29.5n iave=0.1 vpk=90 mfg=rohm type=schottky
+.model rb481y d is=1.021u n=975m rs=527m ikf=30.12 xti=2 eg=.6 cjo=29.592p m=465.6m vj=390.5m isr=1.0909u nr=1.2 bv=30 tt=7.93n trs1=2m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb491d d is=7.5944u n=.98802 rs=88.395m ikf=1.1635 xti=2 eg=.58 cjo=170.41p m=.52686 vj=.45009 isr=2.3660u bv=25 iave=1 vpk=25 mfg=rohm type=schottky
+.model rb495d-ltspice d is=1.9668u n=1.0101 rs=.27703 ikf=27.254 xti=2 eg=.59 cjo=64.352p m=.49607 vj=.5015 isr=9.010u nr=1.2000 bv=40 trs1=0.0061 iave=0.4 vpk=40 mfg=rohm type=schottky
+.model rb495d-mpkopec d is=6.6722u n=1.152 rs=247.71m ikf=4.543 xti=2 eg=.6 cjo=59.225p m=547.55m vj=619.84m isr=2.9834u nr=1.4 bv=40 tt=19.8n iave=0.4 vpk=40 mfg=rohm type=schottky
+.model rb496ea d is=14.900u n=1.0463 rs=80.016m ikf=45.160 xti=2 eg=.6 cjo=234.12p m=.51188 vj=.41541 isr=9.0530u bv=20 iave=1 vpk=20 mfg=rohm type=schottky
+.model rb496ka d is=19.046u n=1.0558 rs=53.697m ikf=.3658 xti=2 eg=.57 cjo=152.52p m=.54951 vj=.44729 isr=10.082u nr=1.7000 bv=20 iave=1 vpk=20 mfg=rohm type=schottky
+.model rb500sm-30-ltspice d is=40.634n n=1.0718 rs=.66817 ikf=7.9386 xti=2 eg=.69 cjo=17.120p m=.46625 vj=.50582 isr=0.040u nr=1.3000 bv=30 trs1=0.005 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb500sm-30-mpkopec d is=51.062n n=1.075 rs=733.7m ikf=7.17 xti=2 eg=.63 cjo=16.5p m=471.82m vj=514.89m isr=46.547n nr=1.4 bv=30 tt=7.6947n trs1=4.8m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb500vm-40-ltspice d is=40.936n n=1.0726 rs=.59846 ikf=13.557m xti=2 eg=.69 cjo=22.398p m=.4428 vj=.5094 isr=0.0510u nr=1.3000 bv=45 trs1=0.0061 iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb500vm-40-mpkopec d is=20.467n n=1.047 rs=739.19m ikf=21.59 xti=2 eg=.69 cjo=19.707p m=424.35m vj=519.83m isr=18.82n nr=1.7 bv=40 tt=7.8n iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb501sm-30-ltspice d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb501sm-30-mpkopec d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb501vm-40-ltspice d is=1.8328u n=1.1427 rs=.89254 ikf=12.564 xti=2 eg=.6100 cjo=23.035p m=.42022 vj=.3905 isr=2.110u nr=1.3000 bv=45 trs1=0.0070 iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb501vm-40-mpkopec d is=825.5n n=1.059 rs=1.187 ikf=13.61 xti=2 eg=.55 cjo=20.268p m=442.8m vj=579.28m isr=200.54n nr=1.1 bv=45 tt=14.7n iave=0.1 vpk=45 mfg=rohm type=schottky
+.model rb510sm-30-ltspice d is=5.6509n n=1.0026 rs=1.4711 ikf=4.3789m xti=2 eg=.69 cjo=6.7795p m=.40157 vj=.5014 isr=20.750n nr=1.3000 bv=30 trs1=4.2000m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb510sm-30-mpkopec d is=4.9706n n=1.04 rs=2.12 ikf=8.723 xti=2 eg=.69 cjo=6.2301p m=415.48m vj=522.98m isr=7.4208n nr=1.17 bv=30 tt=7.9n trs1=1.4m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb510sm-40 d is=19.146n n=1.1897 rs=3.3241 ikf=7.4909 xti=2 eg=.68 cjo=6.0977p m=.34678 vj=.50125 isr=16.753n nr=1.1700 bv=40.000 trs1=-0.0008 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb510vm-30-ltspice d is=5.6509n n=1.0026 rs=1.4711 ikf=4.3789m xti=2 eg=.69 cjo=6.7795p m=.40157 vj=.5014 isr=20.750n nr=1.3000 bv=30 trs1=4.2000m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb510vm-30-mpkopec d is=4.9706n n=1.04 rs=2.12 ikf=8.723 xti=2 eg=.69 cjo=6.2301p m=415.48m vj=522.98m isr=7.4208n nr=1.17 bv=30 tt=7.9n trs1=1.4m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb510vm-40 d is=18.858n n=1.1897 rs=2.9721 ikf=5.4517m xti=2 eg=.67 cjo=6.1630p m=.34451 vj=.50464 isr=17.393n nr=1.2000 bv=40 trs1=-0.0008 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb511sm-30-ltspice d is=272.96n n=1.0408 rs=2.1384 ikf=16.845 xti=2 eg=.58 cjo=7.1582p m=.39951 vj=.5013 isr=0.8010u nr=1.3000 bv=30 trs1=0.0053 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb511sm-30-mpkopec d is=1.037n n=732.1m rs=2.419 ikf=19.21 xti=2 eg=.58 cjo=5.893p m=377.28m vj=506.84m isr=685.27n nr=1.2 bv=30 tt=7.69n trs1=3.8m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb511sm-40 d is=264.06n n=1.3383 rs=3.6356 ikf=3.7079 xti=2 eg=.62 cjo=6.4000p m=.3375 vj=.5017 isr=325.21n nr=1.2000 bv=40 trs1=-0.0004 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb511vm-30-ltspice d is=272.96n n=1.0408 rs=2.1384 ikf=16.845 xti=2 eg=.58 cjo=7.1582p m=.39951 vj=.5013 isr=0.8010u nr=1.3000 bv=30 trs1=0.0053 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb511vm-30-mpkopec d is=1.037n n=732.1m rs=2.419 ikf=19.21 xti=2 eg=.58 cjo=5.893p m=377.28m vj=506.84m isr=685.27n nr=1.2 bv=30 tt=7.69n trs1=3.8m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb511vm-40 d is=185.97n n=1.5948 rs=3.8815 ikf=8.7224 xti=2 eg=.61 cjo=6.3276p m=.3396 vj=.5015 isr=298.98n nr=1.1200 bv=40.000 trs1=-0.3000m iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb520cm-30 d is=40.634n n=1.0718 rs=.66817 ikf=7.9386 xti=2 eg=.69 cjo=17.120p m=.46625 vj=.50582 isr=0.040u nr=1.3000 bv=30.000 trs1=0.005 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb520cm-40 d is=32.927n n=1.0346 rs=0.8983 ikf=4.5854m xti=2 eg=.67 cjo=14.043p m=.46575 vj=.5005 isr=0.030u nr=1.2000 bv=40.000 trs1=0.006 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb520cm-60 d is=10.773n n=1.1559 rs=2.6295 ikf=3.5205m xti=2 eg=.69 cjo=4.8122p m=.39233 vj=.502 isr=1.210e-8 nr=1.3000 bv=60.000 trs1=-0.002 iave=0.1 vpk=60 mfg=rohm type=schottky
+.model rb520g-30 d is=47.81n n=1.078 rs=669m ikf=23.22 xti=2 eg=.54 cjo=15.761p m=447.45m vj=543.54m isr=39.806n nr=1.3 bv=30 tt=7.22n trs1=2.6m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb520g-40 d is=166.19n n=1.323 rs=584.65m ikf=16.681m xti=2 eg=.6 cjo=13.6p m=502.26m vj=789.63m isr=666.59n nr=1.8 bv=40 tt=7.75n trs1=-0.001 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb520hs-30 d is=11.570n n=1.0710 rs=1.2430 ikf=39.653m xti=2 eg=.72 cjo=19.124p m=.34378 vj=.5012 isr=19.4500n nr=1.2000 bv=30 trs1=2.9450m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb520sm-30-ltspice d is=85.777n n=1.0710 rs=.45336 ikf=21.653 xti=2 eg=.67 cjo=31.124p m=.47078 vj=.5022 isr=76.400n nr=2.3000 bv=30 trs1=0.0042 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb520sm-30-mpkopec d is=33.23n n=1.02 rs=443m ikf=34.23 xti=2 eg=.65 cjo=28.151p m=485.04m vj=546.8m isr=48.347n nr=1.3 bv=30 tt=7.15n trs1=2.0m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb520sm-40-ltspice d is=78.630n n=1.0912 rs=.75122 ikf=5.8178 xti=2 eg=.69 cjo=25.085p m=.46901 vj=.50385 isr=61.340n nr=1.3000 bv=40 trs1=0.00445 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb520sm-40-mpkopec d is=34.245n n=1.021 rs=826.36m ikf=26.13 xti=2 eg=.63 cjo=23.859p m=490.97m vj=509.75m isr=49.827n nr=1.25 bv=40 tt=8.911n trs1=3.6m iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb520vm-30-ltspice d is=85.777n n=1.0710 rs=.45336 ikf=21.653 xti=2 eg=.67 cjo=31.124p m=.47078 vj=.5022 isr=76.400n nr=2.3000 bv=30 trs1=0.0042 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb520vm-30-mpkopec d is=33.23n n=1.02 rs=443m ikf=34.23 xti=2 eg=.65 cjo=28.151p m=485.04m vj=546.8m isr=48.347n nr=1.3 bv=30 tt=7.15n trs1=2.0m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb520vm-40-ltspice d is=78.630n n=1.0912 rs=.75122 ikf=5.8178 xti=2 eg=.69 cjo=25.085p m=.46901 vj=.50385 isr=61.340n nr=1.3000 bv=40 trs1=0.00445 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb520vm-40-mpkopec d is=34.245n n=1.021 rs=826.36m ikf=26.13 xti=2 eg=.63 cjo=23.859p m=490.97m vj=509.75m isr=49.827n nr=1.25 bv=40 tt=8.911n trs1=3.6m iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb521cm-30 d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=88.510e-8 nr=1.2000 bv=30.000 trs1=0.0065 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb521cm-40 d is=0.8715u n=1.0799 rs=1.4823 ikf=32.199 xti=2 eg=.58 cjo=14.454p m=.46208 vj=.5011 isr=63.010e-8 nr=1.2000 bv=40.000 trs1=0.005 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb521g-30 d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb521g-40 d is=4.6684u n=1.369 rs=733.81m ikf=19.402m xti=2 eg=.47 cjo=14.7p m=489.16m vj=648.74m isr=561.025n nr=1.4 bv=40 tt=7.7n trs1=-0.001 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb521sm-30-ltspice d is=1.0270u n=1.0348 rs=.36019 ikf=25.157 xti=2 eg=.59 cjo=33.631p m=.485 vj=.5095 isr=3.3015u nr=1.3500 bv=30 trs1=0.0048 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb521sm-30-mpkopec d is=1.021u n=975m rs=527m ikf=30.12 xti=2 eg=.6 cjo=20.033p m=528.97m vj=462.96m isr=1.0909u nr=1.2 bv=30 tt=7.93n iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb521sm-40-ltspice d is=1.0431u n=1.0173 rs=.85052 ikf=45.028 xti=2 eg=.59 cjo=27.877p m=.47424 vj=.5005 isr=2.0100u nr=1.2000 bv=40 trs1=0.005 iave=0.2 vpk=45 mfg=rohm type=schottky
+.model rb521sm-40-mpkopec d is=494.28n n=1.006 rs=845.62m ikf=18.58 xti=2 eg=.52 cjo=26.67p m=482.8m vj=511.94m isr=898.81n nr=1.1 bv=40 tt=7.25n trs1=3.7m iave=0.2 vpk=45 mfg=rohm type=schottky
+.model rb521sm-60 d is=0.1480u n=1.0658 rs=1.1128 ikf=23.599 xti=2 eg=.57 cjo=22.995p m=.45637 vj=.5015 isr=2.6992u nr=1.1000 bv=60 trs1=0.0017 iave=0.2 vpk=60 mfg=rohm type=schottky
+.model rb521vm-30-ltspice d is=1.0270u n=1.0348 rs=.36019 ikf=25.157 xti=2 eg=.59 cjo=33.631p m=.485 vj=.5095 isr=3.3015u nr=1.3500 bv=30 trs1=0.0048 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb521vm-30-mpkopec d is=24.256n n=516.73m rs=417.72m ikf=72.619u xti=2 eg=.51 cjo=28p m=460.17m vj=507.16m isr=2.8674u nr=1.3 bv=30 tt=14.89n trs1=3.2m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb521vm-40-ltspice d is=1.0431u n=1.0173 rs=.85052 ikf=45.028 xti=2 eg=.59 cjo=27.877p m=.47424 vj=.5005 isr=2.010u nr=1.2000 bv=40 trs1=0.005 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb521vm-40-mpkopec d is=494.28n n=1.006 rs=845.62m ikf=18.58 xti=2 eg=.52 cjo=26.67p m=482.8m vj=511.94m isr=898.81n nr=1.1 bv=40 tt=7.25n trs1=3.7m iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb522es-30 d is=14.570n n=1.0581 rs=2.5449 ikf=16.265m xti=2.0 eg=0.602 cjo=9.5770p m=0.2902 vj=0.5000 isr=1.9787u nr=1.1544 bv=30 trs1=3.7845m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb522fs-30 d is=544.96n n=1.0049 rs=4.3289 ikf=34.411 xti=2 eg=.56 cjo=13.291p m=.37191 vj=.5015 isr=2.9743u nr=1.3000 bv=30 trs1=0.0025 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb530cm-30 d is=5.6509n n=1.0026 rs=1.4711 ikf=4.3789m xti=2 eg=.69 cjo=6.7795p m=.40157 vj=.5014 isr=20.750n nr=1.3000 bv=30.000 trs1=4.2000m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb530cm-40 d is=19.146n n=1.1897 rs=3.3241 ikf=7.4909 xti=2 eg=.68 cjo=6.0977p m=.34678 vj=.50125 isr=16.753n nr=1.1700 bv=40.000 trs1=-0.0008 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb530cm-60 d is=30.264n n=1.0712 rs=1.3128 ikf=7.7679m xti=2 eg=.69 cjo=11.838p m=.4546 vj=.5015 isr=3.850e-8 nr=1.3000 bv=60.000 trs1=0.0018 iave=0.1 vpk=60 mfg=rohm type=schottky
+.model rb530sm-30-ltspice d is=40.634n n=1.0718 rs=.66817 ikf=7.9386 xti=2 eg=.69 cjo=17.120p m=.46625 vj=.50582 isr=0.0400u nr=1.3000 bv=30 trs1=0.005 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb530sm-30-mpkopec d is=51.062n n=1.075 rs=733.7m ikf=7.17 xti=2 eg=.63 cjo=16.5p m=471.82m vj=514.89m isr=46.547n nr=1.4 bv=30 tt=7.6947n trs1=4.8m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb530sm-40-ltspice d is=32.927n n=1.0346 rs=0.8983 ikf=4.5854m xti=2 eg=.67 cjo=14.043p m=.46575 vj=.5005 isr=0.0300u nr=1.2000 bv=40 trs1=0.006 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb530sm-40-mpkopec d is=166.19n n=1.323 rs=584.65m ikf=16.681m xti=2 eg=.6 cjo=13.6p m=502.26m vj=789.63m isr=666.59n nr=1.8 bv=40 tt=7.75n trs1=-0.001 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb530vm-30-ltspice d is=40.634n n=1.0718 rs=.66817 ikf=7.9386 xti=2 eg=.69 cjo=17.120p m=.46625 vj=.50582 isr=0.0400u nr=1.3000 bv=30 trs1=0.005 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb530vm-30-mpkopec d is=51.062n n=1.075 rs=733.7m ikf=7.17 xti=2 eg=.63 cjo=16.5p m=471.82m vj=514.89m isr=46.547n nr=1.4 bv=30 tt=7.6947n trs1=4.8m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb530vm-40-ltspice d is=32.927n n=1.0346 rs=0.8983 ikf=4.5854m xti=2 eg=.67 cjo=14.043p m=.46575 vj=.5005 isr=0.0300u nr=1.2000 bv=40 trs1=0.006 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb530vm-40-mpkopec d is=166.19n n=1.323 rs=584.65m ikf=16.681m xti=2 eg=.6 cjo=13.6p m=502.26m vj=789.63m isr=666.59n nr=1.8 bv=40 tt=7.75n trs1=-0.001 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb530xn-ltspice d is=85.777n n=1.0710 rs=.45336 ikf=21.653 xti=2 eg=.67 cjo=31.124p m=.47078 vj=.5022 isr=76.400n nr=2.3000 bv=30 trs1=0.0042 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb530xn-mpkopec d is=33.23n n=1.02 rs=443m ikf=34.23 xti=2 eg=.65 cjo=28.151p m=485.04m vj=546.8m isr=48.347n nr=1.3 bv=30 tt=7.15n trs1=2.0m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb531cm-30 d is=272.96n n=1.0408 rs=2.1384 ikf=16.845 xti=2 eg=.58 cjo=7.1582p m=.39951 vj=.5013 isr=8.010e-7 nr=1.3000 bv=30.000 trs1=0.0053 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb531cm-40 d is=264.06n n=1.3383 rs=3.6356 ikf=3.7079 xti=2 eg=.62 cjo=6.4000p m=.3375 vj=.5017 isr=325.21n nr=1.2000 bv=40 trs1=-0.0004 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb531sm-30-ltspice d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb531sm-30-mpkopec d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb531sm-40-ltspice d is=0.8715u n=1.0799 rs=1.4823 ikf=32.199 xti=2 eg=.58 cjo=14.454p m=.46208 vj=.5011 isr=630.10n nr=1.2000 bv=40 trs1=0.005 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb531sm-40-mpkopec d is=4.6684u n=1.369 rs=733.81m ikf=19.402m xti=2 eg=.47 cjo=14.7p m=489.16m vj=648.74m isr=561.025n nr=1.4 bv=40 tt=7.7n trs1=-0.001 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb531vm-30-ltspice d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb531vm-30-mpkopec d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb531vm-40-ltspice d is=0.8715u n=1.0799 rs=1.4823 ikf=32.199 xti=2 eg=.58 cjo=14.454p m=.46208 vj=.5011 isr=630.10n nr=1.2000 bv=40 trs1=0.005 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb531vm-40-mpkopec d is=4.6684u n=1.369 rs=733.81m ikf=19.402m xti=2 eg=.47 cjo=14.7p m=489.16m vj=648.74m isr=561.025n nr=1.4 bv=40 tt=7.7n trs1=-0.001 iave=0.1 vpk=40 mfg=rohm type=schottky
+.model rb531xn-ltspice d is=1.0270u n=1.0348 rs=.36019 ikf=25.157 xti=2 eg=.59 cjo=33.631p m=.485 vj=.5095 isr=3.3015u nr=1.3500 bv=30 trs1=0.0048 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb531xn-mpkopec d is=1.021u n=975m rs=527m ikf=30.12 xti=2 eg=.6 cjo=29.592p m=465.6m vj=390.5m isr=1.0909u nr=1.2 bv=30 tt=7.93n trs1=2m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb532hs-30 d is=175.10n n=1.0710 rs=1.4130 ikf=396.53m xti=3.5 eg=.55 cjo=18.124p m=.37942 vj=.5012 isr=4.4870u nr=1.1500 bv=30 trs1=2.5450m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb540sm-40-ltspice d is=32.927n n=1.0346 rs=0.8983 ikf=4.5854m xti=2 eg=.67 cjo=14.043p m=.46575 vj=.5005 isr=0.030u nr=1.2000 bv=40 trs1=0.006 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb540sm-40-mpkopec d is=166.19n n=1.323 rs=584.65m ikf=16.681m xti=2 eg=.6 cjo=13.6p m=502.26m vj=789.63m isr=666.59n nr=1.8 bv=40 tt=7.75n trs1=-0.001 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb540vm-30-ltspice d is=40.634n n=1.0718 rs=.66817 ikf=7.9386 xti=2 eg=.69 cjo=17.120p m=.46625 vj=.50582 isr=0.0400u nr=1.3000 bv=30 trs1=0.005 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb540vm-30-mpkopec d is=47.81n n=1.078 rs=669m ikf=23.22 xti=2 eg=.54 cjo=15.761p m=447.45m vj=543.54m isr=39.806n nr=1.3 bv=30 tt=7.22n trs1=2.6m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb540vm-40-ltspice d is=32.927n n=1.0346 rs=0.8983 ikf=4.5854m xti=2 eg=.67 cjo=14.043p m=.46575 vj=.5005 isr=0.0300u nr=1.2000 bv=40 trs1=0.006 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb540vm-40-mpkopec d is=166.19n n=1.323 rs=584.65m ikf=16.681m xti=2 eg=.6 cjo=13.6p m=502.26m vj=789.63m isr=666.59n nr=1.8 bv=40 tt=7.75n trs1=-0.001 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb541sm-40-ltspice d is=0.8715u n=1.0799 rs=1.4823 ikf=32.199 xti=2 eg=.58 cjo=14.454p m=.46208 vj=.5011 isr=630.10n nr=1.2000 bv=40 trs1=0.005 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb541sm-40-mpkopec d is=4.6684u n=1.369 rs=733.81m ikf=19.402m xti=2 eg=.47 cjo=14.7p m=489.16m vj=648.74m isr=561.025n nr=1.4 bv=40 tt=7.7n trs1=-0.001 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb541vm-30-ltspice d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb541vm-30-mpkopec d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.2 vpk=30 mfg=rohm type=schottky
+.model rb541vm-40-ltspice d is=0.8715u n=1.0799 rs=1.4823 ikf=32.199 xti=2 eg=.58 cjo=14.454p m=.46208 vj=.5011 isr=630.10n nr=1.2000 bv=40 trs1=0.005 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb541vm-40-mpkopec d is=4.6684u n=1.369 rs=733.81m ikf=19.402m xti=2 eg=.47 cjo=14.7p m=489.16m vj=648.74m isr=561.025n nr=1.4 bv=40 tt=7.7n trs1=-0.001 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb541xn-ltspice d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb541xn-mpkopec d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb548w-ltspice d is=40.634n n=1.0718 rs=.66817 ikf=7.9386 xti=2 eg=.69 cjo=17.120p m=.46625 vj=.50582 isr=0.0400u nr=1.3000 bv=30 trs1=0.005 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb548w-mpkopec d is=47.81n n=1.078 rs=669m ikf=23.22 xti=2 eg=.54 cjo=15.761p m=447.45m vj=543.54m isr=39.806n nr=1.3 bv=30 tt=7.22n trs1=2.6m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb548wm d is=40.634n n=1.0718 rs=.66817 ikf=7.9386 xti=2 eg=.69 cjo=17.120p m=.46625 vj=.50582 isr=0.0400u nr=1.3000 bv=30 trs1=0.005 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb550ea-ltspice d is=94.506n n=.91036 rs=47.955m ikf=65.446m xti=2 eg=.61 cjo=172.00p m=.54621 vj=.4399 isr=201.27n nr=1.7000 bv=30 iave=0.7 vpk=30 mfg=rohm type=schottky
+.model rb550ea-mpkopec d is=94.506n n=910.36m rs=47.955m ikf=65.446m xti=2 eg=.61 cjo=172p m=546.21m vj=439.9m isr=201.27n nr=1.7 bv=30 tt=16.031n iave=1.4 vpk=30 mfg=rohm type=schottky
+.model rb550va-30 d is=94.506n n=910.36m rs=47.955m ikf=65.446m xti=2 eg=.61 cjo=172p m=546.21m vj=439.9m isr=201.27n nr=1.7 bv=30 tt=16.031n iave=1 vpk=30 mfg=rohm type=schottky
+.model rb550vam-30 d is=94.506n n=.91036 rs=47.955m ikf=65.446m xti=2 eg=.61 cjo=172.00p m=.54621 vj=.4399 isr=201.27n nr=1.7000 bv=30 iave=1 vpk=30 mfg=rohm type=schottky
+.model rb550vm-30-ltspice d is=126.84n n=1.0696 rs=.22254 ikf=29.110 xti=2 eg=.70 cjo=55.649p m=0.489 vj=.5089 isr=105.10n nr=1.2000 bv=30 trs1=0.005 iave=0.5 vpk=30 mfg=rohm type=schottky
+.model rb550vm-30-mpkopec d is=11.126n n=840.5m rs=236.69m ikf=62.89 xti=2 eg=.66 cjo=59.3p m=500.53m vj=503.21m isr=197.56n nr=1.25 bv=30 tt=3.4976n trs1=5.4m iave=0.5 vpk=30 mfg=rohm type=schottky
+.model rb550vm-40 d is=92.780n n=1.0526 rs=.33941 ikf=.2924 xti=2 eg=.7 cjo=50.438p m=.49516 vj=.5019 isr=145.24n nr=1.2000 bv=40 trs1=0.002 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb550vym-30 d is=344.64n n=1.047 rs=67.949m ikf=21.81 xti=2 eg=.69 cjo=166.65p m=515.95m vj=517.83m isr=314.9n nr=1.18 bv=30 tt=2.557n trs1=3.89m iave=1 vpk=30 mfg=rohm type=schottky
+.model rb551vm-30 d is=2.2551u n=.91822 rs=.23078 ikf=832.79 xti=2 eg=.55 cjo=67.000p m=.67348 vj=.59177 isr=3.5061u nr=1.1000 bv=30 trs1=0.003 iave=0.5 vpk=30 mfg=rohm type=schottky
+.model rb551vm-40 d is=2.7855u n=1.0545 rs=.32536 ikf=62.645 xti=2 eg=.59 cjo=56.153p m=.51809 vj=.50375 isr=5.4689u nr=1.2000 bv=40 trs1=0.004 iave=0.2 vpk=40 mfg=rohm type=schottky
+.model rb552ea-ltspice d is=105.75n n=1.0125 rs=.16369 ikf=.17809 xti=2 eg=.67 cjo=56.300p m=.59154 vj=.45777 isr=74.398n nr=1.3000 bv=30 trs1=0.004 iave=0.5 vpk=30 mfg=rohm type=schottky
+.model rb552ea-mpkopec d is=105.75n n=1.013 rs=163.69m ikf=178.09m xti=2 eg=.67 cjo=56.3p m=591.54m vj=457.77m isr=74.398n nr=1.3 bv=30 tt=3n trs1=4m iave=1 vpk=30 mfg=rohm type=schottky
+.model rb557w-ltspice d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb557w-mpkopec d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb557wm d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb558va150 d is=8.9324n n=1.339 rs=54.145m ikf=5.7641m xti=2 eg=.72 cjo=24p m=478.25m vj=649.77m isr=95.724p nr=1.5 bv=150 tt=24n trs1=-0.001 tikf=10m iave=0.5 vpk=150 mfg=rohm type=schottky
+.model rb558vam150 d is=1.3288e-8 n=1.3883 rs=28.9791e-2 ikf=3.6722m xti=2 eg=.70 cjo=2.4000e-11 m=.44915 vj=.50381 isr=6.1649e-11 nr=1.1000 bv=150.00 trs1=-3.9000m iave=0.5 vpk=150 mfg=rohm type=schottky
+.model rb558vym150 d is=8.9324n n=1.339 rs=54.145m ikf=5.7641m xti=2 eg=.72 cjo=24p m=478.25m vj=649.77m isr=95.724p nr=1.5 bv=150 tt=24n trs1=-0.001 tikf=10m iave=0.5 vpk=150 mfg=rohm type=schottky
+.model rb558w d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb558wm-ltspice d is=1.1043u n=1.1087 rs=.65402 ikf=26.142 xti=2 eg=.60 cjo=17.232p m=.45993 vj=.50021 isr=885.10n nr=1.2000 bv=30 trs1=0.0065 iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb558wm-mpkopec d is=320.48n n=938.36m rs=971.55m ikf=15.77 xti=2 eg=.62 cjo=17.5p m=495.32m vj=507.1m isr=879.34n nr=1.4 bv=30 tt=17.64n trs1=4.7m iave=0.1 vpk=30 mfg=rohm type=schottky
+.model rb560vm-40 d is=98.901n n=1.0334 rs=.33849 ikf=.25086 xti=2 eg=.69 cjo=50.482p m=.50295 vj=.50126 isr=129.12n nr=1.2000 bv=40 trs1=2.8000m iave=0.5 vpk=40 mfg=rohm type=schottky
+.model rb561vm-40 d is=3.4533u n=1.0621 rs=.30578 ikf=.373 xti=2 eg=.6 cjo=55.183p m=.51741 vj=.50356 isr=4.1844u nr=1.2000 bv=40 trs1=6.8000m iave=0.5 vpk=40 mfg=rohm type=schottky
+.model rb578vam100 d is=5.0862n n=1.2432 rs=25.937m ikf=27.353m xti=2 eg=.69 cjo=60.800p m=.47542 vj=.52362 isr=1.3611n nr=1.5000 bv=150 trs1=-0.004 tikf=0.01 iave=0.7 vpk=100 mfg=rohm type=schottky
+.model rb578vym100 d is=11.362n n=1.21 rs=30.645m ikf=11.716m xti=2 eg=.69 cjo=60.7p m=478.56m vj=535.55m isr=106.11p nr=1.3 bv=100 tt=6.7807n trs1=-0.0042 tikf=7.6m iave=0.7 vpk=100 mfg=rohm type=schottky
+.model rb705d-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.00n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb705d-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb706d-40-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=45 trs1=0.007 iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb706d-40-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb706f-40-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=45 trs1=0.007 iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb706f-40-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb706um-40 d is=20.380n n=1.1606 rs=6.1892 ikf=3.2976m xti=2 eg=0.68 cjo=2.2000p m=0.3672 vj=0.5000 isr=33.396n nr=1.3000 bv=45 trs1=-0.3644m tikf=1.6865p iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb706w-40-ltspice d is=56.801n n=1.0894 rs=11.838 ikf=12.198 xti=2 eg=.63 cjo=2.2304p m=.3391 vj=.503 isr=65.100n nr=1.4000 bv=45 trs1=0.0013 iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb706w-40-mpkopec d is=35.777n n=1.123 rs=11.54 ikf=5.443 xti=2 eg=.63 cjo=1.9144p m=465.78m vj=503.35m isr=11.424n nr=1.3 bv=40 tt=30.3n iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb706wm-40 d is=56.801n n=1.0894 rs=11.838 ikf=12.198 xti=2 eg=.63 cjo=2.2304p m=.3391 vj=.503 isr=65.100n nr=1.4000 bv=45 trs1=0.0013 iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb715f-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb715f-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb715um-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb715um-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb715w-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb715w-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb715wm d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb715z d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb717f-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb717f-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb717um d is=20.380n n=1.1606 rs=6.1892 ikf=3.2976m xti=2 eg=0.68 cjo=2.2000p m=0.3672 vj=0.5000 isr=33.396n nr=1.3000 bv=45 trs1=-0.3644m tikf=1.6865p iave=0.03 vpk=45 mfg=rohm type=schottky
+.model rb731u-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb731u-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb731xn-ltspice d is=25.660n n=1.0632 rs=10.765 ikf=7.8943 xti=2 eg=.62 cjo=2.0853p m=.31825 vj=.5105 isr=81.000n nr=1.3000 bv=40 trs1=0.007 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb731xn-mpkopec d is=40.052n n=1.072 rs=8 ikf=8.45 xti=2 eg=.52 cjo=2.2269p m=318.09m vj=638.28m isr=32.517n nr=1.3 bv=40 tt=10.2n trs1=-0.002 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb751cm-40 d is=0.7600n n=0.9090 rs=6.88913 ikf=2.4808m xti=2 eg=0.6500 cjo=2.1997p m=.32799 vj=.5050 isr=58.0010n nr=1.2500 bv=40.000 trs1=0.003 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb751g-40 d is=35.777n n=1.123 rs=11.54 ikf=5.443 xti=2 eg=.63 cjo=1.9144p m=465.78m vj=503.35m isr=11.424n nr=1.3 bv=40 tt=30.3n iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb751sm-40-ltspice d is=0.7600n n=0.9090 rs=6.8891 ikf=2.4808m xti=2 eg=0.6500 cjo=2.1997p m=.32799 vj=.5050 isr=58.001n nr=1.2500 bv=40 trs1=0.003 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb751sm-40-mpkopec d is=144.09n n=1.27 rs=3.711 ikf=878.15u xti=2 eg=.63 cjo=2.1p m=380.01m vj=765.59m isr=15.952n nr=1.3 bv=40 tt=10.82n iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb751vm-40-ltspice d is=0.7600n n=0.9090 rs=6.8891 ikf=2.4808m xti=2 eg=0.6500 cjo=2.1997p m=.32799 vj=.5050 isr=58.001n nr=1.2500 bv=40 trs1=0.003 iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb751vm-40-mpkopec d is=144.09n n=1.27 rs=3.711 ikf=878.15u xti=2 eg=.63 cjo=2.1p m=380.01m vj=765.59m isr=15.952n nr=1.3 bv=40 tt=10.82n iave=0.03 vpk=40 mfg=rohm type=schottky
+.model rb876w d is=1.6577u n=1.3060 rs=71.547 ikf=7.2109 xti=2 eg=.42 cjo=788.48f m=.30823 vj=.51668 isr=6.2805u nr=2.6000 bv=5 trs1=0.006 iave=0.01 vpk=5 mfg=rohm type=schottky
+.model rb886cm d is=1.5377u n=1.1060 rs=82.547 ikf=0.6125 xti=1.7 eg=0.39 cjo=645.48f m=0.2092 vj=0.5026 isr=2.4125u nr=1.9 bv=15 trs1=0.005 iave=0.01 vpk=5 mfg=rohm type=schottky
+.model rbe1ka20a d is=10.105u n=1.0425 rs=.1706 ikf=103.50 xti=2 eg=.55 cjo=62.700p m=.50752 vj=.50214 isr=4.2518u nr=1.1000 bv=30 trs1=0.005 iave=1 vpk=30 mfg=rohm type=schottky
+.model rbe1vam20a d is=10.105u n=1.0425 rs=.1706 ikf=103.50 xti=2 eg=.55 cjo=62.700p m=.50752 vj=.50214 isr=4.2518u nr=1.1000 bv=30 trs1=0.005 iave=1 vpk=30 mfg=rohm type=schottky
+.model rbe2ea20a d is=19.140u n=1.0202 rs=43.167m ikf=1.4658 xti=2 eg=.4 cjo=190.22p m=.52012 vj=.50782 isr=41.026u nr=1.3000 bv=30 trs1=0.0035 iave=2 vpk=30 mfg=rohm type=schottky
+.model rbe2vam20a d is=19.140u n=1.0202 rs=43.167m ikf=1.4658 xti=2 eg=.4 cjo=190.22p m=.52012 vj=.50782 isr=41.026u nr=1.3000 bv=30 trs1=0.0035 iave=2 vpk=30 mfg=rohm type=schottky
+.model rblq10rsm10 d is=553.50n n=1.0129 rs=11.117m ikf=2.5871 xti=2 eg=0.71 cjo=1.1920n m=0.5136 vj=0.5058 isr=493.55n nr=1.17 bv=100 trs1=-0.004 tikf=-0.0065 iave=10 vpk=100 mfg=rohm type=schottky
+.model rblq20bge10 d is=553.50n n=1.0129 rs=11.117m ikf=2.5871 xti=2 eg=0.71 cjo=1.1920n m=0.5036 vj=0.5038 isr=539.55n nr=1.16 bv=100 trs1=-0.0035 tikf=-0.007 iave=20 vpk=100 mfg=rohm type=schottky
+.model rblq2mm10 d is=59.587n n=0.9781 rs=0.1034 ikf=0.4467 xti=2 eg=0.71 cjo=146.51p m=0.4865 vj=0.5007 isr=70.432n nr=1.16 bv=100 trs1=-0.0048 tikf=-0.0075 iave=2 vpk=100 mfg=rohm type=schottky
+.model rblq2vwm10 d is=59.587n n=0.9781 rs=0.1034 ikf=0.4467 xti=2 eg=0.71 cjo=146.51p m=0.4865 vj=0.5007 isr=70.432n nr=1.16 bv=100 trs1=-0.0048 tikf=-0.0075 iave=2 vpk=100 mfg=rohm type=schottky
+.model rblq3lam10 d is=207.69n n=1.0236 rs=31.806m ikf=1.7127 xti=2.5 eg=0.72 cjo=375.93p m=0.4725 vj=0.5003 isr=198.65n nr=1.2 bv=100 trs1=-0.0035 tikf=-0.0075 iave=3 vpk=100 mfg=rohm type=schottky
+.model rbq10bge10a d is=151.54n n=0.9552 rs=36.865m ikf=141.25m xti=2.0 eg=0.743 cjo=491.30p m=0.5172 vj=0.5000 isr=729.36n nr=1.1850 bv=100 trs1=-2.1495m iave=10 vpk=100 mfg=rohm type=schottky
+.model rbq10bge45a d is=80.364n n=0.9309 rs=12.011m ikf=141.25m xti=2.0 eg=0.748 cjo=489.00p m=0.4980 vj=0.5000 isr=946.86n nr=1.2304 bv=45 trs1=3.5960m iave=10 vpk=45 mfg=rohm type=schottky
+.model rbq10bge65a d is=92.467n n=0.9450 rs=24.610m ikf=141.25m xti=2.0 eg=0.730 cjo=388.00p m=0.5004 vj=0.5000 isr=894.46n nr=1.2100 bv=65 trs1=-1.7271m iave=10 vpk=65 mfg=rohm type=schottky
+.model rbq10ns100a d is=151.54n n=0.9552 rs=36.865m ikf=141.25m xti=2.0 eg=0.743 cjo=491.30p m=0.5172 vj=0.5000 isr=729.36n nr=1.1850 bv=100 trs1=-2.1495m iave=10 vpk=100 mfg=rohm type=schottky
+.model rbq10ns45a d is=218.08n n=1.0103 rs=18.799m ikf=3.4775 xti=2 eg=.69 cjo=488.00p m=.50648 vj=.52609 isr=325.48n nr=1.2000 bv=45 trs1=0.001 iave=10 vpk=45 mfg=rohm type=schottky
+.model rbq10ns65a d is=180.97n n=1.0227 rs=29.998m ikf=1.3752 trs1=0.004 xti=2 eg=.65 cjo=403.00p m=.52895 vj=.60094 isr=770.49n nr=1.2 bv=65 ibv=150.00u iave=10 vpk=65 mfg=rohm type=schottky
+.model rbq10t45anz d is=80.364n n=0.9309 rs=12.011m ikf=141.25m xti=2.0 eg=0.748 cjo=491.39p m=0.4918 vj=0.5000 isr=974.02n nr=1.2299 bv=45 trs1=3.5959m iave=10 vpk=45 mfg=rohm type=schottky
+.model rbq10t65anz d is=92.464n n=0.9450 rs=24.611m ikf=141.25m xti=2.0 eg=0.730 cjo=386.44p m=0.4856 vj=0.5000 isr=961.53n nr=1.2091 bv=65 trs1=-1.7272m iave=10 vpk=65 mfg=rohm type=schottky
+.model rbq15bge10a d is=221.50n n=0.9170 rs=22.723m ikf=141.25m xti=2.0 eg=0.742 cjo=973.60p m=0.5234 vj=0.5000 isr=1.4235u nr=1.1833 bv=100 trs1=1.0576m iave=15 vpk=100 mfg=rohm type=schottky
+.model rbq15bge45a d is=145.03n n=0.8935 rs=6.3678m ikf=141.25m xti=2.0 eg=0.735 cjo=1.0900n m=0.5121 vj=0.5567 isr=2.5656u nr=1.2018 bv=45 trs1=629.95u tikf=6.0883m iave=15 vpk=45 mfg=rohm type=schottky
+.model rbq15bge65a d is=156.27n n=0.9081 rs=10.705m ikf=141.25m xti=2.0 eg=0.733 cjo=854.00p m=0.5113 vj=0.5437 isr=2.0755u nr=1.1880 bv=65 trs1=-285.34u iave=15 vpk=65 mfg=rohm type=schottky
+.model rbq20bge45a d is=6.9721n n=0.8073 rs=7.0369m ikf=895.63m xti=2 eg=0.71 cjo=1.4900n m=0.5178 vj=0.5589 isr=2.9293u nr=1.15 bv=45 trs1=0.3979m iave=20 vpk=45 mfg=rohm type=schottky
+.model rbq20bge65a d is=180.14n n=0.8874 rs=8.4316m ikf=141.25m xti=2.0 eg=0.731 cjo=1.1700n m=0.5233 vj=0.5931 isr=3.0614u nr=1.1853 bv=65 trs1=-872.80u iave=20 vpk=65 mfg=rohm type=schottky
+.model rbq20bm100a d is=292.16n n=0.9039 rs=15.843m ikf=141.25m xti=2.0 eg=0.742 cjo=1.4200n m=0.5237 vj=0.5000 isr=2.1089u nr=1.1839 bv=100 trs1=1.1721m tikf=502.81u iave=20 vpk=100 mfg=rohm type=schottky
+.model rbq20ns100a d is=224.93n n=0.9161 rs=22.063m ikf=141.25m xti=2.0 eg=0.737 cjo=973.60p m=0.5234 vj=0.5000 isr=1.4233u nr=1.1749 bv=100 trs1=1.6967m iave=20 vpk=100 mfg=rohm type=schottky
+.model rbq20ns45a d is=508.52n n=1.0202 rs=8.1422m ikf=7.4665 xti=2 eg=.69 cjo=1.1420n m=.51286 vj=.51666 isr=528.44n nr=1.2000 bv=45 trs1=0.003 iave=20 vpk=45 mfg=rohm type=schottky
+.model rbq20ns65a d is=488.73n n=1.0234 rs=14.501m ikf=7.4420 xti=2 eg=.68 cjo=902.00p m=.51546 vj=.51212 isr=394.91n nr=1.2000 bv=65 trs1=0.002 iave=20 vpk=65 mfg=rohm type=schottky
+.model rbq20t45anz d is=144.99n n=0.8935 rs=6.3683m ikf=141.25m xti=2.0 eg=0.735 cjo=1.1205n m=0.5055 vj=0.5382 isr=2.5971u nr=1.2038 bv=45 trs1=630.17u tikf=6.0881m iave=20 vpk=45 mfg=rohm type=schottky
+.model rbq20t65anz d is=156.20n n=0.9080 rs=10.707m ikf=141.25m xti=2.0 eg=0.733 cjo=887.05p m=0.4974 vj=0.5000 isr=2.1280u nr=1.1932 bv=65 trs1=-283.14u iave=20 vpk=65 mfg=rohm type=schottky
+.model rbq30ns100a d is=302.75n n=0.9015 rs=14.011m ikf=141.25m xti=2.0 eg=0.740 cjo=1.4200n m=0.5237 vj=0.5000 isr=2.1083u nr=1.1811 bv=100 trs1=2.1023m tikf=1.1427m iave=30 vpk=100 mfg=rohm type=schottky
+.model rbq30ns45a d is=659.64n n=1.0105 rs=6.1655m ikf=4.7041 xti=2 eg=.69 cjo=1.5630n m=.52053 vj=.54379 isr=730.93n nr=1.2000 bv=45 trs1=0.003 iave=30 vpk=45 mfg=rohm type=schottky
+.model rbq30ns45b d is=196.10n n=0.8657 rs=3.4619m ikf=28.46 xti=2.0 eg=0.71 cjo=4.7800n m=0.5189 vj=0.5002 isr=8.9793u nr=1.13 bv=45 trs1=3.9811m iave=30 vpk=45 mfg=rohm type=schottky
+.model rbq30ns65a d is=522.89n n=1.0082 rs=10.224m ikf=4.0679 xti=2 eg=.69 cjo=1.2240n m=.51737 vj=.51071 isr=539.52n nr=1.2000 bv=65 trs1=0.002 iave=30 vpk=65 mfg=rohm type=schottky
+.model rbq30t45anz d is=167.24n n=0.8845 rs=4.7210m ikf=141.25m xti=2.0 eg=0.744 cjo=1.5182n m=0.5130 vj=0.5606 isr=2.9972u nr=1.1897 bv=45 trs1=3.1175m iave=30 vpk=45 mfg=rohm type=schottky
+.model rbq30t65anz d is=179.97n n=0.8873 rs=8.4332m ikf=141.25m xti=2.0 eg=0.731 cjo=1.1995n m=0.4962 vj=0.5000 isr=3.1974u nr=1.1954 bv=65 trs1=-870.46u iave=30 vpk=65 mfg=rohm type=schottky
+.model rbq30tb45bnz d is=196.10n n=0.8657 rs=3.4619m ikf=28.46 xti=2.0 eg=0.71 cjo=4.7800n m=0.5189 vj=0.5002 isr=8.9793u nr=1.13 bv=45 trs1=3.9811m iave=30 vpk=45 mfg=rohm type=schottky
+.model rbr10bge30a d is=439.71n n=0.9251 rs=13.815m ikf=141.25m xti=2.0 eg=0.689 cjo=585.00p m=0.5067 vj=0.5000 isr=2.6785u nr=1.1705 bv=30 trs1=1.6047m iave=10 vpk=30 mfg=rohm type=schottky
+.model rbr10bge40a d is=448.06n n=0.9479 rs=15.996m ikf=141.25m xti=2.0 eg=0.695 cjo=462.00p m=0.4951 vj=0.5000 isr=1.7072u nr=1.1546 bv=40 trs1=2.8140m iave=10 vpk=40 mfg=rohm type=schottky
+.model rbr10bge60a d is=646.09n n=0.9459 rs=26.226m ikf=141.25m xti=2.0 eg=0.693 cjo=386.00p m=0.5015 vj=0.5418 isr=3.5933u nr=1.1546 bv=60 trs1=1.0768m tikf=591.10u iave=10 vpk=60 mfg=rohm type=schottky
+.model rbr10ns30a d is=439.71n n=0.9251 rs=13.815m ikf=141.25m xti=2.0 eg=0.689 cjo=585.00p m=0.5067 vj=0.5000 isr=2.6785u nr=1.1705 bv=30 trs1=1.6047m iave=10 vpk=30 mfg=rohm type=schottky
+.model rbr10ns40a d is=448.06n n=0.9479 rs=15.996m ikf=141.25m xti=2.0 eg=0.695 cjo=462.00p m=0.4951 vj=0.5000 isr=1.7072u nr=1.1546 bv=40 trs1=2.8140m iave=10 vpk=40 mfg=rohm type=schottky
+.model rbr10ns60a d is=646.09n n=0.9459 rs=26.226m ikf=141.25m xti=2.0 eg=0.693 cjo=386.00p m=0.5015 vj=0.5418 isr=3.5933u nr=1.1546 bv=60 trs1=1.0768m tikf=591.10u iave=10 vpk=60 mfg=rohm type=schottky
+.model rbr10t30anz d is=439.71n n=0.9251 rs=13.815m ikf=141.25m xti=2.0 eg=0.689 cjo=585.00p m=0.5067 vj=0.5000 isr=2.6785u nr=1.1705 bv=30 trs1=1.6047m iave=30 vpk=30 mfg=rohm type=schottky
+.model rbr10t40anz d is=448.06n n=0.9479 rs=15.996m ikf=141.25m xti=2.0 eg=0.695 cjo=462.00p m=0.4951 vj=0.5000 isr=1.7072u nr=1.1546 bv=40 trs1=2.8140m iave=10 vpk=40 mfg=rohm type=schottky
+.model rbr10t60anz d is=646.07n n=0.9459 rs=26.226m ikf=141.25m xti=2.0 eg=0.693 cjo=412.16p m=0.4984 vj=0.5000 isr=3.5042u nr=1.1596 bv=60 trs1=1.2353m tikf=1.0594m iave=10 vpk=60 mfg=rohm type=schottky
+.model rbr15bge30a d is=983.96n n=0.9128 rs=6.1538m ikf=141.25m xti=2.0 eg=0.676 cjo=1.2600n m=0.5318 vj=0.6259 isr=6.8378u nr=1.2193 bv=30 trs1=787.60u tikf=10.532m iave=15 vpk=30 mfg=rohm type=schottky
+.model rbr15bge40a d is=978.61n n=0.9211 rs=7.2571m ikf=141.25m xti=2.0 eg=0.685 cjo=956.00p m=0.4816 vj=0.5000 isr=4.2011u nr=1.1001 bv=40 trs1=3.5527m tikf=7.3534m iave=15 vpk=40 mfg=rohm type=schottky
+.model rbr15bge60a d is=1.1586u n=0.9055 rs=12.747m ikf=141.25m xti=2.0 eg=0.683 cjo=824.00p m=0.5235 vj=0.6564 isr=7.9657u nr=1.1211 bv=60 trs1=251.37u iave=15 vpk=60 mfg=rohm type=schottky
+.model rbr1l30a d is=398.65n n=996.4m rs=33.832m ikf=2.962 xti=2 eg=.69 cjo=219.88p m=475.48m vj=504.21m isr=859.74n nr=1.27 bv=30 tt=14.107n trs1=4.1m iave=1 vpk=30 mfg=rohm type=schottky
+.model rbr1l40a d is=405.25n n=1.004 rs=65.421m ikf=96.1 xti=2 eg=.67 cjo=180.36p m=485.18m vj=503.85m isr=592.46n nr=1.25 bv=40 tt=16.537n trs1=4.8m iave=1 vpk=40 mfg=rohm type=schottky
+.model rbr1l60a d is=240.57n n=994.9m rs=82.858m ikf=789.52m xti=2 eg=.69 cjo=160.28p m=493.37m vj=507.18m isr=766.57n nr=1.25 bv=60 tt=4.7358n trs1=5.26m iave=1 vpk=60 mfg=rohm type=schottky
+.model rbr1lam30a d is=212.56n n=0.9622 rs=24.424m ikf=141.25m xti=2.0 eg=0.690 cjo=240.13p m=0.5125 vj=0.5000 isr=963.16n nr=1.1778 bv=30 trs1=1.2575m tikf=2.8804m iave=1 vpk=30 mfg=rohm type=schottky
+.model rbr1lam40a d is=516.49n n=1.0288 rs=60.847m ikf=74.608 xti=2 eg=.66 cjo=185.47p m=.50131 vj=.50153 isr=799.89n nr=1.2000 bv=40 trs1=4.0000m iave=1 vpk=40 mfg=rohm type=schottky
+.model rbr1lam60a d is=.14057u n=0.9563 rs=82.858m ikf=.78952 xti=2 eg=.69 cjo=160.28p m=.49337 vj=.50718 isr=1.2657u nr=1.2500 bv=60 trs1=5.2600m iave=1 vpk=60 mfg=rohm type=schottky
+.model rbr1m30a d is=398.65n n=996.4m rs=33.832m ikf=2.962 xti=2 eg=.69 cjo=219.88p m=475.48m vj=504.21m isr=859.74n nr=1.27 bv=30 tt=14.107n trs1=4.1m iave=1 vpk=30 mfg=rohm type=schottky
+.model rbr1m40a d is=405.25n n=1.004 rs=65.421m ikf=96.1 xti=2 eg=.67 cjo=180.36p m=485.18m vj=503.85m isr=592.46n nr=1.25 bv=40 tt=16.537n trs1=4.8m iave=1 vpk=40 mfg=rohm type=schottky
+.model rbr1m60a d is=240.57n n=994.9m rs=82.858m ikf=789.52m xti=2 eg=.69 cjo=160.28p m=493.37m vj=507.18m isr=766.57n nr=1.25 bv=60 tt=4.7358n trs1=5.26m iave=1 vpk=60 mfg=rohm type=schottky
+.model rbr1mm30a-ltspice d is=.34865u n=0.9964 rs=33.832m ikf=2.9622 xti=2 eg=.69 cjo=219.88p m=.47548 vj=.50421 isr=1.25974u nr=1.2700 bv=30 trs1=4.1000m iave=1 vpk=30 mfg=rohm type=schottky
+.model rbr1mm30a-mpkopec d is=398.65n n=996.4m rs=33.832m ikf=2.962 xti=2 eg=.69 cjo=219.88p m=475.48m vj=504.21m isr=859.74n nr=1.27 bv=30 tt=14.107n trs1=4.1m iave=1 vpk=30 mfg=rohm type=schottky
+.model rbr1mm40a-ltspice d is=516.49n n=1.0288 rs=60.847m ikf=74.608 xti=2 eg=.66 cjo=185.47p m=.50131 vj=.50153 isr=799.89n nr=1.2000 bv=40 trs1=4.0000m iave=1 vpk=40 mfg=rohm type=schottky
+.model rbr1mm40a-mpkopec d is=405.25n n=1.004 rs=65.421m ikf=96.1 xti=2 eg=.67 cjo=180.36p m=485.18m vj=503.85m isr=592.46n nr=1.25 bv=40 tt=16.537n trs1=4.8m iave=1 vpk=40 mfg=rohm type=schottky
+.model rbr1mm60a-ltspice d is=.14057u n=0.9563 rs=82.858m ikf=.78952 xti=2 eg=.69 cjo=160.28p m=.49337 vj=.50718 isr=1.2657u nr=1.2500 bv=60 trs1=5.2600m iave=1 vpk=60 mfg=rohm type=schottky
+.model rbr1mm60a-mpkopec d is=240.57n n=994.9m rs=82.858m ikf=789.52m xti=2 eg=.69 cjo=160.28p m=493.37m vj=507.18m isr=766.57n nr=1.25 bv=60 tt=4.7358n trs1=5.26m iave=1 vpk=60 mfg=rohm type=schottky
+.model rbr1vwm30a d is=212.56n n=0.9622 rs=24.424m ikf=141.25m xti=2.0 eg=0.690 cjo=240.13p m=0.5125 vj=0.5000 isr=963.16n nr=1.1778 bv=30 trs1=1.2575m tikf=2.8804m iave=1 vpk=30 mfg=rohm type=schottky
+.model rbr1vwm40a d is=242.47n n=0.9821 rs=43.807m ikf=141.25m xti=2.0 eg=0.698 cjo=191.90p m=0.4999 vj=0.5000 isr=654.39n nr=1.1441 bv=40 trs1=755.93u iave=1 vpk=40 mfg=rohm type=schottky
+.model rbr1vwm60a d is=371.87n n=0.9886 rs=69.825m ikf=141.25m xti=2.0 eg=0.671 cjo=166.00p m=0.5081 vj=0.5000 isr=1.1895u nr=1.2667 bv=60 trs1=380.02u iave=1 vpk=60 mfg=rohm type=schottky
+.model rbr20bge30a d is=1.0622u n=0.8858 rs=5.4208m ikf=141.25m xti=2.0 eg=0.681 cjo=1.6400n m=0.5437 vj=0.7373 isr=9.6699u nr=1.1236 bv=30 trs1=644.62u iave=20 vpk=30 mfg=rohm type=schottky
+.model rbr20bge40a d is=1.0182u n=0.8850 rs=6.7802m ikf=141.25m xti=2.0 eg=0.682 cjo=1.2500n m=0.4819 vj=0.5424 isr=6.4063u nr=1.1006 bv=40 trs1=2.2739m iave=20 vpk=40 mfg=rohm type=schottky
+.model rbr20bge60a d is=436.20n n=0.9025 rs=9.1379m ikf=141.25m xti=2.0 eg=0.684 cjo=1.0700n m=0.5377 vj=0.7832 isr=11.219u nr=1.1095 bv=60 trs1=3.1298m iave=20 vpk=60 mfg=rohm type=schottky
+.model rbr20ns30a d is=983.96n n=0.9128 rs=6.1538m ikf=141.25m xti=2.0 eg=0.676 cjo=1.2600n m=0.5318 vj=0.6259 isr=6.8378u nr=1.2193 bv=30 trs1=787.60u tikf=10.532m iave=20 vpk=30 mfg=rohm type=schottky
+.model rbr20ns40a d is=2.9784u n=1.0246 rs=12.105m ikf=570.05 xti=2 eg=.65 cjo=1.0972n m=.52072 vj=.5031 isr=4.3877u nr=1.2800 bv=40 trs1=0.004 iave=20 vpk=40 mfg=rohm type=schottky
+.model rbr20ns60a d is=1.1586u n=0.9055 rs=12.747m ikf=141.25m xti=2.0 eg=0.683 cjo=824.00p m=0.5235 vj=0.6564 isr=7.9657u nr=1.1211 bv=60 trs1=251.37u iave=20 vpk=60 mfg=rohm type=schottky
+.model rbr20t30anz d is=983.96n n=0.9128 rs=6.1538m ikf=141.25m xti=2.0 eg=0.676 cjo=1.2600n m=0.5318 vj=0.6259 isr=6.8378u nr=1.2193 bv=30 trs1=787.60u tikf=10.532m iave=20 vpk=30 mfg=rohm type=schottky
+.model rbr20t40anz d is=978.61n n=0.9211 rs=7.2571m ikf=141.25m xti=2.0 eg=0.685 cjo=956.00p m=0.4816 vj=0.5000 isr=4.2011u nr=1.1001 bv=40 trs1=3.5527m tikf=7.3534m iave=20 vpk=40 mfg=rohm type=schottky
+.model rbr20t60anz d is=1.1635u n=0.9059 rs=12.741m ikf=141.25m xti=2.0 eg=0.683 cjo=961.29p m=0.5557 vj=0.7578 isr=7.4502u nr=1.1159 bv=60 trs1=249.33u iave=20 vpk=60 mfg=rohm type=schottky
+.model rbr2l30a d is=815.41n n=1.018 rs=26.044m ikf=379.6 xti=2 eg=.69 cjo=354.14p m=506.58m vj=503.07m isr=989.75n nr=1.24 bv=30 tt=10.996n trs1=4.96m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2l40a d is=1.3562u n=1.066 rs=39.785m ikf=9.736 xti=2 eg=.66 cjo=280.76p m=504.01m vj=507.82m isr=743.42n nr=1.25 bv=40 tt=11.077n trs1=4.96m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2l60a d is=240.57n n=994.9m rs=82.858m ikf=789.52m xti=2 eg=.69 cjo=160.28p m=493.37m vj=507.18m isr=766.57n nr=1.25 bv=60 tt=4.7358n trs1=5.26m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2l60b d is=984.24n n=1.006 rs=35.301m ikf=3.799 xti=2 eg=.69 cjo=411p m=520.67m vj=513.5m isr=1.4257u nr=1.21 bv=60 tt=8.1224n trs1=6.16m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2lam30a d is=715.41n n=1.0181 rs=26.044m ikf=379.63 xti=2 eg=.69 cjo=354.14p m=.50858 vj=.50307 isr=1.6897u nr=1.2400 bv=30 trs1=4.9600m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2lam40a d is=953.54n n=1.0266 rs=36.607m ikf=2.6167 xti=2 eg=.66 cjo=280.89p m=.51399 vj=.50146 isr=1.0595u nr=1.1500 bv=40 trs1=5.5000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2lam60a d is=.14057u n=0.9563 rs=82.858m ikf=.78952 xti=2 eg=.69 cjo=160.28p m=.49337 vj=.50718 isr=1.2657u nr=1.2500 bv=60 trs1=5.2600m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2lam60b d is=384.24n n=0.9759 rs=35.301m ikf=3.7985 xti=2 eg=.69 cjo=411.00p m=.52067 vj=.5135 isr=2.9257u nr=1.2100 bv=60 trs1=1.0000m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2m30a d is=398.65n n=996.4m rs=33.832m ikf=2.962 xti=2 eg=.69 cjo=219.88p m=475.48m vj=504.21m isr=859.74n nr=1.27 bv=30 tt=14.107n trs1=4.1m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2m30b d is=815.41n n=1.018 rs=26.044m ikf=379.6 xti=2 eg=.69 cjo=354.14p m=506.58m vj=503.07m isr=989.75n nr=1.24 bv=30 tt=10.996n trs1=4.96m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2m40a d is=405.25n n=1.004 rs=65.421m ikf=96.1 xti=2 eg=.67 cjo=180.36p m=485.18m vj=503.85m isr=592.46n nr=1.25 bv=40 tt=16.537n trs1=4.8m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2m40b d is=1.3562u n=1.066 rs=39.785m ikf=9.736 xti=2 eg=.66 cjo=280.76p m=504.01m vj=507.82m isr=743.42n nr=1.25 bv=40 tt=11.077n trs1=4.96m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2m40c d is=1.024u n=1.023 rs=32.339m ikf=3.172 xti=2 eg=.65 cjo=325.4p m=501.22m vj=502.42m isr=943.02n nr=1.21 bv=40 tt=12.843n trs1=5.46m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2m60a d is=240.57n n=994.9m rs=82.858m ikf=789.52m xti=2 eg=.69 cjo=160.28p m=493.37m vj=507.18m isr=766.57n nr=1.25 bv=60 tt=4.7358n trs1=5.26m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2m60b d is=713.55n n=1.024 rs=60.22m ikf=2.406 xti=2 eg=.67 cjo=244.71p m=508.6m vj=500.55m isr=1.213u nr=1.25 bv=60 tt=3.898n trs1=4.76m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2m60c d is=610.09n n=999.5m rs=47.773m ikf=5.357 xti=2 eg=.69 cjo=305.3p m=514.71m vj=503.68m isr=1.2499u nr=1.22 bv=60 tt=10.65n trs1=5.76m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2mm30a-ltspice d is=.34865u n=0.9964 rs=33.832m ikf=2.9622 xti=2 eg=.69 cjo=219.88p m=.47548 vj=.50421 isr=1.25974u nr=1.2700 bv=30 trs1=4.1000m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2mm30a-mpkopec d is=398.65n n=996.4m rs=33.832m ikf=2.962 xti=2 eg=.69 cjo=219.88p m=475.48m vj=504.21m isr=859.74n nr=1.27 bv=30 tt=14.107n trs1=4.1m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2mm30b-ltspice d is=715.41n n=1.0181 rs=26.044m ikf=379.63 xti=2 eg=.69 cjo=354.14p m=.50858 vj=.50307 isr=1.6897u nr=1.2400 bv=30 trs1=4.9600m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2mm30b-mpkopec d is=815.41n n=1.018 rs=26.044m ikf=379.6 xti=2 eg=.69 cjo=354.14p m=506.58m vj=503.07m isr=989.75n nr=1.24 bv=30 tt=10.996n trs1=4.96m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2mm40a-ltspice d is=516.49n n=1.0288 rs=60.847m ikf=74.608 xti=2 eg=.66 cjo=185.47p m=.50131 vj=.50153 isr=799.89n nr=1.2000 bv=40 trs1=4.0000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2mm40a-mpkopec d is=405.25n n=1.004 rs=65.421m ikf=96.1 xti=2 eg=.67 cjo=180.36p m=485.18m vj=503.85m isr=592.46n nr=1.25 bv=40 tt=16.537n trs1=4.8m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2mm40b-ltspice d is=953.54n n=1.0266 rs=36.607m ikf=2.6167 xti=2 eg=.66 cjo=280.89p m=.51399 vj=.50146 isr=1.0595u nr=1.1500 bv=40 trs1=5.5000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2mm40b-mpkopec d is=1.3562u n=1.066 rs=39.785m ikf=9.736 xti=2 eg=.66 cjo=280.76p m=504.01m vj=507.82m isr=743.42n nr=1.25 bv=40 tt=11.077n trs1=4.96m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2mm40c-ltspice d is=1.0240u n=1.0226 rs=32.339m ikf=3.1720 xti=2 eg=.65 cjo=325.40p m=.50122 vj=.50242 isr=943.02n nr=1.2100 bv=40 trs1=5.4600m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2mm40c-mpkopec d is=1.024u n=1.023 rs=32.339m ikf=3.172 xti=2 eg=.65 cjo=325.4p m=501.22m vj=502.42m isr=943.02n nr=1.21 bv=40 tt=12.843n trs1=5.46m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2mm60a-ltspice d is=.14057u n=0.9563 rs=82.858m ikf=.78952 xti=2 eg=.69 cjo=160.28p m=.49337 vj=.50718 isr=1.2657u nr=1.2500 bv=60 trs1=5.2600m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2mm60a-mpkopec d is=240.57n n=994.9m rs=82.858m ikf=789.52m xti=2 eg=.69 cjo=160.28p m=493.37m vj=507.18m isr=766.57n nr=1.25 bv=60 tt=4.7358n trs1=5.26m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2mm60b-ltspice d is=713.55n n=1.0236 rs=60.220m ikf=2.4062 xti=2 eg=.67 cjo=244.71p m=.5086 vj=.50055 isr=1.2130u nr=1.2500 bv=60 trs1=4.7600m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2mm60b-mpkopec d is=713.55n n=1.024 rs=60.22m ikf=2.406 xti=2 eg=.67 cjo=244.71p m=508.6m vj=500.55m isr=1.213u nr=1.25 bv=60 tt=3.898n trs1=4.76m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2mm60c-ltspice d is=610.09n n=0.9995 rs=47.773m ikf=5.3565 xti=2 eg=.69 cjo=305.30p m=.51471 vj=.50368 isr=2.2499u nr=1.2200 bv=60 trs1=5.7600m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2mm60c-mpkopec d is=610.09n n=999.5m rs=47.773m ikf=5.357 xti=2 eg=.69 cjo=305.3p m=514.71m vj=503.68m isr=1.2499u nr=1.22 bv=60 tt=10.65n trs1=5.76m iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr2vwm30a d is=212.56n n=0.9622 rs=24.424m ikf=141.25m xti=2.0 eg=0.690 cjo=240.13p m=0.5125 vj=0.5000 isr=963.16n nr=1.1778 bv=30 trs1=1.2575m tikf=2.8804m iave=2 vpk=30 mfg=rohm type=schottky
+.model rbr2vwm40a d is=242.47n n=0.9821 rs=43.807m ikf=141.25m xti=2.0 eg=0.698 cjo=191.90p m=0.4999 vj=0.5000 isr=654.39n nr=1.1441 bv=40 trs1=755.93u iave=2 vpk=40 mfg=rohm type=schottky
+.model rbr2vwm60a d is=371.87n n=0.9886 rs=69.825m ikf=141.25m xti=2.0 eg=0.671 cjo=166.00p m=0.5081 vj=0.5000 isr=1.1895u nr=1.2667 bv=60 trs1=380.02u iave=2 vpk=60 mfg=rohm type=schottky
+.model rbr30ns30a d is=1.0295u n=0.8823 rs=5.6655m ikf=141.25m xti=2.0 eg=0.677 cjo=1.6400n m=0.5437 vj=0.7373 isr=9.6750u nr=1.2170 bv=30 trs1=-16.504u iave=30 vpk=30 mfg=rohm type=schottky
+.model rbr30ns40a d is=3.7793u n=1.0280 rs=11.195m ikf=946.21 xti=2 eg=.64 cjo=1.3486n m=.4965 vj=.50293 isr=4.0966u nr=1.1500 bv=40 trs1=3.9800m iave=30 vpk=40 mfg=rohm type=schottky
+.model rbr30ns60a d is=436.20n n=0.9025 rs=9.1379m ikf=141.25m xti=2.0 eg=0.684 cjo=1.0700n m=0.5377 vj=0.7832 isr=11.219u nr=1.1095 bv=60 trs1=3.1298m iave=30 vpk=60 mfg=rohm type=schottky
+.model rbr30t30anz d is=1.0295u n=0.8823 rs=5.6655m ikf=141.25m xti=2.0 eg=0.677 cjo=1.6400n m=0.5437 vj=0.7373 isr=9.6750u nr=1.2170 bv=30 trs1=-16.504u iave=30 vpk=30 mfg=rohm type=schottky
+.model rbr30t40anz d is=1.0182u n=0.8850 rs=6.7802m ikf=141.25m xti=2.0 eg=0.682 cjo=1.2500n m=0.4819 vj=0.5424 isr=6.4063u nr=1.1006 bv=40 trs1=2.2739m iave=30 vpk=40 mfg=rohm type=schottky
+.model rbr30t60anz d is=436.20n n=0.9025 rs=9.1379m ikf=141.25m xti=2.0 eg=0.684 cjo=1.0700n m=0.5377 vj=0.7832 isr=11.219u nr=1.1095 bv=60 trs1=3.1298m iave=30 vpk=60 mfg=rohm type=schottky
+.model rbr3l30a d is=398.65n n=996.4m rs=33.832m ikf=2.962 xti=2 eg=.69 cjo=219.88p m=475.48m vj=504.21m isr=859.74n nr=1.27 bv=30 tt=14.107n trs1=4.1m iave=3 vpk=30 mfg=rohm type=schottky
+.model rbr3l30b d is=815.41n n=1.018 rs=26.044m ikf=379.6 xti=2 eg=.69 cjo=354.14p m=506.58m vj=503.07m isr=989.75n nr=1.24 bv=30 tt=10.996n trs1=4.96m iave=3 vpk=30 mfg=rohm type=schottky
+.model rbr3l40a d is=405.25n n=1.004 rs=65.421m ikf=96.1 xti=2 eg=.67 cjo=180.36p m=485.18m vj=503.85m isr=592.46n nr=1.25 bv=40 tt=16.537n trs1=4.8m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3l40b d is=1.3562u n=1.066 rs=39.785m ikf=9.736 xti=2 eg=.66 cjo=280.76p m=504.01m vj=507.82m isr=743.42n nr=1.25 bv=40 tt=11.077n trs1=4.96m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3l40c d is=2.9865u n=1.093 rs=18.719m ikf=1.055 xti=2 eg=.67 cjo=467p m=509.74m vj=511.41m isr=996.97n nr=1.2 bv=40 tt=8.2n trs1=2m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3l60a d is=713.55n n=1.024 rs=60.22m ikf=2.406 xti=2 eg=.67 cjo=244.71p m=508.6m vj=500.55m isr=1.213u nr=1.25 bv=60 tt=3.898n trs1=4.76m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3l60b d is=984.24n n=1.006 rs=35.301m ikf=3.799 xti=2 eg=.69 cjo=411p m=520.67m vj=513.5m isr=1.4257u nr=1.21 bv=60 tt=8.1224n trs1=6.16m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3lam30a d is=178.13n n=0.9452 rs=26.875m ikf=141.25m xti=2.0 eg=0.692 cjo=240.13p m=0.5082 vj=0.5000 isr=997.92n nr=1.1769 bv=30 trs1=-836.97u iave=3 vpk=30 mfg=rohm type=schottky
+.model rbr3lam30b d is=715.41n n=1.0181 rs=26.044m ikf=379.63 xti=2 eg=.69 cjo=354.14p m=.50858 vj=.50307 isr=1.6897u nr=1.2400 bv=30 trs1=4.9600m iave=3 vpk=30 mfg=rohm type=schottky
+.model rbr3lam40a d is=211.23n n=0.9798 rs=47.276m ikf=141.25m xti=2.0 eg=0.702 cjo=191.90p m=0.4999 vj=0.5000 isr=594.78n nr=1.1660 bv=40 trs1=545.76u iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3lam40b d is=.20592u n=.95522 rs=36.987m ikf=1.8438 xti=2.0000 eg=.68000 cjo=284.30p m=.50544 vj=.50003 isr=.95441u nr=1.1567 bv=40 trs1=-0.9321m tikf=10.000n iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3lam40c d is=495.05n n=0.9579 rs=15.881m ikf=141.25m xti=2.0 eg=0.681 cjo=474.13p m=0.5151 vj=0.5000 isr=1.4466u nr=1.1536 bv=40 trs1=1.4282m tikf=3.9478m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3lam60a d is=364.21n n=0.9623 rs=46.817m ikf=141.25m xti=2.0 eg=0.708 cjo=244.70p m=0.5161 vj=0.5000 isr=1.6055u nr=1.1962 bv=60 trs1=610.36u iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3lam60b d is=598.15n n=0.9499 rs=27.419m ikf=141.25m xti=2.0 eg=0.703 cjo=412.30p m=0.5212 vj=0.5000 isr=2.7477u nr=1.1654 bv=60 trs1=-573.27u iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3m30a d is=1.0122u n=1.021 rs=22.832m ikf=216.4 xti=2 eg=.68 cjo=414.2p m=491.58m vj=502.17m isr=1.437u nr=1.25 bv=30 tt=10.416n trs1=4.96m iave=3 vpk=30 mfg=rohm type=schottky
+.model rbr3m40a d is=1.3562u n=1.066 rs=39.785m ikf=9.736 xti=2 eg=.66 cjo=280.76p m=504.01m vj=507.82m isr=743.42n nr=1.25 bv=40 tt=11.077n trs1=4.96m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3m40b d is=1.024u n=1.023 rs=32.339m ikf=3.172 xti=2 eg=.65 cjo=325.4p m=501.22m vj=502.42m isr=943.02n nr=1.21 bv=40 tt=12.843n trs1=5.46m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3m60a d is=713.55n n=1.024 rs=60.22m ikf=2.406 xti=2 eg=.67 cjo=244.71p m=508.6m vj=500.55m isr=1.213u nr=1.25 bv=60 tt=3.898n trs1=4.76m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3m60b d is=610.09n n=999.5m rs=47.773m ikf=5.357 xti=2 eg=.69 cjo=305.3p m=514.71m vj=503.68m isr=1.2499u nr=1.22 bv=60 tt=10.65n trs1=5.76m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3mm30a-ltspice d is=1.0122u n=1.0205 rs=22.832m ikf=216.35 xti=2 eg=.68 cjo=414.20p m=.49158 vj=.50217 isr=1.4370u nr=1.2500 bv=30 trs1=4.9600m iave=3 vpk=30 mfg=rohm type=schottky
+.model rbr3mm30a-mpkopec d is=1.0122u n=1.021 rs=22.832m ikf=216.4 xti=2 eg=.68 cjo=414.2p m=491.58m vj=502.17m isr=1.437u nr=1.25 bv=30 tt=10.416n trs1=4.96m iave=3 vpk=30 mfg=rohm type=schottky
+.model rbr3mm40a-ltspice d is=953.54n n=1.0266 rs=36.607m ikf=2.6167 xti=2 eg=.66 cjo=280.89p m=.51399 vj=.50146 isr=1.0595u nr=1.1500 bv=40 trs1=5.5000m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3mm40a-mpkopec d is=1.3562u n=1.066 rs=39.785m ikf=9.736 xti=2 eg=.66 cjo=280.76p m=504.01m vj=507.82m isr=743.42n nr=1.25 bv=40 tt=11.077n trs1=4.96m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3mm40b-ltspice d is=1.0240u n=1.0226 rs=32.339m ikf=3.1720 xti=2 eg=.65 cjo=325.40p m=.50122 vj=.50242 isr=943.02n nr=1.2100 bv=40 trs1=5.4600m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3mm40b-mpkopec d is=1.024u n=1.023 rs=32.339m ikf=3.172 xti=2 eg=.65 cjo=325.4p m=501.22m vj=502.42m isr=943.02n nr=1.21 bv=40 tt=12.843n trs1=5.46m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbr3mm60a-ltspice d is=713.55n n=1.0236 rs=60.220m ikf=2.4062 xti=2 eg=.67 cjo=244.71p m=.5086 vj=.50055 isr=1.2130u nr=1.2500 bv=60 trs1=4.7600m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3mm60a-mpkopec d is=713.55n n=1.024 rs=60.22m ikf=2.406 xti=2 eg=.67 cjo=244.71p m=508.6m vj=500.55m isr=1.213u nr=1.25 bv=60 tt=3.898n trs1=4.76m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3mm60b-ltspice d is=610.09n n=0.9995 rs=47.773m ikf=5.3565 xti=2 eg=.69 cjo=305.30p m=.51471 vj=.50368 isr=2.2499u nr=1.2200 bv=60 trs1=5.7600m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr3mm60b-mpkopec d is=610.09n n=999.5m rs=47.773m ikf=5.357 xti=2 eg=.69 cjo=305.3p m=514.71m vj=503.68m isr=1.2499u nr=1.22 bv=60 tt=10.65n trs1=5.76m iave=3 vpk=60 mfg=rohm type=schottky
+.model rbr40ns30a d is=1.0341u n=0.8185 rs=3.7552m ikf=141.25m xti=2.0 eg=0.676 cjo=3.4300n m=0.5308 vj=0.5031 isr=16.025u nr=1.2120 bv=30 trs1=1.8511m iave=40 vpk=30 mfg=rohm type=schottky
+.model rbr40ns40a d is=1.5256u n=0.8552 rs=3.9921m ikf=141.25m xti=2.0 eg=0.662 cjo=2.7200n m=0.5283 vj=0.5000 isr=9.6374u nr=1.1831 bv=40 trs1=2.0785m tikf=8.3064m iave=40 vpk=40 mfg=rohm type=schottky
+.model rbr40ns60a d is=2.6325u n=0.8773 rs=5.1539m ikf=141.25m xti=2.0 eg=0.676 cjo=2.3300n m=0.5232 vj=0.5000 isr=17.534u nr=1.2062 bv=60 trs1=1.6630m tikf=7.4165m iave=40 vpk=60 mfg=rohm type=schottky
+.model rbr5l30a d is=1.3449u n=1.013 rs=17.519m ikf=514.6 xti=2 eg=.68 cjo=593.6p m=518.69m vj=508.65m isr=1.643u nr=1.26 bv=30 tt=10.46n trs1=4.8m iave=5 vpk=30 mfg=rohm type=schottky
+.model rbr5l30b d is=3.5971u n=1.043 rs=9.4332m ikf=58.03 xti=2 eg=.69 cjo=1.1914n m=527.46m vj=511.47m isr=3.0539u nr=1.2 bv=30 tt=8.5n trs1=4m iave=5 vpk=30 mfg=rohm type=schottky
+.model rbr5l40a d is=2.7843u n=1.022 rs=15.197m ikf=490.8 xti=2 eg=.65 cjo=876.13p m=502.38m vj=504.18m isr=3.6557u nr=1.2 bv=40 tt=9.9895n trs1=5.15m iave=5 vpk=40 mfg=rohm type=schottky
+.model rbr5l60a d is=2.521u n=1.024 rs=17.935m ikf=6.901 xti=2 eg=.67 cjo=840p m=528.52m vj=508.57m isr=1.7286u nr=1.1 bv=60 tt=8.5n trs1=2m iave=5 vpk=60 mfg=rohm type=schottky
+.model rbr5lam30a d is=965.35n n=1.0110 rs=9.6969m ikf=141.25m xti=2.0 eg=0.704 cjo=592.03p m=0.5276 vj=0.5000 isr=2.0859u nr=1.1776 bv=30 trs1=96.653u iave=5 vpk=30 mfg=rohm type=schottky
+.model rbr5lam30b d is=876.86n n=0.9238 rs=3.3251m ikf=141.25m xti=2.0 eg=0.696 cjo=1.1933n m=0.5315 vj=0.5000 isr=4.7789u nr=1.1179 bv=30 trs1=4.9692m tikf=1.8531m iave=5 vpk=30 mfg=rohm type=schottky
+.model rbr5lam40a d is=995.78n n=0.9317 rs=8.4824m ikf=141.25m xti=2.0 eg=0.661 cjo=940.30p m=0.5255 vj=0.5000 isr=3.3083u nr=1.2370 bv=40 trs1=1.6797m tikf=5.4324m iave=5 vpk=40 mfg=rohm type=schottky
+.model rbr5lam60a d is=648.10n n=.94915 rs=16.414m ikf=1.8382 xti=2 eg=.69 cjo=839.22p m=.53961 vj=.50407 isr=6.2071u nr=1.2000 bv=60 trs1=0.0060 iave=5 vpk=60 mfg=rohm type=schottky
+.model rbs1lam40a d is=11.783u n=.97929 rs=55.550m ikf=.60626 xti=2 eg=.57 cjo=210.87p m=.52156 vj=.50190 isr=42.324u nr=1.1000 bv=40.000 trs1=6.0000m iave=1 vpk=40 mfg=rohm type=schottky
+.model rbs1mm40a d is=11.783u n=.97929 rs=55.550m ikf=.60626 xti=2 eg=.57 cjo=210.87p m=.52156 vj=.50190 isr=42.324u nr=1.1000 bv=40.000 trs1=6.0000m iave=1 vpk=40 mfg=rohm type=schottky
+.model rbs2lam40a d is=22.034u n=1.0154 rs=34.984m ikf=141.25m xti=2.0 eg=0.573 cjo=210.50p m=0.5355 vj=0.5000 isr=44.732u nr=1.0964 bv=40 trs1=5.4972m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbs2lam40b d is=1.2383u n=0.8914 rs=46.202m ikf=386.20 xti=2 eg=.53 cjo=310.46p m=.52532 vj=.50121 isr=84.154u nr=1.1000 bv=40 trs1=5.6000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbs2lam40c d is=46.512u n=1.0464 rs=28.458m ikf=66.533 xti=2 eg=.57 cjo=518.25p m=.53389 vj=.50905 isr=110.34u nr=1.1500 bv=40.000 trs1=5.8000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbs2mm40a d is=11.783u n=.97929 rs=55.550m ikf=.60626 xti=2 eg=.57 cjo=210.87p m=.52156 vj=.50190 isr=42.324u nr=1.1000 bv=40.000 trs1=6.0000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbs2mm40b d is=1.2383u n=0.8914 rs=46.202m ikf=386.20 xti=2 eg=.53 cjo=310.46p m=.52532 vj=.50121 isr=84.154u nr=1.1000 bv=40 trs1=5.6000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbs2mm40c d is=24.207u n=1.2293 rs=37.294m ikf=284.08 xti=2 eg=.53 cjo=389.67p m=.52985 vj=.50135 isr=100.73u nr=1.0500 bv=40 trs1=4.2000m iave=2 vpk=40 mfg=rohm type=schottky
+.model rbs3lam40a d is=28.146u n=0.9710 rs=36.291m ikf=141.25m xti=2.0 eg=0.559 cjo=314.90p m=0.5479 vj=0.5000 isr=66.178u nr=1.0385 bv=40 trs1=2.2522m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbs3lam40b d is=24.207u n=1.2693 rs=37.294m ikf=84.081 xti=2.0 eg=0.5291 cjo=387.30p m=0.5269 vj=0.5012 isr=104.79u nr=1.032 bv=40 trs1=1.1200m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbs3lam40c d is=24.207u n=1.2693 rs=28.294m ikf=84.081 xti=2.0 eg=0.5291 cjo=497.50p m=0.5193 vj=0.5000 isr=134.79u nr=1.042 bv=40 trs1=1.1200m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbs3mm40a d is=1.2383u n=0.8914 rs=41.202m ikf=38.621 xti=2.0 eg=0.558 cjo=286.46p m=0.5053 vj=0.5012 isr=89.854u nr=1.103 bv=40 trs1=0.3751m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbs3mm40b d is=24.207u n=1.2693 rs=37.294m ikf=84.081 xti=2.0 eg=0.5291 cjo=387.30p m=0.5269 vj=0.5012 isr=104.79u nr=1.032 bv=40 trs1=1.1200m iave=3 vpk=40 mfg=rohm type=schottky
+.model rbs5lam40a d is=24.207u n=1.2693 rs=28.294m ikf=84.081 xti=2.0 eg=0.5291 cjo=497.50p m=0.5193 vj=0.5000 isr=134.79u nr=1.042 bv=40 trs1=1.1200m iave=5 vpk=40 mfg=rohm type=schottky
+.model rsx051va-30 d is=2.4597u n=865.97m rs=60.089m ikf=34.192m xti=2 eg=.57 cjo=157.54p m=588.44m vj=734.12m isr=4.5364u nr=1.2 bv=30 tt=21.703n iave=0.5 vpk=30 mfg=rohm type=schottky
+.model rsx051vam30 d is=3.5764u n=0.9921 rs=90.369m ikf=1.0000 xti=2.0 eg=0.59 cjo=162.80p m=0.5219 vj=0.5000 isr=5.7613u nr=1.1997 bv=30 trs1=3.9265m tikf=9.9995n iave=0.5 vpk=30 mfg=rohm type=schottky
+.model rsx071va-30 d is=2.4597u n=865.97m rs=60.089m ikf=34.192m xti=2 eg=.57 cjo=157.54p m=588.44m vj=734.12m isr=4.5364u nr=1.2 bv=30 tt=21.703n iave=0.7 vpk=30 mfg=rohm type=schottky
+.model rsx071vam30 d is=3.7111u n=.99863 rs=78.951m ikf=.35916 xti=2.0000 eg=.60000 cjo=162.77p m=.52181 vj=.50003 isr=5.1504u nr=1.1531 bv=30 trs1=1.2194m tikf=9.9997n iave=0.7 vpk=30 mfg=rohm type=schottky
+.model rsx071vym-30 d is=2.46u n=866m rs=60.09m ikf=34.19m xti=2 eg=570m cjo=157.5p m=588.4m vj=734.1m isr=4.536u nr=1.2 bv=30 iave=0.0007 vpk=30 mfg=rohm type=schottky
+.model rsx101m-30 d is=598.08n n=668.08m rs=28.158m ikf=10.167m xti=2 eg=.57 cjo=300.1p m=539.65m vj=737.69m isr=10.432u nr=1.4 bv=30 tt=10.605n iave=1 vpk=30 mfg=rohm type=schottky
+.model rsx101mm-30-ltspice d is=598.08n n=.66808 rs=44.158m ikf=10.167m xti=2 eg=.56 cjo=300.10p m=.50965 vj=.53769 isr=10.432u nr=1.1000 bv=30 trs1=0.7000m iave=1 vpk=30 mfg=rohm type=schottky
+.model rsx101mm-30-mpkopec d is=598.08n n=668.08m rs=28.158m ikf=10.167m xti=2 eg=.57 cjo=300.1p m=539.65m vj=737.69m isr=10.432u nr=1.4 bv=30 tt=10.605n iave=1 vpk=30 mfg=rohm type=schottky
+.model rsx101va-30 d is=2.4597u n=865.97m rs=60.089m ikf=34.192m xti=2 eg=.57 cjo=157.54p m=588.44m vj=734.12m isr=4.5364u nr=1.2 bv=30 tt=21.703n iave=1 vpk=30 mfg=rohm type=schottky
+.model rsx101vam30 d is=3.2176u n=1.0452 rs=118.60m ikf=.30736 xti=2 eg=.46 cjo=155.00p m=.52841 vj=.50899 isr=4.6431u nr=0.9500 bv=30 trs1=-2.800m iave=1 vpk=30 mfg=rohm type=schottky
+.model rsx101vym30 d is=2.4597u n=865.97m rs=60.089m ikf=34.192m xti=2 eg=.57 cjo=157.54p m=588.44m vj=734.12m isr=4.5364u nr=1.2 bv=30 tt=21.703n iave=1 vpk=30 mfg=rohm type=schottky
+.model rsx201l-30 d is=16.537u n=1.028 rs=155.28u ikf=171.97m xti=2 eg=.5 cjo=497.07p m=535.22m vj=706.14m isr=658.28n nr=1.3 bv=30 tt=14.305n iave=2 vpk=30 mfg=rohm type=schottky
+.model rsx201lam30 d is=7.9939u n=0.9649 rs=14.234m ikf=141.25m xti=2.0 eg=0.581 cjo=563.27p m=0.4895 vj=0.5000 isr=7.9609u nr=1.085 bv=30 trs1=-0.4745m tikf=9.6940m iave=2 vpk=30 mfg=rohm type=schottky
+.model rsx201va-30 d is=1.0082u n=1.104 rs=61.09m ikf=3.279 xti=2 eg=.57 cjo=234.59p m=486.38m vj=551.22m isr=9.7512u nr=1 bv=50 tt=11.42n trs1=4m iave=1.5 vpk=30 mfg=rohm type=schottky
+.model rsx201vam30 d is=4.2082u n=1.0435 rs=55.729m ikf=3.2785 xti=2 eg=.59 cjo=234.59p m=.52838 vj=.75122 isr=10.751u nr=1.1000 bv=30 trs1=0.005 iave=1.5 vpk=30 mfg=rohm type=schottky
+.model rsx201vym30 d is=1.0082u n=1.104 rs=61.09m ikf=3.279 xti=2 eg=.57 cjo=234.59p m=486.38m vj=551.22m isr=9.7512u nr=1 bv=50 tt=11.42n trs1=4m iave=1.5 vpk=30 mfg=rohm type=schottky
+.model rsx205l-30 d is=18.434u n=1.052 rs=41.436m ikf=1.745 xti=2 eg=.57 cjo=300p m=462.81m vj=505.98m isr=10.58u nr=1.4 bv=30 tt=9.8n trs1=4m iave=2 vpk=30 mfg=rohm type=schottky
+.model rsx205lam30 d is=18.434u n=1.0515 rs=41.436m ikf=1.7454 xti=2 eg=.57 cjo=300.00p m=.46281 vj=.50598 isr=10.580u nr=1.4000 bv=30 trs1=0.004 iave=2 vpk=30 mfg=rohm type=schottky
+.model rsx301l-30 d is=18.292u n=1.01 rs=8.7169m ikf=547.15m xti=2 eg=.67 cjo=774.17p m=511.9m vj=741.22m isr=6.6348u bv=30 tt=3n trs1=10m tikf=-0.004 iave=3 vpk=30 mfg=rohm type=schottky
+.model rsx301lam30 d is=23.878u n=1.0952 rs=16.9740m ikf=14.125m xti=2.0 eg=0.565 cjo=997.00p m=0.5205 vj=0.5 isr=9.4581u nr=0.9203 bv=30 trs1=-0.2353m iave=3 vpk=30 mfg=rohm type=schottky
+.model rsx501lam20 d is=27.122u n=0.9350 rs=11.638m ikf=541.25m xti=2.0 eg=0.574 cjo=1.1420n m=0.5475 vj=0.5000 isr=26.855u nr=1.1053 bv=25 trs1=-192.95u iave=5 vpk=25 mfg=rohm type=schottky
+.model s100 d is=5.696e-08 n=1.5 rs=8.2030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=100 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=100 mfg=fairchild type=schottky
+.model s310 d is=5.096e-05 n=1.00 rs=8.2030m ikf=1.2287e-5 cjo=6.0854e-10 m=0.5017 vj=0.3905 bv=100 ibv=2.5e-4 eg=0.98 iave=3 vpk=100 mfg=fairchild type=schottky
+.model sbl4045pt d is=10.9u rs=1.53m bv=45.0 ibv=1.00m cjo=1.33n m=0.333 n=1.08 tt=14.4n vpk=45v iave=40a mfg=diodesinc type=schottky
+.model sms1546 d is=0.3u rs=4 n=1.04 tt=10p cjo=0.38p m=0.36 eg=0.69 xti=2 fc=0.5 bv=3 ibv=10u vj=0.51 iave=50m vpk=2 mfg=skyworks_solutions type=schottky
+.model sms7621 d is=40n rs=12 n=1.05 tt=10p cjo=0.1p m=0.35 eg=0.69 xti=2 fc=0.5 bv=3 ibv=10u vj=0.51 iave=50m vpk=2 mfg=skyworks_solutions type=schottky
+.model sms7630 d is=5u rs=20 n=1.05 tt=10p cjo=0.14p m=0.4 eg=0.69 xti=2 fc=0.5 bv=2 ibv=100u vj=0.34 iave=50m vpk=1 mfg=skyworks_solutions type=schottky
+.model ss12 d is=8.696e-05 n=1.5 rs=2.2030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=20 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=20 mfg=fairchild type=schottky
+.model ss13 d is=8.696e-05 n=1.5 rs=2.2030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=30 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=30 mfg=fairchild type=schottky
+.model ss14 d is=8.696e-05 n=1.5 rs=2.2030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=40 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=40 mfg=fairchild type=schottky
+.model ss15 d is=2.696e-07 n=1.5 rs=5.6030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=50 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=50 mfg=fairchild type=schottky
+.model ss16 d is=2.696e-07 n=1.5 rs=5.6030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=60 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=60 mfg=fairchild type=schottky
+.model ss18 d is=5.696e-08 n=1.5 rs=8.2030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=80 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=80 mfg=fairchild type=schottky
+.model ss19 d is=5.696e-08 n=1.5 rs=8.2030e-2 cjo=2.2854e-10 m=0.4517 vj=0.4905 bv=90 ibv=2.5e-4 eg=0.68 tt=1.0e-8 iave=1 vpk=90 mfg=fairchild type=schottky
+.model ss24 d is=.4ma rs=.016 n=2.1 cjo=800p eg=.69 xti=2 iave=2 vpk=40 mfg=fairchild type=schottky
+.model ss32 d is=8.096e-04 n=1.00 rs=8.2030m ikf=1.8287e-5 cjo=1.0854n m=0.4517 vj=0.3905 bv=20 ibv=2.5e-4 eg=0.68 iave=3 vpk=20 mfg=fairchild type=schottky
+.model ss33 d is=8.096e-04 n=1.00 rs=8.2030m ikf=1.8287e-5 cjo=1.0854n m=0.4517 vj=0.3905 bv=30 ibv=2.5e-4 eg=0.68 iave=3 vpk=30 mfg=fairchild type=schottky
+.model ss34 d is=8.096e-04 n=1.00 rs=8.2030m ikf=1.8287e-5 cjo=1.0854n m=0.4517 vj=0.3905 bv=40 ibv=2.5e-4 eg=0.68 iave=3 vpk=40 mfg=fairchild type=schottky
+.model ss35 d is=5.096e-05 n=1.00 rs=8.2030m ikf=1.2287e-5 cjo=6.0854e-10 m=0.5017 vj=0.3905 bv=50 ibv=2.5e-4 eg=0.98 iave=3 vpk=50 mfg=fairchild type=schottky
+.model ss36 d is=5.096e-05 n=1.00 rs=8.2030m ikf=1.2287e-5 cjo=6.0854e-10 m=0.5017 vj=0.3905 bv=60 ibv=2.5e-4 eg=0.98 iave=3 vpk=60 mfg=fairchild type=schottky
+.model ss38 d is=5.096e-05 n=1.00 rs=8.2030m ikf=1.2287e-5 cjo=6.0854e-10 m=0.5017 vj=0.3905 bv=80 ibv=2.5e-4 eg=0.98 iave=3 vpk=80 mfg=fairchild type=schottky
+.model ss39 d is=5.096e-05 n=1.00 rs=8.2030m ikf=1.2287e-5 cjo=6.0854e-10 m=0.5017 vj=0.3905 bv=90 ibv=2.5e-4 eg=0.98 iave=3 vpk=90 mfg=fairchild type=schottky
+.model ss3p5 d is=120u rs=40m n=2.05 cjo=200p vj=700m m=.45 iave=3 vpk=50 mfg=fairchild type=schottky
+.model stps24045tv d is=7.9027u n=.46045 rs=699.11u ikf=1.7498u eg=.69 xti=2 cjo=14.799n m=.50222 vj=.49431 isr=17.76u fc=0.5 nr=2.1502 type=schottky
+.model upsc600 d is=2p rs=.33 n=1.5 cjo=50p m=.3 iave=1 vpk=600 mfg=microsemi type=schottky
+.model upsc600-ltwiki d is=2p rs=.33 n=1.5 cjo=50p m=.3 iave=1 vpk=600 mfg=microsemi type=sic_schottky
+.model upsc600-volval d is=2p rs=.33 n=1.5 cjo=50p m=.3 iave=1 vpk=600 mfg=microsemi type=sic_schottky
+.model zhcs1000 d is=1.6e-7 n=.59 rs=137m ikf=2.5m xti=2 eg=.58 cjo=184.9p m=.5231 vj=.3905 fc=.5 bv=60 ibv=100u isr=4u nr=1.8 iave=1 vpk=60 mfg=zetex type=schottky
+.model zlls1000 d is=750n rs=.13 n=1 cjo=76p m=.3 eg=.69 iave=1 vpk=40 mfg=zetex type=schottky
+.model zlls2000 d is=2u rs=.06 n=1 cjo=182p m=.3 eg=.69 iave=1 vpk=40 mfg=zetex type=schottky
+.model zlls350 d is=14e-8 n=1.03 isr=90n nr=2 ikf=0.043 bv=56 ibv=0.1m rs=1.2 tt=1n cjo=13.5p vj=0.6 m=0.33 eg=0.63 xti=2 trs1=4m iave=650m vpk=40 mfg=zetex type=schottky

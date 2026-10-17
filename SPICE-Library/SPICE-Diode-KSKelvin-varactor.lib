@@ -1,0 +1,44 @@
+* SPICE model library – diode models – keyword "varactor"
+* Source: SPICE-Diode-KSKelvin.lib
+*
+.model bb112 d is=1e-14 rs=0.0011 cjo=2.324n vj=0.75 tt=5n m=0.9 bv=100 xti=3 fc=0.5 ibv=0.0001 mfg=nxp type=varactor
+.model bb119 d is=1.122e-17 rs=0.0011 cjo=4.163e-11 vj=0.75 tt=5n m=0.3333 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb130 d is=1e-14 rs=0.0011 cjo=5.563e-11 vj=0.75 tt=5n m=0.3333 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb133 d bv=30 cjo=53.493515p ibv=100p is=10f m=1 rs=1m vj=1.931292 type=varactor
+.model bb204b d is=1e-14 rs=0.0011 cjo=7.783e-11 vj=0.75 tt=5n m=0.4705 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb204g d is=1e-14 rs=0.0011 cjo=8.431e-11 vj=0.75 tt=5n m=0.4711 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb212 d is=1e-14 rs=0.0011 cjo=7.202e-10 vj=.10 tt=5n m=0.9 bv=100 xti=3 fc=0.5 ibv=0.0001 mfg=nxp type=varactor
+.model bb215 d is=1e-14 rs=0.0011 cjo=3.249e-11 vj=0.75 tt=5n m=0.7646 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb219 d is=1e-14 rs=0.0011 cjo=6.351e-11 vj=0.75 tt=5n m=0.8465 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb240 d is=1e-14 rs=0.0011 cjo=2.479e-08 vj=0.75 tt=5n m=0.77 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb241 d is=1e-14 rs=0.0011 cjo=1.049e-10 vj=0.75 tt=5n m=0.9987 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb249 d is=1e-14 rs=0.0011 cjo=8.387e-11 vj=0.75 tt=5n m=0.8022 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb405b d is=1e-14 rs=0.0011 cjo=2.673e-11 vj=1.922 tt=5n m=0.9446 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb417 d is=1e-14 rs=0.0011 cjo=5.329e-11 vj=0.75 tt=5n m=0.9343 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb515 d is=1e-14 rs=0.0011 cjo=3.412e-11 vj=0.75 tt=5n m=0.7712 bv=30.36 n=1 eg=1.11 xti=3 fc=0.5 ibv=10 tnom=27 mfg=nxp type=varactor
+.model bb535/sie d is=1.75f n=1.043 rs=60m xti=3 eg=1.11 cjo=25.31p m=1.064 vj=3.022 fc=.5 bv=32 ibv=100n tt=120n type=varactor
+.model bb535sie d is=1.75f n=1.043 rs=60m xti=3 eg=1.11 cjo=25.31p m=1.064 vj=3.022 fc=.5 bv=32 ibv=100n tt=120n type=varactor
+.model bb545/sie d is=110.11f rs=0.24545 n=1.2034 xti=3 eg=1.11 cjo=38.264p m=0.87698 vj=0.91294 fc=0 bv=30 ibv=5u tt=80n type=varactor
+.model bb545sie d is=110.11f rs=0.24545 n=1.2034 xti=3 eg=1.11 cjo=38.264p m=0.87698 vj=0.91294 fc=0 bv=30 ibv=5u tt=80n type=varactor
+.model bb619 d is=1e-14 rs=0.0011 cjo=8.244e-11 vj=0.75 tt=5n m=0.9376 bv=30.36 n=1 eg=1.11 xti=3 fc=0.5 ibv=10 tnom=27 mfg=nxp type=varactor
+.model bb620 d is=1e-14 rs=0.0011 cjo=1.756e-10 vj=0.75 tt=5n m=0.9 bv=30.36 n=1 eg=1.11 xti=3 fc=0.5 ibv=10 tnom=27 mfg=nxp type=varactor
+.model bb639/sie d is=4f n=1.035 rs=.12 xti=3 eg=1.11 cjo=55.88p m=1.286 vj=2.922 fc=.5 bv=32 ibv=100n tt=160n type=varactor
+.model bb639sie d is=4f n=1.035 rs=.12 xti=3 eg=1.11 cjo=55.88p m=1.286 vj=2.922 fc=.5 bv=32 ibv=100n tt=160n type=varactor
+.model bb804 d is=1e-14 rs=0.0011 cjo=6.9e-11 vj=0.75 tt=5n m=0.3333 bv=30.36 n=1 eg=1.11 xti=3 fc=0.5 ibv=10 tnom=27 mfg=nxp type=varactor
+.model bb804/sie d is=48f n=1.13 rs=.18 xti=3 eg=1.11 cjo=80.6p m=.47 vj=.8 fc=.5 bv=20 ibv=.1u tt=137n type=varactor
+.model bb804sie d is=48f n=1.13 rs=.18 xti=3 eg=1.11 cjo=80.6p m=.47 vj=.8 fc=.5 bv=20 ibv=.1u tt=137n type=varactor
+.model bb809 d is=1e-14 rs=0.0011 cjo=8.387e-11 vj=0.75 tt=5n m=0.8022 bv=30.36 n=1 eg=1.11 xti=3 fc=0.5 ibv=10 tnom=27 mfg=nxp type=varactor
+.model bb811 d is=1e-14 rs=0.0011 cjo=1.687e-11 vj=0.75 tt=5n m=0.7681 bv=30.36 n=1 eg=1.11 xti=3 fc=0.5 ibv=10 tnom=27 mfg=nxp type=varactor
+.model bb814/sie d is=7f n=1.012 rs=.18 xti=3 eg=1.11 cjo=83.9p m=.775 vj=1.6 fc=.5 bv=20 ibv=100n tt=137n type=varactor
+.model bb814sie d is=7f n=1.012 rs=.18 xti=3 eg=1.11 cjo=83.9p m=.775 vj=1.6 fc=.5 bv=20 ibv=100n tt=137n type=varactor
+.model bb833/sie d is=42.156f n=1.1718 rs=.10785 xti=3 eg=1.11 cjo=29.033p m=0.90022 vj=.39089 fc=.5 bv=32 ibv=5u tt=120n type=varactor
+.model bb833sie d is=42.156f n=1.1718 rs=.10785 xti=3 eg=1.11 cjo=29.033p m=0.90022 vj=.39089 fc=.5 bv=32 ibv=5u tt=120n type=varactor
+.model bb909a d is=1e-14 rs=0.0011 cjo=3.725e-11 vj=10 tt=5n m=0.9 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb909b d is=1e-14 rs=0.0011 cjo=4.028e-11 vj=10 tt=5n m=0.9 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb910 d is=1e-14 rs=0.0011 cjo=5.92e-11 vj=0.75 tt=5n m=0.8679 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb911 d is=1e-14 rs=0.0011 cjo=1.049e-10 vj=0.75 tt=5n m=0.9987 bv=100 n=1 eg=1.11 xti=3 fc=0.5 ibv=0.0001 tnom=27 mfg=nxp type=varactor
+.model bb914/sie d is=10.00f n=1.020 rs=.28 ikf=0 xti=3 eg=1.11 cjo=75.54p m=1.161 vj=3.445 fc=.5 isr=100p nr=2 bv=20 ibv=100n tt=137.0n type=varactor
+.model bb914sie d is=10.00f n=1.020 rs=.28 ikf=0 xti=3 eg=1.11 cjo=75.54p m=1.161 vj=3.445 fc=.5 isr=100p nr=2 bv=20 ibv=100n tt=137.0n type=varactor
+.model kv1471 d is=.8p rs=.8 cjo=162p m=1.225 vj=0.408 vpk=18 mfg=toko type=varactor
+.model mv209 d is=.43p rs=1 bv=35 ibv=10u isr=4.4p cjo=125p vj=.75 m=.908 vpk=30 mfg=motorola type=varactor
+.model mv2201 d is=1.365p rs=1 cjo=14.93p m=.4261 vj=.75 isr=16.02p nr=2 bv=25 ibv=10u vpk=25 mfg=onsemi type=varactor

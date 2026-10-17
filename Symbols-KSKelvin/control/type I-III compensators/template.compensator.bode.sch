@@ -50,11 +50,28 @@
       «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
   »
+  «component (2400,2900) 2 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (130,0) 1 110 0 0x1000000 -1 -1 "V1"»
+      «text (-130,0) 1 109 0 0x1000000 -1 -1 "AC 1"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
   «component (1900,700) 0 0
     «symbol Type-III-OpampRR-RC
       «type: X»
-      «description: Type III Compensator (Opamp)»
-      «library file: |.subckt Type-III-OpampRR-RC REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC1 N04 Ctrl C1 IC=0\nR2 N01 N04 R2\nC2 N01 Ctrl C2 IC=0\nR3 FB N02 R3\nC3 N02 N01 C3 IC=0\nÃ1 Vdd Vss N03 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N03 0 1\n.param fp0=1/2/pi/C2/(R1*R3/(R1+R3))\n.param fz1=1/2/pi/C1/R2\n.param fz2=1/2/pi/C3/(R1+R3)\n.param fp1=1/2/pi/C1/C2/R2*(C1+C2)\n.param fp2=1/2/pi/C3/R3\n.if (Verbose)\n.display Type-III: fp0='fp0',fz1='fz1',fz2='fz2',fp1='fp1',fp2='fp2',RB/(R1+RB)='RB/(R1+RB)'\n.option concise\n.endif\n.ends Type-III-OpampRR-RC»
+      «description: Type III Compensator (Opamp, RC values)»
+      «library file: |.subckt Type-III-OpampRR-RC REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC1 N04 Ctrl C1 IC=0\nR2 N01 N04 R2\nC2 N01 Ctrl C2 IC=0\nR3 FB N02 R3\nC3 N02 N01 C3 IC=0\nÃ1 Vdd Vss N03 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N03 0 1\n.param fp0=1/2/pi/C2/(R1*R3/(R1+R3))\n.param fz1=1/2/pi/C1/R2\n.param fz2=1/2/pi/C3/(R1+R3)\n.param fp1=1/2/pi/C1/C2/R2*(C1+C2)\n.param fp2=1/2/pi/C3/R3\n.if (Verbose)\n.display Type-III: fp0='fp0',fz1='fz1',fz2='fz2',fp1='fp1',fp2='fp2',RB/(R1+RB)='RB/(R1+RB)'\n.display Type-III: Target gain at fz1 (g=R2/R1)='R2/R1'='20*log10(R2/R1)'dB\n.option concise\n.endif\n.ends Type-III-OpampRR-RC»
       «shorted pins: false»
       «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
       «line (100,-150) (100,-250) 0 0 0x1000000 -1 -1»
@@ -120,23 +137,6 @@
       «pin (900,0) (0,0) 1 15 0 0x0 -1 "Ctrl"»
       «pin (200,300) (0,0) 1 0 0 0x0 -1 "Vdd"»
       «pin (200,-300) (0,0) 1 0 0 0x0 -1 "Vss"»
-    »
-  »
-  «component (2400,2900) 2 0
-    «symbol V
-      «type: V»
-      «description: Independent Voltage Source»
-      «shorted pins: false»
-      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
-      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
-      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
-      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
-      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
-      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
-      «text (130,0) 1 110 0 0x1000000 -1 -1 "V1"»
-      «text (-130,0) 1 109 0 0x1000000 -1 -1 "AC 1"»
-      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
-      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
   »
   «net (1700,-500) 1 13 0 "GND"»

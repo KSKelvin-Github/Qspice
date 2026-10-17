@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Type-II-OpampRR-RC
   «type: X»
   «description: Type II Compensator (Opamp, RC values)»
-  «library file: |.subckt Type-II-OpampRR-RC REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC1 N03 Ctrl C1 IC=0\nR2 N01 N03 R2\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param fp0=1/2/pi/C2/R1\n.param fz1=1/2/pi/C1/R2\n.param fp1=1/2/pi/C1/C2/R2*(C1+C2)\n.if (Verbose)\n.display Type-II: fp0='fp0',fz1='fz1',fp1='fp1',RB/(R1+RB)='RB/(R1+RB)'\n.option concise\n.endif\n.ends Type-II-OpampRR-RC»
+  «library file: |.subckt Type-II-OpampRR-RC REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC1 N03 Ctrl C1 IC=IC1\nR2 N01 N03 R2\nC2 N01 Ctrl C2 IC=IC2\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param fp0=1/2/pi/C2/R1\n.param fz1=1/2/pi/C1/R2\n.param fp1=1/2/pi/C1/C2/R2*(C1+C2)\n.if (Verbose)\n.display Type-II: fp0='fp0',fz1='fz1',fp1='fp1',RB/(R1+RB)='RB/(R1+RB)'\n.display Type-II: Target gain at fz1 (g=R2/R1)='R2/R1'='20*log10(R2/R1)'dB\n.option concise\n.endif\n.ends Type-II-OpampRR-RC»
   «shorted pins: false»
   «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
   «line (100,-150) (100,-250) 0 0 0x1000000 -1 -1»
@@ -43,12 +43,14 @@
   «text (950,1000) 1 7 0 0x0 -1 -1 "C1=<1.57563u>"»
   «text (950,850) 1 7 0 0x0 -1 -1 "C2=<15.9155n>"»
   «text (950,700) 1 7 0 0x0 -1 -1 "RB=<1Meg>"»
+  «text (950,550) 1 7 0 0x0 -1 -1 "Verbose=<0,(1)>"»
+  «text (950,400) 1 7 2 0x1000000 -1 -1 "IC1=<0>"»
+  «text (950,250) 1 7 2 0x1000000 -1 -1 "IC2=<0>"»  
   «text (50,950) 1 0 1 0x1000000 -1 -1 "R2"»
   «text (500,1000) 1 0 1 0x1000000 -1 -1 "C1"»
   «text (100,1300) 1 0 1 0x1000000 -1 -1 "C2"»
   «text (-700,700) 1 15 1 0x1000000 -1 -1 "R1"»
   «text (-700,-100) 1 15 1 0x1000000 -1 -1 "RB"»
-  «text (950,550) 1 7 0 0x0 -1 -1 "Verbose=<0,(1)>"»
   «pin (0,-200) (20,0) 1 15 0 0x0 -1 "REF"»
   «pin (-900,1400) (-20,0) 1 15 0 0x0 -1 "FB"»
   «pin (900,0) (0,0) 1 15 0 0x0 -1 "Ctrl"»

@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Type-I-OpampRR-RC
   «type: X»
   «description: Type I Compensator (Opamp, RC values)»
-  «library file: |.subckt Type-I-OpampRR-RC REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC2 N01 Ctrl C2 IC=0\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param fp0=1/2/pi/C2/R1\n.if (Verbose)\n.display Type-I: fp0='fp0',RB/(R1+RB)='RB/(R1+RB)'\n.option concise\n.endif\n.ends Type-I-OpampRR-RC»
+  «library file: |.subckt Type-I-OpampRR-RC REF FB Ctrl Vdd Vss\nR1 FB N01 R1\nRB N01 0 RB\nC2 N01 Ctrl C2 IC=IC2\nÃ1 Vdd Vss N02 N01 REF ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ MultGmAmp Gm=1 Rout=1e6\nE1 Ctrl 0 N02 0 1\n.param fp0=1/2/pi/C2/R1\n.if (Verbose)\n.display Type-I: fp0='fp0',RB/(R1+RB)='RB/(R1+RB)'\n.display Type-I: Target gain at fp0=1=0dB\n.option concise\n.endif\n.ends Type-I-OpampRR-RC»
   «shorted pins: false»
   «line (50,-200) (150,-200) 0 0 0x1000000 -1 -1»
   «line (100,-150) (100,-250) 0 0 0x1000000 -1 -1»
@@ -37,6 +37,7 @@
   «text (-700,700) 1 15 1 0x1000000 -1 -1 "R1"»
   «text (-700,-100) 1 15 1 0x1000000 -1 -1 "RB"»
   «text (950,850) 1 7 0 0x0 -1 -1 "Verbose=<0,(1)>"»
+  «text (950,700) 1 7 2 0x1000000 -1 -1 "IC2=<0>"»
   «pin (0,-200) (20,0) 1 15 0 0x0 -1 "REF"»
   «pin (-900,1400) (-20,0) 1 15 0 0x0 -1 "FB"»
   «pin (900,0) (0,0) 1 15 0 0x0 -1 "Ctrl"»

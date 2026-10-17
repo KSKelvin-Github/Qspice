@@ -1,0 +1,27 @@
+ÿØÿÛ«symbol D-flop-CD4013B
+  «type: X»
+  «description: (0&1) D-flop (CD4013B/LTspice Version)»
+  «library file: |.subckt D-flop-CD4013B Vdd Vss Q ¬Q D CLK SET RESET\n¥1 Vdd Vss x ¬x D CLK SET RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ D-FLOP TTOL=TTOL REF=REF\n¥2 Vdd Vss y ¥ SET RESET ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND REF=REF TTOL=TTOL\nB2 Q 0 V=if(time>0, if(V(y)>V(thres) | V(x)>V(thres) , V(Vdd) , V(Vss)), if(QIC,V(Vdd),V(Vss)))\nB1 thres 0 V=(V(Vdd)+V(Vss))/2\nB3 ¬Q 0 V=if(time>0, if(V(y)>V(thres) | V(¬x)>V(thres) , V(Vdd) , V(Vss)), if(_QIC,V(Vdd),V(Vss)))\n.ends D-flop-CD4013B»
+  «shorted pins: false»
+  «line (500,200) (400,200) 0 0 0x1000000 -1 2»
+  «line (450,-200) (500,-200) 0 0 0x1000000 -1 3»
+  «line (-400,-150) (-350,-200) 0 0 0x1000000 -1 -1»
+  «line (-350,-200) (-400,-250) 0 0 0x1000000 -1 -1»
+  «rect (-400,400) (400,-400) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «ellipse (400,-175) (450,-225) 0 0 0 0x1000000 0x1000000 -1 3»
+  «text (0,150) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 0 2 0x1000000 -1 -1 "D-FLOP-CD4013B"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "CD4013B"»
+  «text (115,-500) 1 7 0 0x1000000 -1 -1 "TTOL=<1u> Temporal tolerance (s)"»
+  «text (115,-650) 1 7 2 0x1000000 -1 -1 "REF=<0>"»
+  «text (115,-800) 1 7 2 0x1000000 -1 -1 "QIC=<(0;[Vss]),1;[Vdd]> Initial condition of Q"»
+  «text (115,-950) 1 7 2 0x1000000 -1 -1 "_QIC=<(0;[Vss]),1;[Vdd]> Initial condition of _Q"»
+  «pin (-300,400) (0,0) 1 0 0 0x1000000 -1 "Vdd" "p1v"»
+  «pin (-300,-400) (0,0) 1 0 0 0x1000000 -1 "Vss" "0"»
+  «pin (500,200) (-120,0) 1 11 0 0x1000000 -1 "Q"»
+  «pin (500,-200) (-120,0) 1 11 0 0x1000000 -1 "¬Q"»
+  «pin (-400,200) (20,0) 1 7 0 0x1000000 -1 "D"»
+  «pin (-400,-200) (50,0) 1 7 0 0x1000000 -1 "CLK"»
+  «pin (0,400) (0,0) 1 13 0 0x1000000 -1 "PRE"»
+  «pin (0,-400) (0,0) 1 14 0 0x1000000 -1 "CLR"»
+»

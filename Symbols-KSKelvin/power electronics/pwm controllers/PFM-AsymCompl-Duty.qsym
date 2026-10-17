@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PFM-AsymCompl-Duty
   «type: X»
   «description: PFM with Adaptive Duty - Asymmetric Complementary»
-  «library file: |.subckt PFM-AsymCompl-Duty freq duty Q ¬Q\nB4 Tsaw 0 V=idt(1,0,V(CLK))\nB1 Tperiod 0 V=1/V(f-ZOH)\nVlogic1V p1v 0 1\n¥1 p1v 0 CLK ¥ Tsaw Tperiod ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\nB2 Tduty 0 V=V(duty)/V(f-ZOH)\nB3 f-ZOH 0 V=idt(0,V(freq),V(CLK))\n¥3 p1v 0 PWM ¬P¬W¬M Tduty Tsaw ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT\n¥2 p1v 0 N01 ¥ PWM ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL TD=DeadTime\n¥4 p1v 0 Q ¥ PWM N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥5 p1v 0 N02 ¥ ¬P¬W¬M ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL TD=DeadTime\n¥6 p1v 0 ¬Q ¥ ¬P¬W¬M N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n.ends PFM-AsymCompl-Duty»
+  «library file: |.subckt PFM-AsymCompl-Duty freq duty Q ¬Q\nB4 Tsaw 0 V=idt(1,0,V(CLK))\nB1 Tperiod 0 V=1/V(f-ZOH)\nVlogic1V p1v 0 1\n¥1 p1v 0 CLK ¥ Tsaw Tperiod ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\nB2 Tduty 0 V=V(duty)/V(f-ZOH)\nB3 f-ZOH 0 V=idt(0,V(freq),V(CLK))\n¥3 p1v 0 PWM ¬P¬W¬M Tduty Tsaw ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=TTOL\n¥2 p1v 0 N01 ¥ PWM ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL TD=DeadTime\n¥4 p1v 0 Q ¥ PWM N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n¥5 p1v 0 N02 ¥ ¬P¬W¬M ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL TD=DeadTime\n¥6 p1v 0 ¬Q ¥ ¬P¬W¬M N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND TTOL=TTOL\n.ends PFM-AsymCompl-Duty»
   «shorted pins: false»
   «line (-400,-200) (-290,-200) 0 0 0x1000000 -1 -1»
   «line (-270,-190) (-220,-90) 0 0 0x1000000 -1 -1»

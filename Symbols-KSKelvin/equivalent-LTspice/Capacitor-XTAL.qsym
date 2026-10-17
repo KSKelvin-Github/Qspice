@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol Capacitor-XTAL
+  «type: X»
+  «description: (LTspice) XTAL with Capacitor Device»
+  «library file: |.subckt Capacitor-XTAL + -\nCser + N01 Cser\nRser N01 N02 Rser\nLser N02 - Lser Rpar=0\nCpar + - Cpar Rpar=Rpar\n.if (Verbose)\n.display fr_ser='1/2/pi/sqrt(Lser*Cser)', fr_par='1/2/pi/sqrt(Lser*(Cpar*Cser/(Cpar+Cser)))'\n.option concise\n.endif\n.ends Capacitor-XTAL»
+  «shorted pins: false»
+  «line (0,200) (0,60) 0 0 0x1000000 -1 -1»
+  «line (0,-60) (0,-200) 0 0 0x1000000 -1 -1»
+  «rect (-100,30) (100,-30) 0 3 0 0x1000000 0x1000000 -1 0 -1»
+  «rect (-130,60) (130,70) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «rect (-130,-70) (130,-60) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+  «text (100,300) 1 7 0 0x1000000 -1 -1 "XY1"»
+  «text (100,150) 1 7 0 0x1000000 -1 -1 "CAPACITOR-XTAL"»
+  «text (100,-150) 1 7 0 0x1000000 -1 -1 "Cser=<.32p> Series Capacitance (F)"»
+  «text (100,-300) 1 7 0 0x1000000 -1 -1 "Rser=<45> Series Resistance (Ohms)"»
+  «text (100,-450) 1 7 0 0x1000000 -1 -1 "Lser=<.78m> Series Inductance (H)"»
+  «text (100,-600) 1 7 0 0x1000000 -1 -1 "Cpar=<18p> Parallel Capacitance (F)"»
+  «text (100,-750) 1 7 2 0x1000000 -1 -1 "Rpar=<0> Parallel Resistance (Ohms)"»
+  «text (100,-900) 1 7 2 0x1000000 -1 -1 "Verbose=<(0),1>"»
+  «pin (0,200) (0,0) 1 15 0 0x0 -1 "+"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "-"»
+»

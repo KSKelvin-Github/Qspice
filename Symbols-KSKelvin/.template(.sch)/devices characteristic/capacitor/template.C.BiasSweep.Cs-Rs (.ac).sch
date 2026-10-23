@@ -43,7 +43,7 @@
   «wire (-1900,100) (-1900,0) "Vmeas"»
   «wire (-600,100) (-1900,100) "Vmeas"»
   «rect (-950,3850) (3200,-800) 0 0 2 0x4000000 0x1000000 -1 0 -1»
-  «text (-800,1350) 1 7 0 0x1000000 -1 -1 "ï»¿.ac list frq\n.option saveparams\n.step param Vbias Vmin Vmax (Vmax-Vmin)/total_steps\n.func Z() (V(Vmeas)/-I(Vmeas))\n.func Resistance() re(Z())\n.func Capacitance() -1/2/pi/frq/im(Z())\n.plot Resistance() LIN\n.plot Capacitance() LIN\n.abscissa Vbias"»
+  «text (-800,1350) 1 7 0 0x1000000 -1 -1 "ï»¿.ac list frq\n.option saveparams\n.step param Vbias Vmin Vmax (Vmax-Vmin)/total_steps\n.func Z() (V(Vmeas)/-I(Vmeas))\n.func Resistance() re(Z())\n.func Capacitance() -1/2/pi/frq/im(Z())\n.plot Resistance LIN\n.plot Capacitance LIN\n.abscissa Vbias"»
   «text (-800,3000) 1 7 0 0x1000000 -1 -1 "ï»¿;user input parameters\n.param frq=1Meg\n.param Vmin=0\n.param Vmax=100\n.param total_steps=100"»
   «text (-800,3650) 1 7 1 0x1000000 -1 -1 "ï»¿Calculate Capacitance and Resistance"»
 »

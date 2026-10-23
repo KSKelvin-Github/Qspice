@@ -80,7 +80,7 @@
   «wire (-500,300) (-500,200) "Vmeas"»
   «wire (700,300) (-500,300) "Vmeas"»
   «rect (300,-600) (6600,4900) 0 0 2 0x4000000 0x1000000 -1 0 -1»
-  «text (500,2400) 1 7 0 0x1000000 -1 -1 "ï»¿.param Tstart=0.1\n.param Tstop=1.1\n.tran 0 Tstop Tstart (Tstop-Tstart)/1e5\n.func Capacitance()=V(Capacitance)/1V\n.func Charge()=V(Charge)/1V\n.func Vbias()=V(Vmeas)\n.plot Charge()\n.plot Capacitance()\n.abscissa Vbias()"»
+  «text (500,2400) 1 7 0 0x1000000 -1 -1 "ï»¿.param Tstart=0.1\n.param Tstop=1.1\n.tran 0 Tstop Tstart (Tstop-Tstart)/1e5\n.func Capacitance()=V(Capacitance)/1V\n.func Charge()=V(Charge)/1V\n.func Vbias()=V(Vmeas)\n.plot Charge\n.plot Capacitance\n.abscissa Vbias"»
   «text (500,3700) 1 7 0 0x1000000 -1 -1 "ï»¿;user input parameters\n.param Vbias_min=-20\n.param Vbias_max=100"»
   «text (500,4450) 1 7 1 0x1000000 -1 -1 "ï»¿Calculate Capacitance and Charge from time domain\n - error free method in calculating Q for capacitance as a function of its voltage\n - Vmeas has to begin with 0V for correct initial condition of Q"»
   «text (1100,1100) 1 7 1 0x1000000 -1 -1 "ï»¿Q=I*t (integral form)"»

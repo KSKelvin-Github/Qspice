@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol dc-dc-CCM-transfer-func-Erickson
+  «type: X»
+  «description: small-signal DC-DC CCM Transfer Function (from Fundamentals of Power Electronics by R.W.Erickson)»
+  «library file: |.subckt dc-dc-CCM-transfer-func-Erickson d Vo\n.param D_=1-D\n.if (converter==1)\n.param Gg0=D Gd0=Vo/D w0=1/sqrt(L*C) Qr0=R*sqrt(C/L)\nB1 Vo 0 V=V(d) Laplace=Gd0/(1+s/Qr0/w0+s^2/w0^2)\n.if (Verbose)\n.display Buck: Gg0='Gg0', Gd0='Gd0', w0='w0', Qr='Qr0'\n.display Buck: 'Gd0'/(1+s/'Qr0/w0'+s^2/'w0^2')\n.endif\n.else\n.if (converter==2)\n.param Gg2=1/D_ Gd2=Vo/D_ w2=D_/sqrt(L*C) Qr2=D_*R*sqrt(C/L) wz2=D_^2*R/L\nB1 Vo 0 V=V(d) Laplace=Gd2*(1-s/wz2)/(1+s/Qr2/w2+s^2/w2^2)\n.if (Verbose)\n.display Boost: Gg0='Gg2', Gd0='Gd2', w0='w2', Qr='Qr2', wz='wz2'\n.display Boost: 'Gd2'*(1-s/'wz2')/(1+s/'Qr2/w2'+s^2/'w2^2')\n.endif\n.else\n.param Gg3=-D/D_ Gd3=Vo/D/D_ w3=D_/sqrt(L*C) Qr3=D_*R*sqrt(C/L) wz3=D_^2*R/D/L\nB1 Vo 0 V=V(d) Laplace=Gd3*(1-s/wz3)/(1+s/Qr3/w3+s^2/w3^2)\n.if (Verbose)\n.display Buck-Boost: Gg0='Gg3', Gd0='Gd3', w0='w3', Qr='Qr3', wz='wz3'\n.display Buck-Boost: 'Gd3'*(1-s/'wz3')/(1+s/'Qr3/w3'+s^2/'w3^2')\n.endif\n.endif\n.endif\n.ends dc-dc-CCM-transfer-func-Erickson»
+  «shorted pins: false»
+  «rect (-500,400) (500,-400) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,650) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 0 0 0x1000000 -1 -1 "dc-dc-CCM-transfer-func-Erickson"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 "DC-DC"»
+  «text (0,-50) 1 0 1 0x1000000 -1 -1 "(CCM)"»
+  «text (0,-500) 1 0 0 0x1000000 -1 -1 "converter=<(1;[buck]),2;[boost],3;[buck-boost]>"»
+  «text (0,-650) 1 0 0 0x1000000 -1 -1 "Vo=<5> Output voltage (V)"»
+  «text (0,-800) 1 0 0 0x1000000 -1 -1 "D=<0.5> Duty"»
+  «text (0,-950) 1 0 0 0x1000000 -1 -1 "L=<20u> Inductance (H)"»
+  «text (0,-1100) 1 0 0 0x1000000 -1 -1 "C=<100u> Capacitance (F)"»
+  «text (0,-1250) 1 0 0 0x1000000 -1 -1 "R=<1> Load resistance (ohms)"»
+  «text (0,-1400) 1 0 0 0x1000000 -1 -1 "Verbose=<0,(1)>"»
+  «pin (-500,0) (20,0) 1 7 0 0x0 -1 "d"»
+  «pin (500,0) (-20,0) 1 11 0 0x0 -1 "Vo"»
+»

@@ -3,7 +3,7 @@
     «symbol NMOS
       «type: MN»
       «description: N-Channel MOSFET Transistor»
-      «library file: NMOS.txt»
+      «library file: |.model Si7336ADP VDMOS(Rg=3.5 Rd=1.2m Rs=800µ mtriode=1.9 lambda=0.01 Vto=2.9 Ksubthres=100m Kp=280 Cgdmax=1.6n Cgdmin=200p A=1.5 Cgs=5.2n Cjo=3n M=.5 Is=5p Rb=3m mfg=Siliconix Vds=30 Ron=2.4m Qg=36n)»
       «shorted pins: false»
       «line (100,200) (100,150) 0 0 0x1000000 -1 -1»
       «line (100,-150) (100,-200) 0 0 0x1000000 -1 -1»
@@ -59,7 +59,7 @@
     «symbol NMOS
       «type: MN»
       «description: N-Channel MOSFET Transistor»
-      «library file: NMOS.txt»
+      «library file: |.model Si7336ADP VDMOS(Rg=3.5 Rd=1.2m Rs=800µ mtriode=1.9 lambda=0.01 Vto=2.9 Ksubthres=100m Kp=280 Cgdmax=1.6n Cgdmin=200p A=1.5 Cgs=5.2n Cjo=3n M=.5 Is=5p Rb=3m mfg=Siliconix Vds=30 Ron=2.4m Qg=36n)»
       «shorted pins: false»
       «line (100,200) (100,150) 0 0 0x1000000 -1 -1»
       «line (100,-150) (100,-200) 0 0 0x1000000 -1 -1»
@@ -141,13 +141,11 @@
   «wire (-400,0) (-1400,0) "drain2"»
   «rect (-2700,2450) (350,700) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-2700,550) (350,-1200) 0 0 2 0x4000000 0x1000000 -1 0 -1»
-  «text (-450,3000) 0.65 7 0 0x1000000 -1 -1 ".model Si7336ADP VDMOS(Rg=3.5 Rd=1.2m Rs=800µ mtriode=1.9 \n+lambda=0.01 Vto=2.9 Ksubthres=100m Kp=280 Cgdmax=1.6n \n+Cgdmin=200p A=1.5 Cgs=5.2n Cjo=3n M=.5 Is=5p Rb=3m \n+mfg=Siliconix Vds=30 Ron=2.4m Qg=36n)"»
-  «text (-2600,3100) 1 7 0 0x1000000 -1 -1 ".param f=1Meg\n.ac list f\n.step param Vds 0 30 0.2"»
-  «text (500,2200) 1 7 0 0x1000000 -1 -1 "// formula to calculate Ciss\n.func imZciss() imag(V(gate1)/-I(Vg1))\n.func Ciss() -1/2/pi/f/imZciss()"»
-  «text (-2600,2700) 1 7 0 0x1000000 -1 -1 ".plot Crss() Coss() Ciss()"»
-  «text (-2550,2300) 1 7 1 0x1000000 -1 -1 "Measure Ciss vs Vds"»
-  «text (-2550,400) 1 7 1 0x1000000 -1 -1 "Measure Coss, Crss vs Vds"»
-  «text (450,100) 1 7 0 0x1000000 -1 -1 "// formula to calculate Coss and Crss\n.func imZcoss() imag(V(drain2)/-I(Vd2))\n.func Coss() -1/2/pi/f/imZcoss()\n.func imZcrss() imag(V(drain2)/-I(Vg2))\n.func Crss() -1/2/pi/f/imZcrss()"»
-  «text (-2650,3500) 1.25 7 1 0x1000000 -1 -1 "Test Circuit for Ciss, Crss and Coss"»
+  «text (-2700,3000) 1 7 0 0x1000000 -1 -1 "ï»¿.ac list f\n.step param Vds 0 Vds_max Vds_max/TestPts\n.plot LIN Cgs Cgd Cds\n.plot LIN Crss Coss Ciss\n.abscissa Vds"»
+  «text (500,2423) 1 5 0 0x1000000 -1 -1 "ï»¿// formula to calculate Ciss = Ggs+Ggd\n.func imZciss() imag(V(gate1)/-I(Vg1))\n.func Ciss() -1/2/pi/f/imZciss()\n\n// formula to calculate Coss = Cds + Cgd\n.func imZcoss() imag(V(drain2)/-I(Vd2))\n.func Coss() -1/2/pi/f/imZcoss()\n\n// formula to calculate Coss = Cds + Cgd\n.func imZcrss() imag(V(drain2,gate2)/I(Vg2))\n.func Crss() -1/2/pi/f/imZcrss()\n\n// formula to calculate Cgs, Cgd and Cds\n.func Cgs() Ciss()-Crss()\n.func Cgd() Crss()\n.func Cds() Coss()-Crss()"»
+  «text (-2550,2300) 1 7 1 0x1000000 -1 -1 "ï»¿Measure Ciss vs Vds"»
+  «text (-2550,400) 1 7 1 0x1000000 -1 -1 "ï»¿Measure Coss, Crss vs Vds"»
+  «text (-2700,4850) 1 7 1 0x1000000 -1 -1 "ï»¿Test Circuit for Ciss, Crss and Coss\n  - template : template.nmos.Ciss Coss Crss.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-2730,4040) 1 7 0 0x1000000 -1 -1 "ï»¿; user input\n.param f=1Meg ; test frequency\n.param Vds_max = 30\n.param TestPts = 100"»
 »
 

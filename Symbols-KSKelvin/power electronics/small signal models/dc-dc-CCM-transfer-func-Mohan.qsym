@@ -1,0 +1,21 @@
+ÿØÿÛ«symbol dc-dc-CCM-transfer-func-Mohan
+  «type: X»
+  «description: small-signal DC-DC CCM Transfer Function (from First Course on Power Electronics and Drives by Ned Mohan)»
+  «library file: |.subckt dc-dc-CCM-transfer-func-Mohan d Vo\n.if (converter==1)\nB1 Vo 0 V=V(d) Laplace=Vin/L/C*(1+s*esr*C)/(s^2+s*(1/R/C+esr/L)+1/L/C)\n.if (Verbose)\n.display Buck: 'Vin/L/C'*(1+s*'esr*C')/(s^2+s*'(1/R/C+esr/L)'+'1/L/C')\n.endif\n.else\n.if (converter==2)\n.param Le=L/(1-D)^2\nB1 Vo 0 V=V(d) Laplace=Vin/(1-D)^2/Le/C*(1-s*Le/R)*(1+s*esr*C)/(s^2+s*(1/R/C+esr/Le)+1/Le/C)\n.if (Verbose)\n.display Boost: 'Vin/(1-D)^2/Le/C'*(1-s*'Le/R')*(1+s*'esr*C')/(s^2+s*'(1/R/C+esr/Le)'+'1/Le/C')\n.endif\n.else\n.param Le=L/(1-D)^2\nB1 Vo 0 V=V(d) Laplace=Vin/(1-D)^2/Le/C*(1-s*D*Le/R)*(1+s*esr*C)/(s^2+s*(1/R/C+esr/Le)+1/Le/C)\n.if (Verbose)\n.display Buck-Boost: 'Vin/(1-D)^2/Le/C'*(1-s*'D*Le/R')*(1+s*'esr*C')/(s^2+s*'(1/R/C+esr/Le)'+'1/Le/C')\n.endif\n.endif\n.endif\n.ends dc-dc-CCM-transfer-func-Mohan»
+  «shorted pins: false»
+  «rect (-500,400) (500,-400) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «text (0,650) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,500) 1 0 0 0x1000000 -1 -1 "dc-dc-CCM-transfer-func-Mohan"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 "DC-DC"»
+  «text (0,-50) 1 0 1 0x1000000 -1 -1 "(CCM)"»
+  «text (0,-500) 1 0 0 0x1000000 -1 -1 "converter=<(1;[buck]),2;[boost],3;[buck-boost]>"»
+  «text (0,-650) 1 0 0 0x1000000 -1 -1 "Vin=<10> Input voltage (V)"»
+  «text (0,-800) 1 0 0 0x1000000 -1 -1 "D=<0.5> Duty"»
+  «text (0,-950) 1 0 0 0x1000000 -1 -1 "L=<20u> Inductance (H)"»
+  «text (0,-1100) 1 0 0 0x1000000 -1 -1 "C=<100u> Capacitance (F)"»
+  «text (0,-1250) 1 0 0 0x1000000 -1 -1 "esr=<1m> Series resistance in capacitor (ohms)"»
+  «text (0,-1400) 1 0 0 0x1000000 -1 -1 "R=<1> Load resistance (ohms)"»
+  «text (0,-1550) 1 0 0 0x1000000 -1 -1 "Verbose=<0,(1)>"»
+  «pin (-500,0) (20,0) 1 7 0 0x0 -1 "d"»
+  «pin (500,0) (-20,0) 1 11 0 0x0 -1 "Vo"»
+»

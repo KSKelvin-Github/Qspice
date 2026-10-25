@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol opamp-controller-PI
   «type: X»
   «description: control - Opamp PI-Controller»
-  «library file: |.subckt opamp-controller-PI ref fb out\nE1 out 0 ref N01 AVOL\nC1 N02 out C1 IC=0\nR1 fb N01 R1\nR2 N01 N02 R2\n.param R2=Kp*R1\n.param C1=1/Ki/R1\n.display PI-controller: Kp='Kp',Ki='Ki',R1='R1',R2='R2',C1='C1'\n.option concise\n.ends opamp-controller-PI»
+  «library file: |.subckt opamp-controller-PI ref fb out\nE1 out 0 ref N01 AVOL\nC1 N02 out C1 IC=0\nR1 fb N01 R1\nR2 N01 N02 R2\n.param R2=Kp*R1\n.param C1=1/Ki/R1\n.if (Verbose)\n.display PI-controller: Kp='Kp',Ki='Ki',R1='R1',R2='R2',C1='C1'\n.display >> Type-II equivalent: fp0='Kp'*fp1, fz1='Ki/Kp/2/pi'\n.option concise\n.endif\n.ends opamp-controller-PI»
   «shorted pins: false»
   «line (550,0) (-50,450) 0 0 0x1000000 -1 -1»
   «line (-50,450) (-50,-450) 0 0 0x1000000 -1 -1»
@@ -27,13 +27,14 @@
   «zigzag (-100,520) (260,680) 0 0 0 0x1000000 -1 -1»
   «text (-600,1050) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-600,900) 1 7 0 0x1000000 -1 -1 "opamp-controller-PI"»
-  «text (-600,-589) 1 7 0 0x1000000 -1 -1 "AVOL=<100k> ; open-loop voltage gain of ideal opamp"»
-  «text (-600,-739) 1 7 0 0x1000000 -1 -1 "R1=<10k> ; resistance of R1"»
-  «text (-600,-889) 1 7 0 0x1000000 -1 -1 "Kp=<1> ; proportional gain"»
-  «text (-600,-1039) 1 7 0 0x1000000 -1 -1 "Ki=<1> ; integral gain"»
   «text (450,400) 1 0 1 0x1000000 -1 -1 "C1"»
   «text (-400,350) 1 0 1 0x1000000 -1 -1 "R1"»
   «text (150,450) 1 0 1 0x1000000 -1 -1 "R2"»
+  «text (-600,-589) 1 7 0 0x1000000 -1 -1 "AVOL=<100k> Open-loop voltage gain of ideal opamp"»
+  «text (-600,-739) 1 7 0 0x1000000 -1 -1 "R1=<10k> Resistance of R1"»
+  «text (-600,-889) 1 7 0 0x1000000 -1 -1 "Kp=<1> Proportional Gain"»
+  «text (-600,-1039) 1 7 0 0x1000000 -1 -1 "Ki=<1> Integral Gain"»
+  «text (-600,-1189) 1 7 0 0x1000000 -1 -1 "Verbose=<0,(1)>"»
   «pin (-600,-200) (20,0) 1 5 0 0x0 -1 "ref"»
   «pin (-600,200) (20,0) 1 5 0 0x0 -1 "fb"»
   «pin (700,0) (0,0) 1 15 0 0x0 -1 "out"»

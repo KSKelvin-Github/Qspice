@@ -1,0 +1,26 @@
+ÿØÿÛ«symbol Lead-compensator
+  «type: X»
+  «description: Lag Compensator (s+z)/(s+p) where p>z - speed up system response»
+  «library file: |.subckt Lead-compensator err ctrl\nB1 ctrl 0 V=V(err) Laplace=A*(s+2*pi*fz)/(s+2*pi*fp) IC=IC\n.param type=if(fp>fz,1,0)\n.if (Verbose)\n.if (type)\n.display lead-compensator as fp>fz ('fp'>'fz') : C(s)='A'*(s+'2*pi*fz')/(s+'2*pi*fp')\n.else\n.display WARNING!! lag-compensator as fp<fz ('fp'<'fz') : C(s)='A'*(s+'2*pi*fz')/(s+'2*pi*fp')\n.endif\n.endif\n.ends Lead-compensator»
+  «shorted pins: false»
+  «line (300,200) (150,200) 0 0 0xffa0a1 -1 -1»
+  «line (150,200) (-150,-200) 0 0 0xffa0a1 -1 -1»
+  «line (-150,-200) (-300,-200) 0 0 0xffa0a1 -1 -1»
+  «line (50,120) (130,-50) 0 0 0x1000000 -1 -1»
+  «line (200,-110) (300,-110) 0 0 0x1000000 -1 -1»
+  «line (-50,120) (-130,-50) 0 0 0x1000000 -1 -1»
+  «line (-300,-110) (-200,-110) 0 0 0x1000000 -1 -1»
+  «rect (-400,300) (400,-300) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
+  «arc3p (50,120) (-50,120) (0,100) 0 0 0x1000000 -1 -1»
+  «arc3p (130,-50) (200,-110) (210,-40) 0 0 0x1000000 -1 -1»
+  «arc3p (-200,-110) (-130,-50) (-210,-40) 0 0 0x1000000 -1 -1»
+  «text (0,550) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,400) 1 0 0 0x1000000 -1 -1 "Lead-Compensator"»
+  «text (-400,-400) 1 7 0 0x1000000 -1 -1 "A=<1> Overall Gain"»
+  «text (-400,-550) 1 7 0 0x1000000 -1 -1 "fz=<100> zero frequency (Hz)"»
+  «text (-400,-700) 1 7 0 0x1000000 -1 -1 "fp=<10k> pole frequency (Hz)"»
+  «text (-400,-850) 1 7 0 0x1000000 -1 -1 "IC=<0> Initial condition (V)"»
+  «text (-400,-1000) 1 7 0 0x1000000 -1 -1 "Verbose=<0,(1)>"»
+  «pin (-400,0) (20,0) 1 15 0 0x0 -1 "err"»
+  «pin (400,0) (-20,0) 1 15 0 0x0 -1 "ctrl"»
+»

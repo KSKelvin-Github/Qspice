@@ -1,0 +1,4 @@
+ÿØÿÛ«schematic
+  «text (-750,550) 1 7 0 0x1000000 -1 -1 "ï»¿struct sDLL\n{\n  // declare the structure here\n  double nextSampleTime;\n};\n\n // Sample control signals at sampling frequency\n   if(t >= inst->nextSampleTime){\n      // Latch control signals at sampling instant (zero-order hold)\n      inst->nextSampleTime = inst->nextSampleTime+1/fsamp;\n   }"»
+»
+

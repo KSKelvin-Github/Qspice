@@ -145,7 +145,7 @@
   «text (500,2423) 1 5 0 0x1000000 -1 -1 "ï»¿// formula to calculate Ciss = Ggs+Ggd\n.func imZciss() imag(V(gate1)/-I(Vg1))\n.func Ciss() -1/2/pi/f/imZciss()\n\n// formula to calculate Coss = Cds + Cgd\n.func imZcoss() imag(V(drain2)/-I(Vd2))\n.func Coss() -1/2/pi/f/imZcoss()\n\n// formula to calculate Coss = Cds + Cgd\n.func imZcrss() imag(V(drain2,gate2)/I(Vg2))\n.func Crss() -1/2/pi/f/imZcrss()\n\n// formula to calculate Cgs, Cgd and Cds\n.func Cgs() Ciss()-Crss()\n.func Cgd() Crss()\n.func Cds() Coss()-Crss()"»
   «text (-2550,2300) 1 7 1 0x1000000 -1 -1 "ï»¿Measure Ciss vs Vds"»
   «text (-2550,400) 1 7 1 0x1000000 -1 -1 "ï»¿Measure Coss, Crss vs Vds"»
-  «text (-2700,4850) 1 7 1 0x1000000 -1 -1 "ï»¿Test Circuit for Ciss, Crss and Coss\n  - template : template.nmos.Ciss Coss Crss.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
   «text (-2730,4040) 1 7 0 0x1000000 -1 -1 "ï»¿; user input\n.param f=1Meg ; test frequency\n.param Vds_max = 30\n.param TestPts = 100"»
+  «text (-2700,4950) 1 7 1 0x1000000 -1 -1 "ï»¿Device: NMOS\nMeasurement: Ciss, Crss and Coss\n  - template : template.nmos.Ciss Coss Crss.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

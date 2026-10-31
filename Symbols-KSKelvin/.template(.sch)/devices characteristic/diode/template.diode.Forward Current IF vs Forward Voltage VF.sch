@@ -41,9 +41,8 @@
   «wire (-400,200) (-400,100) "GND"»
   «wire (-400,700) (-400,600) "anode"»
   «wire (300,700) (0,700) "anode"»
-  «text (-550,1100) 1 7 1 0x1000000 -1 -1 "ï»¿Forward Current IF vs Forward Voltage VF"»
-  «text (-500,-200) 1 7 0 0x1000000 -1 -1 "ï»¿.dc VF 0 1.6 0.01"»
-  «text (-500,-600) 1 7 0 0x1000000 -1 -1 "ï»¿.plot I(D1)"»
-  «text (-500,-400) 1 7 0 0x1000000 -1 -1 "ï»¿.step param TEMP list 25 75 125 150"»
+  «text (-500,-550) 1 7 0 0x1000000 -1 -1 "ï»¿.dc VF 0 VFmax VFmax/200\n.step param TEMP list 25 75 125 150\n.plot I(D1)\n.abscissa VF"»
+  «text (-550,1700) 1 7 1 0x1000000 -1 -1 "ï»¿Device: Diode\nMeasurement: Forward Current IF vs Forward Voltage VF\n  - template : template.diode.Forward Current IF vs Forward Voltage VF.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-550,1050) 1 7 0 0x1000000 -1 -1 "ï»¿.param VFmax=1.6"»
 »
 

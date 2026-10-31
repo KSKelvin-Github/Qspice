@@ -43,10 +43,8 @@
   «wire (300,100) (-400,100) "GND"»
   «wire (300,0) (300,100) "GND"»
   «wire (300,700) (0,700) "R"»
-  «text (-550,1100) 1 7 1 0x1000000 -1 -1 "ï»¿Reverse Current IR vs Reverse Voltage VR"»
-  «text (-500,-200) 1 7 0 0x1000000 -1 -1 "ï»¿.dc VR 0 200 1"»
-  «text (-500,-850) 1 7 0 0x1000000 -1 -1 "ï»¿.plot Irev_nA()"»
-  «text (-500,-400) 1 7 0 0x1000000 -1 -1 "ï»¿.step param TEMP list 25 75 125 150"»
-  «text (-500,-650) 1 7 0 0x1000000 -1 -1 "ï»¿.func Irev_nA() -I(D1)/1e-9"»
+  «text (-500,-700) 1 7 0 0x1000000 -1 -1 "ï»¿.dc VR 0 VRmax VRmax/200\n.step param TEMP list 25 75 125 150\n.func Irev() -I(D1)\n.plot Irev\n.abscissa VR"»
+  «text (-500,1700) 1 7 1 0x1000000 -1 -1 "ï»¿Device: Diode\nMeasurement: Reverse Current IR vs Reverse Voltage VR\n  - template : template.diode.Reverse Current IR vs Reverse Voltage VR.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-450,1050) 1 7 0 0x1000000 -1 -1 "ï»¿.param VRmax=200"»
 »
 

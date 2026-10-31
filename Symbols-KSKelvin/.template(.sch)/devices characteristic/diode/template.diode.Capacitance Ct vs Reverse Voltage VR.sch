@@ -44,8 +44,9 @@
   «wire (300,0) (-600,0) "GND"»
   «wire (300,-100) (300,0) "GND"»
   «wire (300,900) (0,900) "R"»
-  «text (-750,1200) 1 7 1 0x1000000 -1 -1 "ï»¿Capacitance Ct vs Reverse Voltage VR"»
-  «text (-750,-500) 1 7 0 0x1000000 -1 -1 "ï»¿.param f=1Meg\n.ac list f\n.step param VR 0 30 0.2"»
-  «text (-750,-1200) 1 7 0 0x1000000 -1 -1 "ï»¿.func imZ() imag(V(R)/-I(V1))\n.func Ct_pF() -1/2/pi/f/imZ()/1p\n.plot Ct_pF()"»
+  «text (-750,-550) 1 7 0 0x1000000 -1 -1 "ï»¿.param f=1Meg\n.ac list f\n.step param VR 0 VRmax VRmax/100"»
+  «text (-750,-1350) 1 7 0 0x1000000 -1 -1 "ï»¿.func imZ() imag(V(R)/-I(V1))\n.func Ct() -1/2/pi/f/imZ()\n.plot LIN Ct\n.abscissa VR"»
+  «text (-650,1900) 1 7 1 0x1000000 -1 -1 "ï»¿Device: Diode\nMeasurement: Capacitance Ct vs Reverse Voltage VR\n  - template : template.diode.Capacitance Ct vs Reverse Voltage VR.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-650,1300) 1 7 0 0x1000000 -1 -1 "ï»¿.param VRmax=30"»
 »
 

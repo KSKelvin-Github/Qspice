@@ -146,8 +146,8 @@
   «wire (500,400) (500,500) "Vdd"»
   «wire (500,-300) (500,-200) "Vss"»
   «triangle (300,550) (300,-350) (900,100) 0 1 0xffa0ff 0x1000000 -1 -1»
-  «text (2160,2340) 1 7 0 0x1000000 -1 -1 "ï»¿*** user input parameters ***\n.param Rload=10K\n.param Vdd=5\n.param Vss=-5\n*** .ac analysis setup ***\n.param FirstFreq=1m\n.param LastFreq=1G\n.param PtsPerDecade=100"»
+  «text (-1290,2490) 1 7 0 0x1000000 -1 -1 "ï»¿*** user input parameters ***\n.param Rload=10K\n.param Vdd=5\n.param Vss=-5\n*** .ac analysis setup ***\n.param FirstFreq=1m\n.param LastFreq=1G\n.param PtsPerDecade=100"»
   «text (2195,320) 1 7 0 0x1000000 -1 -1 "ï»¿; simulation\n.ac dec PtsPerDecade FirstFreq LastFreq\n.plot V(out)\n.abscissa Frequency\n\n; measurement\n.func dB(x) 20*log10(abs(x))\n.meas |AVOL| find abs(V(OUT)) at FirstFreq\n.meas AVOL-dB find dB(V(OUT)) at FirstFreq\n.meas GBW find Frequency when abs(V(OUT))=1"»
-  «text (-1300,2600) 1 7 1 0x1000000 -1 -1 "ï»¿Device: OpAmp\nElectrical Characteristic: Open Loop Gain\nTest Template by KSKelvin, download link:\nhttps://github.com/KSKelvin-Github/Qspice\nLatest update : 5-18-2026"»
+  «text (-1300,3800) 1 7 1 0x1000000 -1 -1 "ï»¿Device: OpAmp\nMeasurement: Open Loop Gain\n  - template : template.opamp.Open-Loop-Gain.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

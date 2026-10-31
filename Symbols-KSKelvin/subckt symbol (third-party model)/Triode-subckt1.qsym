@@ -1,6 +1,6 @@
-ÿØÿÛ«symbol Triode-subckt
+ÿØÿÛ«symbol Triode-subckt1
   «type: X»
-  «description: Triode (.subckt A G K)»
+  «description: Triode / Vacuum Tube (.subckt A|P G K)»
   «shorted pins: false»
   «line (-100,100) (100,100) 0 0 0x1000000 -1 -1»
   «line (100,0) (-200,0) 0 1 0x1000000 -1 -1»
@@ -11,7 +11,7 @@
   «ellipse (-200,200) (200,-200) 0 0 0 0x1000000 0x1000000 -1 -1»
   «text (200,200) 1 7 0 0x0 -1 -1 "X1"»
   «text (200,-150) 1 7 0 0x0 -1 -1 "<model>"»
-  «pin (0,200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "A|P"»
   «pin (-200,0) (0,0) 1 0 0 0x0 -1 "G"»
   «pin (-100,-200) (0,0) 1 0 0 0x0 -1 "K"»
 »

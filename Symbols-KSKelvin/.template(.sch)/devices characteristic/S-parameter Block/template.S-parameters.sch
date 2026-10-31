@@ -47,6 +47,6 @@
   «text (-500,-850) 1 7 0 0x1000000 -1 -1 "ï»¿.net R1 V1\n.ac dec Points fstart fstop"»
   «text (-500,-1350) 1 7 0 0x1000000 -1 -1 "ï»¿.plot S11(V1)\n.plot S21(V1)"»
   «text (-480,1650) 1 7 0 0x1000000 -1 -1 "ï»¿.param fstart=1Meg\n.param fstop=500Meg\n.param Points=100\n.param Zo=50"»
-  «text (-1000,2200) 1 7 1 0x1000000 -1 -1 "ï»¿S-parameter block test template (Zo=50)"»
+  «text (-1050,2550) 1 7 1 0x1000000 -1 -1 "ï»¿Device: S-parameter Block Set\nMeasurement: S-parameter S11 and S21 (Zo=50)\n  - template : template.S-parameters.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

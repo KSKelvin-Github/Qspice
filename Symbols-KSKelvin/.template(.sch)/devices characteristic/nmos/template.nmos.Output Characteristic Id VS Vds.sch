@@ -82,9 +82,8 @@
   «wire (-1000,1800) (-1000,1700) "GND"»
   «wire (-1000,2300) (-1000,2200) "N03"»
   «wire (-1000,2700) (-1000,2500) "N02"»
-  «rect (-3150,4550) (1650,400) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «text (-3050,850) 1 7 0 0x1000000 -1 -1 "ï»¿.dc Vds 0 Vds_max Vds_max/100 Vgs Vgs_min Vgs_max 1\n.plot I(Idrain)\n.abscissa Vds"»
-  «text (-3010,3430) 1 7 0 0x1000000 -1 -1 "ï»¿; user input\n.param Vds_max=30\n.param Vgs_min=4\n.param Vgs_max=7"»
-  «text (-3050,4200) 1 7 1 0x1000000 -1 -1 "ï»¿Test Circuit for Output Characteristic - Idrain VS Vds\n  - template : template.nmos.Output Characteristic Id VS Vds.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-3060,3280) 1 7 0 0x1000000 -1 -1 "ï»¿; user input\n.param Vds_max=30\n.param Vgs_min=4\n.param Vgs_max=7"»
+  «text (-3050,4100) 1 7 1 0x1000000 -1 -1 "ï»¿Device: NMOS\nMeasurement: Output Characteristic - Idrain VS Vds\n  - template : template.nmos.Output Characteristic Id VS Vds.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

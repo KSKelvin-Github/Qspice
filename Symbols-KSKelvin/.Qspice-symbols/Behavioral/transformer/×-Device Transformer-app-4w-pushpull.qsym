@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol ×-Device Transformer5-PushPull
+ÿØÿÛ«symbol ×-Device Transformer-app-4w-pushpull
   «type: ×»
   «description: Transformer with 4 windings (PushPull Converter)»
   «shorted pins: false»
@@ -28,11 +28,11 @@
   «coil (50,-130) (-30,-480) 0 0 0 0x1000000 -1 -1»
   «coil (-150,-130) (-70,-480) 0 0 0 0x1000000 -1 -1»
   «text (-50,498) 1 14 0 0x1000000 -1 -1 "×1"»
-  «text (-50,-508) 1 13 0 0x1000000 -1 -1 "Turns=<Npri1 Nsec1 Npri2 Nsec2>"»
   «text (-210,300) 0.63 32 1 0x1000000 -1 -1 "pri1"»
   «text (110,300) 0.63 96 1 0x1000000 -1 -1 "sec1"»
   «text (-210,-300) 0.63 32 1 0x1000000 -1 -1 "pri2"»
   «text (110,-300) 0.63 96 1 0x1000000 -1 -1 "sec2"»
+  «text (-50,-508) 1 13 0 0x1000000 -1 -1 "Turns=<Npri1 Nsec1 Npri2 Nsec2>"»
   «pin (-200,500) (0,0) 1 0 0 0x1000000 -1 "PRI1+"»
   «pin (-200,100) (0,0) 1 0 0 0x1000000 -1 "PRI1-"»
   «pin (100,500) (0,0) 1 0 0 0x1000000 -1 "SEC1+"»

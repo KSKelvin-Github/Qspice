@@ -65,6 +65,6 @@
   «wire (-1800,1700) (-1700,1700) "GND"»
   «text (-1950,750) 1 7 0 0x1000000 -1 -1 "ï»¿.dc Vsd 0 Vsd_max Vsd_max/100\n.plot I(Isd)\n.abscissa Vsd"»
   «text (-1890,2650) 1 7 0 0x1000000 -1 -1 "ï»¿; user input parameters\n.param Vsd_max=1"»
-  «text (-1900,3250) 1 7 1 0x1000000 -1 -1 "ï»¿Test Circuit for Body Diode\n  - template : template.nmos.Bode Diode Isd VS Vsd.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-1900,3350) 1 7 1 0x1000000 -1 -1 "ï»¿Device: NMOS\nMeasurement: Body Diode Characteristic Isd vs Vsd\n  - template : template.nmos.Bode Diode Isd VS Vsd.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

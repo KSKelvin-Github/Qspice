@@ -48,9 +48,9 @@
   «wire (4300,700) (4300,600) "GND"»
   «wire (4300,1200) (4300,1100) "Vmeas"»
   «wire (2600,1200) (4300,1200) "Vmeas"»
-  «rect (-950,4400) (3350,300) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «rect (-950,4400) (3850,300) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «text (-800,1350) 1 7 0 0x1000000 -1 -1 "ï»¿.ac list frq\n.option saveparams\n.step param Ibias Imin Imax (Imax-Imin)/total_steps\n.func Z() (V(Vmeas)/I(Imeas))\n.func Rs() re(Z())\n.func Ls() im(Z())/2/pi/frq\n.plot Rs LIN\n.plot Ls LIN\n.abscissa Vbias"»
   «text (-800,2950) 1 7 0 0x1000000 -1 -1 "ï»¿;user input parameters\n.param frq=1Meg\n.param Imin=0\n.param Imax=100\n.param total_steps=100"»
-  «text (-800,3950) 1 7 1 0x1000000 -1 -1 "ï»¿Calculate Ls-Rs model parameters\nin dc bias sweep test\n  - template : template.L.FreqSweep.Ls-Rs (.ac).sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-800,3950) 1 7 1 0x1000000 -1 -1 "ï»¿Device: Inductor\nMeasurement: Series inductance and resistance (Ls-Rs) vs Bias\n  - template : template.L.BiasSweep.Ls-Rs (.ac).sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

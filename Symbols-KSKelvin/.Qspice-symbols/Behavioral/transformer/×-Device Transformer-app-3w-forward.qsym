@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol ×-Device Transformer5-Forward
+ÿØÿÛ«symbol ×-Device Transformer-app-3w-forward
   «type: ×»
   «description: Transformer with 3 windings (Forward Converter)»
   «shorted pins: false»
@@ -24,10 +24,10 @@
   «coil (50,170) (-30,-180) 0 0 0 0x1000000 -1 -1»
   «coil (-450,170) (-370,-180) 0 0 0 0x1000000 -1 -1»
   «text (-50,248) 1 14 0 0x1000000 -1 -1 "×1"»
-  «text (-50,-258) 1 13 0 0x1000000 -1 -1 "Turns=<Npri1 Npri2 Nsec2>"»
   «text (-210,0) 0.63 32 1 0x1000000 -1 -1 "pri1"»
   «text (110,0) 0.63 96 1 0x1000000 -1 -1 "sec1"»
   «text (-510,0) 0.63 32 1 0x1000000 -1 -1 "pri2"»
+  «text (-50,-258) 1 13 0 0x1000000 -1 -1 "Turns=<Npri1 Npri2 Nsec2>"»
   «pin (-200,200) (0,0) 1 0 0 0x1000000 -1 "PRI1+"»
   «pin (-200,-200) (0,0) 1 0 0 0x1000000 -1 "PRI1-"»
   «pin (-500,-200) (0,0) 1 0 0 0x1000000 -1 "PRI2+"»

@@ -89,6 +89,6 @@
   «wire (-1900,2600) (-1300,2600) "N01"»
   «text (-2600,800) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 1*tscale\n.ic V(Vg)=0\n.func Qg() I(Ig)*time  ; by Q=I*t\n.plot V(Vg)\n.abscissa Qg"»
   «text (-2640,3440) 1 7 0 0x1000000 -1 -1 "ï»¿.param Vds=15  ;gate charge Vds test voltage\n.param Id=1  ;gate charge Id test current\n.param Qg_max=45n  ;maximum total gate charge in x-axis\n.param tscale=1  ;default set to 1s"»
-  «text (-2650,4250) 1 7 1 0x1000000 -1 -1 "ï»¿Test Circuit for Gate Charge Vg VS Qg\n  - template : template.nmos.GateCharge Vg VS Qg.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-2650,4350) 1 7 1 0x1000000 -1 -1 "ï»¿Device: NMOS\nMeasurement: Gate Charge, Vgate VS Qgate\n  - template : template.nmos.GateCharge Vg VS Qg.sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

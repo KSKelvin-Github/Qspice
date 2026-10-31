@@ -97,6 +97,6 @@
   «rect (-1900,4200) (2500,600) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «text (-1750,2223) 1 5 0 0x1000000 -1 -1 "ï»¿; calculate Ls-Rs model parameters\n.ac dec PtsPerDecade minFreq maxFreq \n.func Z() V(Vmeas)/-I(Vmeas) \n.func Rs() re(Z())\n.func Ls() im(Z())/2/PI/freq\n.plot LIN Rs ; series resistance\n.plot LIN Ls ; series capacitance\n.abscissa Freq"»
   «text (-1750,3140) 1 5 0 0x1000000 -1 -1 "ï»¿;user input parameters\n.param minFreq=100\n.param maxFreq=100Meg\n.param PtsPerDecade=100"»
-  «text (-1700,3700) 1 7 1 0x1000000 -1 -1 "ï»¿Calculate Ls-Rs model parameters\nin freqeuncy sweep test\n  - template : template.L.FreqSweep.Ls-Rs (.ac).sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
+  «text (-1750,3700) 1 7 1 0x1000000 -1 -1 "ï»¿Device: Inductor\nMeasurement: Series inductance and resistance (Ls-Rs) vs Freq\n  - template : template.L.FreqSweep.Ls-Rs (.ac).sch\n  - download : https://github.com/KSKelvin-Github/Qspice/"»
 »
 

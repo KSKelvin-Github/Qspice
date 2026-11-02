@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol Switch-Ton-Toff
+  «type: X»
+  «description: Switch - Ton Toff»
+  «library file: |.subckt Switch-Ton-Toff 1 2\n.model S1•SW SW Ron=Ron Roff=Roff Vt=0.5 Vh=0\nS1 1 2 g 0 S1•SW\nB1 g 0 V=if(Ton<Toff, if(time<Toff & time>Ton,1,0) , if(time<Ton & time>Toff,0,1))\n.if (Verbose & Toff>Ton)\n.display switching sequence : off > on > off\n.else\n.display switching sequence : on > off > on\n.endif\n.ends Switch-Ton-Toff»
+  «shorted pins: false»
+  «line (-170,40) (200,100) 0 0 0x1000000 -1 -1»
+  «ellipse (-250,50) (-150,-50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (150,50) (250,-50) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «arc3p (80,0) (-40,130) (-70,0) 0 0 0x1000000 -1 -1»
+  «arc3p (120,40) (0,170) (-30,40) 0 0 0x1000000 -1 -1»
+  «triangle (200,100) (140,90) (180,60) 0 0 0x1000000 0x2000000 -1 -1»
+  «triangle (80,0) (90,50) (50,40) 0 0 0x1000000 0xff0012 -1 -1»
+  «triangle (30,140) (40,180) (0,170) 0 0 0x1000000 0xff0012 -1 -1»
+  «text (-200,150) 1 15 0 0x1000000 -1 -1 "XS1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "SWITCH-TON-TOFF"»
+  «text (0,-150) 1 15 0 0x0 -1 -1 "Ton=<0>"»
+  «text (0,-300) 1 15 0 0x0 -1 -1 "Toff=<0>"»
+  «text (0,-450) 1 15 2 0x1000000 -1 -1 "Ron=<1u>"»
+  «text (0,-600) 1 15 2 0x1000000 -1 -1 "Roff=<1T>"»
+  «text (0,-750) 1 15 2 0x1000000 -1 -1 "Verbose=<0,(1)>"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "1"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "2"»
+»

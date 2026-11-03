@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol Integrator-func
   «type: X»
   «description: Integrator»
-  «library file: |.subckt integrator in out\nB1 out 0 V=idt(V(in),ic)\n.ends integrator»
+  «library file: |.subckt integrator in out\nB1 out 0 V=idt(Ki*V(in),ic)\n.ends integrator»
   «shorted pins: false»
   «line (150,50) (200,0) 0 0 0x1000000 -1 -1»
   «line (200,0) (150,-50) 0 0 0x1000000 -1 -1»
@@ -14,6 +14,7 @@
   «text (-200,300) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (50,300) 1 7 2 0x1000000 -1 -1 "INTEGRATOR"»
   «text (-200,-300) 1 7 0 0x0 -1 -1 "IC=<0>"»
+  «text (-200,-450) 1 7 2 0x1000000 -1 -1 "Ki=<1>"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (200,0) (0,0) 1 0 0 0x0 -1 "out"»
 »

@@ -1,14 +1,15 @@
-ÿØÿÛ«symbol Derivative-func
+ÿØÿÛ«symbol Derivative-func-2
   «type: X»
   «description: Derivative - ddt(x)»
-  «library file: |.subckt derivative in out \nB1 out 0 V=ddt(V(in))\n.ends derivative»
+  «library file: |.subckt derivative in out \nB1 out 0 V=Kd*ddt(V(in))\n.ends derivative»
   «shorted pins: false»
   «line (250,50) (300,0) 0 0 0x1000000 -1 -1»
   «line (300,0) (250,-50) 0 0 0x1000000 -1 -1»
   «rect (-200,200) (300,-200) 0 0 0 0x1000000 0xffe6c8 -1 0 -1»
-  «text (-114,301) 1 15 0 0x1000000 -1 -1 "X1"»
-  «text (44,300) 1 7 2 0x1000000 -1 -1 "DERIVATIVE"»
-  «text (37,20) 1.08 15 1 0x1000000 -1 -1 "ddt()"»
+  «text (-200,301) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (50,300) 1 7 2 0x1000000 -1 -1 "DERIVATIVE"»
+  «text (50,20) 1.08 15 1 0x1000000 -1 -1 "ddt()"»
+  «text (-200,-299) 1 7 2 0x1000000 -1 -1 "Kd=<1> Gain"»
   «pin (-200,0) (0,0) 1 15 0 0x0 -1 "in"»
   «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
 »

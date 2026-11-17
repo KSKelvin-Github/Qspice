@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol PWM-CurrentMode
   «type: X»
-  «description: Current Mode Controller»
+  «description: Current Mode Controller (e.g. UCx842/UCx843, no toggle)»
   «library file: |.subckt PWM-CurrentMode Isense Comp Sawtooth CLK PWM\nB1 Sawtooth 0 V=idt(fsw,0,V(sawtooth)>1)\nVlogic1V p1v 0 1\n¥1 p1v 0 CLK ¥ N01 Sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥2 p1v 0 PWM ¥5 CLK R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\n¥4 p1v 0 R ¥ Isense Comp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 N01 0 V=if(time>0,ClkDuty,-1)\n.ends PWM-CurrentMode»
   «shorted pins: false»
   «line (-300,600) (-300,100) 0 0 0x1000000 -1 -1»

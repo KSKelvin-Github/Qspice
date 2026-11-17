@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol PWM-CurrentMode-DutyLimit
   «type: X»
-  «description: Current Mode Controller»
+  «description: Current Mode Controller (e.g. UCx844/UCx845, toggle)»
   «library file: |.subckt PWM-CurrentMode-DutyLimit Isense Comp Sawtooth CLK PWM\nB1 Sawtooth 0 V=idt(fsw,0,V(sawtooth)>1)\nVlogic1V p1v 0 1\n¥1 p1v 0 CLK ¥ N01 Sawtooth ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\n¥2 p1v 0 N02 ¥5 CLK R ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\n¥4 p1v 0 R ¥ Isense Comp ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ HMITT TTOL=ttol\nB2 N01 0 V=if(time>0,ClkDuty,-1)\n¥3 p1v 0 N03 ¥6 p1v CLK 0 0 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ T-FLOP\n¥5 p1v 0 PWM ¥ N03 N02 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\n.ends PWM-CurrentMode-DutyLimit»
   «shorted pins: false»
   «line (-300,600) (-300,100) 0 0 0x1000000 -1 -1»

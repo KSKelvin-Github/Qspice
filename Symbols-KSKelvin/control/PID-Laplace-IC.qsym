@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol PID-Laplace-v2
+ÿØÿÛ«symbol PID-Laplace-IC
   «type: X»
-  «description: PID Controller/Compensator (v2 with Integrator IC=0)»
-  «library file: |.subckt PID-Laplace-v2 err out\nB1 PD 0 V=V(err) Laplace=Kp+Kd*s\nB2 I 0 V=V(err) Laplace=Ki/s IC=0\nB3 out 0 V=V(PD)+V(I)\n.ends PID-Laplace-v2»
+  «description: PID Controller/Compensator»
+  «library file: |.subckt PID-Laplace-IC err out\nB1 out 0 V=V(err) Laplace=Kp+Ki/s+Kd*s IC=IC\n.ends PID-Laplace-IC»
   «shorted pins: false»
   «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»
   «line (-200,-400) (-200,400) 0 0 0x1000000 -1 -1»
@@ -25,12 +25,13 @@
   «triangle (-100,100) (-100,-100) (100,0) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (-100,-500) (-100,-300) (100,-400) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-300,850) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-300,700) 1 7 0 0x1000000 -1 -1 "PID-Laplace-v2"»
+  «text (-300,700) 1 7 0 0x1000000 -1 -1 "PID-Laplace-IC"»
   «text (-50,250) 1 7 0 0x0 -1 -1 "Kp=<1>"»
   «text (-50,-200) 1 7 0 0x0 -1 -1 "Ki=<1>"»
   «text (-50,-600) 1 7 0 0x0 -1 -1 "Kd=<1>"»
   «text (350,0) 1 0 1 0x1000000 -1 -1 "1/s"»
   «text (350,-400) 1 0 1 0x1000000 -1 -1 "s"»
+  «text (-300,-800) 1 7 0 0x0 -1 -1 "IC=<0>"»
   «pin (-300,0) (30,90) 1 15 0 0x0 -1 "err"»
   «pin (900,0) (-20,90) 1 15 0 0x0 -1 "out"»
 »

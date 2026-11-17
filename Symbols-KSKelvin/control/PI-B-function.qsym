@@ -1,7 +1,7 @@
 ÿØÿÛ«symbol PI-func
   «type: X»
   «description: PI Controller/Compensator»
-  «library file: |.subckt PI-func err out\nB1 out 0 V=Kp*V(err)+Ki*idt(V(err),0)\n.ends PI-func»
+  «library file: |.subckt PI-B-function err out\nB1 out 0 V=Kp*V(err)+Ki*idt(V(err),0)\n.ends PI-B-function»
   «shorted pins: false»
   «line (-250,-200) (-200,-200) 0 0 0x1000000 -1 -1»
   «line (-250,-200) (-250,200) 0 0 0x1000000 -1 -1»
@@ -26,7 +26,7 @@
   «triangle (50,300) (50,100) (200,200) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (-200,-100) (-200,-300) (-50,-200) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-300,650) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-300,500) 1 7 0 0x1000000 -1 -1 "PI-FUNC"»
+  «text (-300,500) 1 7 0 0x1000000 -1 -1 "PI-B-function"»
   «text (-300,-500) 1 7 0 0x0 -1 -1 "Kp=<1> P gain"»
   «text (-300,-650) 1 7 0 0x0 -1 -1 "Ki=<1> I gain"»
   «pin (-300,0) (30,90) 1 15 0 0x0 -1 "err"»

@@ -1,7 +1,7 @@
-ÿØÿÛ«symbol PID-func
+ÿØÿÛ«symbol PID-B-function
   «type: X»
-  «description: PID Controller/Compensator»
-  «library file: |.subckt PID-func err out\nB1 out 0 V=Kp*V(err)+Ki*idt(V(err),0)+Kd*ddt(V(err))\n.ends PID-func»
+  «description: PID Controller/Compensator (idt, ddt)»
+  «library file: |.subckt PID-B-function err out\nB1 out 0 V=Kp*V(err)+Ki*idt(V(err),0)+Kd*ddt(V(err))\n.ends PID-B-function»
   «shorted pins: false»
   «line (-300,0) (-100,0) 0 0 0x1000000 -1 -1»
   «line (-200,-400) (-200,400) 0 0 0x1000000 -1 -1»
@@ -25,7 +25,7 @@
   «triangle (-100,100) (-100,-100) (100,0) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (-100,-500) (-100,-300) (100,-400) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-300,850) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-300,700) 1 7 0 0x1000000 -1 -1 "PID-FUNC"»
+  «text (-300,700) 1 7 0 0x1000000 -1 -1 "PID-B-function"»
   «text (-50,250) 1 7 0 0x0 -1 -1 "Kp=<1>"»
   «text (-50,-200) 1 7 0 0x0 -1 -1 "Ki=<1>"»
   «text (-50,-600) 1 7 0 0x0 -1 -1 "Kd=<1>"»

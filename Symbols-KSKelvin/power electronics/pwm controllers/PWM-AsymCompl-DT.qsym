@@ -46,17 +46,17 @@
   «triangle (-300,550) (-300,-150) (150,200) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-700,1250) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-700,1100) 1 7 0 0x1000000 -1 -1 "PWM-AsymCompl-DT"»
-  «text (-700,-1000) 1 7 0 0x0 -1 -1 "fsw=<100k> ;switching frequency"»
-  «text (-700,-1150) 1 7 0 0x0 -1 -1 "Vhigh=<1> ;output high voltage level"»
-  «text (-700,-1300) 1 7 0 0x0 -1 -1 "Vlow=<0> ;output low voltage level"»
-  «text (-700,-1450) 1 7 0 0x1000000 -1 -1 "DeadTime=<0> ;deadtime"»
-  «text (-700,-1600) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
-  «text (-700,-1750) 1 7 2 0x1000000 -1 -1 "Tdelay=<0> ;start delay time"»
-  «text (-700,-1900) 1 7 2 0x1000000 -1 -1 "minDuty=<0.05>"»
-  «text (-700,-2050) 1 7 2 0x1000000 -1 -1 "maxDuty=<0.95>"»
   «text (-550,330) 0.735 0 1 0x1000000 -1 -1 "0-1V"»
   «text (50,610) 0.735 0 1 0x1000000 -1 -1 "DT"»
-  «text (50,-190) 0.735 0 1 0x1000000 -1 -1 "DT"»
+  «text (50,-190) 0.735 0 1 0x1000000 -1 -1 "DT"»  
+  «text (-700,-1000) 1 7 0 0x0 -1 -1 "fsw=<100k> Switching frequency (Hz)"»
+  «text (-700,-1150) 1 7 0 0x0 -1 -1 "Vhigh=<1> Output high level (V)"»
+  «text (-700,-1300) 1 7 0 0x0 -1 -1 "Vlow=<0> Output low level (V)"»
+  «text (-700,-1450) 1 7 0 0x1000000 -1 -1 "DeadTime=<0> Deadtime"»
+  «text (-700,-1600) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
+  «text (-700,-1750) 1 7 2 0x1000000 -1 -1 "Tdelay=<0> Start delay time (s)"»
+  «text (-700,-1900) 1 7 2 0x1000000 -1 -1 "minDuty=<0.05> Minimum duty cycle"»
+  «text (-700,-2050) 1 7 2 0x1000000 -1 -1 "maxDuty=<0.95> Maximum duty cycle"»
   «pin (-700,400) (20,0) 1 6 0 0x0 -1 "duty"»
   «pin (900,800) (-20,0) 1 10 0 0x0 -1 "gate+"»
   «pin (900,400) (-20,0) 1 10 0 0x0 -1 "gate-"»

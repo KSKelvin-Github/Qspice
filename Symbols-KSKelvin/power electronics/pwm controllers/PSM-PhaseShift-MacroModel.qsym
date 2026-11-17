@@ -18,10 +18,10 @@
   «triangle (300,-350) (400,-350) (350,-420) 0 0 0x1000000 0x1000000 -1 -1»
   «text (-500,950) 1 7 0 0x1000000 -1 -1 "X1"»
   «text (-500,1100) 1 7 2 0x1000000 -1 -1 "PSM-PHASESHIFT-MACROMODEL"»
-  «text (-500,-800) 1 7 0 0x0 -1 -1 "fsw=<10k> ;switching frequency"»
-  «text (-500,-950) 1 7 0 0x0 -1 -1 "DeadTime1=<0> ;dead time of S11 and S12"»
-  «text (-500,-1100) 1 7 0 0x0 -1 -1 "DeadTime2=<0> ;dead time of S21 and S22"»
-  «text (-500,-1250) 1 7 0 0x0 -1 -1 "PhaseDelay=<0> ;phase delay of S11 from 0s"»
+  «text (-500,-800) 1 7 0 0x0 -1 -1 "fsw=<10k> Switching frequency (Hz)"»
+  «text (-500,-950) 1 7 0 0x0 -1 -1 "DeadTime1=<0> Dead time of S11 and S12 (s)"»
+  «text (-500,-1100) 1 7 0 0x0 -1 -1 "DeadTime2=<0> Dead time of S21 and S22 (s)"»
+  «text (-500,-1250) 1 7 0 0x0 -1 -1 "PhaseDelay=<0> Phase delay of S11 from 0s (degree)"»
   «text (-500,-1400) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
   «text (-500,800) 1 7 1 0x1000000 -1 -1 "PSM Adjustable Duty"»
   «text (-480,-330) 0.794 7 1 0x1000000 -1 -1 "RNG:0-1"»

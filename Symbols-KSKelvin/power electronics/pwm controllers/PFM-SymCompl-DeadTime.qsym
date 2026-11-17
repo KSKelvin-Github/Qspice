@@ -48,16 +48,16 @@
   «arc3p (-360,-850) (-300,-850) (-330,-850) 0 0 0x1000000 -1 -1»
   «triangle (0,350) (0,-50) (300,150) 0 0 0x1000000 0x1000000 -1 -1»
   «triangle (0,-550) (0,-950) (300,-750) 0 0 0x1000000 0x1000000 -1 -1»
-  «text (-700,700) 1 7 0 0x1000000 -1 -1 "X1"»
-  «text (-700,570) 0.857 7 0 0x1000000 -1 -1 "PFM-SymCompl-Deadtime"»
-  «text (-700,-1200) 1 7 0 0x0 -1 -1 "Vhigh=<15> ;output high voltage level"»
-  «text (-700,-1350) 1 7 0 0x0 -1 -1 "Vlow=<0> ;output low voltage level"»
-  «text (-700,-1500) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
-  «text (-700,-1650) 1 7 2 0x1000000 -1 -1 "minDT=<0.02> ;minimum deadtime ratio"»
-  «text (-700,-1800) 1 7 2 0x1000000 -1 -1 "maxDT=<0.98> ;maximum deadtime ratio"»
-  «text (-580,-570) 0.857 0 1 0x1000000 -1 -1 "0-1"»
+  «text (-700,750) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-700,600) 1 7 0 0x1000000 -1 -1 "PFM-SymCompl-Deadtime"»
   «text (-580,-70) 0.857 0 1 0x1000000 -1 -1 "Hz"»
-  «pin (-700,0) (40,0) 1 6 0 0x0 -1 "frq"»
+  «text (-580,-570) 0.857 0 1 0x1000000 -1 -1 "0-1"»
+  «text (-700,-1200) 1 7 0 0x0 -1 -1 "Vhigh=<15> Output high level (V)"»
+  «text (-700,-1350) 1 7 0 0x0 -1 -1 "Vlow=<0> Output low level (V)"»
+  «text (-700,-1500) 1 7 0 0x0 -1 -1 "TTOL=<1n>"»
+  «text (-700,-1650) 1 7 2 0x1000000 -1 -1 "minDT=<0.02> Minimum deadtime ratio"»
+  «text (-700,-1800) 1 7 2 0x1000000 -1 -1 "maxDT=<0.98> Maximum deadtime ratio"»
+  «pin (-700,0) (20,0) 1 6 0 0x0 -1 "frq"»
   «pin (-700,-500) (20,0) 1 6 0 0x0 -1 "DT"»
   «pin (800,300) (-20,0) 1 10 0 0x0 -1 "OUTA+"»
   «pin (800,0) (-20,0) 1 9 0 0x0 -1 "OUTA-"»

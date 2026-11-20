@@ -1,121 +1,331 @@
-% Open a Qspice schematic file (.qsch) and plot results
+% =========================================================================
+% MATLAB-to-QSPICE Interactive Demo Script
+% =========================================================================
+% Description:
+%   Prompts the user to select a QSPICE schematic file (.qsch), runs the
+%   simulation via QSPICE, parses the resulting waveform (.qraw) and
+%   measurement (.out) data, and interactively plots the results:
 %
-%Github : https://github.com/KSKelvin-Github/Qspice
-%last update : 23-Feb-2024
+%   - Real data (e.g., .tran, .dc)       : 2D line plot (single or .step)
+%   - Complex data (e.g., .ac)           : Bode magnitude (dB) & phase (deg)
+%   - Combined .step + .meas data        : 2D filled contour plot
+%
+%   Temporary .cir, .out, and .qraw files are automatically cleaned up
+%   after parsing.
+%
+% Dependencies:
+%   qsch2qraw.m, qsch2qraw_pwd.m, qraw_parser.m, cir2out.m, out_parser.m
+%
+% GitHub       : https://github.com/KSKelvin-Github/Qspice
+% Last Updated : 20-Nov-2026
+% =========================================================================
+
+% Clear Command Window, close all figure windows, and reset workspace variables
 clc;
 close all;
 clear all;
 
-% get schematic file .qsch and process for .qraw and .out
-%  - output variable
-%       [qraw] : simulation data from .qraw, type 'help qraw_parser' for help
-%       [step] : .step data from .cir, type 'help qsch2qraw' for help 
-%       [out]  : .meas data from .out, type 'help cir2out' for help
-[filename filepath] = uigetfile('*.qsch');
-[Qpath,step] = qsch2qraw([filepath,filename]);  % process .qraw with QUX and QSPICE
-qraw = qraw_parser(Qpath);                      % parser .qraw file
-[Qpath] = cir2out(Qpath);                       % process .out with QPOST
-out = out_parser(Qpath);                        % parser .out file
-delete(Qpath.cir);                              % delete .cir
-delete(Qpath.out);                              % delete .out
-delete(Qpath.qraw);                             % delete .qraw
+% =========================================================================
+% 1. Select Schematic (.qsch), Run QSPICE, and Parse Output Data
+% =========================================================================
+% Output variables produced in this section:
+%   [qraw] : Simulation waveform data from .qraw (type 'help qraw_parser')
+%   [step] : .step sweep metadata from console   (type 'help qsch2qraw')
+%   [out]  : .meas measurement data from .out    (type 'help cir2out')
+[filename, filepath] = uigetfile('*.qsch', 'Select a QSPICE Schematic (.qsch)');
+if isequal(filename, 0)
+    disp('File selection canceled.');
+    return;
+end
 
-% plot flags=real data without .step
-if strcmp(qraw.flags,'real') & ~qraw.step.status
-    [idxx,~] = listdlg('PromptString','Select x-axis expression','SelectionMode','single','ListString',qraw.expr);
-    [idxy,~] = listdlg('PromptString','Select y-axis expression','SelectionMode','multiple','ListString',qraw.expr,'InitialValue',2);
-    plot(qraw.data(:,idxx),qraw.data(:,idxy));
-    xlabel(qraw.expr{idxx});
-    if length(idxy)==1
-        ylabel(qraw.expr{idxy});
+full_qsch_path = fullfile(filepath, filename);
+
+% Route to qsch2qraw_pwd() if the schematic is in a write-protected folder
+if ~startsWith(filepath, 'C:\Program Files\', 'IgnoreCase', true)
+    [Qpath, step] = qsch2qraw(full_qsch_path);      % Generate .cir and .qraw in source folder
+else
+    [Qpath, step] = qsch2qraw_pwd(full_qsch_path);  % Generate .cir and .qraw in current folder (pwd)
+end
+
+% Parse waveform data (.qraw) and post-process .meas results (.out)
+qraw  = qraw_parser(Qpath);                         % Parse .qraw waveform file
+Qpath = cir2out(Qpath);                             % Process .out with QPOST
+out   = out_parser(Qpath);                          % Parse .out measurement file
+
+% Safely delete temporary simulation files if they exist
+if isfile(Qpath.cir),  delete(Qpath.cir);  end
+if isfile(Qpath.out),  delete(Qpath.out);  end
+if isfile(Qpath.qraw), delete(Qpath.qraw); end
+
+% =========================================================================
+% 2. Plot Real Data Without .step (e.g., .tran, .dc)
+% =========================================================================
+if strcmp(qraw.flags, 'real') && ~qraw.step.status
+    [idxx, idxy, ~, ok] = selectAxesDialog(qraw.expr, '2D', true);
+    if ok
+        figure('Color', 'w', 'Position', [100, 100, 900, 500]);
+        plot(qraw.data(:, idxx), qraw.data(:, idxy), 'LineWidth', 1.5);
+        grid on;
+        box on;
+        set(gca, 'FontSize', 11, 'LineWidth', 1);
+        xlabel(qraw.expr{idxx}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        if length(idxy) == 1
+            ylabel(qraw.expr{idxy}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        else
+            ylabel('Amplitude', 'FontWeight', 'bold');
+            legend(qraw.expr{idxy}, 'Interpreter', 'none', 'Location', 'best');
+        end
+        title(filename, 'Interpreter', 'none', 'FontSize', 13, 'FontWeight', 'bold');
+        xlim('tight');
+        ylim('padded');
+    end
+end
+
+% =========================================================================
+% 3. Plot Real Data With .step Sweep
+% =========================================================================
+if strcmp(qraw.flags, 'real') && qraw.step.status
+    [idxx, idxy, ~, ok] = selectAxesDialog(qraw.expr, '2D', false);
+    if ok
+        figure('Color', 'w', 'Position', [100, 100, 980, 520]);
+        hold on;
+        for n = 1:qraw.step.TotalStep
+            plot(qraw.data(qraw.step.rng{n}, idxx), qraw.data(qraw.step.rng{n}, idxy), 'LineWidth', 1.5);
+        end
+        hold off;
+        grid on;
+        box on;
+        set(gca, 'FontSize', 11, 'LineWidth', 1);
+        xlabel(qraw.expr{idxx}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        ylabel(qraw.expr{idxy}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        legend(qraw.step.textstr, 'Interpreter', 'none', 'Location', 'eastoutside');
+        title(filename, 'Interpreter', 'none', 'FontSize', 13, 'FontWeight', 'bold');
+        xlim('tight');
+        ylim('padded');
+    end
+end
+
+% =========================================================================
+% 4. Plot Complex Data Without .step (Bode Magnitude & Phase)
+% =========================================================================
+if strcmp(qraw.flags, 'complex') && ~qraw.step.status
+    [idxx, idxy, ~, ok] = selectAxesDialog(qraw.expr, '2D', false);
+    if ok
+        figure('Color', 'w', 'Position', [100, 100, 900, 620]);
+        t = tiledlayout(2, 1, 'TileSpacing', 'compact', 'Padding', 'compact');
+        title(t, filename, 'Interpreter', 'none', 'FontSize', 13, 'FontWeight', 'bold');
+
+        % Top tile: Magnitude (dB)
+        ax1 = nexttile;
+        semilogx(qraw.data(:, idxx), 20 * log10(abs(qraw.data(:, idxy))), 'LineWidth', 1.5);
+        grid on; grid minor;
+        box on;
+        set(ax1, 'FontSize', 11, 'LineWidth', 1);
+        ylabel(['|', qraw.expr{idxy}, '| (dB)'], 'Interpreter', 'none', 'FontWeight', 'bold');
+        xlim('tight');
+        ylim('padded');
+
+        % Bottom tile: Phase (degrees)
+        ax2 = nexttile;
+        semilogx(qraw.data(:, idxx), angle(qraw.data(:, idxy)) * 180 / pi, 'LineWidth', 1.5);
+        grid on; grid minor;
+        box on;
+        set(ax2, 'FontSize', 11, 'LineWidth', 1);
+        xlabel(qraw.expr{idxx}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        ylabel(['\angle ', qraw.expr{idxy}, ' (deg)'], 'FontWeight', 'bold');
+        xlim('tight');
+        ylim('padded');
+
+        % Synchronize frequency zoom/pan across Magnitude and Phase
+        linkaxes([ax1, ax2], 'x');
+
+        % Optional Nyquist plot:
+        % figure('Color', 'w');
+        % polarplot(angle(qraw.data(:, idxy)), abs(qraw.data(:, idxy)), 'LineWidth', 1.5);
+    end
+end
+
+% =========================================================================
+% 5. Plot Complex Data With .step Sweep (Bode Magnitude & Phase)
+% =========================================================================
+if strcmp(qraw.flags, 'complex') && qraw.step.status
+    [idxx, idxy, ~, ok] = selectAxesDialog(qraw.expr, '2D', false);
+    if ok
+        figure('Color', 'w', 'Position', [100, 100, 980, 640]);
+        t = tiledlayout(2, 1, 'TileSpacing', 'compact', 'Padding', 'compact');
+        title(t, filename, 'Interpreter', 'none', 'FontSize', 13, 'FontWeight', 'bold');
+
+        % Top tile: Magnitude (dB) across all .step runs
+        ax1 = nexttile;
+        hold on;
+        for n = 1:qraw.step.TotalStep
+            semilogx(qraw.data(qraw.step.rng{n}, idxx), 20 * log10(abs(qraw.data(qraw.step.rng{n}, idxy))), 'LineWidth', 1.5);
+        end
+        hold off;
+        grid on; grid minor;
+        box on;
+        set(ax1, 'FontSize', 11, 'LineWidth', 1);
+        ylabel(['|', qraw.expr{idxy}, '| (dB)'], 'Interpreter', 'none', 'FontWeight', 'bold');
+        xlim('tight');
+        ylim('padded');
+        lgd = legend(qraw.step.textstr, 'Interpreter', 'none');
+        lgd.Layout.Tile = 'east';
+
+        % Bottom tile: Phase (degrees) across all .step runs
+        ax2 = nexttile;
+        hold on;
+        for n = 1:qraw.step.TotalStep
+            semilogx(qraw.data(qraw.step.rng{n}, idxx), angle(qraw.data(qraw.step.rng{n}, idxy)) * 180 / pi, 'LineWidth', 1.5);
+        end
+        hold off;
+        grid on; grid minor;
+        box on;
+        set(ax2, 'FontSize', 11, 'LineWidth', 1);
+        xlabel(qraw.expr{idxx}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        ylabel(['\angle ', qraw.expr{idxy}, ' (deg)'], 'FontWeight', 'bold');
+        xlim('tight');
+        ylim('padded');
+
+        % Synchronize frequency zoom/pan across Magnitude and Phase
+        linkaxes([ax1, ax2], 'x');
+
+        % Optional Nyquist plot:
+        % figure('Color', 'w');
+        % polarplot(angle(qraw.data(:, idxy)), abs(qraw.data(:, idxy)), 'LineWidth', 1.5);
+    end
+end
+
+% =========================================================================
+% 6. Contour Plot for Combined .meas + .step Analysis
+% =========================================================================
+if out.status && step.status    % Only run contour plot if both .meas and .step are available
+    % Merge .step parameter arrays into 'out' (.out alone does not store .step values)
+    out.name = [step.name, out.name];
+    out.data = [step.data, out.data];
+    out.meas = [step.name, out.meas];
+
+    [idxx, idxy, idxz, ok] = selectAxesDialog(out.name, '3D', false);
+    if ok
+        figure('Color', 'w', 'Position', [100, 100, 820, 600]);
+        xx = linspace(min(out.data{idxx}), max(out.data{idxx}), 100);
+        yy = linspace(min(out.data{idxy}), max(out.data{idxy}), 100);
+        [X, Y] = meshgrid(xx, yy);
+        Z = griddata(out.data{idxx}, out.data{idxy}, out.data{idxz}, X, Y);
+
+        contourf(X, Y, Z, 20, 'LineColor', [0.25 0.25 0.25], 'LineWidth', 0.5);
+        hold on;
+        plot(out.data{idxx}, out.data{idxy}, 'ko', 'MarkerFaceColor', 'w', 'MarkerSize', 4);
+        hold off;
+
+        colormap(turbo);
+        cb = colorbar;
+        cb.Label.String = out.name{idxz};
+        cb.Label.Interpreter = 'none';
+        cb.Label.FontWeight = 'bold';
+        cb.Label.FontSize = 11;
+
+        grid on;
+        box on;
+        set(gca, 'FontSize', 11, 'LineWidth', 1);
+        xlabel(out.name{idxx}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        ylabel(out.name{idxy}, 'Interpreter', 'none', 'FontWeight', 'bold');
+        title({out.name{idxz}, out.meas{idxz}}, 'Interpreter', 'none', 'FontSize', 12, 'FontWeight', 'bold');
+    end
+end
+
+% =========================================================================
+% Local Helper Function: Single Unified Axis Selection Dialog
+% =========================================================================
+function [idxx, idxy, idxz, ok] = selectAxesDialog(itemList, mode, multiY)
+    % Initialize outputs
+    idxx = []; idxy = []; idxz = []; ok = false;
+    nItems  = numel(itemList);
+    idxData = 1:nItems;
+
+    % Size dialog based on mode and whether Y uses a multi-select listbox
+    is3D = strcmpi(mode, '3D');
+    if multiY
+        figH = 340;
+    elseif is3D
+        figH = 220;
     else
-        legend(qraw.expr{idxy});
+        figH = 175;
     end
-    title([filename],'interpreter','none')
-    ylim("padded");
-end
 
-% plot flags=real data with .step
-if strcmp(qraw.flags,'real') & qraw.step.status
-    [idxx,~] = listdlg('PromptString','Select x-axis expression','SelectionMode','single','ListString',qraw.expr);
-    [idxy,~] = listdlg('PromptString','Select y-axis expression','SelectionMode','single','ListString',qraw.expr,'InitialValue',2);
-    for n = 1: qraw.step.TotalStep
-        plot(qraw.data(qraw.step.rng{n},idxx),qraw.data(qraw.step.rng{n},idxy)); hold on;
+    % Create modal dialog window
+    fig = uifigure('Name', 'Select Plot Axes', 'Position', [400, 300, 380, figH], ...
+                   'Resize', 'off', 'WindowStyle', 'modal');
+    fig.CloseRequestFcn = @(~, ~) onCancel();
+
+    % Configure grid layout
+    if is3D
+        gl = uigridlayout(fig, [4, 2]);
+        gl.RowHeight = {30, 30, 30, 36};
+    elseif multiY
+        gl = uigridlayout(fig, [3, 2]);
+        gl.RowHeight = {30, '1x', 36};
+    else
+        gl = uigridlayout(fig, [3, 2]);
+        gl.RowHeight = {30, 30, 36};
     end
-    xlabel(qraw.expr{idxx});
-    ylabel(qraw.expr{idxy});
-    legend(qraw.step.textstr);
-    title([filename],'interpreter','none')
-    ylim("padded");
-end
+    gl.ColumnWidth = {90, '1x'};
+    gl.Padding     = [15, 15, 15, 15];
+    gl.RowSpacing  = 10;
 
-% plot flags=complex data ; Magnitude and Phase Plot without .step
-if strcmp(qraw.flags,'complex') & ~qraw.step.status
-    [idxx,~] = listdlg('PromptString','Select x-axis expression','SelectionMode','single','ListString',qraw.expr);
-    [idxy,~] = listdlg('PromptString','Select y-axis expression','SelectionMode','single','ListString',qraw.expr,'InitialValue',2);
-    % magnitude and phase plot
-    figure;
-    subplot(2,1,1);
-    semilogx(qraw.data(:,idxx),20*log10(abs(qraw.data(:,idxy))));
-    xlabel(qraw.expr{idxx});
-    ylabel(['|',qraw.expr{idxy},'| (dB)']);
-    ylim("padded");
-    title([filename],'interpreter','none')
-    subplot(2,1,2);
-    semilogx(qraw.data(:,idxx),angle(qraw.data(:,idxy))*180/pi);
-    xlabel(qraw.expr{idxx});
-    ylabel(['',qraw.expr{idxy},' (degree)']);
-    ylim("padded");
-    % % nyquist plot
-    % figure;
-    % polarplot(phase(qraw.data(:,idxy)),abs(qraw.data(:,idxy)));
-end
+    % --- X-Axis (Dropdown) ---
+    lblX = uilabel(gl, 'Text', 'X-Axis:', 'FontWeight', 'bold');
+    lblX.Layout.Row = 1; lblX.Layout.Column = 1;
+    ddX = uidropdown(gl, 'Items', itemList, 'ItemsData', idxData, 'Value', 1);
+    ddX.Layout.Row = 1; ddX.Layout.Column = 2;
 
-% plot flags=complex data ; Magnitude and Phase Plot with .step
-if strcmp(qraw.flags,'complex') & qraw.step.status
-    [idxx,~] = listdlg('PromptString','Select x-axis expression','SelectionMode','single','ListString',qraw.expr);
-    [idxy,~] = listdlg('PromptString','Select y-axis expression','SelectionMode','single','ListString',qraw.expr,'InitialValue',2);
-    % magnitude and phase plot
-    figure;
-    subplot(2,1,1);
-    for n = 1: qraw.step.TotalStep
-        semilogx(qraw.data(qraw.step.rng{n},idxx),20*log10(abs(qraw.data(qraw.step.rng{n},idxy)))); hold on;
+    % --- Y-Axis (Multi-select Listbox OR Dropdown) ---
+    lblY = uilabel(gl, 'Text', 'Y-Axis:', 'FontWeight', 'bold', 'VerticalAlignment', 'top');
+    lblY.Layout.Row = 2; lblY.Layout.Column = 1;
+    if multiY
+        ctrlY = uilistbox(gl, 'Items', itemList, 'ItemsData', idxData, ...
+                          'Multiselect', 'on', 'Value', min(2, nItems));
+    else
+        ctrlY = uidropdown(gl, 'Items', itemList, 'ItemsData', idxData, ...
+                           'Value', min(2, nItems));
     end
-    xlabel(qraw.expr{idxx});
-    ylabel(['|',qraw.expr{idxy},'| (dB)']);
-    ylim("padded");
-    legend(qraw.step.textstr);
-    title([filename],'interpreter','none')
-    subplot(2,1,2);
-    for n = 1: qraw.step.TotalStep
-        semilogx(qraw.data(qraw.step.rng{n},idxx),angle(qraw.data(qraw.step.rng{n},idxy))*180/pi); hold on;
+    ctrlY.Layout.Row = 2; ctrlY.Layout.Column = 2;
+
+    % --- Z-Axis (Dropdown, 3D Contour Mode Only) ---
+    ddZ = [];
+    if is3D
+        lblZ = uilabel(gl, 'Text', 'Z-Axis:', 'FontWeight', 'bold');
+        lblZ.Layout.Row = 3; lblZ.Layout.Column = 1;
+        ddZ = uidropdown(gl, 'Items', itemList, 'ItemsData', idxData, ...
+                         'Value', min(3, nItems));
+        ddZ.Layout.Row = 3; ddZ.Layout.Column = 2;
+        btnRow = 4;
+    else
+        btnRow = 3;
     end
-    xlabel(qraw.expr{idxx});
-    ylabel(['',qraw.expr{idxy},' (degree)']);
-    ylim("padded");
-    % % nyquist plot
-    % figure;
-    % polarplot(phase(qraw.data(:,idxy)),abs(qraw.data(:,idxy)));
-end
 
-% Contour plot for .meas + .step analysis
-if out.status && step.status       % only run 3-D plot if .meas and .step are both available
-    % merge step and out (as .out file alone doesn't have .step parameter and value
-    out.name = [step.name out.name];
-    out.data = [step.data out.data];
-    out.meas = [step.name out.meas];
+    % --- OK / Cancel Buttons ---
+    btnGrid = uigridlayout(gl, [1, 2], 'Padding', [0, 0, 0, 0]);
+    btnGrid.Layout.Row = btnRow;
+    btnGrid.Layout.Column = [1, 2];
 
-    [idxx,~] = listdlg('PromptString','Select x-axis:','SelectionMode','single','ListString',out.name,'InitialValue',1);
-    [idxy,~] = listdlg('PromptString','Select y-axis:','SelectionMode','single','ListString',out.name,'InitialValue',2);
-    [idxz,~] = listdlg('PromptString','Select z-axis:','SelectionMode','multiple','ListString',out.name,'InitialValue',3);
+    uibutton(btnGrid, 'Text', 'OK', 'FontWeight', 'bold', 'ButtonPushedFcn', @(~, ~) onOK());
+    uibutton(btnGrid, 'Text', 'Cancel', 'ButtonPushedFcn', @(~, ~) onCancel());
 
-    figure;
-    xx = linspace(min(out.data{idxx}),max(out.data{idxx}),20);
-    yy = linspace(min(out.data{idxy}),max(out.data{idxy}),20);
-    [X,Y] = meshgrid(xx,yy);
-    [Z] = griddata(out.data{idxx},out.data{idxy},out.data{idxz},X,Y);
-    contourf(X,Y,Z); colorbar; colormap jet;
-    xlabel(out.name{idxx});
-    ylabel(out.name{idxy});
-    title({out.name{idxz},out.meas{idxz}},'interpreter','none');
+    % Pause execution until user clicks OK, Cancel, or closes the dialog
+    uiwait(fig);
+
+    function onOK()
+        idxx = ddX.Value;
+        idxy = ctrlY.Value;
+        if is3D
+            idxz = ddZ.Value;
+        end
+        ok = true;
+        delete(fig);
+    end
+
+    function onCancel()
+        ok = false;
+        delete(fig);
+    end
 end

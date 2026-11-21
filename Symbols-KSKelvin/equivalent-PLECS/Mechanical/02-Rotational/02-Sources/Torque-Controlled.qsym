@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Torque-Controlled
   «type: G»
-  «description: (PWL) Torque (Controlled) - Nm»
+  «description: (PLECS) Torque (Controlled) - Nm»
   «shorted pins: false»
   «line (0,200) (0,130) 0 0 0xff0080 -1 -1»
   «line (0,-130) (0,-200) 0 0 0xff0080 -1 -1»

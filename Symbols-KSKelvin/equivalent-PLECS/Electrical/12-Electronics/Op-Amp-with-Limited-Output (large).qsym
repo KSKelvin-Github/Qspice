@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Op-Amp-with-Limited-Output (large)
   «type: X»
-  «description: (PWL) Op-Amp with Limited Output»
+  «description: (PLECS) Op-Amp with Limited Output»
   «library file: |.subckt Op-Amp-with-Limited-Output IN+ IN- OUT+ OUT-\nB1 OUT+ OUT- V=limit(A*V(IN+,IN-),Vmin,Vmax)\nR1 IN+ IN- 1e15\n.ends Op-Amp-with-Limited-Output»
   «shorted pins: false»
   «line (-150,-200) (-50,-200) 0 0 0x1000000 -1 -1»

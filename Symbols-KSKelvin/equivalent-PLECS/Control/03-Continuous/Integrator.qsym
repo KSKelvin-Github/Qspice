@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Integrator
   «type: X»
-  «description: (PWL) Integrator»
+  «description: (PLECS) Integrator»
   «library file: |.subckt Integrator in out\nB1 out 0 V=idt(V(in),x0)\n.ends Integrator»
   «shorted pins: false»
   «line (10,70) (-10,-80) 0 0 0x1000000 -1 -1»

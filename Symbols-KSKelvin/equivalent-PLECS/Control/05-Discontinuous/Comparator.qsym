@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Comparator
   «type: X»
-  «description: (PWL) Comparator [output does not change if both inputs are equal]»
+  «description: (PLECS) Comparator [output does not change if both inputs are equal]»
   «library file: |.subckt Comparator in+ in- Q\nB2 memory 0 V=state(1,V(Q))\nB1 Q 0 V=if(V(in+)==V(in-),V(memory), if(V(in+)>V(in-),1,0) )\n¥1 N01 0 ¥3 ¥ Q ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\nV1 N01 0 1\n.ends Comparator»
   «shorted pins: false»
   «line (-90,100) (-160,100) 0 0 0x1000000 -1 4»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Rotational-Speed-Controlled
   «type: E»
-  «description: (PWL) Rotational Speed (Controlled) - rad/s»
+  «description: (PLECS) Rotational Speed (Controlled) - rad/s»
   «shorted pins: false»
   «line (0,200) (0,130) 0 0 0xff0080 -1 -1»
   «line (0,-130) (0,-200) 0 0 0xff0080 -1 -1»

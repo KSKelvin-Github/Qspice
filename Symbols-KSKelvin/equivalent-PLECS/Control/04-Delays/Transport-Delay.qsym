@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Transport-Delay
   «type: X»
-  «description: (PWL) Transport Delay»
+  «description: (PLECS) Transport Delay»
   «library file: |.subckt Transport-Delay in out\nB1 out 0 V=if(time<T_d,y_init,delay(V(in),T_d,T_d))\n.ends Transport-Delay»
   «shorted pins: false»
   «line (-20,60) (80,60) 5 0 0x0 -1 -1»

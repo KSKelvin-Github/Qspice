@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Hit-Crossing
   «type: X»
-  «description: (PWL) Hit Crossing»
+  «description: (PLECS) Hit Crossing»
   «library file: |.subckt Hit-Crossing in Q\nB1 rising 0 V=if(V(in)>=Offset & state(1,V(in))<Offset,1,0)\nB2 falling 0 V=if(V(in)<=Offset & state(1,V(in))>Offset,1,0)\nB3 Q 0 V=if(Direction==0,V(rising)|V(falling), if(Direction==-1,V(falling),V(rising)) )\n¥1 N01 0 ¥2 ¥ Q ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR TTOL=TTOL\nV1 N01 0 1\n.ends Hit-Crossing»
   «shorted pins: false»
   «line (0,-170) (0,170) 0 0 0xffa0a1 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Signal-Switch [Greater]
   «type: X»
-  «description: (PWL) Signal Switch [u>thres]»
+  «description: (PLECS) Signal Switch [u>thres]»
   «library file: |.subckt Signal-Switch u Meet NotMeet out\nB1 out 0 V=if(V(dir),V(Meet),V(NotMeet))\nB2 dir 0 V=if(Criteria==0,V(u)!=0, if(Criteria==1,V(u)>=thres,V(u)>thres))\n.ends Signal-Switch»
   «shorted pins: false»
   «line (200,0) (100,0) 0 0 0x1000000 -1 -1»

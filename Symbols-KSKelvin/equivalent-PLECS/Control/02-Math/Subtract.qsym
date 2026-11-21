@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Subtract
   «type: X»
-  «description: (PWL) Subtract [+-] / Difference / Minus»
+  «description: (PLECS) Subtract [+-] / Difference / Minus»
   «library file: |.subckt Subtract in1 in2 out\nB1 out 0 V=V(in1)-V(in2)\n.ends Subtract»
   «shorted pins: false»
   «line (-150,-100) (-50,-100) 0 0 0x1000000 -1 -1»

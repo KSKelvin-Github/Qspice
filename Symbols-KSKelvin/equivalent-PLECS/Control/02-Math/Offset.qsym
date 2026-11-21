@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Offset
   «type: X»
-  «description: (PWL) OFFSET»
+  «description: (PLECS) OFFSET»
   «library file: |.subckt Offset in out\nB1 out 0 V=V(in)+offset\n.ends Offset»
   «shorted pins: false»
   «rect (-300,200) (300,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»

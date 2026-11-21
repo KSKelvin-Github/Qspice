@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Continuous-PI-Controller
   «type: X»
-  «description: (PWL) Continuous PI Controller»
+  «description: (PLECS) Continuous PI Controller»
   «library file: |.subckt Continuous-PI-Controller e u reset\nB1 ep 0 V=Kp*V(e)\nB3 ei 0 V=if(aw_method==0,idt(Ki*V(e),x0,V(Reset)), if(aw_method==1,idt(Ki*V(e)+Kbc*V(u,ud),x0,V(Reset)), Ki * idt( if( (V(u) >= up_limit & V(e)>0 ) | (V(u) <= low_limit & V(e)<0), 0, V(e) ), x0, V(Reset) ) ) )\nB4 ud 0 V=V(ep)+V(ei)\nB5 u 0 V=limit(V(ud),up_limit,low_limit)\n.ends Continuous-PI-Controller»
   «shorted pins: false»
   «line (-600,0) (-500,0) 0 0 0x1000000 -1 -1»

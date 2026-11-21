@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol SR-Flip-flop
   «type: X»
-  «description: (PWL) SR Flip-flop [level trigger]»
+  «description: (PLECS) SR Flip-flop [level trigger]»
   «library file: |.subckt SR-Flip-flop S R Q ¬Q\nB1 Q 0 V=if(((V(S)>thres)&(V(R)<=thres)),1, if(((V(S)<=thres)&(V(R)>thres)),0, if(((V(S)<=thres)&(V(R)<thres)),V(memory),V(dominate)) ) )\nB2 memory 0 V=if(time<=0,x_init,state(1,V(Q)))\nB3 ¬Q 0 V=!V(Q)\nB4 dominate 0 V=if(dominate==-1,V(memory),if(dominate==0,0,1))\n.ends SR-Flip-flop»
   «shorted pins: false»
   «rect (-300,300) (300,-300) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»

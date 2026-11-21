@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Step
   «type: X»
-  «description: (PWL) Step»
+  «description: (PLECS) Step»
   «library file: |.subckt Step out\nB1 out 0 V=if(time<StepTime,Before,After)\n.ends Step»
   «shorted pins: false»
   «line (0,150) (0,-150) 0 0 0x1000000 -1 -1»

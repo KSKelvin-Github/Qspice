@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Ammeter
   «type: X»
-  «description: (PWL) Ammeter»
+  «description: (PLECS) Ammeter»
   «library file: |.subckt Ammeter + - Am\nV1 + - 0\nB1 Am 0 V=I(V1)\n.ends Ammeter»
   «shorted pins: false»
   «line (60,-60) (0,70) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Voltage-Source-Controlled
   «type: E»
-  «description: (PWL) Voltage Source (Controlled)»
+  «description: (PLECS) Voltage Source (Controlled)»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
   «line (0,200) (0,130) 0 0 0x1000000 -1 -1»

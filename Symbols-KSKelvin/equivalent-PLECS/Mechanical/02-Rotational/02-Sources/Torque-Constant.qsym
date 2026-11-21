@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Torque-Constant
   «type: I»
-  «description: (PWL) Torque (Constant) - Nm»
+  «description: (PLECS) Torque (Constant) - Nm»
   «shorted pins: false»
   «line (0,200) (0,130) 0 0 0xff0080 -1 -1»
   «line (0,-130) (0,-200) 0 0 0xff0080 -1 -1»

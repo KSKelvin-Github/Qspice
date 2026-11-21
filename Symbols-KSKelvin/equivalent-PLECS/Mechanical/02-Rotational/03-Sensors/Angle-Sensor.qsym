@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Angle-Sensor
   «type: X»
-  «description: (PWL) Angle Sensor»
+  «description: (PLECS) Angle Sensor»
   «library file: |.subckt Angle-Sensor + - angle\nB1 angle 0 V=idt(V(+,-),0)\n.ends Angle-Sensor»
   «shorted pins: false»
   «line (-200,0) (-90,0) 0 0 0xff0080 -1 -1»

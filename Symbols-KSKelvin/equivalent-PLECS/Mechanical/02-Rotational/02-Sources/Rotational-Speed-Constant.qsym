@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Rotational-Speed-Constant
   «type: V»
-  «description: (PWL) Rotational Speed (Constant) - rad/s»
+  «description: (PLECS) Rotational Speed (Constant) - rad/s»
   «shorted pins: false»
   «line (0,200) (0,130) 0 0 0xff0080 -1 -1»
   «line (0,-130) (0,-200) 0 0 0xff0080 -1 -1»

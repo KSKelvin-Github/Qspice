@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Turn-on-Delay
   «type: X»
-  «description: (PWL) Turn-on Delay»
+  «description: (PLECS) Turn-on Delay»
   «library file: |.subckt Turn-on-Delay IN OUT\n¥1 p1v 0 N01 ¥ IN ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ OR Td=T_d\n¥2 p1v 0 OUT ¥ IN N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND Rout=1m\nV1 p1v 0 1\n.ends Turn-on-Delay»
   «shorted pins: false»
   «line (-150,-100) (0,-100) 0 0 0x1000000 -1 -1»

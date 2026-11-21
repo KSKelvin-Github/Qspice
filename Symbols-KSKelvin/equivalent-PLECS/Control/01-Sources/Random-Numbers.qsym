@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Random-Numbers
   «type: X»
-  «description: (PWL) White Noise»
+  «description: (PLECS) White Noise»
   «library file: |.subckt Random-Numbers out\nV1 sawtooth 0 pulse 0 1 0 0.99*Ts 0.01*Ts 0 Ts\nB1 latch 0 V=V(sawtooth)<=0.5 & state(1,V(sawtooth))>0.5\nB2 divider 0 V=pow(10,floor(log10(time)))\nB3 U1 0 V=idt(0,random(1e15*time/V(divider)+seed),V(latch))\nB4 out 0 V=V(U1)*(max-min)+min\n.ends Random-Numbers»
   «shorted pins: false»
   «line (-150,-150) (150,-150) 0 0 0xffa0a1 -1 -1»

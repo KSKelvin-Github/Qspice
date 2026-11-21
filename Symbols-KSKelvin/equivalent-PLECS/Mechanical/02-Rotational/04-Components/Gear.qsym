@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Gear
   «type: X»
-  «description: (PWL) Gear»
+  «description: (PLECS) Gear»
   «library file: |.subckt Gear w1 w2\n×1 «w1 0 w2 0» Turns=g 1\n.ends Gear»
   «shorted pins: false»
   «line (-200,0) (-100,0) 0 0 0xff0080 -1 -1»

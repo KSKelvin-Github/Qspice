@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Current-Source-AC
   «type: X»
-  «description: (PWL) Current Source AC»
+  «description: (PLECS) Current Source AC»
   «library file: |.subckt Current-Source-AC + -\nI1 - + SIN 0 I w/2/pi 0 0 phi/pi*180\n.ends Current-Source-AC»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Rotational-Damper
   «type: X»
-  «description: (PWL) Rotational Damper - tau = -D*omega»
+  «description: (PLECS) Rotational Damper - tau = -D*omega»
   «library file: |.subckt Rotational-Damper + -\nB1 - + I=-D*V(+,-)\n.ends Rotational-Damper»
   «shorted pins: false»
   «line (150,150) (150,0) 0 0 0xff0080 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Memory
   «type: X»
-  «description: (PWL) Memory»
+  «description: (PLECS) Memory»
   «library file: |.subckt Memory in out\nB1 out 0 V=state(1,V(in))\n.ends Memory»
   «shorted pins: false»
   «line (-50,-100) (100,-100) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Inductor
   «type: L»
-  «description: (PWL) Inductor»
+  «description: (PLECS) Inductor»
   «shorted pins: false»
   «line (0,200) (0,180) 0 0 0x1000000 -1 -1»
   «line (0,-200) (0,-180) 0 0 0x1000000 -1 -1»

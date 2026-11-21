@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Inertia
   «type: X»
-  «description: (PWL) Inertia»
+  «description: (PLECS) Inertia»
   «library file: |.subckt Inertia t1 t2\nC1 t1 0 J IC=w0\nV1 t1 t2 0\n.ends Inertia»
   «shorted pins: false»
   «line (-120,-130) (-120,130) 0 0 0xff0080 -1 -1»

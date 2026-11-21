@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Relational-Operator[Less]
   «type: X»
-  «description: (PWL) [<]»
+  «description: (PLECS) [<]»
   «library file: |.subckt Relational-Operator A B Q\nB1 Q 0 V=V(A)<V(B)\n.ends Relational-Operator»
   «shorted pins: false»
   «rect (-200,200) (200,-200) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»

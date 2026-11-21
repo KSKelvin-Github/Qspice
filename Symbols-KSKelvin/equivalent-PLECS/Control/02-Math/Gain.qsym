@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Gain
   «type: X»
-  «description: (PWL) Gain»
+  «description: (PLECS) Gain»
   «library file: |.subckt Gain in out\nE1 out 0 in 0 K\n.ends Gain»
   «shorted pins: false»
   «line (-80,50) (-80,-60) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Compare-to-Constant[==]
   «type: X»
-  «description: (PWL) [==]»
+  «description: (PLECS) [==]»
   «library file: |.subckt Compare-to-Constant in Q\nB1 Q 0 V=V(in)==thres\n.ends Compare-to-Constant»
   «shorted pins: false»
   «rect (-200,100) (200,-100) 0 0 0 0x1000000 0xc8ffe6 -1 0 -1»

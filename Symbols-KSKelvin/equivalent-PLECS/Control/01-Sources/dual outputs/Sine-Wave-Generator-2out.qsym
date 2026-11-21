@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Sine-Wave-Generator-2out
   «type: X»
-  «description: (PWL) Sine Wave Geneator (2 outputs)»
+  «description: (PLECS) Sine Wave Geneator (2 outputs)»
   «library file: |.subckt Sine-Wave-Generator-2out out1 out2\nV1 out1 0 sin Bias Amplitude FrequencyHz 0 0 PhaseDegree1\nV2 out2 0 sin Bias Amplitude FrequencyHz 0 0 PhaseDegree2\n.param FrequencyHz=if(Units==0,Freq/2/pi,Freq)\n.param PhaseDegree1=if(Units==0,Phase1*pi/180, if(Units==1,Phase1*360,Phase1) )\n.param PhaseDegree2=if(Units==0,Phase2*pi/180, if(Units==1,Phase2*360,Phase2) )\n.ends Sine-Wave-Generator-2out»
   «shorted pins: false»
   «line (-150,-150) (-150,150) 0 0 0xffa0a1 -1 -1»

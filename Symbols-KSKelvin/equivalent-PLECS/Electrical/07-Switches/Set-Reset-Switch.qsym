@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Set-Reset-Switch
   «type: X»
-  «description: (PWL) Set Reset Switch (Last State Dominate)»
+  «description: (PLECS) Set Reset Switch (Last State Dominate)»
   «library file: |.subckt Set-Reset-Switch + - Set Reset\nS1 + - C 0 SWi ON=s_init OFF=!s_init\nB1 C 0 V=if( ((V(Set)>thres)&(V(Reset)<=thres)),1, if( ((V(Set)<=thres)&(V(Reset)>thres)),0, V(memory) ) )\nB2 memory 0 V=state(1,V(C))\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0\n.param Ron=if(extreme,1µ,1m)\n.param Roff=if(extreme,1G,10Meg)\n.ends Set-Reset-Switch»
   «shorted pins: false»
   «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»

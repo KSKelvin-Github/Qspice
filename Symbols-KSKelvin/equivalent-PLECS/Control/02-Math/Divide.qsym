@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Divide
   «type: X»
-  «description: (PWL) Divide [*/]»
+  «description: (PLECS) Divide [*/]»
   «library file: |.subckt Divide in1 in2 out\nB1 out 0 V=V(in1)/V(in2)\n.ends Divide»
   «shorted pins: false»
   «line (-150,150) (-50,50) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol IGBT-with-Diode
   «type: X»
-  «description: (PWL) IGBT with Diode»
+  «description: (PLECS) IGBT with Diode»
   «library file: |.subckt IGBT-with-Diode C G E\nS1 N01 E G 0 SWi ON=s_init OFF=!s_init\nD1 C N01 Di\nD2 E C Danti\n.model SWi SW Ron=0.5m Roff=10Meg Vt=0.5 Vh=0\n.model Di D Ron=0.5m Vfwd=0 Roff=10Meg\n.model Danti D Ron=1m Vfwd=0 Roff=20Meg\n.ends IGBT-with-Diode»
   «shorted pins: false»
   «line (0,200) (0,150) 0 0 0x1000000 -1 -1»

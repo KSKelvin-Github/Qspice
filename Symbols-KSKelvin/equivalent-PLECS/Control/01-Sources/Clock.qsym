@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Clock
   «type: X»
-  «description: (PWL) Clock - Output Simulation Time»
+  «description: (PLECS) Clock - Output Simulation Time»
   «library file: |.subckt Clock time\nB1 time 0 V=time\n.ends Clock»
   «shorted pins: false»
   «line (-30,0) (-30,110) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Torque-Sensor
   «type: X»
-  «description: (PWL) Torque Sensor»
+  «description: (PLECS) Torque Sensor»
   «library file: |.subckt Torque-Sensor + - torque\nV1 + - 0\nB1 torque 0 V=I(V1)\n.ends Torque-Sensor»
   «shorted pins: false»
   «line (-200,0) (-60,0) 0 0 0xff0080 -1 -1»

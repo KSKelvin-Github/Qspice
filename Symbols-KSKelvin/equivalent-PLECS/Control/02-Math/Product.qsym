@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Product
   «type: X»
-  «description: (PWL) Product [**]»
+  «description: (PLECS) Product [**]»
   «library file: |.subckt Product in1 in2 out\nB1 out 0 V=V(in1)*V(in2)\n.ends Product»
   «shorted pins: false»
   «line (-150,150) (-50,50) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Op-Amp (large)
   «type: X»
-  «description: (PWL) Op-Amp»
+  «description: (PLECS) Op-Amp»
   «library file: |.subckt Op-Amp IN+ IN- OUT+ OUT-\nB1 OUT+ OUT- V=A*V(IN+,IN-)\nR1 IN+ IN- 1e15\n.ends Op-Amp»
   «shorted pins: false»
   «line (-150,-200) (-50,-200) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Switch
   «type: X»
-  «description: (PWL) Switch»
+  «description: (PLECS) Switch»
   «library file: |.subckt Switch + - C\nS1 + - C 0 SWi ON=s_init OFF=!s_init\n.model SWi SW Ron=Ron Roff=Roff Vt=0.5 Vh=0\n.param Ron=if(extreme,1µ,1m)\n.param Roff=if(extreme,1G,10Meg)\n.ends Switch»
   «shorted pins: false»
   «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»

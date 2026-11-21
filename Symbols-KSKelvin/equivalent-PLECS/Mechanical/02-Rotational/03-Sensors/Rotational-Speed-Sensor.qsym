@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Rotational-Speed-Sensor
   «type: X»
-  «description: (PWL) Rotational Speed Sensor»
+  «description: (PLECS) Rotational Speed Sensor»
   «library file: |.subckt Rotational-Speed-Sensor + - speed\nE1 speed 0 + - gain\n.param gain=if(m==0,1,60/2/pi)\n.ends Rotational-Speed-Sensor»
   «shorted pins: false»
   «line (-200,0) (-90,0) 0 0 0xff0080 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Dead-Zone
   «type: X»
-  «description: (PWL) Dead-Zone»
+  «description: (PLECS) Dead-Zone»
   «library file: |.subckt Dead-Zone in out\nB1 out 0 V=if(V(in)<lower,V(in)-lower, if(V(in)>upper,V(in)-upper,0))\n.ends Dead-Zone»
   «shorted pins: false»
   «line (-150,0) (-55,0) 0 0 0xffa0a1 -1 -1»

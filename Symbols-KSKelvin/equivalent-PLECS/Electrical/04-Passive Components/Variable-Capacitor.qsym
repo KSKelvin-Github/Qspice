@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Variable-Capacitor
   «type: X»
-  «description: (PWL) Variable Capacitor [d/dt*C input=0]»
+  «description: (PLECS) Variable Capacitor [d/dt*C input=0]»
   «library file: |.subckt Variable-Capacitor + - in\nC1 + - C=V(in) IC=v_init\n.ends Variable-Capacitor»
   «shorted pins: false»
   «line (0,200) (0,40) 0 0 0x1000000 -1 -1»

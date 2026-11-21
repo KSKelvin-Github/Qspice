@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Resistor
   «type: R»
-  «description: (PWL) Resistor»
+  «description: (PLECS) Resistor»
   «shorted pins: false»
   «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»
   «line (0,150) (0,200) 0 0 0x1000000 -1 -1»

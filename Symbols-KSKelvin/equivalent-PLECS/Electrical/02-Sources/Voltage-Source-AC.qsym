@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Voltage-Source-AC
   «type: X»
-  «description: (PWL) Voltage Source AC»
+  «description: (PLECS) Voltage Source AC»
   «library file: |.subckt Voltage-Source-AC + -\nV1 + - SIN 0 V w/2/pi 0 0 phi/pi*180\n.ends Voltage-Source-AC»
   «shorted pins: false»
   «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»

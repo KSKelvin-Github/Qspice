@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Voltage-Source-AC-3-phase
   «type: X»
-  «description: (PWL) Voltage Source AC 3-phase»
+  «description: (PLECS) Voltage Source AC 3-phase»
   «library file: |.subckt Voltage-Source-AC-3-phase a b c n\nV1 a n sin 0 V w -phi/2/pi/w 0 0\nV2 b n sin 0 V w -phi/2/pi/w 0 -2/3*180\nV3 c n sin 0 V w -phi/2/pi/w 0 2/3*180\n.ends Voltage-Source-AC-3-phase»
   «shorted pins: false»
   «line (300,200) (150,200) 0 0 0x1000000 -1 -1»

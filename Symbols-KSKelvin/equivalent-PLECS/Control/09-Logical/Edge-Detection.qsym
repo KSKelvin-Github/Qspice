@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Edge-Detection
   «type: X»
-  «description: (PWL) Edge Detection»
+  «description: (PLECS) Edge Detection»
   «library file: |.subckt Edge-Detection in out\nB1 out 0 V=if(Direction==0,V(rising)+V(falling), if(Direction==-1,V(falling),V(rising)) )\nB2 rising 0 V=if(V(in)>state(1,V(in)),1,0)\nB3 falling 0 V=if(V(in)<state(1,V(in)),1,0)\n.ends Edge-Detection»
   «shorted pins: false»
   «line (150,50) (200,0) 0 0 0x1000000 -1 -1»

@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Variable-Resistor
   «type: X»
-  «description: (PWL) Variable Resistor»
+  «description: (PLECS) Variable Resistor»
   «library file: |.subckt Variable-Resistor + - in\nB1 + - R=V(in)\n.ends Variable-Resistor»
   «shorted pins: false»
   «line (0,-200) (0,-150) 0 0 0x1000000 -1 -1»

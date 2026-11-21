@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Zener-Diode
   «type: X»
-  «description: (PWL) Zener Diode»
+  «description: (PLECS) Zener Diode»
   «library file: |.subckt Zener-Diode A K\nD1 A K Dz\n.model Dz D Ron=Rf Roff=10Meg Vfwd=Vf Vrev=Vz Rzen=Rz\n.ends Zener-Diode»
   «shorted pins: false»
   «line (80,80) (-80,80) 0 0 0x1000000 -1 -1»

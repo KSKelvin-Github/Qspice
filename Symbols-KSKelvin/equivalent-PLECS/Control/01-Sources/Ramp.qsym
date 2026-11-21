@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Ramp
   «type: X»
-  «description: (PWL) Ramp [No Final output param]»
+  «description: (PLECS) Ramp [No Final output param]»
   «library file: |.subckt Ramp out\nB1 out 0 V=if(time<start,X0,slope*(time-start)+X0)\n.ends Ramp»
   «shorted pins: false»
   «line (150,150) (0,-150) 0 0 0x1000000 -1 -1»

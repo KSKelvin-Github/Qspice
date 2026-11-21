@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol IGBT
   «type: X»
-  «description: (PWL) IGBT»
+  «description: (PLECS) IGBT»
   «library file: |.subckt IGBT C G E\nS1 N01 E G 0 SWi ON=s_init OFF=!s_init\nD1 C N01 Di\n.model SWi SW Ron=max(0.5m,Ron) Roff=5Meg Vt=0.5 Vh=0\n.model Di D Ron=0.5m Vfwd=Vf Roff=5Meg\n.ends IGBT»
   «shorted pins: false»
   «line (0,200) (0,150) 0 0 0x1000000 -1 -1»

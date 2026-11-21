@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol 2ph-Induction-Machine
   «type: X»
-  «description: (PWL) 2-phase Induction Machine»
+  «description: (PLECS) 2-phase Induction Machine»
   «library file: |.subckt 2ph-Induction-Machine mains+ mains- aux+ aux- wm Te\nV´iqs mains+ N01 0\nR1 N01 N03 Rs_main\nL1 N03 N02 Lls_main IC=0\nL2 N02 mains- Lm IC=0\nL3 N02 N04 Llr IC=0\nR2 N04 N06 Rr\nV´iqr N05 N06 0\nV´ids aux+ N07 0\nR3 N07 N09 Rs_aux\nL4 N09 N08 Lls_aux IC=0\nL5 N08 aux- Lm*n^2 IC=0\nL6 N08 N10 Llr*n^2 IC=0\nR4 N10 N12 Rr*n^2\nV´idr N11 N12 0\nB3 0 N13 I=(I(iqs)*I(idr)-I(ids)*I(iqr))*Lm*p*n\nV´Te N13 wm 0\nB4 Te 0 V=I(Te)\nC1 wm 0 J IC=wm0\nB1 N05 mains- V=(Lm*n^2*(I(ids)+I(idr))+Llr*n^2*I(idr))*V(wm)*p/n\nB5 0 wm I=-F*V(wm)\nB2 aux- N11 V=(Lm*(I(iqs)+I(iqr))+Llr*I(iqr))*V(wm)*p*n\n.ends 2ph-Induction-Machine»
   «shorted pins: false»
   «line (400,-400) (300,-400) 0 0 0xff00ff -1 -1»

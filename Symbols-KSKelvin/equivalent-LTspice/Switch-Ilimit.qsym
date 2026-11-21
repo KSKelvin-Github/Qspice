@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Switch-Ilimit
   «type: X»
-  «description: Switch - Ilimit (Equivalent to LTspice)»
+  «description: (LTspice) Switch - Ilimit»
   «library file: |.subckt Switch-Ilimit + - +C -C\nS1 + N001 +C -C SWq\nI1 N002 N001 Ilimit Vsat=100m\nI2 N001 N003 Ilimit Vsat=100m\nD1 - N002 Di\nD2 N003 - Di\n.model SWq SW Ron=Ron Roff=Roff Vt=Vt Vh=Vh ETA=ETA TTOL=TTOL\n.model Di D Ron=1m Roff=10Meg Vfwd=0\n.ends Switch-Ilimit»
   «shorted pins: false»
   «line (-136,100) (-200,100) 0 0 0x1000000 -1 -1»

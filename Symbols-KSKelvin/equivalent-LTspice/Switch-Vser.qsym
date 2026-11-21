@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Switch-Vser
   «type: X»
-  «description: Switch - Vser (Equivalent to LTspice)»
+  «description: (LTspice) Switch - Vser»
   «library file: |.subckt Switch-Vser + - +C -C\nS1 + N001 +C -C SWq\nVS1 N002 N001 Vser\nDS1 - N002 Di\n.model SWq SW Ron=Ron Roff=Roff Vt=Vt Vh=Vh ETA=ETA TTOL=TTOL\n.model Di D Ron=1m Roff=100Meg Vfwd=0\n.ends Switch-Vser»
   «shorted pins: false»
   «line (-136,100) (-200,100) 0 0 0x1000000 -1 -1»

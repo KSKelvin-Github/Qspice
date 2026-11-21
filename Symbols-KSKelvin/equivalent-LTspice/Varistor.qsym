@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol Varistor
   «type: X»
-  «description: Varistor (Equivalent to LTspice A-device Varistor)»
+  «description: (LTspice) Varistor»
   «library file: |.subckt varistor V+ V- C+ C-\nD1 N01 V+ Di\nD2 V+ N02 Di\nBminClamp V- N01 V=abs(V(C+,C-))\nBmaxClamp N02 V- V=abs(V(C+,C-))\n.param Rclamp=1\n.model Di D Ron=Rclamp Vfwd=0\n.ends varistor»
   «shorted pins: false»
   «line (-100,200) (-100,150) 0 0 0x1000000 -1 -1»

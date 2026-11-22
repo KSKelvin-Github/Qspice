@@ -2,6 +2,8 @@
 
 A minimal reference workflow demonstrating how to programmatically build a discrete-time PI controller in **Simulink**, generate standalone ANSI C89/C90 code using **Embedded Coder** / **Simulink Coder**, and compile it directly into a **QSPICE** C-Block DLL.
 
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/02_Simulink_Basic_Workflow/screen_capture/2026-11-22_182648.png?raw=true)
+
 ## Prerequisites
 
 - **MATLAB** with **Simulink** and **Simulink Coder** (automatically uses **Embedded Coder** `ert.tlc` if licensed, or falls back to `grt.tlc`)
@@ -37,7 +39,3 @@ A minimal reference workflow demonstrating how to programmatically build a discr
 - **C89/C90 Compatibility & Single-Pass Compilation:** `pi_simulink_generation.m` sets `TargetLang = 'C'`, `TargetLangStandard = 'C89/C90 (ANSI)'`, `GenCodeOnly = 'on'`, and `MatFileLogging = 'off'` (eliminating `rt_logging.c` file I/O dependencies). In `pi_block.cpp`, `#pragma includepath "qspice_bundle"` and an `extern "C" { ... }` block include both `pi_simulink.h` and `pi_simulink.c` directly so Digital Mars builds the DLL in one step.
 - **Simulink I/O Mapping & `*ForKeeps` Gating:** When `t >= inst->nextSampleTime` and `*ForKeeps` is true, `pi_block.cpp` writes `err`, `kp`, `ki`, `Ts`, and `rst = 0.0` to `pi_simulink_U`, executes `pi_simulink_step()`, and latches `u = pi_simulink_Y.u` (zero-order hold). Gating with `*ForKeeps` prevents QSPICE's hypothetical Newton-Raphson iterations from advancing the integrator state prematurely.
 - **Sample-Edge Timestep Refinement (`Trunc`):** The `sPI_BLOCK` struct tracks a `latch` flag that toggles when `t >= inst->nextSampleTime`. `Trunc()` compares `tmp.latch != inst->latch` and clamps `*timestep` to `ttol = 1e-9` (1 ns) so the solver lands accurately on each discrete sample edge.
-
-## Screen Capture
-
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/02_Simulink_Basic_Workflow/screen_capture/2026-11-22_182648.png?raw=true)

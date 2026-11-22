@@ -15,7 +15,7 @@ A minimal reference workflow demonstrating how to generate ANSI C code from a st
 | `pi_controller.m` | Discrete-time Forward-Euler PI controller (`%#codegen`) with `persistent integ_state` and synchronous reset (`rst > 0.5`). |
 | `matlab_codegen.m` | MATLAB Coder build script that generates C89/C90 source files, bundles them into `qspice_bundle/`, and cleans up temporary build folders. |
 | `pi_block.cpp` | QSPICE C-Block wrapper that includes `qspice_bundle/` under `extern "C"` and handles zero-order hold sampling, `*ForKeeps` gating, and `Trunc()` timestep control. |
-| `my_circuit.qsch` | QSPICE testbench schematic driving `PI_block` (`X1`) with a `PWL` voltage source (`V1`) over a 10 s transient simulation. |
+| `my_circuit.qsch` | QSPICE testbench schematic driving `PI_block` (`X1`) |
 | `qspice_bundle/` | *(Generated)* Flat folder containing the exported C source and header files (`pi_controller.c/.h`, `pi_controller_data.c/.h`, `pi_controller_initialize.c/.h`, `pi_controller_terminate.c/.h`, and supporting headers). |
 
 ## Workflow
@@ -29,7 +29,6 @@ A minimal reference workflow demonstrating how to generate ANSI C code from a st
 
 2. **Compile and Simulate in QSPICE**
    Open `my_circuit.qsch` in QSPICE and run the simulation. QSPICE automatically compiles `pi_block.cpp` and the bundled C files into a single `.dll` using Digital Mars.
-   The schematic runs `.tran 10` and plots `V(err)` and `V(u)`.
 
 ## How the Integration Works
 

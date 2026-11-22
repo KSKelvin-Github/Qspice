@@ -39,4 +39,4 @@ A minimal reference workflow demonstrating how to generate ANSI C code from a st
 
 ## Screen Capture
 
-![alt text](/screen_capture/2026-11-22_182457.png)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/01_MATLAB_Basic_Workflow/screen_capture/2026-11-22_182457.png?raw=true)

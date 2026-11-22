@@ -14,7 +14,7 @@ A minimal reference workflow demonstrating how to programmatically build a discr
 | :--- | :--- |
 | `pi_simulink_generation.m` | MATLAB script that builds `pi_simulink.slx`, configures fixed-step discrete C89/C90 code generation, packages the C bundle into `qspice_bundle/`, and cleans up temporary build folders. |
 | `pi_block.cpp` | QSPICE C-Block wrapper that includes `qspice_bundle/` under `extern "C"`, maps QSPICE pins/parameters to `pi_simulink_U`/`pi_simulink_Y`, and handles zero-order hold sampling, `*ForKeeps` gating, and `Trunc()` timestep control. |
-| `my_circuit.qsch` | QSPICE testbench schematic driving `PI_block` (`X1`) with a `PWL` voltage source (`V1`) over a 10 s transient simulation. |
+| `my_circuit.qsch` | QSPICE testbench schematic driving `PI_block` (`X1`). |
 | `pi_simulink.slx` | *(Generated)* Auto-generated Simulink discrete PI controller model. |
 | `qspice_bundle/` | *(Generated)* Flat folder containing the exported C source and header files (`pi_simulink.c`, `pi_simulink.h`, and supporting headers). |
 
@@ -28,8 +28,7 @@ A minimal reference workflow demonstrating how to programmatically build a discr
    This script constructs `pi_simulink.slx`, configures the `FixedStepDiscrete` solver (`FixedStep = 0.1`), disables MAT-file logging and HTML report generation, generates standalone C89/C90 code via `slbuild`, packages all dependencies with `packNGo` (`packType = 'flat'`), extracts them into `qspice_bundle/`, and removes `qspice_bundle.zip`, `*_rtw/`, `slprj/`, and `pi_simulink.slxc`.
 
 2. **Compile and Simulate in QSPICE**
-   Open `my_circuit.qsch` in QSPICE and run the simulation. QSPICE automatically compiles `pi_block.cpp` and the bundled C files into a single `.dll` using Digital Mars:
-   The schematic runs `.tran 10` and plots `V(err)` and `V(u)`.
+   Open `my_circuit.qsch` in QSPICE and run the simulation. QSPICE automatically compiles `pi_block.cpp` and the bundled C files into a single `.dll` using Digital Mars.
 
 ## How the Integration Works
 

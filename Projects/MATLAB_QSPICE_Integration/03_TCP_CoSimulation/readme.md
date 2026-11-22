@@ -2,10 +2,6 @@
 
 Real-time closed-loop co-simulation between **Qorvo QSPICE** and **MATLAB** using QSPICE's built-in **Berkeley Socket API** (`localhost:55000`). This project executes a discrete-time Proportional-Integral (PI) controller natively in MATLAB (`pi_controller.m`) without requiring **MATLAB Coder**, **Simulink Coder**, or external Winsock libraries.
 
----
-
-## Screen Capture
-
 ![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/03_TCP_CoSimulation/screen_capture/TCP-Co-Simulation.gif?raw=true)
 
 ---

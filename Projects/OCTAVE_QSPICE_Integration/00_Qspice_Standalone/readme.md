@@ -2,7 +2,7 @@
 
 A standalone **Qorvo QSPICE** closed-loop control demo implementing a discrete-time Proportional-Integral (PI) controller directly in native C++ (`pi_block.cpp`). No MATLAB, Simulink, or external libraries are required—this serves as a fast, self-contained reference baseline.
 
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/00_Qspice_Standalone/screen_capture/2026-11-22_233101.png?raw=true)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/OCTAVE_QSPICE_Integration/00_Qspice_Standalone/screen_capture/2026-11-22_233101.png?raw=true)
 
 ## Project Files
 

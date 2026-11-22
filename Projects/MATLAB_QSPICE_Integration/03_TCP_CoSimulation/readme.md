@@ -4,6 +4,12 @@ Real-time closed-loop co-simulation between **Qorvo QSPICE** and **MATLAB** usin
 
 ---
 
+## Screen Capture
+
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/03_TCP_CoSimulation/screen_capture/TCP-Co-Simulation.gif?raw=true)
+
+---
+
 ## Important Path Requirement
 
 > **Ensure the entire working directory path contains NO spaces.**
@@ -113,9 +119,3 @@ Simulation finished (201 steps). Ready for next run.
 * **`Failed to connect to MATLAB server on localhost:55000`:** Make sure `matlab_tcp_server.m` is running in MATLAB *before* clicking **Run** in QSPICE.
 * **Port `55000` already in use:** If a previous MATLAB server session was interrupted abnormally, run `clear server` in MATLAB (or change `port` in both `matlab_tcp_server.m` and `pi_block.cpp` and recompile `pi_block.cpp`).
 * **C++ Compilation Error in QSPICE:** Verify that the full folder path contains no spaces and right-click `PI_block` $\rightarrow$ **C++ Interface** $\rightarrow$ **Compile C++** to inspect compiler output.
-
----
-
-## Screen Capture
-
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/03_TCP_CoSimulation/screen_capture/TCP-Co-Simulation.gif?raw=true)

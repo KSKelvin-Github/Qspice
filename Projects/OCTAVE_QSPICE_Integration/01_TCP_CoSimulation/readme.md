@@ -2,7 +2,7 @@
 
 Real-time closed-loop co-simulation between **Qorvo QSPICE** and **GNU Octave** using QSPICE's built-in **Berkeley Socket API** (`127.0.0.1:55000`). This project runs a discrete-time Proportional-Integral (PI) controller natively in GNU Octave (`pi_controller.m`) with zero MATLAB licensing, no C-code generation step, and no external Winsock libraries.
 
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/OCTAVE_QSPICE_Integration/03_TCP_CoSimulation/screen_capture/2026-11-23_002544.png?raw=true)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/OCTAVE_QSPICE_Integration/01_TCP_CoSimulation/screen_capture/2026-11-23_002544.png?raw=true)
 
 ## Important Path Requirement
 

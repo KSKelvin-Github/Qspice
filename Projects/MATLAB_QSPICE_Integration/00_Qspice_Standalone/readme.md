@@ -25,6 +25,4 @@ A standalone **Qorvo QSPICE** closed-loop control demo implementing a discrete-t
 ## How to Run
 
 1. Open `my_circuit.qsch` in **QSPICE**.
-2. Click **Run** — QSPICE automatically compiles `pi_block.cpp` into `pi_block.dll` using its built-in Digital Mars C++ compiler (`dmc -mn -WD -o pi_block.cpp kernel32.lib`) and displays the transient waveforms.
-
-> **Note:** Keep the working directory path free of spaces (e.g., `C:\Qspice_Demo\`) to avoid Digital Mars compiler path issues.
+2. Click **Run** — QSPICE automatically compiles `pi_block.cpp` into `pi_block.dll` using its built-in Digital Mars C++ compiler and displays the transient waveforms.

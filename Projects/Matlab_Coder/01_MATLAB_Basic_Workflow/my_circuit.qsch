@@ -1,0 +1,44 @@
+ÿØÿÛ«schematic
+  «component (100,100) 0 0
+    «symbol
+      «type: Ø(.DLL)»
+      «shorted pins: false»
+      «rect (-300,200) (200,-300) 0 0 0 0x4000000 0x4000000 -1 1 -1»
+      «text (-300,450) 1 7 0 0x1000000 -1 -1 "X1"»
+      «text (-300,300) 1 7 0 0x1000000 -1 -1 "PI_block"»
+      «text (-300,-350) 0.681 7 0 0x1000000 -1 -1 "float kp=<2>"»
+      «text (-300,-450) 0.681 7 0 0x1000000 -1 -1 "float ki=<1>"»
+      «text (-300,-550) 0.681 7 0 0x1000000 -1 -1 "float Ts=<0.1>"»
+      «pin (-300,100) (20,0) 1 7 145 0x0 -1 "err"»
+      «pin (200,100) (-20,0) 1 11 146 0x0 -1 "u"»
+    »
+  »
+  «component (-900,-700) 0 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (180,150) 1 7 0 0x1000000 -1 -1 "V1"»
+      «text (180,-150) 1 7 0 0x1000000 -1 -1 "PWL 0 0 1 1 2 0"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «net (-900,-900) 1 13 0 "GND"»
+  «net (-500,200) 1 14 0 "err"»
+  «net (600,200) 1 14 0 "u"»
+  «wire (600,200) (700,200) "u"»
+  «wire (-500,200) (-200,200) "err"»
+  «wire (-900,200) (-500,200) "err"»
+  «wire (300,200) (600,200) "u"»
+  «wire (-900,-500) (-900,200) "err"»
+  «text (700,-800) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 10\n.plot V(err) V(u)"»
+  «text (-950,2600) 1 7 1 0x1000000 -1 -1 "ï»¿MATLAB Coder Integration Demo with QSPICE\n=========================================\nImportant Note:\n  Ensure the entire working directory path contains NO spaces\n  (e.g., use C:\\Qspice_Demo\\, not C:\\My Projects\\Qspice Demo\\).\n\nMatLab Toolbox:  'MATLAB Coder'\n\nFiles:\n  my_circuit.qsch  - QSPICE schematic file (this file)\n  pi_block.cpp     - QSPICE C++ wrapper for pi_block\n  pi_controller.m  - MATLAB discrete-time PI controller function\n  matlab_codegen.m - MATLAB Coder script for standalone C generation\n\nProject Rebuild Workflow:\n  1. Run matlab_codegen.m in MATLAB to generate the "qspice_bundle"\n     subfolder containing the exported C source/header files.\n  2. Open and run my_circuit.qsch in QSPICE to automatically compile\n     pi_block.cpp and the bundled C files into a single .dll."»
+»
+

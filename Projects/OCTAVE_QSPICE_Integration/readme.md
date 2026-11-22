@@ -1,7 +1,7 @@
 # GNU Octave – QSPICE TCP Co-Simulation
 
 Octave : https://octave.org/
-Free software, Drop-in compatible with many Matlab scripts
+`Free software, Drop-in compatible with many Matlab scripts`
 
 Closed-loop co-simulation between **QSPICE** and **GNU Octave** over a local TCP connection (`127.0.0.1:55000`) using QSPICE's built-in **Berkeley Socket API** and Octave's **`instrument-control`** package. This setup runs a discrete-time PI controller natively in Octave (`pi_controller.m`) without requiring MATLAB or Simulink Coder.
 

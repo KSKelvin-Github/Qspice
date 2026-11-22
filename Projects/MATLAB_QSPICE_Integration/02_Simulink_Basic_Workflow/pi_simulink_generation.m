@@ -2,14 +2,15 @@
 % Simulink Model Builder & Standalone C Code Generator for QSPICE
 % =========================================================================
 % Description:
-%   Programmatically constructs a discrete-time Forward-Euler PI controller
+%   Programmatically constructs a discrete-time Backward-Euler PI controller
 %   in Simulink (pi_simulink.slx), configures Simulink Coder / Embedded
 %   Coder for standalone C89/C90 code generation, and packages the output
 %   into the 'qspice_bundle' subfolder for QSPICE C-Block compilation.
 %
 %   - Creates top-level Inports (err, kp, ki, Ts, rst) and Outport (u).
-%   - Uses a unit-gain Discrete-Time Integrator scaled externally by (ki*Ts)
-%     so gains and sample period can be tuned dynamically from QSPICE pins.
+%   - Uses a unit-gain Discrete-Time Integrator with FixedStep = 1 scaled
+%     externally by (err * ki * Ts) so gains and sample period can be tuned
+%     dynamically from QSPICE pins without regenerating C code.
 %   - Automatically selects Embedded Coder (ert.tlc) if licensed, falling
 %     back to Simulink Coder (grt.tlc) with MAT-file logging disabled.
 %   - Extracts packNGo archive into 'qspice_bundle\' and cleans up build files.
@@ -34,6 +35,9 @@ end
 if isfile([modelName, '.slx'])
     delete([modelName, '.slx']);
 end
+if isfile([modelName, '.slxc'])
+    delete([modelName, '.slxc']);
+end
 
 new_system(modelName);
 open_system(modelName);
@@ -53,17 +57,14 @@ end
 add_block('simulink/Math Operations/Product', [modelName, '/Prod_P'], ...
     'Position', [220, 42, 250, 73]);
 
-% Integral input: ki * err (Simulink's Discrete-Time Integrator multiplies by Ts automatically)
+% Integral input: err * ki * Ts (computed dynamically from QSPICE pins)
 add_block('simulink/Math Operations/Product', [modelName, '/Prod_I'], ...
-    'Inputs', '2', ...
-    'Position', [220, 145, 250, 185]);
-
-% Terminate unused Ts port (Ts is governed by the fixed-step sample time 0.1s)
-add_block('simulink/Sinks/Terminator', [modelName, '/Term_Ts'], ...
-    'Position', [130, 220, 150, 240]);
+    'Inputs', '3', ...
+    'Position', [220, 145, 250, 195]);
 
 % Discrete-Time Integrator (Backward Euler updates state on current step before output,
 % matching: integ_state = integ_state + ki*Ts*err; u = kp*err + integ_state)
+% With FixedStep = '1', this acts as a pure accumulator without double-scaling Ts.
 add_block('simulink/Discrete/Discrete-Time Integrator', [modelName, '/Integrator'], ...
     'IntegratorMethod', 'Integration: Backward Euler', ...
     'gainval', '1.0', ...
@@ -87,7 +88,7 @@ add_line(modelName, 'kp/1',  'Prod_P/2', 'autorouting', 'on');
 
 add_line(modelName, 'err/1',        'Prod_I/1',     'autorouting', 'on');
 add_line(modelName, 'ki/1',         'Prod_I/2',     'autorouting', 'on');
-add_line(modelName, 'Ts/1',         'Term_Ts/1',    'autorouting', 'on');
+add_line(modelName, 'Ts/1',         'Prod_I/3',     'autorouting', 'on');
 add_line(modelName, 'Prod_I/1',     'Integrator/1', 'autorouting', 'on');
 add_line(modelName, 'rst/1',        'Integrator/2', 'autorouting', 'on');
 
@@ -98,10 +99,11 @@ add_line(modelName, 'Sum_PI/1',     'u/1',          'autorouting', 'on');
 % =========================================================================
 % 2. Configure Solver & C Code Generation Settings
 % =========================================================================
-% Fixed-step discrete solver (required for standalone C code generation)
+% Fixed-step discrete solver with FixedStep = 1 so the Discrete-Time Integrator
+% acts as a pure accumulator (Ts scaling is applied dynamically via Prod_I)
 set_param(modelName, 'SolverType', 'Fixed-step');
 set_param(modelName, 'Solver', 'FixedStepDiscrete');
-set_param(modelName, 'FixedStep', '0.1');
+set_param(modelName, 'FixedStep', '1');
 
 % Select Embedded Coder (ert.tlc) if available; otherwise use Simulink Coder (grt.tlc)
 if license('test', 'RTW_Embedded_Coder')

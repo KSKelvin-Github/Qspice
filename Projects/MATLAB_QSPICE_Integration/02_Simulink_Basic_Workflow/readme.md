@@ -41,4 +41,4 @@ A minimal reference workflow demonstrating how to programmatically build a discr
 
 ## Screen Capture
 
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/Matlab_Coder/02_Simulink_Basic_Workflow/screen_capture/2026-11-22_182648.png?raw=true)
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/02_Simulink_Basic_Workflow/screen_capture/2026-11-22_182648.png?raw=true)

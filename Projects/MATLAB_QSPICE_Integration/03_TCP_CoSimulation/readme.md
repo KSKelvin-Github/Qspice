@@ -23,7 +23,8 @@ Real-time closed-loop co-simulation between **Qorvo QSPICE** and **MATLAB** usin
 | :--- | :--- |
 | **`my_circuit.qsch`** | QSPICE closed-loop schematic containing a step reference (`V1`), error subtractor (`X3`), `PI_block` C-Block (`X1`), and a continuous-time 2nd-order Laplace plant (`X2`). |
 | **`pi_block.cpp`** | QSPICE C++ client using the native Berkeley Socket API (`BerkeleySocket`, `SocketSend`, `SocketRecv`, `SocketClose`, `ConfigureBuffer`). Samples at period $T_s$ on accepted (`*ForKeeps`) timesteps and uses `Trunc()` ($t_{\text{tol}} = 1\text{ ns}$) to align solver steps with discrete sample edges. |
-| **`matlab_tcp_server.m`** | Persistent MATLAB `tcpserver` listening on `127.0.0.1:55000`. Stays active across repeated QSPICE runs, resets the PI integrator state on each new run, and prints periodic status updates to the MATLAB Command Window. |
+| **`matlab_tcp_server_tcpserver.m (slow)`** | Persistent MATLAB `tcpserver` listening on `127.0.0.1:55000`. Stays active across repeated QSPICE runs, resets the PI integrator state on each new run, and prints periodic status updates to the MATLAB Command Window. |
+| **`matlab_tcp_server_java.m (fast)`** | Persistent MATLAB `tcpserver` listening on `127.0.0.1:55000`. Stays active across repeated QSPICE runs, resets the PI integrator state on each new run, and prints periodic status updates to the MATLAB Command Window. |
 | **`pi_controller.m`** | Discrete-time Forward-Euler PI controller with a `persistent` integrator state (`integ_state`) and synchronous reset (`rst > 0.5`). |
 
 ---
@@ -53,7 +54,7 @@ This demo simulates a closed-loop digital PI controller regulating a continuous-
 ## How to Run
 
 1. **Start the MATLAB TCP Server:**
-   Open MATLAB, navigate to this project folder, and run `matlab_tcp_server.m`. Keep it running in the background once the Command Window displays:
+   Open MATLAB, navigate to this project folder, and run `matlab_tcp_server_XXXXX.m`. Keep it running in the background once the Command Window displays:
    ```text
    MATLAB TCP Server running on 127.0.0.1:55000 (Press Ctrl+C to stop).
 

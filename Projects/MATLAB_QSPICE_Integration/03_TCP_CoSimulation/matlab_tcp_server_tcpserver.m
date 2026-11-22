@@ -40,6 +40,7 @@ printEvery = 5;   % Print console update every N received packets
 
 % Create TCP server object listening for incoming QSPICE connections
 server = tcpserver(host, port, "Timeout", 30);
+cleanupObj = onCleanup(@() clear("server"));
 fprintf("MATLAB TCP Server running on %s:%d (Press Ctrl+C to stop).\n", host, port);
 
 % =========================================================================
@@ -47,7 +48,7 @@ fprintf("MATLAB TCP Server running on %s:%d (Press Ctrl+C to stop).\n", host, po
 % =========================================================================
 while true
     % Wait until QSPICE opens a socket connection at the start of a run
-    fprintf("\nWaiting for QSPICE simulation...\n");
+    fprintf("\nWaiting for QSPICE simulation... (Ctrl+C to terminate)\n");
     while ~server.Connected
         pause(0.05);
     end
@@ -92,6 +93,8 @@ while true
                             stepCount, t, err, kp, ki, Ts, rst, u);
                     end
                 end
+            else
+                pause(0.001);
             end
         end
     catch
@@ -99,5 +102,5 @@ while true
     end
 
     % Report total steps exchanged and loop back to wait for the next QSPICE run
-    fprintf("Simulation finished (%d steps). Ready for next run.\n", stepCount);
+    fprintf("Simulation finished (%d steps). Resetting server...\n", stepCount);
 end

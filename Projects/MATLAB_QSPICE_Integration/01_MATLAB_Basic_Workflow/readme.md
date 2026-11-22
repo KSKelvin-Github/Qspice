@@ -2,6 +2,8 @@
 
 A minimal reference workflow demonstrating how to generate ANSI C code from a stateful MATLAB function using **MATLAB Coder** and compile it directly into a **QSPICE** C-Block DLL.
 
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/01_MATLAB_Basic_Workflow/screen_capture/2026-11-22_182457.png?raw=true)
+
 ## Prerequisites
 
 - **MATLAB** with the **MATLAB Coder** toolbox
@@ -35,7 +37,3 @@ A minimal reference workflow demonstrating how to generate ANSI C code from a st
 - **C89/C90 Compatibility & Single-Pass Compilation:** `matlab_codegen.m` targets plain C89/C90 to avoid C++ name-mangling and match Digital Mars. In `pi_block.cpp`, `#pragma includepath "qspice_bundle"` and an `extern "C" { ... }` block include both the `.h` headers and `.c` implementation files directly so QSPICE builds the DLL in one step without an external makefile or `.lib`.
 - **Discrete Sampling & `*ForKeeps` Gating:** `pi_controller.m` maintains a `persistent integ_state` variable (`integ_state = integ_state + ki * Ts * err`). To prevent QSPICE's Newton-Raphson iterations from advancing the integrator multiple times per timestep, `pi_block.cpp` schedules sample instants via `nextSampleTime` (zero-order hold) and gates calls to `pi_controller(err, kp, ki, Ts, 0)` with `if (*ForKeeps)` so state updates occur only on accepted solver steps.
 - **Sample-Edge Timestep Refinement (`Trunc`):** The `sPI_BLOCK` struct tracks a `latch` flag that toggles when `t >= inst->nextSampleTime`. `Trunc()` compares `tmp.latch != inst->latch` and clamps `*timestep` to `ttol = 1e-9` (1 ns) so the solver lands accurately on each discrete sample edge.
-
-## Screen Capture
-
-![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/01_MATLAB_Basic_Workflow/screen_capture/2026-11-22_182457.png?raw=true)

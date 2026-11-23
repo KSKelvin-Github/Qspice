@@ -51,7 +51,7 @@ p5 = param(5);  p6 = param(6);  p7 = param(7);  p8 = param(8);
 % Default example: Forward-Euler PI controller on channel 1
 %   in1 -> error signal, p1 -> kp, p2 -> ki, s1 -> integrator state, out1 -> u
 s1   = s1 + p2 * Ts * in1;
-out1 = p1 * in1 + s1*1;
+out1 = p1 * in1 + s1;
 
 % Unused channels default to 0.0 (assign as needed)
 out2 = 0.0;

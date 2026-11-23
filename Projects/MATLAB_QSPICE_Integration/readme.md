@@ -2,6 +2,8 @@
 
 This directory ([`Projects/MATLAB_QSPICE_Integration`](https://github.com/KSKelvin-Github/Qspice/tree/main/Projects/MATLAB_QSPICE_Integration)) demonstrates approaches for implementing and co-simulating a **discrete-time Proportional-Integral (PI) controller** in **Qorvo QSPICE** alongside **MATLAB** and **Simulink**.
 
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/MATLAB_QSPICE_Integration/03_TCP_CoSimulation/screen_capture/TCP-Co-Simulation.gif?raw=true)
+
 ---
 
 ## Benchmark Closed-Loop System

@@ -5,6 +5,8 @@ Octave : https://octave.org/
 
 Closed-loop co-simulation between **QSPICE** and **GNU Octave** over a local TCP connection (`127.0.0.1:55000`) using QSPICE's built-in **Berkeley Socket API** and Octave's **`instrument-control`** package. This setup runs a discrete-time PI controller natively in Octave (`pi_controller.m`) without requiring MATLAB or Simulink Coder.
 
+![alt text](https://github.com/KSKelvin-Github/Qspice/blob/main/Projects/OCTAVE_QSPICE_Integration/01_TCP_CoSimulation/screen_capture/2026-11-23_002544.png?raw=true)
+
 ---
 
 ## Requirements & Setup

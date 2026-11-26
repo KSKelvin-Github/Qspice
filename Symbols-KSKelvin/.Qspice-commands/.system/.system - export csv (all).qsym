@@ -1,4 +1,4 @@
-ÿØÿÛ«symbol .system - export csv
+ÿØÿÛ«symbol .system - export csv (all)
   «type: .»
   «description: Execute a commnad»
   «shorted pins: false»
@@ -24,7 +24,7 @@
   «triangle (600,-100) (600,20) (480,-100) 0 0 0x1000000 0xffe6c8 -1 -1»
   «text (-800,300) 1 7 0 0x0 -1 -1 ".system"»
   «text (-700,-650) 1 7 2 0x1000000 -1 -1 "%QUX% -Export "%RAWFILE%""»
-  «text (-300,-450) 1 7 0 0x0 -1 -1 "<EXPR1[EXPR2,[EXPR]]>"»
+  «text (-300,-450) 1 7 0 0x0 -1 -1 "<EXPR1,[EXPR2,[EXPR3]]>"»
   «text (-700,-850) 1 7 2 0x1000000 -1 -1 "all CSV"»
   «text (-700,-250) 1 7 1 0x1000000 -1 -1 "To export into .csv"»
   «text (-700,-450) 1 7 1 0x1000000 -1 -1 "expr:"»
